@@ -1,0 +1,26 @@
+Test run: 2026-08-26
+Command: python -m unittest discover -s tests -v
+Runtime: bundled Codex Python
+
+Result: 11 tests passed, 0 failed.
+
+Passed:
+- missing provenance rejection
+- invalid state transition
+- duplicate evidence idempotency
+- retrieval source trace
+- graph edge trace
+- contradiction preservation
+- unsupported inference detection
+- human gate for Strong Inference
+- unreviewed run stops at HUMAN_REVIEW
+- every Decision Memo fact has Evidence trace
+- deterministic replay
+
+Vertical-slice run:
+- run_id: RUN-HBM4-VS-001
+- core_implementation_version: 1.0.0
+- trace_hash: B09E8807B3AC2B86CAB0C5CA5623BAC3A33A906813FEF91615378B52922603BC
+- blocking_findings: 0
+- final evidence state: HUMAN_REVIEW
+- review status: PENDING_HUMAN_REVIEW

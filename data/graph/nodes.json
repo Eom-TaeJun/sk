@@ -1,0 +1,52 @@
+[
+  {
+    "label": "Major HBM4 customers (unnamed)",
+    "node_id": "CUSTOMER-HBM4-MAJOR",
+    "node_type": "Customer"
+  },
+  {
+    "label": "Customer Priority",
+    "node_id": "DV-CUSTOMER-PRIORITY",
+    "node_type": "DecisionVariable"
+  },
+  {
+    "label": "Demand Forecast",
+    "node_id": "DV-DEMAND-FORECAST",
+    "node_type": "DecisionVariable"
+  },
+  {
+    "label": "Qualification",
+    "node_id": "DV-QUALIFICATION",
+    "node_type": "DecisionVariable"
+  },
+  {
+    "label": "TTM",
+    "node_id": "DV-TTM",
+    "node_type": "DecisionVariable"
+  },
+  {
+    "label": "12-layer HBM4",
+    "node_id": "MEMORY-HBM4-12L",
+    "node_type": "MemoryProduct"
+  },
+  {
+    "label": "SK hynix (publisher/supplier)",
+    "node_id": "ORG-SKHYNIX",
+    "node_type": "Organization"
+  },
+  {
+    "label": "Next-generation AI platform (generic)",
+    "node_id": "PLATFORM-NEXTGEN-AI",
+    "node_type": "Platform"
+  },
+  {
+    "label": "Customer certification/qualification",
+    "node_id": "QUAL-HBM4-CUSTOMER",
+    "node_type": "Qualification"
+  },
+  {
+    "label": "H2 2025 mass-production preparation target",
+    "node_id": "TTM-HBM4-H2-2025",
+    "node_type": "TTM"
+  }
+]

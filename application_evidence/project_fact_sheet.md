@@ -1,0 +1,23 @@
+# Project Fact Sheet
+
+- 기간: 2026-08-26, First Vertical Slice
+- 프로젝트명: Memory Market Decision Intelligence v2
+- 목적: 공개 시장정보 한 건을 Source 검증부터 Decision Memo와 원문 trace까지 재현 가능한 직무 판단 workflow로 변환
+- 기존 문제: sample, qualification, mass production, commercial shipment와 회사의 `industry-first` 주장이 한 문서 안에서 쉽게 혼동됨
+- 내 역할: 문제·책임 경계 승인, deterministic rule 설계, Evidence/Graph/Memo 계약 결정, 자동 승격 결함 검토 및 수정
+- Source/Data 규모: 공식 T1 Source 1건, Atomic Evidence 4건, Graph node 10개, edge 9개
+- 내가 직접 설계한 것: Hermes와 Core Harness의 책임 분리, Source/Evidence 분리, 상태전이, semantic contradiction 3종, confidence rubric, human gate, sentence-level trace
+- RAG 역할: 답변 생성이 아니라 Evidence ID→Source ID→excerpt→locator 회수. 초기 retrieval과 2-hop graph-aware retrieval을 분리
+- Graph 역할: Customer→Platform→Memory Product→Qualification→TTM→Decision Variable의 최소 subgraph와 Evidence 연결
+- Hermes/Agent 역할: 실제 연동하지 않음. Manual Adapter가 향후 Hermes Adapter와 같은 contract를 사용
+- Harness/Auditor 역할: 상태전이, provenance, unsupported inference, semantic boundary, confidence, human-review 보류를 deterministic rule로 통제
+- 사람이 최종 판단한 영역: sample을 qualification으로 승격하지 않음, 회사의 first claim을 상업 리더십으로 해석하지 않음, human approval 없는 Evidence를 PROMOTED하지 않음
+- AI가 한 일: 공식 Source 후보 확인, Atomic Evidence 후보 구조화, 코드·테스트·Memo 생성, rule 위반 탐지 지원
+- 검증 방법: 11개 unit/integration test, 실제 scenario 실행, 동일 입력 replay, trace hash 비교
+- 실패/수정: 최초 run에서 HUMAN_REVIEW 통과를 실제 승인처럼 취급해 A/B Evidence를 자동 PROMOTED함. 이를 폐기하고 모든 미승인 Evidence를 HUMAN_REVIEW에 보류하도록 수정. Graph edge 목록을 화살표로 이어 단일 인과경로처럼 보이던 표현도 2-hop subgraph 목록으로 수정
+- 버린 대안: Hermes 우선 설치, LLM 자유 판단, Vector/Graph DB, 전체 H1/H2/H3 Backtest, Dashboard
+- Before: Canonical 자료에는 출처명이 있었지만 Atomic Evidence 상태, sentence trace, deterministic replay가 없었음
+- After: 4개 Memo fact가 각각 Evidence ID, Source ID, original excerpt, locator, URL, content hash로 추적됨
+- 최종 결과: run `RUN-HBM4-VS-001`, trace hash `B09E8807B3AC2B86CAB0C5CA5623BAC3A33A906813FEF91615378B52922603BC`, blocking finding 0, open contradiction 3, confidence MEDIUM, human review pending
+- 확인된 한계: Source가 1개라 independence가 낮고 고객 qualification·확정 물량·commercial shipment를 확인하지 못함. 검색 Precision과 운영 성능은 평가하지 않음
+- SK하이닉스 직무 연결: Qualification/TTM gate, Demand Forecast 신호 품질, Customer Priority, Supply Risk를 공개정보 한계 안에서 구분

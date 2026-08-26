@@ -1,0 +1,15 @@
+{
+  "what_changed": "",
+  "evidence_level": "",
+  "why_it_matters": "",
+  "demand_or_supply": "",
+  "transmission_path": [],
+  "bottleneck_candidate": "",
+  "assumption_updated": "",
+  "decision_variables_affected": [],
+  "confidence": 0.0,
+  "counterevidence": [],
+  "invalidate_if": [],
+  "monitor_next": [],
+  "source_ids": []
+}

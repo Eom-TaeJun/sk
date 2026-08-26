@@ -1,0 +1,166 @@
+[
+  {
+    "confidence": 0.765,
+    "counterevidence_ids": [],
+    "decision_variables": [
+      "TARGET_SPEC",
+      "QUALIFICATION",
+      "TTM"
+    ],
+    "edge_id": "EDGE-AI-PLATFORM-REQUIRES-HBM4",
+    "edge_type": "STRUCTURAL_RELATION",
+    "evidence_ids": [
+      "EVD-HBM4-SAMPLE-SHIPMENT"
+    ],
+    "from": "PLATFORM-NEXTGEN-AI",
+    "relation": "REQUIRES_MEMORY",
+    "to": "MEMORY-HBM4-12L",
+    "valid_from": "2025-03-19",
+    "valid_to": null
+  },
+  {
+    "confidence": 0.765,
+    "counterevidence_ids": [],
+    "decision_variables": [
+      "CUSTOMER_PRIORITY"
+    ],
+    "edge_id": "EDGE-CUSTOMER-AFFECTS-PRIORITY",
+    "edge_type": "SUPPORTED_HYPOTHESIS",
+    "evidence_ids": [
+      "EVD-HBM4-SAMPLE-SHIPMENT"
+    ],
+    "from": "CUSTOMER-HBM4-MAJOR",
+    "relation": "AFFECTS_DECISION",
+    "to": "DV-CUSTOMER-PRIORITY",
+    "valid_from": "2025-03-19",
+    "valid_to": null
+  },
+  {
+    "confidence": 0.765,
+    "counterevidence_ids": [],
+    "decision_variables": [
+      "CUSTOMER_PRIORITY",
+      "QUALIFICATION"
+    ],
+    "edge_id": "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM",
+    "edge_type": "SUPPORTED_HYPOTHESIS",
+    "evidence_ids": [
+      "EVD-HBM4-SAMPLE-SHIPMENT"
+    ],
+    "from": "CUSTOMER-HBM4-MAJOR",
+    "relation": "EVALUATES_FOR_PLATFORM",
+    "to": "PLATFORM-NEXTGEN-AI",
+    "valid_from": "2025-03-19",
+    "valid_to": null
+  },
+  {
+    "confidence": 0.765,
+    "counterevidence_ids": [],
+    "decision_variables": [
+      "QUALIFICATION",
+      "TTM",
+      "CUSTOMER_PRIORITY"
+    ],
+    "edge_id": "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE",
+    "edge_type": "STRUCTURAL_RELATION",
+    "evidence_ids": [
+      "EVD-HBM4-SAMPLE-SHIPMENT"
+    ],
+    "from": "CUSTOMER-HBM4-MAJOR",
+    "relation": "RECEIVES_SAMPLE",
+    "to": "MEMORY-HBM4-12L",
+    "valid_from": "2025-03-19",
+    "valid_to": null
+  },
+  {
+    "confidence": 0.765,
+    "counterevidence_ids": [],
+    "decision_variables": [
+      "QUALIFICATION",
+      "TTM",
+      "DEMAND_FORECAST"
+    ],
+    "edge_id": "EDGE-HBM4-REQUIRES-QUALIFICATION",
+    "edge_type": "STRUCTURAL_RELATION",
+    "evidence_ids": [
+      "EVD-HBM4-CERTIFICATION-PENDING"
+    ],
+    "from": "MEMORY-HBM4-12L",
+    "relation": "REQUIRES_QUALIFICATION",
+    "to": "QUAL-HBM4-CUSTOMER",
+    "valid_from": "2025-03-19",
+    "valid_to": null
+  },
+  {
+    "confidence": 0.765,
+    "counterevidence_ids": [],
+    "decision_variables": [
+      "DEMAND_FORECAST",
+      "QUALIFICATION"
+    ],
+    "edge_id": "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST",
+    "edge_type": "SUPPORTED_HYPOTHESIS",
+    "evidence_ids": [
+      "EVD-HBM4-CERTIFICATION-PENDING"
+    ],
+    "from": "QUAL-HBM4-CUSTOMER",
+    "relation": "AFFECTS_DECISION",
+    "to": "DV-DEMAND-FORECAST",
+    "valid_from": "2025-03-19",
+    "valid_to": null
+  },
+  {
+    "confidence": 0.765,
+    "counterevidence_ids": [],
+    "decision_variables": [
+      "QUALIFICATION"
+    ],
+    "edge_id": "EDGE-QUALIFICATION-AFFECTS-DV",
+    "edge_type": "STRUCTURAL_RELATION",
+    "evidence_ids": [
+      "EVD-HBM4-CERTIFICATION-PENDING"
+    ],
+    "from": "QUAL-HBM4-CUSTOMER",
+    "relation": "AFFECTS_DECISION",
+    "to": "DV-QUALIFICATION",
+    "valid_from": "2025-03-19",
+    "valid_to": null
+  },
+  {
+    "confidence": 0.7463,
+    "counterevidence_ids": [],
+    "decision_variables": [
+      "QUALIFICATION",
+      "TTM",
+      "SUPPLY_RISK"
+    ],
+    "edge_id": "EDGE-QUALIFICATION-GATES-TTM",
+    "edge_type": "SUPPORTED_HYPOTHESIS",
+    "evidence_ids": [
+      "EVD-HBM4-CERTIFICATION-PENDING",
+      "EVD-HBM4-MASS-PRODUCTION-TARGET"
+    ],
+    "from": "QUAL-HBM4-CUSTOMER",
+    "relation": "GATES_TTM",
+    "to": "TTM-HBM4-H2-2025",
+    "valid_from": "2025-03-19",
+    "valid_to": "2025-12-31"
+  },
+  {
+    "confidence": 0.7275,
+    "counterevidence_ids": [],
+    "decision_variables": [
+      "TTM"
+    ],
+    "edge_id": "EDGE-TTM-AFFECTS-DV",
+    "edge_type": "STRUCTURAL_RELATION",
+    "evidence_ids": [
+      "EVD-HBM4-MASS-PRODUCTION-TARGET"
+    ],
+    "from": "TTM-HBM4-H2-2025",
+    "relation": "AFFECTS_DECISION",
+    "to": "DV-TTM",
+    "valid_from": "2025-03-19",
+    "valid_to": "2025-12-31"
+  }
+]
