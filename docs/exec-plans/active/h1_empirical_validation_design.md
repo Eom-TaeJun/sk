@@ -4,6 +4,8 @@
 
 **Status:** `READY_FOR_HUMAN_REVIEW — NOT APPROVED FOR EXECUTION`
 
+**Feasibility review note (2026-08-28):** Limited public-data feasibility review is complete in [`h1_feasibility_manifest.md`](./h1_feasibility_manifest.md). Gates 3–5 remain pending human approval; the manifest is review input and does not approve execution or alter this empirical design.
+
 This document defines the empirical contract for H1 before a dataset, backtest, statistical model, or automated research workflow exists. It does not select cases, collect a corpus, calculate a signal ranking, or make an H1 finding. The deleted interrupted H1 experiment is not a methodological or evidentiary input to this design.
 
 The design preserves the project transmission model:
