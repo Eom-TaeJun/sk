@@ -1,0 +1,120 @@
+{
+  "assumption_updated": "Sample shipment must not be treated as completed qualification or confirmed commercial volume; an industry-first claim must not be treated as commercial leadership.",
+  "confidence": {
+    "interpretation": "Average deterministic rubric score; not a probability.",
+    "label": "MEDIUM",
+    "reason": "One first-party source directly distinguishes samples from a pending certification step, but provides no independent confirmation or commercial volume.",
+    "score": 0.7338
+  },
+  "counterevidence": [
+    "CONTRA-FIRST-IS-NOT-COMMERCIAL-LEADERSHIP",
+    "CONTRA-QUALIFICATION-IS-NOT-VOLUME",
+    "CONTRA-SAMPLE-IS-NOT-QUALIFICATION"
+  ],
+  "current_bottleneck_candidate": "CUSTOMER_QUALIFICATION",
+  "decision_variables_affected": [
+    "CUSTOMER_PRIORITY",
+    "DEMAND_FORECAST",
+    "QUALIFICATION",
+    "SUPPLY_RISK",
+    "TTM"
+  ],
+  "demand_or_supply": "BOTH",
+  "evidence_level": [
+    "A_DIRECT_FACT",
+    "B_COMPANY_CLAIM"
+  ],
+  "fact_statements": [
+    {
+      "evidence_ids": [
+        "EVD-HBM4-SAMPLE-SHIPMENT"
+      ],
+      "text": "SK hynix reported delivery of 12-layer HBM4 samples to major customers."
+    },
+    {
+      "evidence_ids": [
+        "EVD-HBM4-CERTIFICATION-PENDING"
+      ],
+      "text": "The announcement described customer certification as a next process rather than completed qualification."
+    },
+    {
+      "evidence_ids": [
+        "EVD-HBM4-MASS-PRODUCTION-TARGET"
+      ],
+      "text": "The announcement stated a target to complete mass-production preparations in the second half of 2025."
+    },
+    {
+      "evidence_ids": [
+        "EVD-HBM4-INDUSTRY-FIRST-CLAIM"
+      ],
+      "text": "The publisher presented the sample provision as first in the world."
+    }
+  ],
+  "invalidate_if": [
+    "A dated official record shows qualification was already complete at the sample-announcement date.",
+    "A customer or shipment record demonstrates that the announced samples were already commercial volume."
+  ],
+  "memo_id": "MEMO-HBM4-VS-001",
+  "monitor_next": [
+    "Customer qualification completion or approved-vendor status",
+    "Design-in or platform-specific adoption",
+    "Commercial shipment and committed price/volume",
+    "Mass-production ramp and qualified good-volume evidence"
+  ],
+  "review_status": "PENDING_HUMAN_REVIEW",
+  "run_id": "RUN-HBM4-VS-001",
+  "source_evidence_trace": [
+    {
+      "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+      "evidence_id": "EVD-HBM4-CERTIFICATION-PENDING",
+      "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+      "locator": "body paragraph 2",
+      "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "publication_date": "2025-03-19",
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+      "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+    },
+    {
+      "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+      "evidence_id": "EVD-HBM4-INDUSTRY-FIRST-CLAIM",
+      "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+      "locator": "headline; body paragraph 1",
+      "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "publication_date": "2025-03-19",
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+      "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+    },
+    {
+      "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+      "evidence_id": "EVD-HBM4-MASS-PRODUCTION-TARGET",
+      "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+      "locator": "News Highlights; body paragraph 2",
+      "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "publication_date": "2025-03-19",
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+      "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+    },
+    {
+      "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+      "evidence_id": "EVD-HBM4-SAMPLE-SHIPMENT",
+      "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+      "locator": "headline; body paragraphs 1-2",
+      "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "publication_date": "2025-03-19",
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+      "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+    }
+  ],
+  "transmission_path": [
+    "EDGE-AI-PLATFORM-REQUIRES-HBM4",
+    "EDGE-CUSTOMER-AFFECTS-PRIORITY",
+    "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM",
+    "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE",
+    "EDGE-HBM4-REQUIRES-QUALIFICATION",
+    "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST",
+    "EDGE-QUALIFICATION-AFFECTS-DV",
+    "EDGE-QUALIFICATION-GATES-TTM"
+  ],
+  "what_changed": "HBM4 moved to customer sample delivery, while customer certification and mass-production preparation remained subsequent gates.",
+  "why_it_matters": "The event improves visibility into qualification and TTM work, but does not establish qualified demand, committed volume, or commercial shipment."
+}

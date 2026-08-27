@@ -1,0 +1,13 @@
+{
+  "edge_id": "string",
+  "from": "entity_id",
+  "relation": "DRIVES_DEMAND|REQUIRES_MEMORY|SUPPLIES|SETS_SPEC|QUALIFIES|CONSTRAINS|EXPANDS_CAPACITY|COMPETES_FOR_CAPACITY|RESERVES_CAPACITY|AFFECTS_PRICE|DELAYS_TTM|ENABLES|PARTNERS_WITH|TRIGGERS_UPDATE",
+  "to": "entity_id",
+  "edge_type": "STRUCTURAL_RELATION|SUPPORTED_HYPOTHESIS|VALIDATED_PATTERN",
+  "evidence_ids": [],
+  "counterevidence_ids": [],
+  "confidence": 0.0,
+  "first_observed": "date|null",
+  "last_observed": "date|null",
+  "decision_variables": []
+}

@@ -1,0 +1,70 @@
+{
+  "added_edges": [
+    "EDGE-HBM4-ENTERS-MASS-SHIPMENT-Q2-2026",
+    "EDGE-HBM4-PLANS-RAMP-H2-2026",
+    "EDGE-MASS-SHIPMENT-AFFECTS-DEMAND-VISIBILITY",
+    "EDGE-MASS-SHIPMENT-AFFECTS-TTM",
+    "EDGE-RAMP-PLAN-AFFECTS-SUPPLY-RISK"
+  ],
+  "added_nodes": [
+    "DV-SUPPLY-RISK",
+    "TTM-HBM4-MASS-SHIPMENT-Q2-2026",
+    "TTM-HBM4-RAMP-H2-2026"
+  ],
+  "updated_edges": [
+    {
+      "after": 0.765,
+      "before": 0.815,
+      "edge_id": "EDGE-AI-PLATFORM-REQUIRES-HBM4",
+      "field": "confidence"
+    },
+    {
+      "after": 0.765,
+      "before": 0.815,
+      "edge_id": "EDGE-CUSTOMER-AFFECTS-PRIORITY",
+      "field": "confidence"
+    },
+    {
+      "after": 0.765,
+      "before": 0.815,
+      "edge_id": "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM",
+      "field": "confidence"
+    },
+    {
+      "after": 0.765,
+      "before": 0.815,
+      "edge_id": "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE",
+      "field": "confidence"
+    },
+    {
+      "after": 0.765,
+      "before": 0.815,
+      "edge_id": "EDGE-HBM4-REQUIRES-QUALIFICATION",
+      "field": "confidence"
+    },
+    {
+      "after": 0.765,
+      "before": 0.815,
+      "edge_id": "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST",
+      "field": "confidence"
+    },
+    {
+      "after": 0.765,
+      "before": 0.815,
+      "edge_id": "EDGE-QUALIFICATION-AFFECTS-DV",
+      "field": "confidence"
+    },
+    {
+      "after": 0.7463,
+      "before": 0.7962,
+      "edge_id": "EDGE-QUALIFICATION-GATES-TTM",
+      "field": "confidence"
+    },
+    {
+      "after": 0.7275,
+      "before": 0.7775,
+      "edge_id": "EDGE-TTM-AFFECTS-DV",
+      "field": "confidence"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+# Project Fact Sheet
+
+- 기간:
+- 프로젝트명:
+- 목적:
+- 기존 문제:
+- 내 역할:
+- Source/Data 규모:
+- 내가 직접 설계한 것:
+- RAG 역할:
+- Graph 역할:
+- Hermes/Agent 역할:
+- Harness/Auditor 역할:
+- 사람이 최종 판단한 영역:
+- 검증 방법:
+- 실패/수정:
+- Before:
+- After:
+- 최종 결과:
+- 확인된 한계:
+- SK하이닉스 직무 연결:

@@ -1,0 +1,60 @@
+{
+  "added_edges": [],
+  "added_nodes": [],
+  "updated_edges": [
+    {
+      "after": 0.815,
+      "before": 0.765,
+      "edge_id": "EDGE-AI-PLATFORM-REQUIRES-HBM4",
+      "field": "confidence"
+    },
+    {
+      "after": 0.815,
+      "before": 0.765,
+      "edge_id": "EDGE-CUSTOMER-AFFECTS-PRIORITY",
+      "field": "confidence"
+    },
+    {
+      "after": 0.815,
+      "before": 0.765,
+      "edge_id": "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM",
+      "field": "confidence"
+    },
+    {
+      "after": 0.815,
+      "before": 0.765,
+      "edge_id": "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE",
+      "field": "confidence"
+    },
+    {
+      "after": 0.815,
+      "before": 0.765,
+      "edge_id": "EDGE-HBM4-REQUIRES-QUALIFICATION",
+      "field": "confidence"
+    },
+    {
+      "after": 0.815,
+      "before": 0.765,
+      "edge_id": "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST",
+      "field": "confidence"
+    },
+    {
+      "after": 0.815,
+      "before": 0.765,
+      "edge_id": "EDGE-QUALIFICATION-AFFECTS-DV",
+      "field": "confidence"
+    },
+    {
+      "after": 0.7962,
+      "before": 0.7463,
+      "edge_id": "EDGE-QUALIFICATION-GATES-TTM",
+      "field": "confidence"
+    },
+    {
+      "after": 0.7775,
+      "before": 0.7275,
+      "edge_id": "EDGE-TTM-AFFECTS-DV",
+      "field": "confidence"
+    }
+  ]
+}

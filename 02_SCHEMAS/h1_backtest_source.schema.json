@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "H1 Backtest Source Record",
+  "type": "object",
+  "required": [
+    "source_id",
+    "title",
+    "publisher",
+    "publication_date",
+    "publication_timestamp",
+    "available_at",
+    "accessed_at",
+    "url",
+    "local_archive_path",
+    "content_hash",
+    "source_class",
+    "origin_group",
+    "revision_id",
+    "locator"
+  ],
+  "properties": {
+    "source_id": {"type": "string", "minLength": 1},
+    "publication_date": {"type": "string", "format": "date"},
+    "publication_timestamp": {"type": "string", "format": "date-time"},
+    "available_at": {"type": "string", "format": "date-time"},
+    "content_hash": {"type": "string", "pattern": "^[A-F0-9]{64}$"},
+    "source_class": {
+      "enum": ["P1_EVENT", "P1_COUNTERPARTY", "P2_OFFICIAL_CONTEXT", "S1_SECONDARY"]
+    }
+  },
+  "additionalProperties": true
+}

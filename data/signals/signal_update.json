@@ -1,0 +1,95 @@
+{
+  "evidence_scores": [
+    {
+      "evidence_id": "EVD-HBM4-CERTIFICATION-PENDING",
+      "factors": {
+        "contradiction_penalty": 0.25,
+        "directness": 0.9,
+        "independence": 0.5,
+        "scope_fit": 1.0,
+        "temporal_fit": 0.75
+      },
+      "interpretation": "Rubric score for evidence handling; not a probability.",
+      "label": "HIGH",
+      "score": 0.765
+    },
+    {
+      "evidence_id": "EVD-HBM4-INDUSTRY-FIRST-CLAIM",
+      "factors": {
+        "contradiction_penalty": 0.25,
+        "directness": 0.65,
+        "independence": 0.5,
+        "scope_fit": 1.0,
+        "temporal_fit": 0.75
+      },
+      "interpretation": "Rubric score for evidence handling; not a probability.",
+      "label": "MEDIUM",
+      "score": 0.6775
+    },
+    {
+      "evidence_id": "EVD-HBM4-MASS-PRODUCTION-TARGET",
+      "factors": {
+        "contradiction_penalty": 0.0,
+        "directness": 0.65,
+        "independence": 0.5,
+        "scope_fit": 1.0,
+        "temporal_fit": 0.75
+      },
+      "interpretation": "Rubric score for evidence handling; not a probability.",
+      "label": "MEDIUM",
+      "score": 0.7275
+    },
+    {
+      "evidence_id": "EVD-HBM4-MASS-SHIPMENT-Q2-2026",
+      "factors": {
+        "contradiction_penalty": 0.25,
+        "directness": 0.9,
+        "independence": 0.5,
+        "scope_fit": 1.0,
+        "temporal_fit": 1.0
+      },
+      "interpretation": "Rubric score for evidence handling; not a probability.",
+      "label": "HIGH",
+      "score": 0.815
+    },
+    {
+      "evidence_id": "EVD-HBM4-RAMP-PLAN-H2-2026",
+      "factors": {
+        "contradiction_penalty": 0.0,
+        "directness": 0.65,
+        "independence": 0.5,
+        "scope_fit": 1.0,
+        "temporal_fit": 1.0
+      },
+      "interpretation": "Rubric score for evidence handling; not a probability.",
+      "label": "HIGH",
+      "score": 0.7775
+    },
+    {
+      "evidence_id": "EVD-HBM4-SAMPLE-SHIPMENT",
+      "factors": {
+        "contradiction_penalty": 0.25,
+        "directness": 0.9,
+        "independence": 0.5,
+        "scope_fit": 1.0,
+        "temporal_fit": 0.75
+      },
+      "interpretation": "Rubric score for evidence handling; not a probability.",
+      "label": "HIGH",
+      "score": 0.765
+    }
+  ],
+  "rubric": {
+    "contradiction_penalty_max": 0.2,
+    "directness_weight": 0.35,
+    "independence_weight": 0.2,
+    "scope_fit_weight": 0.25,
+    "temporal_fit_weight": 0.2
+  },
+  "run_id": "RUN-HBM4-TEMPORAL-2026-001",
+  "summary": {
+    "interpretation": "Average deterministic rubric score; not a probability.",
+    "label": "HIGH",
+    "score": 0.7546
+  }
+}

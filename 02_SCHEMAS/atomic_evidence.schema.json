@@ -1,0 +1,23 @@
+{
+  "evidence_id": "string",
+  "source_id": "string",
+  "date": "YYYY-MM-DD or YYYY-MM",
+  "source_org": "string",
+  "source_tier": "T1|T2|T3",
+  "evidence_level": "A_DIRECT_FACT|B_COMPANY_CLAIM|C_EXTERNAL_ESTIMATE|D_DERIVED_FACT|E_STRONG_INFERENCE|F_HYPOTHESIS",
+  "claim": "string",
+  "entity_from": "string|null",
+  "relationship": "string|null",
+  "entity_to": "string|null",
+  "metric": "string|null",
+  "value": "number|string|null",
+  "unit": "string|null",
+  "demand_or_supply": "DEMAND|SUPPLY|BOTH|NEITHER",
+  "time_horizon": "string|null",
+  "decision_variables": [
+    "DEMAND_FORECAST"
+  ],
+  "confidence": 0.0,
+  "counterevidence_ids": [],
+  "status": "NEW"
+}

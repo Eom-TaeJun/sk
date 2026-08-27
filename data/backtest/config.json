@@ -1,0 +1,28 @@
+{
+  "run_id": "RUN-H1-BACKTEST-001",
+  "hypothesis_id": "H1",
+  "question": "Do qualification, LTA, power-ready, supply-commitment, and commercial-deployment-adjacent signals provide more stable memory-demand visibility than headline CAPEX?",
+  "as_of": "2026-08-26T23:59:59+09:00",
+  "observation_end": "2026-08-26",
+  "primary_horizon_months": 12,
+  "horizon_sensitivity_months": [6, 12, 18],
+  "primary_useful_lead_days": 90,
+  "useful_lead_sensitivity_days": [30, 90, 180],
+  "independence_weight_sensitivity": [0.1, 0.2, 0.3],
+  "contradiction_penalty_sensitivity": [0.1, 0.2, 0.3],
+  "minimum_event_count": 20,
+  "maximum_event_count": 23,
+  "minimum_signal_n_for_comparison": 2,
+  "minimum_matched_tracks_for_h1": 2,
+  "predictor_signal_types": [
+    "CAPEX",
+    "SAMPLE",
+    "QUALIFICATION",
+    "LTA",
+    "SUPPLY_COMMITMENT",
+    "POWER_READY"
+  ],
+  "shipment_is_confirmation_only": true,
+  "date_only_availability_rule": "NEXT_DAY_PUBLISHER_LOCAL",
+  "primary_source_classes": ["P1_EVENT", "P1_COUNTERPARTY", "P2_OFFICIAL_CONTEXT"]
+}

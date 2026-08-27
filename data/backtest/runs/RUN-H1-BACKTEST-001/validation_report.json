@@ -1,0 +1,39 @@
+{
+  "checks": {
+    "blind_snapshot_hash_preserved": true,
+    "duplicate_event_ids": 0,
+    "event_count": 23,
+    "excluded_event_count": 0,
+    "future_information_cutoff_enforced": true,
+    "primary_provenance_required": true,
+    "right_censoring_preserved": true,
+    "sensitivity_cell_count": 81,
+    "shipment_excluded_from_predictor_comparison": true,
+    "source_hashes_verified": true
+  },
+  "data_as_of": "2026-08-26T23:59:59+09:00",
+  "issues": [
+    {
+      "impact": "The full H1 verdict must remain INCONCLUSIVE.",
+      "issue": "Only one fully observed matched track contains both CAPEX and an order-proximate predictor.",
+      "severity": "HIGH"
+    },
+    {
+      "impact": "It is a delay/control case, not a causal attribution.",
+      "issue": "C1 compares broad CSP infrastructure spend with broad supplier memory outcomes.",
+      "severity": "MEDIUM"
+    },
+    {
+      "impact": "Their signal-level conclusions remain INSUFFICIENT_EVIDENCE.",
+      "issue": "LTA and power-ready each have fewer than two eligible observations.",
+      "severity": "MEDIUM"
+    }
+  ],
+  "overall_assessment": "SHARE_WITH_CAVEATS",
+  "question_review": "The analysis tests signal timing and realization distance, not demand-volume prediction or causality.",
+  "required_caveat": "No predictive accuracy, statistical significance, causal effect, customer volume, price, or allocation percentage is claimed.",
+  "verdict_check": {
+    "computed": "INCONCLUSIVE",
+    "supported_by_rule": true
+  }
+}

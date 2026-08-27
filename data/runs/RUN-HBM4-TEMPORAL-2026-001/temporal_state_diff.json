@@ -1,0 +1,571 @@
+{
+  "baseline_run_id": "RUN-HBM4-BASELINE-2025-002",
+  "before_state": {
+    "assumption": "Sample shipment must not be treated as completed qualification or confirmed commercial volume; an industry-first claim must not be treated as commercial leadership.",
+    "decision_variables": [
+      "CUSTOMER_PRIORITY",
+      "DEMAND_FORECAST",
+      "QUALIFICATION",
+      "SUPPLY_RISK",
+      "TTM"
+    ],
+    "what_changed": "HBM4 moved to customer sample delivery, while customer certification and mass-production preparation remained subsequent gates."
+  },
+  "changed_decision_variables": {
+    "DEMAND_FORECAST": "Commercial visibility moved from sample-stage evidence to an observed mass-shipment signal, without enough data to estimate volume.",
+    "SUPPLY_RISK": "Mass-shipment start reduces uncertainty about initial production readiness; H2 ramp execution and qualified-good-volume remain open.",
+    "TTM": "The state moved from a mass-production preparation target to an observed mass-shipment event."
+  },
+  "changed_evidence_confidence": [
+    {
+      "after": {
+        "label": "HIGH",
+        "score": 0.765
+      },
+      "before": {
+        "label": "HIGH",
+        "score": 0.815
+      },
+      "evidence_id": "EVD-HBM4-CERTIFICATION-PENDING",
+      "reason": "Deterministic rubric recomputed at the newer as-of date."
+    },
+    {
+      "after": {
+        "label": "MEDIUM",
+        "score": 0.6775
+      },
+      "before": {
+        "label": "MEDIUM",
+        "score": 0.7275
+      },
+      "evidence_id": "EVD-HBM4-INDUSTRY-FIRST-CLAIM",
+      "reason": "Deterministic rubric recomputed at the newer as-of date."
+    },
+    {
+      "after": {
+        "label": "MEDIUM",
+        "score": 0.7275
+      },
+      "before": {
+        "label": "HIGH",
+        "score": 0.7775
+      },
+      "evidence_id": "EVD-HBM4-MASS-PRODUCTION-TARGET",
+      "reason": "Deterministic rubric recomputed at the newer as-of date."
+    },
+    {
+      "after": {
+        "label": "HIGH",
+        "score": 0.765
+      },
+      "before": {
+        "label": "HIGH",
+        "score": 0.815
+      },
+      "evidence_id": "EVD-HBM4-SAMPLE-SHIPMENT",
+      "reason": "Deterministic rubric recomputed at the newer as-of date."
+    }
+  ],
+  "changed_graph_edges": [
+    {
+      "after": {
+        "confidence": 0.815,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "TTM",
+          "DEMAND_FORECAST",
+          "SUPPLY_RISK"
+        ],
+        "edge_id": "EDGE-HBM4-ENTERS-MASS-SHIPMENT-Q2-2026",
+        "edge_type": "VALIDATED_PATTERN",
+        "evidence_ids": [
+          "EVD-HBM4-MASS-SHIPMENT-Q2-2026"
+        ],
+        "from": "MEMORY-HBM4-12L",
+        "relation": "ENTERS_MASS_SHIPMENT",
+        "to": "TTM-HBM4-MASS-SHIPMENT-Q2-2026",
+        "valid_from": "2026-07-29",
+        "valid_to": null
+      },
+      "change": "ADDED",
+      "edge_id": "EDGE-HBM4-ENTERS-MASS-SHIPMENT-Q2-2026"
+    },
+    {
+      "after": {
+        "confidence": 0.7775,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "TTM",
+          "SUPPLY_RISK"
+        ],
+        "edge_id": "EDGE-HBM4-PLANS-RAMP-H2-2026",
+        "edge_type": "SUPPORTED_HYPOTHESIS",
+        "evidence_ids": [
+          "EVD-HBM4-RAMP-PLAN-H2-2026"
+        ],
+        "from": "MEMORY-HBM4-12L",
+        "relation": "PLANS_RAMP",
+        "to": "TTM-HBM4-RAMP-H2-2026",
+        "valid_from": "2026-07-29",
+        "valid_to": "2026-12-31"
+      },
+      "change": "ADDED",
+      "edge_id": "EDGE-HBM4-PLANS-RAMP-H2-2026"
+    },
+    {
+      "after": {
+        "confidence": 0.815,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "DEMAND_FORECAST"
+        ],
+        "edge_id": "EDGE-MASS-SHIPMENT-AFFECTS-DEMAND-VISIBILITY",
+        "edge_type": "STRUCTURAL_RELATION",
+        "evidence_ids": [
+          "EVD-HBM4-MASS-SHIPMENT-Q2-2026"
+        ],
+        "from": "TTM-HBM4-MASS-SHIPMENT-Q2-2026",
+        "relation": "AFFECTS_DECISION",
+        "to": "DV-DEMAND-FORECAST",
+        "valid_from": "2026-07-29",
+        "valid_to": null
+      },
+      "change": "ADDED",
+      "edge_id": "EDGE-MASS-SHIPMENT-AFFECTS-DEMAND-VISIBILITY"
+    },
+    {
+      "after": {
+        "confidence": 0.815,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "TTM"
+        ],
+        "edge_id": "EDGE-MASS-SHIPMENT-AFFECTS-TTM",
+        "edge_type": "STRUCTURAL_RELATION",
+        "evidence_ids": [
+          "EVD-HBM4-MASS-SHIPMENT-Q2-2026"
+        ],
+        "from": "TTM-HBM4-MASS-SHIPMENT-Q2-2026",
+        "relation": "AFFECTS_DECISION",
+        "to": "DV-TTM",
+        "valid_from": "2026-07-29",
+        "valid_to": null
+      },
+      "change": "ADDED",
+      "edge_id": "EDGE-MASS-SHIPMENT-AFFECTS-TTM"
+    },
+    {
+      "after": {
+        "confidence": 0.7775,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "SUPPLY_RISK"
+        ],
+        "edge_id": "EDGE-RAMP-PLAN-AFFECTS-SUPPLY-RISK",
+        "edge_type": "STRUCTURAL_RELATION",
+        "evidence_ids": [
+          "EVD-HBM4-RAMP-PLAN-H2-2026"
+        ],
+        "from": "TTM-HBM4-RAMP-H2-2026",
+        "relation": "AFFECTS_DECISION",
+        "to": "DV-SUPPLY-RISK",
+        "valid_from": "2026-07-29",
+        "valid_to": "2026-12-31"
+      },
+      "change": "ADDED",
+      "edge_id": "EDGE-RAMP-PLAN-AFFECTS-SUPPLY-RISK"
+    },
+    {
+      "after": {
+        "confidence": 0.765,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "TARGET_SPEC",
+          "QUALIFICATION",
+          "TTM"
+        ],
+        "edge_id": "EDGE-AI-PLATFORM-REQUIRES-HBM4",
+        "edge_type": "STRUCTURAL_RELATION",
+        "evidence_ids": [
+          "EVD-HBM4-SAMPLE-SHIPMENT"
+        ],
+        "from": "PLATFORM-NEXTGEN-AI",
+        "relation": "REQUIRES_MEMORY",
+        "to": "MEMORY-HBM4-12L",
+        "valid_from": "2025-03-19",
+        "valid_to": null
+      },
+      "before": {
+        "confidence": 0.815,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "TARGET_SPEC",
+          "QUALIFICATION",
+          "TTM"
+        ],
+        "edge_id": "EDGE-AI-PLATFORM-REQUIRES-HBM4",
+        "edge_type": "STRUCTURAL_RELATION",
+        "evidence_ids": [
+          "EVD-HBM4-SAMPLE-SHIPMENT"
+        ],
+        "from": "PLATFORM-NEXTGEN-AI",
+        "relation": "REQUIRES_MEMORY",
+        "to": "MEMORY-HBM4-12L",
+        "valid_from": "2025-03-19",
+        "valid_to": null
+      },
+      "change": "UPDATED",
+      "edge_id": "EDGE-AI-PLATFORM-REQUIRES-HBM4"
+    },
+    {
+      "after": {
+        "confidence": 0.765,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "CUSTOMER_PRIORITY"
+        ],
+        "edge_id": "EDGE-CUSTOMER-AFFECTS-PRIORITY",
+        "edge_type": "SUPPORTED_HYPOTHESIS",
+        "evidence_ids": [
+          "EVD-HBM4-SAMPLE-SHIPMENT"
+        ],
+        "from": "CUSTOMER-HBM4-MAJOR",
+        "relation": "AFFECTS_DECISION",
+        "to": "DV-CUSTOMER-PRIORITY",
+        "valid_from": "2025-03-19",
+        "valid_to": null
+      },
+      "before": {
+        "confidence": 0.815,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "CUSTOMER_PRIORITY"
+        ],
+        "edge_id": "EDGE-CUSTOMER-AFFECTS-PRIORITY",
+        "edge_type": "SUPPORTED_HYPOTHESIS",
+        "evidence_ids": [
+          "EVD-HBM4-SAMPLE-SHIPMENT"
+        ],
+        "from": "CUSTOMER-HBM4-MAJOR",
+        "relation": "AFFECTS_DECISION",
+        "to": "DV-CUSTOMER-PRIORITY",
+        "valid_from": "2025-03-19",
+        "valid_to": null
+      },
+      "change": "UPDATED",
+      "edge_id": "EDGE-CUSTOMER-AFFECTS-PRIORITY"
+    },
+    {
+      "after": {
+        "confidence": 0.765,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "CUSTOMER_PRIORITY",
+          "QUALIFICATION"
+        ],
+        "edge_id": "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM",
+        "edge_type": "SUPPORTED_HYPOTHESIS",
+        "evidence_ids": [
+          "EVD-HBM4-SAMPLE-SHIPMENT"
+        ],
+        "from": "CUSTOMER-HBM4-MAJOR",
+        "relation": "EVALUATES_FOR_PLATFORM",
+        "to": "PLATFORM-NEXTGEN-AI",
+        "valid_from": "2025-03-19",
+        "valid_to": null
+      },
+      "before": {
+        "confidence": 0.815,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "CUSTOMER_PRIORITY",
+          "QUALIFICATION"
+        ],
+        "edge_id": "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM",
+        "edge_type": "SUPPORTED_HYPOTHESIS",
+        "evidence_ids": [
+          "EVD-HBM4-SAMPLE-SHIPMENT"
+        ],
+        "from": "CUSTOMER-HBM4-MAJOR",
+        "relation": "EVALUATES_FOR_PLATFORM",
+        "to": "PLATFORM-NEXTGEN-AI",
+        "valid_from": "2025-03-19",
+        "valid_to": null
+      },
+      "change": "UPDATED",
+      "edge_id": "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM"
+    },
+    {
+      "after": {
+        "confidence": 0.765,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "QUALIFICATION",
+          "TTM",
+          "CUSTOMER_PRIORITY"
+        ],
+        "edge_id": "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE",
+        "edge_type": "STRUCTURAL_RELATION",
+        "evidence_ids": [
+          "EVD-HBM4-SAMPLE-SHIPMENT"
+        ],
+        "from": "CUSTOMER-HBM4-MAJOR",
+        "relation": "RECEIVES_SAMPLE",
+        "to": "MEMORY-HBM4-12L",
+        "valid_from": "2025-03-19",
+        "valid_to": null
+      },
+      "before": {
+        "confidence": 0.815,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "QUALIFICATION",
+          "TTM",
+          "CUSTOMER_PRIORITY"
+        ],
+        "edge_id": "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE",
+        "edge_type": "STRUCTURAL_RELATION",
+        "evidence_ids": [
+          "EVD-HBM4-SAMPLE-SHIPMENT"
+        ],
+        "from": "CUSTOMER-HBM4-MAJOR",
+        "relation": "RECEIVES_SAMPLE",
+        "to": "MEMORY-HBM4-12L",
+        "valid_from": "2025-03-19",
+        "valid_to": null
+      },
+      "change": "UPDATED",
+      "edge_id": "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE"
+    },
+    {
+      "after": {
+        "confidence": 0.765,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "QUALIFICATION",
+          "TTM",
+          "DEMAND_FORECAST"
+        ],
+        "edge_id": "EDGE-HBM4-REQUIRES-QUALIFICATION",
+        "edge_type": "STRUCTURAL_RELATION",
+        "evidence_ids": [
+          "EVD-HBM4-CERTIFICATION-PENDING"
+        ],
+        "from": "MEMORY-HBM4-12L",
+        "relation": "REQUIRES_QUALIFICATION",
+        "to": "QUAL-HBM4-CUSTOMER",
+        "valid_from": "2025-03-19",
+        "valid_to": null
+      },
+      "before": {
+        "confidence": 0.815,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "QUALIFICATION",
+          "TTM",
+          "DEMAND_FORECAST"
+        ],
+        "edge_id": "EDGE-HBM4-REQUIRES-QUALIFICATION",
+        "edge_type": "STRUCTURAL_RELATION",
+        "evidence_ids": [
+          "EVD-HBM4-CERTIFICATION-PENDING"
+        ],
+        "from": "MEMORY-HBM4-12L",
+        "relation": "REQUIRES_QUALIFICATION",
+        "to": "QUAL-HBM4-CUSTOMER",
+        "valid_from": "2025-03-19",
+        "valid_to": null
+      },
+      "change": "UPDATED",
+      "edge_id": "EDGE-HBM4-REQUIRES-QUALIFICATION"
+    },
+    {
+      "after": {
+        "confidence": 0.765,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "DEMAND_FORECAST",
+          "QUALIFICATION"
+        ],
+        "edge_id": "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST",
+        "edge_type": "SUPPORTED_HYPOTHESIS",
+        "evidence_ids": [
+          "EVD-HBM4-CERTIFICATION-PENDING"
+        ],
+        "from": "QUAL-HBM4-CUSTOMER",
+        "relation": "AFFECTS_DECISION",
+        "to": "DV-DEMAND-FORECAST",
+        "valid_from": "2025-03-19",
+        "valid_to": null
+      },
+      "before": {
+        "confidence": 0.815,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "DEMAND_FORECAST",
+          "QUALIFICATION"
+        ],
+        "edge_id": "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST",
+        "edge_type": "SUPPORTED_HYPOTHESIS",
+        "evidence_ids": [
+          "EVD-HBM4-CERTIFICATION-PENDING"
+        ],
+        "from": "QUAL-HBM4-CUSTOMER",
+        "relation": "AFFECTS_DECISION",
+        "to": "DV-DEMAND-FORECAST",
+        "valid_from": "2025-03-19",
+        "valid_to": null
+      },
+      "change": "UPDATED",
+      "edge_id": "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST"
+    },
+    {
+      "after": {
+        "confidence": 0.765,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "QUALIFICATION"
+        ],
+        "edge_id": "EDGE-QUALIFICATION-AFFECTS-DV",
+        "edge_type": "STRUCTURAL_RELATION",
+        "evidence_ids": [
+          "EVD-HBM4-CERTIFICATION-PENDING"
+        ],
+        "from": "QUAL-HBM4-CUSTOMER",
+        "relation": "AFFECTS_DECISION",
+        "to": "DV-QUALIFICATION",
+        "valid_from": "2025-03-19",
+        "valid_to": null
+      },
+      "before": {
+        "confidence": 0.815,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "QUALIFICATION"
+        ],
+        "edge_id": "EDGE-QUALIFICATION-AFFECTS-DV",
+        "edge_type": "STRUCTURAL_RELATION",
+        "evidence_ids": [
+          "EVD-HBM4-CERTIFICATION-PENDING"
+        ],
+        "from": "QUAL-HBM4-CUSTOMER",
+        "relation": "AFFECTS_DECISION",
+        "to": "DV-QUALIFICATION",
+        "valid_from": "2025-03-19",
+        "valid_to": null
+      },
+      "change": "UPDATED",
+      "edge_id": "EDGE-QUALIFICATION-AFFECTS-DV"
+    },
+    {
+      "after": {
+        "confidence": 0.7463,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "QUALIFICATION",
+          "TTM",
+          "SUPPLY_RISK"
+        ],
+        "edge_id": "EDGE-QUALIFICATION-GATES-TTM",
+        "edge_type": "SUPPORTED_HYPOTHESIS",
+        "evidence_ids": [
+          "EVD-HBM4-CERTIFICATION-PENDING",
+          "EVD-HBM4-MASS-PRODUCTION-TARGET"
+        ],
+        "from": "QUAL-HBM4-CUSTOMER",
+        "relation": "GATES_TTM",
+        "to": "TTM-HBM4-H2-2025",
+        "valid_from": "2025-03-19",
+        "valid_to": "2025-12-31"
+      },
+      "before": {
+        "confidence": 0.7962,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "QUALIFICATION",
+          "TTM",
+          "SUPPLY_RISK"
+        ],
+        "edge_id": "EDGE-QUALIFICATION-GATES-TTM",
+        "edge_type": "SUPPORTED_HYPOTHESIS",
+        "evidence_ids": [
+          "EVD-HBM4-CERTIFICATION-PENDING",
+          "EVD-HBM4-MASS-PRODUCTION-TARGET"
+        ],
+        "from": "QUAL-HBM4-CUSTOMER",
+        "relation": "GATES_TTM",
+        "to": "TTM-HBM4-H2-2025",
+        "valid_from": "2025-03-19",
+        "valid_to": "2025-12-31"
+      },
+      "change": "UPDATED",
+      "edge_id": "EDGE-QUALIFICATION-GATES-TTM"
+    },
+    {
+      "after": {
+        "confidence": 0.7275,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "TTM"
+        ],
+        "edge_id": "EDGE-TTM-AFFECTS-DV",
+        "edge_type": "STRUCTURAL_RELATION",
+        "evidence_ids": [
+          "EVD-HBM4-MASS-PRODUCTION-TARGET"
+        ],
+        "from": "TTM-HBM4-H2-2025",
+        "relation": "AFFECTS_DECISION",
+        "to": "DV-TTM",
+        "valid_from": "2025-03-19",
+        "valid_to": "2025-12-31"
+      },
+      "before": {
+        "confidence": 0.7775,
+        "counterevidence_ids": [],
+        "decision_variables": [
+          "TTM"
+        ],
+        "edge_id": "EDGE-TTM-AFFECTS-DV",
+        "edge_type": "STRUCTURAL_RELATION",
+        "evidence_ids": [
+          "EVD-HBM4-MASS-PRODUCTION-TARGET"
+        ],
+        "from": "TTM-HBM4-H2-2025",
+        "relation": "AFFECTS_DECISION",
+        "to": "DV-TTM",
+        "valid_from": "2025-03-19",
+        "valid_to": "2025-12-31"
+      },
+      "change": "UPDATED",
+      "edge_id": "EDGE-TTM-AFFECTS-DV"
+    }
+  ],
+  "diff_hash": "52111BFF0AA10AD3BE1EE7B94A1868F0C36122587D129D5D97B1D515619EC340",
+  "invalidation_conditions": [
+    "SK hynix corrects or retracts the Q2 2026 mass-shipment statement.",
+    "The reported mass shipment is shown to refer only to non-commercial samples."
+  ],
+  "new_evidence": [
+    {
+      "claim": "SK hynix reported that it began HBM4 mass shipments in the second quarter of 2026.",
+      "evidence_id": "EVD-HBM4-MASS-SHIPMENT-Q2-2026",
+      "evidence_level": "A_DIRECT_FACT",
+      "source_id": "SRC-SKH-20260729-HBM4-MASS-SHIPMENT",
+      "status": "HUMAN_REVIEW"
+    },
+    {
+      "claim": "SK hynix stated a plan to ramp HBM4 production in the second half of 2026.",
+      "evidence_id": "EVD-HBM4-RAMP-PLAN-H2-2026",
+      "evidence_level": "B_COMPANY_CLAIM",
+      "source_id": "SRC-SKH-20260729-HBM4-MASS-SHIPMENT",
+      "status": "HUMAN_REVIEW"
+    }
+  ],
+  "still_unknown": [
+    "customer qualification completion/status",
+    "customer identity and customer share",
+    "HBM4 price or contract terms",
+    "mass-shipment volume and qualified-good-volume"
+  ],
+  "update_run_id": "RUN-HBM4-TEMPORAL-2026-001"
+}

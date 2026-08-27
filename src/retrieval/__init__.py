@@ -1,0 +1,1 @@
+"""Lightweight evidence retrieval."""

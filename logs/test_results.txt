@@ -1,0 +1,32 @@
+Test run: 2026-08-26
+Command: python -m unittest -v
+Runtime: local Python
+
+Result: 18 tests passed, 0 failed.
+
+Passed coverage:
+- missing provenance rejection
+- invalid state transition
+- duplicate evidence idempotency
+- retrieval source trace
+- graph edge trace
+- contradiction preservation
+- unsupported inference detection
+- direct PROMOTED transition cannot bypass Review record
+- Evidence-level review approval
+- HOLD Evidence cannot promote
+- REJECT Evidence cannot promote
+- E_STRONG_INFERENCE requires independent Sources
+- F_HYPOTHESIS cannot promote
+- every Decision Memo fact has Evidence trace
+- temporal update preserves prior Evidence
+- newer Source does not overwrite older Evidence
+- decision state diff is reproducible
+- full replay is deterministic
+
+Executed sequence:
+- RUN-HBM4-BASELINE-2025-002
+- RUN-HBM4-TEMPORAL-2026-001
+
+Temporal diff hash:
+52111BFF0AA10AD3BE1EE7B94A1868F0C36122587D129D5D97B1D515619EC340

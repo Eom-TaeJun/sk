@@ -1,0 +1,69 @@
+{
+  "graph_aware": [
+    {
+      "date": "2025-03-19",
+      "evidence_id": "EVD-HBM4-SAMPLE-SHIPMENT",
+      "evidence_level": "A_DIRECT_FACT",
+      "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "locator": "headline; body paragraphs 1-2",
+      "score": 6,
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+    },
+    {
+      "date": "2025-03-19",
+      "evidence_id": "EVD-HBM4-CERTIFICATION-PENDING",
+      "evidence_level": "A_DIRECT_FACT",
+      "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "locator": "body paragraph 2",
+      "score": 5,
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+    },
+    {
+      "date": "2025-03-19",
+      "evidence_id": "EVD-HBM4-MASS-PRODUCTION-TARGET",
+      "evidence_level": "B_COMPANY_CLAIM",
+      "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "locator": "News Highlights; body paragraph 2",
+      "score": 4,
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+    }
+  ],
+  "initial": [
+    {
+      "date": "2025-03-19",
+      "evidence_id": "EVD-HBM4-SAMPLE-SHIPMENT",
+      "evidence_level": "A_DIRECT_FACT",
+      "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "locator": "headline; body paragraphs 1-2",
+      "score": 6,
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+    },
+    {
+      "date": "2025-03-19",
+      "evidence_id": "EVD-HBM4-CERTIFICATION-PENDING",
+      "evidence_level": "A_DIRECT_FACT",
+      "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "locator": "body paragraph 2",
+      "score": 5,
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+    },
+    {
+      "date": "2025-03-19",
+      "evidence_id": "EVD-HBM4-INDUSTRY-FIRST-CLAIM",
+      "evidence_level": "B_COMPANY_CLAIM",
+      "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "locator": "headline; body paragraph 1",
+      "score": 5,
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+    },
+    {
+      "date": "2025-03-19",
+      "evidence_id": "EVD-HBM4-MASS-PRODUCTION-TARGET",
+      "evidence_level": "B_COMPANY_CLAIM",
+      "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "locator": "News Highlights; body paragraph 2",
+      "score": 4,
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+    }
+  ]
+}

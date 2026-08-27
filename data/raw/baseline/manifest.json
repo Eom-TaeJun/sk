@@ -1,0 +1,15 @@
+{
+  "baseline_id": "SKH-MEMORY-DI-V2",
+  "archive_file": "SK_hynix_Memory_Market_DI_Final_Handoff_v2.zip",
+  "archive_sha256": "973D5566B11D081B69BF845BB68A8968613A651056E3F4C84E003D18AE85D2DA",
+  "original_path": "F:\\Downloads\\SK하이닉스_반도체전파경로_Codex_Final_Handoff_v2 (1).zip",
+  "recorded_at": "2026-08-26T00:00:00+09:00",
+  "preserved_roots": [
+    "00_MASTER",
+    "01_CANONICAL_SOURCES",
+    "02_SCHEMAS",
+    "03_TEMPLATES"
+  ],
+  "known_mismatch": "The archive filename identifies v2 while the embedded README title identifies Final Handoff v1.",
+  "immutability_policy": "The copied archive and extracted baseline roots are source material. Generated files live under docs, data, src, tests, logs, and application_evidence."
+}

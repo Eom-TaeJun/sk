@@ -1,0 +1,23 @@
+test_contradiction_preservation (tests.test_vertical_slice.VerticalSliceTest.test_contradiction_preservation) ... ok
+test_decision_state_diff_is_reproducible (tests.test_vertical_slice.VerticalSliceTest.test_decision_state_diff_is_reproducible) ... ok
+test_direct_transition_cannot_bypass_review_record (tests.test_vertical_slice.VerticalSliceTest.test_direct_transition_cannot_bypass_review_record) ... ok
+test_duplicate_evidence_idempotency (tests.test_vertical_slice.VerticalSliceTest.test_duplicate_evidence_idempotency) ... ok
+test_every_memo_fact_has_evidence_trace (tests.test_vertical_slice.VerticalSliceTest.test_every_memo_fact_has_evidence_trace) ... ok
+test_evidence_level_review_approval (tests.test_vertical_slice.VerticalSliceTest.test_evidence_level_review_approval) ... ok
+test_graph_edge_trace_uses_evidence_ids (tests.test_vertical_slice.VerticalSliceTest.test_graph_edge_trace_uses_evidence_ids) ... ok
+test_hold_evidence_cannot_promote (tests.test_vertical_slice.VerticalSliceTest.test_hold_evidence_cannot_promote) ... ok
+test_hypothesis_cannot_promote (tests.test_vertical_slice.VerticalSliceTest.test_hypothesis_cannot_promote) ... ok
+test_invalid_state_transition (tests.test_vertical_slice.VerticalSliceTest.test_invalid_state_transition) ... ok
+test_missing_provenance_rejection (tests.test_vertical_slice.VerticalSliceTest.test_missing_provenance_rejection) ... ok
+test_newer_source_does_not_overwrite_older_evidence (tests.test_vertical_slice.VerticalSliceTest.test_newer_source_does_not_overwrite_older_evidence) ... ok
+test_reject_evidence_cannot_promote (tests.test_vertical_slice.VerticalSliceTest.test_reject_evidence_cannot_promote) ... ok
+test_replay_is_deterministic (tests.test_vertical_slice.VerticalSliceTest.test_replay_is_deterministic) ... ok
+test_retrieval_source_trace (tests.test_vertical_slice.VerticalSliceTest.test_retrieval_source_trace) ... ok
+test_strong_inference_requires_independent_sources (tests.test_vertical_slice.VerticalSliceTest.test_strong_inference_requires_independent_sources) ... ok
+test_temporal_update_preserves_prior_evidence (tests.test_vertical_slice.VerticalSliceTest.test_temporal_update_preserves_prior_evidence) ... ok
+test_unsupported_inference_detection (tests.test_vertical_slice.VerticalSliceTest.test_unsupported_inference_detection) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 9.717s
+
+OK

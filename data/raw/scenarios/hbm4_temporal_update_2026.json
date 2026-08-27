@@ -1,0 +1,173 @@
+{
+  "scenario_id": "SCN-HBM4-COMMERCIAL-TEMPORAL-2026-001",
+  "contract_version": "vertical-slice-v1.2-evidence-review-temporal",
+  "run_id": "RUN-HBM4-TEMPORAL-2026-001",
+  "baseline_run_id": "RUN-HBM4-BASELINE-2025-002",
+  "run_at": "2026-08-26T10:00:00+09:00",
+  "as_of": "2026-07-29",
+  "review_manifest_path": "data/reviews/hbm4_review_manifest.jsonl",
+  "source": {
+    "source_id": "SRC-SKH-20260729-HBM4-MASS-SHIPMENT",
+    "title": "SK hynix Announces 2Q26 Financial Results",
+    "publisher": "SK hynix Newsroom",
+    "publication_date": "2026-07-29",
+    "accessed_at": "2026-08-26T10:00:00+09:00",
+    "url": "https://news.skhynix.com/en/q2-2026-business-results/",
+    "local_archive_path": "data/raw/sources/SRC-SKH-20260729-HBM4-MASS-SHIPMENT.md",
+    "content_hash": "89BF2BEEBCF4B99E60E745D3AA163262E25529B97A6556C47C0C6E4A0B01DDD6",
+    "source_tier": "T1",
+    "locator": "article body, HBM4/HBM4E paragraph (web-rendered line 60)"
+  },
+  "retrieval_query": "HBM4 mass shipment commercialization production ramp qualification volume price customer share",
+  "graph_seed_entity": "MEMORY-HBM4-12L",
+  "evidence": [
+    {
+      "evidence_id": "EVD-HBM4-MASS-SHIPMENT-Q2-2026",
+      "excerpt": "The company began mass shipments of HBM4 in the second quarter.",
+      "locator": "article body, HBM4/HBM4E paragraph, first sentence (web-rendered line 60)",
+      "claim": "SK hynix reported that it began HBM4 mass shipments in the second quarter of 2026.",
+      "event_type": "MASS_SHIPMENT_STARTED",
+      "evidence_level": "A_DIRECT_FACT",
+      "demand_or_supply": "BOTH",
+      "entities": ["ORG-SKHYNIX", "MEMORY-HBM4-12L", "TTM-HBM4-MASS-SHIPMENT-Q2-2026"],
+      "relationship": "ENTERS_MASS_SHIPMENT",
+      "decision_variables": ["TTM", "DEMAND_FORECAST", "SUPPLY_RISK"],
+      "verification_status": "SUPPORTED"
+    },
+    {
+      "evidence_id": "EVD-HBM4-RAMP-PLAN-H2-2026",
+      "excerpt": "will ramp up production in the second half of the year.",
+      "locator": "article body, HBM4/HBM4E paragraph, forward-looking clause (web-rendered line 60)",
+      "claim": "SK hynix stated a plan to ramp HBM4 production in the second half of 2026.",
+      "event_type": "PRODUCTION_RAMP_PLAN",
+      "evidence_level": "B_COMPANY_CLAIM",
+      "demand_or_supply": "SUPPLY",
+      "entities": ["ORG-SKHYNIX", "MEMORY-HBM4-12L", "TTM-HBM4-RAMP-H2-2026"],
+      "relationship": "PLANS_RAMP",
+      "decision_variables": ["TTM", "SUPPLY_RISK"],
+      "verification_status": "SUPPORTED"
+    }
+  ],
+  "nodes": [
+    {"node_id": "TTM-HBM4-MASS-SHIPMENT-Q2-2026", "node_type": "TTM", "label": "HBM4 mass shipment reported for Q2 2026"},
+    {"node_id": "TTM-HBM4-RAMP-H2-2026", "node_type": "TTM", "label": "HBM4 H2 2026 production-ramp plan"},
+    {"node_id": "DV-SUPPLY-RISK", "node_type": "DecisionVariable", "label": "Supply Risk"}
+  ],
+  "edges": [
+    {
+      "edge_id": "EDGE-HBM4-ENTERS-MASS-SHIPMENT-Q2-2026",
+      "from": "MEMORY-HBM4-12L",
+      "relation": "ENTERS_MASS_SHIPMENT",
+      "to": "TTM-HBM4-MASS-SHIPMENT-Q2-2026",
+      "edge_type": "VALIDATED_PATTERN",
+      "evidence_ids": ["EVD-HBM4-MASS-SHIPMENT-Q2-2026"],
+      "counterevidence_ids": [],
+      "confidence": 0.0,
+      "valid_from": "2026-07-29",
+      "valid_to": null,
+      "decision_variables": ["TTM", "DEMAND_FORECAST", "SUPPLY_RISK"]
+    },
+    {
+      "edge_id": "EDGE-HBM4-PLANS-RAMP-H2-2026",
+      "from": "MEMORY-HBM4-12L",
+      "relation": "PLANS_RAMP",
+      "to": "TTM-HBM4-RAMP-H2-2026",
+      "edge_type": "SUPPORTED_HYPOTHESIS",
+      "evidence_ids": ["EVD-HBM4-RAMP-PLAN-H2-2026"],
+      "counterevidence_ids": [],
+      "confidence": 0.0,
+      "valid_from": "2026-07-29",
+      "valid_to": "2026-12-31",
+      "decision_variables": ["TTM", "SUPPLY_RISK"]
+    },
+    {
+      "edge_id": "EDGE-MASS-SHIPMENT-AFFECTS-TTM",
+      "from": "TTM-HBM4-MASS-SHIPMENT-Q2-2026",
+      "relation": "AFFECTS_DECISION",
+      "to": "DV-TTM",
+      "edge_type": "STRUCTURAL_RELATION",
+      "evidence_ids": ["EVD-HBM4-MASS-SHIPMENT-Q2-2026"],
+      "counterevidence_ids": [],
+      "confidence": 0.0,
+      "valid_from": "2026-07-29",
+      "valid_to": null,
+      "decision_variables": ["TTM"]
+    },
+    {
+      "edge_id": "EDGE-MASS-SHIPMENT-AFFECTS-DEMAND-VISIBILITY",
+      "from": "TTM-HBM4-MASS-SHIPMENT-Q2-2026",
+      "relation": "AFFECTS_DECISION",
+      "to": "DV-DEMAND-FORECAST",
+      "edge_type": "STRUCTURAL_RELATION",
+      "evidence_ids": ["EVD-HBM4-MASS-SHIPMENT-Q2-2026"],
+      "counterevidence_ids": [],
+      "confidence": 0.0,
+      "valid_from": "2026-07-29",
+      "valid_to": null,
+      "decision_variables": ["DEMAND_FORECAST"]
+    },
+    {
+      "edge_id": "EDGE-RAMP-PLAN-AFFECTS-SUPPLY-RISK",
+      "from": "TTM-HBM4-RAMP-H2-2026",
+      "relation": "AFFECTS_DECISION",
+      "to": "DV-SUPPLY-RISK",
+      "edge_type": "STRUCTURAL_RELATION",
+      "evidence_ids": ["EVD-HBM4-RAMP-PLAN-H2-2026"],
+      "counterevidence_ids": [],
+      "confidence": 0.0,
+      "valid_from": "2026-07-29",
+      "valid_to": "2026-12-31",
+      "decision_variables": ["SUPPLY_RISK"]
+    }
+  ],
+  "decision_memo": {
+    "memo_id": "MEMO-HBM4-TEMPORAL-2026-001",
+    "title": "Decision Memo — HBM4 Sample Baseline to Mass Shipment Update",
+    "what_changed": "The official state moved from 2025 customer samples and pending certification work to a 2026 company-reported start of HBM4 mass shipments; the H2 production ramp remains a forward-looking company plan.",
+    "evidence_level": ["A_DIRECT_FACT", "B_COMPANY_CLAIM"],
+    "why_it_matters": "Observed mass shipment is closer to commercialization than sample delivery and changes TTM, demand-visibility, and supply-risk judgments, but it does not disclose qualification status, customers, price, or volume.",
+    "demand_or_supply": "BOTH",
+    "current_bottleneck_candidate": "PRODUCTION_RAMP_EXECUTION; qualification status and qualified-good-volume remain undisclosed.",
+    "assumption_updated": "The prior state 'sample delivered, qualification pending' is no longer the latest commercialization state. HBM4 has an observed mass-shipment event, while shipment magnitude and customer economics remain unknown.",
+    "decision_variables_affected": ["DEMAND_FORECAST", "SUPPLY_RISK", "TTM"],
+    "confidence_reason": "Two dated first-party records establish the temporal movement from samples to reported mass shipment. Neither record independently discloses customer qualification, price, customer share, or volume.",
+    "invalidate_if": [
+      "SK hynix corrects or retracts the statement that HBM4 mass shipments began in Q2 2026.",
+      "The reported category is shown to be non-commercial sample movement rather than mass shipment."
+    ],
+    "monitor_next": [
+      "Actual H2 2026 production-ramp realization",
+      "Customer or platform-specific qualification disclosure",
+      "Commercial shipment volume or mix disclosure",
+      "Price or contract terms from attributable sources"
+    ],
+    "still_unknown": [
+      "customer qualification completion/status",
+      "customer identity and customer share",
+      "HBM4 price or contract terms",
+      "mass-shipment volume and qualified-good-volume"
+    ],
+    "fact_statements": [
+      {"text": "In March 2025 SK hynix reported HBM4 sample delivery and described certification as a following process.", "evidence_ids": ["EVD-HBM4-SAMPLE-SHIPMENT", "EVD-HBM4-CERTIFICATION-PENDING"]},
+      {"text": "In July 2026 SK hynix reported that HBM4 mass shipments had begun in the second quarter.", "evidence_ids": ["EVD-HBM4-MASS-SHIPMENT-Q2-2026"]},
+      {"text": "The same 2026 release stated a plan to ramp production in the second half.", "evidence_ids": ["EVD-HBM4-RAMP-PLAN-H2-2026"]}
+    ]
+  },
+  "temporal_update": {
+    "decision_variable_changes": {
+      "DEMAND_FORECAST": "Commercial visibility moved from sample-stage evidence to an observed mass-shipment signal, without enough data to estimate volume.",
+      "SUPPLY_RISK": "Mass-shipment start reduces uncertainty about initial production readiness; H2 ramp execution and qualified-good-volume remain open.",
+      "TTM": "The state moved from a mass-production preparation target to an observed mass-shipment event."
+    },
+    "still_unknown": [
+      "customer qualification completion/status",
+      "customer identity and customer share",
+      "HBM4 price or contract terms",
+      "mass-shipment volume and qualified-good-volume"
+    ],
+    "invalidation_conditions": [
+      "SK hynix corrects or retracts the Q2 2026 mass-shipment statement.",
+      "The reported mass shipment is shown to refer only to non-commercial samples."
+    ]
+  }
+}

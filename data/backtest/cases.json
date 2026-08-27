@@ -1,0 +1,30 @@
+[
+  {
+    "case_id": "C1_CAPEX_DOWNTURN_CONTROL",
+    "period": "2022-2024",
+    "decision_use": "Test whether broad CSP datacenter investment alone was a stable near-term memory-demand signal during the general DRAM downcycle.",
+    "included_tracks": ["TRACK-C1-CSP-GENERAL-MEMORY"],
+    "exclusion_note": "No causal attribution from Microsoft spend to SK hynix results is made; scope is BROAD and this case is a false-positive/delay control."
+  },
+  {
+    "case_id": "C2_HBM3E_COMMERCIALIZATION",
+    "period": "2023-2024",
+    "decision_use": "Compare sample and qualification-stage disclosures with later supplier volume production.",
+    "included_tracks": ["TRACK-C2-MICRON-HBM3E-H200", "TRACK-C2-SKH-HBM3E"],
+    "exclusion_note": "NVIDIA platform shipment is not treated as observed unless the cited document records it as begun; a planned Q2 shipment is not the primary outcome."
+  },
+  {
+    "case_id": "C3_POWER_SPACE_DEPLOYMENT",
+    "period": "2024-2025",
+    "decision_use": "Compare cloud/AI CAPEX with constraints, powered/chipped readiness, deployed capacity, and commercial revenue realization.",
+    "included_tracks": ["TRACK-C3-MSFT-AI-CAPACITY"],
+    "exclusion_note": "Azure revenue and deployed gigawatts are infrastructure-level outcomes; no HBM quantity is inferred."
+  },
+  {
+    "case_id": "C4_HBM4_COMMITMENT_COMMERCIALIZATION",
+    "period": "2025-2026",
+    "decision_use": "Compare sample, pending qualification, supply commitment, LTA, and HBM4 mass shipment while preserving right censoring.",
+    "included_tracks": ["TRACK-C4-SKH-HBM4"],
+    "exclusion_note": "The Q3 2025 supply discussion is not relabeled as an LTA. The July 2026 LTA cannot be judged inside a completed 12-month forward window."
+  }
+]

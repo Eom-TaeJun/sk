@@ -1,0 +1,391 @@
+{
+  "artifacts": {
+    "decision_memo_json": "data/runs/RUN-HBM4-BASELINE-2025-002/decision_memo.json",
+    "decision_memo_markdown": "data/runs/RUN-HBM4-BASELINE-2025-002/decision_memo.md",
+    "evidence_snapshot": "data/runs/RUN-HBM4-BASELINE-2025-002/evidence_snapshot.json",
+    "graph_diff": "data/runs/RUN-HBM4-BASELINE-2025-002/graph_diff.json",
+    "graph_snapshot": "data/runs/RUN-HBM4-BASELINE-2025-002/graph_snapshot.json",
+    "retrieval_trace": "data/runs/RUN-HBM4-BASELINE-2025-002/retrieval_trace.json",
+    "temporal_state_diff": null
+  },
+  "blocking_findings": [],
+  "contradiction_ids": [
+    "CONTRA-FIRST-IS-NOT-COMMERCIAL-LEADERSHIP",
+    "CONTRA-QUALIFICATION-IS-NOT-VOLUME",
+    "CONTRA-SAMPLE-IS-NOT-QUALIFICATION"
+  ],
+  "core_implementation_version": "1.1.0-evidence-review-temporal",
+  "graph_context": {
+    "edge_ids": [
+      "EDGE-AI-PLATFORM-REQUIRES-HBM4",
+      "EDGE-CUSTOMER-AFFECTS-PRIORITY",
+      "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM",
+      "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE",
+      "EDGE-HBM4-REQUIRES-QUALIFICATION",
+      "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST",
+      "EDGE-QUALIFICATION-AFFECTS-DV",
+      "EDGE-QUALIFICATION-GATES-TTM"
+    ],
+    "evidence_ids": [
+      "EVD-HBM4-CERTIFICATION-PENDING",
+      "EVD-HBM4-MASS-PRODUCTION-TARGET",
+      "EVD-HBM4-SAMPLE-SHIPMENT"
+    ],
+    "max_hops": 2,
+    "node_ids": [
+      "CUSTOMER-HBM4-MAJOR",
+      "DV-CUSTOMER-PRIORITY",
+      "DV-DEMAND-FORECAST",
+      "DV-QUALIFICATION",
+      "MEMORY-HBM4-12L",
+      "PLATFORM-NEXTGEN-AI",
+      "QUAL-HBM4-CUSTOMER",
+      "TTM-HBM4-H2-2025"
+    ],
+    "seed_id": "MEMORY-HBM4-12L"
+  },
+  "graph_diff": {
+    "added_edges": [],
+    "added_nodes": [],
+    "updated_edges": [
+      {
+        "after": 0.815,
+        "before": 0.765,
+        "edge_id": "EDGE-AI-PLATFORM-REQUIRES-HBM4",
+        "field": "confidence"
+      },
+      {
+        "after": 0.815,
+        "before": 0.765,
+        "edge_id": "EDGE-CUSTOMER-AFFECTS-PRIORITY",
+        "field": "confidence"
+      },
+      {
+        "after": 0.815,
+        "before": 0.765,
+        "edge_id": "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM",
+        "field": "confidence"
+      },
+      {
+        "after": 0.815,
+        "before": 0.765,
+        "edge_id": "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE",
+        "field": "confidence"
+      },
+      {
+        "after": 0.815,
+        "before": 0.765,
+        "edge_id": "EDGE-HBM4-REQUIRES-QUALIFICATION",
+        "field": "confidence"
+      },
+      {
+        "after": 0.815,
+        "before": 0.765,
+        "edge_id": "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST",
+        "field": "confidence"
+      },
+      {
+        "after": 0.815,
+        "before": 0.765,
+        "edge_id": "EDGE-QUALIFICATION-AFFECTS-DV",
+        "field": "confidence"
+      },
+      {
+        "after": 0.7962,
+        "before": 0.7463,
+        "edge_id": "EDGE-QUALIFICATION-GATES-TTM",
+        "field": "confidence"
+      },
+      {
+        "after": 0.7775,
+        "before": 0.7275,
+        "edge_id": "EDGE-TTM-AFFECTS-DV",
+        "field": "confidence"
+      }
+    ]
+  },
+  "memo": {
+    "assumption_updated": "Sample shipment must not be treated as completed qualification or confirmed commercial volume; an industry-first claim must not be treated as commercial leadership.",
+    "confidence": {
+      "interpretation": "Average deterministic rubric score; not a probability.",
+      "label": "HIGH",
+      "reason": "One first-party source directly distinguishes samples from a pending certification step, but provides no independent confirmation or commercial volume.",
+      "score": 0.7837
+    },
+    "counterevidence": [
+      "CONTRA-FIRST-IS-NOT-COMMERCIAL-LEADERSHIP",
+      "CONTRA-QUALIFICATION-IS-NOT-VOLUME",
+      "CONTRA-SAMPLE-IS-NOT-QUALIFICATION"
+    ],
+    "current_bottleneck_candidate": "CUSTOMER_QUALIFICATION",
+    "decision_variables_affected": [
+      "CUSTOMER_PRIORITY",
+      "DEMAND_FORECAST",
+      "QUALIFICATION",
+      "SUPPLY_RISK",
+      "TTM"
+    ],
+    "demand_or_supply": "BOTH",
+    "evidence_level": [
+      "A_DIRECT_FACT",
+      "B_COMPANY_CLAIM"
+    ],
+    "fact_statements": [
+      {
+        "evidence_ids": [
+          "EVD-HBM4-SAMPLE-SHIPMENT"
+        ],
+        "text": "SK hynix reported delivery of 12-layer HBM4 samples to major customers."
+      },
+      {
+        "evidence_ids": [
+          "EVD-HBM4-CERTIFICATION-PENDING"
+        ],
+        "text": "The announcement described customer certification as a next process rather than completed qualification."
+      },
+      {
+        "evidence_ids": [
+          "EVD-HBM4-MASS-PRODUCTION-TARGET"
+        ],
+        "text": "The announcement stated a target to complete mass-production preparations in the second half of 2025."
+      },
+      {
+        "evidence_ids": [
+          "EVD-HBM4-INDUSTRY-FIRST-CLAIM"
+        ],
+        "text": "The publisher presented the sample provision as first in the world."
+      }
+    ],
+    "invalidate_if": [
+      "A dated official record shows qualification was already complete at the sample-announcement date.",
+      "A customer or shipment record demonstrates that the announced samples were already commercial volume."
+    ],
+    "memo_id": "MEMO-HBM4-BASELINE-2025-002",
+    "monitor_next": [
+      "Customer qualification completion or approved-vendor status",
+      "Design-in or platform-specific adoption",
+      "Commercial shipment and committed price/volume",
+      "Mass-production ramp and qualified good-volume evidence"
+    ],
+    "review_status": "HUMAN_APPROVED",
+    "run_id": "RUN-HBM4-BASELINE-2025-002",
+    "source_evidence_trace": [
+      {
+        "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+        "evidence_id": "EVD-HBM4-CERTIFICATION-PENDING",
+        "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+        "locator": "body paragraph 2",
+        "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "publication_date": "2025-03-19",
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+        "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+      },
+      {
+        "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+        "evidence_id": "EVD-HBM4-INDUSTRY-FIRST-CLAIM",
+        "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+        "locator": "headline; body paragraph 1",
+        "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "publication_date": "2025-03-19",
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+        "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+      },
+      {
+        "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+        "evidence_id": "EVD-HBM4-MASS-PRODUCTION-TARGET",
+        "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+        "locator": "News Highlights; body paragraph 2",
+        "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "publication_date": "2025-03-19",
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+        "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+      },
+      {
+        "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+        "evidence_id": "EVD-HBM4-SAMPLE-SHIPMENT",
+        "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+        "locator": "headline; body paragraphs 1-2",
+        "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "publication_date": "2025-03-19",
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+        "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+      }
+    ],
+    "still_unknown": [
+      "customer qualification completion",
+      "customer identity/share",
+      "price",
+      "volume"
+    ],
+    "title": "Decision Memo \u2014 HBM4 Sample to Qualification Gate",
+    "transmission_path": [
+      "EDGE-AI-PLATFORM-REQUIRES-HBM4",
+      "EDGE-CUSTOMER-AFFECTS-PRIORITY",
+      "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM",
+      "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE",
+      "EDGE-HBM4-REQUIRES-QUALIFICATION",
+      "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST",
+      "EDGE-QUALIFICATION-AFFECTS-DV",
+      "EDGE-QUALIFICATION-GATES-TTM"
+    ],
+    "what_changed": "HBM4 moved to customer sample delivery, while customer certification and mass-production preparation remained subsequent gates.",
+    "why_it_matters": "The event improves visibility into qualification and TTM work, but does not establish qualified demand, committed volume, or commercial shipment."
+  },
+  "retrieval": {
+    "graph_aware": [
+      {
+        "date": "2025-03-19",
+        "evidence_id": "EVD-HBM4-SAMPLE-SHIPMENT",
+        "evidence_level": "A_DIRECT_FACT",
+        "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "locator": "headline; body paragraphs 1-2",
+        "score": 6,
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+      },
+      {
+        "date": "2025-03-19",
+        "evidence_id": "EVD-HBM4-CERTIFICATION-PENDING",
+        "evidence_level": "A_DIRECT_FACT",
+        "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "locator": "body paragraph 2",
+        "score": 5,
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+      },
+      {
+        "date": "2025-03-19",
+        "evidence_id": "EVD-HBM4-MASS-PRODUCTION-TARGET",
+        "evidence_level": "B_COMPANY_CLAIM",
+        "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "locator": "News Highlights; body paragraph 2",
+        "score": 4,
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+      }
+    ],
+    "initial": [
+      {
+        "date": "2025-03-19",
+        "evidence_id": "EVD-HBM4-SAMPLE-SHIPMENT",
+        "evidence_level": "A_DIRECT_FACT",
+        "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "locator": "headline; body paragraphs 1-2",
+        "score": 6,
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+      },
+      {
+        "date": "2025-03-19",
+        "evidence_id": "EVD-HBM4-CERTIFICATION-PENDING",
+        "evidence_level": "A_DIRECT_FACT",
+        "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "locator": "body paragraph 2",
+        "score": 5,
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+      },
+      {
+        "date": "2025-03-19",
+        "evidence_id": "EVD-HBM4-INDUSTRY-FIRST-CLAIM",
+        "evidence_level": "B_COMPANY_CLAIM",
+        "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "locator": "headline; body paragraph 1",
+        "score": 5,
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+      },
+      {
+        "date": "2025-03-19",
+        "evidence_id": "EVD-HBM4-MASS-PRODUCTION-TARGET",
+        "evidence_level": "B_COMPANY_CLAIM",
+        "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "locator": "News Highlights; body paragraph 2",
+        "score": 4,
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+      }
+    ]
+  },
+  "review_outcomes": [
+    {
+      "decision": "APPROVE",
+      "evidence_id": "EVD-HBM4-SAMPLE-SHIPMENT",
+      "promotion_blocked": false,
+      "resulting_status": "PROMOTED",
+      "review_id": "REV-2025-SAMPLE-SHIPMENT-001"
+    },
+    {
+      "decision": "APPROVE",
+      "evidence_id": "EVD-HBM4-CERTIFICATION-PENDING",
+      "promotion_blocked": false,
+      "resulting_status": "PROMOTED",
+      "review_id": "REV-2025-CERT-PENDING-001"
+    },
+    {
+      "decision": "APPROVE",
+      "evidence_id": "EVD-HBM4-MASS-PRODUCTION-TARGET",
+      "promotion_blocked": false,
+      "resulting_status": "PROMOTED",
+      "review_id": "REV-2025-MP-TARGET-001"
+    },
+    {
+      "decision": "APPROVE",
+      "evidence_id": "EVD-HBM4-INDUSTRY-FIRST-CLAIM",
+      "promotion_blocked": false,
+      "resulting_status": "PROMOTED",
+      "review_id": "REV-2025-FIRST-CLAIM-001"
+    }
+  ],
+  "run_id": "RUN-HBM4-BASELINE-2025-002",
+  "scenario_fingerprint": "B00FBC1F41CB6B021799C742E73CD33389A9EBF621957942A4607B24CF076BCF",
+  "scenario_id": "SCN-HBM4-SAMPLE-BASELINE-2025-002",
+  "signal_summary": {
+    "interpretation": "Average deterministic rubric score; not a probability.",
+    "label": "HIGH",
+    "score": 0.7837
+  },
+  "source_trace": [
+    {
+      "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+      "evidence_id": "EVD-HBM4-CERTIFICATION-PENDING",
+      "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+      "locator": "body paragraph 2",
+      "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "publication_date": "2025-03-19",
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+      "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+    },
+    {
+      "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+      "evidence_id": "EVD-HBM4-INDUSTRY-FIRST-CLAIM",
+      "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+      "locator": "headline; body paragraph 1",
+      "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "publication_date": "2025-03-19",
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+      "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+    },
+    {
+      "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+      "evidence_id": "EVD-HBM4-MASS-PRODUCTION-TARGET",
+      "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+      "locator": "News Highlights; body paragraph 2",
+      "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "publication_date": "2025-03-19",
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+      "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+    },
+    {
+      "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+      "evidence_id": "EVD-HBM4-SAMPLE-SHIPMENT",
+      "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+      "locator": "headline; body paragraphs 1-2",
+      "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "publication_date": "2025-03-19",
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+      "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+    }
+  ],
+  "state_by_evidence": {
+    "EVD-HBM4-CERTIFICATION-PENDING": "PROMOTED",
+    "EVD-HBM4-INDUSTRY-FIRST-CLAIM": "PROMOTED",
+    "EVD-HBM4-MASS-PRODUCTION-TARGET": "PROMOTED",
+    "EVD-HBM4-SAMPLE-SHIPMENT": "PROMOTED"
+  },
+  "temporal_state_diff": null,
+  "trace_hash": "05FB97ACB69159B3497A77852166D33187A66F62E4D6C46920767E24D160A7AE"
+}

@@ -1,0 +1,10 @@
+{
+  "review_id": "string",
+  "evidence_id": "string",
+  "reviewer": "string",
+  "decision": "APPROVE|HOLD|REJECT",
+  "approved_evidence_level": "A_DIRECT_FACT|B_COMPANY_CLAIM|C_EXTERNAL_ESTIMATE|D_DERIVED_FACT|E_STRONG_INFERENCE|F_HYPOTHESIS",
+  "reason": "string",
+  "reviewed_at": "ISO-8601 datetime",
+  "run_id": "string"
+}

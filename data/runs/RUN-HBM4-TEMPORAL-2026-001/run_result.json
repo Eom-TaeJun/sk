@@ -1,0 +1,955 @@
+{
+  "artifacts": {
+    "decision_memo_json": "data/runs/RUN-HBM4-TEMPORAL-2026-001/decision_memo.json",
+    "decision_memo_markdown": "data/runs/RUN-HBM4-TEMPORAL-2026-001/decision_memo.md",
+    "evidence_snapshot": "data/runs/RUN-HBM4-TEMPORAL-2026-001/evidence_snapshot.json",
+    "graph_diff": "data/runs/RUN-HBM4-TEMPORAL-2026-001/graph_diff.json",
+    "graph_snapshot": "data/runs/RUN-HBM4-TEMPORAL-2026-001/graph_snapshot.json",
+    "retrieval_trace": "data/runs/RUN-HBM4-TEMPORAL-2026-001/retrieval_trace.json",
+    "temporal_state_diff": "data/runs/RUN-HBM4-TEMPORAL-2026-001/temporal_state_diff.json"
+  },
+  "blocking_findings": [],
+  "contradiction_ids": [
+    "CONTRA-FIRST-IS-NOT-COMMERCIAL-LEADERSHIP",
+    "CONTRA-MASS-SHIPMENT-NO-PRICE-VOLUME-SHARE",
+    "CONTRA-QUALIFICATION-IS-NOT-VOLUME",
+    "CONTRA-SAMPLE-IS-NOT-QUALIFICATION"
+  ],
+  "core_implementation_version": "1.1.0-evidence-review-temporal",
+  "graph_context": {
+    "edge_ids": [
+      "EDGE-AI-PLATFORM-REQUIRES-HBM4",
+      "EDGE-CUSTOMER-AFFECTS-PRIORITY",
+      "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM",
+      "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE",
+      "EDGE-HBM4-ENTERS-MASS-SHIPMENT-Q2-2026",
+      "EDGE-HBM4-PLANS-RAMP-H2-2026",
+      "EDGE-HBM4-REQUIRES-QUALIFICATION",
+      "EDGE-MASS-SHIPMENT-AFFECTS-DEMAND-VISIBILITY",
+      "EDGE-MASS-SHIPMENT-AFFECTS-TTM",
+      "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST",
+      "EDGE-QUALIFICATION-AFFECTS-DV",
+      "EDGE-QUALIFICATION-GATES-TTM",
+      "EDGE-RAMP-PLAN-AFFECTS-SUPPLY-RISK"
+    ],
+    "evidence_ids": [
+      "EVD-HBM4-CERTIFICATION-PENDING",
+      "EVD-HBM4-MASS-PRODUCTION-TARGET",
+      "EVD-HBM4-MASS-SHIPMENT-Q2-2026",
+      "EVD-HBM4-RAMP-PLAN-H2-2026",
+      "EVD-HBM4-SAMPLE-SHIPMENT"
+    ],
+    "max_hops": 2,
+    "node_ids": [
+      "CUSTOMER-HBM4-MAJOR",
+      "DV-CUSTOMER-PRIORITY",
+      "DV-DEMAND-FORECAST",
+      "DV-QUALIFICATION",
+      "DV-SUPPLY-RISK",
+      "DV-TTM",
+      "MEMORY-HBM4-12L",
+      "PLATFORM-NEXTGEN-AI",
+      "QUAL-HBM4-CUSTOMER",
+      "TTM-HBM4-H2-2025",
+      "TTM-HBM4-MASS-SHIPMENT-Q2-2026",
+      "TTM-HBM4-RAMP-H2-2026"
+    ],
+    "seed_id": "MEMORY-HBM4-12L"
+  },
+  "graph_diff": {
+    "added_edges": [
+      "EDGE-HBM4-ENTERS-MASS-SHIPMENT-Q2-2026",
+      "EDGE-HBM4-PLANS-RAMP-H2-2026",
+      "EDGE-MASS-SHIPMENT-AFFECTS-DEMAND-VISIBILITY",
+      "EDGE-MASS-SHIPMENT-AFFECTS-TTM",
+      "EDGE-RAMP-PLAN-AFFECTS-SUPPLY-RISK"
+    ],
+    "added_nodes": [
+      "DV-SUPPLY-RISK",
+      "TTM-HBM4-MASS-SHIPMENT-Q2-2026",
+      "TTM-HBM4-RAMP-H2-2026"
+    ],
+    "updated_edges": [
+      {
+        "after": 0.765,
+        "before": 0.815,
+        "edge_id": "EDGE-AI-PLATFORM-REQUIRES-HBM4",
+        "field": "confidence"
+      },
+      {
+        "after": 0.765,
+        "before": 0.815,
+        "edge_id": "EDGE-CUSTOMER-AFFECTS-PRIORITY",
+        "field": "confidence"
+      },
+      {
+        "after": 0.765,
+        "before": 0.815,
+        "edge_id": "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM",
+        "field": "confidence"
+      },
+      {
+        "after": 0.765,
+        "before": 0.815,
+        "edge_id": "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE",
+        "field": "confidence"
+      },
+      {
+        "after": 0.765,
+        "before": 0.815,
+        "edge_id": "EDGE-HBM4-REQUIRES-QUALIFICATION",
+        "field": "confidence"
+      },
+      {
+        "after": 0.765,
+        "before": 0.815,
+        "edge_id": "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST",
+        "field": "confidence"
+      },
+      {
+        "after": 0.765,
+        "before": 0.815,
+        "edge_id": "EDGE-QUALIFICATION-AFFECTS-DV",
+        "field": "confidence"
+      },
+      {
+        "after": 0.7463,
+        "before": 0.7962,
+        "edge_id": "EDGE-QUALIFICATION-GATES-TTM",
+        "field": "confidence"
+      },
+      {
+        "after": 0.7275,
+        "before": 0.7775,
+        "edge_id": "EDGE-TTM-AFFECTS-DV",
+        "field": "confidence"
+      }
+    ]
+  },
+  "memo": {
+    "assumption_updated": "The prior state 'sample delivered, qualification pending' is no longer the latest commercialization state. HBM4 has an observed mass-shipment event, while shipment magnitude and customer economics remain unknown.",
+    "confidence": {
+      "interpretation": "Average deterministic rubric score; not a probability.",
+      "label": "HIGH",
+      "reason": "Two dated first-party records establish the temporal movement from samples to reported mass shipment. Neither record independently discloses customer qualification, price, customer share, or volume.",
+      "score": 0.7546
+    },
+    "counterevidence": [
+      "CONTRA-FIRST-IS-NOT-COMMERCIAL-LEADERSHIP",
+      "CONTRA-MASS-SHIPMENT-NO-PRICE-VOLUME-SHARE",
+      "CONTRA-QUALIFICATION-IS-NOT-VOLUME",
+      "CONTRA-SAMPLE-IS-NOT-QUALIFICATION"
+    ],
+    "current_bottleneck_candidate": "PRODUCTION_RAMP_EXECUTION; qualification status and qualified-good-volume remain undisclosed.",
+    "decision_variables_affected": [
+      "DEMAND_FORECAST",
+      "SUPPLY_RISK",
+      "TTM"
+    ],
+    "demand_or_supply": "BOTH",
+    "evidence_level": [
+      "A_DIRECT_FACT",
+      "B_COMPANY_CLAIM"
+    ],
+    "fact_statements": [
+      {
+        "evidence_ids": [
+          "EVD-HBM4-SAMPLE-SHIPMENT",
+          "EVD-HBM4-CERTIFICATION-PENDING"
+        ],
+        "text": "In March 2025 SK hynix reported HBM4 sample delivery and described certification as a following process."
+      },
+      {
+        "evidence_ids": [
+          "EVD-HBM4-MASS-SHIPMENT-Q2-2026"
+        ],
+        "text": "In July 2026 SK hynix reported that HBM4 mass shipments had begun in the second quarter."
+      },
+      {
+        "evidence_ids": [
+          "EVD-HBM4-RAMP-PLAN-H2-2026"
+        ],
+        "text": "The same 2026 release stated a plan to ramp production in the second half."
+      }
+    ],
+    "invalidate_if": [
+      "SK hynix corrects or retracts the statement that HBM4 mass shipments began in Q2 2026.",
+      "The reported category is shown to be non-commercial sample movement rather than mass shipment."
+    ],
+    "memo_id": "MEMO-HBM4-TEMPORAL-2026-001",
+    "monitor_next": [
+      "Actual H2 2026 production-ramp realization",
+      "Customer or platform-specific qualification disclosure",
+      "Commercial shipment volume or mix disclosure",
+      "Price or contract terms from attributable sources"
+    ],
+    "review_status": "PENDING_HUMAN_REVIEW",
+    "run_id": "RUN-HBM4-TEMPORAL-2026-001",
+    "source_evidence_trace": [
+      {
+        "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+        "evidence_id": "EVD-HBM4-CERTIFICATION-PENDING",
+        "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+        "locator": "body paragraph 2",
+        "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "publication_date": "2025-03-19",
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+        "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+      },
+      {
+        "content_hash": "89BF2BEEBCF4B99E60E745D3AA163262E25529B97A6556C47C0C6E4A0B01DDD6",
+        "evidence_id": "EVD-HBM4-MASS-SHIPMENT-Q2-2026",
+        "local_archive_path": "data/raw/sources/SRC-SKH-20260729-HBM4-MASS-SHIPMENT.md",
+        "locator": "article body, HBM4/HBM4E paragraph, first sentence (web-rendered line 60)",
+        "original_excerpt": "The company began mass shipments of HBM4 in the second quarter.",
+        "publication_date": "2026-07-29",
+        "source_id": "SRC-SKH-20260729-HBM4-MASS-SHIPMENT",
+        "url": "https://news.skhynix.com/en/q2-2026-business-results/"
+      },
+      {
+        "content_hash": "89BF2BEEBCF4B99E60E745D3AA163262E25529B97A6556C47C0C6E4A0B01DDD6",
+        "evidence_id": "EVD-HBM4-RAMP-PLAN-H2-2026",
+        "local_archive_path": "data/raw/sources/SRC-SKH-20260729-HBM4-MASS-SHIPMENT.md",
+        "locator": "article body, HBM4/HBM4E paragraph, forward-looking clause (web-rendered line 60)",
+        "original_excerpt": "will ramp up production in the second half of the year.",
+        "publication_date": "2026-07-29",
+        "source_id": "SRC-SKH-20260729-HBM4-MASS-SHIPMENT",
+        "url": "https://news.skhynix.com/en/q2-2026-business-results/"
+      },
+      {
+        "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+        "evidence_id": "EVD-HBM4-SAMPLE-SHIPMENT",
+        "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+        "locator": "headline; body paragraphs 1-2",
+        "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "publication_date": "2025-03-19",
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+        "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+      }
+    ],
+    "still_unknown": [
+      "customer qualification completion/status",
+      "customer identity and customer share",
+      "HBM4 price or contract terms",
+      "mass-shipment volume and qualified-good-volume"
+    ],
+    "title": "Decision Memo — HBM4 Sample Baseline to Mass Shipment Update",
+    "transmission_path": [
+      "EDGE-AI-PLATFORM-REQUIRES-HBM4",
+      "EDGE-CUSTOMER-AFFECTS-PRIORITY",
+      "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM",
+      "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE",
+      "EDGE-HBM4-ENTERS-MASS-SHIPMENT-Q2-2026",
+      "EDGE-HBM4-PLANS-RAMP-H2-2026",
+      "EDGE-HBM4-REQUIRES-QUALIFICATION",
+      "EDGE-MASS-SHIPMENT-AFFECTS-DEMAND-VISIBILITY",
+      "EDGE-MASS-SHIPMENT-AFFECTS-TTM",
+      "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST",
+      "EDGE-QUALIFICATION-AFFECTS-DV",
+      "EDGE-QUALIFICATION-GATES-TTM",
+      "EDGE-RAMP-PLAN-AFFECTS-SUPPLY-RISK"
+    ],
+    "what_changed": "The official state moved from 2025 customer samples and pending certification work to a 2026 company-reported start of HBM4 mass shipments; the H2 production ramp remains a forward-looking company plan.",
+    "why_it_matters": "Observed mass shipment is closer to commercialization than sample delivery and changes TTM, demand-visibility, and supply-risk judgments, but it does not disclose qualification status, customers, price, or volume."
+  },
+  "retrieval": {
+    "graph_aware": [
+      {
+        "date": "2025-03-19",
+        "evidence_id": "EVD-HBM4-CERTIFICATION-PENDING",
+        "evidence_level": "A_DIRECT_FACT",
+        "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "locator": "body paragraph 2",
+        "score": 5,
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+      },
+      {
+        "date": "2025-03-19",
+        "evidence_id": "EVD-HBM4-SAMPLE-SHIPMENT",
+        "evidence_level": "A_DIRECT_FACT",
+        "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "locator": "headline; body paragraphs 1-2",
+        "score": 5,
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+      },
+      {
+        "date": "2025-03-19",
+        "evidence_id": "EVD-HBM4-MASS-PRODUCTION-TARGET",
+        "evidence_level": "B_COMPANY_CLAIM",
+        "excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+        "locator": "News Highlights; body paragraph 2",
+        "score": 4,
+        "source_id": "SRC-SKH-20250319-HBM4-SAMPLE"
+      },
+      {
+        "date": "2026-07-29",
+        "evidence_id": "EVD-HBM4-MASS-SHIPMENT-Q2-2026",
+        "evidence_level": "A_DIRECT_FACT",
+        "excerpt": "The company began mass shipments of HBM4 in the second quarter.",
+        "locator": "article body, HBM4/HBM4E paragraph, first sentence (web-rendered line 60)",
+        "score": 3,
+        "source_id": "SRC-SKH-20260729-HBM4-MASS-SHIPMENT"
+      },
+      {
+        "date": "2026-07-29",
+        "evidence_id": "EVD-HBM4-RAMP-PLAN-H2-2026",
+        "evidence_level": "B_COMPANY_CLAIM",
+        "excerpt": "will ramp up production in the second half of the year.",
+        "locator": "article body, HBM4/HBM4E paragraph, forward-looking clause (web-rendered line 60)",
+        "score": 3,
+        "source_id": "SRC-SKH-20260729-HBM4-MASS-SHIPMENT"
+      }
+    ],
+    "initial": [
+      {
+        "date": "2026-07-29",
+        "evidence_id": "EVD-HBM4-MASS-SHIPMENT-Q2-2026",
+        "evidence_level": "A_DIRECT_FACT",
+        "excerpt": "The company began mass shipments of HBM4 in the second quarter.",
+        "locator": "article body, HBM4/HBM4E paragraph, first sentence (web-rendered line 60)",
+        "score": 3,
+        "source_id": "SRC-SKH-20260729-HBM4-MASS-SHIPMENT"
+      },
+      {
+        "date": "2026-07-29",
+        "evidence_id": "EVD-HBM4-RAMP-PLAN-H2-2026",
+        "evidence_level": "B_COMPANY_CLAIM",
+        "excerpt": "will ramp up production in the second half of the year.",
+        "locator": "article body, HBM4/HBM4E paragraph, forward-looking clause (web-rendered line 60)",
+        "score": 3,
+        "source_id": "SRC-SKH-20260729-HBM4-MASS-SHIPMENT"
+      }
+    ]
+  },
+  "review_outcomes": [],
+  "run_id": "RUN-HBM4-TEMPORAL-2026-001",
+  "scenario_fingerprint": "7916F67276E56A3C0CA6B96DBB563E0DD722A75D0FFB523C45E18D35811F4465",
+  "scenario_id": "SCN-HBM4-COMMERCIAL-TEMPORAL-2026-001",
+  "signal_summary": {
+    "interpretation": "Average deterministic rubric score; not a probability.",
+    "label": "HIGH",
+    "score": 0.7546
+  },
+  "source_trace": [
+    {
+      "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+      "evidence_id": "EVD-HBM4-CERTIFICATION-PENDING",
+      "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+      "locator": "body paragraph 2",
+      "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "publication_date": "2025-03-19",
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+      "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+    },
+    {
+      "content_hash": "89BF2BEEBCF4B99E60E745D3AA163262E25529B97A6556C47C0C6E4A0B01DDD6",
+      "evidence_id": "EVD-HBM4-MASS-SHIPMENT-Q2-2026",
+      "local_archive_path": "data/raw/sources/SRC-SKH-20260729-HBM4-MASS-SHIPMENT.md",
+      "locator": "article body, HBM4/HBM4E paragraph, first sentence (web-rendered line 60)",
+      "original_excerpt": "The company began mass shipments of HBM4 in the second quarter.",
+      "publication_date": "2026-07-29",
+      "source_id": "SRC-SKH-20260729-HBM4-MASS-SHIPMENT",
+      "url": "https://news.skhynix.com/en/q2-2026-business-results/"
+    },
+    {
+      "content_hash": "89BF2BEEBCF4B99E60E745D3AA163262E25529B97A6556C47C0C6E4A0B01DDD6",
+      "evidence_id": "EVD-HBM4-RAMP-PLAN-H2-2026",
+      "local_archive_path": "data/raw/sources/SRC-SKH-20260729-HBM4-MASS-SHIPMENT.md",
+      "locator": "article body, HBM4/HBM4E paragraph, forward-looking clause (web-rendered line 60)",
+      "original_excerpt": "will ramp up production in the second half of the year.",
+      "publication_date": "2026-07-29",
+      "source_id": "SRC-SKH-20260729-HBM4-MASS-SHIPMENT",
+      "url": "https://news.skhynix.com/en/q2-2026-business-results/"
+    },
+    {
+      "content_hash": "E1FA035EA3E4284632CC30722EFA45B05212C79B7BB1D1A4DBA72A4FA2F44020",
+      "evidence_id": "EVD-HBM4-SAMPLE-SHIPMENT",
+      "local_archive_path": "data/raw/sources/SRC-SKH-20250319-HBM4-SAMPLE.md",
+      "locator": "headline; body paragraphs 1-2",
+      "original_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "publication_date": "2025-03-19",
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+      "url": "https://news.skhynix.com/en/sk-hynix-ships-worlds-first-12-layer-hbm4-samples-to-customers/"
+    }
+  ],
+  "state_by_evidence": {
+    "EVD-HBM4-CERTIFICATION-PENDING": "PROMOTED",
+    "EVD-HBM4-INDUSTRY-FIRST-CLAIM": "PROMOTED",
+    "EVD-HBM4-MASS-PRODUCTION-TARGET": "PROMOTED",
+    "EVD-HBM4-MASS-SHIPMENT-Q2-2026": "HUMAN_REVIEW",
+    "EVD-HBM4-RAMP-PLAN-H2-2026": "HUMAN_REVIEW",
+    "EVD-HBM4-SAMPLE-SHIPMENT": "PROMOTED"
+  },
+  "temporal_state_diff": {
+    "baseline_run_id": "RUN-HBM4-BASELINE-2025-002",
+    "before_state": {
+      "assumption": "Sample shipment must not be treated as completed qualification or confirmed commercial volume; an industry-first claim must not be treated as commercial leadership.",
+      "decision_variables": [
+        "CUSTOMER_PRIORITY",
+        "DEMAND_FORECAST",
+        "QUALIFICATION",
+        "SUPPLY_RISK",
+        "TTM"
+      ],
+      "what_changed": "HBM4 moved to customer sample delivery, while customer certification and mass-production preparation remained subsequent gates."
+    },
+    "changed_decision_variables": {
+      "DEMAND_FORECAST": "Commercial visibility moved from sample-stage evidence to an observed mass-shipment signal, without enough data to estimate volume.",
+      "SUPPLY_RISK": "Mass-shipment start reduces uncertainty about initial production readiness; H2 ramp execution and qualified-good-volume remain open.",
+      "TTM": "The state moved from a mass-production preparation target to an observed mass-shipment event."
+    },
+    "changed_evidence_confidence": [
+      {
+        "after": {
+          "label": "HIGH",
+          "score": 0.765
+        },
+        "before": {
+          "label": "HIGH",
+          "score": 0.815
+        },
+        "evidence_id": "EVD-HBM4-CERTIFICATION-PENDING",
+        "reason": "Deterministic rubric recomputed at the newer as-of date."
+      },
+      {
+        "after": {
+          "label": "MEDIUM",
+          "score": 0.6775
+        },
+        "before": {
+          "label": "MEDIUM",
+          "score": 0.7275
+        },
+        "evidence_id": "EVD-HBM4-INDUSTRY-FIRST-CLAIM",
+        "reason": "Deterministic rubric recomputed at the newer as-of date."
+      },
+      {
+        "after": {
+          "label": "MEDIUM",
+          "score": 0.7275
+        },
+        "before": {
+          "label": "HIGH",
+          "score": 0.7775
+        },
+        "evidence_id": "EVD-HBM4-MASS-PRODUCTION-TARGET",
+        "reason": "Deterministic rubric recomputed at the newer as-of date."
+      },
+      {
+        "after": {
+          "label": "HIGH",
+          "score": 0.765
+        },
+        "before": {
+          "label": "HIGH",
+          "score": 0.815
+        },
+        "evidence_id": "EVD-HBM4-SAMPLE-SHIPMENT",
+        "reason": "Deterministic rubric recomputed at the newer as-of date."
+      }
+    ],
+    "changed_graph_edges": [
+      {
+        "after": {
+          "confidence": 0.815,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "TTM",
+            "DEMAND_FORECAST",
+            "SUPPLY_RISK"
+          ],
+          "edge_id": "EDGE-HBM4-ENTERS-MASS-SHIPMENT-Q2-2026",
+          "edge_type": "VALIDATED_PATTERN",
+          "evidence_ids": [
+            "EVD-HBM4-MASS-SHIPMENT-Q2-2026"
+          ],
+          "from": "MEMORY-HBM4-12L",
+          "relation": "ENTERS_MASS_SHIPMENT",
+          "to": "TTM-HBM4-MASS-SHIPMENT-Q2-2026",
+          "valid_from": "2026-07-29",
+          "valid_to": null
+        },
+        "change": "ADDED",
+        "edge_id": "EDGE-HBM4-ENTERS-MASS-SHIPMENT-Q2-2026"
+      },
+      {
+        "after": {
+          "confidence": 0.7775,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "TTM",
+            "SUPPLY_RISK"
+          ],
+          "edge_id": "EDGE-HBM4-PLANS-RAMP-H2-2026",
+          "edge_type": "SUPPORTED_HYPOTHESIS",
+          "evidence_ids": [
+            "EVD-HBM4-RAMP-PLAN-H2-2026"
+          ],
+          "from": "MEMORY-HBM4-12L",
+          "relation": "PLANS_RAMP",
+          "to": "TTM-HBM4-RAMP-H2-2026",
+          "valid_from": "2026-07-29",
+          "valid_to": "2026-12-31"
+        },
+        "change": "ADDED",
+        "edge_id": "EDGE-HBM4-PLANS-RAMP-H2-2026"
+      },
+      {
+        "after": {
+          "confidence": 0.815,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "DEMAND_FORECAST"
+          ],
+          "edge_id": "EDGE-MASS-SHIPMENT-AFFECTS-DEMAND-VISIBILITY",
+          "edge_type": "STRUCTURAL_RELATION",
+          "evidence_ids": [
+            "EVD-HBM4-MASS-SHIPMENT-Q2-2026"
+          ],
+          "from": "TTM-HBM4-MASS-SHIPMENT-Q2-2026",
+          "relation": "AFFECTS_DECISION",
+          "to": "DV-DEMAND-FORECAST",
+          "valid_from": "2026-07-29",
+          "valid_to": null
+        },
+        "change": "ADDED",
+        "edge_id": "EDGE-MASS-SHIPMENT-AFFECTS-DEMAND-VISIBILITY"
+      },
+      {
+        "after": {
+          "confidence": 0.815,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "TTM"
+          ],
+          "edge_id": "EDGE-MASS-SHIPMENT-AFFECTS-TTM",
+          "edge_type": "STRUCTURAL_RELATION",
+          "evidence_ids": [
+            "EVD-HBM4-MASS-SHIPMENT-Q2-2026"
+          ],
+          "from": "TTM-HBM4-MASS-SHIPMENT-Q2-2026",
+          "relation": "AFFECTS_DECISION",
+          "to": "DV-TTM",
+          "valid_from": "2026-07-29",
+          "valid_to": null
+        },
+        "change": "ADDED",
+        "edge_id": "EDGE-MASS-SHIPMENT-AFFECTS-TTM"
+      },
+      {
+        "after": {
+          "confidence": 0.7775,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "SUPPLY_RISK"
+          ],
+          "edge_id": "EDGE-RAMP-PLAN-AFFECTS-SUPPLY-RISK",
+          "edge_type": "STRUCTURAL_RELATION",
+          "evidence_ids": [
+            "EVD-HBM4-RAMP-PLAN-H2-2026"
+          ],
+          "from": "TTM-HBM4-RAMP-H2-2026",
+          "relation": "AFFECTS_DECISION",
+          "to": "DV-SUPPLY-RISK",
+          "valid_from": "2026-07-29",
+          "valid_to": "2026-12-31"
+        },
+        "change": "ADDED",
+        "edge_id": "EDGE-RAMP-PLAN-AFFECTS-SUPPLY-RISK"
+      },
+      {
+        "after": {
+          "confidence": 0.765,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "TARGET_SPEC",
+            "QUALIFICATION",
+            "TTM"
+          ],
+          "edge_id": "EDGE-AI-PLATFORM-REQUIRES-HBM4",
+          "edge_type": "STRUCTURAL_RELATION",
+          "evidence_ids": [
+            "EVD-HBM4-SAMPLE-SHIPMENT"
+          ],
+          "from": "PLATFORM-NEXTGEN-AI",
+          "relation": "REQUIRES_MEMORY",
+          "to": "MEMORY-HBM4-12L",
+          "valid_from": "2025-03-19",
+          "valid_to": null
+        },
+        "before": {
+          "confidence": 0.815,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "TARGET_SPEC",
+            "QUALIFICATION",
+            "TTM"
+          ],
+          "edge_id": "EDGE-AI-PLATFORM-REQUIRES-HBM4",
+          "edge_type": "STRUCTURAL_RELATION",
+          "evidence_ids": [
+            "EVD-HBM4-SAMPLE-SHIPMENT"
+          ],
+          "from": "PLATFORM-NEXTGEN-AI",
+          "relation": "REQUIRES_MEMORY",
+          "to": "MEMORY-HBM4-12L",
+          "valid_from": "2025-03-19",
+          "valid_to": null
+        },
+        "change": "UPDATED",
+        "edge_id": "EDGE-AI-PLATFORM-REQUIRES-HBM4"
+      },
+      {
+        "after": {
+          "confidence": 0.765,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "CUSTOMER_PRIORITY"
+          ],
+          "edge_id": "EDGE-CUSTOMER-AFFECTS-PRIORITY",
+          "edge_type": "SUPPORTED_HYPOTHESIS",
+          "evidence_ids": [
+            "EVD-HBM4-SAMPLE-SHIPMENT"
+          ],
+          "from": "CUSTOMER-HBM4-MAJOR",
+          "relation": "AFFECTS_DECISION",
+          "to": "DV-CUSTOMER-PRIORITY",
+          "valid_from": "2025-03-19",
+          "valid_to": null
+        },
+        "before": {
+          "confidence": 0.815,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "CUSTOMER_PRIORITY"
+          ],
+          "edge_id": "EDGE-CUSTOMER-AFFECTS-PRIORITY",
+          "edge_type": "SUPPORTED_HYPOTHESIS",
+          "evidence_ids": [
+            "EVD-HBM4-SAMPLE-SHIPMENT"
+          ],
+          "from": "CUSTOMER-HBM4-MAJOR",
+          "relation": "AFFECTS_DECISION",
+          "to": "DV-CUSTOMER-PRIORITY",
+          "valid_from": "2025-03-19",
+          "valid_to": null
+        },
+        "change": "UPDATED",
+        "edge_id": "EDGE-CUSTOMER-AFFECTS-PRIORITY"
+      },
+      {
+        "after": {
+          "confidence": 0.765,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "CUSTOMER_PRIORITY",
+            "QUALIFICATION"
+          ],
+          "edge_id": "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM",
+          "edge_type": "SUPPORTED_HYPOTHESIS",
+          "evidence_ids": [
+            "EVD-HBM4-SAMPLE-SHIPMENT"
+          ],
+          "from": "CUSTOMER-HBM4-MAJOR",
+          "relation": "EVALUATES_FOR_PLATFORM",
+          "to": "PLATFORM-NEXTGEN-AI",
+          "valid_from": "2025-03-19",
+          "valid_to": null
+        },
+        "before": {
+          "confidence": 0.815,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "CUSTOMER_PRIORITY",
+            "QUALIFICATION"
+          ],
+          "edge_id": "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM",
+          "edge_type": "SUPPORTED_HYPOTHESIS",
+          "evidence_ids": [
+            "EVD-HBM4-SAMPLE-SHIPMENT"
+          ],
+          "from": "CUSTOMER-HBM4-MAJOR",
+          "relation": "EVALUATES_FOR_PLATFORM",
+          "to": "PLATFORM-NEXTGEN-AI",
+          "valid_from": "2025-03-19",
+          "valid_to": null
+        },
+        "change": "UPDATED",
+        "edge_id": "EDGE-CUSTOMER-EVALUATES-AI-PLATFORM"
+      },
+      {
+        "after": {
+          "confidence": 0.765,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "QUALIFICATION",
+            "TTM",
+            "CUSTOMER_PRIORITY"
+          ],
+          "edge_id": "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE",
+          "edge_type": "STRUCTURAL_RELATION",
+          "evidence_ids": [
+            "EVD-HBM4-SAMPLE-SHIPMENT"
+          ],
+          "from": "CUSTOMER-HBM4-MAJOR",
+          "relation": "RECEIVES_SAMPLE",
+          "to": "MEMORY-HBM4-12L",
+          "valid_from": "2025-03-19",
+          "valid_to": null
+        },
+        "before": {
+          "confidence": 0.815,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "QUALIFICATION",
+            "TTM",
+            "CUSTOMER_PRIORITY"
+          ],
+          "edge_id": "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE",
+          "edge_type": "STRUCTURAL_RELATION",
+          "evidence_ids": [
+            "EVD-HBM4-SAMPLE-SHIPMENT"
+          ],
+          "from": "CUSTOMER-HBM4-MAJOR",
+          "relation": "RECEIVES_SAMPLE",
+          "to": "MEMORY-HBM4-12L",
+          "valid_from": "2025-03-19",
+          "valid_to": null
+        },
+        "change": "UPDATED",
+        "edge_id": "EDGE-CUSTOMER-RECEIVES-HBM4-SAMPLE"
+      },
+      {
+        "after": {
+          "confidence": 0.765,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "QUALIFICATION",
+            "TTM",
+            "DEMAND_FORECAST"
+          ],
+          "edge_id": "EDGE-HBM4-REQUIRES-QUALIFICATION",
+          "edge_type": "STRUCTURAL_RELATION",
+          "evidence_ids": [
+            "EVD-HBM4-CERTIFICATION-PENDING"
+          ],
+          "from": "MEMORY-HBM4-12L",
+          "relation": "REQUIRES_QUALIFICATION",
+          "to": "QUAL-HBM4-CUSTOMER",
+          "valid_from": "2025-03-19",
+          "valid_to": null
+        },
+        "before": {
+          "confidence": 0.815,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "QUALIFICATION",
+            "TTM",
+            "DEMAND_FORECAST"
+          ],
+          "edge_id": "EDGE-HBM4-REQUIRES-QUALIFICATION",
+          "edge_type": "STRUCTURAL_RELATION",
+          "evidence_ids": [
+            "EVD-HBM4-CERTIFICATION-PENDING"
+          ],
+          "from": "MEMORY-HBM4-12L",
+          "relation": "REQUIRES_QUALIFICATION",
+          "to": "QUAL-HBM4-CUSTOMER",
+          "valid_from": "2025-03-19",
+          "valid_to": null
+        },
+        "change": "UPDATED",
+        "edge_id": "EDGE-HBM4-REQUIRES-QUALIFICATION"
+      },
+      {
+        "after": {
+          "confidence": 0.765,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "DEMAND_FORECAST",
+            "QUALIFICATION"
+          ],
+          "edge_id": "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST",
+          "edge_type": "SUPPORTED_HYPOTHESIS",
+          "evidence_ids": [
+            "EVD-HBM4-CERTIFICATION-PENDING"
+          ],
+          "from": "QUAL-HBM4-CUSTOMER",
+          "relation": "AFFECTS_DECISION",
+          "to": "DV-DEMAND-FORECAST",
+          "valid_from": "2025-03-19",
+          "valid_to": null
+        },
+        "before": {
+          "confidence": 0.815,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "DEMAND_FORECAST",
+            "QUALIFICATION"
+          ],
+          "edge_id": "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST",
+          "edge_type": "SUPPORTED_HYPOTHESIS",
+          "evidence_ids": [
+            "EVD-HBM4-CERTIFICATION-PENDING"
+          ],
+          "from": "QUAL-HBM4-CUSTOMER",
+          "relation": "AFFECTS_DECISION",
+          "to": "DV-DEMAND-FORECAST",
+          "valid_from": "2025-03-19",
+          "valid_to": null
+        },
+        "change": "UPDATED",
+        "edge_id": "EDGE-QUALIFICATION-AFFECTS-DEMAND-FORECAST"
+      },
+      {
+        "after": {
+          "confidence": 0.765,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "QUALIFICATION"
+          ],
+          "edge_id": "EDGE-QUALIFICATION-AFFECTS-DV",
+          "edge_type": "STRUCTURAL_RELATION",
+          "evidence_ids": [
+            "EVD-HBM4-CERTIFICATION-PENDING"
+          ],
+          "from": "QUAL-HBM4-CUSTOMER",
+          "relation": "AFFECTS_DECISION",
+          "to": "DV-QUALIFICATION",
+          "valid_from": "2025-03-19",
+          "valid_to": null
+        },
+        "before": {
+          "confidence": 0.815,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "QUALIFICATION"
+          ],
+          "edge_id": "EDGE-QUALIFICATION-AFFECTS-DV",
+          "edge_type": "STRUCTURAL_RELATION",
+          "evidence_ids": [
+            "EVD-HBM4-CERTIFICATION-PENDING"
+          ],
+          "from": "QUAL-HBM4-CUSTOMER",
+          "relation": "AFFECTS_DECISION",
+          "to": "DV-QUALIFICATION",
+          "valid_from": "2025-03-19",
+          "valid_to": null
+        },
+        "change": "UPDATED",
+        "edge_id": "EDGE-QUALIFICATION-AFFECTS-DV"
+      },
+      {
+        "after": {
+          "confidence": 0.7463,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "QUALIFICATION",
+            "TTM",
+            "SUPPLY_RISK"
+          ],
+          "edge_id": "EDGE-QUALIFICATION-GATES-TTM",
+          "edge_type": "SUPPORTED_HYPOTHESIS",
+          "evidence_ids": [
+            "EVD-HBM4-CERTIFICATION-PENDING",
+            "EVD-HBM4-MASS-PRODUCTION-TARGET"
+          ],
+          "from": "QUAL-HBM4-CUSTOMER",
+          "relation": "GATES_TTM",
+          "to": "TTM-HBM4-H2-2025",
+          "valid_from": "2025-03-19",
+          "valid_to": "2025-12-31"
+        },
+        "before": {
+          "confidence": 0.7962,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "QUALIFICATION",
+            "TTM",
+            "SUPPLY_RISK"
+          ],
+          "edge_id": "EDGE-QUALIFICATION-GATES-TTM",
+          "edge_type": "SUPPORTED_HYPOTHESIS",
+          "evidence_ids": [
+            "EVD-HBM4-CERTIFICATION-PENDING",
+            "EVD-HBM4-MASS-PRODUCTION-TARGET"
+          ],
+          "from": "QUAL-HBM4-CUSTOMER",
+          "relation": "GATES_TTM",
+          "to": "TTM-HBM4-H2-2025",
+          "valid_from": "2025-03-19",
+          "valid_to": "2025-12-31"
+        },
+        "change": "UPDATED",
+        "edge_id": "EDGE-QUALIFICATION-GATES-TTM"
+      },
+      {
+        "after": {
+          "confidence": 0.7275,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "TTM"
+          ],
+          "edge_id": "EDGE-TTM-AFFECTS-DV",
+          "edge_type": "STRUCTURAL_RELATION",
+          "evidence_ids": [
+            "EVD-HBM4-MASS-PRODUCTION-TARGET"
+          ],
+          "from": "TTM-HBM4-H2-2025",
+          "relation": "AFFECTS_DECISION",
+          "to": "DV-TTM",
+          "valid_from": "2025-03-19",
+          "valid_to": "2025-12-31"
+        },
+        "before": {
+          "confidence": 0.7775,
+          "counterevidence_ids": [],
+          "decision_variables": [
+            "TTM"
+          ],
+          "edge_id": "EDGE-TTM-AFFECTS-DV",
+          "edge_type": "STRUCTURAL_RELATION",
+          "evidence_ids": [
+            "EVD-HBM4-MASS-PRODUCTION-TARGET"
+          ],
+          "from": "TTM-HBM4-H2-2025",
+          "relation": "AFFECTS_DECISION",
+          "to": "DV-TTM",
+          "valid_from": "2025-03-19",
+          "valid_to": "2025-12-31"
+        },
+        "change": "UPDATED",
+        "edge_id": "EDGE-TTM-AFFECTS-DV"
+      }
+    ],
+    "diff_hash": "52111BFF0AA10AD3BE1EE7B94A1868F0C36122587D129D5D97B1D515619EC340",
+    "invalidation_conditions": [
+      "SK hynix corrects or retracts the Q2 2026 mass-shipment statement.",
+      "The reported mass shipment is shown to refer only to non-commercial samples."
+    ],
+    "new_evidence": [
+      {
+        "claim": "SK hynix reported that it began HBM4 mass shipments in the second quarter of 2026.",
+        "evidence_id": "EVD-HBM4-MASS-SHIPMENT-Q2-2026",
+        "evidence_level": "A_DIRECT_FACT",
+        "source_id": "SRC-SKH-20260729-HBM4-MASS-SHIPMENT",
+        "status": "HUMAN_REVIEW"
+      },
+      {
+        "claim": "SK hynix stated a plan to ramp HBM4 production in the second half of 2026.",
+        "evidence_id": "EVD-HBM4-RAMP-PLAN-H2-2026",
+        "evidence_level": "B_COMPANY_CLAIM",
+        "source_id": "SRC-SKH-20260729-HBM4-MASS-SHIPMENT",
+        "status": "HUMAN_REVIEW"
+      }
+    ],
+    "still_unknown": [
+      "customer qualification completion/status",
+      "customer identity and customer share",
+      "HBM4 price or contract terms",
+      "mass-shipment volume and qualified-good-volume"
+    ],
+    "update_run_id": "RUN-HBM4-TEMPORAL-2026-001"
+  },
+  "trace_hash": "5BFF5BABFA48051A334A8D46E5FA5FBAEEF8DD52143EBF6F56487C220448D9FD"
+}
