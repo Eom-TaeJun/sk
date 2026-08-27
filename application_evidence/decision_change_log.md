@@ -44,3 +44,16 @@
 - Updated conclusion: 저장 파일은 UTF-8을 유지하고 CLI JSON만 ASCII escape로 직렬화했다. 이후 baseline→temporal 순차 실행이 exit code 0으로 완료됐다.
 - Affected decision variable: 분석 내용이 아니라 replay 신뢰성
 - Job relevance: 실패 지점을 숨기지 않고 재현 경로 전체를 검증·수정하는 AI 기반 문제해결
+
+## Change 5 — Public-data 한계에 따른 H1 two-strata 전환
+
+- Initial assumption: broad CSP CAPEX와 downstream HBM commercialization signal을 동일한 provenance-compatible track에서 직접 비교하는 것을 H1의 primary estimand로 유지할 수 있다.
+- New evidence: outcome을 보지 않고 구성한 public-data feasibility universe에서 product track 10개와 customer/platform track 14개 후보는 확인했지만, broad CAPEX → named platform → named HBM supplier → strict supplier-side realization을 모두 연결한 provenance-complete bridge는 0개였다. Product-scope explicit negative evidence도 검증되지 않았다.
+- Evidence level: 프로젝트 research/design 수행 Fact. Candidate count는 feasibility count이며 empirical outcome 또는 H1 result가 아니다.
+- Contradiction: 경제적 전파경로가 개념적으로 타당하다는 것과 공개정보로 동일 track의 모든 고리를 관찰할 수 있다는 것은 다르다.
+- Why the old view was insufficient: direct comparison을 유지하려면 market reputation, share estimate, presumed sole sourcing 또는 non-disclosure를 관계/실패로 대체해야 하며, 이는 construct validity와 provenance contract를 훼손한다.
+- AI-assisted work: ex-ante candidate universe와 official source-family feasibility, bridge gap, timestamp recoverability, negative-disclosure bias를 구조화하고 Gate 대안을 제안했다.
+- Human decision: H1을 H1-P Product Commercialization과 H1-C Customer/Platform Realization으로 분리하고 Gates 1–5를 승인·동결했다. H1-P는 O1 supplier-side proxy, H1-C는 separate P1 platform outcome을 사용하며 direct superiority와 pooled ranking을 금지했다.
+- Updated conclusion: 질문을 데이터에 맞춰 약화한 것이 아니라, 관찰 가능한 두 estimand로 분리하고 bridge는 complete primary-source chain이 닫힐 때만 exploratory corroboration으로 남긴다. Sufficiency가 부족하면 해당 stratum은 `INCONCLUSIVE`다.
+- Affected decision variable: Demand Forecast, Customer Priority, Qualification, TTM의 public-signal 해석 경계
+- Job relevance: 공개정보가 원래 질문을 지지하는지 구현 전에 검증하고, 근거가 부족할 때 인과·고객/공급자 연결을 만들지 않은 채 분석 범위를 수정한 수행 Fact

@@ -1,10 +1,10 @@
-# Active Execution Plan — H1 Demand Signal Quality Empirical Validation Design
+# Active Execution Plan — H1 Two-Strata Demand Signal Quality Empirical Design
 
 ## 0. Document status and boundary
 
-**Status:** `READY_FOR_HUMAN_REVIEW — NOT APPROVED FOR EXECUTION`
+**Status:** `GATES_1_TO_5_APPROVED_AND_FROZEN — MINIMUM_CONTRACT_IMPLEMENTATION_APPROVED`
 
-**Feasibility review note (2026-08-28):** Limited public-data feasibility review is complete in [`h1_feasibility_manifest.md`](./h1_feasibility_manifest.md). Gates 3–5 remain pending human approval; the manifest is review input and does not approve execution or alter this empirical design.
+**Human freeze note (2026-08-28):** The limited public-data review in [`h1_feasibility_manifest.md`](./h1_feasibility_manifest.md) found a finite product universe and a finite platform universe but no provenance-complete CAPEX → platform → named HBM supplier → supplier-side realization bridge. Human review therefore froze H1 as two separate primary strata. Gates 1–5 are approved and frozen; Gates 6–7 remain pending. This document authorizes only the next task named in Section 20, not source collection or empirical H1 execution.
 
 This document defines the empirical contract for H1 before a dataset, backtest, statistical model, or automated research workflow exists. It does not select cases, collect a corpus, calculate a signal ranking, or make an H1 finding. The deleted interrupted H1 experiment is not a methodological or evidentiary input to this design.
 
@@ -38,11 +38,37 @@ SK hynix Marketing must distinguish a broad indication that AI infrastructure in
 
 H1 therefore evaluates public signal quality for a decision update. It does not estimate an optimal CAPA percentage or a numeric memory-demand forecast.
 
-### 1.2 Primary H1 question
+### 1.2 Overall H1 question — frozen
 
-> Among publicly observable AI-memory demand-chain signals, which signal classes provide more decision-useful visibility into later realized AI-memory demand than broad upstream CSP CAPEX, and what lead time do they provide?
+> How does the decision value of publicly observable AI-memory signals change as evidence moves closer to operational or commercial realization, particularly in the trade-off between lead time, scope precision, and realization uncertainty?
 
-The comparison is against CAPEX as an upstream reference signal, not against a claim that CAPEX is useless. A valid result may show that CAPEX is better for long-horizon direction while order-proximate signals are better for scope precision or false-positive control.
+This is not a causal question, does not create a universal signal ranking, and does not assert that downstream signals are always superior. The overall question is answered through two related but non-pooled strata.
+
+#### H1-P — Product Commercialization Stratum
+
+```text
+HBM product introduction / sample
+→ qualification / design-in
+→ commercial or supply commitment
+→ supplier-side commercial realization
+```
+
+> Within pre-registered HBM product-generation tracks, what additional commercialization visibility does each publicly observed product-stage signal provide, and how much lead remains before supplier-side commercial realization?
+
+The primary outcome is `O1_COMMERCIAL_REALIZATION`, interpreted only as a public supplier-side commercial-realization proxy.
+
+#### H1-C — Customer / Platform Realization Stratum
+
+```text
+CSP CAPEX
+→ AI infrastructure commitment
+→ named platform launch
+→ operational deployment / availability
+```
+
+> Within pre-registered CSP/platform tracks, what additional deployment visibility does each successive public signal provide beyond broad CAPEX, and how does that trade off against remaining lead time?
+
+The primary outcome is the separate `P1_PLATFORM_OPERATIONAL_REALIZATION`. Supplier-side O1 is not the platform-stratum outcome.
 
 ### 1.3 What “better demand visibility” means
 
@@ -71,24 +97,28 @@ Temporal ordering, a graph edge, or correlation cannot be reported as causality.
 
 ### 1.5 Testable subquestions
 
-The minimum validation should report, without combining them into a score:
+The minimum validation should report, without combining the strata or dimensions into a score:
 
-1. Do order-proximate signal classes reduce fully observed non-realization relative to CSP CAPEX within comparable tracks?
-2. Do they retain positive, decision-usable lead rather than merely confirm an outcome after it occurs?
-3. Do they improve product/platform scope or change the evidence state beyond what CAPEX already established?
-4. Does the answer differ by supplier, product generation, platform, period, or source restriction?
+1. H1-P: within a pre-registered product track, what incremental product-stage scope and commercialization visibility is added by sample, qualification, design-in, or an observed supply commitment before O1?
+2. H1-P: do observed product-stage signals retain positive lead before O1, or are they mostly coincident/lagging confirmation?
+3. H1-C: within a pre-registered platform track, what deployment visibility is added as evidence moves from CAPEX to infrastructure commitment, launch, and operational availability before P1?
+4. H1-C: how do lead, scope, and realization uncertainty trade off across successive public platform stages?
+5. Within each stratum, does the descriptive pattern differ by supplier/operator, generation, period, or source restriction?
+6. Does either stratum fail its approved sufficiency rules and therefore require `INCONCLUSIVE`?
 
-## 2. Empirical estimand and comparison boundary
+## 2. Empirical estimands and cross-strata boundary
 
-The minimum design estimates descriptive signal performance, not a causal coefficient:
+The minimum design estimates two descriptive signal-usefulness patterns, not a causal coefficient.
 
-> For a pre-registered public-information track and outcome contract, how often and how early was each signal class observed before later commercial realization, non-realization, delay, or censoring, and what incremental scope did it add relative to CAPEX?
+**H1-P estimand:** for a pre-registered supplier/product-generation track and O1 contract, how early and at what product scope was each publicly observable product-stage signal seen before later supplier-side realization, delay, weakening, non-realization within a fully observed window, or censoring?
 
-The principal comparison is **within the same eligible track**. Cross-company averages are secondary because disclosure practices, product definitions, customer confidentiality, and fiscal calendars differ.
+**H1-C estimand:** for a pre-registered CSP/platform track and P1 contract, what deployment information was added as the public state moved from broad CAPEX to AI-infrastructure commitment, named platform launch, and operational availability, and how much lead remained at each stage?
 
-The study must report signal-class results and matched track narratives together. A pooled average cannot erase a product-specific contradiction, and a famous success cannot establish a general pattern.
+The principal comparisons are **within the same eligible track and within the same stratum**. Cross-company summaries are secondary because disclosure practices, product definitions, customer confidentiality, and fiscal calendars differ.
 
-## 3. Outcome contract: realized AI-memory demand
+The study must not directly calculate CAPEX-versus-HBM_SAMPLE superiority, CAPEX-versus-qualification accuracy, a pooled signal ranking, or a pooled outcome. Cross-strata synthesis may later discuss the conceptual upstream/downstream trade-off, but only after separate empirical results exist. `WATCH → PREPARE → PRIORITIZE → CONFIRM` may be proposed only if those later results support the states; it is not hard-coded here.
+
+## 3. Outcome contracts by stratum
 
 ### 3.1 Why one convenient variable is inadequate
 
@@ -103,32 +133,46 @@ The recommended contract therefore uses a strict primary event plus independent 
 | Commercial shipment or customer supply explicitly commenced | High for supplier-side commercial realization when the statement is about an occurred event | Irregular official product/IR event | Usually high | Wording differs by supplier; later restatement must not overwrite the original | Still does not prove customer consumption, repeat volume, price, or share | Primary event when occurrence, product, and scope are explicit |
 | Volume production explicitly linked to present customer supply | Medium-high | Irregular official product/IR event | High | `volume production`, `ramp`, and `mass production` are not standardized | Can be manufacturing capability if no actual supply is stated | Eligible only when the same source directly links production to current supply/shipment; otherwise a signal, not outcome |
 | Product-specific shipment/ramp realization disclosed in earnings | Medium-high | Quarterly when disclosed | Medium-high | Voluntary disclosure can disappear or change definition | Better economic confirmation, but may aggregate generations/customers | Operational corroboration |
-| Customer/platform deployment or cloud general availability explicitly linked to the relevant memory generation | High for deployed compute demand | Irregular platform/cloud release | Platform high; supplier often low | Configuration and regional scope may change | Confirms platform availability, not utilization or a named supplier's volume | Independent operational corroboration when linkage is direct |
+| Customer/platform operational deployment or availability | High for platform realization | Irregular platform/cloud release | Platform high; supplier often low | Preview, capacity block, GA, installed infrastructure, configuration, and region can differ | Confirms the stated platform state, not utilization or a named supplier's volume | Separate H1-C `P1_PLATFORM_OPERATIONAL_REALIZATION`; never substitute it for product O1 |
 | Product-specific HBM revenue or bit-shipment realization | Medium | Quarterly/annual but inconsistent | Often product family rather than generation | Definitions and mix vary across companies | Reflects price, mix, and supply as well as demand | Financial corroboration, not sole primary outcome unless specificity is adequate |
 | Broad DRAM, semiconductor, data-center, or cloud revenue | Low for the target construct | Quarterly | Low | Accounting definitions are stable within company but not the target product | Many non-HBM drivers | Context only; rejected as primary outcome |
 | Equity price or market capitalization | Very low | Daily | None | Market expectations and macro factors dominate | Not demand realization | Excluded |
 
-### 3.3 Recommended outcome hierarchy
+### 3.3 H1-P outcome hierarchy — frozen
 
-The future analysis should preserve separate evidence levels rather than manufacture a single pseudo-precise target.
+The product stratum preserves separate evidence levels rather than manufacturing one pseudo-precise demand target.
 
-1. **`O1_COMMERCIAL_REALIZATION`** — an official source states that commercial/mass/volume shipment or customer supply of the identified HBM product has actually begun. A plan, target, readiness statement, sample shipment, or qualification activity does not qualify.
-2. **`O2_OPERATIONAL_CORROBORATION`** — a separate official origin confirms either product-specific shipment/ramp or counterparty platform/cloud availability directly linked to the product generation. It strengthens O1 but does not retroactively change the earlier signal's evidence level.
+1. **`O1_COMMERCIAL_REALIZATION`** — an official supplier-side source states that commercial shipment, customer supply, or mass/volume production explicitly linked in the same source to current customer supply of the identified HBM product has begun. A plan, target, readiness statement, sample shipment, or qualification activity does not qualify.
+2. **`O2_OPERATIONAL_CORROBORATION`** — a separate official origin confirms product-specific shipment/ramp or a counterparty platform event directly linked to the product generation. It corroborates O1 but is not a substitute for O1 and does not retroactively change the earlier signal's evidence level.
 3. **`O3_FINANCIAL_CORROBORATION`** — an official result reports product-specific HBM revenue, bit shipment, or ramp contribution at a scope compatible with the track. Broad company revenue cannot qualify.
 
-Outcome state is then represented as:
+O1 is a **public supplier-side commercial-realization proxy**. It does not establish end-customer consumption, sustained volume, contract price, customer share, or causal demand.
+
+H1-P outcome states are:
 
 - `REALIZED_CORROBORATED`: O1 plus at least one independent O2 or O3 origin with compatible scope;
 - `REALIZED_SINGLE_ORIGIN`: O1 is present but independent corroboration is unavailable;
-- `DELAYED`: O1 occurs after the approved base observation window but within the approved extended window;
-- `NO_REALIZATION_WITHIN_WINDOW`: no O1 occurs during a fully elapsed window; this is an observed signal outcome, not proof that demand never existed;
+- `DELAYED`: O1 occurs after the approved 12-month base window but within the approved 18-month sensitivity window;
+- `NO_REALIZATION_WITHIN_WINDOW`: no O1 occurs during a fully elapsed window; this is a public-observation state, not proof that demand never existed;
 - `FAILED_OR_WEAKENED`: an official source reports cancellation, reduction, qualification failure, or a materially weaker scope;
 - `RIGHT_CENSORED`: the required follow-up period has not elapsed at dataset freeze;
 - `UNRESOLVED`: public evidence conflicts or is too ambiguous to assign another state.
 
-Later realization evidence may change a track from `RIGHT_CENSORED` or `NO_REALIZATION_WITHIN_WINDOW` to `DELAYED` in a later dataset version. It must not overwrite the prior snapshot.
+### 3.4 H1-C platform outcome — frozen
 
-**Gate reference:** the hierarchy, the treatment of production-linked supply, and these states require Gate 2 approval.
+**`P1_PLATFORM_OPERATIONAL_REALIZATION`** is the platform-stratum outcome. It records the latest directly supported operational state without treating the following states as equivalent:
+
+- `PLANNED_AVAILABILITY`;
+- `PREVIEW`;
+- `LIMITED_AVAILABILITY_OR_CAPACITY_BLOCK`;
+- `GENERAL_AVAILABILITY`;
+- `INSTALLED_OR_OPERATIONAL_INFRASTRUCTURE`.
+
+The exact P1-eligible state is retained rather than collapsed. Planned availability is not realization. Preview is not GA. Capacity Blocks are not unrestricted GA. Internal installed infrastructure is not a customer-available cloud service. The minimum analysis may compare time to each declared state but must state which state is used in each platform track's approved outcome contract.
+
+H1-C outcome states use the same delay, weakening, right-censoring, and unresolved semantics as H1-P, but they are evaluated against the approved P1 subtype rather than O1. Supplier-side HBM O1 must not be used as the H1-C outcome.
+
+Later evidence may update a track in a later dataset version, but it must not overwrite the earlier snapshot. Gate 2 approved the product O1/O2/O3 contract and the separate P1 platform outcome; the Gate 5 freeze approved the windows and sufficiency treatment.
 
 ## 4. Signal taxonomy independent of the outcome
 
@@ -148,6 +192,16 @@ Signal class is assigned from what the source directly establishes at its histor
 | `POWER_DC_READY` | Site/capacity is energized, commissioned, rack-ready, or service-available | Removes a downstream infrastructure barrier to accelerator operation | Data-center realization path; intermediate/order-adjacent | Utility, operator, regulator, or service announcement date | Site/region/platform when known | PPA, permit, or building completion mistaken for energized usable capacity; low utilization | Private commissioning and behind-the-meter supply | `LOW`; product linkage is often unresolved |
 | `PRICING_INVENTORY_CONTEXT` | Official or independently sourced price/inventory direction at compatible product scope | Conditions affecting order timing and supplier revenue realization | Market/commercial context; broad/intermediate | Release/publication date | Product family/industry/company | Spot/contract mismatch, channel inventory, price-led revenue without bit demand | Confidential contract prices/customer inventory | `MEDIUM` for context, `LOW` for HBM product specificity |
 | `SHIPMENT_REALIZATION` | Commercial shipment/customer supply actually started | Confirms the outcome event | Realization | Official occurrence disclosure | Product/supplier/platform | Shipment does not prove sustained demand, end use, price, volume, or share | Unannounced shipments | `MEDIUM`; used as O1 outcome, **not as a predictor of that same outcome** |
+
+### 4.1 Frozen minimum-design roles
+
+- H1-P primary: `HBM_SAMPLE`.
+- H1-P secondary when observed: `QUALIFICATION_STAGE`, `DESIGN_IN`, `ORDER_ADJACENT_SUPPLY_COMMITMENT`. Their absence is not imputed, and they are not required to appear uniformly.
+- H1-C primary: `CSP_CAPEX`, `AI_INFRA_COMMITMENT`, `PLATFORM_LAUNCH`, `PLATFORM_DEPLOYMENT`.
+- Context only: `PRICING_INVENTORY_CONTEXT`.
+- Removed from the minimum H1 comparison: `LTA_COMMERCIAL_COMMITMENT`, `POWER_DC_READY` because public observability and compatible scope are too sparse. An isolated verified event may remain descriptive evidence but cannot recreate a removed primary class. `POWER_DC_READY` remains relevant to later H2 work.
+
+`SHIPMENT_REALIZATION` remains an outcome-role event, not a predictor. Signal roles are frozen by Gate 5 and do not imply an empirical ranking.
 
 Subtypes are mandatory where language can change meaning. At minimum:
 
@@ -172,15 +226,15 @@ Only the direct wording and scope determine subtype. The transmission distance i
 The primary analytical unit is an **atomic public event nested in a pre-registered track**.
 
 - `PRODUCT_COMMERCIALIZATION_TRACK`: supplier + HBM product generation + declared platform/customer scope where available;
-- `PLATFORM_REALIZATION_TRACK`: CSP/platform + deployment scope, linked to a memory product only when primary evidence makes that link explicit.
+- `CUSTOMER_PLATFORM_REALIZATION_TRACK`: reporting operator + named platform/deployment scope; it does not require a named memory supplier.
 
 Quarterly company/industry observations are corroborating context, not extra independent product events. Multiple excerpts from the same origin and event do not increase sample size.
 
-The minimum comparison uses a hybrid design: structured event chains are the core; CAPEX and downstream signals are compared within compatible tracks; quarterly product-specific operational or financial disclosures corroborate realization. Unsupported links between a CSP's CAPEX and a supplier's shipment are forbidden.
+The minimum design uses two parallel event-chain strata. H1-P compares product-stage evidence only within product tracks and against O1. H1-C compares successive CAPEX/infrastructure/platform states only within platform tracks and against P1. Quarterly product-specific operational or financial disclosures corroborate realization but are not extra independent events.
 
-This creates an important feasibility boundary. Product-commercialization tracks may contain strong downstream stages but no defensible CSP CAPEX link; CSP tracks may contain CAPEX and deployment but no named memory supplier. A direct CAPEX-versus-HBM comparison is admissible only in a `BRIDGE_ELIGIBLE` track with primary evidence linking platform, memory generation, and realization at compatible scope. Otherwise the two strata are reported separately and H1 cannot receive a blanket superiority verdict.
+Product-commercialization tracks may contain strong downstream stages but no defensible CSP CAPEX link; platform tracks may contain CAPEX and deployment but no named memory supplier. Gate 3 therefore removed `BRIDGE_ELIGIBLE` as a required primary comparison. A complete bridge may be retained as exploratory corroboration only when primary evidence independently closes every link. Market share, reputation, presumed sole sourcing, analyst estimates, and teardown inference cannot close it.
 
-**Gate reference:** this hybrid observation unit and its two track strata require Gate 3 approval.
+**Gate status:** Gate 3 approved and froze this two-strata observation architecture.
 
 ## 6. Recommended minimum empirical design
 
@@ -199,18 +253,23 @@ This is intentionally a small-N validation of measurement and signal usefulness.
 
 ### 6.2 Within-track comparison
 
-For each eligible track:
+For each eligible H1-P track:
 
-- establish the earliest eligible CAPEX or broad investment signal only when its entity/platform scope can be linked without inference;
-- retain each distinct downstream signal stage and historical availability date;
-- observe the approved outcome state and independent corroboration;
+- retain each distinct product signal stage and historical availability date;
+- observe O1 and any independent O2/O3 corroboration under the frozen contract;
 - calculate lead-time intervals and fully observed no-realization/delay/censor flags;
-- record what changed from `CAPEX_ONLY` to each later evidence snapshot in scope, confidence explanation, and affected Marketing decision variable;
+- record what each newly observed product stage added to scope and commercialization visibility; and
 - preserve counterevidence and semantic boundaries.
 
-No track must contain every signal class. Absence of a public disclosure is `NOT_OBSERVED_PUBLICLY`, not evidence that the real-world event did not happen.
+For each eligible H1-C track:
 
-The analysis has two nested estimands. Product tracks estimate the usefulness of sample/qualification/commitment stages for later O1. CSP/platform tracks estimate the usefulness of CAPEX/infrastructure/readiness for later platform deployment. Only `BRIDGE_ELIGIBLE` tracks contribute to a direct cross-stage CAPEX-versus-HBM comparison. If the feasibility manifest finds too few bridge tracks, the direct H1 comparison is `INCONCLUSIVE` even if each stratum yields useful descriptive findings.
+- establish the earliest eligible CSP CAPEX state at its directly stated scope;
+- retain distinct AI-infrastructure commitment, named platform launch, and deployment/availability stages;
+- observe the approved P1 subtype without collapsing preview, limited availability, GA, or installed internal infrastructure;
+- calculate lead-time intervals and fully observed no-realization/delay/censor flags; and
+- record what changed from `CAPEX_ONLY` at each successive historical snapshot.
+
+No track must contain every signal class. Absence of a public disclosure is `NOT_OBSERVED_PUBLICLY`, not evidence that the real-world event did not happen. H1-P and H1-C results are never pooled. A bridge has no role in minimum-design eligibility or verdict sufficiency.
 
 ### 6.3 Primary outputs
 
@@ -222,7 +281,9 @@ The future minimum result should report:
 - exact/partial/broad scope-match distribution;
 - within-track evidence-state changes relative to CAPEX-only;
 - counterexamples and leave-one-stratum robustness;
-- a human-approved `SUPPORTED`, `REJECTED`, `QUALIFIED`, or `INCONCLUSIVE` H1 verdict.
+- separate human-approved H1-P and H1-C `SUPPORTED`, `REJECTED`, `QUALIFIED`, or `INCONCLUSIVE` verdicts when their respective Gate 5 sufficiency rules are met.
+
+No overall H1 verdict is required. Useful findings in one stratum and `INCONCLUSIVE` in the other are a valid result.
 
 Any class with insufficient independent, fully observed tracks remains `INSUFFICIENT_EVIDENCE`; it is not ranked.
 
@@ -258,7 +319,7 @@ Checked for design feasibility on 2026-08-28; these examples are not selected ca
 
 Feasibility conclusion: public evidence is adequate for a small event-chain design, but not for a complete event population or a precise numeric demand target. Product-stage positives are much easier to observe than failed qualifications or confidential contracts. The minimum study must therefore expose selection and censoring rather than imply statistical representativeness.
 
-**Gate reference:** tiers, origin-group independence, and the admissible use of secondary sources require Gate 4 approval.
+**Gate status:** Gate 4 approved and froze the tiers, origin-group independence, and secondary-source restrictions.
 
 ## 8. Temporal and information-cutoff contract
 
@@ -309,21 +370,29 @@ The later deterministic layer—not a model prompt—must:
 
 No enforcement code is created in this task.
 
-**Gate reference:** cutoff semantics and the conservative date-only rule require Gate 4 approval.
+**Gate status:** Gate 4 approved and froze cutoff semantics and the conservative date-only rule.
 
 ## 9. Ex-ante case inclusion and exclusion contract
 
-### 9.1 Proposed eligible universe
+### 9.1 Approved eligible universe
 
-The recommended starting boundary is public information available from **2022-01-01 through a future approved dataset freeze**. The start is proposed because it admits an earlier AI-memory commercialization regime and broad investment signals while official HBM and CSP archives are plausibly available; it is not a claim that 2022 is an economic breakpoint.
+The historical boundary starts at **2022-01-01** and ends at a future Gate 6 dataset freeze. The start retains HBM3/H100-era evidence and earlier regime context while avoiding materially earlier HBM generations with weaker comparability. HBM3 tracks whose origin predates the boundary carry explicit left truncation.
 
-Eligible entities are:
+The H1-P product universe is official HBM3-or-later product-generation disclosure by:
 
-- publicly reporting memory suppliers with official HBM product/IR evidence;
-- publicly reporting accelerator/platform providers or CSPs with official deployment/CAPEX evidence;
-- official counterparties, regulators, utilities, or government sources needed to verify an event within the declared track scope.
+- SK hynix;
+- Samsung Electronics; and
+- Micron.
 
-Eligible tracks are generated from an ex-ante supplier/product or platform universe, not from a list of famous outcomes. A product/platform is included when it meets the source and follow-up rules whether the public evidence later indicates success, delay, weakening, or unresolved status.
+The H1-C platform universe is a named H100, H200, B200, or GB200 platform/installed-infrastructure track disclosed by:
+
+- Microsoft / Azure;
+- Alphabet / Google;
+- Amazon / AWS;
+- Oracle; and
+- Meta.
+
+Official counterparties, regulators, utilities, or government sources may verify an event within the declared scope but do not create extra tracks by themselves. Tracks are generated from these ex-ante universes, not famous outcomes. Inclusion does not require later realization, and quarterly rows do not multiply independent track counts.
 
 ### 9.2 Signal inclusion
 
@@ -336,9 +405,9 @@ An event is eligible when all are true:
 - its direction and stage can be assigned without using later outcomes;
 - a primary official source exists, except secondary-source counterexample discovery retained as `TO_VERIFY` and excluded from primary comparison.
 
-### 9.3 Outcome observation window
+### 9.3 Outcome observation window — frozen
 
-The proposed future contract uses a **12-month base follow-up**, with **6-month and 18-month sensitivity windows**. Twelve months spans multiple quarterly decision cycles while limiting regime drift; six months tests near-term actionability and eighteen months tests delayed realization. These are design choices, not empirically established product-cycle constants.
+The approved contract uses a **12-month base follow-up**, with **6-month and 18-month sensitivity windows**. Twelve months spans multiple quarterly decision cycles while limiting regime drift; six months tests near-term actionability and eighteen months tests delayed realization. These are pre-frozen design choices, not empirically established product-cycle constants.
 
 Lead time remains continuous in the primary report. Binary “useful lead” bands, if desired for a specific Marketing workflow, are sensitivity outputs and require an approved decision rationale.
 
@@ -355,14 +424,15 @@ Lead time remains continuous in the primary report. Binary “useful lead” ban
 
 The track manifest is generated before outcome review. It must not require a known success. The future feasibility pass should actively search every eligible track for delay, cancellation, reduced guidance, qualification difficulty, or lack of realization, but a model-found negative remains a candidate until primary evidence is verified.
 
-At minimum, a comparative H1 verdict should not be allowed unless the approved dataset includes:
+The Gate 5 sufficiency rules are frozen:
 
-- more than one independent supplier/product or platform stratum so one famous success cannot determine the verdict;
-- `BRIDGE_ELIGIBLE` matched tracks in which CAPEX and at least one downstream signal class are both eligible at compatible scope;
-- at least one fully observed delayed, failed/weakened, or no-realization track, rather than successes only;
-- enough follow-up that right censoring does not determine the result.
+- H1-P requires at least 6 fully traceable and fully observed product tracks, all 3 suppliers, and no supplier contributing more than half of eligible tracks.
+- H1-C requires at least 8 fully traceable and fully observed platform tracks, at least 3 reporting operators, and at least 2 accelerator generations.
+- A comparative verdict within either stratum requires at least 2 explicit negative/delayed tracks from at least 2 independent origin groups in that stratum.
+- H1-P additionally requires at least 1 product-scope explicit delay, cancellation, qualification problem, reduced scope, or withdrawn guidance.
+- Silence and non-disclosure never satisfy a negative-case requirement.
 
-The exact sufficiency threshold must be set after a source-availability manifest, before outcome calculation. It cannot be reduced merely to obtain a verdict.
+If a rule is not met, the relevant stratum is `INCONCLUSIVE`. Thresholds cannot be reduced merely to obtain a verdict. Bridge availability is not a Gate 5 requirement.
 
 ### 9.6 Exclusion and duplicate rules
 
@@ -379,20 +449,20 @@ Exclude from the primary comparison, with a recorded reason:
 
 Exclusion is itself reviewable. A human can approve `INCLUDE`, `EXCLUDE`, or `HOLD`, with reason and dataset version; prior decisions are not overwritten.
 
-**Gate reference:** the time boundary, eligible universe, follow-up windows, sufficiency rule, and exclusions require Gate 3 and Gate 5 approval.
+**Gate status:** Gates 3 and 5 approved and froze the boundary, universe, follow-up windows, sufficiency rules, and exclusions.
 
 ## 10. Empirical-strategy comparison
 
 | Strategy | Question answered | Data requirement | Identification strength | Main bias | Timing / false positives / censoring | Business interpretability | Public-data fit |
 |---|---|---|---|---|---|---|---|
 | Structured historical event-chain | What was known at each stage and what happened later? | Atomic dated events with trace | Strong semantic and temporal validity; no causal identification | Publication and successful-event bias | Directly models order and censoring; false positives require a pre-registered universe | High | High for a small sample |
-| Matched-case comparison | Did downstream evidence add value versus CAPEX within similar tracks? | Comparable signals/outcome in the same or tightly matched track | Better controls scope than pooled averages | Few matches; human matching choices | Can compare lead and no-realization within matches | High | Medium-high |
+| Within-stratum matched-case comparison | Did successive product stages add visibility within H1-P, or did successive platform stages add visibility beyond CAPEX within H1-C? | Comparable signals/outcomes in the same stratum and tightly matched tracks | Better controls scope than pooled averages | Few matches; human matching choices | Can compare lead and no-realization within a single outcome contract | High | Medium-high |
 | Company-quarter panel/time series | Are regular CAPEX/signal measures associated with later aggregate outcomes? | Many consistently defined quarters and numeric outcomes | Potentially estimates average association, not causality | Mixed products, autocorrelation, disclosure breaks, pseudo-sample size | Coarse timing; censoring manageable with enough history | Medium | Low for product-specific H1 now |
 | Hybrid event + quarterly corroboration | Do event-stage patterns hold with broader operational/financial confirmation? | Event tracks plus limited regular context | Best construct/feasibility balance; still descriptive | Combines layers with different scope; must not treat them as equal rows | Event layer handles timing/censoring; quarterly layer corroborates | High | Recommended |
 
 ### 10.1 Selected strategy
 
-The minimum credible strategy is the hybrid in Section 6: event-chain core, within-track/matched comparisons, and quarterly corroboration. Statistical inference is not justified until a source-feasibility manifest demonstrates enough independent, consistently defined observations. Code availability is not a reason to prefer a panel or model.
+The minimum credible strategy is the two-strata hybrid in Section 6: event-chain core, within-track/within-stratum comparisons, and quarterly corroboration. The two outcomes and signal sets are not pooled. Statistical inference is not justified by the current feasibility population. Code availability is not a reason to prefer a panel or model.
 
 ## 11. Proposed empirical methods and permitted interpretation
 
@@ -400,8 +470,8 @@ The minimum credible strategy is the hybrid in Section 6: event-chain core, with
 |---|---|---|---|---|
 | Event-time ordering and lead intervals | Determine whether and how long a signal preceded O1 | Reliable `available_at`, outcome occurrence, scope match; interval dates when imprecise | Historical precedence and observed lead range | No causal claim; primary method |
 | Realization/no-realization/delay proportions | Compare observed outcomes by signal class | Pre-registered denominator, fully observed windows, censoring separated | Descriptive frequency in the selected public sample | No population probability or “accuracy” claim with small/selective N; primary method |
-| Within-track evidence-state comparison | Test whether a later signal added scope or reduced uncertainty beyond CAPEX | Same track/outcome contract and frozen earlier snapshot | Incremental decision information in that track | No coefficient or universal superiority; primary method |
-| Matched sign/dominance table | Check whether downstream signals consistently improve some dimensions without losing all lead | Approved matching keys and multiple independent matches | Direction and consistency of trade-offs | No statistical generalization from a few matches; primary method |
+| Within-track evidence-state comparison | H1-P: test whether a later product-stage signal added scope or reduced uncertainty; H1-C: test what each platform stage added beyond CAPEX | Same stratum, track/outcome contract, and frozen earlier snapshot | Incremental decision information in that track | No cross-strata coefficient or universal superiority; primary method |
+| Within-stratum matched sign/dominance table | Check whether successive signals show a consistent lead/scope/uncertainty trade-off within H1-P or H1-C | Approved matching keys and multiple independent matches within one stratum | Direction and consistency of trade-offs | No pooling or statistical generalization from a few matches; primary method |
 | Descriptive Kaplan–Meier/time-to-event | Describe time to realization while retaining right-censored tracks | Enough independent comparable tracks, stable time origin, non-informative censoring plausibly discussed | Conditional descriptive realization curve for the observed sample | No causal hazard interpretation; defer unless feasibility supports it |
 | Correlation / cross-correlation | Explore aggregate lead/lag co-movement | Consistent numeric series, stationarity/seasonality treatment, enough periods | Exploratory association only | Not recommended for minimum H1; cannot prove incremental information or causality |
 | Regression / panel methods | Estimate conditional association after specified controls | Many comparable independent units/periods, stable definitions, modeled dependence and confounding | Association under stated specification | Not recommended now; public product-level outcome and N are inadequate until proven otherwise |
@@ -409,59 +479,44 @@ The minimum credible strategy is the hybrid in Section 6: event-chain core, with
 
 No p-value, confidence interval, model “accuracy,” or coefficient should be reported unless the later dataset and dependence structure justify it. The absence of a statistical model is not a design failure.
 
-## 12. H1 falsification and verdict contract
+## 12. Separate-stratum falsification and verdict contract
 
-Verdicts apply to the approved public sample and signal classes, not to undisclosed internal orders.
+Verdicts apply to the approved public sample and signal classes, not to undisclosed internal orders. H1-P and H1-C receive separate verdicts from the same state set: `SUPPORTED`, `QUALIFIED`, `REJECTED`, or `INCONCLUSIVE`. An overall H1 verdict is optional and must not be forced.
 
-### 12.1 `SUPPORTED`
+### 12.1 H1-P verdict meaning
 
-Support requires all of the following pattern after the approved sufficiency gate:
+- `SUPPORTED`: after the frozen product sufficiency gate is met, one or more observed product-stage classes add reproducible commercialization visibility or tighter product scope before O1 while retaining positive lead; the pattern survives approved robustness checks and material counterexamples remain visible.
+- `QUALIFIED`: the product-stage trade-off is stable but conditional by supplier, generation, stage, or window. Conditions must be named.
+- `REJECTED`: after the frozen product sufficiency gate is met, the tested product-stage classes add no reproducible pre-O1 information, are mainly coincident/lagging, or fail under the approved robustness checks.
+- `INCONCLUSIVE`: the product track, supplier-diversity, explicit-negative, product-scope-negative, trace, follow-up, stage-consistency, or human-approval rule is not met.
 
-- in multiple independent `BRIDGE_ELIGIBLE` matched strata, at least one downstream signal class shows better realization/no-realization discrimination and adds tighter outcome scope or incremental information than CAPEX;
-- that class is usually observed before O1 with usable lead, rather than mainly on or after realization;
-- the signal changes the frozen evidence state beyond `CAPEX_ONLY` in a way connected to a Marketing decision variable;
-- the direction survives the pre-approved outcome, window, source-tier, grouping, and leave-one-stratum checks;
-- material counterexamples and trade-offs are reported rather than averaged away.
+H1-P does not compare its product signals directly with CSP CAPEX.
 
-This would support only the named signal classes and scopes, not the blanket statement that all order-proximate signals are superior.
+### 12.2 H1-C verdict meaning
 
-### 12.2 `REJECTED` / counterevidence
+- `SUPPORTED`: after the frozen platform sufficiency gate is met, one or more successive platform stages add reproducible deployment scope or reduce realization uncertainty beyond the prior CAPEX-only state while retaining positive lead before P1; the pattern survives approved robustness checks.
+- `QUALIFIED`: CAPEX, infrastructure commitment, launch, and deployment show a stable but conditional lead/scope/uncertainty trade-off by operator, platform generation, availability subtype, or window.
+- `REJECTED`: after the frozen platform sufficiency gate is met, successive platform stages add no reproducible information beyond CAPEX, are mainly coincident/lagging, or fail under approved robustness checks.
+- `INCONCLUSIVE`: the platform track, operator/generation diversity, explicit-negative, trace, follow-up, P1-state consistency, or human-approval rule is not met.
 
-H1 is rejected when, across sufficient `BRIDGE_ELIGIBLE`, matched, and fully observed tracks:
+### 12.3 Cross-strata synthesis boundary
 
-- CAPEX is equal or better on realization/no-realization and scope while offering longer lead; or
-- downstream signals add no reproducible information beyond CAPEX; or
-- downstream signals are predominantly coincident/lagging confirmations and therefore do not improve decisions at a useful historical point;
-- this result remains under the approved robustness checks.
+Cross-strata synthesis may describe the conceptual trade-off that upstream evidence can offer broader/earlier visibility while downstream evidence can offer tighter/closer realization scope. It must not pool O1 and P1, calculate CAPEX-versus-HBM signal superiority, or produce one signal ranking. `WATCH → PREPARE → PRIORITIZE → CONFIRM` may be used only if later results empirically support those decision states.
 
-A specific signal class can be rejected even when H1 overall is `QUALIFIED`.
+The project may legitimately end with useful findings in one or both strata and no direct cross-strata superiority verdict.
 
-### 12.3 `QUALIFIED`
+### 12.4 Frozen `INCONCLUSIVE` safeguards
 
-Use `QUALIFIED` when the trade-off is real and stable but conditional—for example, CAPEX provides longer broad direction while qualification improves product scope with shorter lead, or usefulness differs by product/platform/regime. The conditions must be named; `QUALIFIED` is not a substitute for insufficient evidence.
+A stratum is `INCONCLUSIVE` when any material approved minimum condition fails, including its track/diversity threshold, explicit-negative requirement, complete primary trace, full follow-up, consistent signal/outcome definition, origin-group independence, reconstructable historical availability, or required human approval. Right-censored records remain descriptive and cannot satisfy full observation or negative-case requirements.
 
-### 12.4 `INCONCLUSIVE`
-
-No H1 verdict is allowed when any material minimum condition fails, including:
-
-- too few independent comparable tracks;
-- too few `BRIDGE_ELIGIBLE` tracks for a direct CAPEX-versus-HBM comparison;
-- no fully observed delay, failed/weakened, or no-realization case;
-- the primary outcome is too broad or unavailable at product/platform scope;
-- right-censored tracks dominate the relevant class;
-- signal/stage definitions cannot be made consistent;
-- apparent independent evidence is actually one origin group;
-- reasonable outcome, date, grouping, or exclusion rules reverse the result;
-- historical availability cannot be reconstructed;
-- case exclusion or final interpretation lacks human approval.
-
-Any numeric minimum, window, decision band, or robustness pass rule capable of changing the verdict is fixed before analysis and recorded under Gate 5. No threshold may be tuned after seeing the result.
+No threshold may be tuned after seeing results. Bridge scarcity is a documented construct boundary, not a reason to relax provenance or a minimum-design verdict input.
 
 ## 13. Robustness plan — design only
 
 | Check | Why it matters |
 |---|---|
 | Strict O1 only vs O1 plus independent O2/O3 corroboration | Tests whether a verdict depends on accepting issuer-side shipment as enough realization evidence |
+| P1 state strictness: preview/limited/GA/installed-operational kept separate | Tests whether a platform finding depends on collapsing materially different availability states |
 | 6/12/18-month outcome windows | Separates near-term non-realization from delayed commercialization |
 | Continuous lead intervals vs approved actionability bands | Prevents an arbitrary lead cutoff from creating the result |
 | Narrow vs economically adjacent signal grouping | Tests whether combining qualification substages, commitments, or deployment stages hides semantic differences |
@@ -505,7 +560,7 @@ AI output is not an inclusion decision, primary fact approval, case match, or H1
 - approve track universe, inclusion/exclusion, matching, and source-independence judgments;
 - resolve ambiguous stage/scope classifications and consequential `HOLD` records;
 - approve dataset freeze before outcome analysis;
-- approve sufficiency thresholds, verdict rule, causal-language restrictions, final H1 verdict, and business implication.
+- approve sufficiency decisions, causal-language restrictions, separate final H1-P/H1-C verdicts, any optional cross-strata synthesis, and business implication.
 
 The Evidence Governance Harness remains the deterministic rule owner. This design creates no Agent Execution Harness and selects no runtime.
 
@@ -531,7 +586,7 @@ The public study cannot generally observe or infer:
 - completeness and stable archival access of supplier IR/product pages across the approved period;
 - DART/KRX timestamp and revision metadata needed for non-SEC issuers;
 - whether official platform configuration sources explicitly identify HBM generation and supplier often enough for matched tracks;
-- whether enough `BRIDGE_ELIGIBLE` tracks connect CSP CAPEX, a named platform/memory generation, and commercial realization without unsupported inference;
+- whether any exploratory bridge can close CSP CAPEX, a named platform/memory generation, and commercial realization without unsupported inference; bridge scarcity does not block the two-strata minimum design;
 - historical utility/operator data that distinguishes permit/PPA from energized or service-ready capacity;
 - consistency of HBM revenue/bit-shipment definitions across quarters and suppliers;
 - recoverable publication timezone and original file dates for static IR PDFs;
@@ -541,37 +596,43 @@ The asymmetry between announced successes and silent failures is a structural se
 
 ## 16. Human approval gates
 
-No gate is assumed approved by this document.
+Gates 1–5 are approved and frozen by human decision on 2026-08-28. They may not be changed during implementation or after outcome inspection without a new explicit human decision and decision-change record.
 
 ### Gate 1 — H1 question, business scope, and population
 
-`HUMAN_APPROVAL_REQUIRED — H1-G01`
+`APPROVED_AND_FROZEN — H1-G01`
 
-Approve or revise: the primary question in Section 1.2; CAPEX as the upstream reference rather than a presumed inferior baseline; decision-useful visibility as a dimension vector; HBM commercialization and explicitly linked AI platform tracks as the population; non-causal interpretation.
+Overall H1 and the separate H1-P/H1-C questions in Section 1.2 are non-causal and dimension-based. The design does not assume downstream superiority or create a universal ranking.
 
-### Gate 2 — Outcome contract
+### Gate 2 — Outcome contracts
 
-`HUMAN_APPROVAL_REQUIRED — H1-G02`
+`APPROVED_AND_FROZEN — H1-G02`
 
-Approve or revise: O1 commercial shipment/customer supply as the primary realization event; the narrow eligibility of volume production linked to actual supply; O2/O3 corroboration; outcome states; prohibition on broad semiconductor revenue and stock price as primary outcomes.
+H1-P uses strict supplier-side `O1_COMMERCIAL_REALIZATION` with O2/O3 corroboration. H1-C uses separate `P1_PLATFORM_OPERATIONAL_REALIZATION`, preserving planned, preview, limited/capacity-block, GA, and installed/operational states. Broad revenue and equity price are not primary outcomes.
 
-### Gate 3 — Observation unit and case inclusion
+### Gate 3 — Boundary, universe, tracks, and bridge
 
-`HUMAN_APPROVAL_REQUIRED — H1-G03`
+`APPROVED_AND_FROZEN — H1-G03`
 
-Approve or revise: atomic events nested in hybrid product-commercialization/platform-realization tracks; `BRIDGE_ELIGIBLE` requirement for a direct CAPEX-versus-HBM comparison; quarterly data as corroboration only; proposed 2022-01-01 start; eligible entity/product/platform universe; scope-match, negative-case, duplicate, exclusion, and case-review rules.
+The start is 2022-01-01. H1-P includes official HBM3-or-later generation disclosures from SK hynix, Samsung Electronics, and Micron. H1-C includes named H100/H200/B200/GB200 platform or installed-infrastructure tracks from Microsoft, Alphabet, Amazon, Oracle, and Meta. HBM3 pre-2022 origins carry left truncation. Two primary strata are frozen; bridge material is exploratory corroboration only and cannot be closed by reputation, share estimates, presumed sole sourcing, analyst estimates, or teardown inference.
 
-### Gate 4 — Source hierarchy and cutoff
+### Gate 4 — Source hierarchy and historical-information contract
 
-`HUMAN_APPROVAL_REQUIRED — H1-G04`
+`APPROVED_AND_FROZEN — H1-G04`
 
-Approve or revise: source tiers; `origin_group` independence; primary-source requirement; `available_at <= cutoff_at`; EDGAR acceptance proxy; conservative next-day availability for date-only sources; timezone, revision, retrospective, and re-reporting rules.
+The P1/P2/S1/S2 hierarchy, `origin_group` independence, primary-source requirement, `event_at/published_at/available_at/accessed_at` clocks, `available_at <= cutoff_at`, EDGAR acceptance proxy, conservative next-calendar-day rule for date-only sources, revision preservation, and future-information-leakage prohibition are frozen.
 
-### Gate 5 — Minimum method, windows, sufficiency, and verdict
+### Gate 5 — Signal roles, windows, sufficiency, and verdicts
 
-`HUMAN_APPROVAL_REQUIRED — H1-G05`
+`APPROVED_AND_FROZEN — H1-G05`
 
-Approve or revise: event-chain plus within-track matched comparison; 12-month base and 6/18-month sensitivity windows; continuous lead as primary; minimum multi-stratum/negative-case sufficiency; dimension-level comparison; robustness pass rule; `SUPPORTED/REJECTED/QUALIFIED/INCONCLUSIVE` contract. Exact sample and actionability thresholds must be frozen here after the feasibility manifest.
+- H1-P: at least 6 fully traceable and observed tracks, all 3 suppliers, and no supplier over half of eligible tracks.
+- H1-C: at least 8 fully traceable and observed tracks, at least 3 operators, and at least 2 accelerator generations.
+- Each stratum: at least 2 explicit negative/delayed tracks from at least 2 origin groups.
+- H1-P additionally: at least 1 product-scope explicit delay/cancellation/qualification problem/reduced scope/withdrawn guidance.
+- Windows: 12-month primary, 6/18-month sensitivity; right-censored tracks remain descriptive and never enter negative/no-realization denominators.
+- Signal roles are frozen in Section 4.1.
+- Verdicts are separate H1-P/H1-C `SUPPORTED/QUALIFIED/REJECTED/INCONCLUSIVE`; unmet sufficiency forces the relevant stratum to `INCONCLUSIVE`.
 
 ### Gate 6 — Dataset freeze before outcome analysis
 
@@ -583,7 +644,7 @@ After implementation and limited data construction, approve the track manifest, 
 
 `HUMAN_APPROVAL_REQUIRED — H1-G07`
 
-Approve the final sufficiency decision, counterevidence treatment, robustness interpretation, H1 verdict, scope of generalization, and Marketing implications. AI or deterministic code may calculate candidate results but cannot approve this gate.
+Approve the final sufficiency decision, counterevidence treatment, robustness interpretation, separate H1-P/H1-C verdicts, scope of generalization, any cross-strata synthesis, and Marketing implications. AI or deterministic code may calculate candidate results but cannot approve this gate.
 
 ## 17. Minimum future dataset specification — conceptual only
 
@@ -594,7 +655,7 @@ No physical schema or data file is created by this design. The primary analytica
 | Logical record | One row means | Primary key / role |
 |---|---|---|
 | Source manifest | One immutable source revision | `source_id + source_revision_id`; provenance and historical availability |
-| Track manifest | One pre-registered product-commercialization or platform-realization track | `track_id`; eligible universe and outcome contract |
+| Track manifest | One pre-registered product-commercialization or customer/platform-realization track | `track_id`; eligible universe, stratum, and O1/P1 outcome contract |
 | Atomic event | One directly supported signal, outcome, or counterevidence statement at one scope | `event_id`; primary analytical row |
 | Cutoff snapshot | One track's eligible source/event set at one historical cutoff | `snapshot_id`; leakage-controlled state and hash |
 | Outcome evaluation | One event-to-outcome-window evaluation under one specification | `evaluation_id`; derived lead/status/censor result |
@@ -606,10 +667,10 @@ No physical schema or data file is created by this design. The primary analytica
 |---|---|
 | Dataset/version | `dataset_version`, `contract_version`, `signal_dictionary_version`, `outcome_contract_version`, `created_at`, `snapshot_hash` |
 | Identifiers | `track_id`, `track_stratum`, `event_id`, `evidence_id`, `source_id`, `source_revision_id`, `origin_group`, `target_outcome_id`, `counterevidence_ids` |
-| Entity/scope | `supplier`, `customer_if_disclosed`, `platform`, `memory_product`, `product_generation`, `geography`, `stated_scope`, `scope_match`, `bridge_eligibility`, `bridge_evidence_ids` |
+| Entity/scope | `supplier`, `customer_if_disclosed`, `platform`, `memory_product`, `product_generation`, `geography`, `stated_scope`, `scope_match`, optional exploratory `bridge_eligibility`, `bridge_evidence_ids` |
 | Event role | `record_role` = `SIGNAL/OUTCOME/COUNTEREVIDENCE/CONTEXT`, `signal_class`, `signal_subtype`, `direction`, `economic_stage`, `information_distance`, `observed_statement` |
 | Dates | `event_at_lower`, `event_at_upper`, `expected_event_at`, `published_at`, `available_at`, `accessed_at`, `publisher_timezone`, `date_precision`, `cutoff_at` |
-| Outcome | `outcome_level`, `outcome_state`, `outcome_event_at_lower`, `outcome_event_at_upper`, `window_start`, `window_end`, `extended_window_end` |
+| Outcome | `outcome_family` = `O1_PRODUCT/P1_PLATFORM`, `outcome_level`, `platform_realization_subtype`, `outcome_state`, `outcome_event_at_lower`, `outcome_event_at_upper`, `window_start`, `window_end`, `extended_window_end` |
 | Derived timing | `lead_days_lower`, `lead_days_upper`, `precedence_status`, `realization_within_window`, `delayed`, `right_censored`, `fully_observed` |
 | Source/provenance | `publisher`, `title`, `url_or_archive`, `source_tier`, `original_excerpt`, `locator`, `content_sha256`, `evidence_level`, `independent_origin_count` |
 | Inclusion/exclusion | `eligibility_status`, `inclusion_reason`, `exclusion_code`, `duplicate_of`, `scope_conflict`, `date_conflict`, `missing_required_field` |
@@ -630,7 +691,7 @@ The following future artifacts could demonstrate capabilities only after approve
 | Atomic event and contradiction trace | AI-assisted research with evidence governance |
 | Matched event-chain result and counterexamples | Hypothesis testing and counterevidence handling |
 | Robustness/specification table | Sensitivity analysis and refusal to overclaim small public samples |
-| Human-approved verdict and decision-state changes | Evidence-driven decision revision and Marketing translation |
+| Human-approved H1-P/H1-C verdicts and decision-state changes | Evidence-driven decision revision and Marketing translation without outcome pooling |
 | Failure/regression cases created during execution | Reproducible correction of AI or deterministic workflow failures |
 
 Resume, cover-letter, or interview prose remains downstream and must use only actually executed, source-traced facts.
@@ -639,17 +700,19 @@ Resume, cover-letter, or interview prose remains downstream and must use only ac
 
 A reviewer should be able to answer from this document:
 
-- realized demand is O1 commercial realization, optionally corroborated by O2/O3, with unresolved scope preserved;
+- H1 is frozen as separate product-commercialization and customer/platform-realization strata with no required direct bridge;
+- H1-P uses O1 supplier-side commercial realization, optionally corroborated by O2/O3, with unresolved scope preserved;
+- H1-C uses separate P1 platform operational realization and keeps planned, preview, limited, GA, and installed/operational states distinct;
 - a signal is an atomic, historically available public event assigned independently of its later outcome;
 - better visibility is a vector of lead, realization, false-positive risk, scope, stability, incremental information, and availability;
-- the unit is a hybrid track with atomic events, not a convenient quarter row;
+- the units are two non-pooled track strata with atomic events, not convenient quarter rows;
 - future knowledge is blocked by immutable `available_at` cutoff snapshots and source revisions;
 - false positives require full observation, delays and censoring are separate, and quiet failures remain a limitation;
 - cases arise from an approved universe before outcome review;
-- support, rejection, qualification, and inconclusive patterns are explicit;
-- every consequential choice is routed through H1-G01 to H1-G07;
-- the design may legitimately end in `INCONCLUSIVE`.
+- separate support, rejection, qualification, and inconclusive patterns are explicit;
+- H1-G01 through H1-G05 are frozen; dataset and final-interpretation approvals remain H1-G06 and H1-G07;
+- the design may legitimately end with one or both strata `INCONCLUSIVE` and no cross-strata superiority verdict.
 
-## 20. Exactly one proposed next implementation task
+## 20. Exactly one approved next task
 
-After Gates 1–5 are approved, implement **only the H1 measurement-contract records and deterministic cutoff/snapshot validation with synthetic or tiny hand-authored fixtures**, including provenance, revision, origin-group deduplication, leakage rejection, censor flags, and replay-hash tests. Do not collect the full historical dataset or calculate an H1 verdict in that task.
+Implement **only the H1 measurement contract and deterministic validation layer using synthetic or tiny hand-authored fixtures**, including separate H1-P/H1-C outcome contracts, provenance, revision, origin-group deduplication, cutoff/leakage rejection, left-truncation/right-censor flags, and replay-hash tests. Do not collect the historical dataset, calculate lead-time results, classify candidate outcomes, or run empirical H1 in that task.

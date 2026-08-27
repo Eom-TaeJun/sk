@@ -8,7 +8,9 @@ Build a traceable decision-intelligence workflow that uses public information to
 
 - Vertical Slice and 2025→2026 Temporal Update: implemented and preserved
 - Architecture: runtime-agnostic, capability-first
-- Next approved task: H1 Demand Signal Quality empirical validation design only
+- H1 Gates 1–5: human-approved and frozen as separate product-commercialization (H1-P) and customer/platform-realization (H1-C) strata
+- Next approved task: implement only the H1 measurement contract and deterministic validation layer with synthetic or tiny hand-authored fixtures
+- H1 source collection, candidate-outcome classification and empirical execution: not yet approved
 - H2: only after a credible H1 minimum pipeline
 - H3: conceptual/`KNOWN_UNKNOWN` until public evidence is sufficient
 - Interrupted H1 implementation: removed from the current baseline and preserved only in Git history and its completed execution-plan note
@@ -65,7 +67,7 @@ python -m src.pipeline --workspace . --scenario data/raw/scenarios/hbm4_temporal
 
 No Agent Evaluation runner is implemented yet. Do not fabricate eval results or document a command that does not exist.
 
-Without explicit approval, do not design or run H1, start H2/H3, add an Agent Execution Harness/runtime, or add dashboards/databases.
+Without explicit approval, do not collect or run empirical H1, start H2/H3, add an Agent Execution Harness/runtime, or add dashboards/databases. The only approved H1 implementation scope is the frozen measurement contract and deterministic validation layer using synthetic or tiny hand-authored fixtures.
 
 ## Definition of done for a Codex task
 

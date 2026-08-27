@@ -75,3 +75,12 @@ Deterministic program이 소유할 영역:
 - Why it stopped: Human steering보다 구현이 앞서 case/outcome/cutoff/verdict contract가 승인되지 않았다.
 - Updated decision: 해당 묶음은 current baseline에서 제거하고 Git history와 `docs/exec-plans/completed/interrupted_h1_experiment.md`에만 보존한다.
 - Consequence: H1 finding은 아직 없으며 다음 task는 design-only다. Sunk cost는 KEEP 사유가 아니다.
+
+## ADR-009 — H1 two-strata empirical contract after public-data feasibility
+
+- Previous analytical intention: broad CSP CAPEX와 downstream HBM commercialization signal을 provenance-compatible matched track에서 직접 비교한다.
+- Feasibility evidence: ex-ante public universe에서 product-commercialization과 customer/platform-realization 후보군은 각각 구성할 수 있었지만, broad CAPEX → named platform → named HBM supplier → strict supplier-side commercial realization을 모두 연결한 provenance-complete bridge는 0건이었다. Product-scope explicit negative disclosure도 희소했다.
+- Human decision: construct validity를 지키기 위해 H1을 H1-P Product Commercialization과 H1-C Customer/Platform Realization의 separate primary strata로 동결한다. H1-P는 O1 supplier-side proxy, H1-C는 separate P1 platform-operational outcome을 사용하며 outcomes와 signal ranking을 pooling하지 않는다.
+- Bridge boundary: complete primary-source chain이 독립적으로 닫힐 때만 exploratory corroboration으로 유지한다. Market share, reputation, presumed sole sourcing, analyst estimate 또는 teardown inference로 bridge를 채우지 않는다.
+- Frozen gates: historical boundary/universe, source/timestamp contract, signal roles, 6/12/18-month windows, negative-case requirements와 stratum-specific sufficiency thresholds는 H1 Gates 1–5에서 human-approved/frozen 상태다.
+- Consequence: H1 finding은 여전히 없으며, 다음 승인 범위는 synthetic 또는 tiny hand-authored fixture를 이용한 measurement contract와 deterministic validation layer뿐이다. Historical dataset 수집과 empirical H1 실행은 별도 승인이 필요하다.

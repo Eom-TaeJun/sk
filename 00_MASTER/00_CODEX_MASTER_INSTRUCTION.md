@@ -74,9 +74,13 @@ Contradiction과 Backtest가 기존 판단을 깨면 Confidence를 수정한다.
 ## 2. 프로젝트 가설과 우선순위
 
 ### H1. Demand Signal Quality
-Headline CAPEX보다 Qualification / LTA / Power-ready /
-실제 Platform deployment에 가까운 신호가
-Memory Demand visibility를 더 잘 설명하는가?
+공개된 AI-memory 신호가 operational 또는 commercial realization에 가까워질수록
+lead time / scope precision / realization uncertainty의 trade-off와
+의사결정 가치가 어떻게 달라지는가?
+
+H1은 direct CAPEX-versus-HBM 우열 비교나 universal signal ranking이 아니다.
+H1-P Product Commercialization과 H1-C Customer/Platform Realization을
+서로 다른 outcome contract로 검증하고 결과를 pooling하지 않는다.
 
 ### H2. Bottleneck Migration
 AI-memory 공급의 Marginal Constraint가
@@ -407,11 +411,11 @@ Contradiction은 LLM이 자동 화해시키지 않는다.
 
 ## 13. Empirical Validation Contract
 
-H1의 case, variable, outcome, cutoff와 rejection rule은 아직 설계되지 않았다. 삭제되었거나 interrupted 상태인 H1 실행물은 finding으로 사용하지 않는다.
+H1 Gates 1–5는 `docs/exec-plans/active/h1_empirical_validation_design.md`에서 human-approved/frozen 상태다. H1-P는 strict supplier-side `O1_COMMERCIAL_REALIZATION`, H1-C는 separate `P1_PLATFORM_OPERATIONAL_REALIZATION`을 사용한다. 두 strata는 outcome과 signal을 pooling하지 않으며 provenance-complete bridge가 없는 상태에서 direct CAPEX-versus-HBM 비교를 만들지 않는다.
 
-향후 empirical design은 최소한 temporal ordering, `event_at`/`available_at` 분리, future-information leakage, independent support, counterexample, false positive, lead/lag와 right censoring을 다뤄야 한다. 최종 H1/H2 verdict는 사람이 승인한다.
+승인된 계약은 temporal ordering, `event_at`/`published_at`/`available_at`/`accessed_at` 분리, future-information leakage, origin-group independence, explicit negative evidence, lead/lag, left truncation과 right censoring을 보존한다. Gates 6–7의 dataset freeze와 최종 H1-P/H1-C verdict는 사람이 별도 승인한다.
 
-현재 active gate는 `docs/exec-plans/active/h1_empirical_validation_design.md`이며 이 문서에서 방법론을 선결정하지 않는다.
+삭제되었거나 interrupted 상태인 H1 실행물은 finding으로 사용하지 않는다. 다음 승인 범위는 synthetic 또는 tiny hand-authored fixture를 이용한 measurement contract와 deterministic validation layer뿐이다.
 
 ---
 
@@ -566,4 +570,4 @@ Decision Memo → 현업 판단 번역
 
 첫 Vertical Slice와 Temporal Update는 완료되어 보존한다. 새 작업은 루트 `AGENTS.md`를 먼저 읽고 필요한 상세 문서만 추가로 로드한다.
 
-다음 승인 대상은 **H1 empirical validation design**이다. Source/case/outcome/cutoff와 human judgment gate를 설계하기 전에는 dataset 확장, H1 실행, H2, orchestration runtime 또는 dashboard를 구현하지 않는다.
+H1 empirical design의 Gates 1–5는 승인·동결되었다. 다음 승인 작업은 **synthetic 또는 tiny hand-authored fixture를 이용한 H1 measurement contract와 deterministic validation layer 구현**이다. Historical Source 수집, candidate outcome 분류, empirical H1 실행, H2, orchestration runtime 또는 dashboard는 아직 승인되지 않았다.
