@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "h1_track.schema.json",
+  "title": "H1 Measurement Track",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "track_id",
+    "track_type",
+    "entity",
+    "product",
+    "platform",
+    "generation",
+    "geography",
+    "start_boundary",
+    "left_truncated",
+    "track_status"
+  ],
+  "properties": {
+    "track_id": {"type": "string", "minLength": 1},
+    "track_type": {
+      "enum": [
+        "PRODUCT_COMMERCIALIZATION_TRACK",
+        "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+      ]
+    },
+    "entity": {"type": "string", "minLength": 1},
+    "product": {"type": ["string", "null"]},
+    "platform": {"type": ["string", "null"]},
+    "generation": {"type": "string", "minLength": 1},
+    "geography": {"type": ["string", "null"]},
+    "start_boundary": {"type": "string", "format": "date"},
+    "left_truncated": {"type": "boolean"},
+    "track_status": {"enum": ["ACTIVE", "HOLD", "EXCLUDED"]}
+  }
+}

@@ -57,3 +57,14 @@
 - Updated conclusion: 질문을 데이터에 맞춰 약화한 것이 아니라, 관찰 가능한 두 estimand로 분리하고 bridge는 complete primary-source chain이 닫힐 때만 exploratory corroboration으로 남긴다. Sufficiency가 부족하면 해당 stratum은 `INCONCLUSIVE`다.
 - Affected decision variable: Demand Forecast, Customer Priority, Qualification, TTM의 public-signal 해석 경계
 - Job relevance: 공개정보가 원래 질문을 지지하는지 구현 전에 검증하고, 근거가 부족할 때 인과·고객/공급자 연결을 만들지 않은 채 분석 범위를 수정한 수행 Fact
+
+## Change 6 — Right censoring을 Event 속성에서 Snapshot 판단으로 수정
+
+- Initial assumption: 합성 right-censor Event에 `right_censored=true`를 고정하면 관찰 미완료 상태를 충분히 표현할 수 있다.
+- New evidence: 동일 Event와 동일 dataset freeze에서도 6개월 window는 fully observed지만 12개월·18개월 window는 right-censored가 되는 합성 sensitivity test를 확인했다.
+- Evidence level: 프로젝트 구현·테스트 수행 Fact
+- Contradiction: right censoring은 Event 자체의 영구 속성이 아니라 `available_at + observation window`와 dataset freeze의 관계다.
+- Why the old view was insufficient: Event에 단일 boolean을 확정하면 horizon을 바꿀 때 모순이 발생하고, 아직 끝나지 않은 관찰을 실패로 셀 위험이 있다.
+- Updated conclusion: raw Event의 censor 선언은 nullable로 유지하고, immutable snapshot 생성 시 6/12/18개월별 `fully_observed`, `right_censored`, `eligible_for_failure_denominator`를 계산한다. right-censored Event는 기술적 기록으로 남기되 실패 분모에는 들어가지 않는다.
+- Affected decision variable: H1 Demand Signal Quality의 failure/no-realization 비교 신뢰성
+- Job relevance: 시계열 관찰 가능성과 실제 실패를 구분해 Demand Forecast 신호 평가의 편향을 통제한 수행 Fact

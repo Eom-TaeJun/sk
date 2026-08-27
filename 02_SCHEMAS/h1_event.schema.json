@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "h1_event.schema.json",
+  "title": "H1 Atomic Measurement Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "track_id",
+    "data_role",
+    "signal_class",
+    "signal_subtype",
+    "transmission_layer",
+    "decision_question",
+    "event_at",
+    "published_at",
+    "available_at",
+    "accessed_at",
+    "availability_basis",
+    "publisher_timezone",
+    "date_precision",
+    "scope_type",
+    "scope_value",
+    "source_id",
+    "origin_group",
+    "evidence_level",
+    "claim",
+    "excerpt",
+    "locator",
+    "revision_id",
+    "supersedes_event_id",
+    "right_censored",
+    "left_truncated",
+    "review_status"
+  ],
+  "properties": {
+    "event_id": {"type": "string", "minLength": 1},
+    "track_id": {"type": "string", "minLength": 1},
+    "data_role": {"enum": ["SIGNAL", "OUTCOME", "CONTEXT"]},
+    "signal_class": {
+      "enum": [
+        "HBM_SAMPLE",
+        "QUALIFICATION_STAGE",
+        "DESIGN_IN",
+        "ORDER_ADJACENT_SUPPLY_COMMITMENT",
+        "O1_COMMERCIAL_REALIZATION",
+        "O2_OPERATIONAL_CORROBORATION",
+        "O3_FINANCIAL_CORROBORATION",
+        "CSP_CAPEX",
+        "AI_INFRA_COMMITMENT",
+        "PLATFORM_LAUNCH",
+        "PLATFORM_DEPLOYMENT_STAGE",
+        "P1_PLATFORM_OPERATIONAL_REALIZATION",
+        "PRICING_INVENTORY_CONTEXT"
+      ]
+    },
+    "signal_subtype": {"type": "string", "minLength": 1},
+    "transmission_layer": {
+      "enum": [
+        "CUSTOMER_ECONOMICS",
+        "AI_INFRASTRUCTURE",
+        "PLATFORM",
+        "MEMORY_PRODUCT",
+        "QUALIFICATION_COMMERCIAL",
+        "COMMERCIAL_REALIZATION",
+        "MARKET_CONTEXT"
+      ]
+    },
+    "decision_question": {
+      "enum": [
+        "DEMAND_FORECAST",
+        "CUSTOMER_PRIORITY",
+        "QUALIFICATION",
+        "TTM",
+        "COMMERCIALIZATION_VISIBILITY",
+        "PLATFORM_DEPLOYMENT_VISIBILITY"
+      ]
+    },
+    "event_at": {"type": "string", "format": "date-time"},
+    "published_at": {"type": "string", "format": "date-time"},
+    "available_at": {"type": "string", "format": "date-time"},
+    "accessed_at": {"type": ["string", "null"], "format": "date-time"},
+    "availability_basis": {
+      "enum": [
+        "EXACT_TIMESTAMP",
+        "PUBLISHER_DATE_FALLBACK",
+        "OTHER_APPROVED_PROXY"
+      ]
+    },
+    "publisher_timezone": {"type": "string", "minLength": 1},
+    "date_precision": {"enum": ["TIMESTAMP", "DAY", "MONTH"]},
+    "scope_type": {
+      "enum": [
+        "COMPANY",
+        "PRODUCT_FAMILY",
+        "PRODUCT_GENERATION",
+        "PLATFORM",
+        "CUSTOMER",
+        "REGION",
+        "SITE",
+        "INDUSTRY"
+      ]
+    },
+    "scope_value": {"type": "string", "minLength": 1},
+    "source_id": {"type": "string", "minLength": 1},
+    "origin_group": {"type": "string", "minLength": 1},
+    "evidence_level": {
+      "enum": [
+        "A_DIRECT_FACT",
+        "B_COMPANY_CLAIM",
+        "C_EXTERNAL_ESTIMATE",
+        "D_DERIVED_FACT",
+        "E_STRONG_INFERENCE",
+        "F_HYPOTHESIS"
+      ]
+    },
+    "claim": {"type": "string", "minLength": 1},
+    "excerpt": {"type": "string", "minLength": 1},
+    "locator": {"type": "string", "minLength": 1},
+    "revision_id": {"type": "string", "minLength": 1},
+    "supersedes_event_id": {"type": ["string", "null"]},
+    "right_censored": {"type": ["boolean", "null"]},
+    "left_truncated": {"type": "boolean"},
+    "review_status": {
+      "enum": ["UNREVIEWED", "APPROVED", "HOLD", "REJECTED"]
+    }
+  }
+}

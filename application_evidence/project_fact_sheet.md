@@ -35,3 +35,17 @@
 - 검증: 18개 unit/integration test 통과. prior Evidence 보존, 최신 Source 비덮어쓰기, diff replay 일치 포함
 - 실패/수정: Windows cp949 console에서 Unicode 출력 실패를 발견해 persisted UTF-8과 console-safe JSON을 분리
 - 남은 unknown: customer qualification status, customer identity/share, price/contract terms, shipment volume/qualified-good-volume
+
+## H1 Measurement Contract 구현 수행 Fact
+
+- 범위: 승인된 H1-P Product Commercialization과 H1-C Customer/Platform Realization의 측정 계약 및 deterministic validation만 구현. 실제 Historical Source 수집, empirical H1 실행, 성능 계산과 verdict는 수행하지 않음
+- 구현 계약: Track/Event/Snapshot JSON Schema와 Python dataclass contract를 추가하고 `SIGNAL`/`OUTCOME`/`CONTEXT`, transmission layer, decision question을 필수화
+- 의미 통제: sample≠qualification complete, qualification underway≠complete, preview/plan≠platform operational realization, supplier O1≠platform P1을 코드와 합성 반례로 검증
+- 시간 통제: `event_at`/`published_at`/`available_at`을 분리하고 cutoff 이후 정보 차단, date-only Source의 publisher-local 다음 날 fallback, immutable revision/supersession을 구현
+- Source/Scope 통제: `source_id`와 `origin_group`을 분리해 mirror Source를 독립 근거로 중복 계산하지 않고, 서로 다른 Track 또는 호환되지 않는 scope의 join을 차단
+- Censoring 통제: 6/12/18개월별 관찰 상태를 계산하고 right-censored record를 failure/no-realization denominator에서 제외. left truncation을 Track/Event에 명시적으로 보존
+- 재현성: cutoff, freeze, horizon, included Track/Event/Source, HOLD/EXCLUDE 이유, observation assessment를 canonical SHA-256 manifest로 고정하고 동일 입력 replay hash 일치를 검증
+- 검증 규모: synthetic Track 4개, valid Event 12개, invalid semantic fixture 3개. 신규 측정 계약 test 18개와 기존 regression 18개를 합쳐 36개 통과; 기존 baseline/temporal pipeline 두 개도 exit code 0
+- 구현 중 수정한 판단: raw Event에 하나의 `right_censored=true`를 고정하면 같은 Event의 6/12/18개월 sensitivity가 충돌함을 확인. raw 선언은 nullable로 두고 snapshot의 freeze+horizon마다 상태를 계산하도록 수정
+- AI가 수행한 일: 계약/검증 코드와 adversarial fixture 초안, deterministic test/replay 수행. 사람이 통제할 일: 최종 Track·stage·scope admissibility, origin-group 적정성, proxy availability 승인, empirical sufficiency와 H1 verdict
+- 보존한 한계: 실제 수요 신호의 우열, forecasting accuracy, realization/false-positive rate, 시간 절감 수치를 주장하지 않음

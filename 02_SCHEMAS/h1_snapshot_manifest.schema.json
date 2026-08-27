@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "h1_snapshot_manifest.schema.json",
+  "title": "Immutable H1 Dataset Snapshot Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "snapshot_id",
+    "contract_version",
+    "included_track_ids",
+    "included_event_ids",
+    "source_ids",
+    "cutoff_at",
+    "dataset_freeze_at",
+    "observation_window_months",
+    "exclusions_and_holds",
+    "observation_assessments",
+    "created_at",
+    "content_hash"
+  ],
+  "properties": {
+    "snapshot_id": {"type": "string", "minLength": 1},
+    "contract_version": {"type": "string", "minLength": 1},
+    "included_track_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "included_event_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "source_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "cutoff_at": {"type": "string", "format": "date-time"},
+    "dataset_freeze_at": {"type": "string", "format": "date-time"},
+    "observation_window_months": {"enum": [6, 12, 18]},
+    "exclusions_and_holds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["record_id", "record_type", "decision", "reason"],
+        "properties": {
+          "record_id": {"type": "string", "minLength": 1},
+          "record_type": {"enum": ["TRACK", "EVENT"]},
+          "decision": {"enum": ["EXCLUDE", "HOLD"]},
+          "reason": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "observation_assessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "event_id",
+          "observation_window_months",
+          "window_end",
+          "fully_observed",
+          "right_censored",
+          "left_truncated",
+          "eligible_for_failure_denominator"
+        ],
+        "properties": {
+          "event_id": {"type": "string", "minLength": 1},
+          "observation_window_months": {"enum": [6, 12, 18]},
+          "window_end": {"type": "string", "format": "date-time"},
+          "fully_observed": {"type": "boolean"},
+          "right_censored": {"type": "boolean"},
+          "left_truncated": {"type": "boolean"},
+          "eligible_for_failure_denominator": {"type": "boolean"}
+        }
+      }
+    },
+    "created_at": {"type": "string", "format": "date-time"},
+    "content_hash": {"type": "string", "pattern": "^[A-F0-9]{64}$"}
+  }
+}
