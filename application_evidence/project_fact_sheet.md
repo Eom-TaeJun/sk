@@ -49,3 +49,17 @@
 - 구현 중 수정한 판단: raw Event에 하나의 `right_censored=true`를 고정하면 같은 Event의 6/12/18개월 sensitivity가 충돌함을 확인. raw 선언은 nullable로 두고 snapshot의 freeze+horizon마다 상태를 계산하도록 수정
 - AI가 수행한 일: 계약/검증 코드와 adversarial fixture 초안, deterministic test/replay 수행. 사람이 통제할 일: 최종 Track·stage·scope admissibility, origin-group 적정성, proxy availability 승인, empirical sufficiency와 H1 verdict
 - 보존한 한계: 실제 수요 신호의 우열, forecasting accuracy, realization/false-positive rate, 시간 절감 수치를 주장하지 않음
+
+## H1 Pre-registered Registry + Real-data Pilot 수행 Fact
+
+- 범위: outcome-neutral 후보 Track을 먼저 동결하고, 승인된 4개 Track에만 실제 Primary Source ingestion을 수행. H1 성능·lead/lag·실현율·verdict는 계산하지 않음
+- Registry: feasibility universe의 Product 10개와 Customer/Platform 14개, 총 24개를 `PRE_REGISTERED`로 고정. outcome/result 필드가 없음을 테스트
+- Pilot: `P02-SKH-HBM3E`, `P04-MU-HBM3E`, `C02-AZ-H200`, `C04-GCP-H200`; Primary Source 13개, Atomic Event 15개
+- Provenance: URL, publisher, publication/availability/access 시점, origin group, local excerpt archive, locator, Source SHA-256과 registry/dataset hash를 연결하고 replay 검증
+- 실제 분류 결과: deterministic contract를 통과한 미검토 후보 11개, 의미 판단이 필요한 HOLD 4개, ingestion REJECTED 0개. 사람 승인으로 표시한 후보는 0개
+- 발견한 실패: volume production만으로 supply commitment가 될 수 있었고, 미래 qualifier가 붙은 customer supply 문구가 current O1로 통과할 수 있었음
+- 수정: 두 실패를 최소 합성 fixture와 regression으로 먼저 고정한 뒤 affirmative commitment term과 future-supply rejection rule을 추가. 회고형 사건을 위해 publication precision과 event precision도 분리
+- 보존한 경계: sample≠qualification, final-stage≠complete, preview≠GA, company CAPEX≠named H200 funding, H200 design-in≠특정 CSP의 memory supplier
+- AI가 수행한 일: 공식 Source 후보 탐색, excerpt/locator 보존, Atomic Event/classification 후보와 stress log 구조화, deterministic test 작성
+- 사람이 판단할 일: HOLD admissibility, production-stage taxonomy, design-in 범위, empirical dataset freeze와 H1-P/H1-C verdict
+- SK하이닉스 직무 연결: Qualification/TTM/Commercialization stage 판별, Customer Priority의 supplier-CSP bridge 통제, Demand Forecast에서 CAPEX scope 과대해석 방지

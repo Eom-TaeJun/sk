@@ -89,6 +89,10 @@
     },
     "publisher_timezone": {"type": "string", "minLength": 1},
     "date_precision": {"enum": ["TIMESTAMP", "DAY", "MONTH"]},
+    "event_date_precision": {
+      "type": ["string", "null"],
+      "enum": ["TIMESTAMP", "DAY", "MONTH", null]
+    },
     "scope_type": {
       "enum": [
         "COMPANY",

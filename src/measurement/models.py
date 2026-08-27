@@ -174,6 +174,7 @@ class EventRecord:
     right_censored: bool | None
     left_truncated: bool
     review_status: str
+    event_date_precision: str | None = None
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> "EventRecord":
@@ -205,6 +206,12 @@ class EventRecord:
         require_enum(DecisionQuestion, self.decision_question, "event.decision_question")
         require_enum(AvailabilityBasis, self.availability_basis, "event.availability_basis")
         require_enum(DatePrecision, self.date_precision, "event.date_precision")
+        if self.event_date_precision is not None:
+            require_enum(
+                DatePrecision,
+                self.event_date_precision,
+                "event.event_date_precision",
+            )
         require_enum(ScopeType, self.scope_type, "event.scope_type")
         require_enum(EvidenceLevel, self.evidence_level, "event.evidence_level")
         require_enum(ReviewStatus, self.review_status, "event.review_status")

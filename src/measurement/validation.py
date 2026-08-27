@@ -83,6 +83,22 @@ O1_SUBTYPES = {
     "CUSTOMER_SUPPLY_STARTED",
     "VOLUME_PRODUCTION_FOR_CURRENT_CUSTOMER_SUPPLY",
 }
+SUPPLY_COMMITMENT_TERMS = {
+    "supply agreement",
+    "long-term agreement",
+    "long term agreement",
+    "committed supply",
+    "customer order",
+    "allocation agreed",
+    "sold out",
+}
+FUTURE_CUSTOMER_SUPPLY_TERMS = {
+    "will begin supply",
+    "will begin shipping",
+    "will supply",
+    "for supply to a customer from",
+    "customer supply from a later date",
+}
 
 PRODUCT_DECISIONS = {
     DecisionQuestion.DEMAND_FORECAST.value,
@@ -194,6 +210,13 @@ def validate_event_for_track(event: EventRecord, track: TrackRecord) -> None:
                     "qualification COMPLETE requires explicit completion wording"
                 )
 
+    if event.signal_class == "ORDER_ADJACENT_SUPPLY_COMMITMENT":
+        text = f"{event.claim} {event.excerpt}"
+        if not _contains_any(text, SUPPLY_COMMITMENT_TERMS):
+            raise SemanticContractError(
+                "production or ramp wording alone cannot become a supply commitment"
+            )
+
     if event.signal_class == "PLATFORM_DEPLOYMENT_STAGE":
         if event.signal_subtype not in PLATFORM_DEPLOYMENT_SUBTYPES:
             raise SemanticContractError("invalid platform deployment subtype")
@@ -208,6 +231,10 @@ def validate_event_for_track(event: EventRecord, track: TrackRecord) -> None:
         if event.signal_subtype not in O1_SUBTYPES:
             raise SemanticContractError("invalid O1 commercialization subtype")
         text = f"{event.claim} {event.excerpt}"
+        if _contains_any(text, FUTURE_CUSTOMER_SUPPLY_TERMS):
+            raise SemanticContractError(
+                "future-dated customer supply cannot become current O1 realization"
+            )
         if _contains_any(text, {"planned", "plans to", "target", "ready for"}):
             raise SemanticContractError("plan/readiness wording cannot become O1")
         if not _contains_any(

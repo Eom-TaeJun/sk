@@ -1,0 +1,114 @@
+{
+  "log_version": "H1-CONTRACT-STRESS-1.0.0",
+  "created_at": "2026-08-28T04:30:00+09:00",
+  "issues": [
+    {
+      "issue_id": "STRESS-001-SAMPLE-INFLATION",
+      "source_ids": ["SRC-SKH-20230821-HBM3E-SAMPLE", "SRC-MU-20230726-HBM3E-SAMPLE"],
+      "event_ids": ["EVT-P02-20230821-SAMPLE-EVAL", "EVT-P04-20230726-SAMPLING"],
+      "original_wording": "evaluation of samples is underway; has begun sampling",
+      "model_candidate_classification": "HBM_SAMPLE only",
+      "current_deterministic_result": "PASS",
+      "human_interpretation": "The statements establish sampling or evaluation entry, not qualification completion or commercial realization.",
+      "rule_assessment": "The frozen sample boundary was sufficient.",
+      "action": "NO_CHANGE",
+      "affected_decision_question": "QUALIFICATION"
+    },
+    {
+      "issue_id": "STRESS-002-PRODUCTION-AS-COMMITMENT",
+      "source_ids": ["SRC-SKH-20230821-HBM3E-SAMPLE", "SRC-MU-20240226-HBM3E-PRODUCTION"],
+      "event_ids": ["EVT-P02-20230821-PRODUCTION-PLAN", "EVT-P04-20240226-PRODUCTION"],
+      "original_wording": "plans to mass produce; begun volume production",
+      "model_candidate_classification": "ORDER_ADJACENT_SUPPLY_COMMITMENT candidate",
+      "current_deterministic_result": "REJECTED and routed to HOLD",
+      "human_interpretation": "Manufacturing intent or start does not establish an order, allocation, agreement, or current customer supply.",
+      "rule_assessment": "The prior rule accepted production-only wording under the commitment class and was insufficient.",
+      "action": "VALIDATION_RULE_CHANGE",
+      "affected_decision_question": "COMMERCIALIZATION_VISIBILITY"
+    },
+    {
+      "issue_id": "STRESS-003-FUTURE-SUPPLY-AS-CURRENT-O1",
+      "source_ids": ["SRC-SKH-20240319-HBM3E-PRODUCTION"],
+      "event_ids": ["EVT-P02-20240319-FUTURE-CUSTOMER-SUPPLY"],
+      "original_wording": "has begun volume production ... for supply to a customer from late March",
+      "model_candidate_classification": "O1_COMMERCIAL_REALIZATION candidate",
+      "current_deterministic_result": "REJECTED and routed to HOLD",
+      "human_interpretation": "Production is current but customer supply is future-dated relative to publication; actual supply requires later confirmation.",
+      "rule_assessment": "The prior phrase rule could treat 'for supply to a customer' as current O1 despite the future qualifier.",
+      "action": "VALIDATION_RULE_CHANGE",
+      "affected_decision_question": "COMMERCIALIZATION_VISIBILITY"
+    },
+    {
+      "issue_id": "STRESS-004-QUALIFICATION-INFLATION",
+      "source_ids": ["SRC-MU-20230927-HBM3E-QUAL", "SRC-MU-20231220-HBM3E-QUAL-FINAL"],
+      "event_ids": ["EVT-P04-20230927-QUAL-UNDERWAY", "EVT-P04-20231220-QUAL-FINAL"],
+      "original_wording": "currently in qualification; in the final stages of qualifying",
+      "model_candidate_classification": "QUALIFICATION_STAGE UNDERWAY and FINAL_STAGE",
+      "current_deterministic_result": "PASS",
+      "human_interpretation": "Neither disclosure states qualification completion.",
+      "rule_assessment": "The frozen qualification subtypes and explicit completion guard were sufficient.",
+      "action": "NO_CHANGE",
+      "affected_decision_question": "QUALIFICATION"
+    },
+    {
+      "issue_id": "STRESS-005-PLATFORM-AVAILABILITY-INFLATION",
+      "source_ids": ["SRC-GCP-20241031-A3-ULTRA-PLAN", "SRC-GCP-20241231-A3-ULTRA-PREVIEW", "SRC-GCP-20250116-A3-ULTRA-GA"],
+      "event_ids": ["EVT-C04-20241031-H200-PLAN", "EVT-C04-20241213-H200-PREVIEW", "EVT-C04-20241231-H200-GA-RETROSPECTIVE"],
+      "original_wording": "will be available in preview; are in preview; were made generally available",
+      "model_candidate_classification": "PLANNED, PREVIEW, then GENERAL_AVAILABILITY",
+      "current_deterministic_result": "PASS",
+      "human_interpretation": "The three stages remain separate; preview is not operational realization.",
+      "rule_assessment": "The frozen platform subtypes were sufficient.",
+      "action": "NO_CHANGE",
+      "affected_decision_question": "PLATFORM_DEPLOYMENT_VISIBILITY"
+    },
+    {
+      "issue_id": "STRESS-006-CAPEX-SCOPE-INFLATION",
+      "source_ids": ["SRC-MSFT-20240730-CAPEX", "SRC-ALPHABET-20250204-CAPEX"],
+      "event_ids": ["EVT-C02-20240730-CAPEX", "EVT-C04-20250204-CAPEX"],
+      "original_wording": "Cloud and AI related spend represents nearly all; investments in our technical infrastructure",
+      "model_candidate_classification": "CSP_CAPEX at COMPANY scope",
+      "current_deterministic_result": "PASS; broad-to-platform join remains blocked without explicit partial approval",
+      "human_interpretation": "The disclosures are upstream company context and do not identify expenditure for ND H200 v5 or A3 Ultra H200.",
+      "rule_assessment": "The existing scope-join gate was sufficient.",
+      "action": "NO_CHANGE",
+      "affected_decision_question": "DEMAND_FORECAST"
+    },
+    {
+      "issue_id": "STRESS-007-SUPPLIER-CSP-BRIDGE-INFLATION",
+      "source_ids": ["SRC-MU-20240226-HBM3E-PRODUCTION", "SRC-AZ-20241002-ND-H200-GA", "SRC-GCP-20250116-A3-ULTRA-GA"],
+      "event_ids": ["EVT-P04-20240226-H200-DESIGN-IN", "EVT-C02-20241002-H200-GA", "EVT-C04-20241231-H200-GA-RETROSPECTIVE"],
+      "original_wording": "will be part of NVIDIA H200; H200 VMs generally available",
+      "model_candidate_classification": "Product design-in candidate plus separate platform GA records",
+      "current_deterministic_result": "Design-in candidate held; platform records pass independently",
+      "human_interpretation": "The common H200 generation does not prove Micron memory is installed in either CSP deployment.",
+      "rule_assessment": "Track separation prevents pooling, while the explicit warning is preserved for human review.",
+      "action": "DOCUMENTATION_CHANGE",
+      "affected_decision_question": "CUSTOMER_PRIORITY"
+    },
+    {
+      "issue_id": "STRESS-008-REVISION-LEAKAGE",
+      "source_ids": ["SRC-GCP-20241231-A3-ULTRA-PREVIEW"],
+      "event_ids": ["EVT-C04-20241213-H200-PREVIEW"],
+      "original_wording": "A3 Ultra ... are in preview on a living annual roundup page",
+      "model_candidate_classification": "PLATFORM_DEPLOYMENT_STAGE PREVIEW",
+      "current_deterministic_result": "PASS with archived R1 hash",
+      "human_interpretation": "The page can change later, so the local excerpt hash and source revision must remain immutable and later wording must use a new revision.",
+      "rule_assessment": "Existing revision preservation is sufficient when the archive discipline is enforced.",
+      "action": "DOCUMENTATION_CHANGE",
+      "affected_decision_question": "PLATFORM_DEPLOYMENT_VISIBILITY"
+    },
+    {
+      "issue_id": "STRESS-009-DUAL-DATE-PRECISION",
+      "source_ids": ["SRC-GCP-20250116-A3-ULTRA-GA"],
+      "event_ids": ["EVT-C04-20241231-H200-GA-RETROSPECTIVE"],
+      "original_wording": "were made generally available to close out 2024",
+      "model_candidate_classification": "P1 GENERAL_AVAILABILITY with month-level event timing",
+      "current_deterministic_result": "PASS after preserving publication precision separately from event precision",
+      "human_interpretation": "The source publication is day-known, while the retrospective GA occurrence is only bounded to the close of a month/year period.",
+      "rule_assessment": "A single date_precision field could not represent both facts without losing information.",
+      "action": "SCHEMA_CHANGE",
+      "affected_decision_question": "PLATFORM_DEPLOYMENT_VISIBILITY"
+    }
+  ]
+}

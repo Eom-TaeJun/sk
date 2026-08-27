@@ -1,6 +1,20 @@
 """Deterministic measurement contracts for frozen H1-P and H1-C research."""
 
 from .models import EventRecord, TrackRecord
+from .pilot import (
+    IngestionStatus,
+    PilotDataset,
+    PilotEventRecord,
+    PilotSourceRecord,
+    PilotSourceRegistry,
+    PilotValidationResult,
+)
+from .registry import (
+    CandidateTrackRecord,
+    CandidateTrackRegistry,
+    RegistryFreezeManifest,
+    RegistryFreezer,
+)
 from .snapshot import DatasetSnapshotManifest, SnapshotBuilder, SnapshotStore
 from .validation import (
     ObservationAssessment,
@@ -13,8 +27,18 @@ from .validation import (
 
 __all__ = [
     "DatasetSnapshotManifest",
+    "CandidateTrackRecord",
+    "CandidateTrackRegistry",
     "EventRecord",
+    "IngestionStatus",
     "ObservationAssessment",
+    "PilotDataset",
+    "PilotEventRecord",
+    "PilotSourceRecord",
+    "PilotSourceRegistry",
+    "PilotValidationResult",
+    "RegistryFreezeManifest",
+    "RegistryFreezer",
     "SnapshotBuilder",
     "SnapshotStore",
     "TrackRecord",

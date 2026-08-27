@@ -119,6 +119,35 @@ class H1MeasurementContractTests(unittest.TestCase):
         with self.assertRaises(SemanticContractError):
             validate_event_for_track(invalid, self.tracks[invalid.track_id])
 
+    def test_future_customer_supply_is_not_current_o1(self) -> None:
+        invalid = EventRecord.from_dict(
+            self.raw["invalid_cases"]["future_supply_as_current_o1"]
+        )
+        with self.assertRaisesRegex(
+            SemanticContractError, "future-dated customer supply"
+        ):
+            validate_event_for_track(invalid, self.tracks[invalid.track_id])
+
+    def test_production_start_is_not_supply_commitment(self) -> None:
+        invalid = EventRecord.from_dict(
+            self.raw["invalid_cases"]["production_as_supply_commitment"]
+        )
+        with self.assertRaisesRegex(
+            SemanticContractError, "production or ramp wording alone"
+        ):
+            validate_event_for_track(invalid, self.tracks[invalid.track_id])
+
+    def test_event_and_publication_date_precision_can_differ(self) -> None:
+        payload = dict(self.raw["events"][0])
+        payload["date_precision"] = "DAY"
+        payload["event_date_precision"] = "MONTH"
+        payload["availability_basis"] = "PUBLISHER_DATE_FALLBACK"
+        payload["published_at"] = "2023-01-10T00:00:00+09:00"
+        payload["available_at"] = "2023-01-11T00:00:00+09:00"
+        event = EventRecord.from_dict(payload)
+        self.assertEqual(event.date_precision, "DAY")
+        self.assertEqual(event.event_date_precision, "MONTH")
+
     def test_revision_preserves_earlier_record_and_activates_by_cutoff(self) -> None:
         before = self.build_snapshot(
             snapshot_id="SNP-BEFORE-REVISION",

@@ -1,0 +1,37 @@
+{
+  "freeze_id": "H1-REGISTRY-FREEZE-20260828-001",
+  "registry_version": "H1-TRACK-REGISTRY-1.0.0",
+  "contract_version": "H1-MEASUREMENT-1.0.0",
+  "registry_frozen_at": "2026-08-28T03:20:00+09:00",
+  "candidate_track_ids": [
+    "C01-AZ-H100",
+    "C02-AZ-H200",
+    "C03-GCP-H100",
+    "C04-GCP-H200",
+    "C05-AWS-H100",
+    "C06-AWS-H200",
+    "C07-OCI-H100",
+    "C08-OCI-H200",
+    "C09-META-H100",
+    "C10-AZ-GB200",
+    "C11-GCP-B200",
+    "C12-AWS-B200",
+    "C13-OCI-B200",
+    "C14-META-GB200",
+    "P01-SKH-HBM3",
+    "P02-SKH-HBM3E",
+    "P03-SEC-HBM3E",
+    "P04-MU-HBM3E",
+    "P05-SKH-HBM4",
+    "P06-SEC-HBM4",
+    "P07-MU-HBM4",
+    "P08-SKH-HBM4E",
+    "P09-SEC-HBM4E",
+    "P10-MU-HBM4E"
+  ],
+  "status_counts": {
+    "PRE_REGISTERED": 24
+  },
+  "registry_content_hash": "A3BFDBDD8178E203C63635824985888C76DA10818D64B3E869EC5E30E4A26BB1",
+  "content_hash": "8D973F950CDFB9636CACCB7FE00E0565FB7BECEE2AB043AE1F3224EA8B8B43FB"
+}

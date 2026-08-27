@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "h1_pilot_dataset.schema.json",
+  "title": "H1 Four-track Real-data Ingestion Pilot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pilot_version", "contract_version", "registry_content_hash",
+    "registry_freeze_content_hash", "source_registry_content_hash", "pilot_track_ids", "created_at", "records", "content_hash"
+  ],
+  "properties": {
+    "pilot_version": {"type": "string", "minLength": 1},
+    "contract_version": {"type": "string", "minLength": 1},
+    "registry_content_hash": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
+    "registry_freeze_content_hash": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
+    "source_registry_content_hash": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
+    "pilot_track_ids": {
+      "type": "array", "minItems": 4, "maxItems": 4,
+      "uniqueItems": true, "items": {"type": "string", "minLength": 1}
+    },
+    "created_at": {"type": "string", "format": "date-time"},
+    "records": {
+      "type": "array", "minItems": 12, "maxItems": 24,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "event", "ingestion_status", "candidate_classification_reason",
+          "ambiguity", "human_judgment_required"
+        ],
+        "properties": {
+          "event": {"$ref": "h1_event.schema.json"},
+          "ingestion_status": {"enum": ["ACCEPTED", "HOLD", "REJECTED"]},
+          "candidate_classification_reason": {"type": "string", "minLength": 1},
+          "ambiguity": {"type": ["string", "null"]},
+          "human_judgment_required": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "content_hash": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"}
+  }
+}

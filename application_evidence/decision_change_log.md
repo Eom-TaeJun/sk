@@ -68,3 +68,26 @@
 - Updated conclusion: raw Event의 censor 선언은 nullable로 유지하고, immutable snapshot 생성 시 6/12/18개월별 `fully_observed`, `right_censored`, `eligible_for_failure_denominator`를 계산한다. right-censored Event는 기술적 기록으로 남기되 실패 분모에는 들어가지 않는다.
 - Affected decision variable: H1 Demand Signal Quality의 failure/no-realization 비교 신뢰성
 - Job relevance: 시계열 관찰 가능성과 실제 실패를 구분해 Demand Forecast 신호 평가의 편향을 통제한 수행 Fact
+
+## Change 7 — 실제 공시 문구로 production/customer-supply 경계 보강
+
+- Initial assumption: `ORDER_ADJACENT_SUPPLY_COMMITMENT`는 Track/layer 검증만으로 충분하고, O1의 `for supply to a customer` 문구는 현재 customer supply를 나타내는 것으로 처리할 수 있다.
+- New evidence: 4개 Pilot Track의 공식 공시를 Atomic Event로 분해하자 “volume production 시작”과 “향후 시점부터 customer supply”가 한 문장에 공존했다. 별도 공시에서는 volume production만 확인되고 order·allocation·agreement는 확인되지 않았다.
+- Evidence level: 프로젝트 real-data ingestion/validation 수행 Fact. H1 empirical result가 아니다.
+- Contradiction: 생산 시작은 supply commitment가 아니며, 미래 고객 공급 표현은 공시 시점의 commercial realization이 아니다.
+- Why the old view was insufficient: 기존 phrase rule은 생산 단계나 미래 표현을 주문근접 신호/O1로 과대승격할 수 있었다.
+- AI-assisted work: 13개 Primary Source에서 15개 Atomic Event 후보를 구조화하고, 실제 실패 문구를 최소 합성 fixture로 축약해 회귀 테스트를 제안했다.
+- Human decision required: HOLD 4건의 최종 admissibility와 생산단계를 별도 context class로 둘지는 아직 승인되지 않았다.
+- Updated conclusion: commitment class에는 agreement/order/allocation 등 affirmative term을 요구하고, future-dated customer supply는 current O1에서 차단한다. 실제 Pilot Event는 11개 미검토 수용 후보와 4개 HOLD로 보존하며 자동 승인하지 않는다.
+- Affected decision variable: Commercialization Visibility, Qualification, TTM, Demand Forecast
+- Job relevance: 제품 양산·고객 공급·주문 신호를 구분하고, 실제 공시가 규칙의 약점을 드러냈을 때 fixture→test→최소 rule change로 수정한 수행 Fact
+
+## Change 8 — 공시일 정밀도와 회고 사건일 정밀도 분리
+
+- Initial assumption: Event의 단일 `date_precision`으로 게시/가용 시점과 사건 발생 정밀도를 함께 표현할 수 있다.
+- New evidence: Google Cloud 공식 자료는 게시일은 일 단위로 확인되지만 GA 발생은 “2024년 말까지”라는 회고형 기간으로만 표현했다.
+- Evidence level: 프로젝트 schema validation 수행 Fact. GA의 성과나 H1 우열을 뜻하지 않는다.
+- Contradiction: day-known publication과 month-bounded event를 하나의 precision으로 저장하면 둘 중 하나의 시간정보가 왜곡된다.
+- Updated conclusion: 기존 `date_precision`은 publication/availability fallback 통제에 유지하고 optional `event_date_precision`을 추가했다. 보수적 event boundary와 실제 `available_at`을 분리해 future-information leakage를 막는다.
+- Affected decision variable: Platform Deployment Visibility의 temporal ordering
+- Job relevance: 실제 공개자료의 시간 정밀도 차이를 데이터 계약에 반영하고, 후대 공시를 과거 snapshot에 누출하지 않는 수행 Fact
