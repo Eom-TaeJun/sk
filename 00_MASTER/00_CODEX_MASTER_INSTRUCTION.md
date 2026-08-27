@@ -97,16 +97,15 @@ H3는 내부 원가·수율·allocation 정보가 없는 상태에서 강한 emp
 
 ## 3. AI Architecture — capability first, runtime agnostic
 
-### 필요한 capability
-1. RAG
-2. Graph Engineering
-3. Graph-aware Retrieval
-4. Optional Orchestration
-5. Evidence Governance Harness
-6. Auditor / Human Review
-7. Agent evaluation interface
+이 문서는 다음 불변조건만 고정한다.
 
-Orchestration은 특정 framework가 아니라 task decomposition, context selection, tool selection, optional parallel delegation, result aggregation capability다. Codex-native capability, Hermes adapter 또는 다른 compatible runtime을 사용할 수 있으며 어느 것도 필수 dependency가 아니다.
+- Source-trace RAG와 Evidence-linked Graph를 사용한다.
+- Evidence Governance Harness가 deterministic rule을 소유한다.
+- Auditor/Human Review를 conclusion generation과 분리한다.
+- Orchestration은 optional capability이며 특정 runtime은 필수가 아니다.
+- Agent evaluation 결과는 runner가 구현·실행되기 전에 주장하지 않는다.
+
+Architecture decision과 supersession은 `00_MASTER/02_ARCHITECTURE_DECISIONS.md`, role/context/Harness/eval 상세는 `docs/agent_architecture.md`가 canonical source다.
 
 ### 이번 버전에서 제외
 - 전용 LLM Fine-tuning
@@ -119,9 +118,7 @@ Orchestration은 특정 framework가 아니라 task decomposition, context selec
 구조화된 파일 저장(JSON/CSV/Markdown)과
 가벼운 로컬 인덱스/메모리 기반 검색은 허용한다.
 
-즉:
-"전용 DB를 만드는 프로젝트"가 아니라
-"Decision Intelligence Workflow를 증명하는 프로젝트"로 유지한다.
+현재 질문과 데이터 규모에서 추가 infrastructure의 incremental value가 검증되지 않았기 때문이다.
 
 ---
 
@@ -232,35 +229,9 @@ Rubin Spec 변화
 
 ## 7. Orchestration과 Logical Domain Roles
 
-Orchestration Layer는 다음 capability를 제공한다.
+Demand/Platform, Memory Product, Supply/Infrastructure, Commercial/Policy와 Auditor를 logical roles로 유지한다. 이는 전문성·검사 책임이지 고정 agent process가 아니다.
 
-- task framing과 decomposition
-- smallest-sufficient context selection
-- tool와 logical role selection
-- 독립 subtask의 optional parallel delegation
-- result aggregation, trace와 failure capture
-- human escalation
-
-Runtime은 교체 가능하다. Codex-native execution, Hermes adapter 또는 다른 compatible runtime을 쓸 수 있다. Hermes를 시험할 때만 실제 설치 version과 공식 interface를 확인하며 가상의 API를 만들지 않는다.
-
-Domain expertise는 고정 agent 수가 아니라 logical roles로 유지한다.
-
-### Demand / Platform
-AI service, CSP, accelerator와 custom XPU, deployment timing, memory requirement 후보를 관찰한다.
-
-### Memory Product
-HBM, DDR, SOCAMM, LPDDR, eSSD 등 product generation과 sample, qualification, design-in, mass shipment, TTM 후보를 구분한다.
-
-### Supply / Infrastructure
-Wafer, yield/good die, base die, packaging/test, cleanroom, power/grid/cooling의 시점별 constraint 후보를 관찰한다.
-
-### Commercial / Policy
-LTA, contract, price, inventory, multi-source, export control과 regional/policy 변화를 관찰한다.
-
-### Auditor
-Source duplication, staleness, Evidence level 혼동, numeric inconsistency, unsupported inference, contradiction과 missing provenance를 검사한다. 시장 결론을 새로 만들지 않는다.
-
-모든 task에서 모든 role을 실행하지 않는다. 분해가 독립 탐색·상호검증 가치를 만들 때만 multi-agent execution을 사용한다. 상태 의존 reasoning은 순차 실행한다. Auditor 책임은 conclusion generation과 논리적으로 분리한다.
+독립 탐색·상호검증에 분석 가치가 있을 때만 분해·병렬화하고, Verify → Review → Promote처럼 상태 의존적인 처리는 순차 실행한다. Runtime 선택, context hierarchy와 role interface의 canonical 정의는 `docs/agent_architecture.md`를 따른다.
 
 ---
 
@@ -301,36 +272,9 @@ LLM이 문서마다 다른 기준으로 결론을 내리지 못하게 한다.
 
 ### B. Agent Execution Harness — future architecture
 
-다음을 담당한다.
+Task/context/tool/role selection, optional execution, trace/eval/failure capture와 human escalation을 담당할 future capability다. 아직 구현하지 않으며 Evidence Governance Harness를 우회할 수 없다.
 
-- task framing과 task-specific context 구성
-- tool availability와 role selection
-- optional decomposition/execution
-- deterministic preprocessing/postprocessing 연결
-- execution trace, evaluation, failure capture
-- human escalation
-
-Agent Execution Harness는 아직 별도 runtime으로 구현하지 않는다. Evidence Governance Harness의 상태전이·승격·human review를 우회할 수 없다.
-
-### Model과 program의 경계
-
-Evidence interpretation, relation/contradiction candidate, scope interpretation과 hypothesis generation은 model-assisted일 수 있다. Filtering, deduplication, date alignment, unit normalization, joins, lag construction, numeric checks, schema/state validation, aggregation과 replay는 deterministic code가 소유한다.
-
-### Agent evaluation layer — future interface
-
-Software tests는 코드가 정해진 규칙대로 동작하는지 검사한다. Agent evals는 AI-assisted workflow가 Source attribution, temporal ordering, semantic boundary, contradiction discovery, tool/context/role selection과 human escalation을 올바르게 수행하는지 검사한다.
-
-Agent failure는 다음 loop로 보존한다.
-
-Observed failure
-→ minimal failure case
-→ failure-mode classification
-→ regression eval
-→ context/tool/rule/orchestration change
-→ rerun
-→ decision-change record
-
-평가 위치와 future record interface는 `docs/agent_architecture.md`에 정의한다. 이 단계에서 eval 결과를 만들거나 주장하지 않는다.
+Model/program allocation과 `Observed failure → regression eval → improvement → rerun → decision record` loop의 canonical 정의는 `docs/agent_architecture.md`를 따른다.
 
 ---
 
@@ -461,43 +405,13 @@ Contradiction은 LLM이 자동 화해시키지 않는다.
 
 ---
 
-## 13. Historical Backtest — 필수
+## 13. Empirical Validation Contract
 
-### Case A: 2022-2023 Downcycle
-Demand↓
-→ Inventory↑
-→ Order cut
-→ Price↓
-→ Profit↓
-→ CAPEX↓
-→ Supply growth↓
-→ Recovery
+H1의 case, variable, outcome, cutoff와 rejection rule은 아직 설계되지 않았다. 삭제되었거나 interrupted 상태인 H1 실행물은 finding으로 사용하지 않는다.
 
-### Case B: 2023-2025 AI/HBM Upswing
-GenAI
-→ CSP CAPEX
-→ Accelerator
-→ HBM requirement
-→ Qualification
-→ HBM/Packaging capacity
-→ Conventional DRAM resource pressure
-→ Price/Supply response
+향후 empirical design은 최소한 temporal ordering, `event_at`/`available_at` 분리, future-information leakage, independent support, counterexample, false positive, lead/lag와 right censoring을 다뤄야 한다. 최종 H1/H2 verdict는 사람이 승인한다.
 
-### Case C: Bottleneck Migration
-GPU
-→ Packaging
-→ HBM/Good Stack
-→ Power/Data Center
-
-각 Edge 검증:
-- temporal ordering
-- independent support
-- counterexample
-- false positive
-- lead/lag
-- confidence
-
-틀린 Edge는 삭제하거나 Confidence를 낮춘다.
+현재 active gate는 `docs/exec-plans/active/h1_empirical_validation_design.md`이며 이 문서에서 방법론을 선결정하지 않는다.
 
 ---
 
@@ -557,9 +471,9 @@ Agent Execution Harness와 특정 runtime은 H1/H2 분석에서 반복 가능한
 
 ---
 
-## 16. MVP 종료 조건
+## 16. Validated baseline
 
-다음 한 Scenario가 End-to-End로 돌아가면 MVP 완료.
+다음 Vertical Slice 경로와 Temporal Update는 구현·검증 완료했다.
 
 New evidence
 → Source verification
@@ -622,8 +536,8 @@ RAG → 근거 회수/검증
 Graph → System-level 전파경로
 Signal Dictionary → Demand Forecast
 Bottleneck → Supply/CAPA 이해
-Backtest → 가설 검증
-Harness → AI 결과 통제
+Empirical validation → 가설 검증
+Evidence Governance Harness → AI 결과 통제
 Decision Memo → 현업 판단 번역
 
 ---

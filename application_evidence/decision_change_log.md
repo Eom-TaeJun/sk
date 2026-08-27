@@ -6,7 +6,7 @@
 - New evidence: 첫 실제 run의 transition log에서 `actor=deterministic-core`가 human approval 없이 PROMOTED한 사실을 확인했다.
 - Evidence level: 프로젝트 실행 Fact
 - Contradiction: `HUMAN_REVIEW` 상태를 통과했다는 것과 실제 사람이 승인했다는 것은 다르다.
-- Why the old view was insufficient: 자동 승격은 Harness가 human-review gate를 소유한다는 Architecture와 경험기술서의 AI 통제 주장을 약화한다.
+- Why the old view was insufficient: 자동 승격은 Evidence Governance Harness가 human-review gate를 소유한다는 Architecture와 AI 통제 원칙을 약화한다.
 - Updated conclusion: `human_approved=false`인 모든 Evidence는 HUMAN_REVIEW에서 중단한다. Memo는 `PENDING_HUMAN_REVIEW` draft로 표시한다. Strong Inference를 포함한 어떤 Evidence도 approval 없이 PROMOTED할 수 없다.
 - Affected decision variable: 전체 판단의 Evidence Governance
 - Job relevance: AI 결과를 그대로 확정하지 않고 검토 책임과 승격 권한을 분리하는 역량

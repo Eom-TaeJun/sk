@@ -8,10 +8,12 @@ Build a traceable decision-intelligence workflow that uses public information to
 
 - Vertical Slice and 2025→2026 Temporal Update: implemented and preserved
 - Architecture: runtime-agnostic, capability-first
-- Next approved planning target: H1 Demand Signal Quality empirical validation design
+- Next approved task: H1 Demand Signal Quality empirical validation design only
 - H2: only after a credible H1 minimum pipeline
 - H3: conceptual/`KNOWN_UNKNOWN` until public evidence is sufficient
-- `src/backtest/` and `data/backtest/`: unapproved work-in-progress; do not cite as an H1 finding
+- Interrupted H1 implementation: removed from the current baseline and preserved only in Git history and its completed execution-plan note
+
+Do not treat deleted, historical, or interrupted H1 experiment artifacts as approved findings.
 
 ## Read only what the task needs
 
@@ -20,6 +22,7 @@ Build a traceable decision-intelligence workflow that uses public information to
 - Model/program/runtime allocation: `00_MASTER/03_WHERE_TO_USE_WHAT.md`
 - Detailed agent architecture and future eval interface: `docs/agent_architecture.md`
 - Implemented Vertical Slice plan: `docs/implementation_plan.md`
+- Active/completed task records: `docs/exec-plans/`
 - Source limitations: `docs/research_validation_gaps.md`
 - Evidence interpretation: `docs/source_understanding.md`
 - Schemas: `02_SCHEMAS/`
@@ -61,6 +64,8 @@ python -m src.pipeline --workspace . --scenario data/raw/scenarios/hbm4_temporal
 ```
 
 No Agent Evaluation runner is implemented yet. Do not fabricate eval results or document a command that does not exist.
+
+Without explicit approval, do not design or run H1, start H2/H3, add an Agent Execution Harness/runtime, or add dashboards/databases.
 
 ## Definition of done for a Codex task
 

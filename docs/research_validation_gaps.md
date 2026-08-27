@@ -45,10 +45,14 @@
 
 따라서 첫 Memo는 위 항목을 사실로 승격하지 않고 monitor/invalidate 조건으로 남긴다.
 
-## Schema extensions required
+## Baseline schema gaps resolved in the approved core
+
+Vertical Slice와 Temporal Update에서 다음 계약을 구현·검증했다.
 
 - Source: URL/local archive, content hash, publication/access date, tier, locator
 - Evidence: verbatim excerpt, event type, validation result, transition history, actor, run ID
 - Graph: evidence IDs, counterevidence IDs, temporal validity, decision variables
 - Contradiction: misconception rule, trigger Evidence, resolution status
 - Memo: fact statements별 Evidence IDs와 완전한 Source trace
+
+이는 H1 empirical dataset/method가 승인되었다는 뜻이 아니다. H1의 추가 schema 필요성은 design 단계에서 새로 결정한다.

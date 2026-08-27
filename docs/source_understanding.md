@@ -25,28 +25,23 @@ MVP의 성공 기준은 자연스러운 답변이 아니라 다음 trace가 끊�
 - `00_MASTER`: 목적, 책임 경계, 금지사항, 구현 순서와 검토 기준을 통제하는 운영 계약
 - `01_CANONICAL_SOURCES`: 직무 맥락과 검증 대상 시장 주장의 기준선
 - `02_SCHEMAS`: Evidence, Graph, Memo가 자유서술로 흐르지 않게 하는 초기 데이터 계약
-- `03_TEMPLATES`: 구현 과정에서 경험기술서용 실제 수행 증거를 누적하는 기록 계약
+- `03_TEMPLATES`: 실제 분석·검증 이후 downstream project evidence를 기록하는 계약
 
 Canonical Deep Research는 원출처가 아니라 검증할 주장과 가설의 목록으로 취급한다. 원출처 확인 전에는 어떤 문장도 자동으로 FACT로 승격하지 않는다.
 
-## 고정 Architecture와 책임 경계
+## Architecture와 책임 경계
 
 ```text
-                 Hermes
-                   ↓
-          Agent Adapter Layer
-                   ↓
-        ┌────────────────────┐
-        │ Deterministic      │
-        │ Core Harness       │
-        └────────────────────┘
-                   ↓
-       Evidence → Graph → Audit → Memo
+Optional runtime / orchestration capability
+→ Agent Execution Harness (future)
+→ Adapter Layer
+→ Evidence Governance Harness (implemented)
+→ Evidence → Graph → Audit → Memo
 ```
 
-Hermes와 Agent는 workflow를 호출·분배하고 관찰 후보를 반환한다. Adapter는 그 결과를 고정 입력 계약으로 변환한다. Evidence 승인, 상태전이, confidence rubric, contradiction 보존, human-review gate와 Memo trace 규칙은 Core Harness만 소유한다.
+Agent/runtime은 workflow를 지원하고 관찰 후보를 반환할 수 있다. Adapter는 그 결과를 고정 입력 계약으로 변환한다. Evidence 승인, 상태전이, confidence rubric, contradiction 보존, human-review gate와 Memo trace 규칙은 Evidence Governance Harness만 소유한다.
 
-Core Harness는 Hermes 없이도 순차 실행과 전체 테스트가 가능해야 한다. Hermes 변경이나 실패가 Evidence·Graph·Audit·Memo 규칙을 바꾸면 안 된다.
+Evidence Governance Harness는 어떤 orchestration runtime 없이도 순차 실행과 전체 테스트가 가능해야 한다. 특정 runtime의 변경이나 실패가 Evidence·Graph·Audit·Memo 규칙을 바꾸면 안 된다. 상세 구조는 `docs/agent_architecture.md`를 따른다.
 
 ## RAG의 역할
 

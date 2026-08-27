@@ -30,11 +30,12 @@ extra frameworks
 
 ## Folder convention for implementation
 docs/
+docs/exec-plans/active/
+docs/exec-plans/completed/
 data/raw/
 data/evidence/
 data/signals/
 data/graph/
-data/backtest/
 src/retrieval/
 src/graph/
 src/adapters/

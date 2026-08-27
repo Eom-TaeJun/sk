@@ -8,6 +8,7 @@
 - Why it was reasonable then: Agent가 rule을 소유하지 못하게 하고 deterministic core를 먼저 완성하는 데 효과적이었다.
 - Updated decision: adapter/core 분리는 유지하되 Hermes 의무화는 해제한다. Orchestration은 runtime-agnostic capability이며 특정 runtime은 측정 가능한 incremental value가 있을 때만 선택한다.
 - Current gate: 구현 확장이 아니라 H1 empirical validation design 승인.
+- Baseline cleanup: 승인 전에 생성된 H1 engine/data/run/schema/log는 제거했다. H1 finding은 없으며 역사 note는 `docs/exec-plans/completed/interrupted_h1_experiment.md`에 있다.
 
 ## Architecture
 
@@ -107,9 +108,6 @@ Memo에는 확률로 표현하지 않고 `LOW`, `MEDIUM`, `HIGH`와 요인 설�
 
 ## Next implementation gate
 
-1. H1 empirical validation design
-2. Human-approved minimum Source/case/outcome contract
-3. H1 minimum empirical run and sensitivity review
-4. H1이 credible할 때만 H2 design
+현재 승인된 단일 next task는 `docs/exec-plans/active/h1_empirical_validation_design.md`가 가리키는 **H1 empirical validation design**이다.
 
-H3, Hermes/native multi-agent experiment, Agent Execution Harness implementation, dashboard와 DB는 아직 구현하지 않는다. Agent evaluation은 `docs/agent_architecture.md`에 future interface만 정의하며 결과를 주장하지 않는다.
+Design 승인 전에는 H1 Source 수집·dataset·실행을 시작하지 않는다. H2/H3, Hermes/native multi-agent experiment, Agent Execution Harness implementation, dashboard와 DB도 구현하지 않는다. Agent evaluation은 `docs/agent_architecture.md`에 future interface만 정의하며 결과를 주장하지 않는다.

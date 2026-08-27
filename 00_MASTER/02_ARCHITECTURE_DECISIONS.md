@@ -68,3 +68,10 @@ Deterministic program이 소유할 영역:
 3. H3 Product-Mix Opportunity Cost as conceptual/`KNOWN_UNKNOWN` framework until public evidence is sufficient
 
 상세 책임·평가 구조는 `docs/agent_architecture.md`를 canonical reference로 사용한다.
+
+## ADR-008 — Interrupted H1 implementation removed from baseline
+
+- Previous event: H1 design approval 전에 execution engine, dataset과 generated output이 만들어졌다.
+- Why it stopped: Human steering보다 구현이 앞서 case/outcome/cutoff/verdict contract가 승인되지 않았다.
+- Updated decision: 해당 묶음은 current baseline에서 제거하고 Git history와 `docs/exec-plans/completed/interrupted_h1_experiment.md`에만 보존한다.
+- Consequence: H1 finding은 아직 없으며 다음 task는 design-only다. Sunk cost는 KEEP 사유가 아니다.

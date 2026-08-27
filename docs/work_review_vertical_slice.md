@@ -1,11 +1,13 @@
 # Work Review — First Vertical Slice
 
+> Historical review snapshot. 이 문서의 당시 확장 gate는 이후 사용자 승인으로 종료되었다. 현재 next task는 `docs/exec-plans/active/h1_empirical_validation_design.md`가 통제한다.
+
 기준: `00_MASTER/05_WORK_REVIEW_PROMPT.txt`
 
 ## 좋은 점
 
 - 시장 요약이 아니라 sample→qualification→TTM gate가 어떤 판단을 바꾸는지 명확히 했다.
-- Hermes가 판단 규칙을 소유하지 않도록 Adapter와 Core Harness를 분리했다.
+- 당시 Hermes 후보를 포함한 어떤 runtime도 판단 규칙을 소유하지 않도록 Adapter와 Evidence Governance Harness를 분리했다.
 - Memo의 fact 네 건이 Evidence ID와 원출처 locator까지 추적된다.
 - `sample = qualification`, `qualification = confirmed volume`, `industry-first = commercial leadership`을 자동 해소하지 않고 보존했다.
 - 최초 자동 승격 결함을 실제 run에서 발견하고 HUMAN_REVIEW 보류로 수정했다.

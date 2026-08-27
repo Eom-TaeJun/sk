@@ -6,11 +6,11 @@
 - 기존 문제: sample, qualification, mass production, commercial shipment와 회사의 `industry-first` 주장이 한 문서 안에서 쉽게 혼동됨
 - 내 역할: 문제·책임 경계 승인, deterministic rule 설계, Evidence/Graph/Memo 계약 결정, 자동 승격 결함 검토 및 수정
 - Source/Data 규모: 공식 T1 Source 1건, Atomic Evidence 4건, Graph node 10개, edge 9개
-- 내가 직접 설계한 것: Hermes와 Core Harness의 책임 분리, Source/Evidence 분리, 상태전이, semantic contradiction 3종, confidence rubric, human gate, sentence-level trace
+- 내가 직접 설계한 것: 특정 runtime과 Evidence Governance Harness의 책임 분리(초기 Hermes 후보 포함), Source/Evidence 분리, 상태전이, semantic contradiction 3종, confidence rubric, human gate, sentence-level trace
 - RAG 역할: 답변 생성이 아니라 Evidence ID→Source ID→excerpt→locator 회수. 초기 retrieval과 2-hop graph-aware retrieval을 분리
 - Graph 역할: Customer→Platform→Memory Product→Qualification→TTM→Decision Variable의 최소 subgraph와 Evidence 연결
-- Hermes/Agent 역할: 실제 연동하지 않음. Manual Adapter가 향후 Hermes Adapter와 같은 contract를 사용
-- Harness/Auditor 역할: 상태전이, provenance, unsupported inference, semantic boundary, confidence, human-review 보류를 deterministic rule로 통제
+- Agent/Runtime 역할: 실제 연동하지 않음. Manual Adapter가 runtime-agnostic contract를 사용하며 Hermes는 현재 optional candidate
+- Evidence Governance Harness/Auditor 역할: 상태전이, provenance, unsupported inference, semantic boundary, confidence, human-review 보류를 deterministic rule로 통제
 - 사람이 최종 판단한 영역: sample을 qualification으로 승격하지 않음, 회사의 first claim을 상업 리더십으로 해석하지 않음, human approval 없는 Evidence를 PROMOTED하지 않음
 - AI가 한 일: 공식 Source 후보 확인, Atomic Evidence 후보 구조화, 코드·테스트·Memo 생성, rule 위반 탐지 지원
 - 검증 방법: 11개 unit/integration test, 실제 scenario 실행, 동일 입력 replay, trace hash 비교
