@@ -2,11 +2,11 @@
 
 ## 0. Document status and boundary
 
-**Status:** `GATES_1_TO_5_APPROVED_AND_FROZEN — MINIMUM_CONTRACT_IMPLEMENTATION_APPROVED`
+**Status:** `GATES_1_TO_5_APPROVED_AND_FROZEN — MEASUREMENT_CONTRACT_AND_REAL_DATA_PILOT_COMPLETE — FULL_PRIMARY_CORPUS_COLLECTION_APPROVED_NEXT`
 
-**Human freeze note (2026-08-28):** The limited public-data review in [`h1_feasibility_manifest.md`](./h1_feasibility_manifest.md) found a finite product universe and a finite platform universe but no provenance-complete CAPEX → platform → named HBM supplier → supplier-side realization bridge. Human review therefore froze H1 as two separate primary strata. Gates 1–5 are approved and frozen; Gates 6–7 remain pending. This document authorizes only the next task named in Section 20, not source collection or empirical H1 execution.
+**Human freeze note (2026-08-28):** The limited public-data review in [`h1_feasibility_manifest.md`](./h1_feasibility_manifest.md) found a finite product universe and a finite platform universe but no provenance-complete CAPEX → platform → named HBM supplier → supplier-side realization bridge. Human review therefore froze H1 as two separate primary strata. Gates 1–5 are approved and frozen; Gates 6–7 remain pending. The deterministic measurement contract and a limited real-data ingestion pilot are now implemented. This revision clarifies the economic interpretation of those frozen strata and authorizes only the next task named in Section 20: full primary-source corpus collection across the 24 pre-registered tracks. It does not authorize outcome analysis, H1 metrics, or a verdict before Gate 6.
 
-This document defines the empirical contract for H1 before a dataset, backtest, statistical model, or automated research workflow exists. It does not select cases, collect a corpus, calculate a signal ranking, or make an H1 finding. The deleted interrupted H1 experiment is not a methodological or evidentiary input to this design.
+This document defines the empirical contract for H1. A registry and limited pilot now exist, but no frozen full corpus, outcome analysis, signal ranking, or H1 finding exists. The pilot is a measurement and ingestion stress test, not an empirical result. The deleted interrupted H1 experiment is not a methodological or evidentiary input to this design.
 
 The design preserves the project transmission model:
 
@@ -46,31 +46,75 @@ This is not a causal question, does not create a universal signal ranking, and d
 
 #### H1-P — Product Commercialization Stratum
 
+H1-P contains two parallel analytical paths. They must not be collapsed into one maturity ladder.
+
+**Customer/commercial acceptance path:**
+
 ```text
 HBM product introduction / sample
-→ qualification / design-in
-→ commercial or supply commitment
-→ supplier-side commercial realization
+→ customer evaluation
+→ qualification
+→ design-in / commercial selection
+→ customer supply / supplier-side commercial realization
 ```
 
-> Within pre-registered HBM product-generation tracks, what additional commercialization visibility does each publicly observed product-stage signal provide, and how much lead remains before supplier-side commercial realization?
+**Supply-readiness path:**
+
+```text
+production readiness
+→ production planned
+→ mass / volume production started
+→ ramping
+→ supply capability
+```
+
+> Within pre-registered HBM product-generation tracks, what additional customer/commercial acceptance visibility does each publicly observed product-stage signal provide, how much lead remains before supplier-side commercial realization, and what separate supply-readiness context is known at the same cutoff?
 
 The primary outcome is `O1_COMMERCIAL_REALIZATION`, interpreted only as a public supplier-side commercial-realization proxy.
 
+Qualification does not establish an order, customer volume, price, share, or realized demand. Production readiness, a production plan, production start, or ramping does not by itself establish customer acceptance or demand volume. `PRODUCTION_STAGE_CONTEXT` always remains context. Under the unchanged rule in Section 3.3, the same source may also support a separately atomized O1 event only when it directly links the occurred production event to present customer supply of the identified product.
+
 #### H1-C — Customer / Platform Realization Stratum
+
+H1-C separates investment context from operational deployment state without changing the frozen signal roles.
+
+**Investment context:**
 
 ```text
 CSP CAPEX
 → AI infrastructure commitment
-→ named platform launch
-→ operational deployment / availability
+→ broad capacity / build context
 ```
+
+This path establishes investment intent or construction/capacity context at its stated scope. It does not establish that a named platform is installed, available, utilized, or linked to a named memory supplier.
+
+**Operational deployment path:**
+
+```text
+named platform announcement / launch
+→ PREVIEW | LIMITED_AVAILABILITY_OR_CAPACITY_BLOCK
+→ GENERAL_AVAILABILITY | INSTALLED_OR_OPERATIONAL_INFRASTRUCTURE
+```
+
+These are observed operational states, not an assumed universal sequence. A roadmap announcement is not preview, preview is not general availability, and installed internal infrastructure is not automatically a customer-available service.
 
 > Within pre-registered CSP/platform tracks, what additional deployment visibility does each successive public signal provide beyond broad CAPEX, and how does that trade off against remaining lead time?
 
 The primary outcome is the separate `P1_PLATFORM_OPERATIONAL_REALIZATION`. Supplier-side O1 is not the platform-stratum outcome.
 
-### 1.3 What “better demand visibility” means
+### 1.3 H1 module boundary inside the whole project
+
+H1 is the first empirical module in a broader semiconductor decision-intelligence architecture. It answers a bounded question about the historical timing, scope, realization uncertainty, and decision usefulness of public demand/commercialization signals. It does not by itself answer:
+
+- which competitor has durable commercial leadership;
+- which ecosystem partner or interface is the binding dependency;
+- whether production, packaging, power, material, or logistics capacity is the marginal binding constraint;
+- what product-mix or wafer-allocation opportunity cost SK hynix faces; or
+- how macro, policy, or geopolitics changes demand without an explicit transmission path.
+
+Competition, ecosystem, constraint, raw-material/logistics, macro/policy, and product-mix evidence may appear in H1 only as directly relevant context or counterevidence for a pre-registered H1 track. It cannot silently expand the H1 population or become an H2/H3 finding. H2 activates only after a credible H1 minimum pipeline and a separately approved marginal-constraint contract. H3 remains `KNOWN_UNKNOWN` until public evidence can support opportunity-cost interpretation without inventing yield, cost, CAPA, price, volume, or customer share.
+
+### 1.4 What “better demand visibility” means
 
 `Decision-useful visibility` is a vector of interpretable dimensions. The primary analysis must not collapse them into one weighted score.
 
@@ -87,7 +131,7 @@ The primary outcome is the separate `P1_PLATFORM_OPERATIONAL_REALIZATION`. Suppl
 
 The dimensions answer different questions and can trade off. A signal with long lead but many non-realizations may be useful for `WATCH`; a later signal with shorter lead and tighter scope may be useful for `PREPARE` or internal confirmation. Neither dominates automatically.
 
-### 1.4 Three meanings that must remain separate
+### 1.5 Three meanings that must remain separate
 
 - **Signal usefulness:** Could the signal have changed a bounded decision at the time, given its meaning, scope, and lead?
 - **Forecast accuracy:** Does a repeatable model predict a numeric outcome with validated error? H1's minimum design does not claim this.
@@ -95,13 +139,13 @@ The dimensions answer different questions and can trade off. A signal with long 
 
 Temporal ordering, a graph edge, or correlation cannot be reported as causality.
 
-### 1.5 Testable subquestions
+### 1.6 Testable subquestions
 
 The minimum validation should report, without combining the strata or dimensions into a score:
 
-1. H1-P: within a pre-registered product track, what incremental product-stage scope and commercialization visibility is added by sample, qualification, design-in, or an observed supply commitment before O1?
-2. H1-P: do observed product-stage signals retain positive lead before O1, or are they mostly coincident/lagging confirmation?
-3. H1-C: within a pre-registered platform track, what deployment visibility is added as evidence moves from CAPEX to infrastructure commitment, launch, and operational availability before P1?
+1. H1-P: within a pre-registered product track, what incremental customer/commercial acceptance scope and commercialization visibility is added by sample, qualification, design-in, or an observed supply commitment before O1, while keeping production-stage context separate?
+2. H1-P: do observed customer/commercial acceptance signals retain positive lead before O1, or are they mostly coincident/lagging confirmation?
+3. H1-C: within a pre-registered platform track, what deployment visibility is added as evidence moves from investment context to named-platform announcement, preview, limited availability, general availability, and installed/operational state before P1?
 4. H1-C: how do lead, scope, and realization uncertainty trade off across successive public platform stages?
 5. Within each stratum, does the descriptive pattern differ by supplier/operator, generation, period, or source restriction?
 6. Does either stratum fail its approved sufficiency rules and therefore require `INCONCLUSIVE`?
@@ -110,9 +154,9 @@ The minimum validation should report, without combining the strata or dimensions
 
 The minimum design estimates two descriptive signal-usefulness patterns, not a causal coefficient.
 
-**H1-P estimand:** for a pre-registered supplier/product-generation track and O1 contract, how early and at what product scope was each publicly observable product-stage signal seen before later supplier-side realization, delay, weakening, non-realization within a fully observed window, or censoring?
+**H1-P estimand:** for a pre-registered supplier/product-generation track and O1 contract, how early and at what product scope was each publicly observable customer/commercial acceptance signal seen before later supplier-side realization, delay, weakening, non-realization within a fully observed window, or censoring? Supply-readiness events are recorded separately as context available at the same cutoff; they do not enter the primary signal comparison.
 
-**H1-C estimand:** for a pre-registered CSP/platform track and P1 contract, what deployment information was added as the public state moved from broad CAPEX to AI-infrastructure commitment, named platform launch, and operational availability, and how much lead remained at each stage?
+**H1-C estimand:** for a pre-registered CSP/platform track and P1 contract, what operational-deployment information was added beyond the public investment-context state as evidence moved through named-platform announcement/launch, preview, limited availability, general availability, or installed/operational infrastructure, and how much lead remained at each stage?
 
 The principal comparisons are **within the same eligible track and within the same stratum**. Cross-company summaries are secondary because disclosure practices, product definitions, customer confidentiality, and fiscal calendars differ.
 
@@ -183,12 +227,13 @@ Signal class is assigned from what the source directly establishes at its histor
 | `CSP_CAPEX` | Reported or guided capital expenditure with stated infrastructure mix where available | Investment intention or asset build, potentially supporting future compute | Customer economics → infrastructure; broad/upstream | Quarterly/annual filing or earnings release `available_at`, never quarter end | Company, sometimes cloud/AI mix | Land/buildings, long-lived assets, leases, timing shifts, non-AI mix, throttling or delayed activation | Demand served from existing/leased capacity or mix detail not disclosed | `HIGH` for total CAPEX; AI/memory attribution remains `TO_VERIFY` |
 | `AI_INFRA_COMMITMENT` | Announced data-center, accelerator, capacity, or investment commitment | Intent to create future AI capacity | CAPEX → platform capacity; upstream/intermediate | Official announcement date | Company/region/site; product often broad | Permit, construction, power, equipment, or demand delay | Quiet expansion or leased capacity | `MEDIUM` |
 | `PLATFORM_LAUNCH` | Accelerator/system launch or planned ship date | A product architecture requiring a memory generation enters market roadmap | Compute platform → memory requirement; intermediate | Official launch/filing date | Platform/product generation | Schedule slip, limited availability, alternative memory configurations | Undisclosed custom platforms | `HIGH` for major public platforms; linkage can be `MEDIUM` |
-| `PLATFORM_DEPLOYMENT` | Platform shipment, cloud general availability, or service availability has occurred | Compute capacity is deployable by customers | Platform → operational use; intermediate/order-adjacent | Official release date; region/version retained | Platform/region/cloud service | Availability without material utilization; small initial region | Private deployment and internal workloads | `MEDIUM` |
+| `PLATFORM_DEPLOYMENT_STAGE` | Platform shipment, cloud general availability, or service availability has occurred | Compute capacity is deployable by customers | Platform → operational use; intermediate/order-adjacent | Official release date; region/version retained | Platform/region/cloud service | Availability without material utilization; small initial region | Private deployment and internal workloads | `MEDIUM` |
 | `HBM_SAMPLE` | Identified product samples delivered for evaluation | Product entered customer evaluation | Memory requirement → evaluation; intermediate | Official product/IR event date | Supplier/product; customer often unnamed | Evaluation failure, redesign, platform delay, multiple suppliers sampled | Quiet sampling or non-disclosure | `MEDIUM`; the complete population remains `LOW` |
 | `QUALIFICATION_STAGE` | Qualification is planned, underway, final-stage, or explicitly complete | Technical/commercial acceptance process is progressing | Qualification; order-proximate but stage-dependent | Official disclosure date | Product/platform/customer when disclosed | `planned`/`underway` mistaken for completion; platform-specific approval generalized | Confidential completion not disclosed | `LOW`; substage must remain separate |
 | `DESIGN_IN` | Product is explicitly selected or incorporated into a named platform/design | Stronger technical selection than sampling | Qualification/commercial confirmation; order-proximate | Official supplier or counterparty disclosure | Product/platform/customer | Design may be delayed, dual-sourced, resized, or canceled | Customer confidentiality | `LOW` |
 | `LTA_COMMERCIAL_COMMITMENT` | Signed/finalized long-term agreement or binding commitment, with scope stated | Longer-duration commercial commitment | Commercial confirmation → order; order-proximate | Filing/official IR when signed or disclosed | Parties/product/period; volume often absent | Non-binding language, renegotiation, minimum terms undisclosed | Confidential contracts | `LOW`; discussion and signed agreement must not be combined |
 | `ORDER_ADJACENT_SUPPLY_COMMITMENT` | Allocation, supply plan, sold-out status, or commercial negotiation milestone that is not a disclosed LTA/order | Indicates demand/supply coordination nearer commercialization | Commercial confirmation; order-proximate candidate | Official disclosure date | Supplier/product/period | Company optimism, ambiguous binding force, double counting with LTA | Purchase orders are normally private | `LOW`; never relabel as LTA |
+| `PRODUCTION_STAGE_CONTEXT` | A source directly states production readiness, a production plan, mass/volume production start, or current ramping | Supply readiness or manufacturing capability at the stated product scope | Separate supply-readiness path; context only | Official product/IR event date | Supplier/product/facility when stated | Production capability mistaken for customer acceptance, order, volume, or demand | Quiet capacity preparation or undisclosed ramp | `MEDIUM` for stated production stage; never a primary H1 signal or O1; a separate atomic event from the same source may satisfy O1 only under the unchanged current-customer-supply condition |
 | `POWER_DC_READY` | Site/capacity is energized, commissioned, rack-ready, or service-available | Removes a downstream infrastructure barrier to accelerator operation | Data-center realization path; intermediate/order-adjacent | Utility, operator, regulator, or service announcement date | Site/region/platform when known | PPA, permit, or building completion mistaken for energized usable capacity; low utilization | Private commissioning and behind-the-meter supply | `LOW`; product linkage is often unresolved |
 | `PRICING_INVENTORY_CONTEXT` | Official or independently sourced price/inventory direction at compatible product scope | Conditions affecting order timing and supplier revenue realization | Market/commercial context; broad/intermediate | Release/publication date | Product family/industry/company | Spot/contract mismatch, channel inventory, price-led revenue without bit demand | Confidential contract prices/customer inventory | `MEDIUM` for context, `LOW` for HBM product specificity |
 | `SHIPMENT_REALIZATION` | Commercial shipment/customer supply actually started | Confirms the outcome event | Realization | Official occurrence disclosure | Product/supplier/platform | Shipment does not prove sustained demand, end use, price, volume, or share | Unannounced shipments | `MEDIUM`; used as O1 outcome, **not as a predictor of that same outcome** |
@@ -197,20 +242,22 @@ Signal class is assigned from what the source directly establishes at its histor
 
 - H1-P primary: `HBM_SAMPLE`.
 - H1-P secondary when observed: `QUALIFICATION_STAGE`, `DESIGN_IN`, `ORDER_ADJACENT_SUPPLY_COMMITMENT`. Their absence is not imputed, and they are not required to appear uniformly.
-- H1-C primary: `CSP_CAPEX`, `AI_INFRA_COMMITMENT`, `PLATFORM_LAUNCH`, `PLATFORM_DEPLOYMENT`.
-- Context only: `PRICING_INVENTORY_CONTEXT`.
+- H1-C primary: `CSP_CAPEX`, `AI_INFRA_COMMITMENT`, `PLATFORM_LAUNCH`, `PLATFORM_DEPLOYMENT_STAGE`.
+- Context only: `PRICING_INVENTORY_CONTEXT`, `PRODUCTION_STAGE_CONTEXT`.
 - Removed from the minimum H1 comparison: `LTA_COMMERCIAL_COMMITMENT`, `POWER_DC_READY` because public observability and compatible scope are too sparse. An isolated verified event may remain descriptive evidence but cannot recreate a removed primary class. `POWER_DC_READY` remains relevant to later H2 work.
 
-`SHIPMENT_REALIZATION` remains an outcome-role event, not a predictor. Signal roles are frozen by Gate 5 and do not imply an empirical ranking.
+`SHIPMENT_REALIZATION` remains an outcome-role event, not a predictor. `PRODUCTION_STAGE_CONTEXT` is a context-role clarification created to prevent production language from being forced into an acceptance signal, supply commitment, or O1. It is excluded from Gate 5 predictor ranking, signal sufficiency, and primary per-signal comparison. This clarification does not amend the Gate 5 primary/secondary signal roles or the frozen O1 contract.
+
+Production-stage context may update a bounded `TTM` or supply-preparation interpretation and may identify an internal confirmation question. It cannot by itself move `Demand Forecast`, `Customer Priority`, `CAPA Allocation`, or `Price·Volume` to a committed state.
 
 Subtypes are mandatory where language can change meaning. At minimum:
 
 - qualification: `PLANNED`, `UNDERWAY`, `FINAL_STAGE`, `COMPLETE`;
 - commitment: `DISCUSSION`, `SUPPLY_PLAN`, `ALLOCATION`, `SIGNED_LTA`;
 - readiness: `PERMIT`, `PPA_OR_GRID_COMMITMENT`, `CONSTRUCTION`, `ENERGIZED`, `RACK_READY`, `SERVICE_AVAILABLE`;
-- production: `READINESS`, `STARTED`, `RAMPING`, `CUSTOMER_SUPPLY_STARTED`.
+- `PRODUCTION_STAGE_CONTEXT`: `PRODUCTION_READINESS`, `PRODUCTION_PLANNED`, `MASS_PRODUCTION_STARTED`, `VOLUME_PRODUCTION_STARTED`, `RAMPING`.
 
-Only the direct wording and scope determine subtype. The transmission distance is a descriptive taxonomy and must not be encoded as an outcome-favoring score.
+Only the direct wording and scope determine subtype. `PRODUCTION_PLANNED` is future supply capability, not current supply. `MASS_PRODUCTION_STARTED` and `VOLUME_PRODUCTION_STARTED` establish occurred manufacturing stages only and remain context. If the same source independently satisfies every O1 element, including present customer supply, that O1 claim is atomized separately rather than promoting the production-context record. `RAMPING` establishes a current production-direction statement, not customer volume or demand. The transmission distance is a descriptive taxonomy and must not be encoded as an outcome-favoring score.
 
 ## 5. Unit-of-observation alternatives
 
@@ -230,7 +277,7 @@ The primary analytical unit is an **atomic public event nested in a pre-register
 
 Quarterly company/industry observations are corroborating context, not extra independent product events. Multiple excerpts from the same origin and event do not increase sample size.
 
-The minimum design uses two parallel event-chain strata. H1-P compares product-stage evidence only within product tracks and against O1. H1-C compares successive CAPEX/infrastructure/platform states only within platform tracks and against P1. Quarterly product-specific operational or financial disclosures corroborate realization but are not extra independent events.
+The minimum design uses two parallel event-chain strata. H1-P compares customer/commercial acceptance evidence only within product tracks and against O1 while retaining supply-readiness events as non-ranking context. H1-C compares successive investment-context and operational-deployment states only within platform tracks and against P1. Quarterly product-specific operational or financial disclosures corroborate realization but are not extra independent events.
 
 Product-commercialization tracks may contain strong downstream stages but no defensible CSP CAPEX link; platform tracks may contain CAPEX and deployment but no named memory supplier. Gate 3 therefore removed `BRIDGE_ELIGIBLE` as a required primary comparison. A complete bridge may be retained as exploratory corroboration only when primary evidence independently closes every link. Market share, reputation, presumed sole sourcing, analyst estimates, and teardown inference cannot close it.
 
@@ -255,16 +302,17 @@ This is intentionally a small-N validation of measurement and signal usefulness.
 
 For each eligible H1-P track:
 
-- retain each distinct product signal stage and historical availability date;
+- retain each distinct customer/commercial acceptance signal stage and historical availability date;
+- retain each distinct `PRODUCTION_STAGE_CONTEXT` record at the same cutoff without counting it as a predictor, outcome, or independent realization;
 - observe O1 and any independent O2/O3 corroboration under the frozen contract;
 - calculate lead-time intervals and fully observed no-realization/delay/censor flags;
-- record what each newly observed product stage added to scope and commercialization visibility; and
+- record what each newly observed acceptance stage added to scope and commercialization visibility and what the separate supply-readiness context changed about TTM/supply-preparation interpretation; and
 - preserve counterevidence and semantic boundaries.
 
 For each eligible H1-C track:
 
-- establish the earliest eligible CSP CAPEX state at its directly stated scope;
-- retain distinct AI-infrastructure commitment, named platform launch, and deployment/availability stages;
+- establish the earliest eligible investment-context state—CSP CAPEX, infrastructure commitment, or broad capacity/build disclosure—at its directly stated scope;
+- retain distinct named-platform announcement/launch, preview, limited/capacity-block, general-availability, and installed/operational stages;
 - observe the approved P1 subtype without collapsing preview, limited availability, GA, or installed internal infrastructure;
 - calculate lead-time intervals and fully observed no-realization/delay/censor flags; and
 - record what changed from `CAPEX_ONLY` at each successive historical snapshot.
@@ -279,7 +327,7 @@ The future minimum result should report:
 - per-signal-class `eligible`, `realized`, `no realization within window`, `delayed`, `failed/weakened`, and `right-censored` counts;
 - lead-time median/range only when dates and sample count make them meaningful, otherwise event-level intervals;
 - exact/partial/broad scope-match distribution;
-- within-track evidence-state changes relative to CAPEX-only;
+- H1-P within-track acceptance-state changes plus separately stated supply-readiness context, and H1-C evidence-state changes relative to its prior investment-context state;
 - counterexamples and leave-one-stratum robustness;
 - separate human-approved H1-P and H1-C `SUPPORTED`, `REJECTED`, `QUALIFIED`, or `INCONCLUSIVE` verdicts when their respective Gate 5 sufficiency rules are met.
 
@@ -306,7 +354,7 @@ Independence is counted by `origin_group`, not URL count. A press release, its n
 
 ### 7.1 Limited source-family feasibility check
 
-Checked for design feasibility on 2026-08-28; these examples are not selected cases and were not extracted into a dataset.
+Checked for design feasibility on 2026-08-28. Some source families later appeared in the limited ingestion pilot, but this table is design context and does not establish that the full 24-track corpus has been collected or admitted.
 
 | Source family | Representative official evidence | Public frequency / period observed | What appears feasible | Limitation / status |
 |---|---|---|---|---|
@@ -581,7 +629,7 @@ The public study cannot generally observe or infer:
 - the causal effect of any signal on demand;
 - SK hynix's internal forecast, loss function, customer priority, or final allocation decision.
 
-### 15.2 `TO_VERIFY` before implementation
+### 15.2 `TO_VERIFY` during full-corpus collection and before Gate 6
 
 - completeness and stable archival access of supplier IR/product pages across the approved period;
 - DART/KRX timestamp and revision metadata needed for non-SEC issuers;
@@ -632,6 +680,7 @@ The P1/P2/S1/S2 hierarchy, `origin_group` independence, primary-source requireme
 - H1-P additionally: at least 1 product-scope explicit delay/cancellation/qualification problem/reduced scope/withdrawn guidance.
 - Windows: 12-month primary, 6/18-month sensitivity; right-censored tracks remain descriptive and never enter negative/no-realization denominators.
 - Signal roles are frozen in Section 4.1.
+- `PRODUCTION_STAGE_CONTEXT` is context only and cannot satisfy a Gate 5 signal count, predictor comparison, negative-track rule, or O1. Its five subtypes clarify existing boundaries; they do not amend the frozen signal roles.
 - Verdicts are separate H1-P/H1-C `SUPPORTED/QUALIFIED/REJECTED/INCONCLUSIVE`; unmet sufficiency forces the relevant stratum to `INCONCLUSIVE`.
 
 ### Gate 6 — Dataset freeze before outcome analysis
@@ -646,9 +695,9 @@ After implementation and limited data construction, approve the track manifest, 
 
 Approve the final sufficiency decision, counterevidence treatment, robustness interpretation, separate H1-P/H1-C verdicts, scope of generalization, any cross-strata synthesis, and Marketing implications. AI or deterministic code may calculate candidate results but cannot approve this gate.
 
-## 17. Minimum future dataset specification — conceptual only
+## 17. Minimum dataset specification
 
-No physical schema or data file is created by this design. The primary analytical row is one atomic event; supporting logical records prevent sources, tracks, outcomes, and reviews from being conflated.
+The measurement contract and pilot implement the core logical records below. This section remains the interpretation contract for full-corpus collection rather than a claim that the 24-track corpus or Gate 6 dataset freeze already exists. The primary analytical row is one atomic event; supporting logical records prevent sources, tracks, outcomes, and reviews from being conflated.
 
 ### 17.1 Logical records and row definitions
 
@@ -679,9 +728,9 @@ No physical schema or data file is created by this design. The primary analytica
 
 Derived fields must retain formula/specification version and input IDs. Unknown customer, volume, price, share, or qualification status remains null plus `KNOWN_UNKNOWN`; it is never inferred to complete a row.
 
-## 18. Application-evidence artifact map — future only
+## 18. Application-evidence artifact map
 
-The following future artifacts could demonstrate capabilities only after approved execution. This task does not claim they exist or prove performance.
+The following artifacts demonstrate capabilities only to the extent that they are actually executed and source-traced. The implemented contract and pilot may be recorded as design and ingestion facts; result, robustness, and verdict artifacts remain future until the full corpus passes Gate 6 and approved analysis occurs.
 
 | Future artifact | Capability it could demonstrate |
 |---|---|
@@ -702,7 +751,9 @@ A reviewer should be able to answer from this document:
 
 - H1 is frozen as separate product-commercialization and customer/platform-realization strata with no required direct bridge;
 - H1-P uses O1 supplier-side commercial realization, optionally corroborated by O2/O3, with unresolved scope preserved;
+- H1-P keeps customer/commercial acceptance and supply readiness as separate paths; production-stage context cannot prove qualification, orders, customer volume, or demand;
 - H1-C uses separate P1 platform operational realization and keeps planned, preview, limited, GA, and installed/operational states distinct;
+- H1-C keeps investment context separate from named-platform operational state;
 - a signal is an atomic, historically available public event assigned independently of its later outcome;
 - better visibility is a vector of lead, realization, false-positive risk, scope, stability, incremental information, and availability;
 - the units are two non-pooled track strata with atomic events, not convenient quarter rows;
@@ -711,8 +762,9 @@ A reviewer should be able to answer from this document:
 - cases arise from an approved universe before outcome review;
 - separate support, rejection, qualification, and inconclusive patterns are explicit;
 - H1-G01 through H1-G05 are frozen; dataset and final-interpretation approvals remain H1-G06 and H1-G07;
+- the limited pilot is an ingestion/measurement stress test, not an empirical H1 result;
 - the design may legitimately end with one or both strata `INCONCLUSIVE` and no cross-strata superiority verdict.
 
 ## 20. Exactly one approved next task
 
-Implement **only the H1 measurement contract and deterministic validation layer using synthetic or tiny hand-authored fixtures**, including separate H1-P/H1-C outcome contracts, provenance, revision, origin-group deduplication, cutoff/leakage rejection, left-truncation/right-censor flags, and replay-hash tests. Do not collect the historical dataset, calculate lead-time results, classify candidate outcomes, or run empirical H1 in that task.
+Collect **the full frozen H1 primary-source corpus across the 24 pre-registered tracks under the revised economic and business interpretation contract**. Preserve immutable source revisions, atomic evidence, origin groups, historical availability, HOLD/exclusion reasons, the H1-P acceptance-versus-supply-readiness boundary, and the H1-C investment-versus-operational boundary. Do not calculate H1 metrics or lead-time summaries, inspect results to revise Gates 1–5, assign a stratum verdict, or begin H2/H3 before the completed corpus and its immutable hash receive Gate 6 human approval.

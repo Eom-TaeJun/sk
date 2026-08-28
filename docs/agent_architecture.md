@@ -44,6 +44,10 @@ Milestone priority:
 
 ## 3. Capability architecture
 
+Whole-project domain selection, decision relevance and module activation are frozen in
+`docs/decision_architecture.md`. This document governs execution capabilities; H1 is the first
+empirical module, not the boundary of the architecture.
+
 ```text
 Task request
 ↓
@@ -64,6 +68,12 @@ Evidence Governance Harness (implemented deterministic core)
 ↓
 Evidence → Graph → Audit → Decision Memo
 ```
+
+`Evidence` and `Decision Impact` are separate layers. Evidence retains source-backed claims,
+scope, date and uncertainty. Decision Impact is a conceptual, human-reviewed translation of a
+validated state change into an affected decision, decision horizon, flexibility/commitment,
+possible action, missing internal information and invalidation condition. No Decision Engine is
+implemented, and a Decision Impact record cannot alter Evidence or promote an inference.
 
 The architecture is runtime-agnostic. Codex-native capabilities, Hermes through an adapter, or another compatible runtime may implement orchestration. A runtime is selected only after an experiment identifies an actual task-decomposition problem and measures incremental value. It never owns Evidence promotion or analytical truth.
 

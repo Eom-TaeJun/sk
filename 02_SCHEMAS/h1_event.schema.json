@@ -51,7 +51,8 @@
         "PLATFORM_LAUNCH",
         "PLATFORM_DEPLOYMENT_STAGE",
         "P1_PLATFORM_OPERATIONAL_REALIZATION",
-        "PRICING_INVENTORY_CONTEXT"
+        "PRICING_INVENTORY_CONTEXT",
+        "PRODUCTION_STAGE_CONTEXT"
       ]
     },
     "signal_subtype": {"type": "string", "minLength": 1},
@@ -61,6 +62,7 @@
         "AI_INFRASTRUCTURE",
         "PLATFORM",
         "MEMORY_PRODUCT",
+        "SUPPLY_READINESS",
         "QUALIFICATION_COMMERCIAL",
         "COMMERCIAL_REALIZATION",
         "MARKET_CONTEXT"
@@ -128,5 +130,32 @@
     "review_status": {
       "enum": ["UNREVIEWED", "APPROVED", "HOLD", "REJECTED"]
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "signal_class": {"const": "PRODUCTION_STAGE_CONTEXT"}
+        }
+      },
+      "then": {
+        "properties": {
+          "data_role": {"const": "CONTEXT"},
+          "signal_subtype": {
+            "enum": [
+              "PRODUCTION_READINESS",
+              "PRODUCTION_PLANNED",
+              "MASS_PRODUCTION_STARTED",
+              "VOLUME_PRODUCTION_STARTED",
+              "RAMPING"
+            ]
+          },
+          "transmission_layer": {"const": "SUPPLY_READINESS"},
+          "decision_question": {
+            "enum": ["TTM", "COMMERCIALIZATION_VISIBILITY"]
+          }
+        }
+      }
+    }
+  ]
 }

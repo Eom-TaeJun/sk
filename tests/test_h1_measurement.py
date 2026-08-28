@@ -137,6 +137,108 @@ class H1MeasurementContractTests(unittest.TestCase):
         ):
             validate_event_for_track(invalid, self.tracks[invalid.track_id])
 
+    def production_context(
+        self,
+        subtype: str,
+        wording: str,
+        **overrides,
+    ) -> EventRecord:
+        values = {
+            "event_id": f"EVT-PRODUCTION-{subtype}",
+            "data_role": "CONTEXT",
+            "signal_class": "PRODUCTION_STAGE_CONTEXT",
+            "signal_subtype": subtype,
+            "transmission_layer": "SUPPLY_READINESS",
+            "decision_question": "TTM",
+            "claim": wording,
+            "excerpt": wording,
+        }
+        values.update(overrides)
+        return replace(self.events["EVT-P-A-SAMPLE"], **values)
+
+    def test_production_stage_context_accepts_only_explicit_stage_wording(self) -> None:
+        cases = {
+            "PRODUCTION_READINESS": "The product is ready for mass production.",
+            "PRODUCTION_PLANNED": "The supplier plans to begin mass production.",
+            "MASS_PRODUCTION_STARTED": "The supplier commenced mass production.",
+            "VOLUME_PRODUCTION_STARTED": "The supplier began volume production.",
+            "RAMPING": "The supplier is ramping up production.",
+        }
+        for subtype, wording in cases.items():
+            with self.subTest(subtype=subtype):
+                event = self.production_context(subtype, wording)
+                validate_event_for_track(event, self.tracks[event.track_id])
+                self.assertEqual(event.data_role, "CONTEXT")
+                self.assertEqual(event.transmission_layer, "SUPPLY_READINESS")
+
+    def test_production_stage_context_is_not_signal_or_outcome(self) -> None:
+        wording = "The supplier began volume production."
+        for role in ("SIGNAL", "OUTCOME"):
+            with self.subTest(role=role):
+                event = self.production_context(
+                    "VOLUME_PRODUCTION_STARTED", wording, data_role=role
+                )
+                with self.assertRaises(SemanticContractError):
+                    validate_event_for_track(event, self.tracks[event.track_id])
+
+    def test_production_stage_context_is_product_track_only(self) -> None:
+        event = self.production_context(
+            "VOLUME_PRODUCTION_STARTED",
+            "The supplier began volume production.",
+            track_id="TRK-C-A",
+        )
+        with self.assertRaisesRegex(SemanticContractError, "H1-P product tracks"):
+            validate_event_for_track(event, self.tracks[event.track_id])
+
+    def test_production_stage_context_has_narrow_layer_and_decision_scope(self) -> None:
+        wording = "The supplier began volume production."
+        invalid_variants = (
+            {"transmission_layer": "COMMERCIAL_REALIZATION"},
+            {"transmission_layer": "QUALIFICATION_COMMERCIAL"},
+            {"decision_question": "DEMAND_FORECAST"},
+            {"decision_question": "CUSTOMER_PRIORITY"},
+            {"decision_question": "QUALIFICATION"},
+        )
+        for overrides in invalid_variants:
+            with self.subTest(overrides=overrides):
+                event = self.production_context(
+                    "VOLUME_PRODUCTION_STARTED", wording, **overrides
+                )
+                with self.assertRaises(SemanticContractError):
+                    validate_event_for_track(event, self.tracks[event.track_id])
+
+    def test_production_stage_context_rejects_unknown_or_promoted_stage_wording(self) -> None:
+        invalid_cases = (
+            ("FULL_SCALE_PRODUCTION", "Full-scale production began."),
+            ("MASS_PRODUCTION_STARTED", "The product has production readiness."),
+            ("MASS_PRODUCTION_STARTED", "The supplier plans to begin mass production."),
+            ("RAMPING", "The supplier plans to ramp production."),
+            ("RAMPING", "Customer demand is ramping."),
+        )
+        for subtype, wording in invalid_cases:
+            with self.subTest(subtype=subtype, wording=wording):
+                event = self.production_context(subtype, wording)
+                with self.assertRaises(SemanticContractError):
+                    validate_event_for_track(event, self.tracks[event.track_id])
+
+    def test_production_context_is_excluded_from_signal_observation_assessment(self) -> None:
+        event = self.production_context(
+            "VOLUME_PRODUCTION_STARTED",
+            "The supplier began volume production.",
+        )
+        manifest = self.builder.build(
+            snapshot_id="SNP-PRODUCTION-CONTEXT",
+            contract_version=self.raw["contract_version"],
+            tracks=[self.tracks[event.track_id]],
+            events=[event],
+            cutoff_at="2024-03-01T00:00:00+00:00",
+            dataset_freeze_at="2025-08-01T00:00:00+00:00",
+            observation_window_months=12,
+            created_at="2026-08-28T12:00:00+09:00",
+        )
+        self.assertIn(event.event_id, manifest.included_event_ids)
+        self.assertEqual(manifest.observation_assessments, [])
+
     def test_event_and_publication_date_precision_can_differ(self) -> None:
         payload = dict(self.raw["events"][0])
         payload["date_precision"] = "DAY"

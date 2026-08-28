@@ -91,3 +91,16 @@
 - Updated conclusion: 기존 `date_precision`은 publication/availability fallback 통제에 유지하고 optional `event_date_precision`을 추가했다. 보수적 event boundary와 실제 `available_at`을 분리해 future-information leakage를 막는다.
 - Affected decision variable: Platform Deployment Visibility의 temporal ordering
 - Job relevance: 실제 공개자료의 시간 정밀도 차이를 데이터 계약에 반영하고, 후대 공시를 과거 snapshot에 누출하지 않는 수행 Fact
+
+## Change 9 — H1 중심 구조와 생산 단계의 역할을 동시 수정
+
+- Initial assumption: H1 Product/Platform signal contract를 확장하면 전체 프로젝트의 business relevance도 자연스럽게 확보되고, 양산 시작은 주문근접 commercialization signal 후보 또는 O1 후보 중 하나로만 분류하면 된다고 보았다.
+- New evidence: 4-Track real-data pilot에서 `volume production 시작` 문구는 실제로 확인됐지만 agreement/order/allocation 또는 current customer supply가 함께 확인되지 않아 두 candidate mapping이 모두 HOLD가 되었다. 동시에 H1 taxonomy만 늘리는 방식은 Competition, Ecosystem, Supply Constraint, Policy, Product Mix와 실제 조정 가능한 의사결정의 activation 조건을 설명하지 못했다.
+- Evidence level: 프로젝트 pilot 실행·schema validation·architecture review 수행 Fact. H1 empirical result가 아니다.
+- Contradiction: 생산 준비가 진전됐다는 사실과 고객 acceptance/order/demand volume이 확인됐다는 결론은 다르다. 또한 첫 empirical module의 data model과 전체 decision architecture는 동일하지 않다.
+- AI-assisted work: Pilot HOLD 문구를 최소 regression으로 축약하고, production stage의 role/layer/subtype/허용 decision을 deterministic contract로 제안했다. 8개 domain과 dataset admission 질문을 기존 economic model 및 공개정보 한계에 맞춰 구조화했다.
+- Human decision: H1을 전체 architecture의 첫 module로 고정하고, H1-P를 customer/commercial acceptance와 supply readiness로 분리했다. H1-C도 investment context와 operational deployment를 분리했다. Decision Impact는 Evidence와 별도인 human-reviewed 문서 개념으로만 유지했다.
+- Updated conclusion: 생산 단계는 `PRODUCTION_STAGE_CONTEXT`/`CONTEXT`/`SUPPLY_READINESS`로 기록하며 readiness, planned, mass/volume start, ramping을 원문 수준에서 구분한다. H1 ranking과 O1에는 넣지 않고 TTM/Commercialization Visibility만 조건부로 갱신한다. 새 dataset은 economic state부터 invalidation까지 8개 질문과 realistic adjustability를 통과할 때만 활성화한다.
+- Affected decision variable: TTM, Commercialization Visibility, Demand Forecast, Customer Priority와 향후 Supply Risk/Product Mix의 activation boundary
+- Job relevance: 실제 공시 실패를 분류 규칙으로 수정하고, 공개정보가 strategic/tactical/commercial decision에 미치는 범위를 adjustment cost와 함께 통제한 수행 Fact
+- Preserved limitation: 기존 Pilot Event/hash/HOLD를 재작성하지 않았고, H1 metric·lead/lag·verdict, H2/H3 또는 내부 CAPA/가격/물량 판단을 생성하지 않았다.

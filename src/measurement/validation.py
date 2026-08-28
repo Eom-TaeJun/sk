@@ -62,7 +62,7 @@ PLATFORM_SIGNALS = {
     "PLATFORM_DEPLOYMENT_STAGE",
 }
 PLATFORM_OUTCOMES = {"P1_PLATFORM_OPERATIONAL_REALIZATION"}
-CONTEXT_CLASSES = {"PRICING_INVENTORY_CONTEXT"}
+CONTEXT_CLASSES = {"PRICING_INVENTORY_CONTEXT", "PRODUCTION_STAGE_CONTEXT"}
 REMOVED_MINIMUM_CLASSES = {"LTA_COMMERCIAL_COMMITMENT", "POWER_DC_READY"}
 
 PLATFORM_DEPLOYMENT_SUBTYPES = {
@@ -78,6 +78,13 @@ PLATFORM_REALIZATION_SUBTYPES = {
     "INSTALLED_OPERATIONAL",
 }
 QUALIFICATION_SUBTYPES = {"PLANNED", "UNDERWAY", "FINAL_STAGE", "COMPLETE"}
+PRODUCTION_STAGE_SUBTYPES = {
+    "PRODUCTION_READINESS",
+    "PRODUCTION_PLANNED",
+    "MASS_PRODUCTION_STARTED",
+    "VOLUME_PRODUCTION_STARTED",
+    "RAMPING",
+}
 O1_SUBTYPES = {
     "COMMERCIAL_SHIPMENT_STARTED",
     "CUSTOMER_SUPPLY_STARTED",
@@ -113,11 +120,92 @@ PLATFORM_DECISIONS = {
     DecisionQuestion.TTM.value,
     DecisionQuestion.PLATFORM_DEPLOYMENT_VISIBILITY.value,
 }
+PRODUCTION_CONTEXT_DECISIONS = {
+    DecisionQuestion.TTM.value,
+    DecisionQuestion.COMMERCIALIZATION_VISIBILITY.value,
+}
 
 
 def _contains_any(text: str, phrases: set[str]) -> bool:
     lowered = " ".join(text.lower().split())
     return any(phrase in lowered for phrase in phrases)
+
+
+def _validate_production_stage_context(event: EventRecord) -> None:
+    if event.signal_subtype not in PRODUCTION_STAGE_SUBTYPES:
+        raise SemanticContractError("invalid production-stage subtype")
+
+    text = f"{event.claim} {event.excerpt}"
+    future_terms = {
+        "plans to begin",
+        "plan to begin",
+        "planned to begin",
+        "will begin",
+        "expected to begin",
+        "scheduled to begin",
+        "plans to ramp",
+        "plan to ramp",
+        "will ramp",
+        "expected to ramp",
+    }
+    stage_terms = {
+        "PRODUCTION_READINESS": {
+            "production readiness",
+            "ready for mass production",
+            "ready for volume production",
+        },
+        "PRODUCTION_PLANNED": {
+            "plans to begin mass production",
+            "plan to begin mass production",
+            "will begin mass production",
+            "expected to begin mass production",
+            "scheduled to begin mass production",
+            "mass production is planned",
+            "plans to begin volume production",
+            "plan to begin volume production",
+            "will begin volume production",
+            "expected to begin volume production",
+            "scheduled to begin volume production",
+            "volume production is planned",
+        },
+        "MASS_PRODUCTION_STARTED": {
+            "mass production began",
+            "mass production has begun",
+            "mass production started",
+            "mass production commenced",
+            "began mass production",
+            "started mass production",
+            "commenced mass production",
+        },
+        "VOLUME_PRODUCTION_STARTED": {
+            "volume production began",
+            "volume production has begun",
+            "volume production started",
+            "volume production commenced",
+            "began volume production",
+            "started volume production",
+            "commenced volume production",
+        },
+        "RAMPING": {
+            "production is ramping",
+            "ramping production",
+            "ramping up production",
+            "production ramp is underway",
+            "output is ramping",
+        },
+    }
+    if event.signal_subtype in {
+        "MASS_PRODUCTION_STARTED",
+        "VOLUME_PRODUCTION_STARTED",
+        "RAMPING",
+    } and _contains_any(text, future_terms):
+        raise SemanticContractError(
+            "future production or ramp wording cannot become a current production stage"
+        )
+    if not _contains_any(text, stage_terms[event.signal_subtype]):
+        raise SemanticContractError(
+            f"{event.signal_subtype} requires explicit matching production-stage wording"
+        )
 
 
 def validate_event_for_track(event: EventRecord, track: TrackRecord) -> None:
@@ -139,8 +227,25 @@ def validate_event_for_track(event: EventRecord, track: TrackRecord) -> None:
     if event.data_role == DataRole.CONTEXT.value:
         if event.signal_class not in CONTEXT_CLASSES:
             raise SemanticContractError("CONTEXT role requires an approved context class")
-        if event.transmission_layer != TransmissionLayer.MARKET_CONTEXT.value:
-            raise SemanticContractError("context records must use MARKET_CONTEXT")
+        if event.signal_class == "PRICING_INVENTORY_CONTEXT":
+            if event.transmission_layer != TransmissionLayer.MARKET_CONTEXT.value:
+                raise SemanticContractError(
+                    "pricing/inventory context must use MARKET_CONTEXT"
+                )
+            return
+        if track.track_type != TrackType.PRODUCT.value:
+            raise SemanticContractError(
+                "production-stage context is valid only for H1-P product tracks"
+            )
+        if event.transmission_layer != TransmissionLayer.SUPPLY_READINESS.value:
+            raise SemanticContractError(
+                "production-stage context must use SUPPLY_READINESS"
+            )
+        if event.decision_question not in PRODUCTION_CONTEXT_DECISIONS:
+            raise SemanticContractError(
+                "production-stage context may inform only TTM or commercialization visibility"
+            )
+        _validate_production_stage_context(event)
         return
 
     if track.track_type == TrackType.PRODUCT.value:

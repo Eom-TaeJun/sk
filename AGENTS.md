@@ -7,10 +7,12 @@ Build a traceable decision-intelligence workflow that uses public information to
 ## Current phase
 
 - Vertical Slice and 2025→2026 Temporal Update: implemented and preserved
-- Architecture: runtime-agnostic, capability-first
+- Architecture: whole-project decision domains frozen; runtime-agnostic and capability-first
 - H1 Gates 1–5: human-approved and frozen as separate product-commercialization (H1-P) and customer/platform-realization (H1-C) strata
-- Next approved task: implement only the H1 measurement contract and deterministic validation layer with synthetic or tiny hand-authored fixtures
-- H1 source collection, candidate-outcome classification and empirical execution: not yet approved
+- H1 measurement contract, deterministic validation, 24-Track registry and 4-Track real-data pilot: implemented and preserved
+- H1-P now distinguishes customer/commercial acceptance from supply readiness; production stage is context only
+- Next approved task: collect the full frozen H1 primary-source corpus across the 24 pre-registered Tracks under the revised economic and business interpretation contract
+- H1 metrics, lead/lag, realization rates, outcome analysis and verdict: not yet approved; require Gate 6 dataset freeze
 - H2: only after a credible H1 minimum pipeline
 - H3: conceptual/`KNOWN_UNKNOWN` until public evidence is sufficient
 - Interrupted H1 implementation: removed from the current baseline and preserved only in Git history and its completed execution-plan note
@@ -23,6 +25,7 @@ Do not treat deleted, historical, or interrupted H1 experiment artifacts as appr
 - Architecture decisions and supersessions: `00_MASTER/02_ARCHITECTURE_DECISIONS.md`
 - Model/program/runtime allocation: `00_MASTER/03_WHERE_TO_USE_WHAT.md`
 - Detailed agent architecture and future eval interface: `docs/agent_architecture.md`
+- Whole-project decision domains, admission gate and module activation: `docs/decision_architecture.md`
 - Implemented Vertical Slice plan: `docs/implementation_plan.md`
 - Active/completed task records: `docs/exec-plans/`
 - Source limitations: `docs/research_validation_gaps.md`
@@ -67,7 +70,7 @@ python -m src.pipeline --workspace . --scenario data/raw/scenarios/hbm4_temporal
 
 No Agent Evaluation runner is implemented yet. Do not fabricate eval results or document a command that does not exist.
 
-Without explicit approval, do not collect or run empirical H1, start H2/H3, add an Agent Execution Harness/runtime, or add dashboards/databases. The only approved H1 implementation scope is the frozen measurement contract and deterministic validation layer using synthetic or tiny hand-authored fixtures.
+The only approved next H1 scope is primary-source corpus collection across the frozen 24-Track registry. Do not calculate H1 metrics, lead/lag, realization rate or verdict before a human Gate 6 dataset freeze. Without explicit approval, do not start H2/H3, add a Decision Engine, Agent Execution Harness/runtime, dashboards or databases.
 
 ## Definition of done for a Codex task
 

@@ -63,3 +63,17 @@
 - AI가 수행한 일: 공식 Source 후보 탐색, excerpt/locator 보존, Atomic Event/classification 후보와 stress log 구조화, deterministic test 작성
 - 사람이 판단할 일: HOLD admissibility, production-stage taxonomy, design-in 범위, empirical dataset freeze와 H1-P/H1-C verdict
 - SK하이닉스 직무 연결: Qualification/TTM/Commercialization stage 판별, Customer Priority의 supplier-CSP bridge 통제, Demand Forecast에서 CAPEX scope 과대해석 방지
+
+## Whole-Project Decision Architecture Freeze + H1 Refinement 수행 Fact
+
+- 범위: 기존 Vertical Slice, Temporal Update, H1 Gates 1–5, 24-Track registry와 4-Track pilot을 보존하면서 H1을 전체 semiconductor decision-intelligence architecture의 첫 empirical module로 재배치
+- 직접 설계한 구조: Demand/Customer Economics, Product Commercialization, Competition, Ecosystem Dependency, Supply Constraints, Raw Materials/Logistics, Macro/Policy/Geopolitics, Product Mix/Opportunity Cost의 8개 domain과 module activation gate를 문서 계약으로 고정
+- Dataset 통제: 새 변수는 economic state, transmission path, analytical role, uncertainty, affected decision, adjustability, competing explanation, invalidation의 8개 질문에 답해야 empirical dataset에 들어가도록 admission rule을 정의
+- Decision 번역: Evidence와 conceptual Decision Impact를 분리하고, 의사결정을 Strategic/highly committed, Tactical/partially adjustable, Commercial/highly adjustable로 나눠 공개정보가 실제로 바꿀 수 있는 범위를 제한
+- 실제 Pilot 실패에서 수정한 계약: volume-production 문구를 supply commitment 또는 current O1로 오인할 수 있었던 stress를 `PRODUCTION_STAGE_CONTEXT`/`SUPPLY_READINESS`로 분리. readiness, planned, mass-production start, volume-production start, ramping 5단계만 CONTEXT로 허용
+- 보존한 경계: 생산 단계는 H1-P signal ranking·O1·qualification·order·demand volume이 아니며, TTM/Commercialization Visibility의 공급 준비 맥락만 제공. 기존 pilot Event/hash/HOLD는 소급 수정하지 않음
+- H1-C 수정: broad CAPEX/infrastructure investment context와 announcement/preview/limited/GA/installed operational deployment를 별도 정보 상태로 명시
+- 검증: 신규 production taxonomy의 valid/invalid stage wording, role, Track, layer, decision scope, observation-assessment 제외를 synthetic regression으로 검증. 전체 suite와 기존 pipeline 결과는 해당 task execution note에 기록
+- AI가 수행한 일: 문서·코드 계약의 불일치 탐지, taxonomy/validator/schema/test 초안과 회귀 실행
+- 사람이 통제한 일: whole-project domain과 H1 재배치 승인, 향후 Track admissibility와 Gate 6 dataset freeze, H1/H2/H3 해석 및 business recommendation
+- 주장하지 않은 것: H1 신호 우열, lead/lag, realization rate, 수요 예측 정확도, 시장점유율, 내부 가격·물량·CAPA 또는 H2/H3 결론

@@ -8,6 +8,12 @@
 어떤 신호가 실제 수요 또는 binding constraint 가시성을 개선하는지 검증해
 business-decision context로 번역하는 것이다.
 
+이 시스템은 H1 predictor나 HBM commercialization tracker 하나가 아니다. H1은
+Demand/Customer Economics부터 Product Mix/Opportunity Cost까지 이어지는 전체
+decision architecture의 첫 empirical module이다. 분석 domain, dataset admission gate,
+decision flexibility와 module activation의 canonical contract는
+`docs/decision_architecture.md`가 소유한다.
+
 핵심 analytical capability는 다음이다.
 
 > 서로 다른 시간축과 신뢰도의 고객·시장·기술·공급 정보를
@@ -346,6 +352,20 @@ Overestimate:
 Underestimate:
 allocation 실패 / TTM 손실 / 전략고객 관계 악화
 
+### Decision relevance와 조정 가능성
+
+새 변수나 dataset은 economic state, transmission path, analytical role, uncertainty,
+affected decision, adjustability, competing explanation, invalidation condition을 모두
+설명할 수 있을 때만 채택한다. Evidence 자체와 사람이 검토하는 conceptual
+`Decision Impact`는 별도 record로 유지한다.
+
+- Strategic/highly committed: fab, cleanroom, long-lead equipment
+- Tactical/partially adjustable: install, ramp, wafer/product mix, packaging, utilization
+- Commercial/highly adjustable: monitoring, sample, qualification, marketing, platform, TTM
+
+공개정보는 내부 allocation 결정을 대신하지 않는다. 어느 판단을 준비·우선순위화하고
+어떤 내부정보를 추가 확인해야 하는지까지 번역한다.
+
 ---
 
 ## 11. Signal Dictionary — 필수
@@ -570,4 +590,14 @@ Decision Memo → 현업 판단 번역
 
 첫 Vertical Slice와 Temporal Update는 완료되어 보존한다. 새 작업은 루트 `AGENTS.md`를 먼저 읽고 필요한 상세 문서만 추가로 로드한다.
 
-H1 empirical design의 Gates 1–5는 승인·동결되었다. 다음 승인 작업은 **synthetic 또는 tiny hand-authored fixture를 이용한 H1 measurement contract와 deterministic validation layer 구현**이다. Historical Source 수집, candidate outcome 분류, empirical H1 실행, H2, orchestration runtime 또는 dashboard는 아직 승인되지 않았다.
+H1 empirical design의 Gates 1–5, measurement contract, deterministic validation layer,
+24-Track pre-registration과 4-Track real-data pilot은 구현·보존되었다. H1-P는
+customer/commercial acceptance와 supply readiness를 분리하고, H1-C는 broad investment
+context와 operational deployment를 분리한다. Production-stage record는 CONTEXT이며
+customer order, qualification, O1 또는 demand volume을 증명하지 않는다.
+
+다음 승인 작업은 **revised economic and business interpretation contract 아래 24개
+pre-registered Track의 full frozen H1 primary-source corpus를 수집하는 것**이다. 이
+수집 작업은 outcome-neutral Gate 6 dataset freeze를 만들기 위한 것이며 H1 metric,
+lead/lag, realization rate 또는 verdict 계산을 포함하지 않는다. H2/H3, Decision Engine,
+orchestration runtime, dashboard와 database 확장은 아직 승인되지 않았다.
