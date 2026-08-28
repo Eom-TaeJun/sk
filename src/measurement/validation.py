@@ -137,12 +137,18 @@ def _validate_production_stage_context(event: EventRecord) -> None:
 
     text = f"{event.claim} {event.excerpt}"
     future_terms = {
-        "plans to begin",
-        "plan to begin",
-        "planned to begin",
-        "will begin",
-        "expected to begin",
-        "scheduled to begin",
+        "plans to begin mass production",
+        "plan to begin mass production",
+        "planned to begin mass production",
+        "will begin mass production",
+        "expected to begin mass production",
+        "scheduled to begin mass production",
+        "plans to begin volume production",
+        "plan to begin volume production",
+        "planned to begin volume production",
+        "will begin volume production",
+        "expected to begin volume production",
+        "scheduled to begin volume production",
         "plans to ramp",
         "plan to ramp",
         "will ramp",
@@ -157,6 +163,8 @@ def _validate_production_stage_context(event: EventRecord) -> None:
         "PRODUCTION_PLANNED": {
             "plans to begin mass production",
             "plan to begin mass production",
+            "planned to begin mass production",
+            "plans to mass produce",
             "will begin mass production",
             "expected to begin mass production",
             "scheduled to begin mass production",
@@ -167,6 +175,9 @@ def _validate_production_stage_context(event: EventRecord) -> None:
             "expected to begin volume production",
             "scheduled to begin volume production",
             "volume production is planned",
+            "mass production is slated",
+            "plans to ramp",
+            "plan to ramp",
         },
         "MASS_PRODUCTION_STARTED": {
             "mass production began",
@@ -176,6 +187,7 @@ def _validate_production_stage_context(event: EventRecord) -> None:
             "began mass production",
             "started mass production",
             "commenced mass production",
+            "has begun mass production",
         },
         "VOLUME_PRODUCTION_STARTED": {
             "volume production began",
@@ -185,6 +197,7 @@ def _validate_production_stage_context(event: EventRecord) -> None:
             "began volume production",
             "started volume production",
             "commenced volume production",
+            "has begun volume production",
         },
         "RAMPING": {
             "production is ramping",
@@ -261,6 +274,14 @@ def validate_event_for_track(event: EventRecord, track: TrackRecord) -> None:
                 raise SemanticContractError("HBM_SAMPLE must use MEMORY_PRODUCT")
             if "qualification" in event.signal_subtype.lower():
                 raise SemanticContractError("sample cannot be qualification completion")
+            text = f"{event.claim} {event.excerpt}"
+            if not _contains_any(
+                text,
+                {"sample", "samples", "sampling", "sampled"},
+            ):
+                raise SemanticContractError(
+                    "HBM_SAMPLE requires explicit sample or sampling wording"
+                )
         elif event.signal_class in {
             "QUALIFICATION_STAGE",
             "DESIGN_IN",
@@ -331,6 +352,23 @@ def validate_event_for_track(event: EventRecord, track: TrackRecord) -> None:
             raise SemanticContractError(
                 "PLANNED or PREVIEW cannot become P1 operational realization"
             )
+        if event.signal_subtype == "INSTALLED_OPERATIONAL":
+            text = f"{event.claim} {event.excerpt}"
+            if not _contains_any(
+                text,
+                {
+                    "installed and operational",
+                    "is operational",
+                    "are operational",
+                    "in operation",
+                    "in use",
+                    "support our current",
+                    "supports our current",
+                },
+            ):
+                raise SemanticContractError(
+                    "installed disclosure alone cannot become operational realization"
+                )
 
     if event.signal_class == "O1_COMMERCIAL_REALIZATION":
         if event.signal_subtype not in O1_SUBTYPES:
@@ -352,6 +390,9 @@ def validate_event_for_track(event: EventRecord, track: TrackRecord) -> None:
                 "customer supply commenced",
                 "customer supply began",
                 "for supply to a customer",
+                "has shipped commercial products to customers",
+                "high-volume shipments for our lead customer",
+                "has begun volume shipment",
             },
         ):
             raise SemanticContractError(

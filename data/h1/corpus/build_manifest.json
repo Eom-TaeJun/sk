@@ -1,0 +1,44 @@
+{
+  "collection_status_content_hash": "0EE5DA60774CD14D875D4F0D72B7766661B5B1075BD24B356E53582B9CC261A0",
+  "content_hash": "F4A6817C2D6BD76C723E3D03DA5A24EABCA854A0CBD42902503F9B6ECFD38037",
+  "counts": {
+    "adversarially_verified_tracks": 24,
+    "capability_evidence_records": 8,
+    "collection_statuses": {
+      "COLLECTED_WITH_HOLD_ONLY": 1,
+      "COLLECTED_WITH_PRIMARY_EVIDENCE": 23
+    },
+    "event_statuses": {
+      "ACCEPTED": 63,
+      "HOLD": 12
+    },
+    "events": 75,
+    "future_module_candidates": 4,
+    "sources": 51,
+    "tracks": 24
+  },
+  "coverage_content_hash": "F3227D542A0AB19503A749FD2C4F75837D2D082D09874641B5C49940B8CC31EE",
+  "created_at": "2026-08-28T17:00:00+09:00",
+  "dataset_content_hash": "90F4A310AF8A2B38FFA7BF53C573421EF7021CC8E9820CE1F5177A5192AA4A30",
+  "empirical_h1_calculated": false,
+  "file_hashes": {
+    "application_evidence/capability_evidence_ledger.json": "66A5C47D5841B283ED49EFB833BC26FDE6C2A5E7F433B2DDD23FB9775E5317D4",
+    "data/h1/corpus/adversarial_verification.json": "23D1120CA300E7B9E16965B9A0BFFE00F6B1260B466FF8F89D6549FAD87A2FEF",
+    "data/h1/corpus/coverage_report.json": "E4AD3826DD2A8BB1523DEDCE452DCB574A3BAD65E9314ED3BF5084E57C6F0EB5",
+    "data/h1/corpus/events.json": "DA81E2D09FAD31641A6BD7929EE19CEA58288649F282A820115C455B5D81E4D0",
+    "data/h1/corpus/future_module_queue.json": "EAE1E282CE7A38328D1D657066E045B871B302D08C6DAF4EEA0E48A2F9A5929B",
+    "data/h1/corpus/source_registry.json": "0662777D9E3636FD8351FDF9D55673925A59F84ED73A579670033A9AE75EA6DD",
+    "data/h1/corpus/track_collection_status.json": "C3A589C225B86DCB3039420F22FAA9DB970EE880AF3340F81961AAF738B8B553",
+    "data/h1/corpus/validation_results.json": "18EC21F9060FB4CC1FAF4AAC752E06B1F12161DF093290393602DF8D2B612D97"
+  },
+  "gate6_frozen": false,
+  "immutable_pilot": {
+    "dataset_content_hash": "1B68F3C32F684380C1B3CE7671250B64E7376CAAA2A6E4683F1FAAF6C2CFD5A3",
+    "source_registry_content_hash": "C09C9B152B100D593DD6F5B6FDBA61F81319FD410E79BE086EE33B3459B6738B"
+  },
+  "input_path": "data/h1/corpus/collection_input.json",
+  "manifest_version": "H1-CORPUS-BUILD-1.0.0",
+  "registry_content_hash": "A3BFDBDD8178E203C63635824985888C76DA10818D64B3E869EC5E30E4A26BB1",
+  "registry_freeze_content_hash": "8D973F950CDFB9636CACCB7FE00E0565FB7BECEE2AB043AE1F3224EA8B8B43FB",
+  "source_registry_content_hash": "D85410B5B881F09841116FC3E57E3EFD8F370DD9915A1DFBBB27B9997E5FC289"
+}

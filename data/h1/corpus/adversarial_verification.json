@@ -1,0 +1,340 @@
+{
+  "collector_actor": "parallel_primary_source_collectors",
+  "created_at": "2026-08-28T17:00:00+09:00",
+  "manifest_version": "H1-ADVERSARIAL-VERIFICATION-1.0.0",
+  "records": [
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "C01-AZ-H100",
+      "verdict": "PASS",
+      "verifier_note": "Official platform stages were retained without inferring utilization, named HBM supplier, or SKU-level CAPEX."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "C02-AZ-H200",
+      "verdict": "PASS",
+      "verifier_note": "Official platform stages were retained without inferring utilization, named HBM supplier, or SKU-level CAPEX."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [
+        "EVT-C03-20240410-H100-RETRO-GA-HOLD"
+      ],
+      "outcome_interpretation": "PASS_WITH_HOLD",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS_WITH_HOLD",
+      "track_id": "C03-GCP-H100",
+      "verdict": "PASS_WITH_HOLD",
+      "verifier_note": "Held the retrospective GA month because it conflicts with the contemporaneous future-GA statement; no backdating."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "C04-GCP-H200",
+      "verdict": "PASS",
+      "verifier_note": "Official platform stages were retained without inferring utilization, named HBM supplier, or SKU-level CAPEX."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "C05-AWS-H100",
+      "verdict": "PASS",
+      "verifier_note": "Official platform stages were retained without inferring utilization, named HBM supplier, or SKU-level CAPEX."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "C06-AWS-H200",
+      "verdict": "PASS",
+      "verifier_note": "Official platform stages were retained without inferring utilization, named HBM supplier, or SKU-level CAPEX."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "C07-OCI-H100",
+      "verdict": "PASS",
+      "verifier_note": "Official platform stages were retained without inferring utilization, named HBM supplier, or SKU-level CAPEX."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "C08-OCI-H200",
+      "verdict": "PASS",
+      "verifier_note": "Official platform stages were retained without inferring utilization, named HBM supplier, or SKU-level CAPEX."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "C09-META-H100",
+      "verdict": "PASS",
+      "verifier_note": "Official platform stages were retained without inferring utilization, named HBM supplier, or SKU-level CAPEX."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "C10-AZ-GB200",
+      "verdict": "PASS",
+      "verifier_note": "Official platform stages were retained without inferring utilization, named HBM supplier, or SKU-level CAPEX."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "C11-GCP-B200",
+      "verdict": "PASS",
+      "verifier_note": "Official platform stages were retained without inferring utilization, named HBM supplier, or SKU-level CAPEX."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "C12-AWS-B200",
+      "verdict": "PASS",
+      "verifier_note": "Official platform stages were retained without inferring utilization, named HBM supplier, or SKU-level CAPEX."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "C13-OCI-B200",
+      "verdict": "PASS",
+      "verifier_note": "Official platform stages were retained without inferring utilization, named HBM supplier, or SKU-level CAPEX."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [
+        "EVT-C14-20250929-GB200-INSTALLED-HOLD"
+      ],
+      "outcome_interpretation": "PASS_WITH_HOLD",
+      "same_origin": "PASS",
+      "scope": "PASS_WITH_HOLD",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "C14-META-GB200",
+      "verdict": "PASS_WITH_HOLD",
+      "verifier_note": "A rack caption proves configuration, not operational workload; installed-to-operational promotion was rejected."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [
+        "EVT-P01-20220608-QUAL-EVAL-HOLD"
+      ],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS_WITH_HOLD",
+      "timestamp": "PASS",
+      "track_id": "P01-SKH-HBM3",
+      "verdict": "PASS_WITH_HOLD",
+      "verifier_note": "Performance evaluation was not accepted as qualification COMPLETE."
+    },
+    {
+      "forward_looking": "PASS_WITH_HOLD",
+      "hold_event_ids": [
+        "EVT-P02-20230821-PRODUCTION-PLAN",
+        "EVT-P02-20240319-FUTURE-CUSTOMER-SUPPLY"
+      ],
+      "outcome_interpretation": "PASS_WITH_HOLD",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS_WITH_HOLD",
+      "timestamp": "PASS",
+      "track_id": "P02-SKH-HBM3E",
+      "verdict": "PASS_WITH_HOLD",
+      "verifier_note": "Immutable Pilot HOLD records remain; new R2 records move production into CONTEXT without creating O1."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [
+        "EVT-P03-20241231-O1-START-HOLD"
+      ],
+      "outcome_interpretation": "PASS_WITH_HOLD",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS_WITH_HOLD",
+      "track_id": "P03-SEC-HBM3E",
+      "verdict": "PASS_WITH_HOLD",
+      "verifier_note": "Expanded current supply was retained as corroboration, not an exact first O1 start date."
+    },
+    {
+      "forward_looking": "PASS_WITH_HOLD",
+      "hold_event_ids": [
+        "EVT-P04-20240226-H200-DESIGN-IN",
+        "EVT-P04-20240226-PRODUCTION",
+        "EVT-P04-20250318-O1-START-HOLD"
+      ],
+      "outcome_interpretation": "PASS_WITH_HOLD",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS_WITH_HOLD",
+      "timestamp": "PASS",
+      "track_id": "P04-MU-HBM3E",
+      "verdict": "PASS_WITH_HOLD",
+      "verifier_note": "Production, planned design-in, and current shipping remain distinct; the exact first commercial shipment stays HOLD."
+    },
+    {
+      "forward_looking": "PASS_WITH_HOLD",
+      "hold_event_ids": [
+        "EVT-P05-20250319-PRODUCTION-PREP-HOLD"
+      ],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS_WITH_HOLD",
+      "timestamp": "PASS",
+      "track_id": "P05-SKH-HBM4",
+      "verdict": "PASS_WITH_HOLD",
+      "verifier_note": "A target to complete production preparation was not promoted to observed readiness."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "P06-SEC-HBM4",
+      "verdict": "PASS",
+      "verifier_note": "Official product stages were retained without inferring customer volume, price, share, or qualification completion."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "P07-MU-HBM4",
+      "verdict": "PASS",
+      "verifier_note": "Official product stages were retained without inferring customer volume, price, share, or qualification completion."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "P08-SKH-HBM4E",
+      "verdict": "PASS",
+      "verifier_note": "Official product stages were retained without inferring customer volume, price, share, or qualification completion."
+    },
+    {
+      "forward_looking": "PASS",
+      "hold_event_ids": [],
+      "outcome_interpretation": "PASS",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS",
+      "timestamp": "PASS",
+      "track_id": "P09-SEC-HBM4E",
+      "verdict": "PASS",
+      "verifier_note": "Official product stages were retained without inferring customer volume, price, share, or qualification completion."
+    },
+    {
+      "forward_looking": "PASS_WITH_HOLD",
+      "hold_event_ids": [
+        "EVT-P10-20260624-DEVELOPMENT-AS-SAMPLE-HOLD",
+        "EVT-P10-20260624-PRODUCTION-PLAN-HOLD"
+      ],
+      "outcome_interpretation": "PASS_WITH_HOLD",
+      "same_origin": "PASS",
+      "scope": "PASS",
+      "source_primacy": "PASS",
+      "stage_inflation": "PASS_WITH_HOLD",
+      "timestamp": "PASS",
+      "track_id": "P10-MU-HBM4E",
+      "verdict": "PASS_WITH_HOLD",
+      "verifier_note": "Development and a future production year do not establish sample delivery, current readiness, or O1."
+    }
+  ],
+  "verifier_actor": "root_adversarial_verifier"
+}

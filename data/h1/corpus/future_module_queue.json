@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-08-28T17:00:00+09:00",
+  "queue_version": "FUTURE-MODULE-QUEUE-1.0.0",
+  "records": [
+    {
+      "activation_condition": "Activate only in the approved H2 supply/production module.",
+      "candidate_id": "FUT-H2-NVDA-BLACKWELL-CONSTRAINT",
+      "domain": "SUPPLY_PRODUCTION",
+      "observed_fact": "NVIDIA disclosed a Blackwell mask change and system supply constraints.",
+      "possible_decision_relevance": "Monitor constraint migration and request internal supply-risk verification.",
+      "possible_transmission_path": "GPU architecture and production schedule to platform availability and upstream memory demand timing.",
+      "source_ids": [
+        "SRC-NVDA-20241120-BLACKWELL-CONSTRAINT"
+      ],
+      "status": "QUEUED",
+      "why_outside_h1": "The disclosure concerns supply/production constraints rather than H1 signal-quality measurement."
+    },
+    {
+      "activation_condition": "Activate after a Competition module contract and source-scope rules are approved.",
+      "candidate_id": "FUT-COMP-SEC-HBM3E-DELAY",
+      "domain": "COMPETITION",
+      "observed_fact": "Samsung disclosed that HBM3E business with a major customer was delayed.",
+      "possible_decision_relevance": "Monitor competitor qualification and commercial timing without inferring share.",
+      "possible_transmission_path": "Competitor commercialization timing to customer selection and relative market position.",
+      "source_ids": [
+        "SRC-SEC-20241008-HBM3E-DELAY"
+      ],
+      "status": "QUEUED",
+      "why_outside_h1": "H1 retains the delay as counterevidence but does not perform competitive-position analysis."
+    },
+    {
+      "activation_condition": "Activate after an ecosystem-dependency module defines admissible entity links.",
+      "candidate_id": "FUT-ECOSYSTEM-ORCL-CAPACITY",
+      "domain": "ECOSYSTEM_DEPENDENCY",
+      "observed_fact": "Oracle disclosed company-level cloud capacity purchase contracts.",
+      "possible_decision_relevance": "Identify which dependency evidence would be needed before treating investment as operational capacity.",
+      "possible_transmission_path": "Cloud capacity contracting to infrastructure readiness and platform deployment.",
+      "source_ids": [
+        "SRC-ORCL-20230612-CAPEX-CAPACITY"
+      ],
+      "status": "QUEUED",
+      "why_outside_h1": "The source does not map the capacity contract to a frozen named platform."
+    },
+    {
+      "activation_condition": "Activate when H2 is approved and the event is independently reviewed.",
+      "candidate_id": "FUT-H2-HBM4E-PRODUCTION",
+      "domain": "SUPPLY_PRODUCTION",
+      "observed_fact": "Micron disclosed HBM4E development and a future volume-production expectation.",
+      "possible_decision_relevance": "Monitor production readiness while preserving development-stage uncertainty.",
+      "possible_transmission_path": "Product development to supply readiness and later commercialization.",
+      "source_ids": [
+        "SRC-MU-20260624-HBM4E-DEVELOPMENT"
+      ],
+      "status": "QUEUED",
+      "why_outside_h1": "The H1 Track records the disclosure as HOLD context; production economics and constraints belong to H2."
+    }
+  ]
+}

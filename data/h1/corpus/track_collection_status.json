@@ -1,0 +1,841 @@
+{
+  "content_hash": "0EE5DA60774CD14D875D4F0D72B7766661B5B1075BD24B356E53582B9CC261A0",
+  "created_at": "2026-08-28T17:00:00+09:00",
+  "manifest_version": "H1-COLLECTION-STATUS-1.0.0",
+  "records": [
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-C01-20230313-H100-PREVIEW",
+        "EVT-C01-20230807-H100-GA",
+        "EVT-C01-20240730-CAPEX"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Investment context and operational deployment remain separate; CAPEX is not allocated to the named platform and no HBM supplier is inferred.",
+      "source_family_searches": {
+        "official_constraint_or_delay": "SEARCHED_NOT_OBSERVED",
+        "official_platform_release": "FOUND",
+        "regulatory_or_earnings": "FOUND"
+      },
+      "source_ids": [
+        "SRC-AZ-20230313-ND-H100-PREVIEW",
+        "SRC-AZ-20230807-ND-H100-GA",
+        "SRC-MSFT-20240730-CAPEX"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "C01-AZ-H100"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-C02-20231115-H200-PLAN",
+        "EVT-C02-20240730-CAPEX",
+        "EVT-C02-20241002-H200-GA"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Investment context and operational deployment remain separate; CAPEX is not allocated to the named platform and no HBM supplier is inferred.",
+      "source_family_searches": {
+        "official_constraint_or_delay": "SEARCHED_NOT_OBSERVED",
+        "official_platform_release": "FOUND",
+        "regulatory_or_earnings": "FOUND"
+      },
+      "source_ids": [
+        "SRC-AZ-20241002-ND-H200-GA",
+        "SRC-MSFT-20231115-AZ-H200-PLAN",
+        "SRC-MSFT-20240730-CAPEX"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "C02-AZ-H200"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-C03-20230829-H100-PLAN",
+        "EVT-C03-20240410-H100-RETRO-GA-HOLD",
+        "EVT-C03-20250204-CAPEX"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Investment context and operational deployment remain separate; CAPEX is not allocated to the named platform and no HBM supplier is inferred.",
+      "source_family_searches": {
+        "official_constraint_or_delay": "SEARCHED_NOT_OBSERVED",
+        "official_platform_release": "FOUND",
+        "regulatory_or_earnings": "FOUND"
+      },
+      "source_ids": [
+        "SRC-ALPHABET-20250204-CAPEX",
+        "SRC-GCP-20230829-A3-H100-PLAN",
+        "SRC-GCP-20240410-A3-H100-RETRO-GA"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "C03-GCP-H100"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-C04-20241031-H200-PLAN",
+        "EVT-C04-20241213-H200-PREVIEW",
+        "EVT-C04-20241231-H200-GA-RETROSPECTIVE",
+        "EVT-C04-20250204-CAPEX"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Investment context and operational deployment remain separate; CAPEX is not allocated to the named platform and no HBM supplier is inferred.",
+      "source_family_searches": {
+        "official_constraint_or_delay": "SEARCHED_NOT_OBSERVED",
+        "official_platform_release": "FOUND",
+        "regulatory_or_earnings": "FOUND"
+      },
+      "source_ids": [
+        "SRC-ALPHABET-20250204-CAPEX",
+        "SRC-GCP-20241031-A3-ULTRA-PLAN",
+        "SRC-GCP-20241231-A3-ULTRA-PREVIEW",
+        "SRC-GCP-20250116-A3-ULTRA-GA"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "C04-GCP-H200"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-C05-20221231-CAPEX",
+        "EVT-C05-20230726-H100-GA"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Investment context and operational deployment remain separate; CAPEX is not allocated to the named platform and no HBM supplier is inferred.",
+      "source_family_searches": {
+        "official_constraint_or_delay": "SEARCHED_NOT_OBSERVED",
+        "official_platform_release": "FOUND",
+        "regulatory_or_earnings": "FOUND"
+      },
+      "source_ids": [
+        "SRC-AMZN-20230203-CAPEX",
+        "SRC-AWS-20230726-P5-H100-GA"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "C05-AWS-H100"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-C06-20221231-CAPEX",
+        "EVT-C06-20240909-H200-LIMITED",
+        "EVT-C06-20241202-H200-GA"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Investment context and operational deployment remain separate; CAPEX is not allocated to the named platform and no HBM supplier is inferred.",
+      "source_family_searches": {
+        "official_constraint_or_delay": "SEARCHED_NOT_OBSERVED",
+        "official_platform_release": "FOUND",
+        "regulatory_or_earnings": "FOUND"
+      },
+      "source_ids": [
+        "SRC-AMZN-20230203-CAPEX",
+        "SRC-AWS-20240909-P5E-H200-LIMITED",
+        "SRC-AWS-20241202-P5EN-H200-GA"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "C06-AWS-H200"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-C07-20230531-CAPEX",
+        "EVT-C07-20230612-INFRA-COMMITMENT",
+        "EVT-C07-20230919-H100-GA"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. The capacity contract is investment context, not negative evidence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Investment context and operational deployment remain separate; CAPEX is not allocated to the named platform and no HBM supplier is inferred.",
+      "source_family_searches": {
+        "official_constraint_or_delay": "SEARCHED_NOT_OBSERVED",
+        "official_platform_release": "FOUND",
+        "regulatory_or_earnings": "FOUND"
+      },
+      "source_ids": [
+        "SRC-OCI-20230919-H100-GA",
+        "SRC-ORCL-20230612-CAPEX-CAPACITY"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "C07-OCI-H100"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-C08-20230531-CAPEX",
+        "EVT-C08-20240911-H200-PLAN",
+        "EVT-C08-20241118-H200-GA"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. The capacity contract is investment context, not negative evidence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Investment context and operational deployment remain separate; CAPEX is not allocated to the named platform and no HBM supplier is inferred.",
+      "source_family_searches": {
+        "official_constraint_or_delay": "SEARCHED_NOT_OBSERVED",
+        "official_platform_release": "FOUND",
+        "regulatory_or_earnings": "FOUND"
+      },
+      "source_ids": [
+        "SRC-OCI-20240911-H200-PLAN",
+        "SRC-OCI-20241118-H200-GA",
+        "SRC-ORCL-20230612-CAPEX-CAPACITY"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "C08-OCI-H200"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-C09-20231231-CAPEX-GUIDANCE",
+        "EVT-C09-20240312-H100-OPERATIONAL"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Investment context and operational deployment remain separate; CAPEX is not allocated to the named platform and no HBM supplier is inferred.",
+      "source_family_searches": {
+        "official_constraint_or_delay": "SEARCHED_NOT_OBSERVED",
+        "official_platform_release": "FOUND",
+        "regulatory_or_earnings": "FOUND"
+      },
+      "source_ids": [
+        "SRC-META-20240201-CAPEX",
+        "SRC-META-20240312-H100-OPERATIONAL"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "C09-META-H100"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-C10-20240730-CAPEX",
+        "EVT-C10-20241119-GB200-PREVIEW",
+        "EVT-C10-20250318-GB200-GA"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Investment context and operational deployment remain separate; CAPEX is not allocated to the named platform and no HBM supplier is inferred.",
+      "source_family_searches": {
+        "official_constraint_or_delay": "SEARCHED_NOT_OBSERVED",
+        "official_platform_release": "FOUND",
+        "regulatory_or_earnings": "FOUND"
+      },
+      "source_ids": [
+        "SRC-AZ-20241119-GB200-PREVIEW",
+        "SRC-AZ-20250318-GB200-GA",
+        "SRC-MSFT-20240730-CAPEX",
+        "SRC-NVDA-20241120-BLACKWELL-CONSTRAINT"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "C10-AZ-GB200"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-C11-20250131-B200-PREVIEW",
+        "EVT-C11-20250204-CAPEX",
+        "EVT-C11-20250318-B200-GA",
+        "EVT-C11-20250318-GB200-PREVIEW"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Investment context and operational deployment remain separate; CAPEX is not allocated to the named platform and no HBM supplier is inferred.",
+      "source_family_searches": {
+        "official_constraint_or_delay": "SEARCHED_NOT_OBSERVED",
+        "official_platform_release": "FOUND",
+        "regulatory_or_earnings": "FOUND"
+      },
+      "source_ids": [
+        "SRC-ALPHABET-20250204-CAPEX",
+        "SRC-GCP-20250131-A4-B200-PREVIEW",
+        "SRC-GCP-20250318-A4-B200-GA",
+        "SRC-NVDA-20241120-BLACKWELL-CONSTRAINT"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "C11-GCP-B200"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-C12-20221231-CAPEX",
+        "EVT-C12-20250515-B200-LIMITED",
+        "EVT-C12-20250709-GB200-GA"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Investment context and operational deployment remain separate; CAPEX is not allocated to the named platform and no HBM supplier is inferred.",
+      "source_family_searches": {
+        "official_constraint_or_delay": "SEARCHED_NOT_OBSERVED",
+        "official_platform_release": "FOUND",
+        "regulatory_or_earnings": "FOUND"
+      },
+      "source_ids": [
+        "SRC-AMZN-20230203-CAPEX",
+        "SRC-AWS-20250515-P6-B200-LIMITED",
+        "SRC-AWS-20250709-P6E-GB200-GA",
+        "SRC-NVDA-20241120-BLACKWELL-CONSTRAINT"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "C12-AWS-B200"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-C13-20230531-CAPEX",
+        "EVT-C13-20240911-BLACKWELL-PLAN"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. The capacity contract is investment context, not negative evidence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Investment context and operational deployment remain separate; CAPEX is not allocated to the named platform and no HBM supplier is inferred.",
+      "source_family_searches": {
+        "official_constraint_or_delay": "SEARCHED_NOT_OBSERVED",
+        "official_platform_release": "FOUND",
+        "regulatory_or_earnings": "FOUND"
+      },
+      "source_ids": [
+        "SRC-NVDA-20241120-BLACKWELL-CONSTRAINT",
+        "SRC-OCI-20240911-BLACKWELL-PLAN",
+        "SRC-ORCL-20230612-CAPEX-CAPACITY"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "C13-OCI-B200"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-C14-20231231-CAPEX-GUIDANCE",
+        "EVT-C14-20250929-GB200-INSTALLED-HOLD"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Investment context and operational deployment remain separate; CAPEX is not allocated to the named platform and no HBM supplier is inferred.",
+      "source_family_searches": {
+        "official_constraint_or_delay": "SEARCHED_NOT_OBSERVED",
+        "official_platform_release": "FOUND",
+        "regulatory_or_earnings": "FOUND"
+      },
+      "source_ids": [
+        "SRC-META-20240201-CAPEX",
+        "SRC-META-20250929-GB200-INSTALLED",
+        "SRC-NVDA-20241120-BLACKWELL-CONSTRAINT"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "C14-META-GB200"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-P01-20220608-PRODUCTION-CONTEXT",
+        "EVT-P01-20220608-QUAL-EVAL-HOLD"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Customer/commercial acceptance and supply-readiness context remain separate; production does not become O1.",
+      "source_family_searches": {
+        "official_counterparty": "SEARCHED_NOT_OBSERVED",
+        "regulatory_or_earnings": "FOUND",
+        "supplier_product_or_ir": "FOUND"
+      },
+      "source_ids": [
+        "SRC-SKH-20220608-HBM3"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "P01-SKH-HBM3"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-P02-20230821-PRODUCTION-CONTEXT-R2",
+        "EVT-P02-20230821-PRODUCTION-PLAN",
+        "EVT-P02-20230821-SAMPLE-EVAL",
+        "EVT-P02-20240319-FUTURE-CUSTOMER-SUPPLY",
+        "EVT-P02-20240319-PRODUCTION-CONTEXT-R2"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Customer/commercial acceptance and supply-readiness context remain separate; production does not become O1.",
+      "source_family_searches": {
+        "official_counterparty": "SEARCHED_NOT_OBSERVED",
+        "regulatory_or_earnings": "FOUND",
+        "supplier_product_or_ir": "FOUND"
+      },
+      "source_ids": [
+        "SRC-SKH-20230821-HBM3E-SAMPLE",
+        "SRC-SKH-20240319-HBM3E-PRODUCTION"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "P02-SKH-HBM3E"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-P03-20240227-PRODUCTION-PLAN",
+        "EVT-P03-20240227-SAMPLE",
+        "EVT-P03-20241231-O1-START-HOLD",
+        "EVT-P03-20241231-SUPPLY-CORROBORATION"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_note": "An official issuer disclosure explicitly reported a customer-business delay; product/customer scope remains limited.",
+      "negative_search_result": "EXPLICIT_NEGATIVE_OR_DELAY",
+      "negative_source_ids": [
+        "SRC-SEC-20241008-HBM3E-DELAY"
+      ],
+      "notes": "Customer/commercial acceptance and supply-readiness context remain separate; production does not become O1.",
+      "source_family_searches": {
+        "official_counterparty": "SEARCHED_NOT_OBSERVED",
+        "regulatory_or_earnings": "FOUND",
+        "supplier_product_or_ir": "FOUND"
+      },
+      "source_ids": [
+        "SRC-SEC-20240227-HBM3E-SAMPLE",
+        "SRC-SEC-20241008-HBM3E-DELAY",
+        "SRC-SEC-20250131-HBM3E-SUPPLY"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "P03-SEC-HBM3E"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-P04-20230726-SAMPLING",
+        "EVT-P04-20230927-QUAL-UNDERWAY",
+        "EVT-P04-20231220-QUAL-FINAL",
+        "EVT-P04-20240226-H200-DESIGN-IN",
+        "EVT-P04-20240226-PRODUCTION",
+        "EVT-P04-20240226-PRODUCTION-CONTEXT-R2",
+        "EVT-P04-20250318-O1-START-HOLD",
+        "EVT-P04-20250318-SHIPPING-CORROBORATION"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Customer/commercial acceptance and supply-readiness context remain separate; production does not become O1.",
+      "source_family_searches": {
+        "official_counterparty": "SEARCHED_NOT_OBSERVED",
+        "regulatory_or_earnings": "FOUND",
+        "supplier_product_or_ir": "FOUND"
+      },
+      "source_ids": [
+        "SRC-MU-20230726-HBM3E-SAMPLE",
+        "SRC-MU-20230927-HBM3E-QUAL",
+        "SRC-MU-20231220-HBM3E-QUAL-FINAL",
+        "SRC-MU-20240226-HBM3E-PRODUCTION",
+        "SRC-MU-20250318-HBM3E-SHIPPING"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "P04-MU-HBM3E"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-P05-20250319-PRODUCTION-PREP-HOLD",
+        "EVT-P05-20250319-QUAL-PLANNED",
+        "EVT-P05-20250319-SAMPLE",
+        "EVT-P05-20260630-O1"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Customer/commercial acceptance and supply-readiness context remain separate; production does not become O1.",
+      "source_family_searches": {
+        "official_counterparty": "SEARCHED_NOT_OBSERVED",
+        "regulatory_or_earnings": "FOUND",
+        "supplier_product_or_ir": "FOUND"
+      },
+      "source_ids": [
+        "SRC-SKH-20250319-HBM4-SAMPLE",
+        "SRC-SKH-20260729-HBM4-MASS-SHIPMENT"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "P05-SKH-HBM4"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-P06-20251030-SAMPLE",
+        "EVT-P06-20260129-QUAL-FINAL",
+        "EVT-P06-20260212-O1",
+        "EVT-P06-20260212-PRODUCTION"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Customer/commercial acceptance and supply-readiness context remain separate; production does not become O1.",
+      "source_family_searches": {
+        "official_counterparty": "SEARCHED_NOT_OBSERVED",
+        "regulatory_or_earnings": "FOUND",
+        "supplier_product_or_ir": "FOUND"
+      },
+      "source_ids": [
+        "SRC-SEC-20251030-HBM4-SAMPLE",
+        "SRC-SEC-20260129-HBM4-QUAL-FINAL",
+        "SRC-SEC-20260212-HBM4-COMMERCIAL"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "P06-SEC-HBM4"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-P07-20250610-PRODUCTION-PLAN",
+        "EVT-P07-20250610-SAMPLE",
+        "EVT-P07-20260316-O1"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Customer/commercial acceptance and supply-readiness context remain separate; production does not become O1.",
+      "source_family_searches": {
+        "official_counterparty": "SEARCHED_NOT_OBSERVED",
+        "regulatory_or_earnings": "FOUND",
+        "supplier_product_or_ir": "FOUND"
+      },
+      "source_ids": [
+        "SRC-MU-20250610-HBM4-SAMPLE",
+        "SRC-MU-20260316-HBM4-SHIPMENT"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "P07-MU-HBM4"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-P08-20260618-SAMPLE"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Customer/commercial acceptance and supply-readiness context remain separate; production does not become O1.",
+      "source_family_searches": {
+        "official_counterparty": "SEARCHED_NOT_OBSERVED",
+        "regulatory_or_earnings": "FOUND",
+        "supplier_product_or_ir": "FOUND"
+      },
+      "source_ids": [
+        "SRC-SKH-20260618-HBM4E-SAMPLE"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "P08-SKH-HBM4E"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-P09-20260529-PRODUCTION-PLAN",
+        "EVT-P09-20260529-SAMPLE"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Customer/commercial acceptance and supply-readiness context remain separate; production does not become O1.",
+      "source_family_searches": {
+        "official_counterparty": "SEARCHED_NOT_OBSERVED",
+        "regulatory_or_earnings": "FOUND",
+        "supplier_product_or_ir": "FOUND"
+      },
+      "source_ids": [
+        "SRC-SEC-20260529-HBM4E-SAMPLE"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "P09-SEC-HBM4E"
+    },
+    {
+      "collection_status": "COLLECTED_WITH_HOLD_ONLY",
+      "contradictory_search_status": "COMPLETE",
+      "event_ids": [
+        "EVT-P10-20260624-DEVELOPMENT-AS-SAMPLE-HOLD",
+        "EVT-P10-20260624-PRODUCTION-PLAN-HOLD"
+      ],
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_note": "Supporting and adverse official-source families were searched, but no explicit cancellation, failure, or named-Track delay was observed. This is disclosure-limited non-observation, not evidence of absence.",
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "negative_source_ids": [],
+      "notes": "Customer/commercial acceptance and supply-readiness context remain separate; production does not become O1.",
+      "source_family_searches": {
+        "official_counterparty": "SEARCHED_NOT_OBSERVED",
+        "regulatory_or_earnings": "FOUND",
+        "supplier_product_or_ir": "FOUND"
+      },
+      "source_ids": [
+        "SRC-MU-20260624-HBM4E-DEVELOPMENT"
+      ],
+      "supporting_search_status": "COMPLETE",
+      "track_id": "P10-MU-HBM4E"
+    }
+  ],
+  "registry_content_hash": "A3BFDBDD8178E203C63635824985888C76DA10818D64B3E869EC5E30E4A26BB1"
+}

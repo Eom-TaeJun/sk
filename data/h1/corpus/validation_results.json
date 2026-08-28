@@ -1,0 +1,454 @@
+{
+  "results": [
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C01-20230313-H100-PREVIEW",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C01-20230807-H100-GA",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C01-20240730-CAPEX",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C02-20231115-H200-PLAN",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C02-20240730-CAPEX",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C02-20241002-H200-GA",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C03-20230829-H100-PLAN",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C03-20240410-H100-RETRO-GA-HOLD",
+      "ingestion_status": "HOLD"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C03-20250204-CAPEX",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C04-20241031-H200-PLAN",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C04-20241213-H200-PREVIEW",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C04-20241231-H200-GA-RETROSPECTIVE",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C04-20250204-CAPEX",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C05-20221231-CAPEX",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C05-20230726-H100-GA",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C06-20221231-CAPEX",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C06-20240909-H200-LIMITED",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C06-20241202-H200-GA",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C07-20230531-CAPEX",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C07-20230612-INFRA-COMMITMENT",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C07-20230919-H100-GA",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C08-20230531-CAPEX",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C08-20240911-H200-PLAN",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C08-20241118-H200-GA",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C09-20231231-CAPEX-GUIDANCE",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C09-20240312-H100-OPERATIONAL",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C10-20240730-CAPEX",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C10-20241119-GB200-PREVIEW",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C10-20250318-GB200-GA",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C11-20250131-B200-PREVIEW",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C11-20250204-CAPEX",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C11-20250318-B200-GA",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C11-20250318-GB200-PREVIEW",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C12-20221231-CAPEX",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C12-20250515-B200-LIMITED",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C12-20250709-GB200-GA",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C13-20230531-CAPEX",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C13-20240911-BLACKWELL-PLAN",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-C14-20231231-CAPEX-GUIDANCE",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "installed disclosure alone cannot become operational realization",
+      "deterministic_result": "REJECTED",
+      "event_id": "EVT-C14-20250929-GB200-INSTALLED-HOLD",
+      "ingestion_status": "HOLD"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P01-20220608-PRODUCTION-CONTEXT",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "qualification COMPLETE requires explicit completion wording",
+      "deterministic_result": "REJECTED",
+      "event_id": "EVT-P01-20220608-QUAL-EVAL-HOLD",
+      "ingestion_status": "HOLD"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P02-20230821-PRODUCTION-CONTEXT-R2",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "production or ramp wording alone cannot become a supply commitment",
+      "deterministic_result": "REJECTED",
+      "event_id": "EVT-P02-20230821-PRODUCTION-PLAN",
+      "ingestion_status": "HOLD"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P02-20230821-SAMPLE-EVAL",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "future-dated customer supply cannot become current O1 realization",
+      "deterministic_result": "REJECTED",
+      "event_id": "EVT-P02-20240319-FUTURE-CUSTOMER-SUPPLY",
+      "ingestion_status": "HOLD"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P02-20240319-PRODUCTION-CONTEXT-R2",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P03-20240227-PRODUCTION-PLAN",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P03-20240227-SAMPLE",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "O1 requires explicit current shipment or customer-supply wording",
+      "deterministic_result": "REJECTED",
+      "event_id": "EVT-P03-20241231-O1-START-HOLD",
+      "ingestion_status": "HOLD"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P03-20241231-SUPPLY-CORROBORATION",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P04-20230726-SAMPLING",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P04-20230927-QUAL-UNDERWAY",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P04-20231220-QUAL-FINAL",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P04-20240226-H200-DESIGN-IN",
+      "ingestion_status": "HOLD"
+    },
+    {
+      "deterministic_reason": "production or ramp wording alone cannot become a supply commitment",
+      "deterministic_result": "REJECTED",
+      "event_id": "EVT-P04-20240226-PRODUCTION",
+      "ingestion_status": "HOLD"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P04-20240226-PRODUCTION-CONTEXT-R2",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "O1 requires explicit current shipment or customer-supply wording",
+      "deterministic_result": "REJECTED",
+      "event_id": "EVT-P04-20250318-O1-START-HOLD",
+      "ingestion_status": "HOLD"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P04-20250318-SHIPPING-CORROBORATION",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "PRODUCTION_READINESS requires explicit matching production-stage wording",
+      "deterministic_result": "REJECTED",
+      "event_id": "EVT-P05-20250319-PRODUCTION-PREP-HOLD",
+      "ingestion_status": "HOLD"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P05-20250319-QUAL-PLANNED",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P05-20250319-SAMPLE",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P05-20260630-O1",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P06-20251030-SAMPLE",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P06-20260129-QUAL-FINAL",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P06-20260212-O1",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P06-20260212-PRODUCTION",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P07-20250610-PRODUCTION-PLAN",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P07-20250610-SAMPLE",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P07-20260316-O1",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P08-20260618-SAMPLE",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P09-20260529-PRODUCTION-PLAN",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "event_id": "EVT-P09-20260529-SAMPLE",
+      "ingestion_status": "ACCEPTED"
+    },
+    {
+      "deterministic_reason": "HBM_SAMPLE requires explicit sample or sampling wording",
+      "deterministic_result": "REJECTED",
+      "event_id": "EVT-P10-20260624-DEVELOPMENT-AS-SAMPLE-HOLD",
+      "ingestion_status": "HOLD"
+    },
+    {
+      "deterministic_reason": "PRODUCTION_PLANNED requires explicit matching production-stage wording",
+      "deterministic_result": "REJECTED",
+      "event_id": "EVT-P10-20260624-PRODUCTION-PLAN-HOLD",
+      "ingestion_status": "HOLD"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "created_at": "2026-08-28T17:00:00+09:00",
+  "ledger_version": "CAPABILITY-EVIDENCE-1.0.0",
+  "records": [
+    {
+      "action_performed": "Preserved the frozen two-strata registry and collected product commercialization separately from platform realization.",
+      "artifact_references": [
+        "data/h1/registry/candidate_tracks.json",
+        "data/h1/corpus/events.json"
+      ],
+      "capability_tags": [
+        "PROBLEM_DEFINITION",
+        "HYPOTHESIS_REVISION"
+      ],
+      "claim_status": "VERIFIED_PERFORMED_FACT",
+      "date": "2026-08-28",
+      "evidence_or_failure_encountered": "Pilot records showed that supplier production and CSP availability answer different observability questions.",
+      "fact_id": "CAP-001",
+      "initial_problem_or_assumption": "A single H1 track could compare every demand-adjacent disclosure as one signal ladder.",
+      "judgment_or_change": "Kept H1-P and H1-C as separate strata and prohibited pooled interpretation.",
+      "overclaim_boundary": "No H1 comparative result or predictive superiority is claimed.",
+      "potential_role_relevance": [
+        "STRATEGY_PLANNING",
+        "RISK_MIDDLE",
+        "DATA_AI_DIGITAL"
+      ],
+      "why_it_mattered": "It prevents a broad investment disclosure from being treated as a product commercialization event."
+    },
+    {
+      "action_performed": "Implemented deterministic import of immutable Pilot artifacts, archive generation, SHA-256 verification, link checks, and replay manifests.",
+      "artifact_references": [
+        "src/measurement/corpus.py",
+        "data/h1/corpus/build_manifest.json"
+      ],
+      "capability_tags": [
+        "DATA_GOVERNANCE",
+        "AI_WORKFLOW_DESIGN"
+      ],
+      "claim_status": "VERIFIED_IMPLEMENTATION_FACT",
+      "date": "2026-08-28",
+      "evidence_or_failure_encountered": "The full collection required consistent provenance across reused and newly archived official sources.",
+      "fact_id": "CAP-002",
+      "initial_problem_or_assumption": "Manual copying was sufficient for a 24-Track corpus.",
+      "judgment_or_change": "Moved deterministic bookkeeping into the CorpusBuilder while leaving semantic admission unapproved.",
+      "overclaim_boundary": "The builder validates contracts; it does not establish empirical signal quality.",
+      "potential_role_relevance": [
+        "DATA_AI_DIGITAL",
+        "OPERATIONS_CONTROL_BACK",
+        "PUBLIC_SECTOR"
+      ],
+      "why_it_mattered": "Source and event lineage can be replayed without turning AI output into approval."
+    },
+    {
+      "action_performed": "Reclassified production records as PRODUCTION_STAGE_CONTEXT and added revised records without deleting Pilot HOLD history.",
+      "artifact_references": [
+        "src/measurement/validation.py",
+        "data/h1/corpus/events.json"
+      ],
+      "capability_tags": [
+        "HYPOTHESIS_REVISION",
+        "INDUSTRY_REASONING"
+      ],
+      "claim_status": "VERIFIED_PERFORMED_FACT",
+      "date": "2026-08-28",
+      "evidence_or_failure_encountered": "Official releases often disclosed production before actual customer supply or used future shipment wording.",
+      "fact_id": "CAP-003",
+      "initial_problem_or_assumption": "Volume or mass production could stand in for commercial acceptance.",
+      "judgment_or_change": "Production now remains supply-readiness context unless direct current customer shipment evidence establishes O1.",
+      "overclaim_boundary": "Production context does not reveal customer demand volume, price, share, or allocation.",
+      "potential_role_relevance": [
+        "BUSINESS_NEW_BUSINESS",
+        "SALES_MARKETING_FRONT",
+        "RISK_MIDDLE"
+      ],
+      "why_it_mattered": "It blocks stage inflation in semiconductor commercialization analysis."
+    },
+    {
+      "action_performed": "Required both supporting and contradictory primary-source searches for every Track and separated explicit negative evidence from public non-observation.",
+      "artifact_references": [
+        "data/h1/corpus/track_collection_status.json",
+        "data/h1/corpus/coverage_report.json"
+      ],
+      "capability_tags": [
+        "COUNTEREVIDENCE_SEARCH",
+        "UNCERTAINTY_DISCIPLINE"
+      ],
+      "claim_status": "VERIFIED_PERFORMED_FACT",
+      "date": "2026-08-28",
+      "evidence_or_failure_encountered": "Samsung explicitly disclosed an HBM3E customer-business delay, while most Tracks had no public adverse disclosure.",
+      "fact_id": "CAP-004",
+      "initial_problem_or_assumption": "A corpus of official announcements might adequately represent commercialization paths.",
+      "judgment_or_change": "Recorded one as explicit counterevidence and the others as disclosure-limited NOT_OBSERVED_PUBLICLY.",
+      "overclaim_boundary": "NOT_OBSERVED_PUBLICLY does not mean no delay or failure occurred.",
+      "potential_role_relevance": [
+        "RISK_MIDDLE",
+        "BANKING_CREDIT_GENERAL",
+        "PUBLIC_SECTOR"
+      ],
+      "why_it_mattered": "Silence no longer becomes an implicit success observation."
+    },
+    {
+      "action_performed": "Stored event_at, published_at, available_at, accessed_at, origin group, revision, and content hash separately.",
+      "artifact_references": [
+        "data/h1/corpus/source_registry.json",
+        "data/h1/corpus/events.json"
+      ],
+      "capability_tags": [
+        "DATA_GOVERNANCE",
+        "UNCERTAINTY_DISCIPLINE"
+      ],
+      "claim_status": "VERIFIED_PERFORMED_FACT",
+      "date": "2026-08-28",
+      "evidence_or_failure_encountered": "A Google Cloud retrospective GA statement conflicted with the earlier forward-looking timing and could have been backdated.",
+      "fact_id": "CAP-005",
+      "initial_problem_or_assumption": "Publication dates could be used directly as historical event dates.",
+      "judgment_or_change": "Kept the retrospective candidate on HOLD and preserved its later availability date.",
+      "overclaim_boundary": "Exact historical GA date remains unresolved until a contemporaneous source is found.",
+      "potential_role_relevance": [
+        "RISK_MIDDLE",
+        "DATA_AI_DIGITAL",
+        "OPERATIONS_CONTROL_BACK"
+      ],
+      "why_it_mattered": "Earlier historical states cannot gain knowledge from later descriptions."
+    },
+    {
+      "action_performed": "Recorded CAPEX at company scope and platform stages at SKU scope, then made the missing bridge explicit.",
+      "artifact_references": [
+        "data/h1/corpus/events.json",
+        "data/h1/corpus/coverage_report.json"
+      ],
+      "capability_tags": [
+        "STRUCTURAL_REASONING",
+        "DECISION_TRANSLATION"
+      ],
+      "claim_status": "VERIFIED_PERFORMED_FACT",
+      "date": "2026-08-28",
+      "evidence_or_failure_encountered": "Official filings did not allocate CAPEX to a named H100, H200, B200, or GB200 offer.",
+      "fact_id": "CAP-006",
+      "initial_problem_or_assumption": "CSP CAPEX and named GPU platform availability could be joined as one demand fact.",
+      "judgment_or_change": "Prohibited CAPEX-to-SKU allocation and platform-to-HBM-supplier inference.",
+      "overclaim_boundary": "No platform utilization, exact memory demand, or supplier identity is inferred.",
+      "potential_role_relevance": [
+        "STRATEGY_PLANNING",
+        "SALES_MARKETING_FRONT",
+        "BANKING_CREDIT_GENERAL"
+      ],
+      "why_it_mattered": "The corpus can inform monitoring and internal verification requests without inventing volume or supplier share."
+    },
+    {
+      "action_performed": "Separated collector candidates, deterministic validation, HOLD state, and future human Gate 6 review.",
+      "artifact_references": [
+        "src/measurement/validation.py",
+        "tests/test_h1_full_corpus.py"
+      ],
+      "capability_tags": [
+        "AI_WORKFLOW_DESIGN",
+        "DATA_GOVERNANCE"
+      ],
+      "claim_status": "VERIFIED_IMPLEMENTATION_FACT",
+      "date": "2026-08-28",
+      "evidence_or_failure_encountered": "Development-only and installed-rack wording could otherwise pass as sample or operational realization.",
+      "fact_id": "CAP-007",
+      "initial_problem_or_assumption": "A collector's proposed classification could enter the empirical dataset directly.",
+      "judgment_or_change": "Added minimal lexical guards for explicit sample wording and installed-operational evidence.",
+      "overclaim_boundary": "Lexical validation does not replace human semantic approval.",
+      "potential_role_relevance": [
+        "DATA_AI_DIGITAL",
+        "OPERATIONS_CONTROL_BACK",
+        "PUBLIC_SECTOR"
+      ],
+      "why_it_mattered": "AI-assisted extraction cannot bypass the evidence-governance boundary."
+    },
+    {
+      "action_performed": "Produced 24-Track coverage and missingness summaries while setting gate6_frozen=false and empirical_h1_calculated=false.",
+      "artifact_references": [
+        "data/h1/corpus/coverage_report.json",
+        "data/h1/corpus/build_manifest.json"
+      ],
+      "capability_tags": [
+        "UNCERTAINTY_DISCIPLINE",
+        "INDUSTRY_REASONING"
+      ],
+      "claim_status": "PENDING_EMPIRICAL_RESULT",
+      "date": "2026-08-28",
+      "evidence_or_failure_encountered": "Several recent HBM4/HBM4E and Blackwell Tracks remain right-censored or HOLD-only.",
+      "fact_id": "CAP-008",
+      "initial_problem_or_assumption": "Completing collection meant the corpus was ready for H1 calculation.",
+      "judgment_or_change": "Stopped at the human Gate 6 readiness boundary.",
+      "overclaim_boundary": "No H1 metric, ranking, causal conclusion, or verdict exists.",
+      "potential_role_relevance": [
+        "STRATEGY_PLANNING",
+        "RISK_MIDDLE",
+        "DATA_AI_DIGITAL"
+      ],
+      "why_it_mattered": "The project preserves research truth before lead, realization, ranking, or verdict calculations."
+    }
+  ]
+}

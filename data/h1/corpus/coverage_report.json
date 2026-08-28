@@ -1,0 +1,812 @@
+{
+  "content_hash": "F3227D542A0AB19503A749FD2C4F75837D2D082D09874641B5C49940B8CC31EE",
+  "coverage_version": "H1-CORPUS-COVERAGE-1.0.0",
+  "created_at": "2026-08-28T17:00:00+09:00",
+  "interpretation_boundary": "Coverage and missingness describe corpus readiness only; they are not H1 results.",
+  "tracks": [
+    {
+      "coverage": {
+        "censoring": false,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": true,
+        "negative_delay_evidence": false,
+        "o1_candidate": false,
+        "production_stage_context": true,
+        "qualification": false,
+        "sample": false
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [
+        "QUALIFICATION_STAGE"
+      ],
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "source_families": [
+        "OFFICIAL_PRODUCT_RELEASE"
+      ],
+      "source_family_count": 1,
+      "track_id": "P01-SKH-HBM3",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "censoring": false,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": true,
+        "negative_delay_evidence": false,
+        "o1_candidate": false,
+        "production_stage_context": true,
+        "qualification": false,
+        "sample": true
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [
+        "O1_COMMERCIAL_REALIZATION",
+        "ORDER_ADJACENT_SUPPLY_COMMITMENT"
+      ],
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "source_families": [
+        "OFFICIAL_PRODUCT_RELEASE"
+      ],
+      "source_family_count": 1,
+      "track_id": "P02-SKH-HBM3E",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "censoring": false,
+        "commitment": false,
+        "corroboration": true,
+        "design_in": false,
+        "hold": true,
+        "negative_delay_evidence": true,
+        "o1_candidate": false,
+        "production_stage_context": true,
+        "qualification": false,
+        "sample": true
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [
+        "O1_COMMERCIAL_REALIZATION"
+      ],
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_EARNINGS_TRANSCRIPT",
+        "OFFICIAL_PRODUCT_RELEASE"
+      ],
+      "source_family_count": 3,
+      "track_id": "P03-SEC-HBM3E",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "censoring": false,
+        "commitment": false,
+        "corroboration": true,
+        "design_in": false,
+        "hold": true,
+        "negative_delay_evidence": false,
+        "o1_candidate": false,
+        "production_stage_context": true,
+        "qualification": true,
+        "sample": true
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [
+        "DESIGN_IN",
+        "O1_COMMERCIAL_REALIZATION",
+        "ORDER_ADJACENT_SUPPLY_COMMITMENT"
+      ],
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_PRODUCT_RELEASE"
+      ],
+      "source_family_count": 2,
+      "track_id": "P04-MU-HBM3E",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "censoring": true,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": true,
+        "negative_delay_evidence": false,
+        "o1_candidate": true,
+        "production_stage_context": false,
+        "qualification": true,
+        "sample": true
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [
+        "PRODUCTION_STAGE_CONTEXT"
+      ],
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_PRODUCT_RELEASE"
+      ],
+      "source_family_count": 2,
+      "track_id": "P05-SKH-HBM4",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "censoring": true,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": false,
+        "negative_delay_evidence": false,
+        "o1_candidate": true,
+        "production_stage_context": true,
+        "qualification": true,
+        "sample": true
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_TRANSCRIPT",
+        "OFFICIAL_PRODUCT_RELEASE"
+      ],
+      "source_family_count": 2,
+      "track_id": "P06-SEC-HBM4",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "censoring": true,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": false,
+        "negative_delay_evidence": false,
+        "o1_candidate": true,
+        "production_stage_context": true,
+        "qualification": false,
+        "sample": true
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "source_families": [
+        "OFFICIAL_PRODUCT_RELEASE"
+      ],
+      "source_family_count": 1,
+      "track_id": "P07-MU-HBM4",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "censoring": true,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": false,
+        "negative_delay_evidence": false,
+        "o1_candidate": false,
+        "production_stage_context": false,
+        "qualification": false,
+        "sample": true
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "source_families": [
+        "OFFICIAL_PRODUCT_RELEASE"
+      ],
+      "source_family_count": 1,
+      "track_id": "P08-SKH-HBM4E",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "censoring": true,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": false,
+        "negative_delay_evidence": false,
+        "o1_candidate": false,
+        "production_stage_context": true,
+        "qualification": false,
+        "sample": true
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "source_families": [
+        "OFFICIAL_PRODUCT_RELEASE"
+      ],
+      "source_family_count": 1,
+      "track_id": "P09-SEC-HBM4E",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "censoring": true,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": true,
+        "negative_delay_evidence": false,
+        "o1_candidate": false,
+        "production_stage_context": false,
+        "qualification": false,
+        "sample": false
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [
+        "HBM_SAMPLE",
+        "PRODUCTION_STAGE_CONTEXT"
+      ],
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "source_families": [
+        "REGULATORY_FILING"
+      ],
+      "source_family_count": 1,
+      "track_id": "P10-MU-HBM4E",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": true
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_PLATFORM_RELEASE"
+      ],
+      "source_family_count": 2,
+      "track_id": "C01-AZ-H100",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "announcement": true,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": false
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_PLATFORM_RELEASE"
+      ],
+      "source_family_count": 2,
+      "track_id": "C02-AZ-H200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": false,
+        "hold": true,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": false,
+        "preview": false
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [
+        "P1_PLATFORM_OPERATIONAL_REALIZATION"
+      ],
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_PLATFORM_RELEASE"
+      ],
+      "source_family_count": 2,
+      "track_id": "C03-GCP-H100",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": true
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_PLATFORM_RELEASE"
+      ],
+      "source_family_count": 2,
+      "track_id": "C04-GCP-H200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": false
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "source_families": [
+        "OFFICIAL_PLATFORM_RELEASE",
+        "REGULATORY_FILING"
+      ],
+      "source_family_count": 2,
+      "track_id": "C05-AWS-H100",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": true,
+        "operational_evidence": true,
+        "preview": false
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "source_families": [
+        "OFFICIAL_PLATFORM_RELEASE",
+        "REGULATORY_FILING"
+      ],
+      "source_family_count": 2,
+      "track_id": "C06-AWS-H200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": true,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": false
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_PLATFORM_RELEASE"
+      ],
+      "source_family_count": 2,
+      "track_id": "C07-OCI-H100",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "announcement": true,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": false
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_PLATFORM_RELEASE"
+      ],
+      "source_family_count": 2,
+      "track_id": "C08-OCI-H200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": false,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": false
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_ENGINEERING_RELEASE"
+      ],
+      "source_family_count": 2,
+      "track_id": "C09-META-H100",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": true
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_PLATFORM_RELEASE"
+      ],
+      "source_family_count": 2,
+      "track_id": "C10-AZ-GB200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "announcement": false,
+        "capex": true,
+        "censoring": true,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": true
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_PLATFORM_RELEASE"
+      ],
+      "source_family_count": 2,
+      "track_id": "C11-GCP-B200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "announcement": false,
+        "capex": true,
+        "censoring": true,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": true,
+        "operational_evidence": true,
+        "preview": false
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_PLATFORM_RELEASE",
+        "REGULATORY_FILING"
+      ],
+      "source_family_count": 3,
+      "track_id": "C12-AWS-B200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "announcement": true,
+        "capex": true,
+        "censoring": true,
+        "delay_constraint": false,
+        "ga": false,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": false,
+        "preview": false
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [],
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_PLATFORM_RELEASE"
+      ],
+      "source_family_count": 2,
+      "track_id": "C13-OCI-B200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+    },
+    {
+      "coverage": {
+        "announcement": false,
+        "capex": true,
+        "censoring": true,
+        "delay_constraint": false,
+        "ga": false,
+        "hold": true,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": false,
+        "preview": false
+      },
+      "coverage_basis": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY",
+      "gate6_readiness": "HUMAN_REVIEW_REQUIRED",
+      "hold_classes": [
+        "P1_PLATFORM_OPERATIONAL_REALIZATION"
+      ],
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "source_families": [
+        "OFFICIAL_EARNINGS_MATERIAL",
+        "OFFICIAL_ENGINEERING_RELEASE"
+      ],
+      "source_family_count": 2,
+      "track_id": "C14-META-GB200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+    }
+  ]
+}

@@ -1,0 +1,832 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "h1_full_corpus.schema.json",
+  "title": "H1 Frozen 24-Track Corpus Collection Input and Output Contracts",
+  "description": "Gate-6-preparatory collection contracts only. These structures must not contain empirical H1 performance or verdict fields.",
+  "oneOf": [
+    {"$ref": "#/$defs/collectionInput"},
+    {"$ref": "h1_pilot_source.schema.json"},
+    {"$ref": "#/$defs/corpusDatasetOutput"},
+    {"$ref": "#/$defs/collectionStatusOutput"},
+    {"$ref": "#/$defs/validationResultsOutput"},
+    {"$ref": "#/$defs/coverageOutput"},
+    {"$ref": "#/$defs/futureModuleQueue"},
+    {"$ref": "#/$defs/adversarialVerification"},
+    {"$ref": "#/$defs/capabilityEvidenceLedger"},
+    {"$ref": "#/$defs/buildManifestOutput"}
+  ],
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "immutablePilot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_registry_content_hash", "dataset_content_hash"],
+      "properties": {
+        "source_registry_content_hash": {"$ref": "#/$defs/sha256"},
+        "dataset_content_hash": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "newSourceInput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_revision_id",
+        "origin_group",
+        "title",
+        "publisher",
+        "source_type",
+        "source_tier",
+        "primary_source",
+        "publication_date",
+        "published_at",
+        "available_at",
+        "availability_basis",
+        "publisher_timezone",
+        "accessed_at",
+        "url",
+        "excerpt",
+        "locator"
+      ],
+      "properties": {
+        "source_id": {"$ref": "#/$defs/nonEmptyString"},
+        "source_revision_id": {"$ref": "#/$defs/nonEmptyString"},
+        "origin_group": {"$ref": "#/$defs/nonEmptyString"},
+        "title": {"$ref": "#/$defs/nonEmptyString"},
+        "publisher": {"$ref": "#/$defs/nonEmptyString"},
+        "source_type": {"$ref": "#/$defs/nonEmptyString"},
+        "source_tier": {"enum": ["P1_EVENT", "P1_COUNTERPARTY", "P1_REGULATORY"]},
+        "primary_source": {"const": true},
+        "publication_date": {"type": "string", "format": "date"},
+        "published_at": {"type": "string", "format": "date-time"},
+        "available_at": {"type": "string", "format": "date-time"},
+        "availability_basis": {
+          "enum": [
+            "EXACT_TIMESTAMP",
+            "PUBLISHER_DATE_FALLBACK",
+            "OTHER_APPROVED_PROXY"
+          ]
+        },
+        "publisher_timezone": {"$ref": "#/$defs/nonEmptyString"},
+        "accessed_at": {"type": "string", "format": "date-time"},
+        "url": {"type": "string", "format": "uri"},
+        "excerpt": {"$ref": "#/$defs/nonEmptyString"},
+        "locator": {"$ref": "#/$defs/nonEmptyString"},
+        "reuse_local_archive_path": {"$ref": "#/$defs/nonEmptyString"},
+        "reuse_content_hash": {"$ref": "#/$defs/sha256"}
+      },
+      "dependentRequired": {
+        "reuse_local_archive_path": ["reuse_content_hash"],
+        "reuse_content_hash": ["reuse_local_archive_path"]
+      }
+    },
+    "candidateEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_id",
+        "track_id",
+        "data_role",
+        "signal_class",
+        "signal_subtype",
+        "transmission_layer",
+        "decision_question",
+        "event_at",
+        "scope_type",
+        "scope_value",
+        "source_id",
+        "evidence_level",
+        "claim",
+        "revision_id",
+        "supersedes_event_id",
+        "right_censored",
+        "left_truncated",
+        "review_status"
+      ],
+      "properties": {
+        "event_id": {"$ref": "#/$defs/nonEmptyString"},
+        "track_id": {"$ref": "#/$defs/nonEmptyString"},
+        "data_role": {"enum": ["SIGNAL", "OUTCOME", "CONTEXT"]},
+        "signal_class": {
+          "enum": [
+            "HBM_SAMPLE",
+            "QUALIFICATION_STAGE",
+            "DESIGN_IN",
+            "ORDER_ADJACENT_SUPPLY_COMMITMENT",
+            "O1_COMMERCIAL_REALIZATION",
+            "O2_OPERATIONAL_CORROBORATION",
+            "O3_FINANCIAL_CORROBORATION",
+            "CSP_CAPEX",
+            "AI_INFRA_COMMITMENT",
+            "PLATFORM_LAUNCH",
+            "PLATFORM_DEPLOYMENT_STAGE",
+            "P1_PLATFORM_OPERATIONAL_REALIZATION",
+            "PRICING_INVENTORY_CONTEXT",
+            "PRODUCTION_STAGE_CONTEXT"
+          ]
+        },
+        "signal_subtype": {"$ref": "#/$defs/nonEmptyString"},
+        "transmission_layer": {
+          "enum": [
+            "CUSTOMER_ECONOMICS",
+            "AI_INFRASTRUCTURE",
+            "PLATFORM",
+            "MEMORY_PRODUCT",
+            "SUPPLY_READINESS",
+            "QUALIFICATION_COMMERCIAL",
+            "COMMERCIAL_REALIZATION",
+            "MARKET_CONTEXT"
+          ]
+        },
+        "decision_question": {
+          "enum": [
+            "DEMAND_FORECAST",
+            "CUSTOMER_PRIORITY",
+            "QUALIFICATION",
+            "TTM",
+            "COMMERCIALIZATION_VISIBILITY",
+            "PLATFORM_DEPLOYMENT_VISIBILITY"
+          ]
+        },
+        "event_at": {"type": "string", "format": "date-time"},
+        "event_date_precision": {
+          "type": ["string", "null"],
+          "enum": ["TIMESTAMP", "DAY", "MONTH", null]
+        },
+        "scope_type": {
+          "enum": [
+            "COMPANY",
+            "PRODUCT_FAMILY",
+            "PRODUCT_GENERATION",
+            "PLATFORM",
+            "CUSTOMER",
+            "REGION",
+            "SITE",
+            "INDUSTRY"
+          ]
+        },
+        "scope_value": {"$ref": "#/$defs/nonEmptyString"},
+        "source_id": {"$ref": "#/$defs/nonEmptyString"},
+        "evidence_level": {
+          "enum": [
+            "A_DIRECT_FACT",
+            "B_COMPANY_CLAIM",
+            "C_EXTERNAL_ESTIMATE",
+            "D_DERIVED_FACT",
+            "E_STRONG_INFERENCE",
+            "F_HYPOTHESIS"
+          ]
+        },
+        "claim": {"$ref": "#/$defs/nonEmptyString"},
+        "revision_id": {"$ref": "#/$defs/nonEmptyString"},
+        "supersedes_event_id": {"type": ["string", "null"]},
+        "right_censored": {"type": ["boolean", "null"]},
+        "left_truncated": {"type": "boolean"},
+        "review_status": {
+          "enum": ["UNREVIEWED", "APPROVED", "HOLD", "REJECTED"]
+        }
+      }
+    },
+    "candidateEventRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event",
+        "ingestion_status",
+        "candidate_classification_reason",
+        "ambiguity",
+        "human_judgment_required"
+      ],
+      "properties": {
+        "event": {"$ref": "#/$defs/candidateEvent"},
+        "ingestion_status": {"enum": ["ACCEPTED", "HOLD", "REJECTED"]},
+        "candidate_classification_reason": {"$ref": "#/$defs/nonEmptyString"},
+        "ambiguity": {"type": ["string", "null"]},
+        "human_judgment_required": {"type": ["string", "null"]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"ingestion_status": {"const": "HOLD"}}},
+          "then": {
+            "properties": {
+              "event": {
+                "allOf": [
+                  {"$ref": "#/$defs/candidateEvent"},
+                  {"properties": {"review_status": {"const": "HOLD"}}}
+                ]
+              },
+              "ambiguity": {"type": "string", "minLength": 1},
+              "human_judgment_required": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"ingestion_status": {"const": "ACCEPTED"}}},
+          "then": {
+            "properties": {
+              "event": {
+                "allOf": [
+                  {"$ref": "#/$defs/candidateEvent"},
+                  {"properties": {"review_status": {"const": "UNREVIEWED"}}}
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"ingestion_status": {"const": "REJECTED"}}},
+          "then": {
+            "properties": {
+              "event": {
+                "allOf": [
+                  {"$ref": "#/$defs/candidateEvent"},
+                  {"properties": {"review_status": {"const": "REJECTED"}}}
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "pilotEventRecordOutput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event",
+        "ingestion_status",
+        "candidate_classification_reason",
+        "ambiguity",
+        "human_judgment_required"
+      ],
+      "properties": {
+        "event": {"$ref": "h1_event.schema.json"},
+        "ingestion_status": {"enum": ["ACCEPTED", "HOLD", "REJECTED"]},
+        "candidate_classification_reason": {"$ref": "#/$defs/nonEmptyString"},
+        "ambiguity": {"type": ["string", "null"]},
+        "human_judgment_required": {"type": ["string", "null"]}
+      }
+    },
+    "missingness": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "enum": [
+          "DISCLOSED",
+          "UNKNOWN",
+          "NOT_OBSERVED_PUBLICLY",
+          "PRIVATE_OR_NOT_DISCLOSED",
+          "HOLD"
+        ]
+      }
+    },
+    "trackCollectionRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "track_id",
+        "collection_status",
+        "supporting_search_status",
+        "contradictory_search_status",
+        "source_family_searches",
+        "source_ids",
+        "event_ids",
+        "negative_search_result",
+        "negative_source_ids",
+        "negative_search_note",
+        "missingness",
+        "gate6_readiness",
+        "notes"
+      ],
+      "properties": {
+        "track_id": {"$ref": "#/$defs/nonEmptyString"},
+        "collection_status": {
+          "enum": [
+            "COLLECTED_WITH_PRIMARY_EVIDENCE",
+            "COLLECTED_WITH_HOLD_ONLY",
+            "COLLECTED_NO_MEASUREMENT_EVENT"
+          ]
+        },
+        "supporting_search_status": {"const": "COMPLETE"},
+        "contradictory_search_status": {"const": "COMPLETE"},
+        "source_family_searches": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "enum": ["FOUND", "SEARCHED_NOT_OBSERVED", "HOLD"]
+          }
+        },
+        "source_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "event_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "negative_search_result": {
+          "enum": ["EXPLICIT_NEGATIVE_OR_DELAY", "NOT_OBSERVED_PUBLICLY"]
+        },
+        "negative_source_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "negative_search_note": {"$ref": "#/$defs/nonEmptyString"},
+        "missingness": {"$ref": "#/$defs/missingness"},
+        "gate6_readiness": {"$ref": "#/$defs/nonEmptyString"},
+        "notes": {"$ref": "#/$defs/nonEmptyString"}
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "negative_search_result": {"const": "NOT_OBSERVED_PUBLICLY"}
+            }
+          },
+          "then": {"properties": {"negative_source_ids": {"maxItems": 0}}}
+        },
+        {
+          "if": {
+            "properties": {
+              "negative_search_result": {"const": "EXPLICIT_NEGATIVE_OR_DELAY"}
+            }
+          },
+          "then": {"properties": {"negative_source_ids": {"minItems": 1}}}
+        }
+      ]
+    },
+    "futureModuleRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_id",
+        "source_ids",
+        "observed_fact",
+        "domain",
+        "possible_transmission_path",
+        "possible_decision_relevance",
+        "why_outside_h1",
+        "activation_condition",
+        "status"
+      ],
+      "properties": {
+        "candidate_id": {"$ref": "#/$defs/nonEmptyString"},
+        "source_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "observed_fact": {"$ref": "#/$defs/nonEmptyString"},
+        "domain": {
+          "enum": [
+            "COMPETITION",
+            "ECOSYSTEM_DEPENDENCY",
+            "SUPPLY_PRODUCTION",
+            "RAW_MATERIAL_LOGISTICS",
+            "MACRO",
+            "POLICY_GEOPOLITICS",
+            "PRODUCT_MIX"
+          ]
+        },
+        "possible_transmission_path": {"$ref": "#/$defs/nonEmptyString"},
+        "possible_decision_relevance": {"$ref": "#/$defs/nonEmptyString"},
+        "why_outside_h1": {"$ref": "#/$defs/nonEmptyString"},
+        "activation_condition": {"$ref": "#/$defs/nonEmptyString"},
+        "status": {"$ref": "#/$defs/nonEmptyString"}
+      }
+    },
+    "futureModuleQueue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["queue_version", "created_at", "records"],
+      "properties": {
+        "queue_version": {"$ref": "#/$defs/nonEmptyString"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "records": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/futureModuleRecord"}
+        }
+      }
+    },
+    "stringOrStringArray": {
+      "oneOf": [
+        {"$ref": "#/$defs/nonEmptyString"},
+        {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        }
+      ]
+    },
+    "capabilityEvidenceRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fact_id",
+        "date",
+        "capability_tags",
+        "initial_problem_or_assumption",
+        "action_performed",
+        "evidence_or_failure_encountered",
+        "judgment_or_change",
+        "why_it_mattered",
+        "artifact_references",
+        "claim_status",
+        "overclaim_boundary",
+        "potential_role_relevance"
+      ],
+      "properties": {
+        "fact_id": {"$ref": "#/$defs/nonEmptyString"},
+        "date": {"type": "string", "format": "date"},
+        "capability_tags": {"$ref": "#/$defs/stringOrStringArray"},
+        "initial_problem_or_assumption": {"$ref": "#/$defs/nonEmptyString"},
+        "action_performed": {"$ref": "#/$defs/nonEmptyString"},
+        "evidence_or_failure_encountered": {"$ref": "#/$defs/nonEmptyString"},
+        "judgment_or_change": {"$ref": "#/$defs/nonEmptyString"},
+        "why_it_mattered": {"$ref": "#/$defs/nonEmptyString"},
+        "artifact_references": {"$ref": "#/$defs/stringOrStringArray"},
+        "claim_status": {
+          "enum": [
+            "VERIFIED_PERFORMED_FACT",
+            "VERIFIED_IMPLEMENTATION_FACT",
+            "PENDING_EMPIRICAL_RESULT"
+          ]
+        },
+        "overclaim_boundary": {"$ref": "#/$defs/nonEmptyString"},
+        "potential_role_relevance": {"$ref": "#/$defs/stringOrStringArray"}
+      }
+    },
+    "capabilityEvidenceLedger": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ledger_version", "created_at", "records"],
+      "properties": {
+        "ledger_version": {"$ref": "#/$defs/nonEmptyString"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "records": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 15,
+          "items": {"$ref": "#/$defs/capabilityEvidenceRecord"}
+        }
+      }
+    },
+    "adversarialVerificationRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "track_id",
+        "source_primacy",
+        "timestamp",
+        "scope",
+        "forward_looking",
+        "stage_inflation",
+        "same_origin",
+        "outcome_interpretation",
+        "verdict",
+        "hold_event_ids",
+        "verifier_note"
+      ],
+      "properties": {
+        "track_id": {"$ref": "#/$defs/nonEmptyString"},
+        "source_primacy": {"enum": ["PASS", "PASS_WITH_HOLD"]},
+        "timestamp": {"enum": ["PASS", "PASS_WITH_HOLD"]},
+        "scope": {"enum": ["PASS", "PASS_WITH_HOLD"]},
+        "forward_looking": {"enum": ["PASS", "PASS_WITH_HOLD"]},
+        "stage_inflation": {"enum": ["PASS", "PASS_WITH_HOLD"]},
+        "same_origin": {"enum": ["PASS", "PASS_WITH_HOLD"]},
+        "outcome_interpretation": {"enum": ["PASS", "PASS_WITH_HOLD"]},
+        "verdict": {"enum": ["PASS", "PASS_WITH_HOLD"]},
+        "hold_event_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "verifier_note": {"$ref": "#/$defs/nonEmptyString"}
+      }
+    },
+    "adversarialVerification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manifest_version",
+        "created_at",
+        "collector_actor",
+        "verifier_actor",
+        "records"
+      ],
+      "properties": {
+        "manifest_version": {"$ref": "#/$defs/nonEmptyString"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "collector_actor": {"$ref": "#/$defs/nonEmptyString"},
+        "verifier_actor": {"$ref": "#/$defs/nonEmptyString"},
+        "records": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {"$ref": "#/$defs/adversarialVerificationRecord"}
+        }
+      }
+    },
+    "collectionInput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "collection_input_version",
+        "corpus_version",
+        "source_registry_version",
+        "collection_manifest_version",
+        "created_at",
+        "immutable_pilot",
+        "new_sources",
+        "new_events",
+        "track_collection_status",
+        "adversarial_verification",
+        "future_module_queue",
+        "capability_evidence_ledger"
+      ],
+      "properties": {
+        "collection_input_version": {"$ref": "#/$defs/nonEmptyString"},
+        "corpus_version": {"$ref": "#/$defs/nonEmptyString"},
+        "source_registry_version": {"$ref": "#/$defs/nonEmptyString"},
+        "collection_manifest_version": {"$ref": "#/$defs/nonEmptyString"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "immutable_pilot": {"$ref": "#/$defs/immutablePilot"},
+        "new_sources": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/newSourceInput"}
+        },
+        "new_events": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/candidateEventRecord"}
+        },
+        "track_collection_status": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {"$ref": "#/$defs/trackCollectionRecord"}
+        },
+        "future_module_queue": {"$ref": "#/$defs/futureModuleQueue"},
+        "adversarial_verification": {
+          "$ref": "#/$defs/adversarialVerification"
+        },
+        "capability_evidence_ledger": {
+          "$ref": "#/$defs/capabilityEvidenceLedger"
+        }
+      }
+    },
+    "corpusDatasetOutput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "corpus_version",
+        "contract_version",
+        "registry_content_hash",
+        "registry_freeze_content_hash",
+        "pilot_source_registry_content_hash",
+        "pilot_dataset_content_hash",
+        "source_registry_content_hash",
+        "collection_status_content_hash",
+        "track_ids",
+        "created_at",
+        "records",
+        "content_hash"
+      ],
+      "properties": {
+        "corpus_version": {"$ref": "#/$defs/nonEmptyString"},
+        "contract_version": {"$ref": "#/$defs/nonEmptyString"},
+        "registry_content_hash": {"$ref": "#/$defs/sha256"},
+        "registry_freeze_content_hash": {"$ref": "#/$defs/sha256"},
+        "pilot_source_registry_content_hash": {"$ref": "#/$defs/sha256"},
+        "pilot_dataset_content_hash": {"$ref": "#/$defs/sha256"},
+        "source_registry_content_hash": {"$ref": "#/$defs/sha256"},
+        "collection_status_content_hash": {"$ref": "#/$defs/sha256"},
+        "track_ids": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "created_at": {"type": "string", "format": "date-time"},
+        "records": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/pilotEventRecordOutput"}
+        },
+        "content_hash": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "collectionStatusOutput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manifest_version",
+        "created_at",
+        "registry_content_hash",
+        "records",
+        "content_hash"
+      ],
+      "properties": {
+        "manifest_version": {"$ref": "#/$defs/nonEmptyString"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "registry_content_hash": {"$ref": "#/$defs/sha256"},
+        "records": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {"$ref": "#/$defs/trackCollectionRecord"}
+        },
+        "content_hash": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "validationResultsOutput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["results"],
+      "properties": {
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "event_id",
+              "ingestion_status",
+              "deterministic_result",
+              "deterministic_reason"
+            ],
+            "properties": {
+              "event_id": {"$ref": "#/$defs/nonEmptyString"},
+              "ingestion_status": {"enum": ["ACCEPTED", "HOLD", "REJECTED"]},
+              "deterministic_result": {"enum": ["PASS", "REJECTED"]},
+              "deterministic_reason": {"$ref": "#/$defs/nonEmptyString"}
+            }
+          }
+        }
+      }
+    },
+    "coverageOutput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "coverage_version",
+        "created_at",
+        "interpretation_boundary",
+        "tracks",
+        "content_hash"
+      ],
+      "properties": {
+        "coverage_version": {"$ref": "#/$defs/nonEmptyString"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "interpretation_boundary": {"$ref": "#/$defs/nonEmptyString"},
+        "tracks": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "track_id",
+              "track_type",
+              "coverage",
+              "coverage_basis",
+              "hold_classes",
+              "source_families",
+              "source_family_count",
+              "missingness",
+              "gate6_readiness"
+            ],
+            "properties": {
+              "track_id": {"$ref": "#/$defs/nonEmptyString"},
+              "track_type": {
+                "enum": [
+                  "PRODUCT_COMMERCIALIZATION_TRACK",
+                  "CUSTOMER_PLATFORM_REALIZATION_TRACK"
+                ]
+              },
+              "coverage": {
+                "type": "object",
+                "minProperties": 1,
+                "additionalProperties": {"type": "boolean"}
+              },
+              "coverage_basis": {
+                "const": "ACCEPTED_UNREVIEWED_CANDIDATES_ONLY"
+              },
+              "hold_classes": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {"$ref": "#/$defs/nonEmptyString"}
+              },
+              "source_families": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {"$ref": "#/$defs/nonEmptyString"}
+              },
+              "source_family_count": {"type": "integer", "minimum": 0},
+              "missingness": {"$ref": "#/$defs/missingness"},
+              "gate6_readiness": {"$ref": "#/$defs/nonEmptyString"}
+            }
+          }
+        },
+        "content_hash": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "buildManifestOutput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manifest_version",
+        "created_at",
+        "input_path",
+        "registry_content_hash",
+        "registry_freeze_content_hash",
+        "immutable_pilot",
+        "source_registry_content_hash",
+        "dataset_content_hash",
+        "collection_status_content_hash",
+        "coverage_content_hash",
+        "file_hashes",
+        "counts",
+        "gate6_frozen",
+        "empirical_h1_calculated",
+        "content_hash"
+      ],
+      "properties": {
+        "manifest_version": {"const": "H1-CORPUS-BUILD-1.0.0"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "input_path": {"$ref": "#/$defs/nonEmptyString"},
+        "registry_content_hash": {"$ref": "#/$defs/sha256"},
+        "registry_freeze_content_hash": {"$ref": "#/$defs/sha256"},
+        "immutable_pilot": {"$ref": "#/$defs/immutablePilot"},
+        "source_registry_content_hash": {"$ref": "#/$defs/sha256"},
+        "dataset_content_hash": {"$ref": "#/$defs/sha256"},
+        "collection_status_content_hash": {"$ref": "#/$defs/sha256"},
+        "coverage_content_hash": {"$ref": "#/$defs/sha256"},
+        "file_hashes": {
+          "type": "object",
+          "additionalProperties": {"$ref": "#/$defs/sha256"},
+          "minProperties": 8,
+          "maxProperties": 8
+        },
+        "counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "tracks",
+            "sources",
+            "events",
+            "event_statuses",
+            "collection_statuses",
+            "future_module_candidates",
+            "adversarially_verified_tracks",
+            "capability_evidence_records"
+          ],
+          "properties": {
+            "tracks": {"const": 24},
+            "sources": {"type": "integer", "minimum": 1},
+            "events": {"type": "integer", "minimum": 1},
+            "event_statuses": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "ACCEPTED": {"type": "integer", "minimum": 0},
+                "HOLD": {"type": "integer", "minimum": 0},
+                "REJECTED": {"type": "integer", "minimum": 0}
+              }
+            },
+            "collection_statuses": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "COLLECTED_WITH_PRIMARY_EVIDENCE": {"type": "integer", "minimum": 0},
+                "COLLECTED_WITH_HOLD_ONLY": {"type": "integer", "minimum": 0},
+                "COLLECTED_NO_MEASUREMENT_EVENT": {"type": "integer", "minimum": 0}
+              }
+            },
+            "future_module_candidates": {"type": "integer", "minimum": 0},
+            "adversarially_verified_tracks": {"const": 24},
+            "capability_evidence_records": {
+              "type": "integer",
+              "minimum": 5,
+              "maximum": 15
+            }
+          }
+        },
+        "gate6_frozen": {"const": false},
+        "empirical_h1_calculated": {"const": false},
+        "content_hash": {"$ref": "#/$defs/sha256"}
+      }
+    }
+  }
+}
