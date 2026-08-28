@@ -1,0 +1,147 @@
+{
+  "capex_audit_version": "H1-GATE6-REVIEW-1.0.0",
+  "content_hash": "22000E3D88D9EF8685B8B3FF6D5823B8ED7345CD6B854D3232F2246F65D76990",
+  "created_at": "2026-08-28T19:00:00+09:00",
+  "default_analytical_principle": "Repeated Track references do not create independent CAPEX observations.",
+  "independent_company_period_origins": 5,
+  "raw_track_references": 14,
+  "records": [
+    {
+      "capex_source_id": "SRC-ALPHABET-20250204-CAPEX",
+      "csp": [
+        "Google Cloud"
+      ],
+      "event_ids_referencing_source": [
+        "EVT-C03-20250204-CAPEX",
+        "EVT-C04-20250204-CAPEX",
+        "EVT-C11-20250204-CAPEX"
+      ],
+      "may_be_counted_repeatedly_in_empirical_denominator": false,
+      "may_be_reused_as_context": true,
+      "one_independent_company_period_observation": true,
+      "origin_group": "OG-ALPHABET-2024-Q4-EARNINGS",
+      "recommendation_by_event": {
+        "EVT-C03-20250204-CAPEX": "RECOMMEND_EXCLUDE",
+        "EVT-C04-20250204-CAPEX": "RECOMMEND_EXCLUDE",
+        "EVT-C11-20250204-CAPEX": "RECOMMEND_INCLUDE"
+      },
+      "scope_boundary": "Company-period investment context; no named-platform funding allocation.",
+      "source_title": "Alphabet 2024 Q4 Earnings Call",
+      "track_ids_referencing_source": [
+        "C03-GCP-H100",
+        "C04-GCP-H200",
+        "C11-GCP-B200"
+      ],
+      "track_reference_count": 3
+    },
+    {
+      "capex_source_id": "SRC-AMZN-20230203-CAPEX",
+      "csp": [
+        "Amazon Web Services"
+      ],
+      "event_ids_referencing_source": [
+        "EVT-C05-20221231-CAPEX",
+        "EVT-C06-20221231-CAPEX",
+        "EVT-C12-20221231-CAPEX"
+      ],
+      "may_be_counted_repeatedly_in_empirical_denominator": false,
+      "may_be_reused_as_context": true,
+      "one_independent_company_period_observation": true,
+      "origin_group": "OG-AMZN-2022-10K",
+      "recommendation_by_event": {
+        "EVT-C05-20221231-CAPEX": "RECOMMEND_INCLUDE",
+        "EVT-C06-20221231-CAPEX": "RECOMMEND_INCLUDE",
+        "EVT-C12-20221231-CAPEX": "RECOMMEND_INCLUDE"
+      },
+      "scope_boundary": "Company-period investment context; no named-platform funding allocation.",
+      "source_title": "Amazon 2022 Form 10-K",
+      "track_ids_referencing_source": [
+        "C05-AWS-H100",
+        "C06-AWS-H200",
+        "C12-AWS-B200"
+      ],
+      "track_reference_count": 3
+    },
+    {
+      "capex_source_id": "SRC-META-20240201-CAPEX",
+      "csp": [
+        "Meta"
+      ],
+      "event_ids_referencing_source": [
+        "EVT-C09-20231231-CAPEX-GUIDANCE",
+        "EVT-C14-20231231-CAPEX-GUIDANCE"
+      ],
+      "may_be_counted_repeatedly_in_empirical_denominator": false,
+      "may_be_reused_as_context": true,
+      "one_independent_company_period_observation": true,
+      "origin_group": "OG-META-2023Q4-RESULTS",
+      "recommendation_by_event": {
+        "EVT-C09-20231231-CAPEX-GUIDANCE": "RECOMMEND_INCLUDE",
+        "EVT-C14-20231231-CAPEX-GUIDANCE": "RECOMMEND_INCLUDE"
+      },
+      "scope_boundary": "Company-period investment context; no named-platform funding allocation.",
+      "source_title": "Meta Reports Fourth Quarter and Full Year 2023 Results",
+      "track_ids_referencing_source": [
+        "C09-META-H100",
+        "C14-META-GB200"
+      ],
+      "track_reference_count": 2
+    },
+    {
+      "capex_source_id": "SRC-MSFT-20240730-CAPEX",
+      "csp": [
+        "Microsoft Azure"
+      ],
+      "event_ids_referencing_source": [
+        "EVT-C01-20240730-CAPEX",
+        "EVT-C02-20240730-CAPEX",
+        "EVT-C10-20240730-CAPEX"
+      ],
+      "may_be_counted_repeatedly_in_empirical_denominator": false,
+      "may_be_reused_as_context": true,
+      "one_independent_company_period_observation": true,
+      "origin_group": "OG-MSFT-FY2024-Q4-EARNINGS",
+      "recommendation_by_event": {
+        "EVT-C01-20240730-CAPEX": "RECOMMEND_EXCLUDE",
+        "EVT-C02-20240730-CAPEX": "RECOMMEND_INCLUDE",
+        "EVT-C10-20240730-CAPEX": "RECOMMEND_INCLUDE"
+      },
+      "scope_boundary": "Company-period investment context; no named-platform funding allocation.",
+      "source_title": "Microsoft FY2024 Q4 Earnings Call",
+      "track_ids_referencing_source": [
+        "C01-AZ-H100",
+        "C02-AZ-H200",
+        "C10-AZ-GB200"
+      ],
+      "track_reference_count": 3
+    },
+    {
+      "capex_source_id": "SRC-ORCL-20230612-CAPEX-CAPACITY",
+      "csp": [
+        "Oracle Cloud Infrastructure"
+      ],
+      "event_ids_referencing_source": [
+        "EVT-C07-20230531-CAPEX",
+        "EVT-C08-20230531-CAPEX",
+        "EVT-C13-20230531-CAPEX"
+      ],
+      "may_be_counted_repeatedly_in_empirical_denominator": false,
+      "may_be_reused_as_context": true,
+      "one_independent_company_period_observation": true,
+      "origin_group": "OG-ORCL-FY2023-Q4-EARNINGS",
+      "recommendation_by_event": {
+        "EVT-C07-20230531-CAPEX": "RECOMMEND_INCLUDE",
+        "EVT-C08-20230531-CAPEX": "RECOMMEND_INCLUDE",
+        "EVT-C13-20230531-CAPEX": "RECOMMEND_INCLUDE"
+      },
+      "scope_boundary": "Company-period investment context; no named-platform funding allocation.",
+      "source_title": "Oracle Announces Fiscal 2023 Fourth Quarter and Fiscal Full Year Financial Results",
+      "track_ids_referencing_source": [
+        "C07-OCI-H100",
+        "C08-OCI-H200",
+        "C13-OCI-B200"
+      ],
+      "track_reference_count": 3
+    }
+  ]
+}

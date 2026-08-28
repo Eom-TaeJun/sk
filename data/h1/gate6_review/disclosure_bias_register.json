@@ -1,0 +1,80 @@
+{
+  "bias_register_version": "H1-GATE6-REVIEW-1.0.0",
+  "content_hash": "F9E998331FD7AFD33E7FB09C24C5E88D13FA9804F2F7BA264022100D3082A5E0",
+  "created_at": "2026-08-28T19:00:00+09:00",
+  "missingness_mechanism": "POTENTIALLY_MISSING_NOT_AT_RANDOM",
+  "records": [
+    {
+      "affected_metric": "Any future observed milestone or no-realization summary",
+      "affected_stratum": "H1-P,H1-C",
+      "bias_id": "SUCCESS_ANNOUNCEMENT_BIAS",
+      "likely_direction_of_bias": "Observed corpus can overrepresent successful progression and undercount adverse paths.",
+      "mechanism": "Successful samples, qualifications, shipments, and launches are more likely to receive official announcements than failed or abandoned efforts.",
+      "mitigation": "Outcome-neutral Track registry, completed adverse search, explicit negative threshold, and no inference from silence.",
+      "residual_limitation": "Disclosure remains Missing Not At Random; unannounced failures are not recoverable."
+    },
+    {
+      "affected_metric": "Future stage-transition and negative-case descriptions",
+      "affected_stratum": "H1-P",
+      "bias_id": "QUALIFICATION_FAILURE_NONDISCLOSURE",
+      "likely_direction_of_bias": "Technical acceptance can appear more complete and failures less frequent than reality.",
+      "mechanism": "Named qualification completion, failure criteria, and rejected samples are usually confidential.",
+      "mitigation": "Keep substages literal and require explicit product-scope negative evidence.",
+      "residual_limitation": "The corpus cannot identify a full qualification denominator."
+    },
+    {
+      "affected_metric": "Commitment, O1 scope, and decision translation",
+      "affected_stratum": "H1-P",
+      "bias_id": "CUSTOMER_COMMERCIAL_CONFIDENTIALITY",
+      "likely_direction_of_bias": "Commercial selection is missing and broad supplier claims can be overgeneralized.",
+      "mechanism": "Customer identity, contract, allocation, price, volume, and supplier share are often private.",
+      "mitigation": "Preserve KNOWN_UNKNOWN fields and prohibit inferred customer/supplier bridges.",
+      "residual_limitation": "Public O1 is only a supplier-side commercialization proxy."
+    },
+    {
+      "affected_metric": "Future cross-supplier stage comparisons",
+      "affected_stratum": "H1-P",
+      "bias_id": "SUPPLIER_DISCLOSURE_HETEROGENEITY",
+      "likely_direction_of_bias": "Disclosure-heavy suppliers can appear to progress through more observable stages.",
+      "mechanism": "Suppliers use different milestone verbs, cadence, and product/customer scope.",
+      "mitigation": "Literal stage taxonomy, leave-one-supplier sensitivity if later authorized, and no imputation.",
+      "residual_limitation": "Comparability remains limited even after deterministic normalization."
+    },
+    {
+      "affected_metric": "Cross-strata observability",
+      "affected_stratum": "H1-C versus H1-P",
+      "bias_id": "CLOUD_AVAILABILITY_DISCLOSURE_ASYMMETRY",
+      "likely_direction_of_bias": "H1-C can look more complete for disclosure-structure reasons, not superior signal quality.",
+      "mechanism": "Cloud providers publish named service availability more systematically than memory suppliers publish commercial selection.",
+      "mitigation": "Never pool strata or compare raw coverage as performance.",
+      "residual_limitation": "Cross-strata data completeness remains structurally different."
+    },
+    {
+      "affected_metric": "Any future count or comparison using CAPEX",
+      "affected_stratum": "H1-C",
+      "bias_id": "CAPEX_CONTEXT_REUSE",
+      "likely_direction_of_bias": "Repeated references can create pseudo-replication and false independence.",
+      "mechanism": "One company-period CAPEX disclosure is referenced by several named Platform Tracks.",
+      "mitigation": "Count independence by origin group and permit Track reuse as context only.",
+      "residual_limitation": "CAPEX remains broad and cannot be allocated to a named SKU."
+    },
+    {
+      "affected_metric": "Any future no-realization or timing description",
+      "affected_stratum": "H1-P,H1-C",
+      "bias_id": "RECENT_GENERATION_RIGHT_CENSORING",
+      "likely_direction_of_bias": "Recent Tracks can be incorrectly treated as failures or omitted in a way that favors older successes.",
+      "mechanism": "HBM4/HBM4E and Blackwell Tracks have less elapsed follow-up than older generations.",
+      "mitigation": "Frozen 6/12/18-month readiness flags and denominator exclusion for right-censored Events.",
+      "residual_limitation": "Longer follow-up is not available at this Gate 6 cutoff."
+    },
+    {
+      "affected_metric": "Platform operational interpretation",
+      "affected_stratum": "H1-C",
+      "bias_id": "AVAILABILITY_UTILIZATION_GAP",
+      "likely_direction_of_bias": "Availability can be mistaken for high use or realized memory volume.",
+      "mechanism": "GA or installed infrastructure is publicly visible while utilization and memory consumption are usually not.",
+      "mitigation": "Keep GA, limited availability, installed, and operational subtypes separate.",
+      "residual_limitation": "Public sources do not establish actual utilization or exact HBM demand."
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "advisory_only": true,
+  "authorization_version": "H1-GATE6-REVIEW-1.0.0",
+  "content_hash": "57298075ACDCB70E61711B2FAF860014B4E46B6EBBFF85FEC33BFB97F3455F04",
+  "created_at": "2026-08-28T19:00:00+09:00",
+  "human_authorization_selected": false,
+  "levels": [
+    {
+      "allowed": [
+        "corpus description",
+        "coverage and missingness"
+      ],
+      "level": "LEVEL_0_NO_EMPIRICAL_ANALYSIS",
+      "prohibited": [
+        "timing comparison",
+        "signal superiority",
+        "realization probability",
+        "verdict"
+      ]
+    },
+    {
+      "allowed": [
+        "observed Event ordering",
+        "historical information-state reconstruction",
+        "coverage/missingness",
+        "public milestones"
+      ],
+      "level": "LEVEL_1_DESCRIPTIVE_TIMELINE",
+      "prohibited": [
+        "signal superiority",
+        "realization probability",
+        "comparative success claims"
+      ]
+    },
+    {
+      "allowed": [
+        "observed public-information timing intervals where Signal and Outcome timing are defensible"
+      ],
+      "level": "LEVEL_2_BOUNDED_LEAD_TIME_DESCRIPTION",
+      "prohibited": [
+        "causal predictive effect",
+        "population probability",
+        "cross-strata pooling"
+      ]
+    },
+    {
+      "allowed": [
+        "conditioned comparison of observed public cases with disclosure limits"
+      ],
+      "level": "LEVEL_3_DESCRIPTIVE_CONDITIONAL_COMPARISON",
+      "prohibited": [
+        "population probability",
+        "universal ranking",
+        "causal claim"
+      ]
+    },
+    {
+      "allowed": [
+        "separate human-approved H1-P or H1-C verdict after every frozen sufficiency criterion is met"
+      ],
+      "level": "LEVEL_4_COMPARATIVE_H1_VERDICT",
+      "prohibited": [
+        "pooled verdict",
+        "threshold relaxation",
+        "automated business decision"
+      ]
+    }
+  ],
+  "sequential_information_boundary": "Later stages are selected information states. Future analysis may ask what uncertainty each state reduces; it must not declare the stage with the highest observed realization the best predictor.",
+  "strata": [
+    {
+      "codex_proposed_maximum_level": "LEVEL_1_DESCRIPTIVE_TIMELINE",
+      "conditionally_possible_after_human_action": "LEVEL_2 may become possible for a bounded subset after an approved O1 timing policy and replay; this package does not authorize it.",
+      "maximum_business_interpretation": "Monitor product stages, prioritize qualification/TTM questions, and request internal customer confirmation.",
+      "must_remain_prohibited": [
+        "fab/CAPA decision",
+        "customer allocation quantity",
+        "price/volume/share forecast",
+        "comparative H1 verdict"
+      ],
+      "reasons": [
+        "The complete acceptance ladder is not publicly identifiable.",
+        "Timed O1 admission is unresolved under the current policy.",
+        "Only one explicit product negative/delay origin is observed."
+      ],
+      "stratum": "H1-P",
+      "unmet_requirements": [
+        "O1 timing policy",
+        "second independent explicit negative/delayed Product Track",
+        "human-approved negative-evidence representation",
+        "human Event admission"
+      ]
+    },
+    {
+      "codex_proposed_maximum_level": "LEVEL_2_BOUNDED_LEAD_TIME_DESCRIPTION",
+      "conditionally_possible_after_human_action": "Only state-specific bounded timing description is proposed; LEVEL 3/4 remain unsupported by this corpus.",
+      "maximum_business_interpretation": "Monitor platform/customer timing and review TTM or internal demand-confirmation needs.",
+      "must_remain_prohibited": [
+        "utilization inference",
+        "exact HBM demand",
+        "named supplier inference",
+        "repeated CAPEX denominator",
+        "comparative H1 verdict"
+      ],
+      "reasons": [
+        "Named-platform announcement/preview/limited/GA/operational timestamps are observable for an older subset.",
+        "Company CAPEX is repeated broad context and cannot be counted as fourteen independent observations.",
+        "No named-Platform explicit negative/delay Track is observed."
+      ],
+      "stratum": "H1-C",
+      "unmet_requirements": [
+        "two independent named-Platform negative/delayed Tracks",
+        "human Event admission",
+        "state-specific scope conditioning"
+      ]
+    }
+  ]
+}

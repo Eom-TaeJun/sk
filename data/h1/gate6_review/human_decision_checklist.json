@@ -1,0 +1,2434 @@
+{
+  "checklist_complete": false,
+  "checklist_version": "H1-GATE6-REVIEW-1.0.0",
+  "content_hash": "544C15C1435DFCE7556D5928C7E7A932468A19DDA237A0E2B8DAA4C39D9551A6",
+  "contract_change_flags": [
+    {
+      "allowed_values": [
+        "KEEP_TRACK_LEVEL_DESCRIPTIVE_ONLY",
+        "AUTHORIZE_FUTURE_SCHEMA_EXTENSION",
+        "DO_NOT_FREEZE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "issue": "The sole product negative is source-traced at Track level but the current Event model has no COUNTEREVIDENCE role.",
+      "issue_id": "NEGATIVE_EVIDENCE_ATOMIC_REPRESENTATION"
+    },
+    {
+      "allowed_values": [
+        "DO_NOT_USE_POLICY_C",
+        "AUTHORIZE_CONTRACT_IMPLEMENTATION_BEFORE_FREEZE",
+        "DO_NOT_FREEZE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "issue": "Policy C would require lower/upper outcome-time fields not implemented in the current Event schema.",
+      "issue_id": "O1_INTERVAL_TIME_FIELDS"
+    }
+  ],
+  "created_at": "2026-08-28T19:00:00+09:00",
+  "event_admission": [
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C01-20230313-H100-PREVIEW",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C01-20230807-H100-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C01-20240730-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C02-20231115-H200-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C02-20240730-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C02-20241002-H200-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C03-20230829-H100-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_HOLD",
+      "current_review_status": "HOLD",
+      "event_id": "EVT-C03-20240410-H100-RETRO-GA-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C03-20250204-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C04-20241031-H200-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C04-20241213-H200-PREVIEW",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_HOLD",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C04-20241231-H200-GA-RETROSPECTIVE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C04-20250204-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C05-20221231-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C05-20230726-H100-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C06-20221231-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C06-20240909-H200-LIMITED",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C06-20241202-H200-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C07-20230531-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C07-20230612-INFRA-COMMITMENT",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C07-20230919-H100-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C08-20230531-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C08-20240911-H200-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C08-20241118-H200-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C09-20231231-CAPEX-GUIDANCE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C09-20240312-H100-OPERATIONAL",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C10-20240730-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C10-20241119-GB200-PREVIEW",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C10-20250318-GB200-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C11-20250131-B200-PREVIEW",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C11-20250204-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C11-20250318-B200-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C11-20250318-GB200-PREVIEW",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C12-20221231-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C12-20250515-B200-LIMITED",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C12-20250709-GB200-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C13-20230531-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C13-20240911-BLACKWELL-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-C14-20231231-CAPEX-GUIDANCE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "current_review_status": "HOLD",
+      "event_id": "EVT-C14-20250929-GB200-INSTALLED-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P01-20220608-PRODUCTION-CONTEXT",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "current_review_status": "HOLD",
+      "event_id": "EVT-P01-20220608-QUAL-EVAL-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P02-20230821-PRODUCTION-CONTEXT-R2",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "current_review_status": "HOLD",
+      "event_id": "EVT-P02-20230821-PRODUCTION-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P02-20230821-SAMPLE-EVAL",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_HOLD",
+      "current_review_status": "HOLD",
+      "event_id": "EVT-P02-20240319-FUTURE-CUSTOMER-SUPPLY",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P02-20240319-PRODUCTION-CONTEXT-R2",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P03-20240227-PRODUCTION-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P03-20240227-SAMPLE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_HOLD",
+      "current_review_status": "HOLD",
+      "event_id": "EVT-P03-20241231-O1-START-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P03-20241231-SUPPLY-CORROBORATION",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P04-20230726-SAMPLING",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P04-20230927-QUAL-UNDERWAY",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P04-20231220-QUAL-FINAL",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_HOLD",
+      "current_review_status": "HOLD",
+      "event_id": "EVT-P04-20240226-H200-DESIGN-IN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "current_review_status": "HOLD",
+      "event_id": "EVT-P04-20240226-PRODUCTION",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P04-20240226-PRODUCTION-CONTEXT-R2",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_HOLD",
+      "current_review_status": "HOLD",
+      "event_id": "EVT-P04-20250318-O1-START-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P04-20250318-SHIPPING-CORROBORATION",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "current_review_status": "HOLD",
+      "event_id": "EVT-P05-20250319-PRODUCTION-PREP-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P05-20250319-QUAL-PLANNED",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P05-20250319-SAMPLE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_HOLD",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P05-20260630-O1",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P06-20251030-SAMPLE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P06-20260129-QUAL-FINAL",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_HOLD",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P06-20260212-O1",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P06-20260212-PRODUCTION",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P07-20250610-PRODUCTION-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P07-20250610-SAMPLE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_HOLD",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P07-20260316-O1",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P08-20260618-SAMPLE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P09-20260529-PRODUCTION-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_INCLUDE",
+      "current_review_status": "UNREVIEWED",
+      "event_id": "EVT-P09-20260529-SAMPLE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "current_review_status": "HOLD",
+      "event_id": "EVT-P10-20260624-DEVELOPMENT-AS-SAMPLE-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "EXCLUDE",
+        "HOLD"
+      ],
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "current_review_status": "HOLD",
+      "event_id": "EVT-P10-20260624-PRODUCTION-PLAN-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    }
+  ],
+  "event_precision": [
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C01-20230313-H100-PREVIEW",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C01-20230807-H100-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C01-20240730-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C02-20231115-H200-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C02-20240730-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C02-20241002-H200-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C03-20230829-H100-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "MONTH",
+      "event_id": "EVT-C03-20240410-H100-RETRO-GA-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C03-20250204-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C04-20241031-H200-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C04-20241213-H200-PREVIEW",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "MONTH",
+      "event_id": "EVT-C04-20241231-H200-GA-RETROSPECTIVE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C04-20250204-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "MONTH",
+      "event_id": "EVT-C05-20221231-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C05-20230726-H100-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "MONTH",
+      "event_id": "EVT-C06-20221231-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C06-20240909-H200-LIMITED",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C06-20241202-H200-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "MONTH",
+      "event_id": "EVT-C07-20230531-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C07-20230612-INFRA-COMMITMENT",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C07-20230919-H100-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "MONTH",
+      "event_id": "EVT-C08-20230531-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C08-20240911-H200-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C08-20241118-H200-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "MONTH",
+      "event_id": "EVT-C09-20231231-CAPEX-GUIDANCE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C09-20240312-H100-OPERATIONAL",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C10-20240730-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C10-20241119-GB200-PREVIEW",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C10-20250318-GB200-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C11-20250131-B200-PREVIEW",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C11-20250204-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C11-20250318-B200-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C11-20250318-GB200-PREVIEW",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "MONTH",
+      "event_id": "EVT-C12-20221231-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C12-20250515-B200-LIMITED",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C12-20250709-GB200-GA",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "MONTH",
+      "event_id": "EVT-C13-20230531-CAPEX",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C13-20240911-BLACKWELL-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "MONTH",
+      "event_id": "EVT-C14-20231231-CAPEX-GUIDANCE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-C14-20250929-GB200-INSTALLED-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P01-20220608-PRODUCTION-CONTEXT",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P01-20220608-QUAL-EVAL-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P02-20230821-PRODUCTION-CONTEXT-R2",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P02-20230821-PRODUCTION-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P02-20230821-SAMPLE-EVAL",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P02-20240319-FUTURE-CUSTOMER-SUPPLY",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P02-20240319-PRODUCTION-CONTEXT-R2",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P03-20240227-PRODUCTION-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P03-20240227-SAMPLE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "MONTH",
+      "event_id": "EVT-P03-20241231-O1-START-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "MONTH",
+      "event_id": "EVT-P03-20241231-SUPPLY-CORROBORATION",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P04-20230726-SAMPLING",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P04-20230927-QUAL-UNDERWAY",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P04-20231220-QUAL-FINAL",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P04-20240226-H200-DESIGN-IN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P04-20240226-PRODUCTION",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P04-20240226-PRODUCTION-CONTEXT-R2",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P04-20250318-O1-START-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P04-20250318-SHIPPING-CORROBORATION",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P05-20250319-PRODUCTION-PREP-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P05-20250319-QUAL-PLANNED",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P05-20250319-SAMPLE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "MONTH",
+      "event_id": "EVT-P05-20260630-O1",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P06-20251030-SAMPLE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "TIMESTAMP",
+      "event_id": "EVT-P06-20260129-QUAL-FINAL",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P06-20260212-O1",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P06-20260212-PRODUCTION",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "TIMESTAMP",
+      "event_id": "EVT-P07-20250610-PRODUCTION-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "TIMESTAMP",
+      "event_id": "EVT-P07-20250610-SAMPLE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "TIMESTAMP",
+      "event_id": "EVT-P07-20260316-O1",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P08-20260618-SAMPLE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P09-20260529-PRODUCTION-PLAN",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P09-20260529-SAMPLE",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P10-20260624-DEVELOPMENT-AS-SAMPLE-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "current_event_date_precision": "DAY",
+      "event_id": "EVT-P10-20260624-PRODUCTION-PLAN-HOLD",
+      "human_decision": null,
+      "human_reason": null
+    }
+  ],
+  "gate6": {
+    "allowed_values": [
+      "FREEZE",
+      "FREEZE_WITH_EXCLUSIONS",
+      "DO_NOT_FREEZE"
+    ],
+    "human_decision": null,
+    "human_reason": null
+  },
+  "h1_c_readiness": {
+    "allowed_values": [
+      "NOT_READY",
+      "DESCRIPTIVE_ONLY",
+      "BOUNDED_EMPIRICAL_ANALYSIS",
+      "FULL_COMPARATIVE_ANALYSIS"
+    ],
+    "human_decision": null,
+    "human_reason": null
+  },
+  "h1_p_readiness": {
+    "allowed_values": [
+      "NOT_READY",
+      "DESCRIPTIVE_ONLY",
+      "BOUNDED_EMPIRICAL_ANALYSIS",
+      "FULL_COMPARATIVE_ANALYSIS"
+    ],
+    "human_decision": null,
+    "human_reason": null
+  },
+  "hold_resolution": [
+    {
+      "allowed_values": [
+        "EXCLUDE_EXACT_DATE",
+        "RETAIN_RETROSPECTIVE_CORROBORATION",
+        "RETAIN_BOUNDED_INTERVAL_IF_APPROVED",
+        "RETAIN_HOLD"
+      ],
+      "event_id": "EVT-C03-20240410-H100-RETRO-GA-HOLD",
+      "human_reason": null,
+      "human_resolution": null
+    },
+    {
+      "allowed_values": [
+        "EXCLUDE",
+        "RETAIN_AS_NON_OPERATIONAL_CONTEXT",
+        "RETAIN_HOLD"
+      ],
+      "event_id": "EVT-C14-20250929-GB200-INSTALLED-HOLD",
+      "human_reason": null,
+      "human_resolution": null
+    },
+    {
+      "allowed_values": [
+        "EXCLUDE",
+        "RETAIN_AS_EVALUATION_CONTEXT",
+        "RETAIN_HOLD"
+      ],
+      "event_id": "EVT-P01-20220608-QUAL-EVAL-HOLD",
+      "human_reason": null,
+      "human_resolution": null
+    },
+    {
+      "allowed_values": [
+        "EXCLUDE_SUPERSEDED_CLASSIFICATION",
+        "RETAIN_HOLD"
+      ],
+      "event_id": "EVT-P02-20230821-PRODUCTION-PLAN",
+      "human_reason": null,
+      "human_resolution": null
+    },
+    {
+      "allowed_values": [
+        "EXCLUDE",
+        "RETAIN_AS_FUTURE_PLAN_CONTEXT",
+        "RETAIN_HOLD"
+      ],
+      "event_id": "EVT-P02-20240319-FUTURE-CUSTOMER-SUPPLY",
+      "human_reason": null,
+      "human_resolution": null
+    },
+    {
+      "allowed_values": [
+        "EXCLUDE_EXACT_DATE",
+        "APPLY_SELECTED_O1_POLICY",
+        "RETAIN_HOLD"
+      ],
+      "event_id": "EVT-P03-20241231-O1-START-HOLD",
+      "human_reason": null,
+      "human_resolution": null
+    },
+    {
+      "allowed_values": [
+        "EXCLUDE",
+        "RETAIN_AS_PLANNED_INTEGRATION_CONTEXT",
+        "RETAIN_HOLD"
+      ],
+      "event_id": "EVT-P04-20240226-H200-DESIGN-IN",
+      "human_reason": null,
+      "human_resolution": null
+    },
+    {
+      "allowed_values": [
+        "EXCLUDE_SUPERSEDED_CLASSIFICATION",
+        "RETAIN_HOLD"
+      ],
+      "event_id": "EVT-P04-20240226-PRODUCTION",
+      "human_reason": null,
+      "human_resolution": null
+    },
+    {
+      "allowed_values": [
+        "EXCLUDE_EXACT_DATE",
+        "APPLY_SELECTED_O1_POLICY",
+        "RETAIN_HOLD"
+      ],
+      "event_id": "EVT-P04-20250318-O1-START-HOLD",
+      "human_reason": null,
+      "human_resolution": null
+    },
+    {
+      "allowed_values": [
+        "EXCLUDE",
+        "RETAIN_AS_FORWARD_PLAN_CONTEXT",
+        "RETAIN_HOLD"
+      ],
+      "event_id": "EVT-P05-20250319-PRODUCTION-PREP-HOLD",
+      "human_reason": null,
+      "human_resolution": null
+    },
+    {
+      "allowed_values": [
+        "EXCLUDE",
+        "RETAIN_AS_DEVELOPMENT_CONTEXT_OUTSIDE_H1_SIGNAL_SET",
+        "RETAIN_HOLD"
+      ],
+      "event_id": "EVT-P10-20260624-DEVELOPMENT-AS-SAMPLE-HOLD",
+      "human_reason": null,
+      "human_resolution": null
+    },
+    {
+      "allowed_values": [
+        "EXCLUDE",
+        "RETAIN_AS_FORWARD_DEVELOPMENT_CONTEXT_OUTSIDE_EMPIRICAL_SET",
+        "RETAIN_HOLD"
+      ],
+      "event_id": "EVT-P10-20260624-PRODUCTION-PLAN-HOLD",
+      "human_reason": null,
+      "human_resolution": null
+    }
+  ],
+  "o1_timing_policy": {
+    "allowed_values": [
+      "POLICY_A_EXACT_DATE_ONLY",
+      "POLICY_B_PUBLIC_CONFIRMATION_PROXY",
+      "POLICY_C_INTERVAL_CENSORED_REALIZATION",
+      "REJECT_ALL"
+    ],
+    "human_reason": null,
+    "human_selected_policy": null
+  },
+  "origin_grouping": [
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-ALPHABET-2024-Q4-EARNINGS",
+      "source_ids": [
+        "SRC-ALPHABET-20250204-CAPEX"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-AMZN-2022-10K",
+      "source_ids": [
+        "SRC-AMZN-20230203-CAPEX"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-AWS-20230726-P5-GA",
+      "source_ids": [
+        "SRC-AWS-20230726-P5-H100-GA"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-AWS-20240909-P5E-CAPACITY-BLOCK",
+      "source_ids": [
+        "SRC-AWS-20240909-P5E-H200-LIMITED"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-AWS-20241202-P5EN-GA",
+      "source_ids": [
+        "SRC-AWS-20241202-P5EN-H200-GA"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-AWS-20250515-P6-B200",
+      "source_ids": [
+        "SRC-AWS-20250515-P6-B200-LIMITED"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-AWS-20250709-P6E-GB200",
+      "source_ids": [
+        "SRC-AWS-20250709-P6E-GB200-GA"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-AZ-20230313-ND-H100-PREVIEW",
+      "source_ids": [
+        "SRC-AZ-20230313-ND-H100-PREVIEW"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-AZ-20230807-ND-H100-GA",
+      "source_ids": [
+        "SRC-AZ-20230807-ND-H100-GA"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-AZ-20241002-ND-H200-GA",
+      "source_ids": [
+        "SRC-AZ-20241002-ND-H200-GA"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-AZ-20241119-GB200-PREVIEW",
+      "source_ids": [
+        "SRC-AZ-20241119-GB200-PREVIEW"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-AZ-20250318-GB200-GA",
+      "source_ids": [
+        "SRC-AZ-20250318-GB200-GA"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-GCP-20230829-A3-PLAN",
+      "source_ids": [
+        "SRC-GCP-20230829-A3-H100-PLAN"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-GCP-2024-WHATS-NEW",
+      "source_ids": [
+        "SRC-GCP-20241231-A3-ULTRA-PREVIEW"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-GCP-20240410-A3-RETROSPECTIVE",
+      "source_ids": [
+        "SRC-GCP-20240410-A3-H100-RETRO-GA"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-GCP-20241031-A3-ULTRA-PLAN",
+      "source_ids": [
+        "SRC-GCP-20241031-A3-ULTRA-PLAN"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-GCP-20250116-A3-ULTRA-GA",
+      "source_ids": [
+        "SRC-GCP-20250116-A3-ULTRA-GA"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-GCP-20250131-A4-B200-PREVIEW",
+      "source_ids": [
+        "SRC-GCP-20250131-A4-B200-PREVIEW"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-GCP-20250318-A4-A4X",
+      "source_ids": [
+        "SRC-GCP-20250318-A4-B200-GA"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-META-2023Q4-RESULTS",
+      "source_ids": [
+        "SRC-META-20240201-CAPEX"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-META-20240312-H100-CLUSTERS",
+      "source_ids": [
+        "SRC-META-20240312-H100-OPERATIONAL"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-META-20250929-GB200-CATALINA",
+      "source_ids": [
+        "SRC-META-20250929-GB200-INSTALLED"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-MSFT-20231115-IGNITE",
+      "source_ids": [
+        "SRC-MSFT-20231115-AZ-H200-PLAN"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-MSFT-FY2024-Q4-EARNINGS",
+      "source_ids": [
+        "SRC-MSFT-20240730-CAPEX"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-MU-20230726-HBM3E-SAMPLE",
+      "source_ids": [
+        "SRC-MU-20230726-HBM3E-SAMPLE"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-MU-20240226-HBM3E-PRODUCTION",
+      "source_ids": [
+        "SRC-MU-20240226-HBM3E-PRODUCTION"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-MU-20250318-GTC-NVIDIA",
+      "source_ids": [
+        "SRC-MU-20250318-HBM3E-SHIPPING"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-MU-20250610-HBM4-SAMPLE",
+      "source_ids": [
+        "SRC-MU-20250610-HBM4-SAMPLE"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-MU-20260316-GTC-HBM4",
+      "source_ids": [
+        "SRC-MU-20260316-HBM4-SHIPMENT"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-MU-2026Q3-8K-EX991",
+      "source_ids": [
+        "SRC-MU-20260624-HBM4E-DEVELOPMENT"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-MU-FY2023-Q4-PREPARED-REMARKS",
+      "source_ids": [
+        "SRC-MU-20230927-HBM3E-QUAL"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-MU-FY2024-Q1-PREPARED-REMARKS",
+      "source_ids": [
+        "SRC-MU-20231220-HBM3E-QUAL-FINAL"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-OCI-20230919-H100-GA",
+      "source_ids": [
+        "SRC-OCI-20230919-H100-GA"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-OCI-20240911-BLACKWELL-ORDERABLE",
+      "source_ids": [
+        "SRC-OCI-20240911-BLACKWELL-PLAN"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-OCI-20240911-H200-ORDERABLE",
+      "source_ids": [
+        "SRC-OCI-20240911-H200-PLAN"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-OCI-20241118-H200-GA",
+      "source_ids": [
+        "SRC-OCI-20241118-H200-GA"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-ORCL-FY2023-Q4-EARNINGS",
+      "source_ids": [
+        "SRC-ORCL-20230612-CAPEX-CAPACITY"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-SEC-20240227-HBM3E12H",
+      "source_ids": [
+        "SRC-SEC-20240227-HBM3E-SAMPLE"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-SEC-2024Q4-EARNINGS-CALL",
+      "source_ids": [
+        "SRC-SEC-20250131-HBM3E-SUPPLY"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-SEC-2025Q3-EARNINGS-CALL",
+      "source_ids": [
+        "SRC-SEC-20251030-HBM4-SAMPLE"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-SEC-2025Q4-EARNINGS-CALL",
+      "source_ids": [
+        "SRC-SEC-20260129-HBM4-QUAL-FINAL"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-SEC-20260212-HBM4-COMMERCIAL",
+      "source_ids": [
+        "SRC-SEC-20260212-HBM4-COMMERCIAL"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-SEC-20260529-HBM4E-SAMPLE",
+      "source_ids": [
+        "SRC-SEC-20260529-HBM4E-SAMPLE"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-SKH-20220608-HBM3-NVIDIA",
+      "source_ids": [
+        "SRC-SKH-20220608-HBM3"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-SKH-20230821-HBM3E-SAMPLE",
+      "source_ids": [
+        "SRC-SKH-20230821-HBM3E-SAMPLE"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-SKH-20240319-HBM3E-PRODUCTION",
+      "source_ids": [
+        "SRC-SKH-20240319-HBM3E-PRODUCTION"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-SKH-20250319-HBM4-SAMPLE",
+      "source_ids": [
+        "SRC-SKH-20250319-HBM4-SAMPLE"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-SKH-20260618-HBM4E-SAMPLE",
+      "source_ids": [
+        "SRC-SKH-20260618-HBM4E-SAMPLE"
+      ]
+    },
+    {
+      "allowed_values": [
+        "APPROVE",
+        "REVISE"
+      ],
+      "human_decision": null,
+      "human_reason": null,
+      "origin_group": "OG-SKH-2026Q2-RESULTS",
+      "source_ids": [
+        "SRC-SKH-20260729-HBM4-MASS-SHIPMENT"
+      ]
+    }
+  ]
+}

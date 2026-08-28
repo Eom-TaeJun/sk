@@ -1,0 +1,107 @@
+{
+  "capex_boundary": "Repeated Track references remain one independent company-period origin and broad context only.",
+  "complete_state_ladder_assessment": "SPARSE_AND_HETEROGENEOUS_NOT_A_UNIVERSAL_SEQUENCE",
+  "complete_state_ladder_reason": "Announcement, preview, limited availability, GA, and internal operational states are observable in different Tracks; they cannot be collapsed or assumed to occur in every Track.",
+  "content_hash": "805516A9334D4ECD03847B8727D8686F02D9102DC1D84525EDBD02B4FDE280D2",
+  "created_at": "2026-08-28T19:00:00+09:00",
+  "observability_version": "H1-GATE6-REVIEW-1.0.0",
+  "records": [
+    {
+      "maximum_business_interpretation": "Platform/customer monitoring and TTM/customer-timing review only.",
+      "observability_assessment": "EMPIRICALLY_OBSERVABLE",
+      "prohibited_interpretation": "No utilization, exact HBM volume, platform-specific CAPEX allocation, or named supplier inference.",
+      "rationale": "Company-period CAPEX context is available for all raw Tracks, but advisory review excludes three post-P1 uses and five origins cannot become fourteen independent observations.",
+      "recommended_exclude_track_count": 3,
+      "recommended_hold_track_count": 0,
+      "recommended_include_track_count": 11,
+      "signal_class": "CSP_CAPEX",
+      "signal_subtype_filter": null,
+      "state": "CAPEX"
+    },
+    {
+      "maximum_business_interpretation": "Platform/customer monitoring and TTM/customer-timing review only.",
+      "observability_assessment": "DESCRIPTIVE_ONLY",
+      "prohibited_interpretation": "No utilization, exact HBM volume, platform-specific CAPEX allocation, or named supplier inference.",
+      "rationale": "Only one Track has an advisory-INCLUDE commitment Event.",
+      "recommended_exclude_track_count": 0,
+      "recommended_hold_track_count": 0,
+      "recommended_include_track_count": 1,
+      "signal_class": "AI_INFRA_COMMITMENT",
+      "signal_subtype_filter": null,
+      "state": "AI_INFRASTRUCTURE_COMMITMENT"
+    },
+    {
+      "maximum_business_interpretation": "Platform/customer monitoring and TTM/customer-timing review only.",
+      "observability_assessment": "SPARSE_BUT_USABLE",
+      "prohibited_interpretation": "No utilization, exact HBM volume, platform-specific CAPEX allocation, or named supplier inference.",
+      "rationale": "Three named-platform planned/launch Events are directly visible.",
+      "recommended_exclude_track_count": 0,
+      "recommended_hold_track_count": 0,
+      "recommended_include_track_count": 3,
+      "signal_class": "PLATFORM_LAUNCH",
+      "signal_subtype_filter": null,
+      "state": "PLATFORM_ANNOUNCEMENT"
+    },
+    {
+      "maximum_business_interpretation": "Platform/customer monitoring and TTM/customer-timing review only.",
+      "observability_assessment": "SPARSE_BUT_USABLE",
+      "prohibited_interpretation": "No utilization, exact HBM volume, platform-specific CAPEX allocation, or named supplier inference.",
+      "rationale": "Four Tracks expose preview, which must remain distinct from GA.",
+      "recommended_exclude_track_count": 0,
+      "recommended_hold_track_count": 0,
+      "recommended_include_track_count": 4,
+      "signal_class": "PLATFORM_DEPLOYMENT_STAGE",
+      "signal_subtype_filter": "PREVIEW",
+      "state": "PREVIEW"
+    },
+    {
+      "maximum_business_interpretation": "Platform/customer monitoring and TTM/customer-timing review only.",
+      "observability_assessment": "DESCRIPTIVE_ONLY",
+      "prohibited_interpretation": "No utilization, exact HBM volume, platform-specific CAPEX allocation, or named supplier inference.",
+      "rationale": "Two Tracks expose limited availability; this is not unrestricted GA.",
+      "recommended_exclude_track_count": 0,
+      "recommended_hold_track_count": 0,
+      "recommended_include_track_count": 2,
+      "signal_class": "P1_PLATFORM_OPERATIONAL_REALIZATION",
+      "signal_subtype_filter": "LIMITED_AVAILABILITY",
+      "state": "LIMITED_AVAILABILITY"
+    },
+    {
+      "maximum_business_interpretation": "Platform/customer monitoring and TTM/customer-timing review only.",
+      "observability_assessment": "EMPIRICALLY_OBSERVABLE",
+      "prohibited_interpretation": "No utilization, exact HBM volume, platform-specific CAPEX allocation, or named supplier inference.",
+      "rationale": "Named-platform GA is systematically visible, subject to one accepted retrospective timing HOLD and one raw retrospective HOLD.",
+      "recommended_exclude_track_count": 0,
+      "recommended_hold_track_count": 2,
+      "recommended_include_track_count": 9,
+      "signal_class": "P1_PLATFORM_OPERATIONAL_REALIZATION",
+      "signal_subtype_filter": "GENERAL_AVAILABILITY",
+      "state": "GENERAL_AVAILABILITY"
+    },
+    {
+      "maximum_business_interpretation": "Platform/customer monitoring and TTM/customer-timing review only.",
+      "observability_assessment": "SPARSE_BUT_USABLE",
+      "prohibited_interpretation": "No utilization, exact HBM volume, platform-specific CAPEX allocation, or named supplier inference.",
+      "rationale": "One Meta H100 operating-cluster Event is advisory-INCLUDE; the GB200 rack caption is excluded because installed configuration is not operational use.",
+      "recommended_exclude_track_count": 1,
+      "recommended_hold_track_count": 0,
+      "recommended_include_track_count": 1,
+      "signal_class": "P1_PLATFORM_OPERATIONAL_REALIZATION",
+      "signal_subtype_filter": "INSTALLED_OPERATIONAL",
+      "state": "INSTALLED_OR_OPERATIONAL"
+    },
+    {
+      "maximum_business_interpretation": "Platform/customer monitoring and TTM/customer-timing review only.",
+      "observability_assessment": "NOT_IDENTIFIABLE_WITH_PUBLIC_CORPUS",
+      "prohibited_interpretation": "No utilization, exact HBM volume, platform-specific CAPEX allocation, or named supplier inference.",
+      "rationale": "No named Platform Track has an accepted explicit delay/constraint Event.",
+      "recommended_exclude_track_count": 0,
+      "recommended_hold_track_count": 0,
+      "recommended_include_track_count": 0,
+      "signal_class": "__NEGATIVE__",
+      "signal_subtype_filter": null,
+      "state": "EXPLICIT_NAMED_TRACK_DELAY_OR_CONSTRAINT"
+    }
+  ],
+  "stratum": "H1-C"
+}

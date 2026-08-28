@@ -1,0 +1,47 @@
+{
+  "baseline_commit": "467c5f8",
+  "baseline_corpus_manifest_hash": "F4A6817C2D6BD76C723E3D03DA5A24EABCA854A0CBD42902503F9B6ECFD38037",
+  "baseline_dataset_hash": "90F4A310AF8A2B38FFA7BF53C573421EF7021CC8E9820CE1F5177A5192AA4A30",
+  "baseline_source_registry_hash": "D85410B5B881F09841116FC3E57E3EFD8F370DD9915A1DFBBB27B9997E5FC289",
+  "content_hash": "D6DAC415DA85D68B4CB09B6FCD20D9CBF95A0286210A6C01B3CBB276B3E896BE",
+  "corpus_cutoff_at": "2026-08-28T17:00:00+09:00",
+  "counts": {
+    "capex_source_origins": 5,
+    "censoring_track_window_rows": 72,
+    "events_reviewed": 75,
+    "raw_holds_reviewed": 12,
+    "recommendations": {
+      "RECOMMEND_EXCLUDE": 10,
+      "RECOMMEND_HOLD": 9,
+      "RECOMMEND_INCLUDE": 56
+    },
+    "tracks_reviewed": 24
+  },
+  "created_at": "2026-08-28T19:00:00+09:00",
+  "empirical_h1_calculated": false,
+  "file_hashes": {
+    "data/h1/gate6_review/analysis_authorization_proposal.json": "79506A5B3E19C70BF4FC113889B2B15DAFABB79CF0C2049654AFC267FC4AFB0A",
+    "data/h1/gate6_review/candidate_capability_facts.json": "1C6E2D45BD0FB330C688FDCE57A52B801B72659DDF1419CEB78C4BC14524CF55",
+    "data/h1/gate6_review/capex_independence_reuse_audit.csv": "7EF6C563A117631D4A6C079076A63D04D71785CF2C55A207BB3475263B64D0EA",
+    "data/h1/gate6_review/capex_independence_reuse_audit.json": "0A136F1401AE3DDA6310510E970506E18076C2A591C0024AB012954E01BF25C8",
+    "data/h1/gate6_review/censoring_readiness_matrix.csv": "167ACC1B5678CD1D641F100EFD66D3D66C891370A4DBAB03BCB50C2295FFCFAE",
+    "data/h1/gate6_review/censoring_readiness_matrix.json": "9B93F69377445823A2C58E546FD08613A6F461DDE0E8C9642A2EA9E2B91D39CE",
+    "data/h1/gate6_review/disclosure_bias_register.csv": "13AFADCA7C6BDE8A21D79AEADEE4C1E8326883F4314C36B89F9EB4D310F02C67",
+    "data/h1/gate6_review/disclosure_bias_register.json": "17B8913884D6C7913D4B4A8F9063D37F6739B47E7BCEA715D2D4BC4B8CB4471B",
+    "data/h1/gate6_review/event_review_matrix.csv": "3E46DD9F8BF2D65749D71272F385ADCF5D37D51F59BDA2B0A101CDB500256E03",
+    "data/h1/gate6_review/event_review_matrix.json": "C81AF93BB80F307E192337023ED65316134E2BBA9D52134695E30132ABC97962",
+    "data/h1/gate6_review/h1_c_observability_matrix.json": "99759CF78B60DAA9F491D30D549118CE86B18DC98144DE82C22142A74B091758",
+    "data/h1/gate6_review/h1_p_observability_matrix.json": "D1141D5DAF4C5298EB3FB5992D59503BA8EA0BBF00C685F91CBFBB56CC3E13AA",
+    "data/h1/gate6_review/hold_resolution_sheet.csv": "19BB218FF60B8B1EC62FA16C9AF52783B1B4C203CD29546FE090D3A5A27B04DB",
+    "data/h1/gate6_review/hold_resolution_sheet.json": "ABAAB51AE9D0C2F287CB62EF4337487897A95ED439BB6C30DDBD2C39AA22F4D0",
+    "data/h1/gate6_review/human_decision_checklist.json": "8E2B84A9BCE50F0000F48C857197535F569265C7862075585B014E937EF41AF1",
+    "data/h1/gate6_review/negative_evidence_sufficiency.json": "234A017489368F86D72434D58EB5FEAEB064669F9573BDA2EBFF06B9797ABC7F",
+    "data/h1/gate6_review/o1_timing_policy_options.json": "843003AF7B6BD5B40D68AA132FE2396C64DEB06105ED33643AE75B6A0ED05651",
+    "data/h1/gate6_review/track_readiness_matrix.csv": "1A9FB6FAAD7D3FDB6AFC69357F1A353521439AB76C8173C790517E00A5901995",
+    "data/h1/gate6_review/track_readiness_matrix.json": "4CB9F6A33DBB7A3896D2345151CD0A472529F4D617D1F9B727DB66CC8B847ECE",
+    "docs/reviews/h1_gate6_corpus_readiness.md": "6C6B87B5E36DEDD93CAEBBF7B7A72A80A385019AC11E0B2129378149100C9E08"
+  },
+  "gate6_frozen": false,
+  "human_decisions_selected": false,
+  "manifest_version": "H1-GATE6-REVIEW-1.0.0"
+}

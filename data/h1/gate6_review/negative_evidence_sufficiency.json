@@ -1,0 +1,55 @@
+{
+  "audit_version": "H1-GATE6-REVIEW-1.0.0",
+  "content_hash": "B3E3249949DC92CC04F58AAC6DD063937135B5871DC48B2755A303C9978034CD",
+  "created_at": "2026-08-28T19:00:00+09:00",
+  "records": [
+    {
+      "additional_product_scope_negative_required": 1,
+      "atomic_event_representation": "TRACK_LEVEL_NEGATIVE_SOURCE_TRACE_ONLY",
+      "consequence": "Frozen comparative-verdict sufficiency is not met; silence cannot fill the gap.",
+      "gap": "One additional explicit negative/delayed Product Track from a second independent origin is required.",
+      "observed_origin_groups": [
+        "OG-SEC-20241008-3Q24-PRE-EARNINGS"
+      ],
+      "observed_source_ids": [
+        "SRC-SEC-20241008-HBM3E-DELAY"
+      ],
+      "observed_source_traces": [
+        {
+          "content_hash": "065C9B561C28D8249A165E516C568156CBA79D90D4A9D6FA4F6F3036B807BB59",
+          "direct_excerpt": "the start of the HBM3E business to a major customer was delayed relative to our expectations.",
+          "locator": "Explanatory note to the 3Q24 provisional results, final Memory/HBM paragraph",
+          "origin_group": "OG-SEC-20241008-3Q24-PRE-EARNINGS",
+          "publisher": "Samsung Electronics IR",
+          "source_id": "SRC-SEC-20241008-HBM3E-DELAY",
+          "title": "3Q 2024 Pre-Earnings Guidance",
+          "url": "https://www.samsung.com/global/ir/reports-disclosures/public-disclosure-view.84205/"
+        }
+      ],
+      "observed_track_count": 1,
+      "observed_track_ids": [
+        "P03-SEC-HBM3E"
+      ],
+      "representation_gap": "The current SIGNAL/OUTCOME/CONTEXT Event model has no separately admitted COUNTEREVIDENCE Event for this source. Human approval is required before any later negative-case empirical use.",
+      "required_explicit_negative_or_delayed_tracks": 2,
+      "required_independent_origin_groups": 2,
+      "stratum": "H1-P"
+    },
+    {
+      "additional_product_scope_negative_required": 0,
+      "atomic_event_representation": "NONE",
+      "consequence": "Frozen comparative-verdict sufficiency is not met; public non-observation is not failure.",
+      "gap": "Two explicit named-Platform delay/negative Tracks from two independent origins are required.",
+      "observed_origin_groups": [],
+      "observed_source_ids": [],
+      "observed_source_traces": [],
+      "observed_track_count": 0,
+      "observed_track_ids": [],
+      "representation_gap": "No named-Platform negative source or Event is present.",
+      "required_explicit_negative_or_delayed_tracks": 2,
+      "required_independent_origin_groups": 2,
+      "stratum": "H1-C"
+    }
+  ],
+  "thresholds_unchanged": true
+}

@@ -1,0 +1,83 @@
+{
+  "complete_sequential_ladder_assessment": "NOT_IDENTIFIABLE_WITH_PUBLIC_CORPUS",
+  "complete_sequential_ladder_reason": "Sample is broadly visible, qualification is sparse, design-in and commitment are absent after advisory review, and O1 timing is unresolved. The ladder must not be forced.",
+  "content_hash": "68B696BF21EDA88A6C4CC65192B10A41C8A2AF38E6D9F0AC2809DB4B76CC32B9",
+  "created_at": "2026-08-28T19:00:00+09:00",
+  "observability_version": "H1-GATE6-REVIEW-1.0.0",
+  "production_context_boundary": "Supply readiness is observable separately and is never an acceptance signal or O1.",
+  "records": [
+    {
+      "maximum_business_interpretation": "Monitoring, qualification/TTM prioritization, and an internal confirmation request only.",
+      "observability_assessment": "EMPIRICALLY_OBSERVABLE",
+      "observable_uncertainty_dimension": "product existence and customer evaluation entry",
+      "prohibited_interpretation": "No fab decision, customer allocation quantity, price, volume, supplier share, or demand probability.",
+      "rationale": "Product existence and customer sampling/evaluation entry are directly visible across most Tracks.",
+      "recommended_exclude_track_count": 1,
+      "recommended_hold_track_count": 0,
+      "recommended_include_track_count": 8,
+      "signal_class": "HBM_SAMPLE",
+      "stage": "SAMPLE"
+    },
+    {
+      "maximum_business_interpretation": "Monitoring, qualification/TTM prioritization, and an internal confirmation request only.",
+      "observability_assessment": "SPARSE_BUT_USABLE",
+      "observable_uncertainty_dimension": "partial technical-acceptance stage",
+      "prohibited_interpretation": "No fab decision, customer allocation quantity, price, volume, supplier share, or demand probability.",
+      "rationale": "Three Tracks expose planned, underway, or final-stage qualification, but no complete cross-Track ladder exists.",
+      "recommended_exclude_track_count": 1,
+      "recommended_hold_track_count": 0,
+      "recommended_include_track_count": 3,
+      "signal_class": "QUALIFICATION_STAGE",
+      "stage": "QUALIFICATION"
+    },
+    {
+      "maximum_business_interpretation": "Monitoring, qualification/TTM prioritization, and an internal confirmation request only.",
+      "observability_assessment": "NOT_IDENTIFIABLE_WITH_PUBLIC_CORPUS",
+      "observable_uncertainty_dimension": "commercial/platform selection",
+      "prohibited_interpretation": "No fab decision, customer allocation quantity, price, volume, supplier share, or demand probability.",
+      "rationale": "No advisory-INCLUDE Event exists; the sole candidate is planned H200 integration on HOLD.",
+      "recommended_exclude_track_count": 0,
+      "recommended_hold_track_count": 1,
+      "recommended_include_track_count": 0,
+      "signal_class": "DESIGN_IN",
+      "stage": "DESIGN_IN"
+    },
+    {
+      "maximum_business_interpretation": "Monitoring, qualification/TTM prioritization, and an internal confirmation request only.",
+      "observability_assessment": "NOT_IDENTIFIABLE_WITH_PUBLIC_CORPUS",
+      "observable_uncertainty_dimension": "binding or allocation-adjacent commercial commitment",
+      "prohibited_interpretation": "No fab decision, customer allocation quantity, price, volume, supplier share, or demand probability.",
+      "rationale": "No advisory-INCLUDE commitment Event exists; production statements cannot substitute.",
+      "recommended_exclude_track_count": 2,
+      "recommended_hold_track_count": 0,
+      "recommended_include_track_count": 0,
+      "signal_class": "ORDER_ADJACENT_SUPPLY_COMMITMENT",
+      "stage": "COMMERCIAL_COMMITMENT"
+    },
+    {
+      "maximum_business_interpretation": "Monitoring, qualification/TTM prioritization, and an internal confirmation request only.",
+      "observability_assessment": "EMPIRICALLY_OBSERVABLE",
+      "observable_uncertainty_dimension": "manufacturing readiness only",
+      "prohibited_interpretation": "No fab decision, customer allocation quantity, price, volume, supplier share, or demand probability.",
+      "rationale": "Production stages are visible in seven Tracks but remain context and cannot enter the acceptance ladder.",
+      "recommended_exclude_track_count": 2,
+      "recommended_hold_track_count": 0,
+      "recommended_include_track_count": 7,
+      "signal_class": "PRODUCTION_STAGE_CONTEXT",
+      "stage": "SUPPLY_READINESS_CONTEXT"
+    },
+    {
+      "maximum_business_interpretation": "Monitoring, qualification/TTM prioritization, and an internal confirmation request only.",
+      "observability_assessment": "DESCRIPTIVE_ONLY",
+      "observable_uncertainty_dimension": "public supplier-side commercial confirmation",
+      "prohibited_interpretation": "No fab decision, customer allocation quantity, price, volume, supplier share, or demand probability.",
+      "rationale": "All timed O1 candidates require the unresolved human timing policy or additional primary evidence.",
+      "recommended_exclude_track_count": 0,
+      "recommended_hold_track_count": 6,
+      "recommended_include_track_count": 0,
+      "signal_class": "O1_COMMERCIAL_REALIZATION",
+      "stage": "O1_CUSTOMER_SUPPLY_OR_COMMERCIAL_SHIPMENT"
+    }
+  ],
+  "stratum": "H1-P"
+}

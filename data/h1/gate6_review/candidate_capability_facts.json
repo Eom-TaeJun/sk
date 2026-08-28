@@ -1,0 +1,38 @@
+{
+  "candidate_fact_version": "H1-GATE6-REVIEW-1.0.0",
+  "content_hash": "B21BF172FF8B0F752C1B51613CFB244D1C266EC52C456AF51606E02C001D79F7",
+  "created_at": "2026-08-28T19:00:00+09:00",
+  "ledger_mutated": false,
+  "records": [
+    {
+      "artifact_references": [
+        "data/h1/gate6_review/event_review_matrix.json"
+      ],
+      "candidate_fact_id": "CAP-G06-CANDIDATE-001",
+      "claim_status": "CANDIDATE_PENDING_HUMAN_GATE6_DECISION",
+      "performed_action_candidate": "Reviewed all 75 corpus Events and separated deterministic acceptance from semantic admission advice.",
+      "verification_condition": "Human completes Event admission and Gate 6 decision.",
+      "why_material": "It demonstrates that rule-passing evidence was not defaulted into the empirical dataset."
+    },
+    {
+      "artifact_references": [
+        "data/h1/gate6_review/negative_evidence_sufficiency.json"
+      ],
+      "candidate_fact_id": "CAP-G06-CANDIDATE-002",
+      "claim_status": "CANDIDATE_PENDING_HUMAN_GATE6_DECISION",
+      "performed_action_candidate": "Kept public non-observation separate from explicit failure and documented that frozen negative thresholds are unmet.",
+      "verification_condition": "Human confirms the readiness level and Gate 6 disposition.",
+      "why_material": "It prevents a resume-friendly comparative conclusion from overriding research truth."
+    },
+    {
+      "artifact_references": [
+        "data/h1/gate6_review/capex_independence_reuse_audit.json"
+      ],
+      "candidate_fact_id": "CAP-G06-CANDIDATE-003",
+      "claim_status": "CANDIDATE_PENDING_HUMAN_GATE6_DECISION",
+      "performed_action_candidate": "Reduced fourteen Track-level CAPEX references to five independent company-period origins for independence review.",
+      "verification_condition": "Human approves or revises origin grouping at Gate 6.",
+      "why_material": "It prevents pseudo-replication while retaining broad investment context."
+    }
+  ]
+}

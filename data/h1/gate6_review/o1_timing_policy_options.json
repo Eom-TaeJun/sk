@@ -1,0 +1,43 @@
+{
+  "candidate_event_ids": [
+    "EVT-P02-20240319-FUTURE-CUSTOMER-SUPPLY",
+    "EVT-P03-20241231-O1-START-HOLD",
+    "EVT-P04-20250318-O1-START-HOLD",
+    "EVT-P05-20260630-O1",
+    "EVT-P06-20260212-O1",
+    "EVT-P07-20260316-O1"
+  ],
+  "content_hash": "792178065CF735510D3C51942771BD4A049FE83CBA7E6FEDE316F13472A2DC6B",
+  "created_at": "2026-08-28T19:00:00+09:00",
+  "human_selected_policy": null,
+  "options": [
+    {
+      "compatibility_with_gates_1_to_5": "COMPATIBLE_AND_MOST_RESTRICTIVE",
+      "definition": "Admit timed O1 only when a primary source explicitly states the first customer-supply or shipment date.",
+      "effect_on_h1_p_sample": "None of the six current O1 candidates states an exact first date; timed O1 coverage would fall to zero unless a new exact primary source is admitted.",
+      "human_approval_alone_sufficient": true,
+      "main_tradeoff": "Highest temporal purity with severe loss of observable O1 timing.",
+      "policy_id": "POLICY_A_EXACT_DATE_ONLY",
+      "required_contract_change": "NONE"
+    },
+    {
+      "compatibility_with_gates_1_to_5": "CONDITIONALLY_COMPATIBLE_IF_ESTIMAND_IS_RELABELED_AS_PUBLIC_CONFIRMATION_TIMING",
+      "definition": "Use the first public current-shipping confirmation available_at as an information-confirmation proxy, never as the actual first shipment date.",
+      "effect_on_h1_p_sample": "Could retain up to five current-shipping/current-supply candidates; the future-only P02 statement remains ineligible. Final admission still requires human Event review.",
+      "human_approval_alone_sufficient": false,
+      "main_tradeoff": "Preserves historical information logic but measures public confirmation, not operational start.",
+      "policy_id": "POLICY_B_PUBLIC_CONFIRMATION_PROXY",
+      "required_contract_change": "Gate 6 timing specification plus derived-field implementation; O1 occurrence wording remains unchanged."
+    },
+    {
+      "compatibility_with_gates_1_to_5": "CONCEPTUALLY_ALIGNED_WITH_FROZEN_INTERVAL_RULES_BUT_NOT_IMPLEMENTED_IN_CURRENT_EVENT_SCHEMA",
+      "definition": "Represent realization inside a defensible interval bounded by prior future/non-current evidence and later current-shipping evidence.",
+      "effect_on_h1_p_sample": "Could preserve a bounded subset only where both interval bounds are directly supported; no final count is authorized before human review.",
+      "human_approval_alone_sufficient": false,
+      "main_tradeoff": "Closer to the available evidence but requires an explicit measurement-contract implementation change.",
+      "policy_id": "POLICY_C_INTERVAL_CENSORED_REALIZATION",
+      "required_contract_change": "Add lower/upper outcome-time fields, validation, replay, and tests before Gate 6 freeze."
+    }
+  ],
+  "policy_options_version": "H1-GATE6-REVIEW-1.0.0"
+}

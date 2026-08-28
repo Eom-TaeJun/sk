@@ -1,0 +1,260 @@
+{
+  "content_hash": "17C684B0BE69D4F63B5AE6E154BB35F97D234C38154E060B628772A489C12C90",
+  "created_at": "2026-08-28T19:00:00+09:00",
+  "hold_sheet_version": "H1-GATE6-REVIEW-1.0.0",
+  "human_resolutions_selected": 0,
+  "records": [
+    {
+      "codex_recommendation": "RECOMMEND_HOLD",
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "direct_excerpt": "In August 2023 we announced the general availability of A3 VMs.",
+      "event_id": "EVT-C03-20240410-H100-RETRO-GA-HOLD",
+      "exact_ambiguity": "The later retrospective month conflicts with the contemporaneous statement that GA would occur the next month.",
+      "exclusion_effect": "Removes an exact H100 GA outcome date; the earlier planned state and later retrospective corroboration remain visible.",
+      "historical_time_issue": "The 2024 publication cannot be backdated into the 2023 analyst information set.",
+      "human_options": [
+        "EXCLUDE_EXACT_DATE",
+        "RETAIN_RETROSPECTIVE_CORROBORATION",
+        "RETAIN_BOUNDED_INTERVAL_IF_APPROVED"
+      ],
+      "human_resolution": null,
+      "locator": "A3 VMs: Strong results for AI inference, first paragraph",
+      "permanent_hold_for_this_gate": true,
+      "resolving_primary_source": "A contemporaneous Google Cloud GA release, dated service changelog, or immutable official availability record.",
+      "semantic_issue": "A later retrospective GA month conflicts with the contemporaneous forward-looking statement.",
+      "source_id": "SRC-GCP-20240410-A3-H100-RETRO-GA",
+      "track_id": "C03-GCP-H100"
+    },
+    {
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "deterministic_reason": "installed disclosure alone cannot become operational realization",
+      "deterministic_result": "REJECTED",
+      "direct_excerpt": "Our GB200 rack, Catalina, with AALC systems connected into single pod.",
+      "event_id": "EVT-C14-20250929-GB200-INSTALLED-HOLD",
+      "exact_ambiguity": "The image caption establishes a rack configuration but not an operational workload.",
+      "exclusion_effect": "Prevents installed hardware from being counted as operational realization; broad Meta CAPEX context remains.",
+      "historical_time_issue": "No timing leakage was found; the unsupported operational promotion is the issue.",
+      "human_options": [
+        "EXCLUDE",
+        "RETAIN_AS_NON_OPERATIONAL_CONTEXT"
+      ],
+      "human_resolution": null,
+      "locator": "GB200 rack image caption",
+      "permanent_hold_for_this_gate": true,
+      "resolving_primary_source": "A Meta primary source explicitly stating current operational use of the Catalina GB200 rack.",
+      "semantic_issue": "A rack image caption establishes configuration, not an operating workload or customer-available service.",
+      "source_id": "SRC-META-20250929-GB200-INSTALLED",
+      "track_id": "C14-META-GB200"
+    },
+    {
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "deterministic_reason": "qualification COMPLETE requires explicit completion wording",
+      "deterministic_result": "REJECTED",
+      "direct_excerpt": "SK hynix announced that it began mass production of HBM3. NVIDIA has recently completed its performance evaluation of SK hynix’s HBM3 samples. SK hynix will provide HBM3 for NVIDIA systems expected to ship starting in the third quarter of this year.",
+      "event_id": "EVT-P01-20220608-QUAL-EVAL-HOLD",
+      "exact_ambiguity": "Performance evaluation is not explicit qualification or certification completion.",
+      "exclusion_effect": "Prevents qualification-stage inflation; the production-context fact remains.",
+      "historical_time_issue": "No timing leakage was found.",
+      "human_options": [
+        "EXCLUDE",
+        "RETAIN_AS_EVALUATION_CONTEXT"
+      ],
+      "human_resolution": null,
+      "locator": "News Highlights; opening body paragraphs on production, NVIDIA evaluation, and future system supply",
+      "permanent_hold_for_this_gate": true,
+      "resolving_primary_source": "A supplier or counterparty primary source explicitly confirming qualification completion.",
+      "semantic_issue": "Performance evaluation is not explicit qualification or certification completion.",
+      "source_id": "SRC-SKH-20220608-HBM3",
+      "track_id": "P01-SKH-HBM3"
+    },
+    {
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "deterministic_reason": "production or ramp wording alone cannot become a supply commitment",
+      "deterministic_result": "REJECTED",
+      "direct_excerpt": "a customer’s evaluation of samples is underway ... plans to mass produce HBM3E from the first half of next year",
+      "event_id": "EVT-P02-20230821-PRODUCTION-PLAN",
+      "exact_ambiguity": "A production plan is not a customer order or supply commitment.",
+      "exclusion_effect": "Does not remove the production-plan information because the additive R2 context Event preserves it correctly.",
+      "historical_time_issue": "The future plan was not mislabeled as an occurred shipment, but its proposed class is invalid.",
+      "human_options": [
+        "EXCLUDE_SUPERSEDED_CLASSIFICATION"
+      ],
+      "human_resolution": null,
+      "locator": "headline; News Highlights; body paragraphs 1-2",
+      "permanent_hold_for_this_gate": true,
+      "resolving_primary_source": "A signed commitment, explicit allocation, or direct supply-plan source at compatible product scope.",
+      "semantic_issue": "A production plan is not a customer order or supply commitment.",
+      "source_id": "SRC-SKH-20230821-HBM3E-SAMPLE",
+      "track_id": "P02-SKH-HBM3E"
+    },
+    {
+      "codex_recommendation": "RECOMMEND_HOLD",
+      "deterministic_reason": "future-dated customer supply cannot become current O1 realization",
+      "deterministic_result": "REJECTED",
+      "direct_excerpt": "has begun volume production of HBM3E ... for supply to a customer from late March",
+      "event_id": "EVT-P02-20240319-FUTURE-CUSTOMER-SUPPLY",
+      "exact_ambiguity": "The exact customer-supply start date and a later confirming disclosure were not observed in this pilot.",
+      "exclusion_effect": "Removes an unsupported O1; sample and production-context history remain.",
+      "historical_time_issue": "The source was public before the planned supply date and cannot be used as proof that supply occurred.",
+      "human_options": [
+        "EXCLUDE",
+        "RETAIN_AS_FUTURE_PLAN_CONTEXT"
+      ],
+      "human_resolution": null,
+      "locator": "News Highlights; body paragraph 1",
+      "permanent_hold_for_this_gate": true,
+      "resolving_primary_source": "A later official source confirming that customer supply actually began and, if possible, its timing.",
+      "semantic_issue": "Future customer supply cannot establish current O1 realization.",
+      "source_id": "SRC-SKH-20240319-HBM3E-PRODUCTION",
+      "track_id": "P02-SKH-HBM3E"
+    },
+    {
+      "codex_recommendation": "RECOMMEND_HOLD",
+      "deterministic_reason": "O1 requires explicit current shipment or customer-supply wording",
+      "deterministic_result": "REJECTED",
+      "direct_excerpt": "In the fourth quarter, we expanded our HBM3E supply to multiple GPU providers and data center clients.",
+      "event_id": "EVT-P03-20241231-O1-START-HOLD",
+      "exact_ambiguity": "Expanded supply establishes current supply but not the first customer-supply start date.",
+      "exclusion_effect": "Prevents a fabricated O1 start date; accepted current-supply corroboration remains.",
+      "historical_time_issue": "Quarter-level activity was collapsed to a month-end candidate date.",
+      "human_options": [
+        "EXCLUDE_EXACT_DATE",
+        "APPLY_SELECTED_O1_POLICY"
+      ],
+      "human_resolution": null,
+      "locator": "PDF page 26, HBM Q&A answer",
+      "permanent_hold_for_this_gate": true,
+      "resolving_primary_source": "A contemporaneous Samsung primary source stating when customer supply first began.",
+      "semantic_issue": "Expanded current supply does not identify the first customer-supply start date.",
+      "source_id": "SRC-SEC-20250131-HBM3E-SUPPLY",
+      "track_id": "P03-SEC-HBM3E"
+    },
+    {
+      "codex_recommendation": "RECOMMEND_HOLD",
+      "deterministic_reason": "Frozen semantic contract accepted the candidate classification.",
+      "deterministic_result": "PASS",
+      "direct_excerpt": "begun volume production ... will be part of NVIDIA H200 Tensor Core GPUs, which will begin shipping in the second calendar quarter",
+      "event_id": "EVT-P04-20240226-H200-DESIGN-IN",
+      "exact_ambiguity": "The statement is a planned design-in, not proof of a shipped platform or any CSP-specific supplier bridge.",
+      "exclusion_effect": "Removes the only design-in candidate but prevents planned integration from becoming completed commercial selection.",
+      "historical_time_issue": "The planned future integration must remain a plan at the historical cutoff.",
+      "human_options": [
+        "EXCLUDE",
+        "RETAIN_AS_PLANNED_INTEGRATION_CONTEXT"
+      ],
+      "human_resolution": null,
+      "locator": "body paragraph 1",
+      "permanent_hold_for_this_gate": true,
+      "resolving_primary_source": "A Micron or NVIDIA primary source confirming actual selection/integration at H200 scope; a CSP-specific bridge needs separate direct evidence.",
+      "semantic_issue": "The disclosure describes planned H200 integration, not a completed platform shipment or named-CSP supply relationship.",
+      "source_id": "SRC-MU-20240226-HBM3E-PRODUCTION",
+      "track_id": "P04-MU-HBM3E"
+    },
+    {
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "deterministic_reason": "production or ramp wording alone cannot become a supply commitment",
+      "deterministic_result": "REJECTED",
+      "direct_excerpt": "begun volume production ... will be part of NVIDIA H200 Tensor Core GPUs, which will begin shipping in the second calendar quarter",
+      "event_id": "EVT-P04-20240226-PRODUCTION",
+      "exact_ambiguity": "Production start is commercial-adjacent but not equivalent to customer shipment or contractual commitment.",
+      "exclusion_effect": "Does not remove the production fact because the additive R2 context Event preserves it.",
+      "historical_time_issue": "No timing leakage was found; classification inflation is the issue.",
+      "human_options": [
+        "EXCLUDE_SUPERSEDED_CLASSIFICATION"
+      ],
+      "human_resolution": null,
+      "locator": "body paragraph 1",
+      "permanent_hold_for_this_gate": true,
+      "resolving_primary_source": "A separate direct commercial-commitment source.",
+      "semantic_issue": "Production start is supply readiness, not a contractual commitment.",
+      "source_id": "SRC-MU-20240226-HBM3E-PRODUCTION",
+      "track_id": "P04-MU-HBM3E"
+    },
+    {
+      "codex_recommendation": "RECOMMEND_HOLD",
+      "deterministic_reason": "O1 requires explicit current shipment or customer-supply wording",
+      "deterministic_result": "REJECTED",
+      "direct_excerpt": "Micron is the world’s first and only memory company shipping both HBM3E and SOCAMM products.",
+      "event_id": "EVT-P04-20250318-O1-START-HOLD",
+      "exact_ambiguity": "Current shipping does not disclose the first commercial-shipment date or customer scope.",
+      "exclusion_effect": "Prevents a fabricated first date; accepted current-shipping corroboration remains.",
+      "historical_time_issue": "Publication time is an information-confirmation time, not necessarily shipment occurrence time.",
+      "human_options": [
+        "EXCLUDE_EXACT_DATE",
+        "APPLY_SELECTED_O1_POLICY"
+      ],
+      "human_resolution": null,
+      "locator": "body paragraph 1",
+      "permanent_hold_for_this_gate": true,
+      "resolving_primary_source": "An earlier official shipment-start source or a human-approved O1 timing policy.",
+      "semantic_issue": "Current shipping confirms a current state but not the first commercial-shipment date or named customer scope.",
+      "source_id": "SRC-MU-20250318-HBM3E-SHIPPING",
+      "track_id": "P04-MU-HBM3E"
+    },
+    {
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "deterministic_reason": "PRODUCTION_READINESS requires explicit matching production-stage wording",
+      "deterministic_result": "REJECTED",
+      "direct_excerpt": "World's First 12-Layer HBM4 Samples ... to start the certification process ... aims to complete preparations for mass production.",
+      "event_id": "EVT-P05-20250319-PRODUCTION-PREP-HOLD",
+      "exact_ambiguity": "A target to complete preparation is not observed production readiness.",
+      "exclusion_effect": "Prevents a plan from becoming supply-readiness fact; sample and qualification-plan Events remain.",
+      "historical_time_issue": "The target is forward-looking and cannot be promoted at publication.",
+      "human_options": [
+        "EXCLUDE",
+        "RETAIN_AS_FORWARD_PLAN_CONTEXT"
+      ],
+      "human_resolution": null,
+      "locator": "headline; News Highlights; body paragraphs 1-2",
+      "permanent_hold_for_this_gate": true,
+      "resolving_primary_source": "A later official source confirming that preparation or production actually occurred.",
+      "semantic_issue": "A target to complete production preparation is not observed production readiness.",
+      "source_id": "SRC-SKH-20250319-HBM4-SAMPLE",
+      "track_id": "P05-SKH-HBM4"
+    },
+    {
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "deterministic_reason": "HBM_SAMPLE requires explicit sample or sampling wording",
+      "deterministic_result": "REJECTED",
+      "direct_excerpt": "Development of HBM4E, built on 1-gamma DRAM technology, is well underway, with volume production expected in calendar 2027.",
+      "event_id": "EVT-P10-20260624-DEVELOPMENT-AS-SAMPLE-HOLD",
+      "exact_ambiguity": "Development is not a delivered sample or sampling event.",
+      "exclusion_effect": "Leaves P10 without an admissible H1-P signal, accurately making the Track descriptive/unavailable for comparison.",
+      "historical_time_issue": "No future sample event may be backfilled from the development statement.",
+      "human_options": [
+        "EXCLUDE",
+        "RETAIN_AS_DEVELOPMENT_CONTEXT_OUTSIDE_H1_SIGNAL_SET"
+      ],
+      "human_resolution": null,
+      "locator": "Exhibit 99.1, page 2, Product highlights, bullet 2",
+      "permanent_hold_for_this_gate": true,
+      "resolving_primary_source": "A Micron primary source explicitly reporting sample delivery or sampling.",
+      "semantic_issue": "Development activity does not establish delivery of samples or sampling.",
+      "source_id": "SRC-MU-20260624-HBM4E-DEVELOPMENT",
+      "track_id": "P10-MU-HBM4E"
+    },
+    {
+      "codex_recommendation": "RECOMMEND_EXCLUDE",
+      "deterministic_reason": "PRODUCTION_PLANNED requires explicit matching production-stage wording",
+      "deterministic_result": "REJECTED",
+      "direct_excerpt": "Development of HBM4E, built on 1-gamma DRAM technology, is well underway, with volume production expected in calendar 2027.",
+      "event_id": "EVT-P10-20260624-PRODUCTION-PLAN-HOLD",
+      "exact_ambiguity": "The frozen lexical contract does not equate an expected calendar year with a production occurrence.",
+      "exclusion_effect": "Removes no occurred stage and prevents future timing from becoming current production.",
+      "historical_time_issue": "The future year cannot be treated as current readiness or O1.",
+      "human_options": [
+        "EXCLUDE",
+        "RETAIN_AS_FORWARD_DEVELOPMENT_CONTEXT_OUTSIDE_EMPIRICAL_SET"
+      ],
+      "human_resolution": null,
+      "locator": "Exhibit 99.1, page 2, Product highlights, bullet 2",
+      "permanent_hold_for_this_gate": true,
+      "resolving_primary_source": "A primary source with explicit production-planned wording and bounded timing, or a later occurred production disclosure.",
+      "semantic_issue": "An expected calendar year does not establish a current production stage or occurred production plan under the frozen lexical contract.",
+      "source_id": "SRC-MU-20260624-HBM4E-DEVELOPMENT",
+      "track_id": "P10-MU-HBM4E"
+    }
+  ],
+  "unresolved_raw_hold_count": 12
+}

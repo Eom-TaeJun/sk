@@ -1,0 +1,1770 @@
+{
+  "content_hash": "B8412E21CA77B50E62C488BF704EE5D451DC9D8F8D2CBC8B447C33AC259953D8",
+  "created_at": "2026-08-28T19:00:00+09:00",
+  "human_track_decisions_selected": 0,
+  "records": [
+    {
+      "codex_proposed_use": "PARTIAL_PENDING_HUMAN_EVENT_DECISIONS",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": true
+      },
+      "entity": "Microsoft Azure",
+      "event_count": 3,
+      "generation": "H100",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-AZ-20230313-ND-H100-PREVIEW",
+        "OG-AZ-20230807-ND-H100-GA",
+        "OG-MSFT-FY2024-Q4-EARNINGS"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 3
+      },
+      "left_truncated": false,
+      "main_limitation": "Broad Microsoft CAPEX cannot be allocated to this SKU.",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": "ND H100 v5",
+      "product": null,
+      "recommendation_counts": {
+        "RECOMMEND_EXCLUDE": 1,
+        "RECOMMEND_INCLUDE": 2
+      },
+      "recommended_include_outcome_classes": [
+        "P1_PLATFORM_OPERATIONAL_REALIZATION"
+      ],
+      "recommended_include_signal_classes": [
+        "PLATFORM_DEPLOYMENT_STAGE"
+      ],
+      "registry_right_censoring_risk": false,
+      "track_id": "C01-AZ-H100",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "EVENT_ADMISSION_REVIEW_READY",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "announcement": true,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": false
+      },
+      "entity": "Microsoft Azure",
+      "event_count": 3,
+      "generation": "H200",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-AZ-20241002-ND-H200-GA",
+        "OG-MSFT-20231115-IGNITE",
+        "OG-MSFT-FY2024-Q4-EARNINGS"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 3
+      },
+      "left_truncated": false,
+      "main_limitation": "HBM generation is known but the installed supplier lot is not.",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": "ND H200 v5",
+      "product": null,
+      "recommendation_counts": {
+        "RECOMMEND_INCLUDE": 3
+      },
+      "recommended_include_outcome_classes": [
+        "P1_PLATFORM_OPERATIONAL_REALIZATION"
+      ],
+      "recommended_include_signal_classes": [
+        "CSP_CAPEX",
+        "PLATFORM_LAUNCH"
+      ],
+      "registry_right_censoring_risk": false,
+      "track_id": "C02-AZ-H200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "SIGNAL_TIMELINE_ONLY_NO_ADMITTED_OUTCOME",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": false,
+        "hold": true,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": false,
+        "preview": false
+      },
+      "entity": "Google Cloud",
+      "event_count": 3,
+      "generation": "H100",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-ALPHABET-2024-Q4-EARNINGS",
+        "OG-GCP-20230829-A3-PLAN",
+        "OG-GCP-20240410-A3-RETROSPECTIVE"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 2,
+        "HOLD": 1
+      },
+      "left_truncated": false,
+      "main_limitation": "Alphabet CAPEX covers internal and external workloads and multiple asset classes.",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": "A3 H100",
+      "product": null,
+      "recommendation_counts": {
+        "RECOMMEND_EXCLUDE": 1,
+        "RECOMMEND_HOLD": 1,
+        "RECOMMEND_INCLUDE": 1
+      },
+      "recommended_include_outcome_classes": [],
+      "recommended_include_signal_classes": [
+        "PLATFORM_DEPLOYMENT_STAGE"
+      ],
+      "registry_right_censoring_risk": false,
+      "track_id": "C03-GCP-H100",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "SIGNAL_TIMELINE_ONLY_NO_ADMITTED_OUTCOME",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": true
+      },
+      "entity": "Google Cloud",
+      "event_count": 4,
+      "generation": "H200",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-ALPHABET-2024-Q4-EARNINGS",
+        "OG-GCP-2024-WHATS-NEW",
+        "OG-GCP-20241031-A3-ULTRA-PLAN",
+        "OG-GCP-20250116-A3-ULTRA-GA"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 4
+      },
+      "left_truncated": false,
+      "main_limitation": "Capacity and deployment timing do not establish a named memory supplier or product failure.",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": "A3 Ultra H200",
+      "product": null,
+      "recommendation_counts": {
+        "RECOMMEND_EXCLUDE": 1,
+        "RECOMMEND_HOLD": 1,
+        "RECOMMEND_INCLUDE": 2
+      },
+      "recommended_include_outcome_classes": [],
+      "recommended_include_signal_classes": [
+        "PLATFORM_DEPLOYMENT_STAGE"
+      ],
+      "registry_right_censoring_risk": false,
+      "track_id": "C04-GCP-H200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "EVENT_ADMISSION_REVIEW_READY",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": false
+      },
+      "entity": "Amazon Web Services",
+      "event_count": 2,
+      "generation": "H100",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-AMZN-2022-10K",
+        "OG-AWS-20230726-P5-GA"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 2
+      },
+      "left_truncated": false,
+      "main_limitation": "Amazon investment disclosure is broad and GPU-specific allocation is not established.",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": "EC2 P5 H100",
+      "product": null,
+      "recommendation_counts": {
+        "RECOMMEND_INCLUDE": 2
+      },
+      "recommended_include_outcome_classes": [
+        "P1_PLATFORM_OPERATIONAL_REALIZATION"
+      ],
+      "recommended_include_signal_classes": [
+        "CSP_CAPEX"
+      ],
+      "registry_right_censoring_risk": false,
+      "track_id": "C05-AWS-H100",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "EVENT_ADMISSION_REVIEW_READY",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": true,
+        "operational_evidence": true,
+        "preview": false
+      },
+      "entity": "Amazon Web Services",
+      "event_count": 3,
+      "generation": "H200",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-AMZN-2022-10K",
+        "OG-AWS-20240909-P5E-CAPACITY-BLOCK",
+        "OG-AWS-20241202-P5EN-GA"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 3
+      },
+      "left_truncated": false,
+      "main_limitation": "Availability may begin as Capacity Blocks and is not unrestricted GA.",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": "EC2 P5e/P5en H200",
+      "product": null,
+      "recommendation_counts": {
+        "RECOMMEND_INCLUDE": 3
+      },
+      "recommended_include_outcome_classes": [
+        "P1_PLATFORM_OPERATIONAL_REALIZATION"
+      ],
+      "recommended_include_signal_classes": [
+        "CSP_CAPEX"
+      ],
+      "registry_right_censoring_risk": false,
+      "track_id": "C06-AWS-H200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "EVENT_ADMISSION_REVIEW_READY",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": true,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": false
+      },
+      "entity": "Oracle Cloud Infrastructure",
+      "event_count": 3,
+      "generation": "H100",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-OCI-20230919-H100-GA",
+        "OG-ORCL-FY2023-Q4-EARNINGS"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 3
+      },
+      "left_truncated": false,
+      "main_limitation": "Oracle CAPEX and cloud SKU disclosures have different fiscal and event cadence.",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": "OCI H100",
+      "product": null,
+      "recommendation_counts": {
+        "RECOMMEND_INCLUDE": 3
+      },
+      "recommended_include_outcome_classes": [
+        "P1_PLATFORM_OPERATIONAL_REALIZATION"
+      ],
+      "recommended_include_signal_classes": [
+        "AI_INFRA_COMMITMENT",
+        "CSP_CAPEX"
+      ],
+      "registry_right_censoring_risk": false,
+      "track_id": "C07-OCI-H100",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "EVENT_ADMISSION_REVIEW_READY",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "announcement": true,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": false
+      },
+      "entity": "Oracle Cloud Infrastructure",
+      "event_count": 3,
+      "generation": "H200",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-OCI-20240911-H200-ORDERABLE",
+        "OG-OCI-20241118-H200-GA",
+        "OG-ORCL-FY2023-Q4-EARNINGS"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 3
+      },
+      "left_truncated": false,
+      "main_limitation": "Orderable, planned GA, and actual GA must remain separate.",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": "OCI H200",
+      "product": null,
+      "recommendation_counts": {
+        "RECOMMEND_INCLUDE": 3
+      },
+      "recommended_include_outcome_classes": [
+        "P1_PLATFORM_OPERATIONAL_REALIZATION"
+      ],
+      "recommended_include_signal_classes": [
+        "CSP_CAPEX",
+        "PLATFORM_LAUNCH"
+      ],
+      "registry_right_censoring_risk": false,
+      "track_id": "C08-OCI-H200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "EVENT_ADMISSION_REVIEW_READY",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": false,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": false
+      },
+      "entity": "Meta",
+      "event_count": 2,
+      "generation": "H100",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-META-2023Q4-RESULTS",
+        "OG-META-20240312-H100-CLUSTERS"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 2
+      },
+      "left_truncated": false,
+      "main_limitation": "Internal deployment is not a customer-available cloud service.",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": "Internal H100 clusters",
+      "product": null,
+      "recommendation_counts": {
+        "RECOMMEND_INCLUDE": 2
+      },
+      "recommended_include_outcome_classes": [
+        "P1_PLATFORM_OPERATIONAL_REALIZATION"
+      ],
+      "recommended_include_signal_classes": [
+        "CSP_CAPEX"
+      ],
+      "registry_right_censoring_risk": false,
+      "track_id": "C09-META-H100",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "EVENT_ADMISSION_REVIEW_READY",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "announcement": false,
+        "capex": true,
+        "censoring": false,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": true
+      },
+      "entity": "Microsoft Azure",
+      "event_count": 3,
+      "generation": "GB200",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-AZ-20241119-GB200-PREVIEW",
+        "OG-AZ-20250318-GB200-GA",
+        "OG-MSFT-FY2024-Q4-EARNINGS"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 3
+      },
+      "left_truncated": false,
+      "main_limitation": "Preview, online cluster, and customer availability are different events.",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": "ND GB200 v6",
+      "product": null,
+      "recommendation_counts": {
+        "RECOMMEND_INCLUDE": 3
+      },
+      "recommended_include_outcome_classes": [
+        "P1_PLATFORM_OPERATIONAL_REALIZATION"
+      ],
+      "recommended_include_signal_classes": [
+        "CSP_CAPEX",
+        "PLATFORM_DEPLOYMENT_STAGE"
+      ],
+      "registry_right_censoring_risk": false,
+      "track_id": "C10-AZ-GB200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "EVENT_ADMISSION_REVIEW_READY",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "announcement": false,
+        "capex": true,
+        "censoring": true,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": true,
+        "preview": true
+      },
+      "entity": "Google Cloud",
+      "event_count": 4,
+      "generation": "B200/GB200",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-ALPHABET-2024-Q4-EARNINGS",
+        "OG-GCP-20250131-A4-B200-PREVIEW",
+        "OG-GCP-20250318-A4-A4X"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 4
+      },
+      "left_truncated": false,
+      "main_limitation": "A4 and A4X have different preview and GA dates and must not be merged in Events.",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": "A4 B200 / A4X GB200",
+      "product": null,
+      "recommendation_counts": {
+        "RECOMMEND_INCLUDE": 4
+      },
+      "recommended_include_outcome_classes": [
+        "P1_PLATFORM_OPERATIONAL_REALIZATION"
+      ],
+      "recommended_include_signal_classes": [
+        "CSP_CAPEX",
+        "PLATFORM_DEPLOYMENT_STAGE"
+      ],
+      "registry_right_censoring_risk": true,
+      "track_id": "C11-GCP-B200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": false,
+          "right_censored": true,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "EVENT_ADMISSION_REVIEW_READY",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "announcement": false,
+        "capex": true,
+        "censoring": true,
+        "delay_constraint": false,
+        "ga": true,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": true,
+        "operational_evidence": true,
+        "preview": false
+      },
+      "entity": "Amazon Web Services",
+      "event_count": 3,
+      "generation": "B200/GB200",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-AMZN-2022-10K",
+        "OG-AWS-20250515-P6-B200",
+        "OG-AWS-20250709-P6E-GB200"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 3
+      },
+      "left_truncated": false,
+      "main_limitation": "B200 and GB200 are separate SKUs and later availability cannot be backdated.",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": "EC2 P6-B200 / P6e-GB200",
+      "product": null,
+      "recommendation_counts": {
+        "RECOMMEND_INCLUDE": 3
+      },
+      "recommended_include_outcome_classes": [
+        "P1_PLATFORM_OPERATIONAL_REALIZATION"
+      ],
+      "recommended_include_signal_classes": [
+        "CSP_CAPEX"
+      ],
+      "registry_right_censoring_risk": true,
+      "track_id": "C12-AWS-B200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "SIGNAL_TIMELINE_ONLY_NO_ADMITTED_OUTCOME",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "announcement": true,
+        "capex": true,
+        "censoring": true,
+        "delay_constraint": false,
+        "ga": false,
+        "hold": false,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": false,
+        "preview": false
+      },
+      "entity": "Oracle Cloud Infrastructure",
+      "event_count": 2,
+      "generation": "B200/GB200",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-OCI-20240911-BLACKWELL-ORDERABLE",
+        "OG-ORCL-FY2023-Q4-EARNINGS"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 2
+      },
+      "left_truncated": false,
+      "main_limitation": "Taking orders, planned GA, actual GA, and dedicated-region deployment differ.",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": "OCI B200 / GB200",
+      "product": null,
+      "recommendation_counts": {
+        "RECOMMEND_INCLUDE": 2
+      },
+      "recommended_include_outcome_classes": [],
+      "recommended_include_signal_classes": [
+        "CSP_CAPEX",
+        "PLATFORM_LAUNCH"
+      ],
+      "registry_right_censoring_risk": true,
+      "track_id": "C13-OCI-B200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "SIGNAL_TIMELINE_ONLY_NO_ADMITTED_OUTCOME",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "announcement": false,
+        "capex": true,
+        "censoring": true,
+        "delay_constraint": false,
+        "ga": false,
+        "hold": true,
+        "infrastructure_commitment": false,
+        "limited_availability": false,
+        "operational_evidence": false,
+        "preview": false
+      },
+      "entity": "Meta",
+      "event_count": 2,
+      "generation": "GB200",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-META-2023Q4-RESULTS",
+        "OG-META-20250929-GB200-CATALINA"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 1,
+        "HOLD": 1
+      },
+      "left_truncated": false,
+      "main_limitation": "Internal infrastructure has no cloud-availability outcome and the memory supplier is unnamed.",
+      "missingness": {
+        "capacity_allocation": "PRIVATE_OR_NOT_DISCLOSED",
+        "demand_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "named_hbm_supplier": "NOT_OBSERVED_PUBLICLY",
+        "platform_specific_capex": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "utilization": "NOT_OBSERVED_PUBLICLY"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": "Catalina GB200 rack",
+      "product": null,
+      "recommendation_counts": {
+        "RECOMMEND_EXCLUDE": 1,
+        "RECOMMEND_INCLUDE": 1
+      },
+      "recommended_include_outcome_classes": [],
+      "recommended_include_signal_classes": [
+        "CSP_CAPEX"
+      ],
+      "registry_right_censoring_risk": true,
+      "track_id": "C14-META-GB200",
+      "track_type": "CUSTOMER_PLATFORM_REALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "DESCRIPTIVE_ONLY_NO_ADMISSIBLE_SIGNAL",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "censoring": false,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": true,
+        "negative_delay_evidence": false,
+        "o1_candidate": false,
+        "production_stage_context": true,
+        "qualification": false,
+        "sample": false
+      },
+      "entity": "SK hynix",
+      "event_count": 2,
+      "generation": "HBM3",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-SKH-20220608-HBM3-NVIDIA"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 1,
+        "HOLD": 1
+      },
+      "left_truncated": true,
+      "main_limitation": "Development and sampling began before the boundary; no CSP-instance supplier identity is established.",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": null,
+      "product": "HBM3",
+      "recommendation_counts": {
+        "RECOMMEND_EXCLUDE": 1,
+        "RECOMMEND_INCLUDE": 1
+      },
+      "recommended_include_outcome_classes": [],
+      "recommended_include_signal_classes": [],
+      "registry_right_censoring_risk": false,
+      "track_id": "P01-SKH-HBM3",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": false,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        },
+        "18M": {
+          "fully_observed": false,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        },
+        "6M": {
+          "fully_observed": false,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "SIGNAL_TIMELINE_ONLY_NO_ADMITTED_OUTCOME",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "censoring": false,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": true,
+        "negative_delay_evidence": false,
+        "o1_candidate": false,
+        "production_stage_context": true,
+        "qualification": false,
+        "sample": true
+      },
+      "entity": "SK hynix",
+      "event_count": 5,
+      "generation": "HBM3E",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-SKH-20230821-HBM3E-SAMPLE",
+        "OG-SKH-20240319-HBM3E-PRODUCTION"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 3,
+        "HOLD": 2
+      },
+      "left_truncated": false,
+      "main_limitation": "Customers are generally unnamed and the official archive is announcement-biased.",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": null,
+      "product": "HBM3E 8H/12H",
+      "recommendation_counts": {
+        "RECOMMEND_EXCLUDE": 1,
+        "RECOMMEND_HOLD": 1,
+        "RECOMMEND_INCLUDE": 3
+      },
+      "recommended_include_outcome_classes": [],
+      "recommended_include_signal_classes": [
+        "HBM_SAMPLE"
+      ],
+      "registry_right_censoring_risk": false,
+      "track_id": "P02-SKH-HBM3E",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "PARTIAL_PENDING_HUMAN_EVENT_DECISIONS",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "censoring": false,
+        "commitment": false,
+        "corroboration": true,
+        "design_in": false,
+        "hold": true,
+        "negative_delay_evidence": true,
+        "o1_candidate": false,
+        "production_stage_context": true,
+        "qualification": false,
+        "sample": true
+      },
+      "entity": "Samsung Electronics",
+      "event_count": 4,
+      "generation": "HBM3E",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-SEC-20240227-HBM3E12H",
+        "OG-SEC-2024Q4-EARNINGS-CALL"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 3,
+        "HOLD": 1
+      },
+      "left_truncated": false,
+      "main_limitation": "Stage language is inconsistent and strict customer-supply wording may not be public.",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_result": "EXPLICIT_NEGATIVE_OR_DELAY",
+      "platform": null,
+      "product": "HBM3E 8H/12H",
+      "recommendation_counts": {
+        "RECOMMEND_HOLD": 1,
+        "RECOMMEND_INCLUDE": 3
+      },
+      "recommended_include_outcome_classes": [
+        "O2_OPERATIONAL_CORROBORATION"
+      ],
+      "recommended_include_signal_classes": [
+        "HBM_SAMPLE"
+      ],
+      "registry_right_censoring_risk": false,
+      "track_id": "P03-SEC-HBM3E",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "PARTIAL_PENDING_HUMAN_EVENT_DECISIONS",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "censoring": false,
+        "commitment": false,
+        "corroboration": true,
+        "design_in": false,
+        "hold": true,
+        "negative_delay_evidence": false,
+        "o1_candidate": false,
+        "production_stage_context": true,
+        "qualification": true,
+        "sample": true
+      },
+      "entity": "Micron",
+      "event_count": 8,
+      "generation": "HBM3E",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-MU-20230726-HBM3E-SAMPLE",
+        "OG-MU-20240226-HBM3E-PRODUCTION",
+        "OG-MU-20250318-GTC-NVIDIA",
+        "OG-MU-FY2023-Q4-PREPARED-REMARKS",
+        "OG-MU-FY2024-Q1-PREPARED-REMARKS"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 5,
+        "HOLD": 3
+      },
+      "left_truncated": false,
+      "main_limitation": "The H200 family link does not establish the supplier in any specific CSP instance.",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": null,
+      "product": "HBM3E 8H/12H",
+      "recommendation_counts": {
+        "RECOMMEND_EXCLUDE": 1,
+        "RECOMMEND_HOLD": 2,
+        "RECOMMEND_INCLUDE": 5
+      },
+      "recommended_include_outcome_classes": [
+        "O2_OPERATIONAL_CORROBORATION"
+      ],
+      "recommended_include_signal_classes": [
+        "HBM_SAMPLE",
+        "QUALIFICATION_STAGE"
+      ],
+      "registry_right_censoring_risk": false,
+      "track_id": "P04-MU-HBM3E",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "SIGNAL_TIMELINE_ONLY_NO_ADMITTED_OUTCOME",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "censoring": true,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": true,
+        "negative_delay_evidence": false,
+        "o1_candidate": true,
+        "production_stage_context": false,
+        "qualification": true,
+        "sample": true
+      },
+      "entity": "SK hynix",
+      "event_count": 4,
+      "generation": "HBM4",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-SKH-20250319-HBM4-SAMPLE",
+        "OG-SKH-2026Q2-RESULTS"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 3,
+        "HOLD": 1
+      },
+      "left_truncated": false,
+      "main_limitation": "Customer qualification, volume, price, and share are not publicly established.",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": null,
+      "product": "HBM4 12H",
+      "recommendation_counts": {
+        "RECOMMEND_EXCLUDE": 1,
+        "RECOMMEND_HOLD": 1,
+        "RECOMMEND_INCLUDE": 2
+      },
+      "recommended_include_outcome_classes": [],
+      "recommended_include_signal_classes": [
+        "HBM_SAMPLE",
+        "QUALIFICATION_STAGE"
+      ],
+      "registry_right_censoring_risk": true,
+      "track_id": "P05-SKH-HBM4",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": false,
+          "right_censored": true,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "SIGNAL_TIMELINE_ONLY_NO_ADMITTED_OUTCOME",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "censoring": true,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": false,
+        "negative_delay_evidence": false,
+        "o1_candidate": true,
+        "production_stage_context": true,
+        "qualification": true,
+        "sample": true
+      },
+      "entity": "Samsung Electronics",
+      "event_count": 4,
+      "generation": "HBM4",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-SEC-2025Q3-EARNINGS-CALL",
+        "OG-SEC-2025Q4-EARNINGS-CALL",
+        "OG-SEC-20260212-HBM4-COMMERCIAL"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 4
+      },
+      "left_truncated": false,
+      "main_limitation": "The early source chain and exact stage wording require archive verification.",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": null,
+      "product": "HBM4",
+      "recommendation_counts": {
+        "RECOMMEND_HOLD": 1,
+        "RECOMMEND_INCLUDE": 3
+      },
+      "recommended_include_outcome_classes": [],
+      "recommended_include_signal_classes": [
+        "HBM_SAMPLE",
+        "QUALIFICATION_STAGE"
+      ],
+      "registry_right_censoring_risk": true,
+      "track_id": "P06-SEC-HBM4",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": false,
+          "right_censored": true,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        },
+        "18M": {
+          "fully_observed": false,
+          "right_censored": true,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "SIGNAL_TIMELINE_ONLY_NO_ADMITTED_OUTCOME",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "censoring": true,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": false,
+        "negative_delay_evidence": false,
+        "o1_candidate": true,
+        "production_stage_context": true,
+        "qualification": false,
+        "sample": true
+      },
+      "entity": "Micron",
+      "event_count": 3,
+      "generation": "HBM4",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-MU-20250610-HBM4-SAMPLE",
+        "OG-MU-20260316-GTC-HBM4"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 3
+      },
+      "left_truncated": false,
+      "main_limitation": "Recent disclosures may be censored and contracts may be HBM-family rather than generation-specific.",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": null,
+      "product": "HBM4 12H",
+      "recommendation_counts": {
+        "RECOMMEND_HOLD": 1,
+        "RECOMMEND_INCLUDE": 2
+      },
+      "recommended_include_outcome_classes": [],
+      "recommended_include_signal_classes": [
+        "HBM_SAMPLE"
+      ],
+      "registry_right_censoring_risk": true,
+      "track_id": "P07-MU-HBM4",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        },
+        "18M": {
+          "fully_observed": false,
+          "right_censored": true,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        },
+        "6M": {
+          "fully_observed": true,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": true,
+          "usable_only_descriptively": false
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "SIGNAL_TIMELINE_ONLY_NO_ADMITTED_OUTCOME",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "censoring": true,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": false,
+        "negative_delay_evidence": false,
+        "o1_candidate": false,
+        "production_stage_context": false,
+        "qualification": false,
+        "sample": true
+      },
+      "entity": "SK hynix",
+      "event_count": 1,
+      "generation": "HBM4E",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-SKH-20260618-HBM4E-SAMPLE"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 1
+      },
+      "left_truncated": false,
+      "main_limitation": "The Track is too recent for the approved observation windows at registry freeze.",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": null,
+      "product": "HBM4E 12H",
+      "recommendation_counts": {
+        "RECOMMEND_INCLUDE": 1
+      },
+      "recommended_include_outcome_classes": [],
+      "recommended_include_signal_classes": [
+        "HBM_SAMPLE"
+      ],
+      "registry_right_censoring_risk": true,
+      "track_id": "P08-SKH-HBM4E",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": false,
+          "right_censored": true,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        },
+        "18M": {
+          "fully_observed": false,
+          "right_censored": true,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        },
+        "6M": {
+          "fully_observed": false,
+          "right_censored": true,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "SIGNAL_TIMELINE_ONLY_NO_ADMITTED_OUTCOME",
+      "collection_status": "COLLECTED_WITH_PRIMARY_EVIDENCE",
+      "coverage_before_human_admission": {
+        "censoring": true,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": false,
+        "negative_delay_evidence": false,
+        "o1_candidate": false,
+        "production_stage_context": true,
+        "qualification": false,
+        "sample": true
+      },
+      "entity": "Samsung Electronics",
+      "event_count": 2,
+      "generation": "HBM4E",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-SEC-20260529-HBM4E-SAMPLE"
+      ],
+      "ingestion_counts": {
+        "ACCEPTED": 2
+      },
+      "left_truncated": false,
+      "main_limitation": "The Track is recent and customer, platform, and downstream stages are not established.",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": null,
+      "product": "HBM4E 12H",
+      "recommendation_counts": {
+        "RECOMMEND_INCLUDE": 2
+      },
+      "recommended_include_outcome_classes": [],
+      "recommended_include_signal_classes": [
+        "HBM_SAMPLE"
+      ],
+      "registry_right_censoring_risk": true,
+      "track_id": "P09-SEC-HBM4E",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": false,
+          "right_censored": true,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        },
+        "18M": {
+          "fully_observed": false,
+          "right_censored": true,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        },
+        "6M": {
+          "fully_observed": false,
+          "right_censored": true,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        }
+      }
+    },
+    {
+      "codex_proposed_use": "DESCRIPTIVE_ONLY_NO_ADMISSIBLE_SIGNAL",
+      "collection_status": "COLLECTED_WITH_HOLD_ONLY",
+      "coverage_before_human_admission": {
+        "censoring": true,
+        "commitment": false,
+        "corroboration": false,
+        "design_in": false,
+        "hold": true,
+        "negative_delay_evidence": false,
+        "o1_candidate": false,
+        "production_stage_context": false,
+        "qualification": false,
+        "sample": false
+      },
+      "entity": "Micron",
+      "event_count": 2,
+      "generation": "HBM4E",
+      "human_track_admission_decision": null,
+      "independent_origin_groups_in_corpus": [
+        "OG-MU-2026Q3-8K-EX991"
+      ],
+      "ingestion_counts": {
+        "HOLD": 2
+      },
+      "left_truncated": false,
+      "main_limitation": "Development is not sampling and downstream stages are not publicly available.",
+      "missingness": {
+        "customer_identity": "PRIVATE_OR_NOT_DISCLOSED",
+        "customer_volume": "PRIVATE_OR_NOT_DISCLOSED",
+        "exclusivity": "NOT_OBSERVED_PUBLICLY",
+        "margin": "PRIVATE_OR_NOT_DISCLOSED",
+        "price": "PRIVATE_OR_NOT_DISCLOSED",
+        "qualified_supplier_count": "NOT_OBSERVED_PUBLICLY",
+        "supplier_share": "NOT_OBSERVED_PUBLICLY",
+        "yield": "PRIVATE_OR_NOT_DISCLOSED"
+      },
+      "negative_search_result": "NOT_OBSERVED_PUBLICLY",
+      "platform": null,
+      "product": "HBM4E",
+      "recommendation_counts": {
+        "RECOMMEND_EXCLUDE": 2
+      },
+      "recommended_include_outcome_classes": [],
+      "recommended_include_signal_classes": [],
+      "registry_right_censoring_risk": true,
+      "track_id": "P10-MU-HBM4E",
+      "track_type": "PRODUCT_COMMERCIALIZATION_TRACK",
+      "window_readiness": {
+        "12M": {
+          "fully_observed": false,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        },
+        "18M": {
+          "fully_observed": false,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        },
+        "6M": {
+          "fully_observed": false,
+          "right_censored": false,
+          "usable_for_failure_no_realization_denominator": false,
+          "usable_only_descriptively": true
+        }
+      }
+    }
+  ],
+  "track_readiness_version": "H1-GATE6-REVIEW-1.0.0"
+}
