@@ -2,7 +2,7 @@
 
 ## Objective
 
-Build a traceable decision-intelligence workflow that uses public information to distinguish semiconductor and AI-memory signals by their position in the demand/supply transmission chain, tests which signals improve demand or constraint visibility, and translates validated evidence into business-decision context. Recruiting evidence is a downstream record of real project work.
+Build an SK hynix-centered customer, product and supply-chain knowledge base for learning the sales, marketing, product-planning and new-product-commercialization decisions described in the 2026 second-half recruitment materials. Start with who needs which memory product, why, through which adoption/purchase process and on what timetable. Preserve the traceable research workflow for testing public demand/supply signals. Application claims must describe actual work and validation; learning notes do not establish predictive skill or business results.
 
 ## Current phase
 
@@ -13,6 +13,7 @@ Build a traceable decision-intelligence workflow that uses public information to
 - H1-P now distinguishes customer/commercial acceptance from supply readiness; production stage is context only
 - H1 full primary-source corpus and Gate 6 readiness package: prepared; human Gate 6 review/freeze remains pending
 - Supply-chain research intake (2026-10-03): candidate-only map, metric and free-access plans; not governed Evidence or an H1 dataset amendment
+- User purpose clarification (2026-10-03): SK hynix commercial-role learning is the primary use; HBM, server DRAM and eSSD customer/product relationships come first, with finance/power/materials as relevant context
 - Bounded customer-commitment collection: purpose-first single-case capture/replay, with source provenance and separate failed attempts; not continuous monitoring or empirical validation
 - H1 metrics, lead/lag, realization rates, outcome analysis and verdict: not yet approved; require Gate 6 dataset freeze
 - H2: only after a credible H1 minimum pipeline
@@ -39,6 +40,7 @@ Do not treat deleted, historical, or interrupted H1 experiment artifacts as appr
 - Software tests: `tests/`
 - Historical project facts: `application_evidence/`
 - Supply-chain research intake and legacy reference review: `docs/research/supply_chain/README.md`
+- Current user purpose, 2026 job-description evidence and product/customer learning structure: `docs/research/supply_chain/sk_hynix_commercial_role_context.md`
 - Public candidate data and hashes: `data/research/semiconductor_supply_chain/2026-10-03/manifest.json`
 - Economic question and single-case boundaries: `docs/research/supply_chain/decision_purpose.md`
 - Customer-commitment collector and case review: `scripts/collect_customer_commitment.py`, `docs/research/supply_chain/first_case_review.md`

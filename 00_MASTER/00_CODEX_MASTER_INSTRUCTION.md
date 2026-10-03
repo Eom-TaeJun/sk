@@ -3,10 +3,15 @@
 
 ### 0. 이 프로젝트의 본질
 
-이 프로젝트는 "AI 기술을 많이 구현한 프로젝트"도, 채용 증거를 만들기 위해 존재하는 시스템도 아니다.
-목표는 공개정보를 이용해 반도체·AI-memory 신호의 전파경로와 시간축을 구분하고,
-어떤 신호가 실제 수요 또는 binding constraint 가시성을 개선하는지 검증해
-business-decision context로 번역하는 것이다.
+2026-10-03 사용자는 프로젝트의 우선 목적을 SK하이닉스 관점의 공급망 지도와
+2026년 하반기 영업·마케팅·상품기획·신제품사업화 직무에 필요한 산업·상품 배경지식 학습으로 명확히 했다.
+따라서 **누가 어떤 메모리 상품을 왜 필요로 하고, 누가 사양·인증·구매를 결정하며,
+어떤 공급 조건과 일정 아래 고객 채택으로 연결되는가**를 먼저 구조화한다.
+현재 사용자 목적과 공식 직무 근거는 `docs/research/supply_chain/sk_hynix_commercial_role_context.md`에 둔다.
+
+공개정보로 신호의 전파경로·시간축을 구분하고 수요 또는 binding constraint 가시성을
+검증해 business-decision context로 번역하는 기존 연구 방법은 유지한다.
+제품·직무 학습은 예측력 검증과 다르며, 채용에 활용하는 수행·성과 주장은 실제 작업 범위를 따라야 한다.
 
 이 시스템은 H1 predictor나 HBM commercialization tracker 하나가 아니다. H1은
 Demand/Customer Economics부터 Product Mix/Opportunity Cost까지 이어지는 전체
@@ -517,7 +522,7 @@ Dashboard는 필요하지 않다.
 
 ## 17. Downstream Application Evidence
 
-아래 파일은 프로젝트의 이유가 아니라 실제 분석 수행 증거의 downstream 기록이다. Source trace, run, test, failure 또는 human decision으로 입증된 뒤에만 갱신한다.
+아래 파일은 산업·직무 학습 내용과 구분하는 실제 분석 수행 증거의 downstream 기록이다. Source trace, run, test, failure 또는 human decision으로 입증된 뒤에만 갱신한다. 학습·지원 목적이 우선이어도 수행하지 않은 분석이나 검증 성과를 기록하지 않는다.
 
 ### project_fact_sheet.md
 - 기간
