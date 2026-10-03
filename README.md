@@ -1,6 +1,8 @@
 # Memory Market Decision Intelligence
 
-공개정보를 이용해 반도체·AI-memory 신호가 수요·공급 전파경로의 어디에 있는지 구분하고, 어떤 신호가 실제 수요 또는 제약 가시성을 개선하는지 검증해 business-decision context로 번역하는 프로젝트다.
+SK하이닉스의 영업·마케팅·상품기획·신제품사업화 직무를 이해하기 위해 **상품, 고객의 사용 목적, 채택·구매 과정과 공급 조건을 연결하는 공급망 지식 기반**을 만드는 프로젝트다. 2026년 하반기 공식 직무 안내를 기준으로 “누구에게 어떤 상품을 왜, 언제 제안할 것인가”를 설명하는 데 목적을 둔다. 공개 수요·공급 신호의 검증과 출처 추적은 이 학습을 뒷받침하는 연구 방법이다.
+
+시작 문서: [하이닉스 상품·고객·직무 관점](docs/research/supply_chain/sk_hynix_commercial_role_context.md).
 
 ```text
 Real decision problem
@@ -13,7 +15,7 @@ Real decision problem
 → application / interview translation
 ```
 
-채용·경험기술서 자료는 실제 분석과 검증에서 파생되는 downstream evidence이며 프로젝트의 1차 목적이 아니다.
+2026-10-03 사용자가 직무 준비와 산업·상품 이해를 우선 목적으로 명확히 했다. 배경지식 학습과 실제 수행 증거는 구분한다. 채용·경험기술서에 쓰는 성과는 실제 조사·구현·검증 범위를 따라야 한다.
 
 ## Current phase
 
@@ -23,6 +25,7 @@ Real decision problem
 - H1: Gates 1–5, measurement contract, 24-Track registry와 수집·Gate 6 검토 패키지 준비
 - H1 검증 대기: 사람의 Gate 6 dataset freeze 및 Event 검토. 지표·lead/lag·실현율·verdict는 미계산
 - 연구 자료 추가: [반도체·AI·데이터센터·전력·금융 공급망](docs/research/supply_chain/README.md) — 기존 세 저장소의 방법론 검토와 2026-10-03 후보 자료
+- 현재 우선순위: [2026 하반기 직무·상품·고객 구조](docs/research/supply_chain/sk_hynix_commercial_role_context.md) — HBM·서버 DRAM·eSSD의 고객 문제와 채택 단계 학습
 - 첫 수집 실험: [경제적 목적](docs/research/supply_chain/decision_purpose.md)과 [OpenAI–CoreWeave 사례 검토](docs/research/supply_chain/first_case_review.md) — 고객 약정과 실제 집행의 공개 연결 범위를 구분
 - 후속: H1 최소 검증 후 H2 Bottleneck Migration
 - 보류: H3 Product-Mix Opportunity Cost는 공개정보가 충분할 때까지 `KNOWN_UNKNOWN` 중심 framework로 유지
