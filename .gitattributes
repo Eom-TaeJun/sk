@@ -1,0 +1,8 @@
+# Source and research manifests hash exact bytes; never rewrite their line endings.
+* text=auto
+/data/raw/sources/** -text
+/data/h1/pilot/archive/** -text
+/data/h1/corpus/archive/** -text
+/data/research/** -text
+# Downloaded originals retain upstream CRLF/whitespace; inspect their hashes and locators.
+/data/research/customer_commitments/**/sources/** -diff

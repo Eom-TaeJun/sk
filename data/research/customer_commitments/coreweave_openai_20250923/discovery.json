@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-10-03",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "purpose": "Record the official issuer discovery chain and distinguish vendor metadata from a canonical SEC research reference.",
+  "capture_id": "0434b21a5cbec8009ee88b453857411d9b52535d9cc9efe11172260557c26e42",
+  "official_issuer_page": "https://investors.coreweave.com/financials/sec-filings/default.aspx",
+  "public_widget_script": "https://investors.coreweave.com/js/module/widgets/dist/latest/evergreen.q4Api.min.js",
+  "public_feed_endpoint_literal": "/feed/SECFiling.svc/GetEdgarFilingList",
+  "access": "Public GET; no account, login or user API key required in the observed run",
+  "metadata": {
+    "source_id": "issuer-18796309-feed",
+    "sha256": "48f8a19fe90928f1749ebb90b09265e9480ec6821935dd893797629f95fe31a7",
+    "raw_file": "sources/48f8a19fe90928f1749ebb90b09265e9480ec6821935dd893797629f95fe31a7.json",
+    "filing_locator": "$.GetEdgarFilingListResult[6]",
+    "publication_date_locator": "$.GetEdgarFilingListResult[6].FilingDate",
+    "document_url_locator": "$.GetEdgarFilingListResult[6].DocumentList[1].Url"
+  },
+  "document": {
+    "source_id": "issuer-18796309-document",
+    "sha256": "9055eaee6c4dd76d4ed45355591d946b0bc75bd39afbfcc40f7d733f4111402b",
+    "raw_file": "sources/9055eaee6c4dd76d4ed45355591d946b0bc75bd39afbfcc40f7d733f4111402b.html",
+    "original_filename_anchor": "D17274D8K_HTM",
+    "scope": "Issuer representation combines main 8-K and Exhibit 10.1; parser reads bounded Item 1.01 only"
+  },
+  "sec_reference": {
+    "accession": "0001193125-25-216497",
+    "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000119312525216497/d17274d8k.htm",
+    "index_url": "https://www.sec.gov/Archives/edgar/data/1769628/000119312525216497/0001193125-25-216497-index.html"
+  },
+  "sec_accession_observed_in_downloaded_source": false,
+  "sec_original_byte_identity_verified": false,
+  "manual_candidate_comparison": "Same registrant, counterparties, report/event dates and distinctive order-form terms as the linked SEC page read in research; not an automated accession match or independent corroboration.",
+  "vendor_received_date_is_sec_acceptance": false,
+  "human_evidence_approved": false,
+  "empirical_dataset_admitted": false,
+  "predictive_validity_established": false
+}

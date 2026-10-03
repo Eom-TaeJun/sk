@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "parser_version": "1.1.0",
+  "case_id": "coreweave-openai-2025-09-23",
+  "accession": null,
+  "cik": "1769628",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "source_is_synthetic": false,
+  "event_kind": "NEW_ORDER_FORM",
+  "stage_family": "demand",
+  "stage": "CONDITIONAL_CUSTOMER_COMMITMENT",
+  "supplier_legal_name": "CoreWeave, Inc.",
+  "customer_legal_name": "OpenAI OpCo, LLC",
+  "scope": "cloud_computing_capacity",
+  "event_date": "2025-09-23",
+  "publication_date": "2025-09-25",
+  "known_at": "2025-09-25",
+  "known_at_precision": "day",
+  "known_at_basis": "Issuer filing feed FilingDate, matched to the 8-K cover; day precision only",
+  "accepted_at_source": null,
+  "accepted_at_source_timezone": null,
+  "accepted_at_timezone_note": "SEC acceptance timestamp is not established by this issuer feed or mirrored document",
+  "existing_msa_date": "2025-05-08",
+  "commitment_end_date": "2031-05-31",
+  "maximum_commitment_usd": 6500000000,
+  "currency": "USD",
+  "amount_qualifiers": [
+    "UP_TO",
+    "APPROXIMATE",
+    "CONDITIONAL"
+  ],
+  "amount_basis": "order-form maximum commitment over its term; not annual revenue or cash received",
+  "conditions": {
+    "delivery_requirements": true,
+    "service_availability_requirements": true,
+    "termination_rights": true
+  },
+  "minimum_purchase_usd": null,
+  "actual_cash_received_usd": null,
+  "prepayment_usd": null,
+  "actual_usage": null,
+  "revenue_recognized_usd": null,
+  "unknown_reason": "Not established by the bounded Item 1.01 summary; null does not mean zero",
+  "summary_only": true,
+  "full_msa_and_redacted_exhibits_reviewed": false,
+  "source_original_excerpt": "availability of service requirements, OpenAI has committed to pay the Company up to approximately $6.5 billion through May 31, 2031 under the Order Form.",
+  "locator": {
+    "section": "Item 1.01",
+    "paragraph": "conditional payment commitment",
+    "text_normalization": "HTML entities decoded; visible whitespace collapsed",
+    "visible_text_char_range": [
+      2668,
+      2821
+    ]
+  },
+  "field_locators": {
+    "event_date": [
+      2145,
+      2163
+    ],
+    "supplier": [
+      2165,
+      2180
+    ],
+    "customer": [
+      2201,
+      2217
+    ],
+    "existing_msa_date": [
+      2343,
+      2354
+    ],
+    "maximum_commitment": [
+      2767,
+      2770
+    ],
+    "commitment_end_date": [
+      2787,
+      2799
+    ]
+  },
+  "empirical_dataset_admitted": false,
+  "human_evidence_approved": false,
+  "predictive_validity_established": false,
+  "automatic_h1_admission": false,
+  "source_route": "issuer",
+  "accession_observed_in_raw_source": false,
+  "issuer_filing_id": 18796309,
+  "issuer_filing_date_raw": "09/25/2025 00:00:00",
+  "issuer_filing_date_note": "Vendor filing-date clock is not an SEC acceptance or first-availability timestamp; only its calendar date is used",
+  "canonical_sec_reference": {
+    "accession": "0001193125-25-216497",
+    "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000119312525216497/d17274d8k.htm",
+    "index_url": "https://www.sec.gov/Archives/edgar/data/1769628/000119312525216497/0001193125-25-216497-index.html"
+  },
+  "canonical_sec_match_basis": "Manual comparison reported in research: cover dates, named parties, new order form, existing MSA, conditional maximum and term; not an automated accession match",
+  "canonical_sec_match_status": "RESEARCH_REFERENCE_REQUIRES_REVIEW_NOT_AUTOMATED_MATCH",
+  "sec_raw_byte_identity_verified": false,
+  "source_identity_note": "Issuer-hosted filing mirror linked by the issuer's public metadata feed; SEC original/index bytes were not substituted or fabricated",
+  "capture_id": "0434b21a5cbec8009ee88b453857411d9b52535d9cc9efe11172260557c26e42",
+  "retrieved_at_utc": "2026-10-03T09:49:56Z",
+  "retrieval_method": "network",
+  "remote_availability_verified_in_this_run": true,
+  "sources": [
+    {
+      "source_id": "issuer-18796309-document",
+      "source_role": "ISSUER_HOSTED_FILING_MIRROR",
+      "source_url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001769628/a5d34350-7a13-4e70-a811-c41398bb7fe9.html",
+      "source_host": "d18rn0p25nwr6d.cloudfront.net",
+      "sha256": "9055eaee6c4dd76d4ed45355591d946b0bc75bd39afbfcc40f7d733f4111402b",
+      "bytes": 119503,
+      "raw_file": "sources/9055eaee6c4dd76d4ed45355591d946b0bc75bd39afbfcc40f7d733f4111402b.html",
+      "retrieved_at_utc": "2026-10-03T09:49:56Z",
+      "retrieval_method": "network",
+      "remote_retrieved_at_utc": "2026-10-03T09:49:56Z"
+    },
+    {
+      "source_id": "issuer-18796309-feed",
+      "source_role": "ISSUER_FILING_METADATA_FEED",
+      "source_url": "https://investors.coreweave.com/feed/SECFiling.svc/GetEdgarFilingList?LanguageId=1&exchange=CIK&symbol=0001769628&formGroupIdList=&filingTypeList=8-K&excludeNoDocuments=true&includeHtmlDocument=true&pageSize=-1&pageNumber=0&tagList=&includeTags=true&year=2025&excludeSelection=1",
+      "source_host": "investors.coreweave.com",
+      "sha256": "48f8a19fe90928f1749ebb90b09265e9480ec6821935dd893797629f95fe31a7",
+      "bytes": 32802,
+      "raw_file": "sources/48f8a19fe90928f1749ebb90b09265e9480ec6821935dd893797629f95fe31a7.json",
+      "retrieved_at_utc": "2026-10-03T09:49:56Z",
+      "retrieval_method": "network",
+      "remote_retrieved_at_utc": "2026-10-03T09:49:56Z"
+    }
+  ],
+  "supersedes_capture_id": null
+}

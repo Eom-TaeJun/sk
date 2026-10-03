@@ -1,0 +1,486 @@
+{
+  "schema_version": "2.0",
+  "as_of": "2026-10-03",
+  "baseline": {
+    "company_nodes": 55,
+    "relationship_edges": 46,
+    "changes_applied_to_existing_company_files": false
+  },
+  "adopted_improvements": [
+    {
+      "id": "graph-layer-and-grain",
+      "fields": [
+        "record_kind",
+        "entity_kind",
+        "claim_scope"
+      ],
+      "change": "기업기명거래·국가제품무역·시설 관측·제품용도·모델추정·전문가 견해를 분리한다.",
+      "prototype_gap": "55주체·46관계에는 기명 계약과 응용 관계가 함께 있어 같은 edge count로 수요 강도를 읽기 어렵다.",
+      "basis": [
+        "oecd-semiconductor-map-2025",
+        "cset-semiconductor-chain-2021",
+        "silicon-stack-rejected"
+      ],
+      "priority": "먼저"
+    },
+    {
+      "id": "project-facility-contract-keys",
+      "fields": [
+        "project_id",
+        "campus_id",
+        "facility_id",
+        "building_id",
+        "contract_id",
+        "parent_project_id"
+      ],
+      "change": "회사 관계를 실제 프로젝트·캠퍼스·건물·계약에 연결하고 연결 미확인은 null로 남긴다.",
+      "prototype_gap": "시설 이름/지역을 일부 보존하지만 여러 공장·계약을 같은 프로젝트로 일관되게 추적하는 키가 필요하다.",
+      "basis": [
+        "epoch-ai-data-centers",
+        "pudl-github"
+      ],
+      "priority": "먼저"
+    },
+    {
+      "id": "role-and-entity-crosswalk",
+      "fields": [
+        "legal_entity_id",
+        "parent_id",
+        "facility_operator_id",
+        "hardware_owner_id",
+        "tenant_id",
+        "end_user_id",
+        "headquarters_country",
+        "facility_country",
+        "external_ids"
+      ],
+      "change": "매수/매도 역할을 사건별로 두고 지주·운영회사·GPU 소유·사용·시설 운영을 분리한다.",
+      "prototype_gap": "기업 설명은 있어도 전력회사·cloud 운영자·최종 사용자 사이의 범위가 서로 다르다.",
+      "basis": [
+        "epoch-ai-data-centers",
+        "cset-semiconductor-chain-2021",
+        "pudl-github"
+      ],
+      "priority": "먼저"
+    },
+    {
+      "id": "technology-and-component",
+      "fields": [
+        "product_family",
+        "chip_generation",
+        "process_node",
+        "node_capacity_allocation",
+        "wafer_diameter_mm",
+        "material_form",
+        "component_function",
+        "compatible_substitutes"
+      ],
+      "change": "GPU·HBM·전력/RF·wafer를 기술/제품별로 나누고 소재→소자→모듈의 용도를 연결한다.",
+      "prototype_gap": "같은 반도체 회사의 상품용도를 전체 GPU 공급관계로 확장하거나 fab 전 용량을 최첨단 node에 배정하는 오류를 막아야 한다.",
+      "basis": [
+        "cset-semiconductor-chain-2021",
+        "oecd-semiconductor-map-2025",
+        "epoch-ai-chip-counts-github"
+      ],
+      "priority": "먼저"
+    },
+    {
+      "id": "typed-quantity-and-money",
+      "fields": [
+        "measure_name",
+        "value",
+        "unit",
+        "unit_kind",
+        "quantity_scope",
+        "stock_or_flow",
+        "money_kind",
+        "currency",
+        "price_base_year",
+        "aggregation_level"
+      ],
+      "change": "GPU die/슈퍼칩/rack/H100e, IT MW/시설 MW/MWh, 약정/지급/예치금/RPO/매출을 별도 측정치로 저장한다.",
+      "prototype_gap": "46관계의 수량·금액 정의는 이미 일부 있으나 공통 enum과 집계 금지 규칙이 필요하다.",
+      "basis": [
+        "epoch-ai-data-centers",
+        "epoch-ai-chip-counts-github",
+        "pudl-github"
+      ],
+      "priority": "먼저"
+    },
+    {
+      "id": "dated-observation-and-release",
+      "fields": [
+        "event_date",
+        "measurement_period",
+        "effective_from",
+        "effective_to",
+        "published_at",
+        "observed_as_of",
+        "retrieved_at",
+        "source_version"
+      ],
+      "change": "발표일·실효일·관측기간·수집일·version을 분리하고 당시 공개된 자료만으로 과거 시그널을 재구성한다.",
+      "prototype_gap": "개별 날짜는 보존했지만 현재 snapshot끼리 날짜를 섞거나 미래에 알게 된 사실이 과거 신호에 유입될 수 있다.",
+      "basis": [
+        "epoch-ai-data-centers",
+        "epoch-ai-chip-counts-github",
+        "pudl-github"
+      ],
+      "priority": "먼저"
+    },
+    {
+      "id": "milestones-and-revisions",
+      "fields": [
+        "stage_family",
+        "stage",
+        "target_date",
+        "previous_target_date",
+        "status_reason",
+        "supersedes_id",
+        "cancelled_at",
+        "actual_termination_date"
+      ],
+      "change": "서로 독립적인 계약/건설/장비/가동 단계를 관리하고 지연·보류·취소·실제 종료도 사건으로 기록한다.",
+      "prototype_gap": "현재 단계 설명과 목표일만으로 일정의 상향·하향 수정과 취소를 일관되게 집계하기 어렵다.",
+      "basis": [
+        "epoch-ai-data-centers",
+        "pudl-github"
+      ],
+      "priority": "먼저"
+    },
+    {
+      "id": "claim-dedup-and-independence",
+      "fields": [
+        "claim_id",
+        "supporting_source_ids",
+        "economic_commitment_id",
+        "source_dependency_ids",
+        "duplicate_group_id",
+        "aggregate_member_scope"
+      ],
+      "change": "동일 발표의 재인용을 한 주장으로 묶되 구매약정·지분투자 같은 별도 거래는 구분한다. 모델이 같은 입력을 공유하면 독립 증거로 세지 않는다.",
+      "prototype_gap": "NVIDIA의 공급·투자·잔여 용량 인수를 별개 최종 수요로 세거나 물량/금액을 단계별로 중복 더할 수 있다.",
+      "basis": [
+        "epoch-ai-data-centers",
+        "pudl-github",
+        "oecd-semiconductor-map-2025"
+      ],
+      "priority": "먼저"
+    },
+    {
+      "id": "observed-vs-estimated",
+      "fields": [
+        "value_origin",
+        "estimation_method",
+        "parameter_version",
+        "interval_low",
+        "interval_high",
+        "author_assessment",
+        "source_locator"
+      ],
+      "change": "측정·회사공시·원저자 추정을 분리하고 매출/냉각 모델의 가정과 불확실성을 유지한다.",
+      "prototype_gap": "확인된 회사 관계도 해당 수량이 실측이라는 뜻은 아니며 author confidence를 보편 검증 등급으로 바꾸면 안 된다.",
+      "basis": [
+        "epoch-ai-data-centers",
+        "epoch-ai-chip-counts-github"
+      ],
+      "priority": "먼저"
+    },
+    {
+      "id": "plant-generator-mapping",
+      "fields": [
+        "plant_id_eia",
+        "generator_id",
+        "unit_id",
+        "mapping_valid_from",
+        "mapping_valid_to",
+        "mapping_basis",
+        "mapping_status"
+      ],
+      "change": "원전·터빈 계약의 시설 명칭을 공적 plant/generator ID와 교차 매핑한다.",
+      "prototype_gap": "Susquehanna/Crane/가스터빈 주문을 발전량에 연결하려면 동일 법인명만으로는 부족하다.",
+      "basis": [
+        "pudl-github",
+        "wri-global-power-plant"
+      ],
+      "priority": "다음"
+    },
+    {
+      "id": "hs-and-country-boundaries",
+      "fields": [
+        "reporter_country",
+        "partner_country",
+        "hs_edition",
+        "hs_code",
+        "trade_value",
+        "quantity_unit",
+        "semiconductor_share_assumption",
+        "reexport_scope"
+      ],
+      "change": "HS 버전과 광범위 제품 묶음을 명시하고 국가 무역 변화는 거시 노출 지표로만 연결한다.",
+      "prototype_gap": "갈륨 HS 묶음이나 장비 수출을 특정 회사/AI 제품의 실제 주문으로 단정하는 경로를 막아야 한다.",
+      "basis": [
+        "oecd-semiconductor-map-2025"
+      ],
+      "priority": "다음"
+    },
+    {
+      "id": "data-access-lifecycle",
+      "fields": [
+        "license_scope",
+        "access_mode",
+        "source_maintained",
+        "repo_archived",
+        "latest_commit_at",
+        "dataset_updated_at",
+        "series_discontinued_at",
+        "ingestion_tested"
+      ],
+      "change": "코드 최신 commit과 실제 자료 최신 기준일, 공개 요약과 유료 원자료를 구분한다.",
+      "prototype_gap": "오래된 open repo나 중단된 free 지표도 현재 수집 가능한 시그널처럼 보일 수 있다.",
+      "basis": [
+        "wri-global-power-plant",
+        "semi-stale-access-guard",
+        "silicon-stack-rejected",
+        "pudl-github"
+      ],
+      "priority": "먼저"
+    }
+  ],
+  "power_method_changes": [
+    {
+      "id": "separate_load_supply",
+      "rule": "발전 접속 큐는 공급 후보, 대형 부하 접속 신청은 구매 후보다. 서로 다른 모집단·ID·상태 체계를 사용한다.",
+      "basis": [
+        "lbnl_queued_2026",
+        "lbnl_large_load_review"
+      ]
+    },
+    {
+      "id": "stage_before_mw",
+      "rule": "관심/신청→연구비 납부→LOA/ESA 약정→인허가·송전 공사→통전 승인→관측 가동→실제 MW/MWh를 별도 사건으로 저장한다. 모든 프로젝트가 같은 순서를 거친다고 가정하지 않는다.",
+      "basis": [
+        "aep_load_study_letter",
+        "aep_2026_update",
+        "ercot_large_load"
+      ]
+    },
+    {
+      "id": "money_instrument",
+      "rule": "발표 투자액, 발주액, 담보/신용장/보증, CIAC, 회계 capex, 고객 현금 수납은 다른 금전 사건이다. 계약 MW만으로 현금 유입을 계산하지 않는다.",
+      "basis": [
+        "aep_load_study_letter",
+        "aep_2026_update"
+      ]
+    },
+    {
+      "id": "vintage_and_cohort",
+      "rule": "발표일/관측 기준일/효력일/대상 연도/수정일을 분리한다. 단계 전환율은 같은 프로젝트 cohort와 기간·용량 정의가 확인될 때만 계산한다. 다른 스냅샷 합계를 나누지 않는다.",
+      "basis": [
+        "aep_2026_update",
+        "lbnl_queued_2026"
+      ]
+    },
+    {
+      "id": "model_is_not_meter",
+      "rule": "명목 IT 용량, 계약 접속 MW, 실제 동시 피크 MW, 비동시 사업장 최대값의 합, 연간 TWh를 구분한다. 모델·설문은 측정값과 별도 레이어에 둔다.",
+      "basis": [
+        "iea_2026",
+        "lbnl_dc_2025_update",
+        "epri_2026",
+        "uptime_2026",
+        "pjm_accuracy_2026"
+      ]
+    },
+    {
+      "id": "ppi_ppa_and_backlog",
+      "rule": "PPA/원전 정격 MW는 현재 AI 전력 소비가 아니다. 기업 전체 backlog도 AI 주문이 아니다. 명명된 고객·제품·부지·서비스 개시·인도 사건이 확인된 부분만 관계에 연결한다.",
+      "basis": [
+        "iea_2026",
+        "company_map_existing_confirmed_relations"
+      ]
+    },
+    {
+      "id": "observability",
+      "rule": "한 고객 비공개/영업비밀로 억제된 자료는 0으로 채우지 않는다. 공개 문서가 없음은 취소 또는 부하 없음의 증거가 아니다. 원 데이터의 무료 여부와 보고서 무료 여부를 분리한다.",
+      "basis": [
+        "pjm_accuracy_2026",
+        "lbnl_dc_2025_update",
+        "epri_2026",
+        "uptime_2026"
+      ]
+    },
+    {
+      "id": "artifact_grain_not_report_title",
+      "rule": "보고서에 월별 그림이 있어도 부속 XLS가 같은 granularity를 담는다고 가정하지 않는다. PJM 공개 XLS는 연간 July Peak만 확인됐다. 보고서·다운로드 파일·그림의 범주와 시간을 별도 검증한다.",
+      "basis": [
+        "pjm_accuracy_2026"
+      ]
+    }
+  ],
+  "tables": {
+    "entities": [
+      "entity_id",
+      "kind",
+      "legal_name",
+      "parent_id",
+      "external_ids",
+      "headquarters_country",
+      "valid_from",
+      "valid_to"
+    ],
+    "facilities": [
+      "facility_id",
+      "campus_id",
+      "building_id",
+      "country",
+      "coordinates",
+      "coordinate_source_id",
+      "facility_operator_id",
+      "valid_from",
+      "valid_to"
+    ],
+    "projects": [
+      "project_id",
+      "parent_project_id",
+      "facility_id",
+      "technology/product_generation",
+      "scope",
+      "source_ids"
+    ],
+    "contracts": [
+      "contract_id",
+      "economic_commitment_id",
+      "project_id",
+      "buyer_id",
+      "seller_id",
+      "financier_id",
+      "government_id",
+      "conditions",
+      "term",
+      "source_ids"
+    ],
+    "events": [
+      "event_id",
+      "claim_id",
+      "contract_id",
+      "project_id",
+      "facility_id",
+      "event_kind",
+      "stage_family",
+      "stage_raw",
+      "event_date",
+      "effective_date",
+      "target_date",
+      "published_at",
+      "supersedes_id",
+      "termination/cancellation_reason"
+    ],
+    "measurements": [
+      "measurement_id",
+      "metric_id",
+      "subject_id",
+      "value",
+      "unit",
+      "quantity_scope",
+      "stock_or_flow",
+      "money_kind",
+      "period_start",
+      "period_end",
+      "observed_as_of",
+      "value_origin",
+      "source_version",
+      "source_id",
+      "missingness_reason"
+    ],
+    "evidence": [
+      "source_id",
+      "url",
+      "source_locator",
+      "author",
+      "published_at",
+      "retrieved_at",
+      "file_hash",
+      "data_observation_period",
+      "license_scope",
+      "access_mode",
+      "ingestion_test_status",
+      "source_dependency_ids"
+    ],
+    "exposure_links": [
+      "entity/product/process/material/facility_id",
+      "relationship_kind",
+      "valid_from",
+      "valid_to",
+      "named_trade_evidence_or_application",
+      "source_ids"
+    ]
+  },
+  "stage_families": {
+    "demand": [
+      "interest",
+      "study_requested",
+      "study_fee_paid",
+      "conditional_order",
+      "signed_contract",
+      "effective_contract",
+      "cancelled"
+    ],
+    "finance": [
+      "budget_announced",
+      "equity_committed",
+      "loan_committed",
+      "equity_funded",
+      "debt_drawn",
+      "deposit_received",
+      "capital_expenditure_paid",
+      "deposit_refunded"
+    ],
+    "regulatory": [
+      "application",
+      "draft_review",
+      "approval",
+      "conditions_outstanding",
+      "withdrawn"
+    ],
+    "physical": [
+      "site_prepared",
+      "construction",
+      "equipment_ordered",
+      "delivered",
+      "installed",
+      "accepted",
+      "energization_approved",
+      "energized",
+      "operating",
+      "retired"
+    ],
+    "usage": [
+      "observed_peak_mw",
+      "observed_energy_mwh",
+      "public_tokens",
+      "requests",
+      "billed_capacity",
+      "revenue_recognized"
+    ]
+  },
+  "rules": [
+    "Stage families are parallel processes and source-defined states, not a universal linear funnel.",
+    "Power generation queues and customer load applications use distinct populations and keys.",
+    "IT MW, gross facility MW, leasable/billed MW, synchronous peak MW, non-coincident peak MW, MWh and GPU equivalents are not additive.",
+    "Entity headquarters coordinates never stand in for manufacturing/data-center site coordinates.",
+    "Roles belong to each transaction/event; a semiconductor firm may buy materials and sell chips in distinct contracts.",
+    "Application links, named contracts, forecasts, expert assessments, company disclosures, measured quantities and author estimates remain separate.",
+    "Do not write new named relationships into the baseline graph from unverified aggregate/model links.",
+    "PJM annual large-load XLS and report monthly DC charts are separate metrics and populations."
+  ],
+  "publication_context": {
+    "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+    "as_of": "2026-10-03",
+    "empirical_dataset_admitted": false,
+    "human_gate_6_approved": false,
+    "predictive_validity_established": false,
+    "continuous_collection_implemented": false,
+    "boundary": "Research intake only. Apply the existing evidence and human-review contracts before empirical use. A source link or source review is not evidence approval."
+  }
+}

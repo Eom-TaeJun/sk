@@ -1,0 +1,408 @@
+{
+  "schema_version": 3,
+  "as_of": "2026-10-03",
+  "purpose": "무료 자료를 중심으로 반도체·AI·데이터센터·전력·소재의 수요, 공급, 자금 집행을 연결하는 세계지도의 추가 수집 및 API 발급 계획",
+  "status": "2026-10-03 공식 접근 안내 기반 공개 수집 계획. 계정별 키 보유·로그인·활성화 정보는 포함하지 않음. 인증 수집기·지속 수집은 구현 전.",
+  "additional_access": [
+    {
+      "id": "un-comtrade",
+      "priority": "우선",
+      "purpose": "국가×상대국×품목×월의 반도체·장비·소재 무역 흐름",
+      "signup_url": "https://comtrade.un.org/",
+      "key_url": "https://comtradeplus.un.org/MyComtrade/APIPortal",
+      "steps": [
+        "Login → Sign-up now",
+        "My Comtrade → My API portal → Generate API Key"
+      ],
+      "auth": "Subscription key",
+      "free_access": "무료 등록 tier: 100000행/호출,500호출/일,초당1회; bulk/async 제외",
+      "cadence": "월별·연별; 국가별 공표 지연 상이",
+      "limitations": [
+        "무역은 생산량·기업 간 거래·GPU/HBM 수요를 직접 측정하지 않음",
+        "키의 정확한 유효기간 미확인"
+      ],
+      "sources": [
+        "https://uncomtrade.org/docs/api-subscription-keys/",
+        "https://uncomtrade.org/docs/un-comtrade-api/",
+        "https://comtradeplus.un.org/Subscriptions"
+      ],
+      "authenticated_call_tested": false
+    },
+    {
+      "id": "korea-customs-hs-country",
+      "priority": "우선",
+      "purpose": "한국 HS10×국가 월별 반도체·소재 수출입 금액 및 순중량",
+      "signup_url": "https://www.data.go.kr/",
+      "key_url": "https://www.data.go.kr/data/15100475/openapi.do",
+      "service": "관세청_품목별 국가별 수출입실적(GW)",
+      "steps": [
+        "공공데이터포털 로그인/가입",
+        "해당 서비스 활용신청 → 서비스키; 기존 계정은 권한 추가"
+      ],
+      "auth": "Service key",
+      "endpoint": "https://apis.data.go.kr/1220000/nitemtrade/getNitemtradeList",
+      "free_access": "무료; 개발 자동승인·운영 심의승인. 개발 트래픽10000 표기 있으나 본 계획에서는 시간 단위를 단정하지 않음",
+      "cadence": "월별; 전월까지 매월15일경 현행화, 최대1년 조회 범위",
+      "limitations": [
+        "USD 금액·순중량 kg이며 칩 개수가 아님",
+        "10일·20일 HS×국가 API는 확인되지 않음; 속보는 공개 보도자료 별도 수집"
+      ],
+      "sources": [
+        "https://www.data.go.kr/data/15100475/openapi.do"
+      ],
+      "authenticated_call_tested": false
+    },
+    {
+      "id": "usitc-dataweb",
+      "priority": "우선: 소재 세분화",
+      "purpose": "미국 HTS10별 갈륨 금속·GaAs 웨이퍼 등 형태별 수입 및 상대국 집중",
+      "signup_url": "https://dataweb.usitc.gov/sign-in",
+      "key_url": "https://dataweb.usitc.gov/",
+      "steps": [
+        "무료 DataWeb 계정 및 Login.gov 연결",
+        "우측 상단 API → Generate Token"
+      ],
+      "auth": "Authorization Bearer token",
+      "endpoint": "https://datawebws.usitc.gov/dataweb/api/v2/report2/runReport",
+      "free_access": "무료 계정의 API 접근; 호출수·행수 수치 제한 미확인",
+      "renewal": "6개월 유효, 자동 갱신 없음",
+      "cadence": "미국 월별 무역",
+      "limitations": [
+        "세계 전체 소재 생산·재고가 아님",
+        "HTS 연도·품목 형태·수량 단위를 확인해야 함",
+        "공식 API 문서 검색 본문 검토; 직접 열기는 시간초과"
+      ],
+      "sources": [
+        "https://www.usitc.gov/dataweb_login_process",
+        "https://www.usitc.gov/applications/dataweb/api/dataweb_query_api.html"
+      ],
+      "authenticated_call_tested": false
+    },
+    {
+      "id": "entsoe",
+      "priority": "우선: 유럽 지도 확대",
+      "purpose": "유럽 실제 전력 부하·예측·발전 구성·설비 중단·국가 간 송전",
+      "signup_url": "https://transparency.entsoe.eu/",
+      "key_url": "https://transparency.entsoe.eu/",
+      "steps": [
+        "Sign In → Register → 이메일 인증",
+        "공식 지원 창구에 RESTful API access 요청 및 등록 이메일 제공",
+        "승인 후 My Account에서 security token 생성"
+      ],
+      "auth": "Security token",
+      "endpoint": "https://web-api.tp.entsoe.eu/api",
+      "free_access": "공개 무료 데이터 접근; 토큰당400회/분",
+      "activation": "공식 안내: 3영업일 내 승인 확인",
+      "limitations": [
+        "개별 AI 데이터센터의 전력 소비를 직접 제공하지 않음",
+        "공개 지도 재사용은 국가·항목별 무료 재사용 목록 확인"
+      ],
+      "sources": [
+        "https://transparencyplatform.zendesk.com/hc/en-us/articles/12845911031188-How-to-get-security-token",
+        "https://transparencyplatform.zendesk.com/hc/en-us/articles/12783148966036-API-Rate-Limit-Part-1",
+        "https://transparencyplatform.zendesk.com/hc/en-us/articles/15696677194644-Request-Endpoint"
+      ],
+      "authenticated_call_tested": false
+    },
+    {
+      "id": "artificial-analysis",
+      "priority": "보조",
+      "purpose": "모델 성능·토큰당 가격·응답 속도로 연산 효율과 비용 변화를 관찰",
+      "signup_url": "https://artificialanalysis.ai/login",
+      "key_url": "https://artificialanalysis.ai/login",
+      "steps": [
+        "Insights Platform 가입/로그인",
+        "가입 후 Insights Platform에서 공식 안내에 따라 무료 API 키 생성"
+      ],
+      "auth": "x-api-key",
+      "endpoint": "https://artificialanalysis.ai/api/v2/data/llms/models",
+      "free_access": "무료1000호출/일; 출처 표시 필요",
+      "limitations": [
+        "벤치마크·게시가격이며 실제 AI 수요·매출·GPU 가동률이 아님"
+      ],
+      "sources": [
+        "https://artificialanalysis.ai/api-reference/"
+      ],
+      "authenticated_call_tested": false
+    },
+    {
+      "id": "census",
+      "priority": "후순위·선택",
+      "purpose": "필요한 미국 공식 통계 API의 자동 조회를 확대",
+      "key_url": "https://api.census.gov/data/key_signup.html",
+      "steps": [
+        "기관명/이메일 입력",
+        "이메일의 활성화 링크 확인"
+      ],
+      "auth": "API key",
+      "free_access": "무료 키; 데이터 조회에는 키 필수, 메타데이터는 무키 가능",
+      "limitations": [
+        "당장 수주·출하·재고는 M3 공개 Excel 및 선정된 FRED 시리즈로 시작 가능",
+        "필요 API dataset/변수는 후속 연결 시 확정; 현재 특정 데이터 인증 호출 미검증",
+        "M3 광범위 전자·전기장비 집계를 반도체 단독 생산량으로 사용하지 않음"
+      ],
+      "sources": [
+        "https://www.census.gov/data/developers/guidance/api-user-guide.API_Key.html",
+        "https://content.govdelivery.com/accounts/USCENSUS/bulletins/41aaf23",
+        "https://www.census.gov/manufacturing/m3/data/index.html"
+      ],
+      "authenticated_call_tested": false
+    },
+    {
+      "id": "openrouter-datasets",
+      "priority": "조건부·비용 확인 후",
+      "purpose": "플랫폼 내 일별 모델 토큰 사용량과 점유율로 AI 사용 방향을 관찰",
+      "key_url": "https://openrouter.ai/keys",
+      "steps": [
+        "계정 로그인/가입",
+        "API key 생성",
+        "Datasets endpoint의 무료 접근 및 권한을 먼저 확인"
+      ],
+      "auth": "Authorization Bearer token",
+      "endpoint": "https://openrouter.ai/api/v1/datasets/rankings-daily",
+      "free_access": "Dataset API 무료 여부 미확인; 공개 rankings는 읽기 가능.30호출/분/키,500호출/일/계정",
+      "limitations": [
+        "상위50개+other; 플랫폼 범위이며 세계 수요·사용자 수·매출·GPU시간이 아님",
+        "일반 토큰 합계와 분류/언어별 주간 표본 추정은 별도 취급",
+        "이번 단계에서 추론 호출·충전·결제 없음"
+      ],
+      "sources": [
+        "https://openrouter.ai/docs/api/api-reference/datasets/daily-token-totals-for-top-50-models",
+        "https://openrouter.ai/docs/api_reference/authentication"
+      ],
+      "authenticated_call_tested": false
+    }
+  ],
+  "keyless_collection": [
+    {
+      "source": "SEC EDGAR 및 기업 IR",
+      "purpose": "기업 식별, 계약, 고객의 확정 약정·선수금, 현금 시설투자와 금융 집행",
+      "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "limits": "공개 조회 API 키 불필요; companyfacts는 전체 기업·표준 태그 중심이므로 계약/세부 사업은 원문 추출"
+    },
+    {
+      "source": "EIA-860M/923 공개 파일",
+      "purpose": "미국 발전기 계획·상태·위치 및 실제 발전량",
+      "url": "https://www.eia.gov/electricity/data/eia860m/",
+      "limits": "지역 발전설비와 데이터센터 전용 공급은 구분; 잠정치 수정 보존"
+    },
+    {
+      "source": "Epoch AI 공개 CSV",
+      "purpose": "AI 데이터센터 위치·소유 관계·건설 일정·칩 수량의 관찰 및 추정",
+      "url": "https://epoch.ai/data/data-centers-documentation/downloads",
+      "limits": "추정치·출처와 실제 설치/가동을 구분; 칩 수량·계획 MW는 활용률이 아님"
+    },
+    {
+      "source": "ETF 운용사 공개 holdings",
+      "purpose": "보유수량·발행좌수·NAV의 날짜별 기록으로 구성 변경과 설정 규모 구분",
+      "url": "https://www.ishares.com/us/products/339081/ishares-a-i-innovation-and-tech-active-etf",
+      "limits": "무료 현재 파일은 연속 역사를 보장하지 않음; 설정은 현물 포함 추정이며 발행기업 투자금이 아님"
+    },
+    {
+      "source": "Eurostat",
+      "purpose": "국가별 월간 전력 수급·발전의 비교 가능한 유럽 기초 통계",
+      "url": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-introduction",
+      "datasets": [
+        "nrg_cb_em",
+        "nrg_cb_pem",
+        "nrg_cb_e"
+      ],
+      "limits": "무료 공개 API·키 불필요; 과거 버전 직접 저장 필요, 이번 GET 응답 미검증"
+    },
+    {
+      "source": "관세청 10일·20일 보도자료",
+      "purpose": "한국 반도체 수출 잠정치의 빠른 변화",
+      "url": "https://www.customs.go.kr/",
+      "limits": "주요 품목과 주요 국가 집계는 HS×국가 교차표와 별개"
+    },
+    {
+      "source": "전력회사·전력망·정부 인허가 공개 문서",
+      "purpose": "유료 수요심사, 확정 전력공급 계약, 허가, 계통 연결 및 가동 단계",
+      "limits": "시설·계약·고객 코호트가 일치할 때만 전환율 계산"
+    },
+    {
+      "source": "공공 조달·지원금 공개 데이터",
+      "purpose": "정부의 계약·보조금 약정과 실제 지출의 구분",
+      "url": "https://api.usaspending.gov/docs/",
+      "limits": "누적 약정/지출을 기간 내 현금 지급이나 민간 수요로 해석하지 않음"
+    }
+  ],
+  "missing_information": [
+    {
+      "purpose": "기업 간 관계의 연결",
+      "fields": [
+        "구매자·판매자·자금 제공자·승인자",
+        "법인·자회사·시설·프로젝트·계약 ID",
+        "연결 유효 기간"
+      ],
+      "collection": "기업 원문, SEC/DART, 공개 허가 및 계약 문서",
+      "signal": "고객의 확정 수요가 어느 시설과 공급자에 도달하는지",
+      "gap": "국가별 무역 API에서 기업별 고객·판매자 관계를 복원할 수 없음"
+    },
+    {
+      "purpose": "AI 고객의 확정 수요",
+      "fields": [
+        "확정 주문",
+        "선수금 지급",
+        "최소 사용량 약정",
+        "취소·연기·환불 조건"
+      ],
+      "collection": "기업 IR/계약 원문 및 전력회사 약관",
+      "signal": "발표 계획의 실제 실행 강도",
+      "gap": "계약 잔액과 신규 현금 지급을 구분"
+    },
+    {
+      "purpose": "칩 공급 병목",
+      "fields": [
+        "GPU/HBM/패키징 세대",
+        "설비 증설·양산 시점",
+        "고객 인증",
+        "납기·취소",
+        "확인 가능한 생산 능력과 실제 출하"
+      ],
+      "collection": "회사 IR, 장비·패키징 업체 자료, 생산/무역 통계 교차",
+      "signal": "후속 출하 확대·지연 후보",
+      "gap": "무료 API만으로 HBM/CoWoS 가동률·수율·고객별 할당을 확보할 수 없음"
+    },
+    {
+      "purpose": "데이터센터의 물리적 준비",
+      "fields": [
+        "좌표",
+        "허가",
+        "착공",
+        "장비 설치",
+        "전력 연결",
+        "실제 가동"
+      ],
+      "collection": "Epoch, 공개 건설/허가 자료, 고객·운영사 원문",
+      "signal": "발표된 규모가 활용 가능한 공급으로 변하는 시점",
+      "gap": "본사 위치를 시설 위치로 사용하지 않음"
+    },
+    {
+      "purpose": "전력 및 설비 병목",
+      "fields": [
+        "확정 계약 MW",
+        "변압기·스위치기어·냉각 설비 주문 및 납기",
+        "계통 보강 일정",
+        "실제 피크 MW/MWh"
+      ],
+      "collection": "전력회사·지역 전력망 공개 문서, EIA/ENTSO-E 및 설비 공급사 원문",
+      "signal": "수요 계약과 전력 공급 가능 시점의 불일치",
+      "gap": "계통 전체 소비로 개별 AI 시설 전력 사용을 추정하지 않음"
+    },
+    {
+      "purpose": "실제 자금 집행",
+      "fields": [
+        "투자 발표",
+        "차입 약정",
+        "차입 인출",
+        "현금 시설투자",
+        "비현금 리스",
+        "고객 선수금",
+        "공급자 매출"
+      ],
+      "collection": "SEC/DART 원문, 자금조달·프로젝트 계약, 공공 지출 자료",
+      "signal": "약속한 자금과 집행한 자금의 차이",
+      "gap": "동일 거래를 양쪽 기업에서 중복 합산하지 않음"
+    },
+    {
+      "purpose": "AI 이용과 수익화",
+      "fields": [
+        "모델별 플랫폼 토큰",
+        "가격/할인",
+        "연산 효율",
+        "별도 공개되는 유료 이용·AI 매출"
+      ],
+      "collection": "OpenRouter 조건부, Artificial Analysis, 공개 고객/기업 원문",
+      "signal": "인프라 확장에 대응하는 실제 사용 변화",
+      "gap": "토큰 수는 매출·GPU시간이 아니며 무료/할인 효과와 플랫폼 편향을 기록"
+    },
+    {
+      "purpose": "소재 공급 위험",
+      "fields": [
+        "금속/화합물/웨이퍼 형태",
+        "정제·반도체 등급",
+        "원산지",
+        "수입 집중",
+        "수출 허가·통제",
+        "공급 대체 인증"
+      ],
+      "collection": "Comtrade, 관세청, USITC, USGS 및 정부 정책 원문",
+      "signal": "실제 공정에 쓰이는 형태별 공급 제약",
+      "gap": "채굴량과 반도체용 정제 공급량을 구분"
+    },
+    {
+      "purpose": "운용자금과 분석 시점",
+      "fields": [
+        "ETF 보유수량/좌수/NAV의 같은 날짜 기록",
+        "기업행동",
+        "사건일·공표일·관측기간·수집일"
+      ],
+      "collection": "운용사 holdings 및 원문을 누적 보관",
+      "signal": "가격·펀드 규모·재량 구성 변화의 구분; 미래 정보 혼입 방지",
+      "gap": "지표의 선행성과 예측력은 후속 결과로 검증 전"
+    }
+  ],
+  "recommended_sequence": [
+    "필요 API의 인증 조건과 표·품목 범위를 확인하고 공개 파일의 버전별 누적 수집을 시작",
+    "Comtrade 및 관세청 품목×국가 접근 확보",
+    "USITC 소재 형태 세분화와 ENTSO-E 유럽 전력 추가",
+    "Artificial Analysis 보조 연결",
+    "Census는 세부 필요 표 확정 후, OpenRouter는 무료 접근 확인 후",
+    "시설·계약·공표 시점을 맞춰 후속 출하·가동·집행 결과와 비교"
+  ],
+  "leading_signal_validation": "후속 실제 출하·가동·지급과 당시 알려진 시점의 자료를 맞춰 검증해야 함. 검증된 투자 예측력이나 고정 선행 개월수를 제시하지 않음.",
+  "core_sources": [
+    {
+      "name": "DART",
+      "purpose": "한국 기업 공시·계약·시설투자",
+      "access": "무료 키 발급",
+      "official_url": "https://opendart.fss.or.kr/"
+    },
+    {
+      "name": "FRED",
+      "purpose": "산업생산·가동률·주문 및 거시 맥락",
+      "access": "무료 키 발급; 역사적 빈티지 확인",
+      "official_url": "https://fred.stlouisfed.org/docs/api/fred/"
+    },
+    {
+      "name": "EIA",
+      "purpose": "발전·부하와 발전기 상태",
+      "access": "API는 무료 키; 860M/923 공개 파일은 무키",
+      "official_url": "https://www.eia.gov/opendata/"
+    },
+    {
+      "name": "BLS",
+      "purpose": "물가·임금 배경 통계",
+      "access": "API 버전과 등록 범위 확인",
+      "official_url": "https://www.bls.gov/developers/"
+    },
+    {
+      "name": "ECOS",
+      "purpose": "금리·환율·국내 거시 맥락",
+      "access": "무료 키 발급",
+      "official_url": "https://ecos.bok.or.kr/api/"
+    },
+    {
+      "name": "BEA",
+      "purpose": "미국 경제·투자 배경 통계",
+      "access": "무료 키 발급·활성화",
+      "official_url": "https://apps.bea.gov/API/signup/"
+    },
+    {
+      "name": "KOSIS",
+      "purpose": "국내 생산·출하·재고",
+      "access": "무료 API 안내; 정확한 반도체 표·품목 ID는 TO_VERIFY",
+      "official_url": "https://kosis.kr/openapi/"
+    }
+  ],
+  "publication_context": {
+    "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+    "as_of": "2026-10-03",
+    "empirical_dataset_admitted": false,
+    "human_gate_6_approved": false,
+    "predictive_validity_established": false,
+    "continuous_collection_implemented": false,
+    "boundary": "Research intake only. Apply the existing evidence and human-review contracts before empirical use. A source link or source review is not evidence approval."
+  }
+}

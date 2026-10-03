@@ -1,0 +1,78 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "crane-power-plant",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.7232,
+          40.1515
+        ]
+      },
+      "properties": {
+        "facility_id": "crane-power-plant",
+        "name": "Crane Clean Energy Center",
+        "entity_id": "constellation-generation",
+        "country": "USA",
+        "location": "Dauphin County, Pennsylvania",
+        "stage": "재가동 준비; 환경 EA/FONSI 발행; 상업운전 미확인",
+        "coordinate_source_url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "coordinate_measurement_period": "2026-08",
+        "generator_statuses": [
+          {
+            "generator_id": "1",
+            "raw_status": "(OS) Out of service and NOT expected to return to service in next calendar year"
+          }
+        ],
+        "actual_customer_consumption_mw": null,
+        "coordinate_scope": "POWER_PLANT_NOT_CUSTOMER_DATA_CENTER",
+        "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "susquehanna-power-plant",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.1462,
+          41.0919
+        ]
+      },
+      "properties": {
+        "facility_id": "susquehanna-power-plant",
+        "name": "TalenEnergy Susquehanna",
+        "entity_id": "talen",
+        "country": "USA",
+        "location": "Luzerne County, Pennsylvania",
+        "stage": "기존 발전기 운영 상태; AWS 계약 front-of-meter 전환은2026-04 확인",
+        "coordinate_source_url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "coordinate_measurement_period": "2026-08",
+        "generator_statuses": [
+          {
+            "generator_id": "1",
+            "raw_status": "(OP) Operating"
+          },
+          {
+            "generator_id": "2",
+            "raw_status": "(OP) Operating"
+          }
+        ],
+        "actual_customer_consumption_mw": null,
+        "coordinate_scope": "POWER_PLANT_NOT_CUSTOMER_DATA_CENTER",
+        "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE"
+      }
+    }
+  ],
+  "publication_context": {
+    "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+    "as_of": "2026-10-03",
+    "empirical_dataset_admitted": false,
+    "human_gate_6_approved": false,
+    "predictive_validity_established": false,
+    "continuous_collection_implemented": false,
+    "boundary": "Research intake only. Apply the existing evidence and human-review contracts before empirical use. A source link or source review is not evidence approval."
+  }
+}

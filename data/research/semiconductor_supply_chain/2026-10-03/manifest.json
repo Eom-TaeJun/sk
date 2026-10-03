@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-10-03",
+  "publication_context": {
+    "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+    "as_of": "2026-10-03",
+    "empirical_dataset_admitted": false,
+    "human_gate_6_approved": false,
+    "predictive_validity_established": false,
+    "continuous_collection_implemented": false,
+    "boundary": "Research intake only. Apply the existing evidence and human-review contracts before empirical use. A source link or source review is not evidence approval."
+  },
+  "target_repository": "Eom-TaeJun/sk",
+  "target_base_commit": "3f454a01db15aa7f73fad16383cc5045d90409d9",
+  "legacy_references": [
+    {
+      "repository": "Eom-TaeJun/2nd_skhy",
+      "visibility": "private",
+      "ref": "main",
+      "commit": "6660e2d773ed354cff35bd2e05475b4de798c86f",
+      "committed_at": "2026-05-06T00:59:44Z",
+      "use": "Methodology reference; no source-code or personal materials imported"
+    },
+    {
+      "repository": "Eom-TaeJun/semi_strategy_harness",
+      "visibility": "private",
+      "ref": "main",
+      "commit": "bc59854e077dd44588740f818e4f56397f22a7a9",
+      "committed_at": "2026-05-05T15:50:00Z",
+      "use": "Methodology reference; no source-code or personal materials imported"
+    },
+    {
+      "repository": "Eom-TaeJun/aifinance_skhynix",
+      "visibility": "public",
+      "ref": "main",
+      "commit": "96e34526b74fe2d3d680c75ca38cd7ff527857c0",
+      "committed_at": "2026-04-22T13:30:50Z",
+      "use": "Analytical design reference; historical assumptions and RAG scores are not current observations"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "supply_chain_map_v3.json",
+      "sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "bytes": 337455,
+      "research_input_sha256": "b6411572daa48512dd7387f20da4187d0a17b8160c364584390a45d89b584649"
+    },
+    {
+      "file": "signal_catalog_v2.json",
+      "sha256": "8577f3637e0b7b61607bcc0a4d920d851ec811302ec440896e2b23b3f86748cc",
+      "bytes": 151448,
+      "research_input_sha256": "4a798de62611d727c0329c046f35ba3d272538f8ea616a2e958f1655fbea04c0"
+    },
+    {
+      "file": "collection_roadmap_v2.json",
+      "sha256": "54c9efa6a979623721fe9ae11ab6705f516b1c97b16085818e1dc3cb902fed1c",
+      "bytes": 13072,
+      "research_input_sha256": "660a6bd18978be94afc8fd1d74ceabcd512e3cbd653dd9a91c01fcb30bdd7712"
+    },
+    {
+      "file": "evidence_schema_v2.json",
+      "sha256": "039aa12869ac814cb6a9756982282e4bf1d9e8122211b6c00be838bd376105fc",
+      "bytes": 16159,
+      "research_input_sha256": "f97fd65388f9c81479c559916a37eaf92de4a95bd98ec4bbe402ea71050027e6"
+    },
+    {
+      "file": "source_benchmark_v2.json",
+      "sha256": "e82d69af6822cecee9118751fc1eb4ac6aa5ffd75f3235afbd628f1b68d2b672",
+      "bytes": 78102,
+      "research_input_sha256": "8b79e61298b6a34dfc1c86f32d6c136985d9e8309486cbfe2936ced0f426cdc4"
+    },
+    {
+      "file": "api_issuance_plan_v3.json",
+      "sha256": "7d4e25761fa99f704660537f9a8e31d0bbef5263fcb4b4264c75156030e19be2",
+      "bytes": 18408,
+      "research_input_sha256": "2bd446d3b8f2033bfc38b5b69d5ee87b92500ff762e9d11a308b6384e80cd338"
+    },
+    {
+      "file": "verified_facilities.geojson",
+      "sha256": "698ed63b90047847db64e125e13b791e17b0fc71149e026a7a2bfe64806a2ca9",
+      "bytes": 2728
+    }
+  ],
+  "coverage": {
+    "actors": 69,
+    "relations": 58,
+    "facilities": 7,
+    "coordinate_facilities": 2,
+    "case_paths": 6,
+    "capture_specs": 7,
+    "candidate_metrics": 32,
+    "first_collection_metrics": 14,
+    "complete_world_map": false
+  },
+  "publication_transforms": [
+    "Remove user-specific credential possession/activation/test status and local absolute paths.",
+    "Replace existing-access inventory with account-independent official source guidance.",
+    "Label all imported material as research intake; preserve prior source history, unknowns and v3 review flags.",
+    "Derive GeoJSON only from two officially sourced facility coordinates; do not use headquarters or infer customer DC locations."
+  ],
+  "promotion_requirements": [
+    "Source ID + original excerpt + locator + publication/availability date + content hash.",
+    "Independent source type, economic realization stage and claim/review status.",
+    "Frozen track compatibility and applicable human review before empirical use.",
+    "Historical vintages, matched scope/cohorts, cancellations and censoring before predictive testing."
+  ]
+}
