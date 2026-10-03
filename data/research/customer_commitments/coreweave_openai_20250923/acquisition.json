@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "case_id": "coreweave-openai-2025-09-23",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "captures": [
+    {
+      "capture_id": "0434b21a5cbec8009ee88b453857411d9b52535d9cc9efe11172260557c26e42",
+      "record_file": "captures/0434b21a5cbec8009ee88b453857411d9b52535d9cc9efe11172260557c26e42/record.json",
+      "acquisition_file": "captures/0434b21a5cbec8009ee88b453857411d9b52535d9cc9efe11172260557c26e42/acquisition.json",
+      "record_sha256": "0c808f154a96431916f0cae1a493d48db35bd7266aec9004bb9bc7ab5383f010",
+      "acquisition_sha256": "4632a732d55e2d206050555da69238fcbd6cbdc25f46253a8fc3f32ecd19cd19",
+      "retrieved_at_utc": "2026-10-03T09:49:56Z"
+    }
+  ],
+  "current_capture_id": "0434b21a5cbec8009ee88b453857411d9b52535d9cc9efe11172260557c26e42"
+}

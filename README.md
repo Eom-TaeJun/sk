@@ -23,6 +23,7 @@ Real decision problem
 - H1: Gates 1–5, measurement contract, 24-Track registry와 수집·Gate 6 검토 패키지 준비
 - H1 검증 대기: 사람의 Gate 6 dataset freeze 및 Event 검토. 지표·lead/lag·실현율·verdict는 미계산
 - 연구 자료 추가: [반도체·AI·데이터센터·전력·금융 공급망](docs/research/supply_chain/README.md) — 기존 세 저장소의 방법론 검토와 2026-10-03 후보 자료
+- 첫 수집 실험: [경제적 목적](docs/research/supply_chain/decision_purpose.md)과 [OpenAI–CoreWeave 사례 검토](docs/research/supply_chain/first_case_review.md) — 고객 약정과 실제 집행의 공개 연결 범위를 구분
 - 후속: H1 최소 검증 후 H2 Bottleneck Migration
 - 보류: H3 Product-Mix Opportunity Cost는 공개정보가 충분할 때까지 `KNOWN_UNKNOWN` 중심 framework로 유지
 
@@ -51,6 +52,8 @@ AI는 discovery·semantic interpretation·candidate linking·contradiction searc
 - `docs/exec-plans/`: active task와 completed/historical task 기록
 - `docs/research/supply_chain/`: 공급망 관계, 과거 저장소 검토, 목적별 무료 수집 계획
 - `data/research/semiconductor_supply_chain/2026-10-03/`: 지도·지표·API 연구 후보와 공개판 manifest
+- `scripts/collect_customer_commitment.py`: 단일 고객 약정 원문 수집·재검사; 정식 Evidence 자동 승격 없음
+- `data/research/customer_commitments/coreweave_openai_20250923/`: 단일 사건의 수집 결과·원문·접근 실패 이력
 
 작업자는 `AGENTS.md`에서 시작해 progressive disclosure로 필요한 문서만 읽는다.
 
@@ -71,4 +74,4 @@ python scripts/validate_supply_chain_research.py
 
 전용 LLM/Fine-tuning/Vector DB/Graph DB/Dashboard는 현재 범위가 아니다.
 
-공급망 연구 자료는 `RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE`다. 69개 주체·58개 관계·7개 시설·32개 후보 지표와 14개 우선 수집 지표를 포함하며, 공식 좌표 2곳만 GeoJSON으로 제공한다. 지속 수집·예측 검증은 구현 전이고 이 자료가 H1 Track 또는 승인된 Evidence에 자동 편입되지는 않는다.
+공급망 연구 자료는 `RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE`다. 69개 주체·58개 관계·7개 시설·32개 후보 지표와 14개 우선 수집 지표를 포함하며, 공식 좌표 2곳만 GeoJSON으로 제공한다. 단일 사건 수집 경로와 지속 수집·예측 검증은 구분하며 이 자료가 H1 Track 또는 승인된 Evidence에 자동 편입되지는 않는다.

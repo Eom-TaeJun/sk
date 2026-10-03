@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "status": "FAILED_NO_ACCEPTED_SOURCE_CAPTURE",
+  "attempted_at_utc": "2026-10-03T09:32:38Z",
+  "retrieval_method": "network",
+  "error": "SEC HTTP request failed with status 403; no source capture accepted",
+  "http_status": 403,
+  "failed_source_url": "https://www.sec.gov/Archives/edgar/data/1769628/000119312525216497/d17274d8k.htm",
+  "accepted_record_created": false,
+  "sources_obtained_before_failure": []
+}

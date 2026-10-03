@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "capture_id": "0434b21a5cbec8009ee88b453857411d9b52535d9cc9efe11172260557c26e42",
+  "parser_version": "1.1.0",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "source_route": "issuer",
+  "retrieval_method": "network",
+  "retrieved_at_utc": "2026-10-03T09:49:56Z",
+  "source_is_synthetic": false,
+  "sources": [
+    {
+      "source_id": "issuer-18796309-document",
+      "source_role": "ISSUER_HOSTED_FILING_MIRROR",
+      "source_url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001769628/a5d34350-7a13-4e70-a811-c41398bb7fe9.html",
+      "source_host": "d18rn0p25nwr6d.cloudfront.net",
+      "sha256": "9055eaee6c4dd76d4ed45355591d946b0bc75bd39afbfcc40f7d733f4111402b",
+      "bytes": 119503,
+      "raw_file": "sources/9055eaee6c4dd76d4ed45355591d946b0bc75bd39afbfcc40f7d733f4111402b.html",
+      "retrieved_at_utc": "2026-10-03T09:49:56Z",
+      "retrieval_method": "network",
+      "remote_retrieved_at_utc": "2026-10-03T09:49:56Z"
+    },
+    {
+      "source_id": "issuer-18796309-feed",
+      "source_role": "ISSUER_FILING_METADATA_FEED",
+      "source_url": "https://investors.coreweave.com/feed/SECFiling.svc/GetEdgarFilingList?LanguageId=1&exchange=CIK&symbol=0001769628&formGroupIdList=&filingTypeList=8-K&excludeNoDocuments=true&includeHtmlDocument=true&pageSize=-1&pageNumber=0&tagList=&includeTags=true&year=2025&excludeSelection=1",
+      "source_host": "investors.coreweave.com",
+      "sha256": "48f8a19fe90928f1749ebb90b09265e9480ec6821935dd893797629f95fe31a7",
+      "bytes": 32802,
+      "raw_file": "sources/48f8a19fe90928f1749ebb90b09265e9480ec6821935dd893797629f95fe31a7.json",
+      "retrieved_at_utc": "2026-10-03T09:49:56Z",
+      "retrieval_method": "network",
+      "remote_retrieved_at_utc": "2026-10-03T09:49:56Z"
+    }
+  ],
+  "record_file": "captures/0434b21a5cbec8009ee88b453857411d9b52535d9cc9efe11172260557c26e42/record.json",
+  "record_sha256": "0c808f154a96431916f0cae1a493d48db35bd7266aec9004bb9bc7ab5383f010"
+}

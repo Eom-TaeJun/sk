@@ -13,6 +13,7 @@ Build a traceable decision-intelligence workflow that uses public information to
 - H1-P now distinguishes customer/commercial acceptance from supply readiness; production stage is context only
 - H1 full primary-source corpus and Gate 6 readiness package: prepared; human Gate 6 review/freeze remains pending
 - Supply-chain research intake (2026-10-03): candidate-only map, metric and free-access plans; not governed Evidence or an H1 dataset amendment
+- Bounded customer-commitment collection: purpose-first single-case capture/replay, with source provenance and separate failed attempts; not continuous monitoring or empirical validation
 - H1 metrics, lead/lag, realization rates, outcome analysis and verdict: not yet approved; require Gate 6 dataset freeze
 - H2: only after a credible H1 minimum pipeline
 - H3: conceptual/`KNOWN_UNKNOWN` until public evidence is sufficient
@@ -39,6 +40,8 @@ Do not treat deleted, historical, or interrupted H1 experiment artifacts as appr
 - Historical project facts: `application_evidence/`
 - Supply-chain research intake and legacy reference review: `docs/research/supply_chain/README.md`
 - Public candidate data and hashes: `data/research/semiconductor_supply_chain/2026-10-03/manifest.json`
+- Economic question and single-case boundaries: `docs/research/supply_chain/decision_purpose.md`
+- Customer-commitment collector and case review: `scripts/collect_customer_commitment.py`, `docs/research/supply_chain/first_case_review.md`
 
 Do not load all Canonical Sources or copy the Master Instruction into task context by default. Select the smallest sufficient files for the current question.
 
@@ -77,6 +80,8 @@ No Agent Evaluation runner is implemented yet. Do not fabricate eval results or 
 H1 remains confined to primary-source corpus collection/review across the frozen 24-Track registry until a human Gate 6 dataset freeze. Do not calculate H1 metrics, lead/lag, realization rate or verdict before that freeze. Without explicit approval, do not start H2/H3, add a Decision Engine, Agent Execution Harness/runtime, dashboards or databases.
 
 The supply-chain research intake is an authorized documentation/data integration, not approval of an empirical module. Preserve raw stage descriptions, review flags, dated source history and unknowns. Source review is not human Evidence approval. Do not import these records into H1 automatically or copy private legacy source code, personal materials, credentials or local operational paths into public data. Its standalone validator checks package integrity, not source truth or predictive validity.
+
+The bounded customer-commitment collector preserves source bytes, locators, publication/event dates and candidate-only records separately from H1. SEC access failures and issuer-hosted mirrors are different acquisition outcomes. Preserve actual retrieval URLs and source roles; never label an issuer mirror as verified SEC-original bytes. Single-case retrieval and replay do not establish leadingness, realization rates or customer-specific equipment/power allocation.
 
 ## Definition of done for a Codex task
 
