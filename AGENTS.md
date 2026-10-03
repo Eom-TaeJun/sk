@@ -41,6 +41,7 @@ Do not treat deleted, historical, or interrupted H1 experiment artifacts as appr
 - Historical project facts: `application_evidence/`
 - Supply-chain research intake and legacy reference review: `docs/research/supply_chain/README.md`
 - Current user purpose, 2026 job-description evidence and product/customer learning structure: `docs/research/supply_chain/sk_hynix_commercial_role_context.md`
+- First customer/product card, bounded source receipts and unresolved specification differences: `docs/research/supply_chain/customer_product_cards/hbm_nvidia_gb300.md`
 - Public candidate data and hashes: `data/research/semiconductor_supply_chain/2026-10-03/manifest.json`
 - Economic question and single-case boundaries: `docs/research/supply_chain/decision_purpose.md`
 - Customer-commitment collector and case review: `scripts/collect_customer_commitment.py`, `docs/research/supply_chain/first_case_review.md`
