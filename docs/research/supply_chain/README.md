@@ -11,6 +11,7 @@
 ## 시작할 문서와 데이터
 
 - [하이닉스 상품·고객·직무 관점](sk_hynix_commercial_role_context.md): 실제 2026 하반기 JD, 제품 분류, 고객 역할, 무료 자료 수집 우선순위와 학습 질문.
+- [HBM3E × NVIDIA GB300 고객·상품 카드](customer_product_cards/hbm_nvidia_gb300.md): 기명 플랫폼의 고객 문제·역할·사양·채택 사건, 직무별 질문과 무료 관측 후보 8개. 후보 데이터는 기존 지도와 별도다.
 - [경제적 목적과 첫 실험](decision_purpose.md): 경제적 질문·관측 단위·공개 시점·결과 변수·반증·제외 기준을 수집 전에 정한 계획.
 - [과거 세 저장소 검토](legacy_reference_review.md): 재사용한 방법론, 실제 구현 한계, 커밋에 고정한 근거.
 - [목적별 수집 계획](collection_plan.md): 경제적 질문, 지표, 무료 접근 경로, 연결 키, 후속 확인 결과.

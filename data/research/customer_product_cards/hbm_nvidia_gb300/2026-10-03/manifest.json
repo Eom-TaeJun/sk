@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-10-03",
+  "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "files": [
+    {
+      "path": "card.json",
+      "sha256": "244654332b6a2682c3dca11d7fc158a46d4369faf985317aa199c7d77ca2b192",
+      "byte_length": 42152
+    },
+    {
+      "path": "sources.json",
+      "sha256": "7d5bf4d6e52e96945b22047f190edb8837c3b80eb3cdbd282ec635912ad43a94",
+      "byte_length": 22659
+    }
+  ],
+  "counts": {
+    "sources": 14,
+    "new_captures": 11,
+    "reused_receipts": 3,
+    "claims": 15,
+    "relations": 5,
+    "spec_observations": 7,
+    "observable_candidates": 8
+  },
+  "governance": {
+    "human_evidence_approved": false,
+    "h1_admitted": false,
+    "predictive_signal_validated": false,
+    "h1_metrics_calculated": false,
+    "runtime_dashboard_or_database_enabled": false
+  },
+  "previous_supply_chain_snapshot": "69 actors / 58 relations remains unchanged; this is a separate candidate card.",
+  "validation_scope": "Receipt/hash/excerpt/ID/link/unit integrity and source review; not truth certification, HBM order confirmation or predictive validation.",
+  "originals_redistributed": false,
+  "private_legacy_materials_included": false
+}

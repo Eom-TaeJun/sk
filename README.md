@@ -4,6 +4,8 @@ SK하이닉스의 영업·마케팅·상품기획·신제품사업화 직무를 
 
 시작 문서: [하이닉스 상품·고객·직무 관점](docs/research/supply_chain/sk_hynix_commercial_role_context.md).
 
+첫 구체 사례: [HBM3E × NVIDIA GB300 고객·상품 카드](docs/research/supply_chain/customer_product_cards/hbm_nvidia_gb300.md) — 고객 문제, 직무별 질문, 채택 사건과 무료 관측 후보 8개.
+
 ```text
 Real decision problem
 → economic / industry model
