@@ -11,7 +11,8 @@ Build a traceable decision-intelligence workflow that uses public information to
 - H1 Gates 1–5: human-approved and frozen as separate product-commercialization (H1-P) and customer/platform-realization (H1-C) strata
 - H1 measurement contract, deterministic validation, 24-Track registry and 4-Track real-data pilot: implemented and preserved
 - H1-P now distinguishes customer/commercial acceptance from supply readiness; production stage is context only
-- Next approved task: collect the full frozen H1 primary-source corpus across the 24 pre-registered Tracks under the revised economic and business interpretation contract
+- H1 full primary-source corpus and Gate 6 readiness package: prepared; human Gate 6 review/freeze remains pending
+- Supply-chain research intake (2026-10-03): candidate-only map, metric and free-access plans; not governed Evidence or an H1 dataset amendment
 - H1 metrics, lead/lag, realization rates, outcome analysis and verdict: not yet approved; require Gate 6 dataset freeze
 - H2: only after a credible H1 minimum pipeline
 - H3: conceptual/`KNOWN_UNKNOWN` until public evidence is sufficient
@@ -36,6 +37,8 @@ Do not treat deleted, historical, or interrupted H1 experiment artifacts as appr
 - Runtime boundary: `src/adapters/`
 - Software tests: `tests/`
 - Historical project facts: `application_evidence/`
+- Supply-chain research intake and legacy reference review: `docs/research/supply_chain/README.md`
+- Public candidate data and hashes: `data/research/semiconductor_supply_chain/2026-10-03/manifest.json`
 
 Do not load all Canonical Sources or copy the Master Instruction into task context by default. Select the smallest sufficient files for the current question.
 
@@ -66,11 +69,14 @@ Run from the repository root:
 python -m unittest -v
 python -m src.pipeline --workspace . --scenario data/raw/scenarios/hbm4_vertical_slice.json
 python -m src.pipeline --workspace . --scenario data/raw/scenarios/hbm4_temporal_update_2026.json
+python scripts/validate_supply_chain_research.py
 ```
 
 No Agent Evaluation runner is implemented yet. Do not fabricate eval results or document a command that does not exist.
 
-The only approved next H1 scope is primary-source corpus collection across the frozen 24-Track registry. Do not calculate H1 metrics, lead/lag, realization rate or verdict before a human Gate 6 dataset freeze. Without explicit approval, do not start H2/H3, add a Decision Engine, Agent Execution Harness/runtime, dashboards or databases.
+H1 remains confined to primary-source corpus collection/review across the frozen 24-Track registry until a human Gate 6 dataset freeze. Do not calculate H1 metrics, lead/lag, realization rate or verdict before that freeze. Without explicit approval, do not start H2/H3, add a Decision Engine, Agent Execution Harness/runtime, dashboards or databases.
+
+The supply-chain research intake is an authorized documentation/data integration, not approval of an empirical module. Preserve raw stage descriptions, review flags, dated source history and unknowns. Source review is not human Evidence approval. Do not import these records into H1 automatically or copy private legacy source code, personal materials, credentials or local operational paths into public data. Its standalone validator checks package integrity, not source truth or predictive validity.
 
 ## Definition of done for a Codex task
 

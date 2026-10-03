@@ -1,0 +1,6 @@
+# Source and research manifests hash exact bytes; never rewrite their line endings.
+* text=auto
+/data/raw/sources/** -text
+/data/h1/pilot/archive/** -text
+/data/h1/corpus/archive/** -text
+/data/research/** -text

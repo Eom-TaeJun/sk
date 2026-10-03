@@ -1,0 +1,2301 @@
+{
+  "schema_version": "2.0",
+  "as_of": "2026-10-03",
+  "status": "Reviewed research and collection design; continuous collectors not implemented",
+  "first_collection_ids": [
+    "capital-contract-event-stage",
+    "power-p1-binding-load",
+    "power-p4-transmission-service-date",
+    "power-p8-named-equipment-order",
+    "capital-sec-actual-cash",
+    "supply-same-site-operational-conversion",
+    "power-p2-actual-dc-peak",
+    "power-p5-supply-realization-eia",
+    "capital-comtrade-physical-trade",
+    "capital-usitc-material-form-trade",
+    "capital-etf-position-normalized",
+    "capital-etf-netcreation-estimate",
+    "industry-ai-observed-token-usage",
+    "supply-schedule-downside-and-data-staleness"
+  ],
+  "metrics": [
+    {
+      "id": "capital-contract-event-stage",
+      "purpose": "빅테크·데이터센터 고객의 지출 계획이 반도체/광통신/전력 공급사의 실행 가능한 수요가 되는 시점을 찾는다.",
+      "definition": "계약·투자·설비 사건별 금액과 단계 변화. announced/conditional/signed/effective/paid/completed를 원문 근거로 별도 기록하고 unknown을 허용한다.",
+      "unit": "원문 통화와 금액; 계약 기간; 이벤트 상태",
+      "grain": "법인-계약/프로젝트-문서 accession-사건일",
+      "sources": [
+        "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+      ],
+      "collection": {
+        "method": "SEC submissions JSON으로 8-K/6-K/10-Q/10-K와 amendments 식별 후 원문과 exhibits를 검토하고 구조화한다.",
+        "example": "GET https://data.sec.gov/submissions/CIK{10-digit-cik}.json; filings.recent.form/accessionNumber/filingDate/reportDate/primaryDocument",
+        "document_path_template": "https://www.sec.gov/Archives/edgar/data/{integer-cik}/{accession-without-dashes}/{primaryDocument}",
+        "manual_fields": [
+          "entity_id",
+          "counterparty_id_or_unknown",
+          "project_id",
+          "event_date",
+          "stage",
+          "amount",
+          "currency",
+          "duration",
+          "conditions",
+          "cash_paid_evidence",
+          "source_accession"
+        ]
+      },
+      "access_and_free_limits": "공개 읽기는 무키. SEC fair access: 식별 User-Agent, 사용자 전체 합산 초당 10회 이하. 계약별 구조화 endpoint는 없음.",
+      "cadence_and_lag": "공시 이벤트 기반. API 갱신은 제출 이후 빠르지만 협상/서명/지급의 실제 시점과 다를 수 있고 비중요 계약은 공개되지 않는다.",
+      "join_keys": [
+        "법인 CIK/LEI",
+        "counterparty 법인 ID",
+        "contract/project ID",
+        "accession",
+        "원문 사건일"
+      ],
+      "revision_and_cancellation": "계약 변경/취소/amendment를 append-only event로 연결한다. 지급이 확인된 사건만 paid이며 예정 종료일이 지났다고 completed로 자동 변경하지 않는다.",
+      "confounders": "업무협약·capacity rights·조건부 투자·수년 총액·순환 투자·중복 공동 발표를 당기 주문이나 현금 지급으로 읽는 오류.",
+      "boundary": "전수 계약, 가격, 공급량은 무료 공시에서 확인할 수 없다. 원문 검토가 필요하고 관계 미확인은 회사 역할 추정과 분리한다.",
+      "signal_class": "선행 가능성이 있는 계약 사건; 지급은 별도 확정 신호",
+      "access_test_status": "documentation_only",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "contract-event-stage",
+        "priority": 1,
+        "purpose": "빅테크·데이터센터 고객의 지출 계획이 반도체/광통신/전력 공급사의 실행 가능한 수요가 되는 시점을 찾는다.",
+        "metric": "계약·투자·설비 사건별 금액과 단계 변화. announced/conditional/signed/effective/paid/completed를 원문 근거로 별도 기록하고 unknown을 허용한다.",
+        "unit": "원문 통화와 금액; 계약 기간; 이벤트 상태",
+        "grain": "법인-계약/프로젝트-문서 accession-사건일",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "collection_method": {
+          "method": "SEC submissions JSON으로 8-K/6-K/10-Q/10-K와 amendments 식별 후 원문과 exhibits를 검토하고 구조화한다.",
+          "example": "GET https://data.sec.gov/submissions/CIK{10-digit-cik}.json; filings.recent.form/accessionNumber/filingDate/reportDate/primaryDocument",
+          "document_path_template": "https://www.sec.gov/Archives/edgar/data/{integer-cik}/{accession-without-dashes}/{primaryDocument}",
+          "manual_fields": [
+            "entity_id",
+            "counterparty_id_or_unknown",
+            "project_id",
+            "event_date",
+            "stage",
+            "amount",
+            "currency",
+            "duration",
+            "conditions",
+            "cash_paid_evidence",
+            "source_accession"
+          ]
+        },
+        "auth/free_limit": "공개 읽기는 무키. SEC fair access: 식별 User-Agent, 사용자 전체 합산 초당 10회 이하. 계약별 구조화 endpoint는 없음.",
+        "frequency_lag": "공시 이벤트 기반. API 갱신은 제출 이후 빠르지만 협상/서명/지급의 실제 시점과 다를 수 있고 비중요 계약은 공개되지 않는다.",
+        "join_keys": [
+          "법인 CIK/LEI",
+          "counterparty 법인 ID",
+          "contract/project ID",
+          "accession",
+          "원문 사건일"
+        ],
+        "event/revision_handling": "계약 변경/취소/amendment를 append-only event로 연결한다. 지급이 확인된 사건만 paid이며 예정 종료일이 지났다고 completed로 자동 변경하지 않는다.",
+        "false_positive": "업무협약·capacity rights·조건부 투자·수년 총액·순환 투자·중복 공동 발표를 당기 주문이나 현금 지급으로 읽는 오류.",
+        "limitation": "전수 계약, 가격, 공급량은 무료 공시에서 확인할 수 없다. 원문 검토가 필요하고 관계 미확인은 회사 역할 추정과 분리한다.",
+        "signal_class": "선행 가능성이 있는 계약 사건; 지급은 별도 확정 신호",
+        "test_status": "documentation_only"
+      },
+      "collection_tier": "first",
+      "research_origin_group": "capital"
+    },
+    {
+      "id": "capital-sec-actual-cash",
+      "purpose": "고객/공급사가 실제로 마련하거나 집행한 현금과 발표된 투자 예산을 구분한다.",
+      "definition": "전체 법인의 현금 CAPEX, 영업 현금흐름, 실제 차입 수취액. 태그 후보: PaymentsToAcquirePropertyPlantAndEquipment, NetCashProvidedByUsedInOperatingActivities, ProceedsFromIssuanceOfLongTermDebt. 각 회사의 정의/가용 태그 확인 후 사용.",
+      "unit": "신고 통화; duration 기간의 현금 flow",
+      "grain": "CIK-taxonomy-tag-unit-start-end-accession",
+      "sources": [
+        "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+      ],
+      "collection": {
+        "method": "companyfacts 또는 companyconcept JSON + 현금흐름표 주석 검증",
+        "example": "GET https://data.sec.gov/api/xbrl/companyconcept/CIK{10-digit-cik}/us-gaap/PaymentsToAcquirePropertyPlantAndEquipment.json",
+        "all_facts": "GET https://data.sec.gov/api/xbrl/companyfacts/CIK{10-digit-cik}.json",
+        "fields": [
+          "facts.{taxonomy}.{tag}.units.{unit}",
+          "start",
+          "end",
+          "val",
+          "accn",
+          "fy",
+          "fp",
+          "form",
+          "filed",
+          "frame"
+        ],
+        "field_note": "start/frame 등은 관찰별 선택 사항일 수 있다. API는 전체 법인·표준 taxonomy에 한정하므로 custom/segment 값을 원문 XBRL로 보완한다."
+      },
+      "access_and_free_limits": "무키 공개 읽기. 식별 User-Agent, 합산 초당 10회 이하. 이번 작업에서 API 실행 없음.",
+      "cadence_and_lag": "분기/연간 과거 기간. XBRL API의 통상 공시 후 1분 미만 처리 지연을 분기 현금의 실시간성으로 해석하지 않는다.",
+      "join_keys": [
+        "CIK",
+        "taxonomy/tag",
+        "unit",
+        "start/end",
+        "accession"
+      ],
+      "revision_and_cancellation": "동일 기간 여러 filings의 restatement를 보존한다. YTD 흐름을 단순 합산하지 않으며 회계기간이 같은 누적값에 한해서 분기 차분을 계산한다.",
+      "confounders": "발생주의 capex, 리스 취득, 비현금 장비 매입, 차입 한도, 회사의 현금 잔액 증가를 실제 설비 지출이나 고객 결제로 혼동.",
+      "boundary": "AI 프로젝트별 현금은 전체 법인 숫자에서 직접 분리되지 않는다. 영업 현금흐름은 고객 수취액 자체가 아니며 매입/재고/세금/운전자본이 섞인다.",
+      "signal_class": "현금 집행의 후행 확인; 미래 구축 능력의 제약 신호",
+      "access_test_status": "documentation_only",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "sec-actual-cash",
+        "priority": 2,
+        "purpose": "고객/공급사가 실제로 마련하거나 집행한 현금과 발표된 투자 예산을 구분한다.",
+        "metric": "전체 법인의 현금 CAPEX, 영업 현금흐름, 실제 차입 수취액. 태그 후보: PaymentsToAcquirePropertyPlantAndEquipment, NetCashProvidedByUsedInOperatingActivities, ProceedsFromIssuanceOfLongTermDebt. 각 회사의 정의/가용 태그 확인 후 사용.",
+        "unit": "신고 통화; duration 기간의 현금 flow",
+        "grain": "CIK-taxonomy-tag-unit-start-end-accession",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "collection_method": {
+          "method": "companyfacts 또는 companyconcept JSON + 현금흐름표 주석 검증",
+          "example": "GET https://data.sec.gov/api/xbrl/companyconcept/CIK{10-digit-cik}/us-gaap/PaymentsToAcquirePropertyPlantAndEquipment.json",
+          "all_facts": "GET https://data.sec.gov/api/xbrl/companyfacts/CIK{10-digit-cik}.json",
+          "fields": [
+            "facts.{taxonomy}.{tag}.units.{unit}",
+            "start",
+            "end",
+            "val",
+            "accn",
+            "fy",
+            "fp",
+            "form",
+            "filed",
+            "frame"
+          ],
+          "field_note": "start/frame 등은 관찰별 선택 사항일 수 있다. API는 전체 법인·표준 taxonomy에 한정하므로 custom/segment 값을 원문 XBRL로 보완한다."
+        },
+        "auth/free_limit": "무키 공개 읽기. 식별 User-Agent, 합산 초당 10회 이하. 이번 작업에서 API 실행 없음.",
+        "frequency_lag": "분기/연간 과거 기간. XBRL API의 통상 공시 후 1분 미만 처리 지연을 분기 현금의 실시간성으로 해석하지 않는다.",
+        "join_keys": [
+          "CIK",
+          "taxonomy/tag",
+          "unit",
+          "start/end",
+          "accession"
+        ],
+        "event/revision_handling": "동일 기간 여러 filings의 restatement를 보존한다. YTD 흐름을 단순 합산하지 않으며 회계기간이 같은 누적값에 한해서 분기 차분을 계산한다.",
+        "false_positive": "발생주의 capex, 리스 취득, 비현금 장비 매입, 차입 한도, 회사의 현금 잔액 증가를 실제 설비 지출이나 고객 결제로 혼동.",
+        "limitation": "AI 프로젝트별 현금은 전체 법인 숫자에서 직접 분리되지 않는다. 영업 현금흐름은 고객 수취액 자체가 아니며 매입/재고/세금/운전자본이 섞인다.",
+        "signal_class": "현금 집행의 후행 확인; 미래 구축 능력의 제약 신호",
+        "test_status": "documentation_only"
+      },
+      "collection_tier": "first",
+      "research_origin_group": "capital"
+    },
+    {
+      "id": "capital-customer-prepayments",
+      "purpose": "고객이 공급 확보를 위해 예약만 했는지, 실제 현금을 먼저 지급했는지 판별한다.",
+      "definition": "공시가 직접 명시한 customer deposits/advances cash received와 잔액/총 commitment/RPO의 별도 시계열. ContractWithCustomerLiabilityCurrent·DeferredRevenueCurrent 같은 잔액은 현금 수취로 치환하지 않는다.",
+      "unit": "현금 수취는 통화/기간, liability는 통화/기준일, commitment/RPO는 원문 계약 정의",
+      "grain": "회사-계약 또는 익명 고객 cohort-기간-공시 문서",
+      "sources": [
+        "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+      ],
+      "collection": {
+        "method": "submissions API로 새 공시를 찾고 supply/capacity agreement, deposits, deferred revenue 주석을 읽는다. companyfacts는 표준 전체 법인 잔액의 보조 자료다.",
+        "example": "GET https://data.sec.gov/submissions/CIK{10-digit-cik}.json; 원문에서 실제 cash received의 기간/정의/고객 익명 여부 저장",
+        "manual_fields": [
+          "cash_received_during_period",
+          "cash_receipt_period",
+          "deposit_balance_as_of",
+          "commitment_total",
+          "rpo",
+          "customer_disclosed",
+          "refund_or_offset_conditions",
+          "source_accession"
+        ]
+      },
+      "access_and_free_limits": "SEC 읽기 무키/초당 10회 이하. 계약/익명 고객별 수취 현금 전용 API 없음.",
+      "cadence_and_lag": "분기/연간 및 중요 이벤트 공시. 실제 수취 기간은 공시일보다 앞선다.",
+      "join_keys": [
+        "CIK",
+        "contract/cohort ID",
+        "cash 기간",
+        "balance 기준일",
+        "accession"
+      ],
+      "revision_and_cancellation": "시점 잔액, 기간 수취액, 수년 commitment를 독립 metric으로 저장한다. 환급·구매대금 상계·조건 변경을 추적한다. 익명 aggregate에 고객 회사 edge를 만들어 넣지 않는다.",
+      "confounders": "예치금 잔액 증가를 전부 신규 cash receipt로 취급하거나 수년 약정과 이미 수취한 현금을 합산.",
+      "boundary": "수취된 예치금도 최종 매출/출하 또는 미래 무조건 수요를 보장하지 않는다. 고객명이 비공개이면 회사 간 돈 흐름을 확정할 수 없다.",
+      "signal_class": "고객 수요의 비용 부담 강도를 보여주는 선행/확정 혼합 신호",
+      "access_test_status": "documentation_only",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "customer-prepayments",
+        "priority": 6,
+        "purpose": "고객이 공급 확보를 위해 예약만 했는지, 실제 현금을 먼저 지급했는지 판별한다.",
+        "metric": "공시가 직접 명시한 customer deposits/advances cash received와 잔액/총 commitment/RPO의 별도 시계열. ContractWithCustomerLiabilityCurrent·DeferredRevenueCurrent 같은 잔액은 현금 수취로 치환하지 않는다.",
+        "unit": "현금 수취는 통화/기간, liability는 통화/기준일, commitment/RPO는 원문 계약 정의",
+        "grain": "회사-계약 또는 익명 고객 cohort-기간-공시 문서",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "collection_method": {
+          "method": "submissions API로 새 공시를 찾고 supply/capacity agreement, deposits, deferred revenue 주석을 읽는다. companyfacts는 표준 전체 법인 잔액의 보조 자료다.",
+          "example": "GET https://data.sec.gov/submissions/CIK{10-digit-cik}.json; 원문에서 실제 cash received의 기간/정의/고객 익명 여부 저장",
+          "manual_fields": [
+            "cash_received_during_period",
+            "cash_receipt_period",
+            "deposit_balance_as_of",
+            "commitment_total",
+            "rpo",
+            "customer_disclosed",
+            "refund_or_offset_conditions",
+            "source_accession"
+          ]
+        },
+        "auth/free_limit": "SEC 읽기 무키/초당 10회 이하. 계약/익명 고객별 수취 현금 전용 API 없음.",
+        "frequency_lag": "분기/연간 및 중요 이벤트 공시. 실제 수취 기간은 공시일보다 앞선다.",
+        "join_keys": [
+          "CIK",
+          "contract/cohort ID",
+          "cash 기간",
+          "balance 기준일",
+          "accession"
+        ],
+        "event/revision_handling": "시점 잔액, 기간 수취액, 수년 commitment를 독립 metric으로 저장한다. 환급·구매대금 상계·조건 변경을 추적한다. 익명 aggregate에 고객 회사 edge를 만들어 넣지 않는다.",
+        "false_positive": "예치금 잔액 증가를 전부 신규 cash receipt로 취급하거나 수년 약정과 이미 수취한 현금을 합산.",
+        "limitation": "수취된 예치금도 최종 매출/출하 또는 미래 무조건 수요를 보장하지 않는다. 고객명이 비공개이면 회사 간 돈 흐름을 확정할 수 없다.",
+        "signal_class": "고객 수요의 비용 부담 강도를 보여주는 선행/확정 혼합 신호",
+        "test_status": "documentation_only"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "capital"
+    },
+    {
+      "id": "capital-etf-position-normalized",
+      "purpose": "액티브 운용사가 반도체·광통신·전력 공급망 기업에 자산을 더 배분하는지 가격 효과와 구분해 본다.",
+      "definition": "Equity 보유수량 q_it, 비중, q_it/S_t 및 그 변화. 비교용 매매 추정량 q_it-q_i,t-1*(S_t/S_t-1)는 split/merger 등을 조정한 경우에만 사용하고 실제 cash trade로 부르지 않는다.",
+      "unit": "종목 주수; ETF 1주당 종목 주수; %",
+      "grain": "ETF-share class-증권 식별자-보유 기준일",
+      "sources": [
+        "https://www.ishares.com/us/products/339081/ishares-a-i-innovation-and-tech-active-etf/latest-holdings.csv"
+      ],
+      "collection": {
+        "method": "일별 공식 CSV snapshot 저장. preamble의 Fund Holdings as of/Shares Outstanding 파싱 후 Ticker header부터 holdings 파싱.",
+        "fields": [
+          "Ticker",
+          "Name",
+          "Sector",
+          "Asset Class",
+          "Market Value",
+          "Weight (%)",
+          "Notional Value",
+          "Quantity",
+          "Price",
+          "Location",
+          "Exchange",
+          "Currency",
+          "FX Rate",
+          "Market Currency",
+          "Accrual Date"
+        ],
+        "example": "공개 latest-holdings.csv GET; Equity 행만 주식 수량 분석. 기타 자산은 별도 단위 정의 필요."
+      },
+      "access_and_free_limits": "로그인/키 없이 공개 CSV 성공. 공식 숫자형 rate limit 확인 안 됨. 하루 1회 snapshot을 기본으로 하며 과거 날짜 요청/보존은 보장되지 않는다.",
+      "cadence_and_lag": "일별 holdings 기준일. 다운로드일과 기준일을 별도로 기록하며 최신 링크라도 과거 날짜일 수 있다.",
+      "join_keys": [
+        "fund/share-class ID",
+        "as_of",
+        "ISIN/CUSIP 보완 가능 시 우선",
+        "CSV만 있을 때 Ticker+Exchange+Asset Class+Market Currency+Name"
+      ],
+      "revision_and_cancellation": "CSV 원문·해시·기준일 보존. 주식/ETF split, ADR ratio, 합병, 종목 교체, share-class 변경은 기업/증권 identity 사건으로 처리한다. 숫자형 티커의 앞자리 0 보존.",
+      "confounders": "가격/FX 상승, ETF 규모 증가, 현물 creation basket, corporate action 또는 증권 종류 차이로 늘어난 보유수량을 운용사 적극 매수로 읽는 오류.",
+      "boundary": "보유량 변화는 현물 설정과 재배분이 섞인 결과이며 운용사 실제 매매대금/체결 시간/고객 현금을 알 수 없다. 공급망 테마 비중은 ETF 이름만으로 정하지 않고 기업별 매출 역할을 연결한다.",
+      "signal_class": "투자자 배분의 동행 신호; 실물 수요의 직접 측정 아님",
+      "access_test_status": "public_csv_success",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "etf-position-normalized",
+        "priority": 3,
+        "purpose": "액티브 운용사가 반도체·광통신·전력 공급망 기업에 자산을 더 배분하는지 가격 효과와 구분해 본다.",
+        "metric": "Equity 보유수량 q_it, 비중, q_it/S_t 및 그 변화. 비교용 매매 추정량 q_it-q_i,t-1*(S_t/S_t-1)는 split/merger 등을 조정한 경우에만 사용하고 실제 cash trade로 부르지 않는다.",
+        "unit": "종목 주수; ETF 1주당 종목 주수; %",
+        "grain": "ETF-share class-증권 식별자-보유 기준일",
+        "source_url": "https://www.ishares.com/us/products/339081/ishares-a-i-innovation-and-tech-active-etf/latest-holdings.csv",
+        "collection_method": {
+          "method": "일별 공식 CSV snapshot 저장. preamble의 Fund Holdings as of/Shares Outstanding 파싱 후 Ticker header부터 holdings 파싱.",
+          "fields": [
+            "Ticker",
+            "Name",
+            "Sector",
+            "Asset Class",
+            "Market Value",
+            "Weight (%)",
+            "Notional Value",
+            "Quantity",
+            "Price",
+            "Location",
+            "Exchange",
+            "Currency",
+            "FX Rate",
+            "Market Currency",
+            "Accrual Date"
+          ],
+          "example": "공개 latest-holdings.csv GET; Equity 행만 주식 수량 분석. 기타 자산은 별도 단위 정의 필요."
+        },
+        "auth/free_limit": "로그인/키 없이 공개 CSV 성공. 공식 숫자형 rate limit 확인 안 됨. 하루 1회 snapshot을 기본으로 하며 과거 날짜 요청/보존은 보장되지 않는다.",
+        "frequency_lag": "일별 holdings 기준일. 다운로드일과 기준일을 별도로 기록하며 최신 링크라도 과거 날짜일 수 있다.",
+        "join_keys": [
+          "fund/share-class ID",
+          "as_of",
+          "ISIN/CUSIP 보완 가능 시 우선",
+          "CSV만 있을 때 Ticker+Exchange+Asset Class+Market Currency+Name"
+        ],
+        "event/revision_handling": "CSV 원문·해시·기준일 보존. 주식/ETF split, ADR ratio, 합병, 종목 교체, share-class 변경은 기업/증권 identity 사건으로 처리한다. 숫자형 티커의 앞자리 0 보존.",
+        "false_positive": "가격/FX 상승, ETF 규모 증가, 현물 creation basket, corporate action 또는 증권 종류 차이로 늘어난 보유수량을 운용사 적극 매수로 읽는 오류.",
+        "limitation": "보유량 변화는 현물 설정과 재배분이 섞인 결과이며 운용사 실제 매매대금/체결 시간/고객 현금을 알 수 없다. 공급망 테마 비중은 ETF 이름만으로 정하지 않고 기업별 매출 역할을 연결한다.",
+        "signal_class": "투자자 배분의 동행 신호; 실물 수요의 직접 측정 아님",
+        "test_status": "public_csv_success"
+      },
+      "collection_tier": "first",
+      "research_origin_group": "capital"
+    },
+    {
+      "id": "capital-etf-netcreation-estimate",
+      "purpose": "ETF 테마 자체로 들어오거나 빠지는 순설정 압력을 보유 종목별 재배분과 분리한다.",
+      "definition": "split-adjusted (S_t-S_t-1)*NAV_t. 지표명은 estimated NAV-valued net creation이며 실제 현금 유입 또는 gross subscriptions/redemptions가 아니다.",
+      "unit": "fund currency의 NAV 평가 순설정 추정치",
+      "grain": "ETF-share class-영업일",
+      "sources": [
+        "https://www.ishares.com/us/products/339081/ishares-a-i-innovation-and-tech-active-etf"
+      ],
+      "collection": {
+        "method": "공식 CSV 발행 주수 S와 공식 NAV를 동일 기준일로 snapshot 저장한다. 전일 S가 없거나 NAV 기준일이 다르면 값을 계산하지 않는다.",
+        "fields": [
+          "Shares Outstanding",
+          "NAV",
+          "각 수치의 as_of",
+          "fund currency"
+        ],
+        "example": "latest-holdings.csv의 Shares Outstanding와 페이지의 동일 날짜 NAV 결합; NAV와 Non-FV NAV를 혼용하지 않는다."
+      },
+      "access_and_free_limits": "공개 페이지+공개 CSV. 숫자형 rate limit 미확인. 안정적 공개 NAV API 및 과거 발행 주수 series는 확인하지 않았으므로 운영 전 매일 보존한다.",
+      "cadence_and_lag": "일별 NAV/발행 주수. as_of 불일치와 결측은 null.",
+      "join_keys": [
+        "fund/share-class ID",
+        "동일 as_of",
+        "currency"
+      ],
+      "revision_and_cancellation": "ETF split/reverse split/합병·seed capital·휴일·재공시를 조정한다. NAV_t convention을 고정해 서로 다른 근사식을 섞지 않는다.",
+      "confounders": "ETF 거래량, AUM 증가, 주가 상승 또는 분배금 변화가 신규 투자자 자금이라고 해석되는 오류.",
+      "boundary": "현물과 현금 설정이 섞이고 당일 gross creation과 redemption이 상쇄된다. 증권 이전을 기업/데이터센터에 실제 현금 지급한 것으로 추론할 수 없다. 본 작업은 단일 날짜뿐이므로 흐름을 계산하지 않았다.",
+      "signal_class": "NAV로 평가한 ETF 순설정 추정; actual cash와 구분",
+      "access_test_status": "input_csv_success_formula_not_computed",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "etf-netcreation-estimate",
+        "priority": 4,
+        "purpose": "ETF 테마 자체로 들어오거나 빠지는 순설정 압력을 보유 종목별 재배분과 분리한다.",
+        "metric": "split-adjusted (S_t-S_t-1)*NAV_t. 지표명은 estimated NAV-valued net creation이며 실제 현금 유입 또는 gross subscriptions/redemptions가 아니다.",
+        "unit": "fund currency의 NAV 평가 순설정 추정치",
+        "grain": "ETF-share class-영업일",
+        "source_url": "https://www.ishares.com/us/products/339081/ishares-a-i-innovation-and-tech-active-etf",
+        "collection_method": {
+          "method": "공식 CSV 발행 주수 S와 공식 NAV를 동일 기준일로 snapshot 저장한다. 전일 S가 없거나 NAV 기준일이 다르면 값을 계산하지 않는다.",
+          "fields": [
+            "Shares Outstanding",
+            "NAV",
+            "각 수치의 as_of",
+            "fund currency"
+          ],
+          "example": "latest-holdings.csv의 Shares Outstanding와 페이지의 동일 날짜 NAV 결합; NAV와 Non-FV NAV를 혼용하지 않는다."
+        },
+        "auth/free_limit": "공개 페이지+공개 CSV. 숫자형 rate limit 미확인. 안정적 공개 NAV API 및 과거 발행 주수 series는 확인하지 않았으므로 운영 전 매일 보존한다.",
+        "frequency_lag": "일별 NAV/발행 주수. as_of 불일치와 결측은 null.",
+        "join_keys": [
+          "fund/share-class ID",
+          "동일 as_of",
+          "currency"
+        ],
+        "event/revision_handling": "ETF split/reverse split/합병·seed capital·휴일·재공시를 조정한다. NAV_t convention을 고정해 서로 다른 근사식을 섞지 않는다.",
+        "false_positive": "ETF 거래량, AUM 증가, 주가 상승 또는 분배금 변화가 신규 투자자 자금이라고 해석되는 오류.",
+        "limitation": "현물과 현금 설정이 섞이고 당일 gross creation과 redemption이 상쇄된다. 증권 이전을 기업/데이터센터에 실제 현금 지급한 것으로 추론할 수 없다. 본 작업은 단일 날짜뿐이므로 흐름을 계산하지 않았다.",
+        "signal_class": "NAV로 평가한 ETF 순설정 추정; actual cash와 구분",
+        "test_status": "input_csv_success_formula_not_computed"
+      },
+      "collection_tier": "first",
+      "research_origin_group": "capital"
+    },
+    {
+      "id": "capital-nport-holdings-validation",
+      "purpose": "ETF/펀드의 공시 보유잔고와 issuer 일별 CSV 식별자를 교차검증하고 장기 기관 배분을 확인한다.",
+      "definition": "BALANCE/UNIT, CURRENCY_VALUE, PERCENTAGE, NET_ASSETS의 보고일별 수준·변화. 판매/환매 현금 flow로 대체하지 않는다.",
+      "unit": "UNIT이 지정하는 주수/원금/기타 단위; 보고 통화; %",
+      "grain": "등록 CIK-펀드 SERIES_ID-REPORT_DATE-증권 ISIN/CUSIP-HOLDING_ID-accession",
+      "sources": [
+        "https://www.sec.gov/data-research/sec-markets-data/form-n-port-data-sets"
+      ],
+      "collection": {
+        "method": "공개 분기 ZIP의 UTF-8 tab-delimited TSV 다운로드 후 SUBMISSION↔FUND_REPORTED_INFO↔FUND_REPORTED_HOLDING을 ACCESSION_NUMBER로, IDENTIFIERS를 HOLDING_ID로 결합한다. 소량 운영에서는 개별 NPORT-P 공시를 우선할 수 있다.",
+        "fields": [
+          "ACCESSION_NUMBER",
+          "FILING_DATE",
+          "SUB_TYPE",
+          "REPORT_DATE",
+          "CIK",
+          "SERIES_ID",
+          "NET_ASSETS",
+          "HOLDING_ID",
+          "ISSUER_NAME",
+          "ISSUER_LEI",
+          "ISSUER_CUSIP",
+          "BALANCE",
+          "UNIT",
+          "OTHER_UNIT_DESC",
+          "CURRENCY_CODE",
+          "CURRENCY_VALUE",
+          "PERCENTAGE",
+          "IDENTIFIER_ISIN",
+          "IDENTIFIER_TICKER"
+        ],
+        "example_join": "SUBMISSION.ACCESSION_NUMBER = FUND_REPORTED_INFO.ACCESSION_NUMBER = FUND_REPORTED_HOLDING.ACCESSION_NUMBER; FUND_REPORTED_HOLDING.HOLDING_ID = IDENTIFIERS.HOLDING_ID"
+      },
+      "access_and_free_limits": "공개 읽기 무키, SEC fair access 준수. 2026Q2 ZIP 표시 크기 420.28 MB이므로 이번 소량 테스트에서 다운로드하지 않았다.",
+      "cadence_and_lag": "보유 정보는 월말 보고 성격이지만 공개 bulk는 분기 갱신이고 publicly disseminated filings만 포함한다. 월별 즉시 공개를 가정하지 않는다.",
+      "join_keys": [
+        "CIK",
+        "SERIES_ID",
+        "REPORT_DATE",
+        "ACCESSION_NUMBER",
+        "HOLDING_ID",
+        "ISIN/CUSIP"
+      ],
+      "revision_and_cancellation": "NPORT-P/A amendment와 제출일을 유지하고 동일 series/report date의 최종 제출본을 선택한다. HOLDING_ID는 제출 간 영속 증권 ID가 아니며 class/series를 합치지 않는다.",
+      "confounders": "BALANCE의 원금/계약 단위를 모두 주식 수량으로 간주하거나 주가 효과로 오른 PERCENTAGE를 순매수로 해석.",
+      "boundary": "공개 readme에서 실제 판매/환매 현금 field 미확인. 지연 자료이고 모든 공개 문서 metadata를 포함하지 않으며 원 filing을 대체하지 않는다.",
+      "signal_class": "지연된 기관 보유 교차검증",
+      "access_test_status": "schema_documentation_only",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "nport-holdings-validation",
+        "priority": 7,
+        "purpose": "ETF/펀드의 공시 보유잔고와 issuer 일별 CSV 식별자를 교차검증하고 장기 기관 배분을 확인한다.",
+        "metric": "BALANCE/UNIT, CURRENCY_VALUE, PERCENTAGE, NET_ASSETS의 보고일별 수준·변화. 판매/환매 현금 flow로 대체하지 않는다.",
+        "unit": "UNIT이 지정하는 주수/원금/기타 단위; 보고 통화; %",
+        "grain": "등록 CIK-펀드 SERIES_ID-REPORT_DATE-증권 ISIN/CUSIP-HOLDING_ID-accession",
+        "source_url": "https://www.sec.gov/data-research/sec-markets-data/form-n-port-data-sets",
+        "collection_method": {
+          "method": "공개 분기 ZIP의 UTF-8 tab-delimited TSV 다운로드 후 SUBMISSION↔FUND_REPORTED_INFO↔FUND_REPORTED_HOLDING을 ACCESSION_NUMBER로, IDENTIFIERS를 HOLDING_ID로 결합한다. 소량 운영에서는 개별 NPORT-P 공시를 우선할 수 있다.",
+          "fields": [
+            "ACCESSION_NUMBER",
+            "FILING_DATE",
+            "SUB_TYPE",
+            "REPORT_DATE",
+            "CIK",
+            "SERIES_ID",
+            "NET_ASSETS",
+            "HOLDING_ID",
+            "ISSUER_NAME",
+            "ISSUER_LEI",
+            "ISSUER_CUSIP",
+            "BALANCE",
+            "UNIT",
+            "OTHER_UNIT_DESC",
+            "CURRENCY_CODE",
+            "CURRENCY_VALUE",
+            "PERCENTAGE",
+            "IDENTIFIER_ISIN",
+            "IDENTIFIER_TICKER"
+          ],
+          "example_join": "SUBMISSION.ACCESSION_NUMBER = FUND_REPORTED_INFO.ACCESSION_NUMBER = FUND_REPORTED_HOLDING.ACCESSION_NUMBER; FUND_REPORTED_HOLDING.HOLDING_ID = IDENTIFIERS.HOLDING_ID"
+        },
+        "auth/free_limit": "공개 읽기 무키, SEC fair access 준수. 2026Q2 ZIP 표시 크기 420.28 MB이므로 이번 소량 테스트에서 다운로드하지 않았다.",
+        "frequency_lag": "보유 정보는 월말 보고 성격이지만 공개 bulk는 분기 갱신이고 publicly disseminated filings만 포함한다. 월별 즉시 공개를 가정하지 않는다.",
+        "join_keys": [
+          "CIK",
+          "SERIES_ID",
+          "REPORT_DATE",
+          "ACCESSION_NUMBER",
+          "HOLDING_ID",
+          "ISIN/CUSIP"
+        ],
+        "event/revision_handling": "NPORT-P/A amendment와 제출일을 유지하고 동일 series/report date의 최종 제출본을 선택한다. HOLDING_ID는 제출 간 영속 증권 ID가 아니며 class/series를 합치지 않는다.",
+        "false_positive": "BALANCE의 원금/계약 단위를 모두 주식 수량으로 간주하거나 주가 효과로 오른 PERCENTAGE를 순매수로 해석.",
+        "limitation": "공개 readme에서 실제 판매/환매 현금 field 미확인. 지연 자료이고 모든 공개 문서 metadata를 포함하지 않으며 원 filing을 대체하지 않는다.",
+        "signal_class": "지연된 기관 보유 교차검증",
+        "test_status": "schema_documentation_only"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "capital"
+    },
+    {
+      "id": "capital-comtrade-physical-trade",
+      "purpose": "국가별 반도체 관련 실물 교역량이 가격 상승만으로 설명되는지, 물량/품목/교역 상대가 함께 변하는지 확인한다.",
+      "definition": "HS 바구니별 primaryValue/FOB/CIF, qty/altQty/netWgt와 단위·추정/집계 플래그. 동일 단위·품목·분류판 조건일 때만 unit value 계산. 생산량이라는 이름 금지.",
+      "unit": "USD; 신고 qtyUnit/altQtyUnit; 순중량 kg",
+      "grain": "reporter-period-HS revision-cmdCode-flow-partner-partner2-customs-mot",
+      "sources": [
+        "https://uncomtrade.org/docs/un-comtrade-api/"
+      ],
+      "collection": {
+        "method": "guest public preview로 소량 schema 검증. 정기 전체 수집은 무료 등록 key가 필요한 data/v1/get 사용 가능 여부를 별도로 설정한다.",
+        "tested_example": "https://comtradeapi.un.org/public/v1/preview/C/M/HS?period=202507&reporterCode=410&cmdCode=854231&flowCode=X&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&maxRecords=5&includeDesc=true",
+        "fields": [
+          "period",
+          "reporterCode",
+          "reporterISO",
+          "classificationCode",
+          "isOriginalClassification",
+          "cmdCode",
+          "aggrLevel",
+          "flowCode",
+          "partnerCode",
+          "partner2Code",
+          "customsCode",
+          "motCode",
+          "qtyUnitCode",
+          "qtyUnitAbbr",
+          "qty",
+          "isQtyEstimated",
+          "altQtyUnitCode",
+          "altQty",
+          "isAltQtyEstimated",
+          "netWgt",
+          "isNetWgtEstimated",
+          "grossWgt",
+          "cifvalue",
+          "fobvalue",
+          "primaryValue",
+          "isReported",
+          "isAggregate"
+        ],
+        "sample_interpretation": "2025-07 한국 HS854231 세계 수출은 qty=0, qtyUnitCode=-1/N/A이며 altQty와 netWgt는 624759.133 kg. 개수 미제공을 출하 0으로 처리하지 않는다. 세계 total은 isReported=false/isAggregate=true이므로 집계성도 기록한다."
+      },
+      "access_and_free_limits": "guest preview: 계정/키 없이 500행, 단일 기간·단일 상품. 무료 등록 tier: 100,000행/요청, 500회/일, 1회/초. 등록 endpoint의 key는 문서만 검토했으며 이번 작업에서 읽거나 사용하지 않았다.",
+      "cadence_and_lag": "월간/연간, 국가별 제출 시차와 수정이 다르다. 동일 기준일의 모든 국가가 완비된다고 가정하지 않는다.",
+      "join_keys": [
+        "reporterCode",
+        "period",
+        "classificationCode",
+        "cmdCode 문자열",
+        "flowCode",
+        "partnerCode",
+        "partner2Code",
+        "customsCode",
+        "motCode"
+      ],
+      "revision_and_cancellation": "원문 JSON·수집시각·해시 저장. 미리보기 truncation과 count를 검증하고 단위/분류판 변화는 단절 표시. 월별 vintage를 유지하며 revision과 실제 신규 교역을 구분한다.",
+      "confounders": "반도체 가격/제품 mix/환율, 재수출, 가공무역, 원산지·위탁국 차이, 반제품 재통관, 신고 시차로 생기는 금액 증가.",
+      "boundary": "HS854231은 프로세서/컨트롤러 전체이며 GPU/AI accelerator 분리 불가. HS854232 메모리도 HBM을 자동 분리하지 못한다. 총중량과 순중량은 칩/웨이퍼 개수가 아니며 preview는 완전 수집용이 아니다.",
+      "signal_class": "실물 국경 이동의 동행/시차 신호; 생산 및 AI 최종 수요는 별도 검증",
+      "access_test_status": "public_preview_success_1_row",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "comtrade-physical-trade",
+        "priority": 5,
+        "purpose": "국가별 반도체 관련 실물 교역량이 가격 상승만으로 설명되는지, 물량/품목/교역 상대가 함께 변하는지 확인한다.",
+        "metric": "HS 바구니별 primaryValue/FOB/CIF, qty/altQty/netWgt와 단위·추정/집계 플래그. 동일 단위·품목·분류판 조건일 때만 unit value 계산. 생산량이라는 이름 금지.",
+        "unit": "USD; 신고 qtyUnit/altQtyUnit; 순중량 kg",
+        "grain": "reporter-period-HS revision-cmdCode-flow-partner-partner2-customs-mot",
+        "source_url": "https://uncomtrade.org/docs/un-comtrade-api/",
+        "collection_method": {
+          "method": "guest public preview로 소량 schema 검증. 정기 전체 수집은 무료 등록 key가 필요한 data/v1/get 사용 가능 여부를 별도로 설정한다.",
+          "tested_example": "https://comtradeapi.un.org/public/v1/preview/C/M/HS?period=202507&reporterCode=410&cmdCode=854231&flowCode=X&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&maxRecords=5&includeDesc=true",
+          "fields": [
+            "period",
+            "reporterCode",
+            "reporterISO",
+            "classificationCode",
+            "isOriginalClassification",
+            "cmdCode",
+            "aggrLevel",
+            "flowCode",
+            "partnerCode",
+            "partner2Code",
+            "customsCode",
+            "motCode",
+            "qtyUnitCode",
+            "qtyUnitAbbr",
+            "qty",
+            "isQtyEstimated",
+            "altQtyUnitCode",
+            "altQty",
+            "isAltQtyEstimated",
+            "netWgt",
+            "isNetWgtEstimated",
+            "grossWgt",
+            "cifvalue",
+            "fobvalue",
+            "primaryValue",
+            "isReported",
+            "isAggregate"
+          ],
+          "sample_interpretation": "2025-07 한국 HS854231 세계 수출은 qty=0, qtyUnitCode=-1/N/A이며 altQty와 netWgt는 624759.133 kg. 개수 미제공을 출하 0으로 처리하지 않는다. 세계 total은 isReported=false/isAggregate=true이므로 집계성도 기록한다."
+        },
+        "auth/free_limit": "guest preview: 계정/키 없이 500행, 단일 기간·단일 상품. 무료 등록 tier: 100,000행/요청, 500회/일, 1회/초. 등록 endpoint의 key는 문서만 검토했으며 이번 작업에서 읽거나 사용하지 않았다.",
+        "frequency_lag": "월간/연간, 국가별 제출 시차와 수정이 다르다. 동일 기준일의 모든 국가가 완비된다고 가정하지 않는다.",
+        "join_keys": [
+          "reporterCode",
+          "period",
+          "classificationCode",
+          "cmdCode 문자열",
+          "flowCode",
+          "partnerCode",
+          "partner2Code",
+          "customsCode",
+          "motCode"
+        ],
+        "event/revision_handling": "원문 JSON·수집시각·해시 저장. 미리보기 truncation과 count를 검증하고 단위/분류판 변화는 단절 표시. 월별 vintage를 유지하며 revision과 실제 신규 교역을 구분한다.",
+        "false_positive": "반도체 가격/제품 mix/환율, 재수출, 가공무역, 원산지·위탁국 차이, 반제품 재통관, 신고 시차로 생기는 금액 증가.",
+        "limitation": "HS854231은 프로세서/컨트롤러 전체이며 GPU/AI accelerator 분리 불가. HS854232 메모리도 HBM을 자동 분리하지 못한다. 총중량과 순중량은 칩/웨이퍼 개수가 아니며 preview는 완전 수집용이 아니다.",
+        "signal_class": "실물 국경 이동의 동행/시차 신호; 생산 및 AI 최종 수요는 별도 검증",
+        "test_status": "public_preview_success_1_row"
+      },
+      "collection_tier": "first",
+      "research_origin_group": "capital"
+    },
+    {
+      "id": "capital-usitc-material-form-trade",
+      "purpose": "갈륨 수출통제와 원료 공급 변화가 금속·GaAs 웨이퍼 등의 서로 다른 공급 단계에 주는 영향을 구분한다.",
+      "definition": "미국 HTS10 품목별 General Imports/Imports for Consumption의 customs value와 first quantity/unit. 갈륨 금속 8112921000, undoped GaAs wafer 2853909010, doped GaAs wafer 3818000010은 별도 시계열.",
+      "unit": "USD; 품목별 신고 quantity unit. contained gallium kg으로 자동 합산하지 않음.",
+      "grain": "월-미국 수입 기준-HTS10 vintage-원산국-측정치",
+      "sources": [
+        "https://www.usitc.gov/applications/dataweb/api/dataweb_query_api.html"
+      ],
+      "collection": {
+        "method": "무료 DataWeb 계정에서 국가/기간/HTS/measure query를 저장한 뒤 공식 API payload를 그대로 사용한다. 최신 HTS 설명과 단위를 재확인하고 과거 code bridge 보존.",
+        "endpoint": "POST https://datawebws.usitc.gov/dataweb/api/v2/report2/runReport",
+        "request_note": "Authorization: Bearer {token}; 본 작업은 token 접근/endpoint 실행 없이 공식 문서만 검토. 임의 간소화 payload를 작동 확인한 것으로 제시하지 않는다.",
+        "response_fields": [
+          "dto.tables[*].column_groups",
+          "dto.tables[*].row_groups[*].rowsNew[*].rowEntries[*].value"
+        ],
+        "classification_evidence": [
+          "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf",
+          "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf"
+        ],
+        "rare_earth_note": "USGS가 제시한 희토류 금속/cerium/다른 화합물 바구니는 개별 중희토류 원소를 모두 분리하지 못한다. 품목별 latest HTS10 확인 없이 HS6 집계를 단일 원소로 명명하지 않는다."
+      },
+      "access_and_free_limits": "무료 계정/Login.gov 및 API token 필수, token은 6개월 만료. 문서에서 수치형 호출 한도는 확인 안 됨. 무키 trade data API라고 표기하지 않는다.",
+      "cadence_and_lag": "월간 공식 교역, 공개/수정 일정에 따름. 당시 공표 시점과 관찰월을 별도 기록.",
+      "join_keys": [
+        "trade basis",
+        "month",
+        "HTS10 및 적용 기간",
+        "country code",
+        "measure",
+        "quantity unit"
+      ],
+      "revision_and_cancellation": "연중 tariff code/통계 suffix 변경을 공식 concordance로 연결하고 없는 코드를 0으로 채우지 않는다. customs value·quantity를 월별 빈티지로 보존한다.",
+      "confounders": "원재료 금속과 compound/wafer를 합산한 중복, 수입 공급국을 광산 원산국으로 해석, 수입 시점 재고 비축을 최종 소비 증가로 해석.",
+      "boundary": "국제 HS6는 갈륨 자체를 식별하지 못하는 바구니가 있다. HTS10도 희토류 개별 원소 구분과 완제품 내 내재량이 제한된다. 미국 수입은 세계 전체 공급이 아니며 규제 회피/재수출/보세 이동은 별도 검토한다.",
+      "signal_class": "물질 형태별 공급 교역 신호",
+      "access_test_status": "auth_required_documentation_only",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "usitc-material-form-trade",
+        "priority": 8,
+        "purpose": "갈륨 수출통제와 원료 공급 변화가 금속·GaAs 웨이퍼 등의 서로 다른 공급 단계에 주는 영향을 구분한다.",
+        "metric": "미국 HTS10 품목별 General Imports/Imports for Consumption의 customs value와 first quantity/unit. 갈륨 금속 8112921000, undoped GaAs wafer 2853909010, doped GaAs wafer 3818000010은 별도 시계열.",
+        "unit": "USD; 품목별 신고 quantity unit. contained gallium kg으로 자동 합산하지 않음.",
+        "grain": "월-미국 수입 기준-HTS10 vintage-원산국-측정치",
+        "source_url": "https://www.usitc.gov/applications/dataweb/api/dataweb_query_api.html",
+        "collection_method": {
+          "method": "무료 DataWeb 계정에서 국가/기간/HTS/measure query를 저장한 뒤 공식 API payload를 그대로 사용한다. 최신 HTS 설명과 단위를 재확인하고 과거 code bridge 보존.",
+          "endpoint": "POST https://datawebws.usitc.gov/dataweb/api/v2/report2/runReport",
+          "request_note": "Authorization: Bearer {token}; 본 작업은 token 접근/endpoint 실행 없이 공식 문서만 검토. 임의 간소화 payload를 작동 확인한 것으로 제시하지 않는다.",
+          "response_fields": [
+            "dto.tables[*].column_groups",
+            "dto.tables[*].row_groups[*].rowsNew[*].rowEntries[*].value"
+          ],
+          "classification_evidence": [
+            "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf",
+            "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf"
+          ],
+          "rare_earth_note": "USGS가 제시한 희토류 금속/cerium/다른 화합물 바구니는 개별 중희토류 원소를 모두 분리하지 못한다. 품목별 latest HTS10 확인 없이 HS6 집계를 단일 원소로 명명하지 않는다."
+        },
+        "auth/free_limit": "무료 계정/Login.gov 및 API token 필수, token은 6개월 만료. 문서에서 수치형 호출 한도는 확인 안 됨. 무키 trade data API라고 표기하지 않는다.",
+        "frequency_lag": "월간 공식 교역, 공개/수정 일정에 따름. 당시 공표 시점과 관찰월을 별도 기록.",
+        "join_keys": [
+          "trade basis",
+          "month",
+          "HTS10 및 적용 기간",
+          "country code",
+          "measure",
+          "quantity unit"
+        ],
+        "event/revision_handling": "연중 tariff code/통계 suffix 변경을 공식 concordance로 연결하고 없는 코드를 0으로 채우지 않는다. customs value·quantity를 월별 빈티지로 보존한다.",
+        "false_positive": "원재료 금속과 compound/wafer를 합산한 중복, 수입 공급국을 광산 원산국으로 해석, 수입 시점 재고 비축을 최종 소비 증가로 해석.",
+        "limitation": "국제 HS6는 갈륨 자체를 식별하지 못하는 바구니가 있다. HTS10도 희토류 개별 원소 구분과 완제품 내 내재량이 제한된다. 미국 수입은 세계 전체 공급이 아니며 규제 회피/재수출/보세 이동은 별도 검토한다.",
+        "signal_class": "물질 형태별 공급 교역 신호",
+        "test_status": "auth_required_documentation_only"
+      },
+      "collection_tier": "first",
+      "research_origin_group": "capital"
+    },
+    {
+      "id": "capital-usgs-structural-resource-risk",
+      "purpose": "정책/공급 충격이 어느 원재료와 어떤 반도체 제품에 전파될 가능성이 큰지 기본 지도를 만든다.",
+      "definition": "광물·정련 단계별 국가 생산, 생산능력, 수입 의존, 재활용 및 재고/소비 자료가 존재하는 범위. 원소 전체가 아닌 metal/GaAs/GaN/REO 등 원문 정의 보존.",
+      "unit": "원문 ton/kg/REO equivalent/%; estimate·withheld·not available 표식 유지",
+      "grain": "광물-가공 형태/단계-국가-관찰 연도-발행 빈티지",
+      "sources": [
+        "https://www.usgs.gov/publications/mineral-commodity-summaries-2026"
+      ],
+      "collection": {
+        "method": "공식 MCS 및 각 광물 페이지의 PDF/공개 데이터 release를 내려받아 표와 주석을 함께 수집한다. 이번에 공개 data release의 실제 CSV schema/endpoint를 검증하지 않았으므로 API 필드가 있는 것으로 주장하지 않는다.",
+        "commodity_pages": [
+          "https://www.usgs.gov/centers/national-minerals-information-center/gallium-statistics-and-information",
+          "https://www.usgs.gov/centers/national-minerals-information-center/rare-earths-statistics-and-information"
+        ],
+        "required_fields": [
+          "commodity",
+          "material_form",
+          "production_stage",
+          "country",
+          "observation_year",
+          "value",
+          "unit",
+          "estimate_flag",
+          "source_footnote",
+          "publication_vintage",
+          "revision_version"
+        ]
+      },
+      "access_and_free_limits": "공개 보고서 읽기 무계정/무키. 숫자형 다운로드 limit 미확인. MYB 일부 표의 ScienceBase 이관 중 게시 일시 중단 안내가 있어 자료별 접근성을 따로 확인한다.",
+      "cadence_and_lag": "MCS 연간 과거 관찰/추정. 연도간 공개 차이와 revision이 있으며 현재 월별 선행값이 아니다.",
+      "join_keys": [
+        "commodity/material form",
+        "stage",
+        "country",
+        "observation_year",
+        "vintage/version"
+      ],
+      "revision_and_cancellation": "원 PDF와 주석·revision history를 고정한다. 생산·reserves·capacity를 혼용하지 않고 같은 표의 추정치 수정이 새 생산 사건이 되는 것을 막는다.",
+      "confounders": "광산량을 반도체급 정제 공급으로 해석, 생산능력을 가동 생산량으로 해석, 연간 통계의 집중도를 지금 재고 부족으로 판단.",
+      "boundary": "갈륨은 GaAs RF/광전자 및 GaN 전력/RF 등 특정 용도와 연결해야 한다. 모든 실리콘 GPU의 직접 핵심 투입물로 일반화하지 않는다. 희토류도 모터/자석/연마/광학 등의 적용 노드로 연결한다.",
+      "signal_class": "구조적 노출/병목 배경; 단독 선행 신호 아님",
+      "access_test_status": "official_report_and_metadata_review",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "usgs-structural-resource-risk",
+        "priority": 9,
+        "purpose": "정책/공급 충격이 어느 원재료와 어떤 반도체 제품에 전파될 가능성이 큰지 기본 지도를 만든다.",
+        "metric": "광물·정련 단계별 국가 생산, 생산능력, 수입 의존, 재활용 및 재고/소비 자료가 존재하는 범위. 원소 전체가 아닌 metal/GaAs/GaN/REO 등 원문 정의 보존.",
+        "unit": "원문 ton/kg/REO equivalent/%; estimate·withheld·not available 표식 유지",
+        "grain": "광물-가공 형태/단계-국가-관찰 연도-발행 빈티지",
+        "source_url": "https://www.usgs.gov/publications/mineral-commodity-summaries-2026",
+        "collection_method": {
+          "method": "공식 MCS 및 각 광물 페이지의 PDF/공개 데이터 release를 내려받아 표와 주석을 함께 수집한다. 이번에 공개 data release의 실제 CSV schema/endpoint를 검증하지 않았으므로 API 필드가 있는 것으로 주장하지 않는다.",
+          "commodity_pages": [
+            "https://www.usgs.gov/centers/national-minerals-information-center/gallium-statistics-and-information",
+            "https://www.usgs.gov/centers/national-minerals-information-center/rare-earths-statistics-and-information"
+          ],
+          "required_fields": [
+            "commodity",
+            "material_form",
+            "production_stage",
+            "country",
+            "observation_year",
+            "value",
+            "unit",
+            "estimate_flag",
+            "source_footnote",
+            "publication_vintage",
+            "revision_version"
+          ]
+        },
+        "auth/free_limit": "공개 보고서 읽기 무계정/무키. 숫자형 다운로드 limit 미확인. MYB 일부 표의 ScienceBase 이관 중 게시 일시 중단 안내가 있어 자료별 접근성을 따로 확인한다.",
+        "frequency_lag": "MCS 연간 과거 관찰/추정. 연도간 공개 차이와 revision이 있으며 현재 월별 선행값이 아니다.",
+        "join_keys": [
+          "commodity/material form",
+          "stage",
+          "country",
+          "observation_year",
+          "vintage/version"
+        ],
+        "event/revision_handling": "원 PDF와 주석·revision history를 고정한다. 생산·reserves·capacity를 혼용하지 않고 같은 표의 추정치 수정이 새 생산 사건이 되는 것을 막는다.",
+        "false_positive": "광산량을 반도체급 정제 공급으로 해석, 생산능력을 가동 생산량으로 해석, 연간 통계의 집중도를 지금 재고 부족으로 판단.",
+        "limitation": "갈륨은 GaAs RF/광전자 및 GaN 전력/RF 등 특정 용도와 연결해야 한다. 모든 실리콘 GPU의 직접 핵심 투입물로 일반화하지 않는다. 희토류도 모터/자석/연마/광학 등의 적용 노드로 연결한다.",
+        "signal_class": "구조적 노출/병목 배경; 단독 선행 신호 아님",
+        "test_status": "official_report_and_metadata_review"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "capital"
+    },
+    {
+      "id": "capital-portwatch-seaborne-disruption",
+      "purpose": "반도체 주변 원재료·에너지·중량 설비의 항만/항로 차질이 발생했는지 빠르게 포착하고 직접 공급사/지역 사건으로 확인한다.",
+      "definition": "항만별 일별 portcalls, import/export AIS 추정 톤수 및 선종별 값. 평시 동일 달/요일과의 차이는 정의를 고정한 파생 지표로만 사용한다.",
+      "unit": "선박 입항 건수; 추정 metric tons; 별도로 정의한 기준 대비 변화율",
+      "grain": "portid-date-vessel category",
+      "sources": [
+        "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0"
+      ],
+      "collection": {
+        "method": "공식 공급자 ArcGIS layer metadata의 fields/type/maxRecordCount를 먼저 확인한 뒤 좁은 날짜와 portid로 REST query한다. 서비스명을 tutorial의 다른 예제와 혼용하지 않는다.",
+        "schema_fields": [
+          "date",
+          "year",
+          "month",
+          "day",
+          "portid",
+          "portname",
+          "country",
+          "ISO3",
+          "portcalls_container",
+          "portcalls_dry_bulk",
+          "portcalls_general_cargo",
+          "portcalls_roro",
+          "portcalls_tanker",
+          "portcalls_cargo",
+          "portcalls",
+          "import",
+          "export",
+          "ObjectId"
+        ],
+        "query_template_not_tested": "GET https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid%3D%27port1114%27%20AND%20date%3E%3D%272026-09-01%27%20AND%20date%3C%272026-09-08%27&outFields=date,portid,portcalls,import,export&returnGeometry=false&resultRecordCount=7",
+        "response_fields": [
+          "features[*].attributes",
+          "exceededTransferLimit",
+          "error"
+        ],
+        "syntax_caveat": "query의 date literal/시간형은 실제 fields.type과 ArcGIS 서비스 dialect로 재검증한다. 이 예시는 schema 검토 기반이며 데이터 응답 성공을 주장하지 않는다."
+      },
+      "access_and_free_limits": "공개 metadata 무키. MaxRecordCount=1000 확인; 이것은 하루 호출 한도가 아니다. 명시적 일일 rate limit 미확인. 적은 날짜 범위/선택 fields/캐시를 기본으로 한다.",
+      "cadence_and_lag": "일별 AIS 파생 데이터. 정확한 최신 관찰일/게시 지연/재처리 범위는 매회 실제 데이터와 metadata로 확인해야 한다. 서비스 마지막 수정일과 관찰 최신일은 다르다.",
+      "join_keys": [
+        "portid",
+        "date",
+        "선종",
+        "ISO3",
+        "별도 verified facility/물류 경로 ID"
+      ],
+      "revision_and_cancellation": "AIS 지연, 항만 범위/선종/모형 변경, historical revision을 snapshot으로 보존한다. 최근 날짜를 backfill하고 휴일·날씨·우회항로와 비교한다.",
+      "confounders": "계절성/선박 크기/항로 우회/상하차 상쇄/밸러스트 변화 또는 다른 상품의 운송 감소가 반도체 공급 부족으로 읽히는 오류.",
+      "boundary": "AIS는 상품 HS·회사 고객·순도·반도체 출하개수를 알려주지 않는다. 칩의 항공 이동은 빠져 있어 AI 직접 수요 신호로 사용할 수 없다. 공개 무역값과 특정 항만의 기업 노출 연결은 별도 근거가 필요하다.",
+      "signal_class": "근실시간 물류 차질 보조 신호",
+      "access_test_status": "provider_schema_verified_data_query_not_tested",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "portwatch-seaborne-disruption",
+        "priority": 10,
+        "purpose": "반도체 주변 원재료·에너지·중량 설비의 항만/항로 차질이 발생했는지 빠르게 포착하고 직접 공급사/지역 사건으로 확인한다.",
+        "metric": "항만별 일별 portcalls, import/export AIS 추정 톤수 및 선종별 값. 평시 동일 달/요일과의 차이는 정의를 고정한 파생 지표로만 사용한다.",
+        "unit": "선박 입항 건수; 추정 metric tons; 별도로 정의한 기준 대비 변화율",
+        "grain": "portid-date-vessel category",
+        "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0",
+        "collection_method": {
+          "method": "공식 공급자 ArcGIS layer metadata의 fields/type/maxRecordCount를 먼저 확인한 뒤 좁은 날짜와 portid로 REST query한다. 서비스명을 tutorial의 다른 예제와 혼용하지 않는다.",
+          "schema_fields": [
+            "date",
+            "year",
+            "month",
+            "day",
+            "portid",
+            "portname",
+            "country",
+            "ISO3",
+            "portcalls_container",
+            "portcalls_dry_bulk",
+            "portcalls_general_cargo",
+            "portcalls_roro",
+            "portcalls_tanker",
+            "portcalls_cargo",
+            "portcalls",
+            "import",
+            "export",
+            "ObjectId"
+          ],
+          "query_template_not_tested": "GET https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid%3D%27port1114%27%20AND%20date%3E%3D%272026-09-01%27%20AND%20date%3C%272026-09-08%27&outFields=date,portid,portcalls,import,export&returnGeometry=false&resultRecordCount=7",
+          "response_fields": [
+            "features[*].attributes",
+            "exceededTransferLimit",
+            "error"
+          ],
+          "syntax_caveat": "query의 date literal/시간형은 실제 fields.type과 ArcGIS 서비스 dialect로 재검증한다. 이 예시는 schema 검토 기반이며 데이터 응답 성공을 주장하지 않는다."
+        },
+        "auth/free_limit": "공개 metadata 무키. MaxRecordCount=1000 확인; 이것은 하루 호출 한도가 아니다. 명시적 일일 rate limit 미확인. 적은 날짜 범위/선택 fields/캐시를 기본으로 한다.",
+        "frequency_lag": "일별 AIS 파생 데이터. 정확한 최신 관찰일/게시 지연/재처리 범위는 매회 실제 데이터와 metadata로 확인해야 한다. 서비스 마지막 수정일과 관찰 최신일은 다르다.",
+        "join_keys": [
+          "portid",
+          "date",
+          "선종",
+          "ISO3",
+          "별도 verified facility/물류 경로 ID"
+        ],
+        "event/revision_handling": "AIS 지연, 항만 범위/선종/모형 변경, historical revision을 snapshot으로 보존한다. 최근 날짜를 backfill하고 휴일·날씨·우회항로와 비교한다.",
+        "false_positive": "계절성/선박 크기/항로 우회/상하차 상쇄/밸러스트 변화 또는 다른 상품의 운송 감소가 반도체 공급 부족으로 읽히는 오류.",
+        "limitation": "AIS는 상품 HS·회사 고객·순도·반도체 출하개수를 알려주지 않는다. 칩의 항공 이동은 빠져 있어 AI 직접 수요 신호로 사용할 수 없다. 공개 무역값과 특정 항만의 기업 노출 연결은 별도 근거가 필요하다.",
+        "signal_class": "근실시간 물류 차질 보조 신호",
+        "test_status": "provider_schema_verified_data_query_not_tested"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "capital"
+    },
+    {
+      "id": "power-p1-binding-load",
+      "purpose": "개발사의 관심이 송배전 투자를 뒷받침할 법적·금융 약정으로 진전했는가?",
+      "definition": "동일 유틸리티·계약 체계·기준일에 원문이 signed/binding으로 정의한 신규 ESA/LOA MW. 담보는 현금/신용장/보증/면제/미공개를 별도 필드로 저장한다. 공표된 계약 MW와 실제 담보 금액은 별개다.",
+      "unit": [
+        "MW",
+        "contract_count when public",
+        "USD only when disclosed"
+      ],
+      "grain": "utility legal entity × tariff cohort × observation date; public project ID when disclosed",
+      "sources": [
+        "https://www.aepohio.com/company/news/view?releaseID=10753",
+        "https://www.aepohio.com/company/about/rates/data-center-tariff/"
+      ],
+      "collection": "IR/public utility webpage → filed PDF/manual extraction",
+      "access_and_free_limits": "공개 자료 무인증; private customer portal 불사용",
+      "cadence_and_lag": "사건별 비정기; 예시 기준 2026-02-12/게시 02-13",
+      "join_keys": [
+        "utility_legal_entity_id",
+        "tariff_docket_id",
+        "contract_cohort",
+        "observed_asof",
+        "project_id if public"
+      ],
+      "revision_and_cancellation": "기존 원본 보존; 새계약·수정·철회·legacy 분리. 프로젝트 매칭 없으면 스냅샷 수준과 증감만 표시한다.",
+      "confounders": "구속력 있는 계약이어도 가동까지 여러 해, 재협상·철회·면제가 가능하다.",
+      "boundary": "실제 전력 소비, GPU 이용률, 계약 고객의 현금 입금, AI 업무 비중",
+      "signal_class": "leading",
+      "access_test_status": "Official document or code reviewed; no automatic collector/data API executed.",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "P1_binding_load",
+        "priority": 1,
+        "name": "신규 구속력 있는 전력 서비스 계약 용량과 담보 상태",
+        "signal_type": "leading",
+        "decision_question": "개발사의 관심이 송배전 투자를 뒷받침할 법적·금융 약정으로 진전했는가?",
+        "metric_definition": "동일 유틸리티·계약 체계·기준일에 원문이 signed/binding으로 정의한 신규 ESA/LOA MW. 담보는 현금/신용장/보증/면제/미공개를 별도 필드로 저장한다. 공표된 계약 MW와 실제 담보 금액은 별개다.",
+        "unit": [
+          "MW",
+          "contract_count when public",
+          "USD only when disclosed"
+        ],
+        "grain": "utility legal entity × tariff cohort × observation date; public project ID when disclosed",
+        "earliest_observable_event": "공식 계약 체결·담보 제출 단계 보고 또는 PUC 문서 게시",
+        "source_url": [
+          "https://www.aepohio.com/company/news/view?releaseID=10753",
+          "https://www.aepohio.com/company/about/rates/data-center-tariff/"
+        ],
+        "collection_method": "IR/public utility webpage → filed PDF/manual extraction",
+        "access_auth": "공개 자료 무인증; private customer portal 불사용",
+        "frequency_lag": "사건별 비정기; 예시 기준 2026-02-12/게시 02-13",
+        "join_keys": [
+          "utility_legal_entity_id",
+          "tariff_docket_id",
+          "contract_cohort",
+          "observed_asof",
+          "project_id if public"
+        ],
+        "revision_cancellation_handling": "기존 원본 보존; 새계약·수정·철회·legacy 분리. 프로젝트 매칭 없으면 스냅샷 수준과 증감만 표시한다.",
+        "false_positive": "구속력 있는 계약이어도 가동까지 여러 해, 재협상·철회·면제가 가능하다.",
+        "what_it_cannot_show": "실제 전력 소비, GPU 이용률, 계약 고객의 현금 입금, AI 업무 비중",
+        "money_signal": "계획을 뒷받침하는 약정 강도; cash-flow amount 아님",
+        "evidence_strength": "회사 공식 집계; underlying customer contracts not public"
+      },
+      "collection_tier": "first",
+      "research_origin_group": "power"
+    },
+    {
+      "id": "power-p2-actual-dc-peak",
+      "purpose": "계약·예측이 실제 데이터센터 부하로 나타났는가? 어느 지역의 램프가 늦는가?",
+      "definition": "즉시 자동 수집은 XLS의 annual Historical July Peak MW와 vintage별 Load Forecast July Peak MW이다. 같은 Zone/Year/July-peak 정의에서만 실제−예측을 비교한다. PDF의 DC-filtered actual monthly peak와 average daily peak는 별도 지표이며 월별 원자료를 이 XLS에서 얻을 수 있다고 주장하지 않는다.",
+      "unit": [
+        "MW July peak",
+        "MW forecast_error"
+      ],
+      "grain": "XLS: canonical Zone/EDC/LSE × Year × Metric(peak basis+forecast vintage). PDF monthly DC series: separate scope, exact raw series not obtained.",
+      "sources": [
+        "https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-accuracy-report.xlsx",
+        "https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-load-forecast-accuracy-report.pdf",
+        "https://www.pjm.com/planning/resource-adequacy-planning/load-forecast-dev-process"
+      ],
+      "collection": "public XLSX annual numeric extraction + PDF monthly qualitative review; monthly exact automation deferred until raw values obtained",
+      "access_and_free_limits": "HTTP200 공개 XLS 실제 다운로드/전체 스키마 확인; 계정·키 없음",
+      "cadence_and_lag": "2026-05-29 게시, 역사연간최대2025년(약5개월이상지연); 정기갱신SLA미공개.",
+      "join_keys": [
+        "canonical_zone_id",
+        "edc_lse_id",
+        "year",
+        "metric_raw",
+        "forecast_vintage",
+        "parent_child_scope"
+      ],
+      "revision_and_cancellation": "실적·예측 원본/해시 보존. parentRTO/zone/subzone중복 합계금지, DOMsheet의VEPCO zonealias보존. suppressed/not_reported/absentrow구분,결측0대체금지.",
+      "confounders": "연간 large-load 값은 XLS 자체에 DC 범주 열이 없다. DC전용·월별 실제 사용으로 재명명하면 오판한다. DC전용 그림도 일반 클라우드가 포함될 수 있다.",
+      "boundary": "XLS에서 월별 DC MWh/피크 raw series, AI workload비중, 기업별 전력비·고객 정체. PDF가 가진 범주 구분을 XLS에 임의로 확장하지 않는다.",
+      "signal_class": "coincident/confirmation",
+      "access_test_status": "Public annual XLSX downloaded; all 23 sheets and metric labels inspected. Monthly DC raw series not obtained.",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "P2_actual_dc_peak",
+        "priority": 2,
+        "name": "지역 대형 부하 연간 실제 피크와 별도 데이터센터 월별 검증",
+        "signal_type": "coincident/confirmation",
+        "decision_question": "계약·예측이 실제 데이터센터 부하로 나타났는가? 어느 지역의 램프가 늦는가?",
+        "metric_definition": "즉시 자동 수집은 XLS의 annual Historical July Peak MW와 vintage별 Load Forecast July Peak MW이다. 같은 Zone/Year/July-peak 정의에서만 실제−예측을 비교한다. PDF의 DC-filtered actual monthly peak와 average daily peak는 별도 지표이며 월별 원자료를 이 XLS에서 얻을 수 있다고 주장하지 않는다.",
+        "unit": [
+          "MW July peak",
+          "MW forecast_error"
+        ],
+        "grain": "XLS: canonical Zone/EDC/LSE × Year × Metric(peak basis+forecast vintage). PDF monthly DC series: separate scope, exact raw series not obtained.",
+        "earliest_observable_event": "EDC/LSE가 제출한 운영 자료를 PJM이 공개한 시점",
+        "source_url": [
+          "https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-accuracy-report.xlsx",
+          "https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-load-forecast-accuracy-report.pdf",
+          "https://www.pjm.com/planning/resource-adequacy-planning/load-forecast-dev-process"
+        ],
+        "collection_method": "public XLSX annual numeric extraction + PDF monthly qualitative review; monthly exact automation deferred until raw values obtained",
+        "access_auth": "HTTP200 공개 XLS 실제 다운로드/전체 스키마 확인; 계정·키 없음",
+        "frequency_lag": "2026-05-29 게시, 역사연간최대2025년(약5개월이상지연); 정기갱신SLA미공개.",
+        "join_keys": [
+          "canonical_zone_id",
+          "edc_lse_id",
+          "year",
+          "metric_raw",
+          "forecast_vintage",
+          "parent_child_scope"
+        ],
+        "revision_cancellation_handling": "실적·예측 원본/해시 보존. parentRTO/zone/subzone중복 합계금지, DOMsheet의VEPCO zonealias보존. suppressed/not_reported/absentrow구분,결측0대체금지.",
+        "false_positive": "연간 large-load 값은 XLS 자체에 DC 범주 열이 없다. DC전용·월별 실제 사용으로 재명명하면 오판한다. DC전용 그림도 일반 클라우드가 포함될 수 있다.",
+        "what_it_cannot_show": "XLS에서 월별 DC MWh/피크 raw series, AI workload비중, 기업별 전력비·고객 정체. PDF가 가진 범주 구분을 XLS에 임의로 확장하지 않는다.",
+        "money_signal": "투입 자본이 운영으로 전환됐는지 확인하나 현금 금액은 알 수 없음",
+        "evidence_strength": "공개 운영 기반 연간 역사집계 확인. DC전용 월별 rawseries미확보; annual values labelled according to source."
+      },
+      "collection_tier": "first",
+      "research_origin_group": "power"
+    },
+    {
+      "id": "power-p3-energization-stage",
+      "purpose": "연구와 승인이 실제 접속·운영으로 넘어가고 있는가?",
+      "definition": "source-defined Approved to Energize but not Operational, Observed Energized, observed non-simultaneous peak 등의 원 단위를 분리 수집한다. 승인 용량을 운영 용량에 더하지 않고 단계 간 경과 시간은 동일 ID가 공개될 때만 계산한다.",
+      "unit": [
+        "MW by source stage",
+        "days only for matched projects"
+      ],
+      "grain": "ERCOT × status_asof × source capacity_basis; project when public",
+      "sources": [
+        "https://www.ercot.com/files/docs/2026/04/01/ERCOT_LargeLoad_Update_April2026_B-C_-Hearing.pdf",
+        "https://www.ercot.com/files/docs/2026/02/13/ERCOT-Monthly-January-2026-FINAL.pdf",
+        "https://www.ercot.com/services/rq/large-load-integration"
+      ],
+      "collection": "public meeting/monthly PDF/manual; specific public status API not verified",
+      "access_and_free_limits": "공개 PDF 무인증; RIOO 상세 고객 포털 접근 안 함",
+      "cadence_and_lag": "월간/회의별 공개, 예시 과거 스냅샷. 최신 상태 파일을 허브/회의 목록에서 발견해 날짜를 검증해야 함.",
+      "join_keys": [
+        "operator_id",
+        "status_asof",
+        "stage_raw",
+        "capacity_basis",
+        "project_id if public",
+        "process_rule_version"
+      ],
+      "revision_and_cancellation": "신청 철회·중복정리·연구 재실행을 별도 사건으로 둔다. Batch Zero 전후의 자격/연구 기준 변경은 단절 처리한다.",
+      "confounders": "통전은 부하 램프나 계속 운영을 보장하지 않는다. large loads가 모두 AI/DC가 아니다.",
+      "boundary": "현재 AI 전용 MWh, 매출, 기업별 상세 상태; 비동시 peak 합은 계통 동시 peak가 아님",
+      "signal_class": "leading → confirmation",
+      "access_test_status": "Official document or code reviewed; no automatic collector/data API executed.",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "P3_energization_stage",
+        "priority": 3,
+        "name": "통전 승인과 관측 가동의 단계별 용량",
+        "signal_type": "leading → confirmation",
+        "decision_question": "연구와 승인이 실제 접속·운영으로 넘어가고 있는가?",
+        "metric_definition": "source-defined Approved to Energize but not Operational, Observed Energized, observed non-simultaneous peak 등의 원 단위를 분리 수집한다. 승인 용량을 운영 용량에 더하지 않고 단계 간 경과 시간은 동일 ID가 공개될 때만 계산한다.",
+        "unit": [
+          "MW by source stage",
+          "days only for matched projects"
+        ],
+        "grain": "ERCOT × status_asof × source capacity_basis; project when public",
+        "earliest_observable_event": "공식 monthly/committee update의 통전 승인 또는 관측 가동 공표",
+        "source_url": [
+          "https://www.ercot.com/files/docs/2026/04/01/ERCOT_LargeLoad_Update_April2026_B-C_-Hearing.pdf",
+          "https://www.ercot.com/files/docs/2026/02/13/ERCOT-Monthly-January-2026-FINAL.pdf",
+          "https://www.ercot.com/services/rq/large-load-integration"
+        ],
+        "collection_method": "public meeting/monthly PDF/manual; specific public status API not verified",
+        "access_auth": "공개 PDF 무인증; RIOO 상세 고객 포털 접근 안 함",
+        "frequency_lag": "월간/회의별 공개, 예시 과거 스냅샷. 최신 상태 파일을 허브/회의 목록에서 발견해 날짜를 검증해야 함.",
+        "join_keys": [
+          "operator_id",
+          "status_asof",
+          "stage_raw",
+          "capacity_basis",
+          "project_id if public",
+          "process_rule_version"
+        ],
+        "revision_cancellation_handling": "신청 철회·중복정리·연구 재실행을 별도 사건으로 둔다. Batch Zero 전후의 자격/연구 기준 변경은 단절 처리한다.",
+        "false_positive": "통전은 부하 램프나 계속 운영을 보장하지 않는다. large loads가 모두 AI/DC가 아니다.",
+        "what_it_cannot_show": "현재 AI 전용 MWh, 매출, 기업별 상세 상태; 비동시 peak 합은 계통 동시 peak가 아님",
+        "money_signal": "설치·접속 병목이 운영 전환을 지연시키는지를 보여줌",
+        "evidence_strength": "계통운영자 공개 집계; 시점·정의 변화를 직접 확인해야 함"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "power"
+    },
+    {
+      "id": "power-p4-transmission-service-date",
+      "purpose": "어느 송전·변전 공사가 데이터센터와 장비 매출의 실현 시점을 제한하는가?",
+      "definition": "부하 연구가 필수라고 명시한 regional/local upgrade ID, 승인/설계/착공/준공/통전 사건과 earliest estimated service date를 연결한다. 예정일 수정은 같은 project/cluster/조건에서만 month delta를 계산한다.",
+      "unit": [
+        "date",
+        "months revision",
+        "MW affected if disclosed"
+      ],
+      "grain": "load project/cluster × required transmission project × document vintage",
+      "sources": [
+        "https://www.aepohio.com/lib/docs/ratesandtariffs/ohio/AEP-Ohio_DCT_Load_Study_Letter_25.11.7.pdf",
+        "https://www.aepohio.com/company/about/rates/data-center-tariff/",
+        "https://www.pjm.com/planning/resource-adequacy-planning/load-forecast-dev-process"
+      ],
+      "collection": "original PDF/manual milestone extraction; linked operator/PUC documents where public",
+      "access_and_free_limits": "공개 파일 무인증; 개별 부지 상세 문서가 비공개이면 연결 보류",
+      "cadence_and_lag": "계획/승인/공사 사건별; 정기 SLA 없음",
+      "join_keys": [
+        "transmission_project_id",
+        "cluster_id",
+        "load_project_id if public",
+        "utility_id",
+        "service_condition",
+        "document_vintage"
+      ],
+      "revision_and_cancellation": "당초/수정 날짜 모두 유지, alternate/equivalent project는 원 ID 덮어쓰기 금지. 취소된 부하/공사·조건부 일정 구분.",
+      "confounders": "계획상 송전 준공만으로 충분한 발전·연료·DC 설비 또는 GPU 설치가 확인되지 않는다.",
+      "boundary": "실제 가동일 보장, 특정 고객 계약금·전력 가격",
+      "signal_class": "leading/bottleneck",
+      "access_test_status": "Official document or code reviewed; no automatic collector/data API executed.",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "P4_transmission_service_date",
+        "priority": 4,
+        "name": "필수 송전 공사와 최초 서비스 가능 날짜의 수정",
+        "signal_type": "leading/bottleneck",
+        "decision_question": "어느 송전·변전 공사가 데이터센터와 장비 매출의 실현 시점을 제한하는가?",
+        "metric_definition": "부하 연구가 필수라고 명시한 regional/local upgrade ID, 승인/설계/착공/준공/통전 사건과 earliest estimated service date를 연결한다. 예정일 수정은 같은 project/cluster/조건에서만 month delta를 계산한다.",
+        "unit": [
+          "date",
+          "months revision",
+          "MW affected if disclosed"
+        ],
+        "grain": "load project/cluster × required transmission project × document vintage",
+        "earliest_observable_event": "load study letter, PJM 지역 계획 또는 공공 승인 문서에 필수 조건과 예상 서비스 날짜가 명시된 시점",
+        "source_url": [
+          "https://www.aepohio.com/lib/docs/ratesandtariffs/ohio/AEP-Ohio_DCT_Load_Study_Letter_25.11.7.pdf",
+          "https://www.aepohio.com/company/about/rates/data-center-tariff/",
+          "https://www.pjm.com/planning/resource-adequacy-planning/load-forecast-dev-process"
+        ],
+        "collection_method": "original PDF/manual milestone extraction; linked operator/PUC documents where public",
+        "access_auth": "공개 파일 무인증; 개별 부지 상세 문서가 비공개이면 연결 보류",
+        "frequency_lag": "계획/승인/공사 사건별; 정기 SLA 없음",
+        "join_keys": [
+          "transmission_project_id",
+          "cluster_id",
+          "load_project_id if public",
+          "utility_id",
+          "service_condition",
+          "document_vintage"
+        ],
+        "revision_cancellation_handling": "당초/수정 날짜 모두 유지, alternate/equivalent project는 원 ID 덮어쓰기 금지. 취소된 부하/공사·조건부 일정 구분.",
+        "false_positive": "계획상 송전 준공만으로 충분한 발전·연료·DC 설비 또는 GPU 설치가 확인되지 않는다.",
+        "what_it_cannot_show": "실제 가동일 보장, 특정 고객 계약금·전력 가격",
+        "money_signal": "계통 capex와 DC/냉각/변압기 인도 일정의 공통 병목",
+        "evidence_strength": "AEP 2025-11-07 연구 원문 조건 확인; 실제 해당 공사의 현재 준공 상태는 이 연구만으로 확인 불가"
+      },
+      "collection_tier": "first",
+      "research_origin_group": "power"
+    },
+    {
+      "id": "power-p5-supply-realization-eia",
+      "purpose": "연계 계획·PPA를 뒷받침할 발전소가 실제 전력 공급으로 전환되는가?",
+      "definition": "EIA860M proposed/planned→operating 상태 및 계획 운전 월을 월별 원본으로 추적하고 EIA923 plant×prime-mover×fuel 월별 net generation MWh로 공급을 확인한다. generator 단위 923이 제공되는 경우만 generator ID로 연결한다.",
+      "unit": [
+        "MW nameplate",
+        "in_service_month",
+        "MWh net generation"
+      ],
+      "grain": "EIA plant_id × generator_id for860M; plant_id × prime_mover × fuel × month for923",
+      "sources": [
+        "https://www.eia.gov/electricity/data/eia860m/",
+        "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "https://www.eia.gov/electricity/data/eia923/",
+        "https://www.eia.gov/electricity/data/eia923/xls/f923_2026.zip"
+      ],
+      "collection": "public monthly XLSX/ZIP files; API key unnecessary for these files",
+      "access_and_free_limits": "EIA860M 공개 파일 HTTP200 실제 다운로드, Plant ID/Generator ID/Status/운전·계획월/MW·좌표 열 확인. EIA923 공개 ZIP 링크는 확인하였으나 내부 미검사; 계정·키 불필요.",
+      "cadence_and_lag": "860M: 2026-08 자료 공개09-24(약1개월). 923: 페이지 상단 June2026과 ZIP 라벨 July2026 불일치; 내부 파일 월 확인 전 최신 월 미확정. 보통 관측 후 공개까지 지연.",
+      "join_keys": [
+        "eia_plant_id",
+        "generator_id where available",
+        "prime_mover",
+        "energy_source_code",
+        "month",
+        "release_vintage"
+      ],
+      "revision_and_cancellation": "860M 예비 추정은 설명 없이 수정될 수 있어 월별 원본/해시 보존. 923 preliminary/final과 release revision 분리, 월간 보고 표본과 연간 전체 표본 차이 보존.",
+      "confounders": "정격 MW는 사용 가능한 확정 capacity/firm power가 아니다. 발전소 생산 증가는 날씨·정비·가격에도 반응한다.",
+      "boundary": "특정 AI 고객의 물리적/계약상 소비량, PPA 현금수납, behind-the-meter 미보고 소형 설비 전수",
+      "signal_class": "leading → confirmation",
+      "access_test_status": "EIA860M August 2026 XLSX downloaded and 7-sheet schema inspected; EIA923 links/metadata only, internal data period unverified.",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "P5_supply_realization_eia",
+        "priority": 5,
+        "name": "발전 프로젝트 운영 전환과 실제 발전량",
+        "signal_type": "leading → confirmation",
+        "decision_question": "연계 계획·PPA를 뒷받침할 발전소가 실제 전력 공급으로 전환되는가?",
+        "metric_definition": "EIA860M proposed/planned→operating 상태 및 계획 운전 월을 월별 원본으로 추적하고 EIA923 plant×prime-mover×fuel 월별 net generation MWh로 공급을 확인한다. generator 단위 923이 제공되는 경우만 generator ID로 연결한다.",
+        "unit": [
+          "MW nameplate",
+          "in_service_month",
+          "MWh net generation"
+        ],
+        "grain": "EIA plant_id × generator_id for860M; plant_id × prime_mover × fuel × month for923",
+        "earliest_observable_event": "860M 상태/운전일 보고 이후 923 발전량 공개",
+        "source_url": [
+          "https://www.eia.gov/electricity/data/eia860m/",
+          "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+          "https://www.eia.gov/electricity/data/eia923/",
+          "https://www.eia.gov/electricity/data/eia923/xls/f923_2026.zip"
+        ],
+        "collection_method": "public monthly XLSX/ZIP files; API key unnecessary for these files",
+        "access_auth": "EIA860M 공개 파일 HTTP200 실제 다운로드, Plant ID/Generator ID/Status/운전·계획월/MW·좌표 열 확인. EIA923 공개 ZIP 링크는 확인하였으나 내부 미검사; 계정·키 불필요.",
+        "frequency_lag": "860M: 2026-08 자료 공개09-24(약1개월). 923: 페이지 상단 June2026과 ZIP 라벨 July2026 불일치; 내부 파일 월 확인 전 최신 월 미확정. 보통 관측 후 공개까지 지연.",
+        "join_keys": [
+          "eia_plant_id",
+          "generator_id where available",
+          "prime_mover",
+          "energy_source_code",
+          "month",
+          "release_vintage"
+        ],
+        "revision_cancellation_handling": "860M 예비 추정은 설명 없이 수정될 수 있어 월별 원본/해시 보존. 923 preliminary/final과 release revision 분리, 월간 보고 표본과 연간 전체 표본 차이 보존.",
+        "false_positive": "정격 MW는 사용 가능한 확정 capacity/firm power가 아니다. 발전소 생산 증가는 날씨·정비·가격에도 반응한다.",
+        "what_it_cannot_show": "특정 AI 고객의 물리적/계약상 소비량, PPA 현금수납, behind-the-meter 미보고 소형 설비 전수",
+        "money_signal": "발전투자가 실제 공급 자산·생산으로 전환됐는지 확인",
+        "evidence_strength": "정부 운영/추정·발전 보고자료; 수요 고객 attribution 없음",
+        "schema_warning": "860M Operating tab에도 (SB) standby/backup이 존재하므로 원문Status필터필요. DC Net Capacity (MW)는 direct-current값이고 데이터센터지표가 아니다. Operating/Planned/Retired와PuertoRico 시트분리."
+      },
+      "collection_tier": "first",
+      "research_origin_group": "power"
+    },
+    {
+      "id": "power-p6-paid-load-study",
+      "purpose": "비용 없는 관심표명 가운데 어떤 계획이 비용을 부담하는 검토 단계에 진입했는가?",
+      "definition": "요청 용량과 asked-and-paid-for-study 용량, site count를 각각 source cohort/asof로 수집한다. 실제 연구비 달러액은 공표될 때만 수집하고 요청→납부 비율은 개별 cohort가 확인될 때만 산출한다.",
+      "unit": [
+        "MW",
+        "site_count",
+        "USD fees if disclosed"
+      ],
+      "grain": "utility legal entity × tariff study tranche × application deadline × document date",
+      "sources": [
+        "https://www.aepohio.com/company/news/view?releaseID=10753",
+        "https://www.aepohio.com/lib/docs/ratesandtariffs/ohio/AEP-Ohio_DCT_Load_Study_Letter_25.11.7.pdf"
+      ],
+      "collection": "public utility IR/manual PDF extraction",
+      "access_and_free_limits": "공개 자료 무인증; PowerClerk 신청 불필요",
+      "cadence_and_lag": "study tranche/letter 사건별; 예시 접수마감2025-09-08, 연구letter11-07",
+      "join_keys": [
+        "utility_id",
+        "study_tranche_id",
+        "deadline",
+        "document_date",
+        "project_id if public"
+      ],
+      "revision_and_cancellation": "다중 입지 신청·용량 변경·기간 만료·재신청 구분. 공개 aggregate는 매칭 cohort가 없어 conversion ratio 계산 금지.",
+      "confounders": "연구비 납부는 대규모 총투자 대비 작으며 복수 후보 입지의 옵션일 수 있다.",
+      "boundary": "최종 계약, 프로젝트별 연구비 원화/달러 총액, 실제 AI 장비·전력 사용",
+      "signal_class": "leading",
+      "access_test_status": "Official document or code reviewed; no automatic collector/data API executed.",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "P6_paid_load_study",
+        "priority": 6,
+        "name": "연구비 납부 단계의 데이터센터 신청 용량",
+        "signal_type": "leading",
+        "decision_question": "비용 없는 관심표명 가운데 어떤 계획이 비용을 부담하는 검토 단계에 진입했는가?",
+        "metric_definition": "요청 용량과 asked-and-paid-for-study 용량, site count를 각각 source cohort/asof로 수집한다. 실제 연구비 달러액은 공표될 때만 수집하고 요청→납부 비율은 개별 cohort가 확인될 때만 산출한다.",
+        "unit": [
+          "MW",
+          "site_count",
+          "USD fees if disclosed"
+        ],
+        "grain": "utility legal entity × tariff study tranche × application deadline × document date",
+        "earliest_observable_event": "연구비 납부 또는 연구 배치 규모 공표",
+        "source_url": [
+          "https://www.aepohio.com/company/news/view?releaseID=10753",
+          "https://www.aepohio.com/lib/docs/ratesandtariffs/ohio/AEP-Ohio_DCT_Load_Study_Letter_25.11.7.pdf"
+        ],
+        "collection_method": "public utility IR/manual PDF extraction",
+        "access_auth": "공개 자료 무인증; PowerClerk 신청 불필요",
+        "frequency_lag": "study tranche/letter 사건별; 예시 접수마감2025-09-08, 연구letter11-07",
+        "join_keys": [
+          "utility_id",
+          "study_tranche_id",
+          "deadline",
+          "document_date",
+          "project_id if public"
+        ],
+        "revision_cancellation_handling": "다중 입지 신청·용량 변경·기간 만료·재신청 구분. 공개 aggregate는 매칭 cohort가 없어 conversion ratio 계산 금지.",
+        "false_positive": "연구비 납부는 대규모 총투자 대비 작으며 복수 후보 입지의 옵션일 수 있다.",
+        "what_it_cannot_show": "최종 계약, 프로젝트별 연구비 원화/달러 총액, 실제 AI 장비·전력 사용",
+        "money_signal": "소액 비용 부담 의사; 담보·건설 capex·현금수납과 별개",
+        "evidence_strength": "회사 연구 원문과 공식 발표"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "power"
+    },
+    {
+      "id": "power-p7-forecast-vintage",
+      "purpose": "어느 지역의 계획 신뢰도와 예상 램프가 바뀌고 그 이유는 계약·규제·지연 중 무엇인가?",
+      "definition": "동일 zone/target year/season/definition의 DC/large-load adjustments를 forecast vintage별 보존하여 MW revision을 계산한다. 정보용 중간 갱신은 확정 capacity obligation forecast와 분리한다.",
+      "unit": [
+        "MW forecast_revision"
+      ],
+      "grain": "PJM zone/EDC/LSE × target month/year × forecast vintage × load category",
+      "sources": [
+        "https://www.pjm.com/planning/resource-adequacy-planning/load-forecast-dev-process",
+        "https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-mid-year-update-informational-only.xlsx"
+      ],
+      "collection": "public XLS/PDF files; manual document explanation",
+      "access_and_free_limits": "파일 링크 공개; 본 benchmark에서 mid-year XLS contents 미검사",
+      "cadence_and_lag": "연간 및 비정기 중간판. 허브2026mid-year게시07-24; 미래 target와게시날짜분리.",
+      "join_keys": [
+        "zone_id",
+        "edc_lse_id",
+        "forecast_vintage",
+        "target_period",
+        "category",
+        "capacity_basis"
+      ],
+      "revision_and_cancellation": "모형 변경·연계 기준 변경·신규 고객·지연/취소 원인을 구분한다. 기준이 달라지면 단순 증감 비교 보류.",
+      "confounders": "예측 상향은 수요 실현이 아니라 모형·가정 변경 또는 중복 계획 반영일 수 있다.",
+      "boundary": "현재 전력 소비·현재 확정 계약·시설별 물리 사용",
+      "signal_class": "leading/context",
+      "access_test_status": "Official document or code reviewed; no automatic collector/data API executed.",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "P7_forecast_vintage",
+        "priority": 7,
+        "name": "지역 데이터센터 부하 예측의 수정과 원인",
+        "signal_type": "leading/context",
+        "decision_question": "어느 지역의 계획 신뢰도와 예상 램프가 바뀌고 그 이유는 계약·규제·지연 중 무엇인가?",
+        "metric_definition": "동일 zone/target year/season/definition의 DC/large-load adjustments를 forecast vintage별 보존하여 MW revision을 계산한다. 정보용 중간 갱신은 확정 capacity obligation forecast와 분리한다.",
+        "unit": [
+          "MW forecast_revision"
+        ],
+        "grain": "PJM zone/EDC/LSE × target month/year × forecast vintage × load category",
+        "earliest_observable_event": "공식 annual forecast, utility adjustment documentation, mid-year informational update 게시",
+        "source_url": [
+          "https://www.pjm.com/planning/resource-adequacy-planning/load-forecast-dev-process",
+          "https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-mid-year-update-informational-only.xlsx"
+        ],
+        "collection_method": "public XLS/PDF files; manual document explanation",
+        "access_auth": "파일 링크 공개; 본 benchmark에서 mid-year XLS contents 미검사",
+        "frequency_lag": "연간 및 비정기 중간판. 허브2026mid-year게시07-24; 미래 target와게시날짜분리.",
+        "join_keys": [
+          "zone_id",
+          "edc_lse_id",
+          "forecast_vintage",
+          "target_period",
+          "category",
+          "capacity_basis"
+        ],
+        "revision_cancellation_handling": "모형 변경·연계 기준 변경·신규 고객·지연/취소 원인을 구분한다. 기준이 달라지면 단순 증감 비교 보류.",
+        "false_positive": "예측 상향은 수요 실현이 아니라 모형·가정 변경 또는 중복 계획 반영일 수 있다.",
+        "what_it_cannot_show": "현재 전력 소비·현재 확정 계약·시설별 물리 사용",
+        "money_signal": "계통 투자 계획이 반응하는 입력 신호; actual cash 아님",
+        "evidence_strength": "공식 forecast; 실측 레이어와 구분"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "power"
+    },
+    {
+      "id": "power-p8-named-equipment-order",
+      "purpose": "데이터센터 투자 계획이 어느 공급자의 실제 주문과 현장 인도로 연결되는가?",
+      "definition": "고객/부지/공급자/제품이 공식 공개된 order/contract/delivery/installation/acceptance 이벤트별 금액·대수·MW-equivalent·날짜를 수집한다. 총 backlog에 임의 AI 비중을 곱하지 않는다.",
+      "unit": [
+        "USD contract if disclosed",
+        "units",
+        "MW of supported power if specifically stated",
+        "delivery_date"
+      ],
+      "grain": "named customer × supplier × product × site × contract or event",
+      "sources": [
+        "https://www.gevernova.com/news/press-releases",
+        "https://www.vertiv.com/en-us/about/news-and-insights/news-releases/"
+      ],
+      "collection": "IR/official press release/manual; use existing confirmed company-map relation URLs",
+      "access_and_free_limits": "공개 IR 무인증; 상용 order database 없음",
+      "cadence_and_lag": "사건별·분기 IR; 개별 주문은 선택적 공시라 실시간 시장 전체 수요 아님",
+      "join_keys": [
+        "supplier_legal_entity_id",
+        "customer_legal_entity_id",
+        "site_id",
+        "product_id",
+        "contract_id if public",
+        "event_date"
+      ],
+      "revision_and_cancellation": "설계 partnership/order/delivery/acceptance 분리; 발표 중복과 계약총액의 기간 분할을 관리. 취소·옵션·인도 연장 원문을 별도 저장.",
+      "confounders": "파트너십이나 제품 호환 인증은 주문이 아니다. 주문도 취소·램프 지연·대체부지 이동 가능.",
+      "boundary": "모든 공급자 주문·현재 AI 업무 이용량·고객 실제 현금 지급 일정",
+      "signal_class": "leading → confirmation",
+      "access_test_status": "Official document or code reviewed; no automatic collector/data API executed.",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "P8_named_equipment_order",
+        "priority": 8,
+        "name": "명명된 데이터센터 전력·냉각 장비 발주와 인도 단계",
+        "signal_type": "leading → confirmation",
+        "decision_question": "데이터센터 투자 계획이 어느 공급자의 실제 주문과 현장 인도로 연결되는가?",
+        "metric_definition": "고객/부지/공급자/제품이 공식 공개된 order/contract/delivery/installation/acceptance 이벤트별 금액·대수·MW-equivalent·날짜를 수집한다. 총 backlog에 임의 AI 비중을 곱하지 않는다.",
+        "unit": [
+          "USD contract if disclosed",
+          "units",
+          "MW of supported power if specifically stated",
+          "delivery_date"
+        ],
+        "grain": "named customer × supplier × product × site × contract or event",
+        "earliest_observable_event": "공식 발주/계약 체결 공표; 확정 수주, 협력 설계와 framework agreement는 따로",
+        "source_url": [
+          "https://www.gevernova.com/news/press-releases",
+          "https://www.vertiv.com/en-us/about/news-and-insights/news-releases/"
+        ],
+        "collection_method": "IR/official press release/manual; use existing confirmed company-map relation URLs",
+        "access_auth": "공개 IR 무인증; 상용 order database 없음",
+        "frequency_lag": "사건별·분기 IR; 개별 주문은 선택적 공시라 실시간 시장 전체 수요 아님",
+        "join_keys": [
+          "supplier_legal_entity_id",
+          "customer_legal_entity_id",
+          "site_id",
+          "product_id",
+          "contract_id if public",
+          "event_date"
+        ],
+        "revision_cancellation_handling": "설계 partnership/order/delivery/acceptance 분리; 발표 중복과 계약총액의 기간 분할을 관리. 취소·옵션·인도 연장 원문을 별도 저장.",
+        "false_positive": "파트너십이나 제품 호환 인증은 주문이 아니다. 주문도 취소·램프 지연·대체부지 이동 가능.",
+        "what_it_cannot_show": "모든 공급자 주문·현재 AI 업무 이용량·고객 실제 현금 지급 일정",
+        "money_signal": "발표된 공급 계약·발주액. 현금 지급/매출 인식은 해당 증거가 있을 때만.",
+        "evidence_strength": "기존 회사관계 파일의 확인된 원문을 우선 재사용; broad IR landing은 갱신 허브이고 자체로 특정 주문 증거가 아님"
+      },
+      "collection_tier": "first",
+      "research_origin_group": "power"
+    },
+    {
+      "id": "power-p9-grid-baseload-proxy",
+      "purpose": "새 대형 부하가 들어오는 지역에서 실제 전력 수요의 구조가 변하고 있는가?",
+      "definition": "ISO actual load 5분/시간구간을 가져와 UTC와 원시간대를 보존한다. 날씨·계절·휴일·기타산업을 통제한 모델을 별도로 검증한 후 잔차를 탐색 신호로만 사용한다. 잔차를 DC MW로 이름 붙이지 않는다.",
+      "unit": [
+        "MW",
+        "MWh only from interval integration with correct duration"
+      ],
+      "grain": "ISO/BA/load area × interval_start_utc × interval_end_utc × published_at",
+      "sources": [
+        "https://portal.spp.org/pages/stlf-vs-actual",
+        "https://portal.spp.org/pages/mtlf-vs-actual",
+        "https://github.com/gridstatus/gridstatus/blob/main/gridstatus/spp.py"
+      ],
+      "collection": "public ISO files via OSS adapter; main load retrieval code reviewed but not executed",
+      "access_and_free_limits": "선택 SPP 경로는 공개; hosted GridStatus key API와 분리. ISO별 auth 재검증 필요.",
+      "cadence_and_lag": "SPP STLF actual은5분, MTLF는시간구간 및PublishTime. 실제 게시 지연·온라인 보존 기간은 collection 실행 시 검증.",
+      "join_keys": [
+        "iso_id",
+        "ba_or_area_id",
+        "interval_start_utc",
+        "interval_end_utc",
+        "source_timezone",
+        "publish_time",
+        "adapter_version"
+      ],
+      "revision_and_cancellation": "late/corrected values와forecastissuetime보존. DST 중복·누락시간/UTCoffset을 관리. source schema 변경 시 quarantine.",
+      "confounders": "기온·제조업·전기차·암호화폐·behind-the-meter·지역경계 변화가 같은 움직임을 만들 수 있다.",
+      "boundary": "AI/DC 직접 수요 또는 개별 고객 수요와 돈의 흐름",
+      "signal_class": "coincident/proxy",
+      "access_test_status": "Official document or code reviewed; no automatic collector/data API executed.",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "P9_grid_baseload_proxy",
+        "priority": 9,
+        "name": "지역 실시간 실제 부하와 예측 잔차",
+        "signal_type": "coincident/proxy",
+        "decision_question": "새 대형 부하가 들어오는 지역에서 실제 전력 수요의 구조가 변하고 있는가?",
+        "metric_definition": "ISO actual load 5분/시간구간을 가져와 UTC와 원시간대를 보존한다. 날씨·계절·휴일·기타산업을 통제한 모델을 별도로 검증한 후 잔차를 탐색 신호로만 사용한다. 잔차를 DC MW로 이름 붙이지 않는다.",
+        "unit": [
+          "MW",
+          "MWh only from interval integration with correct duration"
+        ],
+        "grain": "ISO/BA/load area × interval_start_utc × interval_end_utc × published_at",
+        "earliest_observable_event": "계통운영자 실제 부하 파일 게시",
+        "source_url": [
+          "https://portal.spp.org/pages/stlf-vs-actual",
+          "https://portal.spp.org/pages/mtlf-vs-actual",
+          "https://github.com/gridstatus/gridstatus/blob/main/gridstatus/spp.py"
+        ],
+        "collection_method": "public ISO files via OSS adapter; main load retrieval code reviewed but not executed",
+        "access_auth": "선택 SPP 경로는 공개; hosted GridStatus key API와 분리. ISO별 auth 재검증 필요.",
+        "frequency_lag": "SPP STLF actual은5분, MTLF는시간구간 및PublishTime. 실제 게시 지연·온라인 보존 기간은 collection 실행 시 검증.",
+        "join_keys": [
+          "iso_id",
+          "ba_or_area_id",
+          "interval_start_utc",
+          "interval_end_utc",
+          "source_timezone",
+          "publish_time",
+          "adapter_version"
+        ],
+        "revision_cancellation_handling": "late/corrected values와forecastissuetime보존. DST 중복·누락시간/UTCoffset을 관리. source schema 변경 시 quarantine.",
+        "false_positive": "기온·제조업·전기차·암호화폐·behind-the-meter·지역경계 변화가 같은 움직임을 만들 수 있다.",
+        "what_it_cannot_show": "AI/DC 직접 수요 또는 개별 고객 수요와 돈의 흐름",
+        "money_signal": "실제 수요 확인의 보조; 비용/매출 추정은 별도 가격·계약 증거 필요",
+        "evidence_strength": "실제 aggregate load; DC attribution은 추정"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "power"
+    },
+    {
+      "id": "power-p10-generation-queue",
+      "purpose": "전력 공급 후보가 어느 지역에서 정체되거나 상업운전으로 실현되고 있는가?",
+      "definition": "사업별 generation interconnection request/IA/COD/withdrawal 용량과 날짜. 같은 entry cohort의 완료/철회/active을 관측 종료일과 함께 계산한다. storage MW와MWh duration은 따로 보존하고 hybrid project 중복 관리.",
+      "unit": [
+        "MW",
+        "MWh storage when supplied",
+        "days elapsed",
+        "cohort counts"
+      ],
+      "grain": "operator × queue_project_id × technology/component × snapshot_asof",
+      "sources": [
+        "https://emp.lbl.gov/publications/queued-2026-edition-characteristics",
+        "https://emp.lbl.gov/queues"
+      ],
+      "collection": "annual public XLSX/codebook; operators original queue data for higher cadence when separately verified",
+      "access_and_free_limits": "공개 파일 무인증; 본 benchmark에서 download 존재 확인만, workbook rows 미검사",
+      "cadence_and_lag": "2026-05 edition의 latest observation은2025-12-31. annual lag; 운영자원본빈도는기관별상이.",
+      "join_keys": [
+        "operator_id",
+        "queue_id",
+        "project_id",
+        "component_type",
+        "entry_date",
+        "snapshot_asof",
+        "eia_plant_id only when independently matched"
+      ],
+      "revision_and_cancellation": "active right-censor 처리; 실제 COD 완료사업만의 소요기간을 open project에 적용하지 않음. 재접수·withdrawal·중복hybrid용량관리.",
+      "confounders": "신청과 IA는 공급 가능 확정이나 발전을 보장하지 않는다. 정격 MW가 firm power/동시 공급을 의미하지 않는다.",
+      "boundary": "DC load queue·AI 구매 수요·특정 PPA 고객의 소비",
+      "signal_class": "leading/supply",
+      "access_test_status": "Official document or code reviewed; no automatic collector/data API executed.",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "P10_generation_queue",
+        "priority": 10,
+        "name": "지역 발전·저장 공급 후보의 단계와 지연/철회",
+        "signal_type": "leading/supply",
+        "decision_question": "전력 공급 후보가 어느 지역에서 정체되거나 상업운전으로 실현되고 있는가?",
+        "metric_definition": "사업별 generation interconnection request/IA/COD/withdrawal 용량과 날짜. 같은 entry cohort의 완료/철회/active을 관측 종료일과 함께 계산한다. storage MW와MWh duration은 따로 보존하고 hybrid project 중복 관리.",
+        "unit": [
+          "MW",
+          "MWh storage when supplied",
+          "days elapsed",
+          "cohort counts"
+        ],
+        "grain": "operator × queue_project_id × technology/component × snapshot_asof",
+        "earliest_observable_event": "공개 queue entry/update; IA/withdrawal/COD 기록",
+        "source_url": [
+          "https://emp.lbl.gov/publications/queued-2026-edition-characteristics",
+          "https://emp.lbl.gov/queues"
+        ],
+        "collection_method": "annual public XLSX/codebook; operators original queue data for higher cadence when separately verified",
+        "access_auth": "공개 파일 무인증; 본 benchmark에서 download 존재 확인만, workbook rows 미검사",
+        "frequency_lag": "2026-05 edition의 latest observation은2025-12-31. annual lag; 운영자원본빈도는기관별상이.",
+        "join_keys": [
+          "operator_id",
+          "queue_id",
+          "project_id",
+          "component_type",
+          "entry_date",
+          "snapshot_asof",
+          "eia_plant_id only when independently matched"
+        ],
+        "revision_cancellation_handling": "active right-censor 처리; 실제 COD 완료사업만의 소요기간을 open project에 적용하지 않음. 재접수·withdrawal·중복hybrid용량관리.",
+        "false_positive": "신청과 IA는 공급 가능 확정이나 발전을 보장하지 않는다. 정격 MW가 firm power/동시 공급을 의미하지 않는다.",
+        "what_it_cannot_show": "DC load queue·AI 구매 수요·특정 PPA 고객의 소비",
+        "money_signal": "발전/저장 개발 투자 후보와 병목; 현금집행액은 아님",
+        "evidence_strength": "발전 공급의 관측 queue histories; 수요 예측에 직접 합산 금지"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "power"
+    },
+    {
+      "id": "industry-ai-observed-token-usage",
+      "purpose": "Check whether model/app usage is growing before attributing announced infrastructure to final customer demand",
+      "definition": "Daily public tokens by model variant and application requests where supplied; compare complete matching 7/30-day windows",
+      "unit": "tokens and requests, separately",
+      "grain": "UTC day × model_permaslug × exact filter set; app windows separate",
+      "sources": [
+        "https://openrouter.ai/docs/api/api-reference/datasets/daily-token-totals-for-top-50-models"
+      ],
+      "collection": "GET https://openrouter.ai/api/v1/datasets/rankings-daily with Authorization Bearer; retain data.date/model_permaslug/total_tokens and meta.as_of/start_date/end_date/version. Public rankings provide manual fallback.",
+      "access_and_free_limits": "Key needed; 30 requests/min/key, 500 requests/day/account; API fee not explicit in reviewed docs",
+      "cadence_and_lag": "Daily completed UTC buckets; use meta.as_of rather than retrieval date",
+      "join_keys": [
+        "model_permaslug",
+        "UTC date",
+        "modality",
+        "context_bucket",
+        "source version"
+      ],
+      "revision_and_cancellation": "Append snapshots. Missing top-50 model is censored, not zero; preserve other. Model names/variants and pricing may change.",
+      "confounders": "Discounts, free variants, tokenizer and reasoning-token mix; sampled category expansion; new-model launch substitution",
+      "boundary": "Tokens are not spend or accelerator utilization. Cross-provider tokens are not computationally comparable. Category/language filters are weekly sampled estimates and may include traffic beyond end_date.",
+      "signal_class": "observed usage confirmation",
+      "access_test_status": "documentation reviewed; public page viewed; API untested",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "ai-observed-token-usage",
+        "purpose": "Check whether model/app usage is growing before attributing announced infrastructure to final customer demand",
+        "metric": "Daily public tokens by model variant and application requests where supplied; compare complete matching 7/30-day windows",
+        "unit": "tokens and requests, separately",
+        "grain": "UTC day × model_permaslug × exact filter set; app windows separate",
+        "source_url": "https://openrouter.ai/docs/api/api-reference/datasets/daily-token-totals-for-top-50-models",
+        "collection_method": "GET https://openrouter.ai/api/v1/datasets/rankings-daily with Authorization Bearer; retain data.date/model_permaslug/total_tokens and meta.as_of/start_date/end_date/version. Public rankings provide manual fallback.",
+        "auth_free_limit": "Key needed; 30 requests/min/key, 500 requests/day/account; API fee not explicit in reviewed docs",
+        "frequency_lag": "Daily completed UTC buckets; use meta.as_of rather than retrieval date",
+        "join_keys": [
+          "model_permaslug",
+          "UTC date",
+          "modality",
+          "context_bucket",
+          "source version"
+        ],
+        "fields": [
+          "date",
+          "model_permaslug",
+          "total_tokens",
+          "meta.as_of",
+          "meta.version"
+        ],
+        "revision_handling": "Append snapshots. Missing top-50 model is censored, not zero; preserve other. Model names/variants and pricing may change.",
+        "false_positive": "Discounts, free variants, tokenizer and reasoning-token mix; sampled category expansion; new-model launch substitution",
+        "limitation": "Tokens are not spend or accelerator utilization. Cross-provider tokens are not computationally comparable. Category/language filters are weekly sampled estimates and may include traffic beyond end_date.",
+        "classification": "observed usage confirmation",
+        "priority": "P1",
+        "access_status": "documentation reviewed; public page viewed; API untested"
+      },
+      "collection_tier": "first",
+      "research_origin_group": "industry"
+    },
+    {
+      "id": "industry-ai-session-spend",
+      "purpose": "Track spending intensity for a fixed actual AI workflow",
+      "definition": "Median session USD spend within the same published harness/model/turn range",
+      "unit": "USD/session median",
+      "grain": "application × model × turn_range × source snapshot window",
+      "sources": [
+        "https://openrouter.ai/docs/api/api-reference/datasets/cost-per-session-by-harness-and-model"
+      ],
+      "collection": "GET https://openrouter.ai/api/v1/datasets/session-cost; filter app_slug/model/turn_range; retain median_session_cost_usd and meta.window_days/window_end_date/as_of/version",
+      "access_and_free_limits": "Bearer key; API fee and endpoint-specific quota not explicitly established",
+      "cadence_and_lag": "Weekly refreshed rolling snapshot",
+      "join_keys": [
+        "app_slug",
+        "model_permaslug",
+        "turn_range",
+        "window_end_date"
+      ],
+      "revision_and_cancellation": "Append full snapshots; compare same scope/window length only",
+      "confounders": "Price promotions, conversation-length selection, model substitution and median hiding heavy users",
+      "boundary": "No total paid spending or final enterprise monetization from median alone; do not multiply by unrelated request/session counts",
+      "signal_class": "workflow spending confirmation",
+      "access_test_status": "documentation reviewed; API untested",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "ai-session-spend",
+        "purpose": "Track spending intensity for a fixed actual AI workflow",
+        "metric": "Median session USD spend within the same published harness/model/turn range",
+        "unit": "USD/session median",
+        "grain": "application × model × turn_range × source snapshot window",
+        "source_url": "https://openrouter.ai/docs/api/api-reference/datasets/cost-per-session-by-harness-and-model",
+        "collection_method": "GET https://openrouter.ai/api/v1/datasets/session-cost; filter app_slug/model/turn_range; retain median_session_cost_usd and meta.window_days/window_end_date/as_of/version",
+        "auth_free_limit": "Bearer key; API fee and endpoint-specific quota not explicitly established",
+        "frequency_lag": "Weekly refreshed rolling snapshot",
+        "join_keys": [
+          "app_slug",
+          "model_permaslug",
+          "turn_range",
+          "window_end_date"
+        ],
+        "revision_handling": "Append full snapshots; compare same scope/window length only",
+        "false_positive": "Price promotions, conversation-length selection, model substitution and median hiding heavy users",
+        "limitation": "No total paid spending or final enterprise monetization from median alone; do not multiply by unrelated request/session counts",
+        "classification": "workflow spending confirmation",
+        "priority": "P2",
+        "access_status": "documentation reviewed; API untested"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "industry"
+    },
+    {
+      "id": "industry-ai-efficiency-control",
+      "purpose": "Distinguish higher usage from lower compute cost or model substitution",
+      "definition": "Matched model intelligence index, input/output prices, generation speed and time to first token",
+      "unit": "benchmark score; USD/million tokens; tokens/second; seconds",
+      "grain": "stable model ID × creator ID × snapshot × prompt/options",
+      "sources": [
+        "https://artificialanalysis.ai/api-reference/"
+      ],
+      "collection": "GET https://artificialanalysis.ai/api/v2/data/llms/models using x-api-key; cache snapshots and stable IDs, evaluations/pricing/prompt_options/speed/latency",
+      "access_and_free_limits": "Free account/key; 1000 requests/day; attribution required",
+      "cadence_and_lag": "Daily polling proposal; provider update cadence not fixed in reviewed docs",
+      "join_keys": [
+        "id",
+        "model_creator.id",
+        "prompt_options",
+        "snapshot_date"
+      ],
+      "revision_and_cancellation": "Benchmark versions and methodology changes separate; names/slugs are not immutable identity keys",
+      "confounders": "Benchmark change, provider configuration and different prompt lengths",
+      "boundary": "Does not directly identify requests, enterprise revenue or silicon workload/GPU-hours",
+      "signal_class": "efficiency/substitution control",
+      "access_test_status": "documentation reviewed; key not inventoried; API untested",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "ai-efficiency-control",
+        "purpose": "Distinguish higher usage from lower compute cost or model substitution",
+        "metric": "Matched model intelligence index, input/output prices, generation speed and time to first token",
+        "unit": "benchmark score; USD/million tokens; tokens/second; seconds",
+        "grain": "stable model ID × creator ID × snapshot × prompt/options",
+        "source_url": "https://artificialanalysis.ai/api-reference/",
+        "collection_method": "GET https://artificialanalysis.ai/api/v2/data/llms/models using x-api-key; cache snapshots and stable IDs, evaluations/pricing/prompt_options/speed/latency",
+        "auth_free_limit": "Free account/key; 1000 requests/day; attribution required",
+        "frequency_lag": "Daily polling proposal; provider update cadence not fixed in reviewed docs",
+        "join_keys": [
+          "id",
+          "model_creator.id",
+          "prompt_options",
+          "snapshot_date"
+        ],
+        "revision_handling": "Benchmark versions and methodology changes separate; names/slugs are not immutable identity keys",
+        "false_positive": "Benchmark change, provider configuration and different prompt lengths",
+        "limitation": "Does not directly identify requests, enterprise revenue or silicon workload/GPU-hours",
+        "classification": "efficiency/substitution control",
+        "priority": "P2",
+        "access_status": "documentation reviewed; key not inventoried; API untested"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "industry"
+    },
+    {
+      "id": "industry-us-semi-production-utilization",
+      "purpose": "Cross-check whether broad domestic electronics production activity matches order narratives",
+      "definition": "IPG3344S production index and CAPUTLG3344S utilization, kept as two measures",
+      "unit": "index 2017=100; percent",
+      "grain": "US NAICS3344 × month × release/vintage",
+      "sources": [
+        "https://fred.stlouisfed.org/series/IPG3344S"
+      ],
+      "collection": "FRED series observations API for IPG3344S/CAPUTLG3344S using a registered provider API key; first retrieve series metadata and release dates, retain observation/realtime dates. Original Federal Reserve G17 is a public-file fallback.",
+      "access_and_free_limits": "Existing FRED key; current endpoint query untested",
+      "cadence_and_lag": "Monthly Federal Reserve G17 release; preserve revised vintages",
+      "join_keys": [
+        "series_id",
+        "observation_date",
+        "realtime_start",
+        "realtime_end"
+      ],
+      "revision_and_cancellation": "Preserve original and revised observations; compare identical seasonal-adjustment definitions",
+      "confounders": "US-only other electronic component mix, quality-adjusted production index and industry composition changes",
+      "boundary": "Cannot isolate AI chips, unit output, named fab yield or global output",
+      "signal_class": "broad physical-activity confirmation",
+      "access_test_status": "official series verified; data API untested",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "us-semi-production-utilization",
+        "purpose": "Cross-check whether broad domestic electronics production activity matches order narratives",
+        "metric": "IPG3344S production index and CAPUTLG3344S utilization, kept as two measures",
+        "unit": "index 2017=100; percent",
+        "grain": "US NAICS3344 × month × release/vintage",
+        "source_url": "https://fred.stlouisfed.org/series/IPG3344S",
+        "collection_method": "FRED series observations API for IPG3344S/CAPUTLG3344S using a registered provider API key; first retrieve series metadata and release dates, retain observation/realtime dates. Original Federal Reserve G17 is a public-file fallback.",
+        "auth_free_limit": "Existing FRED key; current endpoint query untested",
+        "frequency_lag": "Monthly Federal Reserve G17 release; preserve revised vintages",
+        "join_keys": [
+          "series_id",
+          "observation_date",
+          "realtime_start",
+          "realtime_end"
+        ],
+        "revision_handling": "Preserve original and revised observations; compare identical seasonal-adjustment definitions",
+        "false_positive": "US-only other electronic component mix, quality-adjusted production index and industry composition changes",
+        "limitation": "Cannot isolate AI chips, unit output, named fab yield or global output",
+        "classification": "broad physical-activity confirmation",
+        "priority": "P2",
+        "access_status": "official series verified; data API untested"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "industry"
+    },
+    {
+      "id": "industry-us-electrical-backlog",
+      "purpose": "Compare broad equipment pressure with transformer/switchgear suppliers and specific projects",
+      "definition": "A35SUO unfilled electrical equipment orders plus M3 net new orders and shipments when comparable series identified",
+      "unit": "USD million seasonally adjusted",
+      "grain": "US broad electrical industry × month × source vintage",
+      "sources": [
+        "https://fred.stlouisfed.org/series/A35SUO"
+      ],
+      "collection": "FRED observations with a registered provider API key; Census M3 XLS download for order/shipment definitions and matched history. Do not use discontinued semiconductor M3 series.",
+      "access_and_free_limits": "FRED a registered provider API key or Census free XLS; Census data API requires new free key",
+      "cadence_and_lag": "Monthly release; lag read from current calendar",
+      "join_keys": [
+        "series_id/industry_code",
+        "month",
+        "adjustment",
+        "release_date"
+      ],
+      "revision_and_cancellation": "Backlog stock, net orders flow and shipments flow separate; append revisions",
+      "confounders": "Appliances/non-AI electrical products, prices and delayed shipments increasing dollar backlog",
+      "boundary": "No transformer unit counts or named customer capacity; long backlog may reflect slow supply rather than accelerating demand",
+      "signal_class": "broad demand/bottleneck context",
+      "access_test_status": "definitions and official series verified; data API untested",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "us-electrical-backlog",
+        "purpose": "Compare broad equipment pressure with transformer/switchgear suppliers and specific projects",
+        "metric": "A35SUO unfilled electrical equipment orders plus M3 net new orders and shipments when comparable series identified",
+        "unit": "USD million seasonally adjusted",
+        "grain": "US broad electrical industry × month × source vintage",
+        "source_url": "https://fred.stlouisfed.org/series/A35SUO",
+        "collection_method": "FRED observations with a registered provider API key; Census M3 XLS download for order/shipment definitions and matched history. Do not use discontinued semiconductor M3 series.",
+        "auth_free_limit": "FRED a registered provider API key or Census free XLS; Census data API requires new free key",
+        "frequency_lag": "Monthly release; lag read from current calendar",
+        "join_keys": [
+          "series_id/industry_code",
+          "month",
+          "adjustment",
+          "release_date"
+        ],
+        "revision_handling": "Backlog stock, net orders flow and shipments flow separate; append revisions",
+        "false_positive": "Appliances/non-AI electrical products, prices and delayed shipments increasing dollar backlog",
+        "limitation": "No transformer unit counts or named customer capacity; long backlog may reflect slow supply rather than accelerating demand",
+        "classification": "broad demand/bottleneck context",
+        "priority": "P2",
+        "access_status": "definitions and official series verified; data API untested"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "industry"
+    },
+    {
+      "id": "industry-japan-equipment-billings",
+      "purpose": "Confirm equipment delivery/invoicing activity supporting fab investment",
+      "definition": "SEAJ manufacturer billings three-month moving average",
+      "unit": "JPY; scale must be read from each current PDF header before extraction",
+      "grain": "Japan-headquartered manufacturer aggregate × report month × publication",
+      "sources": [
+        "https://www.seaj.or.jp/english/statistics/index.html"
+      ],
+      "collection": "Save official monthly PDF and publication notice; extract billings values/months/currency/scaling/3-month averaging, preserve file checksum and corrected versions",
+      "access_and_free_limits": "Public PDF without key; secondary publication rights restricted",
+      "cadence_and_lag": "Monthly; official release calendar/notice determines actual lag",
+      "join_keys": [
+        "manufacturer_scope",
+        "report_month",
+        "currency",
+        "averaging_window",
+        "publication_date"
+      ],
+      "revision_and_cancellation": "Moving-average overlaps are not independent monthly shipments; retain revisions and do not invert without sufficient original data",
+      "confounders": "FX translation, non-AI equipment and delivery catch-up",
+      "boundary": "Billings are not bookings; detailed SEMI/SEAJ plant/product source may be paid",
+      "signal_class": "equipment execution confirmation",
+      "access_test_status": "official page reviewed; current PDF extraction and current unit-scale verification pending",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "japan-equipment-billings",
+        "purpose": "Confirm equipment delivery/invoicing activity supporting fab investment",
+        "metric": "SEAJ manufacturer billings three-month moving average",
+        "unit": "JPY; scale must be read from each current PDF header before extraction",
+        "grain": "Japan-headquartered manufacturer aggregate × report month × publication",
+        "source_url": "https://www.seaj.or.jp/english/statistics/index.html",
+        "collection_method": "Save official monthly PDF and publication notice; extract billings values/months/currency/scaling/3-month averaging, preserve file checksum and corrected versions",
+        "auth_free_limit": "Public PDF without key; secondary publication rights restricted",
+        "frequency_lag": "Monthly; official release calendar/notice determines actual lag",
+        "join_keys": [
+          "manufacturer_scope",
+          "report_month",
+          "currency",
+          "averaging_window",
+          "publication_date"
+        ],
+        "revision_handling": "Moving-average overlaps are not independent monthly shipments; retain revisions and do not invert without sufficient original data",
+        "false_positive": "FX translation, non-AI equipment and delivery catch-up",
+        "limitation": "Billings are not bookings; detailed SEMI/SEAJ plant/product source may be paid",
+        "classification": "equipment execution confirmation",
+        "priority": "P2",
+        "access_status": "official page reviewed; current PDF extraction and current unit-scale verification pending"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "industry"
+    },
+    {
+      "id": "supply-same-site-operational-conversion",
+      "purpose": "구매약정이 실제 AI 설치 용량으로 전환되는지",
+      "definition": "같은 시설·건물의 날짜별 operational buildings/IT MW/칩 수량 증가와 계획일 수정",
+      "unit": "MW with IT/facility scope; chip units with type",
+      "grain": "facility/building × dated status × chip generation",
+      "sources": [
+        "https://epoch.ai/data/data-centers-documentation"
+      ],
+      "collection": "원저자 CSV 3종을 version과 수집일로 고정하고 source 유형·facility/Timeline 연결을 보존",
+      "access_and_free_limits": "Public source described in benchmark; do not assume all source inputs are free. See license/access details.",
+      "cadence_and_lag": "Save each published CSV version; provider update cadence not guaranteed. Timeline observations are irregular.",
+      "join_keys": [
+        "facility_id",
+        "building_id",
+        "observation_date",
+        "chip_type"
+      ],
+      "revision_and_cancellation": "Do not infer utilization from installed capacity or combine modeled and independently measured quantities.",
+      "confounders": null,
+      "boundary": "IT capacity·모델 추정이지 GPU 이용률·최종 토큰 수요·전력 실소비가 아니다.",
+      "signal_class": "Candidate or execution/context confirmation; see boundary",
+      "access_test_status": "Documentation/code review; source data not ingested",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "same-site-operational-conversion",
+        "purpose": "구매약정이 실제 AI 설치 용량으로 전환되는지",
+        "proposed_signal": "같은 시설·건물의 날짜별 operational buildings/IT MW/칩 수량 증가와 계획일 수정",
+        "free_source_ids": [
+          "epoch-ai-data-centers"
+        ],
+        "collection": "원저자 CSV 3종을 version과 수집일로 고정하고 source 유형·facility/Timeline 연결을 보존",
+        "boundary": "IT capacity·모델 추정이지 GPU 이용률·최종 토큰 수요·전력 실소비가 아니다.",
+        "tested_as_leading_indicator": false,
+        "grain": "facility/building × dated status × chip generation",
+        "unit": "MW with IT/facility scope; chip units with type",
+        "join_keys": [
+          "facility_id",
+          "building_id",
+          "observation_date",
+          "chip_type"
+        ],
+        "frequency_lag": "Save each published CSV version; provider update cadence not guaranteed. Timeline observations are irregular.",
+        "source_url": [
+          "https://epoch.ai/data/data-centers-documentation"
+        ],
+        "auth_free_limit": "Public source described in benchmark; do not assume all source inputs are free. See license/access details.",
+        "revision_handling": "Do not infer utilization from installed capacity or combine modeled and independently measured quantities.",
+        "classification": "Candidate or execution/context confirmation; see boundary",
+        "access_status": "Documentation/code review; source data not ingested"
+      },
+      "collection_tier": "first",
+      "research_origin_group": "supply"
+    },
+    {
+      "id": "supply-new-power-generation-realization",
+      "purpose": "발전 계획이 현재 공급을 늘리는지",
+      "definition": "generator 운영 예정일·status 변화 뒤 같은 generator의 월 net_generation_mwh 발생",
+      "unit": "nameplate MW; net generation MWh separately",
+      "grain": "plant_id_eia × generator_id × report period × source version",
+      "sources": [
+        "https://github.com/catalyst-cooperative/pudl"
+      ],
+      "collection": "공개 Parquet의 out_ EIA 테이블과 source schema를 사용; plant/generator/date 교차표와 data_maturity 기록",
+      "access_and_free_limits": "Public source described in benchmark; do not assume all source inputs are free. See license/access details.",
+      "cadence_and_lag": "Monthly EIA860M/923 and PUDL published partitions; annual-only generator records may remain.",
+      "join_keys": [
+        "plant_id_eia",
+        "generator_id",
+        "report_date",
+        "data_maturity"
+      ],
+      "revision_and_cancellation": "Current generation does not establish dedicated supply to an AI customer.",
+      "confounders": null,
+      "boundary": "월 MWh는 실제 발전 후행 확인이며 특정 AI 고객 배정 전력은 아니다.",
+      "signal_class": "Candidate or execution/context confirmation; see boundary",
+      "access_test_status": "Documentation/code review; source data not ingested",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "new-power-generation-realization",
+        "purpose": "발전 계획이 현재 공급을 늘리는지",
+        "proposed_signal": "generator 운영 예정일·status 변화 뒤 같은 generator의 월 net_generation_mwh 발생",
+        "free_source_ids": [
+          "pudl-github"
+        ],
+        "collection": "공개 Parquet의 out_ EIA 테이블과 source schema를 사용; plant/generator/date 교차표와 data_maturity 기록",
+        "boundary": "월 MWh는 실제 발전 후행 확인이며 특정 AI 고객 배정 전력은 아니다.",
+        "tested_as_leading_indicator": false,
+        "grain": "plant_id_eia × generator_id × report period × source version",
+        "unit": "nameplate MW; net generation MWh separately",
+        "join_keys": [
+          "plant_id_eia",
+          "generator_id",
+          "report_date",
+          "data_maturity"
+        ],
+        "frequency_lag": "Monthly EIA860M/923 and PUDL published partitions; annual-only generator records may remain.",
+        "source_url": [
+          "https://github.com/catalyst-cooperative/pudl"
+        ],
+        "auth_free_limit": "Public source described in benchmark; do not assume all source inputs are free. See license/access details.",
+        "revision_handling": "Current generation does not establish dedicated supply to an AI customer.",
+        "classification": "Candidate or execution/context confirmation; see boundary",
+        "access_status": "Documentation/code review; source data not ingested"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "supply"
+    },
+    {
+      "id": "supply-power-contract-revision-termination",
+      "purpose": "전력 조달 약정이 줄거나 실제 종료되는지",
+      "definition": "EQR contract의 기간·quantity/units 변경 및 actual_termination_date, 이어지는 기명 거래 여부",
+      "unit": "contract quantity/unit; transaction quantity/price/charge separately",
+      "grain": "seller × customer × contract/service agreement × filing quarter",
+      "sources": [
+        "https://github.com/catalyst-cooperative/pudl"
+      ],
+      "collection": "seller/customer legal entity와 service agreement를 매핑한 뒤 분기별 partition을 보존; 원문·중복을 검토",
+      "access_and_free_limits": "Public source described in benchmark; do not assume all source inputs are free. See license/access details.",
+      "cadence_and_lag": "Quarterly FERC EQR reporting; experimental PUDL schema.",
+      "join_keys": [
+        "seller_company_id",
+        "customer_company_id",
+        "contract_service_agreement_id",
+        "quarter"
+      ],
+      "revision_and_cancellation": "Natural contract keys and transaction duplicates require review; charges are not cash receipts.",
+      "confounders": null,
+      "boundary": "EQR WIP의 누락·중복과 적용 범위를 검토한다. 거래요금은 현금 입금과 다르다.",
+      "signal_class": "Candidate or execution/context confirmation; see boundary",
+      "access_test_status": "Documentation/code review; source data not ingested",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "power-contract-revision-termination",
+        "purpose": "전력 조달 약정이 줄거나 실제 종료되는지",
+        "proposed_signal": "EQR contract의 기간·quantity/units 변경 및 actual_termination_date, 이어지는 기명 거래 여부",
+        "free_source_ids": [
+          "pudl-github"
+        ],
+        "collection": "seller/customer legal entity와 service agreement를 매핑한 뒤 분기별 partition을 보존; 원문·중복을 검토",
+        "boundary": "EQR WIP의 누락·중복과 적용 범위를 검토한다. 거래요금은 현금 입금과 다르다.",
+        "tested_as_leading_indicator": false,
+        "grain": "seller × customer × contract/service agreement × filing quarter",
+        "unit": "contract quantity/unit; transaction quantity/price/charge separately",
+        "join_keys": [
+          "seller_company_id",
+          "customer_company_id",
+          "contract_service_agreement_id",
+          "quarter"
+        ],
+        "frequency_lag": "Quarterly FERC EQR reporting; experimental PUDL schema.",
+        "source_url": [
+          "https://github.com/catalyst-cooperative/pudl"
+        ],
+        "auth_free_limit": "Public source described in benchmark; do not assume all source inputs are free. See license/access details.",
+        "revision_handling": "Natural contract keys and transaction duplicates require review; charges are not cash receipts.",
+        "classification": "Candidate or execution/context confirmation; see boundary",
+        "access_status": "Documentation/code review; source data not ingested"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "supply"
+    },
+    {
+      "id": "supply-chip-supply-versus-deployment",
+      "purpose": "AI 칩의 공급 증가가 설치·소유로 연결되는지",
+      "definition": "분기별 칩 종류별 공급 추정과 동일 분기말 시설/Owner chip snapshots의 차이",
+      "unit": "GPU die/superchip/rack units or H100e, separately",
+      "grain": "chip type × quarter × dated ownership/facility snapshot × model version",
+      "sources": [
+        "https://github.com/epoch-research/ai-chip-counts",
+        "https://epoch.ai/data/data-centers-documentation"
+      ],
+      "collection": "공개 CSV·원저자 코드의 시점/불확실성 규칙을 참고; 직접 관측과 매출 기반 모델을 분리",
+      "access_and_free_limits": "Public source described in benchmark; do not assume all source inputs are free. See license/access details.",
+      "cadence_and_lag": "Quarterly supply estimates and irregular installation snapshots.",
+      "join_keys": [
+        "chip_type",
+        "quarter",
+        "facility_id",
+        "owner_id",
+        "model_version"
+      ],
+      "revision_and_cancellation": "Shared revenue/ownership inputs make evidence dependent. Do not call modeled shipment counts official unit shipments.",
+      "confounders": null,
+      "boundary": "공급 모델과 시설/Owner 모델의 공통 입력을 독립 확인으로 쓰지 않는다. 배치 시차를 일률 확정하지 않는다.",
+      "signal_class": "Candidate or execution/context confirmation; see boundary",
+      "access_test_status": "Documentation/code review; source data not ingested",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "chip-supply-versus-deployment",
+        "purpose": "AI 칩의 공급 증가가 설치·소유로 연결되는지",
+        "proposed_signal": "분기별 칩 종류별 공급 추정과 동일 분기말 시설/Owner chip snapshots의 차이",
+        "free_source_ids": [
+          "epoch-ai-chip-counts-github",
+          "epoch-ai-data-centers"
+        ],
+        "collection": "공개 CSV·원저자 코드의 시점/불확실성 규칙을 참고; 직접 관측과 매출 기반 모델을 분리",
+        "boundary": "공급 모델과 시설/Owner 모델의 공통 입력을 독립 확인으로 쓰지 않는다. 배치 시차를 일률 확정하지 않는다.",
+        "tested_as_leading_indicator": false,
+        "grain": "chip type × quarter × dated ownership/facility snapshot × model version",
+        "unit": "GPU die/superchip/rack units or H100e, separately",
+        "join_keys": [
+          "chip_type",
+          "quarter",
+          "facility_id",
+          "owner_id",
+          "model_version"
+        ],
+        "frequency_lag": "Quarterly supply estimates and irregular installation snapshots.",
+        "source_url": [
+          "https://github.com/epoch-research/ai-chip-counts",
+          "https://epoch.ai/data/data-centers-documentation"
+        ],
+        "auth_free_limit": "Public source described in benchmark; do not assume all source inputs are free. See license/access details.",
+        "revision_handling": "Shared revenue/ownership inputs make evidence dependent. Do not call modeled shipment counts official unit shipments.",
+        "classification": "Candidate or execution/context confirmation; see boundary",
+        "access_status": "Documentation/code review; source data not ingested"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "supply"
+    },
+    {
+      "id": "supply-component-country-concentration",
+      "purpose": "생산 차질 가능성과 대체 공급 기반을 파악",
+      "definition": "같은 HS edition·제품범위의 수입집중도/상대국 변화와 필수공정·대체재 여부",
+      "unit": "trade value; share/concentration; quantity/unit when reported",
+      "grain": "HS edition × product basket × reporter × partner × period",
+      "sources": [
+        "https://doi.org/10.1787/4154cdbf-en"
+      ],
+      "collection": "OECD 방법론의 공개 HS 부록을 출발점으로 공적 무역 시리즈 수집을 설계; 이번 조사에서 Comtrade 호출은 하지 않음",
+      "access_and_free_limits": "Public source described in benchmark; do not assume all source inputs are free. See license/access details.",
+      "cadence_and_lag": "Monthly/annual trade with reporter-dependent lag; annual structural reports.",
+      "join_keys": [
+        "hs_edition",
+        "cmdCode",
+        "reporterCode",
+        "partnerCode",
+        "period"
+      ],
+      "revision_and_cancellation": "HS trade excludes some domestic flows and can repeat cross-border production stages; no firm AI purchase inference.",
+      "confounders": null,
+      "boundary": "희소금속/장비 무역은 AI 전용 비중이나 개별기업 주문·생산량을 직접 나타내지 않는다.",
+      "signal_class": "Candidate or execution/context confirmation; see boundary",
+      "access_test_status": "Documentation/code review; source data not ingested",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "component-country-concentration",
+        "purpose": "생산 차질 가능성과 대체 공급 기반을 파악",
+        "proposed_signal": "같은 HS edition·제품범위의 수입집중도/상대국 변화와 필수공정·대체재 여부",
+        "free_source_ids": [
+          "oecd-semiconductor-map-2025"
+        ],
+        "collection": "OECD 방법론의 공개 HS 부록을 출발점으로 공적 무역 시리즈 수집을 설계; 이번 조사에서 Comtrade 호출은 하지 않음",
+        "boundary": "희소금속/장비 무역은 AI 전용 비중이나 개별기업 주문·생산량을 직접 나타내지 않는다.",
+        "tested_as_leading_indicator": false,
+        "grain": "HS edition × product basket × reporter × partner × period",
+        "unit": "trade value; share/concentration; quantity/unit when reported",
+        "join_keys": [
+          "hs_edition",
+          "cmdCode",
+          "reporterCode",
+          "partnerCode",
+          "period"
+        ],
+        "frequency_lag": "Monthly/annual trade with reporter-dependent lag; annual structural reports.",
+        "source_url": [
+          "https://doi.org/10.1787/4154cdbf-en"
+        ],
+        "auth_free_limit": "Public source described in benchmark; do not assume all source inputs are free. See license/access details.",
+        "revision_handling": "HS trade excludes some domestic flows and can repeat cross-border production stages; no firm AI purchase inference.",
+        "classification": "Candidate or execution/context confirmation; see boundary",
+        "access_status": "Documentation/code review; source data not ingested"
+      },
+      "collection_tier": "supplementary",
+      "research_origin_group": "supply"
+    },
+    {
+      "id": "supply-schedule-downside-and-data-staleness",
+      "purpose": "계획 과대집계·낡은 무료 시리즈로 생기는 가짜 시그널을 제거",
+      "definition": "같은 프로젝트의 계획일 지연/보류/축소/취소 및 데이터 중단일",
+      "unit": "target date change; cancelled capacity only when explicit; source state",
+      "grain": "project/contract/series × dated original and revised disclosure",
+      "sources": [
+        "https://epoch.ai/data/data-centers-documentation",
+        "https://www.semi.org/en/products-services/market-data/equipment/billings-report",
+        "https://github.com/wri/global-power-plant-database"
+      ],
+      "collection": "이전 공개 snapshot과 현 snapshot을 보존해 변경 사건을 기록; 자료에서 사라진 항목은 바로 취소로 간주하지 않음",
+      "access_and_free_limits": "Public source described in benchmark; do not assume all source inputs are free. See license/access details.",
+      "cadence_and_lag": "Event-driven source updates and each dataset version.",
+      "join_keys": [
+        "project_id",
+        "contract_id",
+        "source_id",
+        "vintage"
+      ],
+      "revision_and_cancellation": "Disappearance is not cancellation; source no longer maintained is distinct from project termination.",
+      "confounders": null,
+      "boundary": "WRI 역사적 지도·SEMI 중단된 Book-to-Bill을 현행 흐름 시그널로 쓰지 않는다.",
+      "signal_class": "Candidate or execution/context confirmation; see boundary",
+      "access_test_status": "Documentation/code review; source data not ingested",
+      "leading_prediction_validated": false,
+      "evidence_record": {
+        "id": "schedule-downside-and-data-staleness",
+        "purpose": "계획 과대집계·낡은 무료 시리즈로 생기는 가짜 시그널을 제거",
+        "proposed_signal": "같은 프로젝트의 계획일 지연/보류/축소/취소 및 데이터 중단일",
+        "free_source_ids": [
+          "epoch-ai-data-centers",
+          "semi-stale-access-guard",
+          "wri-global-power-plant"
+        ],
+        "collection": "이전 공개 snapshot과 현 snapshot을 보존해 변경 사건을 기록; 자료에서 사라진 항목은 바로 취소로 간주하지 않음",
+        "boundary": "WRI 역사적 지도·SEMI 중단된 Book-to-Bill을 현행 흐름 시그널로 쓰지 않는다.",
+        "tested_as_leading_indicator": false,
+        "grain": "project/contract/series × dated original and revised disclosure",
+        "unit": "target date change; cancelled capacity only when explicit; source state",
+        "join_keys": [
+          "project_id",
+          "contract_id",
+          "source_id",
+          "vintage"
+        ],
+        "frequency_lag": "Event-driven source updates and each dataset version.",
+        "source_url": [
+          "https://epoch.ai/data/data-centers-documentation",
+          "https://www.semi.org/en/products-services/market-data/equipment/billings-report",
+          "https://github.com/wri/global-power-plant-database"
+        ],
+        "auth_free_limit": "Public source described in benchmark; do not assume all source inputs are free. See license/access details.",
+        "revision_handling": "Disappearance is not cancellation; source no longer maintained is distinct from project termination.",
+        "classification": "Candidate or execution/context confirmation; see boundary",
+        "access_status": "Documentation/code review; source data not ingested"
+      },
+      "collection_tier": "first",
+      "research_origin_group": "supply"
+    }
+  ],
+  "validation_plan": [
+    "Freeze metric definitions and units before comparing changes; missing/suppressed/censored are separate from zero.",
+    "Retain event date, measurement period, target date, publication/filed time and retrieval time; only information published by a historical cutoff may enter that signal.",
+    "Validate company/project/contract mappings against source IDs and effective dates. Unknown counterparties remain unknown.",
+    "Compare matched cohorts with the same capacity basis. No ratio between unrelated staged aggregate snapshots.",
+    "Deduplicate joint press releases and shared model inputs. Separate investments, purchases, financing and actual receipts within one economic commitment.",
+    "Define an outcome before testing: later paid purchase, shipment, equipment acceptance, actual load or realized cash. Each outcome has a different unit and horizon.",
+    "Evaluate candidate leads using available historical vintages and out-of-time projects, preserving cancellations, right-censoring, unavailable data and source coverage changes. No asserted lead months or invented thresholds.",
+    "Record failures/429/revisions and coverage. A successful small public sample establishes that route only, not full market coverage or maximum free quotas."
+  ],
+  "publication_context": {
+    "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+    "as_of": "2026-10-03",
+    "empirical_dataset_admitted": false,
+    "human_gate_6_approved": false,
+    "predictive_validity_established": false,
+    "continuous_collection_implemented": false,
+    "boundary": "Research intake only. Apply the existing evidence and human-review contracts before empirical use. A source link or source review is not evidence approval."
+  }
+}

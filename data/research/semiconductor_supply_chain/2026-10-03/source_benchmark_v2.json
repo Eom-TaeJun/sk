@@ -1,0 +1,1561 @@
+{
+  "as_of": "2026-10-03",
+  "supply_chain": [
+    {
+      "id": "oecd-semiconductor-map-2025",
+      "title": "Mapping the semiconductor value chain: Working towards identifying dependencies and vulnerabilities",
+      "author": "OECD; Jan-Peter Kleinhans, Mario Alejandro Nieves, Sara Romaniega Sancho, Charles-Édouard van de Put",
+      "date": "2025-06-24",
+      "url": "https://doi.org/10.1787/4154cdbf-en",
+      "kind": "institutional_methodology_report",
+      "access": {
+        "status_as_of": "2026-10-03",
+        "free_read": true,
+        "login_required": false,
+        "read": "원문 PDF의 분류·방법론·자료 목록·HS 부록을 확인",
+        "data_ingestion": "보고서만 읽음; Comtrade·ICIO 및 보고서가 인용한 상용 데이터는 수집하지 않음"
+      },
+      "license": {
+        "declaration": "CC BY 4.0",
+        "scope": "OECD 보고서; 제삼자 자료 제외",
+        "verified_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/06/mapping-the-semiconductor-value-chain_5ba52971/4154cdbf-en.pdf"
+      },
+      "actual_fields": [
+        "설계·웨이퍼 제조·조립/검사/패키징 및 사업모델",
+        "공정별 소재·장비",
+        "HS 2017 제품코드 묶음",
+        "국가별 무역액·RCA·HHI·의존성",
+        "ICIO 산업 간 투입 관계"
+      ],
+      "what_to_adopt": [
+        "국가×제품×공정 층을 기업기명거래 층과 분리",
+        "HS edition·코드의 포함범위·국내생산 누락·중복 이동을 저장",
+        "수입집중도에 대체가능성과 공정 필수성을 함께 관측"
+      ],
+      "limitation": [
+        "국가 무역은 특정 회사 발주나 AI 수요가 아니다.",
+        "칩의 제조→패키징 이동은 같은 제품을 여러 번 무역으로 계상할 수 있다.",
+        "보고서의 SEMI·Omdia 등 자료 목록 전체를 무료 데이터로 취급할 수 없다."
+      ],
+      "verified_detail": {
+        "direct_read_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/06/mapping-the-semiconductor-value-chain_5ba52971/4154cdbf-en.pdf",
+        "sections": [
+          "본문 19–21쪽 방법론과 한계",
+          "부록 A 자료 목록",
+          "부록 D HS 코드"
+        ],
+        "specific": "HS 811292는 갈륨만이 아니라 여러 금속을 묶고, 부록은 HS 2017 기준이라고 명시한다.",
+        "evidence_class": "국가 산업망·방법론"
+      }
+    },
+    {
+      "id": "cset-semiconductor-chain-2021",
+      "title": "The Semiconductor Supply Chain: Assessing National Competitiveness",
+      "author": "Saif M. Khan, Alexander Mann, Dahlia Peterson; CSET",
+      "date": "2021-01",
+      "url": "https://cset.georgetown.edu/publication/the-semiconductor-supply-chain/",
+      "kind": "original_research_report",
+      "access": {
+        "status_as_of": "2026-10-03",
+        "free_read": true,
+        "login_required": false,
+        "read": "기관 페이지와 업데이트된 원문 PDF를 읽음",
+        "data_ingestion": "표의 기초 상용 자료를 수집하지 않음"
+      },
+      "license": {
+        "declaration": "읽은 원문·기관 페이지에서 재배포용 라이선스 미확인",
+        "scope": "무료 열람과 원저자 인용·개념 비교만; 원표·제삼자 데이터의 재사용 허가로 확대하지 않음",
+        "verified_url": "https://cset.georgetown.edu/wp-content/uploads/The-Semiconductor-Supply-Chain-Issue-Brief-1.pdf"
+      },
+      "actual_fields": [
+        "R&D·설계·제조·ATP·장비·소재·EDA·core IP",
+        "제품/기술 수준별 국가 경쟁력",
+        "본사 기준 국가별 점유율",
+        "공장 위치별 생산능력과 200mm 환산 용량"
+      ],
+      "what_to_adopt": [
+        "현재 기업 중심 지도에서 EDA·IP·공정별 장비와 재료를 보완",
+        "headquarters_country와 facility_country를 별도 저장",
+        "wafer_diameter·node_supported와 그 node에 실제 할당된 capacity를 구분"
+      ],
+      "limitation": [
+        "일반 자료 기준은 대체로 2019년이며 현재 고객관계 증거가 아니다.",
+        "같은 fab의 용량 전부가 최저 공정 노드의 용량이라는 가정은 위험하다.",
+        "국가별 점유율·소재 응용은 기명 구매계약과 구분한다."
+      ],
+      "verified_detail": {
+        "direct_read_url": "https://cset.georgetown.edu/wp-content/uploads/The-Semiconductor-Supply-Chain-Issue-Brief-1.pdf",
+        "sections": [
+          "5–6쪽 공급망·본사 기준 설명",
+          "76쪽 주석 72의 fab 용량 한계"
+        ],
+        "specific": "주석은 여러 노드를 처리하는 fab의 세부 배분이 없어서 해당 범주에 전체 용량을 넣는 가정과 공동소유 배분을 설명한다.",
+        "evidence_class": "연구자의 분류·국가 경쟁력 추정"
+      }
+    },
+    {
+      "id": "epoch-ai-data-centers",
+      "title": "AI data centers — records, methodology and downloads",
+      "author": "Epoch AI",
+      "date": "2026-10-02 dataset update",
+      "url": "https://epoch.ai/data/data-centers-documentation",
+      "kind": "original_open_dataset_and_methodology",
+      "access": {
+        "status_as_of": "2026-10-03",
+        "free_read": true,
+        "login_required": false,
+        "read": "Overview·Methodology·Records·Downloads 원문을 읽음",
+        "data_ingestion": "CSV 다운로드 경로는 원저자가 제공한다. 이 조사에서는 웹 도구가 text/csv를 처리하지 못해 데이터 파일은 내려받거나 적재하지 않음"
+      },
+      "license": {
+        "declaration": "Creative Commons Attribution; 읽은 Overview에는 버전 번호 미기재",
+        "scope": "출처·저자 표시 조건으로 데이터 이용·배포·재생산 허용",
+        "verified_url": "https://epoch.ai/data/data-centers-documentation"
+      },
+      "actual_fields": [
+        "Data center",
+        "Timeline: Date·Construction status·Buildings operational",
+        "IT power (MW)·Power (MW)",
+        "H100 equivalents·Performance (8-bit OP/s)",
+        "Owner(하드웨어 소유자)·Users·Project",
+        "Investors·Construction companies·Energy companies",
+        "Chip type·Number of Units·각 필드 source",
+        "Compute cost·Construction cost·Water use·Selected sources"
+      ],
+      "what_to_adopt": [
+        "시설·날짜별 상태·칩 수량을 분리한 연결 구조",
+        "하드웨어 소유자·시설 운영자·최종 사용자를 별도 역할로 저장",
+        "MW의 IT/시설 범위, H100e의 계산 기준과 추정 여부를 보존"
+      ],
+      "limitation": [
+        "위성 냉각장치 모델·칩 소유모델에 따른 추정이며 전력계의 실소비 MWh나 실제 지출을 뜻하지 않는다.",
+        "독립 아닌 칩 소유·시설 추정이 서로를 검증하는 순환을 피해야 한다.",
+        "상용 고해상도 위성영상이 연구 입력에 있어 전체 원저자 조사 과정을 공짜로 자동 재현할 수는 없다."
+      ],
+      "verified_detail": {
+        "records_url": "https://epoch.ai/data/data-centers-documentation/records",
+        "methodology_url": "https://epoch.ai/data/data-centers-documentation/methodology",
+        "downloads_url": "https://epoch.ai/data/data-centers-documentation/downloads",
+        "documented_csv_url": "https://epoch.ai/data/data_centers/data_centers.csv",
+        "specific": "Downloads는 시설·타임라인·칩 수량 CSV의 2026-10-02 갱신을 명시한다. 방법론은 계획 변경, 최종 사용자 비공개, 판매→배치 시차 가정과 순환 의존을 설명한다.",
+        "evidence_class": "시설 관측과 원저자 모델 추정"
+      }
+    },
+    {
+      "id": "epoch-ai-chip-counts-github",
+      "title": "ai-chip-counts",
+      "author": "Epoch AI / epoch-research",
+      "date": "2026-09-21 latest default-branch commit",
+      "url": "https://github.com/epoch-research/ai-chip-counts",
+      "kind": "github_research_model_and_csv",
+      "access": {
+        "status_as_of": "2026-10-03",
+        "free_read": true,
+        "public_repository": true,
+        "read": "README·LICENSE·CSV 헤더·xai_aggregate.py 및 repo/commit 메타데이터를 직접 읽음",
+        "data_ingestion": "설치·clone·실행하지 않음"
+      },
+      "license": {
+        "declaration": "MIT",
+        "scope": "저장소 소프트웨어와 관련 문서; 별도 제공되는 Epoch 데이터의 이용 조건은 해당 데이터 문서 기준",
+        "verified_url": "https://github.com/epoch-research/ai-chip-counts/blob/main/LICENSE"
+      },
+      "actual_fields": [
+        "칩 제조사·종류·Start/End date",
+        "Number of Units 및 5th/95th percentile",
+        "H100e median 및 5th/95th percentile",
+        "칩 수량 snapshot의 Data center·Date·Owner·User",
+        "Chip type source·Number of Units source·Notes"
+      ],
+      "what_to_adopt": [
+        "출하 추정의 흐름과 소유/설치 snapshot의 재고를 분리",
+        "quarter-end 이전의 마지막 관측으로 집계하는 시점 규칙",
+        "GPU die·superchip·rack·H100e 단위와 불확실성 구간을 별도 저장"
+      ],
+      "limitation": [
+        "매출 기반으로 배분한 고객 소유 추정은 개별 납품 확인이 아니다.",
+        "일부 제품군은 notebook, TPU는 별도 모델 모듈로 재현 구조가 다르다.",
+        "모델·검증 코드는 있지만 모든 원천 자료를 자동 수집하는 범용 수집기가 있다고 확인한 것은 아니다."
+      ],
+      "verified_detail": {
+        "archived": false,
+        "default_branch": "main",
+        "latest_commit_sha": "cfd4b95c6f3fc06369199e605324087fe59f2072",
+        "latest_commit_date": "2026-09-21T18:22:29Z",
+        "latest_commit_url": "https://github.com/epoch-research/ai-chip-counts/commit/cfd4b95c6f3fc06369199e605324087fe59f2072",
+        "schema_url": "https://github.com/epoch-research/ai-chip-counts/blob/main/csv_export/nvidia_calendar_quarter_chip_timelines.csv",
+        "snapshot_schema_url": "https://github.com/epoch-research/ai-chip-counts/blob/main/data_inputs/xai_chip_quantities.csv",
+        "aggregation_code_url": "https://github.com/epoch-research/ai-chip-counts/blob/main/xai_aggregate.py",
+        "reproducible_collector": "계산/재집계·발행본 비교 코드는 확인; 모든 입력의 실시간 자동 수집은 미확인",
+        "evidence_class": "원저자 모델 추정과 공개 snapshot"
+      }
+    },
+    {
+      "id": "pudl-github",
+      "title": "Public Utility Data Liberation Project (PUDL)",
+      "author": "Catalyst Cooperative",
+      "date": "2026-10-01 latest default-branch commit",
+      "url": "https://github.com/catalyst-cooperative/pudl",
+      "kind": "github_energy_etl_schema_and_open_warehouse",
+      "access": {
+        "status_as_of": "2026-10-03",
+        "free_read": true,
+        "public_repository": true,
+        "read": "README·LICENSE·EIA 860/923 및 FERC EQR 스키마·Data Access 문서·repo/commit 메타데이터",
+        "data_ingestion": "스키마·접근 안내만 읽음; 원천/Parquet/거래 데이터를 적재·조회하지 않음",
+        "documented_free_route": "AWS S3의 익명 접근; Data Viewer CSV/Parquet; 버전 고정 Zenodo",
+        "exclude_route": "GCS는 requester-pays와 계정 인증이 필요하므로 무료 기본 경로에서 제외"
+      },
+      "license": {
+        "declaration": "Software MIT; data/documentation CC BY 4.0",
+        "scope": "README Licensing의 구분을 유지",
+        "verified_url": "https://github.com/catalyst-cooperative/pudl/blob/main/README.rst"
+      },
+      "actual_fields": [
+        "plant_id_eia·generator_id·utility_id_eia·report_date",
+        "operational_status·capacity_mw·current_planned_generator_operating_date·generator_retirement_date",
+        "net_generation_mwh·data_maturity",
+        "EQR: seller_company_name·customer_company_name·contract_service_agreement_id",
+        "EQR: commencement_date_of_contract_term·actual_termination_date·quantity·units",
+        "EQR: transaction_quantity·price·total_transaction_charge"
+      ],
+      "what_to_adopt": [
+        "발전소/발전기 ID와 기간을 복합키로 두고 국가·회사/운영자 매핑을 별도로 관리",
+        "PPA 계획과 후속 발전기 상태·실제 발전량을 같은 시설에 연결",
+        "EQR의 기명 계약·거래·종료일로 공개 전력 관계의 실현/취소 후보를 찾기"
+      ],
+      "limitation": [
+        "미국 에너지 자료이며 개별 데이터센터의 AI 전용 MWh를 제공하지 않는다.",
+        "EIA 923의 발전기별 수량은 커버리지 한계와 일부 연간 보고의 12월 집중이 있다.",
+        "EQR 스키마는 experimental_wip이고 자연키 부재·거래 중복을 명시한다. raw 거래요금을 바로 합산하거나 현금 입금으로 해석하면 안 된다."
+      ],
+      "verified_detail": {
+        "archived": false,
+        "default_branch": "main",
+        "latest_commit_sha": "08875fb6f6a0b6074fe9d0eef8aa34a6e9beebea",
+        "latest_commit_date": "2026-10-01T02:52:11Z",
+        "latest_commit_url": "https://github.com/catalyst-cooperative/pudl/commit/08875fb6f6a0b6074fe9d0eef8aa34a6e9beebea",
+        "eia860_schema_url": "https://github.com/catalyst-cooperative/pudl/blob/main/src/pudl/metadata/resources/eia860.py",
+        "eia923_schema_url": "https://github.com/catalyst-cooperative/pudl/blob/main/src/pudl/metadata/resources/eia923.py",
+        "eqr_schema_url": "https://github.com/catalyst-cooperative/pudl/blob/main/src/pudl/metadata/resources/ferceqr.py",
+        "data_access_url": "https://docs.catalyst.coop/pudl/en/nightly/data_access.html",
+        "reproducible_collector": "原자료 DOI archive→ETL→Parquet/DuckDB의 공개 파이프라인 확인; 이 조사에서 실행 검증은 하지 않음",
+        "evidence_class": "공적 보고자료를 정리한 데이터; 일부 변환·추정 포함"
+      }
+    },
+    {
+      "id": "wri-global-power-plant",
+      "title": "Global Power Plant Database",
+      "author": "World Resources Institute and collaborators",
+      "date": "2022-01-26 latest commit; v1.3.0",
+      "url": "https://github.com/wri/global-power-plant-database",
+      "kind": "github_historical_global_facility_dataset",
+      "access": {
+        "status_as_of": "2026-10-03",
+        "free_read": true,
+        "public_repository": true,
+        "read": "README·PowerPlant 클래스·repo/commit 메타데이터를 읽음",
+        "data_ingestion": "CSV 파일 범위 읽기 결과가 빈 내용으로 반환돼 실제 CSV 레코드 수/갱신 상태는 확인하지 않음"
+      },
+      "license": {
+        "declaration": "Data CC BY 4.0; Python source MIT (README에 명시)",
+        "scope": "GitHub metadata license:null과 README의 명시적 데이터/코드 선언을 구분",
+        "verified_url": "https://github.com/wri/global-power-plant-database/blob/master/README.md"
+      },
+      "actual_fields": [
+        "plant_idnr·plant_name·plant_country·plant_owner",
+        "plant_capacity·plant_cap_year",
+        "plant_source_url·plant_location·plant_coord_source",
+        "plant_primary_fuel·plant_generation·plant_commissioning_year",
+        "plant_estimated_generation_gwh",
+        "국가/출처별 시설 ID concordance"
+      ],
+      "what_to_adopt": [
+        "세계 발전소 위치의 역사적 참조층과 출처별 시설 ID 교차표",
+        "좌표의 출처·용량 기준연도·발전량 실측/추정을 분리"
+      ],
+      "limitation": [
+        "README가 early 2022 이후 유지하지 않고 업데이트 계획이 없다고 명시한다.",
+        "현재 공급 용량·계약·AI 수요의 선행 시그널로 사용하지 않는다.",
+        "수집/조립 스크립트는 있으나 Python 2.7 및 수작업 매칭에 의존해 현재 실행 재현성은 미확인이다."
+      ],
+      "verified_detail": {
+        "archived": false,
+        "maintained_as_declared": false,
+        "latest_commit_sha": "7a91cfbb2a4e272597acbc00506d61fc1ec73b3d",
+        "latest_commit_date": "2022-01-26T16:44:20Z",
+        "latest_commit_url": "https://github.com/wri/global-power-plant-database/commit/7a91cfbb2a4e272597acbc00506d61fc1ec73b3d",
+        "schema_url": "https://github.com/wri/global-power-plant-database/blob/master/powerplant_database.py",
+        "reproducible_collector": "과거 국가별 수집 스크립트·동의어 사전·concordance 존재; 현행 동작은 미검증",
+        "evidence_class": "과거 시설 자료"
+      }
+    },
+    {
+      "id": "silicon-stack-rejected",
+      "title": "silicon-stack — Semiconductor Industry Supply Chain Dataset",
+      "author": "sflans99 (repository author)",
+      "date": "2026-04-29 latest commit; dataset metadata 2026-04-28",
+      "url": "https://github.com/sflans99/silicon-stack",
+      "kind": "github_schema_benchmark_not_eligible_for_data_ingestion",
+      "access": {
+        "status_as_of": "2026-10-03",
+        "free_read": true,
+        "public_repository": true,
+        "read": "README·원본 JSON의 구조·전체 파일 tree·repo/commit metadata를 읽음",
+        "data_ingestion": "원데이터/앱 자산을 복제하거나 우리 지도에 통합하지 않음"
+      },
+      "license": {
+        "declaration": "명시 라이선스 없음: repo metadata license:null; recursive tree에 LICENSE 미존재",
+        "scope": "공개 열람을 재배포/통합 허가로 취급하지 않음",
+        "verified_url": "https://github.com/sflans99/silicon-stack"
+      },
+      "actual_fields": [
+        "companies·materials·relationships",
+        "material_id·process_stage·node_type",
+        "supplier_id·customer_id·strength·evidence",
+        "HQ 좌표·key_facilities·geo_cluster_id",
+        "estimated 관계와 위험 flag"
+      ],
+      "what_to_adopt": [
+        "자료를 복사하지 않고 공정·제품 taxonomy, EDA/IP·장비/소모재 구분 아이디어만 참고",
+        "가명/응용 관계를 기명 거래와 분리하고 과장된 중요도 score를 자동 계승하지 않기"
+      ],
+      "limitation": [
+        "기명 공급·산업시장 추정·제품용도가 한 그래프에 섞인다.",
+        "확인한 1110개 관계에 source_url/url 필드가 없어 행별 원문 재현이 부족하다.",
+        "README가 나열한 expand_pass/patch 재생성 스크립트는 완전한 실제 tree에 존재하지 않는다.",
+        "계약·시설 관측일·시점별 수정·취소가 현재 구조에 충분히 나타나지 않는다."
+      ],
+      "verified_detail": {
+        "archived": false,
+        "latest_commit_sha": "7835db1cff9ac9e43c66eb3761624520e18bbe29",
+        "latest_commit_date": "2026-04-29T17:14:36Z",
+        "latest_commit_url": "https://github.com/sflans99/silicon-stack/commit/7835db1cff9ac9e43c66eb3761624520e18bbe29",
+        "schema_url": "https://github.com/sflans99/silicon-stack/blob/master/semicon_supply_chain.json",
+        "recursive_tree_url": "https://api.github.com/repos/sflans99/silicon-stack/git/trees/master",
+        "tree_complete": true,
+        "reproducible_collector": "README 주장과 달리 해당 재생성/수집 스크립트 미존재",
+        "evidence_class": "개인 저자의 혼합 그래프; 원문 증거가 부족한 후보"
+      }
+    },
+    {
+      "id": "semi-stale-access-guard",
+      "title": "About the Billings Report — discontinuation notices and fab-data scope",
+      "author": "SEMI",
+      "date": null,
+      "url": "https://www.semi.org/en/products-services/market-data/equipment/billings-report",
+      "kind": "publisher_access_and_stale_series_guard",
+      "access": {
+        "status_as_of": "2026-10-03",
+        "free_read": true,
+        "read": "공식 제품 설명·중단 공지·시설 데이터 항목을 읽음",
+        "underlying_data": "World Fab Forecast/FabView 및 상용 상세 자료는 무료 수집 목록에 포함하지 않음"
+      },
+      "license": {
+        "declaration": "해당 페이지에서 기초 상용 데이터의 open-data license 미확인",
+        "scope": "공개 설명을 분류 모델 참고로 사용; 상세 데이터의 무료 복제권으로 간주하지 않음",
+        "verified_url": "https://www.semi.org/en/products-services/market-data/equipment/billings-report"
+      },
+      "actual_fields": [
+        "북미 Book-to-Bill 중단 시점",
+        "월 billings 무료 보도자료 중단 시점",
+        "상용 fab 데이터: fab별 용량·건설/장비 지출·wafer size·technology node·capacity ramp"
+      ],
+      "what_to_adopt": [
+        "source_state에 discontinued_series와 public_summary_only를 별도 저장",
+        "공장·기술 세대·wafer size·계획/투자/증설 단계를 데이터 모델에 반영"
+      ],
+      "limitation": [
+        "Book-to-Bill은 2017 중단, 마지막 bookings는 2016-12다.",
+        "월 billings 무료 보도자료는 2022-02 중단됐다. 현재 월 상세 보고서의 존재를 무료 시계열 접근으로 오인하지 않는다.",
+        "제품 소개에 시설 축이 공개되어도 전체 상세 표가 무료인 것은 아니다."
+      ],
+      "verified_detail": {
+        "source_updated_at": "미기재",
+        "specific": "공식 Notice 문구와 World Fab Forecast 설명 직접 확인",
+        "evidence_class": "원저자의 제품/접근 상태 설명"
+      }
+    }
+  ],
+  "capital_reports": [
+    {
+      "id": "imf-portwatch-country-2026",
+      "kind": "working_paper",
+      "title": "Nowcasting Country-Level Trade Estimates Using IMF PortWatch",
+      "institution": "IMF",
+      "authors": [
+        "Serkan Arslanalp",
+        "Oliver Exton",
+        "Chang Gao",
+        "Mario Saraiva",
+        "Parisa Kamali",
+        "Alessandra Sozzi",
+        "Jasper Verschuur"
+      ],
+      "publication_date": "2026-05-22",
+      "publication_date_note": "웹페이지 및 저자 공식 연구 목록의 발행일. URL 경로의 05/19와 구분한다.",
+      "accessed_on": "2026-10-03",
+      "source_url": "https://www.imf.org/en/publications/wp/issues/2026/05/19/nowcasting-country-level-trade-estimates-using-imf-portwatch-576176",
+      "document_url": "https://www.imf.org/-/media/files/publications/wp/2026/english/wpiea2026099-source-pdf.pdf",
+      "reviewed_content": "AIS 추정 톤수를 단가와 결합한 후 가격 효과를 조정해 국가 무역을 nowcast하는 방법. 국가별 성능과 운송 수단의 차이가 있으며 해상 추정치를 모든 상품 교역량으로 치환할 수 없다.",
+      "changes_to_design": "PortWatch는 무역 차질 보조 지표로 두고 HS 반도체 교역이나 기업 출하와 분리한다.",
+      "caveat": "연구자 working paper이며 개별 국가의 공식 통관 수치를 대체하지 않는다."
+    },
+    {
+      "id": "imf-portwatch-global-2025",
+      "kind": "working_paper",
+      "title": "Nowcasting Global Trade from Space",
+      "institution": "IMF",
+      "authors": [
+        "Serkan Arslanalp",
+        "Seung Mo Choi",
+        "Parisa Kamali",
+        "Robin Koepke",
+        "Matthew McKetty",
+        "Michele Ruta",
+        "Mario Saraiva",
+        "Alessandra Sozzi",
+        "Jasper Verschuur"
+      ],
+      "publication_date": "2025-05-16",
+      "accessed_on": "2026-10-03",
+      "source_url": "https://www.imf.org/en/publications/wp/issues/2025/05/16/nowcasting-global-trade-from-space-566957",
+      "document_url": "https://www.imf.org/-/media/files/publications/wp/2025/english/wpiea2025093-print-pdf.pdf",
+      "reviewed_content": "물리적 운송 톤수, 단가로 추정한 교역금액, 가격 조정 교역량의 세 단계를 구분한다. 컨테이너 상하차 상쇄, 밸러스트 및 항만 범위가 추정 오차와 개정의 원인이다.",
+      "changes_to_design": "톤수·금액·가격 조정량의 이름을 별도로 저장하고 자료 개정 이력을 남긴다.",
+      "caveat": "상품별 생산이나 AI 고객 수요의 직접 측정이 아니다."
+    },
+    {
+      "id": "oecd-semiconductor-chain-2025",
+      "kind": "policy_paper",
+      "title": "Mapping the semiconductor value chain: Working towards identifying dependencies and vulnerabilities",
+      "institution": "OECD",
+      "publication_date": "2025-06-24",
+      "accessed_on": "2026-10-03",
+      "source_url": "https://doi.org/10.1787/4154cdbf-en",
+      "document_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/06/mapping-the-semiconductor-value-chain_5ba52971/4154cdbf-en.pdf",
+      "reviewed_content": "여러 제조 단계와 투입물의 국가 간 의존성을 교역·투입산출 구조와 함께 분석한다. 교역 바구니와 산업 집계는 개별 고객·기업·AI 제품의 거래와 해상도를 달리한다.",
+      "changes_to_design": "국가-공정-물질의 구조적 집중도를 먼저 정의하고 일별 ETF, 분기 현금, 월별 무역을 그 위에 별도 층으로 연결한다.",
+      "caveat": "ICIO의 시차와 산업 집계를 실시간 기업 간 거래로 해석하지 않는다."
+    },
+    {
+      "id": "jrc-eu-semiconductors-2025",
+      "kind": "research_report",
+      "title": "EU’s strengths and weaknesses in the global semiconductor sector",
+      "institution": "European Commission Joint Research Centre",
+      "authors": [
+        "Paolo Bonnet",
+        "Andrea Ciani",
+        "Jozsef Molnar",
+        "Michela Nardo"
+      ],
+      "publication_date": "2025-03-11",
+      "accessed_on": "2026-10-03",
+      "source_url": "https://publications.jrc.ec.europa.eu/repository/handle/JRC141323",
+      "doi": "10.2760/6302476",
+      "reviewed_content": "지역의 반도체 강점과 취약성을 공정·제품·산업별로 비교한다. 반도체 장비나 자동차용 반도체의 강점은 최첨단 AI 로직 공급과 동일한 범주가 아니다.",
+      "changes_to_design": "로직·메모리·장비·전력·RF·광통신을 분리해 관계 노드와 무역 바구니를 설계한다.",
+      "caveat": "국가의 포괄 반도체 점유율을 특정 AI 제품 경쟁력으로 치환하지 않는다."
+    },
+    {
+      "id": "usgs-mcs-2026",
+      "kind": "statistical_report",
+      "title": "Mineral Commodity Summaries 2026",
+      "institution": "USGS",
+      "publication_date": "2026-02-06",
+      "accessed_on": "2026-10-03",
+      "source_url": "https://www.usgs.gov/publications/mineral-commodity-summaries-2026",
+      "document_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf",
+      "doi": "10.3133/mcs2026",
+      "reviewed_content": "갈륨 금속과 GaAs 웨이퍼의 무역 품목을 분리하며 희토류의 물질 형태·원산지와 REO 환산량을 구분한다. 개별 중희토류를 식별하는 국내 교역 코드가 없는 한계도 설명한다.",
+      "changes_to_design": "갈륨 금속, undoped GaAs, doped GaAs를 독립 바구니로 관찰하고 희토류 금속/산화물/화합물 및 완제품 내 내재량을 분리한다.",
+      "caveat": "2026은 발행 빈티지이고 표의 최근 생산/소비 관찰은 주로 2025이다. 추정치, 결측, 비공개, 수정판을 보존해야 한다. 원본 PDF 직접 열기는 일부 403이었으며 공식 검색 색인 및 공식 장별 링크를 대조했다. 최신 수정판 번호를 확인한 것으로 주장하지 않는다."
+    },
+    {
+      "id": "uncomtrade-methodology",
+      "kind": "technical_methodology",
+      "title": "Methodology Guide for Comtrade Plus",
+      "institution": "United Nations Statistics Division / UN Comtrade",
+      "publication_date": null,
+      "publication_date_note": "문서에서 일자 확정 안 됨. 문서의 시스템 업그레이드 연도와 발행일을 혼동하지 않는다.",
+      "accessed_on": "2026-10-03",
+      "source_url": "https://comtradeapi.un.org/files/v1/app/wiki/MethodologyGuideforComtradePlus.pdf",
+      "reviewed_content": "수출 FOB, 수입의 CIF/FOB 및 primaryValue 정의, 순중량과 수량 단위, 운송 수단·통관 절차·파트너 정의를 설명한다.",
+      "changes_to_design": "가격을 제거한 생산량이라는 이름 대신 통관 수량/순중량을 명시하고 단위와 추정 여부를 포함한다.",
+      "caveat": "추정/전환 분류, 재수출 및 가공무역으로 관찰값이 직접 생산과 다를 수 있다."
+    },
+    {
+      "id": "sec-nport-readme",
+      "kind": "technical_methodology",
+      "title": "NPORT Data Sets readme",
+      "institution": "SEC",
+      "publication_date": null,
+      "publication_date_note": "PDF에 확정 발행일 없음. 데이터셋 안내 페이지의 마지막 검토일은 별도 기록한다.",
+      "landing_last_reviewed": "2026-06-30",
+      "accessed_on": "2026-10-03",
+      "source_url": "https://www.sec.gov/files/nport_readme.pdf",
+      "landing_url": "https://www.sec.gov/data-research/sec-markets-data/form-n-port-data-sets",
+      "reviewed_content": "공개 TSV의 SUBMISSION, FUND_REPORTED_INFO, FUND_REPORTED_HOLDING, IDENTIFIERS 표와 결합 키를 확인했다. 잔고의 UNIT은 주수, 원금, 기타 단위일 수 있다.",
+      "changes_to_design": "보유수량 및 식별자를 운용사 CSV와 교차검증하며 공시 보고일/제출일을 별도 유지한다.",
+      "caveat": "공개 readme에서 판매/환매 현금 flow 필드를 확인하지 못했다. 월말 자료라는 이유로 매월 즉시 공개되는 현금 API라고 부르면 안 된다."
+    }
+  ],
+  "capital_documentation": [
+    {
+      "name": "UN Comtrade API, subscription tiers and official Python client",
+      "source_urls": [
+        "https://uncomtrade.org/docs/un-comtrade-api/",
+        "https://uncomtrade.org/docs/subscriptions/",
+        "https://uncomtrade.org/docs/what-is-data-preview/",
+        "https://github.com/uncomtrade/comtradeapicall/blob/main/src/comtradeapicall/PreviewGet.py"
+      ],
+      "accessed_on": "2026-10-03",
+      "version_or_date": null,
+      "verified": "공식 조직 코드가 public/v1/preview endpoint와 GET 파라미터를 사용한다. guest는 단일 기간·단일 상품 미리보기 500행, 무료 등록 tier는 호출당 100,000행/일 500회/초 1회. Premium bulk·async 권한을 무료로 오인하지 않는다.",
+      "reproducibility_note": "GitHub main 경로는 변경될 수 있다. 운영 전 commit hash를 고정한다. 공식 무료 한도는 문서 기준이며 단일 소량 성공은 최대 한도 검증이 아니다."
+    },
+    {
+      "name": "USITC DataWeb Query API",
+      "source_urls": [
+        "https://www.usitc.gov/applications/dataweb/api/dataweb_query_api.html"
+      ],
+      "accessed_on": "2026-10-03",
+      "version_or_date": null,
+      "verified": "무료 계정/Login.gov 및 Bearer API token 필요. token은 6개월 후 만료. saved query payload로 /api/v2/report2/runReport 사용. 응답 dto.tables[*].column_groups 및 row_groups[*].rowsNew[*].rowEntries[*].value 파싱.",
+      "reproducibility_note": "공식 페이지에 수치형 호출 한도는 확인되지 않았다. 예제의 TLS 검증 비활성화 설정은 복제하지 않는다. 키가 필요한 endpoint는 실행하지 않았다."
+    },
+    {
+      "name": "SEC public EDGAR data APIs and fair access",
+      "source_urls": [
+        "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "https://www.sec.gov/about/developer-resources"
+      ],
+      "accessed_on": "2026-10-03",
+      "version_or_date": "API 페이지 발행 2024-06-06, 마지막 검토 2025-04-08",
+      "verified": "data.sec.gov 공개 읽기 API는 계정/키 불필요. 표준 taxonomy와 전체 법인 context만 API로 집계한다. 식별 User-Agent와 전체 사용자 합산 초당 10회 이하 정책. API의 공시 후 갱신 속도와 분기 관찰 시차를 분리한다.",
+      "reproducibility_note": "커스텀/사업부/계약별 사실은 companyfacts만으로 수집되지 않는다. 본 작업에서는 문서만 검토하고 SEC API 표본 요청은 하지 않았다."
+    },
+    {
+      "name": "Active ETF issuer source and ETF creation mechanism",
+      "source_urls": [
+        "https://www.ishares.com/us/products/339081/ishares-a-i-innovation-and-tech-active-etf",
+        "https://www.ishares.com/us/products/339081/ishares-a-i-innovation-and-tech-active-etf/latest-holdings.csv",
+        "https://www.sec.gov/investment/exchange-traded-funds-small-entity-compliance-guide",
+        "https://helpcenter.ark-funds.com/what-are-the-top-holdings-of-your-etfs"
+      ],
+      "accessed_on": "2026-10-03",
+      "version_or_date": "BAI CSV 관찰 기준일 2026-10-01",
+      "verified": "BAI 공개 CSV에서 발행 주수·보유수량·비중·환율·시장통화를 확인했다. SEC 안내는 AP 설정/환매에 증권 바구니와 현금 조정이 가능함을 설명한다. ARK 일별 보유 업데이트 안내는 확인했지만 ARK CSV 접근 성공으로 주장하지 않는다.",
+      "reproducibility_note": "CSV와 NAV의 기준일을 맞춰야 하며 issuer holdings book과 NAV accounting book/공정가치 조정이 다를 수 있다. 공개 다운로드에 명시적 숫자형 rate limit 또는 안정적 API SLA는 확인되지 않았다."
+    },
+    {
+      "name": "PortWatch expert public R tutorial and provider schema",
+      "source_urls": [
+        "https://bookr.basbakker.us/5-Data/7_PortWatch.html",
+        "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0",
+        "https://portwatch.imf.org/api/feed/definition/"
+      ],
+      "accessed_on": "2026-10-03",
+      "version_or_date": "서비스 metadata의 Data Last Edit Date 2026-09-29; tutorial 발행일 미확정",
+      "verified": "튜토리얼은 IMF PortWatch 팀 Mario Saraiva/Alessandra Sozzi와 함께 개발되었다고 명시한다. 공식 공급자 ArcGIS Daily_Ports_Data schema에서 portid, ISO3, date, portcalls, import, export 및 MaxRecordCount=1000을 확인했다.",
+      "reproducibility_note": "튜토리얼의 Daily_Trade_Data 예시와 현재 실제 Daily_Ports_Data 서비스명을 혼용하지 않는다. 이 작업에서는 schema만 확인하고 PortWatch 데이터 쿼리는 시험하지 않았다. 명시적 일일 호출 한도는 확인되지 않았다."
+    },
+    {
+      "name": "OECD ICIO release and revisions",
+      "source_urls": [
+        "https://www.oecd.org/en/data/datasets/inter-country-input-output-tables.html"
+      ],
+      "accessed_on": "2026-10-03",
+      "version_or_date": "2025 edition, 2026-01 second revision",
+      "verified": "1995–2022의 과거 투입산출 CSV와 국가/산업 집계를 제공한다. 2025라는 edition은 2025 현재 생산 관찰을 의미하지 않는다.",
+      "reproducibility_note": "이번 파일은 ICIO를 구조적 분류 근거로만 사용한다. 특정 SDMX query 또는 기업별 주문 API를 검증한 것으로 주장하지 않는다."
+    }
+  ],
+  "power_reviews": [
+    {
+      "id": "iea_2026",
+      "author": "International Energy Agency",
+      "title": "Key Questions on Energy and AI",
+      "published_on": "2026-04-16",
+      "source_url": "https://www.iea.org/reports/key-questions-on-energy-and-ai",
+      "read_url": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary",
+      "read_extent": "공식 executive summary 원문",
+      "evidence_type": "model/scenario and author synthesis",
+      "free_access": "공개 웹; CC BY 4.0",
+      "coverage": "세계 AI·데이터센터·전력; 여러 산업 자료의 합성",
+      "method_relevant": "장비·작업 효율이 개선되어도 추론 깊이와 작업 종류가 달라지므로 토큰 수나 요청 수를 고정 kWh로 환산할 수 없다. 랙 전력 밀도·수요 변동·접속 용량과 실제 부하의 차이를 따로 다룬다.",
+      "change_to_our_method": "IEA 전망은 세계지도 시나리오 배경으로만 표시하고 개별 고객의 실제 구매·가동 이벤트와 분리한다.",
+      "what_not_available": "전 세계 사업장별 실시간 AI 부하 공개 원장"
+    },
+    {
+      "id": "lbnl_dc_2025_update",
+      "author": "Lawrence Berkeley National Laboratory / US Department of Energy",
+      "title": "United States Data Center Energy Usage Report: 2025 Update",
+      "published_on": "2026-06",
+      "source_url": "https://www.energy.gov/documents/united-states-data-center-energy-usage-report-2025-update",
+      "permalink": "https://escholarship.org/uc/item/33m6w3x0",
+      "read_extent": "공식 PDF 36쪽 원문",
+      "evidence_type": "bottom-up modeled historical estimates and future scenarios",
+      "historical_through": "2024",
+      "projection_start": "2025",
+      "free_access": "보고서 공개; underlying IDC/Omdia 등 상용 원자료의 무료 접근은 확인되지 않음",
+      "coverage": "미국 데이터센터; 암호화폐 채굴 제외",
+      "method_relevant": "장비 재고는 이전 재고+출하−퇴역으로 계산하고 이용률·전력·PUE 가정으로 사이트 전력량을 추정한다. 2025년도 일부 전망이며 2025 Q3까지만 장비 출하 자료가 반영되어 있다.",
+      "change_to_our_method": "GPU 출하·설치·이용률·PUE·계통 피크를 서로 다른 테이블로 보존한다. 보고서가 무료라고 입력 데이터까지 무료 API로 얻는다고 표시하지 않는다.",
+      "what_not_available": "시설별 계량과 개별 AI 작업의 전력 소비"
+    },
+    {
+      "id": "lbnl_queued_2026",
+      "author": "Lawrence Berkeley National Laboratory",
+      "title": "Queued Up: 2026 Edition, Characteristics of Power Plants Seeking Transmission Interconnection",
+      "published_on": "2026-05",
+      "observation_asof": "2025-12-31",
+      "source_url": "https://emp.lbl.gov/publications/queued-2026-edition-characteristics",
+      "update_hub": "https://emp.lbl.gov/queues",
+      "read_extent": "공식 발간 페이지의 범위·방법·핵심 결과; XLS 다운로드 링크 존재 확인",
+      "evidence_type": "observed generation queue histories with cohort analysis",
+      "free_access": "공개 XLSX/codebook/slide deck; CC BY 4.0",
+      "coverage": "발전·저장 접속 신청; 부하 신청·배전 접속·behind-the-meter 제외",
+      "method_relevant": "계약 체결도 상업운전과 다르며 철회와 관측 종료 시점까지 미완료인 프로젝트를 구분해야 한다. 복합 발전·저장 사업을 같은 프로젝트 용량으로 중복 집계하지 않는다.",
+      "change_to_our_method": "generation_queue와load_interconnection을 별도 관계로 만들고 발전 큐의 완료율을 데이터센터 완료 확률로 전용하지 않는다.",
+      "what_not_available": "데이터센터 접속 신청 수요"
+    },
+    {
+      "id": "epri_2026",
+      "author": "Electric Power Research Institute",
+      "title": "Powering Intelligence 2026",
+      "published_on": "2026-02-25",
+      "source_url": "https://powering-intelligence.epri.com/",
+      "read_url": "https://powering-intelligence.epri.com/executive-summary.html",
+      "read_extent": "공식 executive summary 검색 본문 및 웹사이트가 직접 제공하는 정적 텍스트 자산 읽기; JS 실행 없음",
+      "evidence_type": "commercial project pipeline scenarios and energy-system modeling",
+      "free_access": "공개 웹 보고서; 상용 프로젝트 원자료 접근은 확인되지 않음",
+      "coverage": "미국 주별 데이터센터, 소형 시설 및 암호화폐 채굴 포함",
+      "method_relevant": "명목 IT 용량에서 냉각·기타 부하, 램프, 연간 부하율을 가정하여 피크와 TWh를 추정한다. 건설·고도 계획·초기 계획 단계에 시나리오별 실현 가정을 둔다.",
+      "change_to_our_method": "EPRI 명목 IT GW와 LBNL 사이트 전력 TWh를 직접 평균하지 않는다. 모델에서 지정한 실현 비중을 관측된 전환율로 취급하지 않는다.",
+      "what_not_available": "공개된 개별 사업장의 실제 계량과 검증된 실현 확률"
+    },
+    {
+      "id": "uptime_2026",
+      "author": "Uptime Institute",
+      "title": "16th Annual 2026 Global Data Center Survey",
+      "published_on": "2026-07-28",
+      "dataset_metadata_date": "2026-05-01",
+      "source_url": "https://uptimeinstitute.com/about-ui/press-releases/16th-annual-2026-global-data-center-survey-deployment-of-high-density-racks-rising-fast-operators-face-continued-recruiting-and-retention-pressures",
+      "report_landing": "https://uptimeinstitute.com/resources/research-and-reports/uptime-institute-global-data-center-survey-results-2026",
+      "dataset_landing": "https://intelligence.uptimeinstitute.com/resource/2026-global-data-center-survey-results-and-crosstabs",
+      "read_extent": "저자의2026-07-28 공개 발표 원문(HTTP200 다운로드), 설문 소개/상품 메타데이터. 전체보고서/교차표 미접근.",
+      "evidence_type": "respondent survey",
+      "free_access": "공개 발표 확인; 요약 PDF는 폼, 전체 32쪽 및 교차표는 고객/평가 접근. 신규 폼 제출 없음",
+      "coverage": "자발적 응답 표본; 시설 전수조사 아님",
+      "method_relevant": "온라인/이메일로800명이상소유자·운영자가응답했고문항별n이다르다. 자발적응답표본의제약인식은병목가설에유용하지만세계시설전수사용량·AI비중이아니다.",
+      "change_to_our_method": "설문은 병목 가설·질문 생성에 사용하고 숫자는 meter/공시 이벤트와 같은 신뢰도로 표시하지 않는다.",
+      "what_not_available": "공개 재수집 가능한 시설별 전력/랙 밀도 원장"
+    },
+    {
+      "id": "gridstatus_oss",
+      "author": "GridStatus open-source maintainers",
+      "title": "gridstatus Python library: SPP implementation and README",
+      "published_on": null,
+      "source_url": "https://github.com/gridstatus/gridstatus",
+      "read_url": "https://github.com/gridstatus/gridstatus/blob/main/gridstatus/spp.py",
+      "documentation_url": "https://opensource.gridstatus.io/en/stable/",
+      "read_extent": "공식 저장소 README와 SPP load/forecast 구현",
+      "evidence_type": "source code for public ISO data retrieval",
+      "free_access": "OSS와 원 ISO 공개 파일은 키 없이 가능한 경로가 존재. 모든 메서드가 무인증인 것은 아님; hosted GridStatus API와 별개",
+      "coverage": "ISO별 부하·발전 구성·가격·예측; 개별 데이터센터는 아님",
+      "method_relevant": "SPP actual load는 5분 구간, 중기 예측은 시간 구간과 PublishTime을 보존한다. 소스별 시간대/DST·보존 기간·스키마 차이를 처리해야 한다.",
+      "change_to_our_method": "무료 수집 어댑터 후보로 사용하고 패키지 버전/소스 시간대/게시 시각을 저장한다. 합계 부하를 AI 수요로 이름 붙이지 않는다.",
+      "what_not_available": "AI 고객별 계량; hosted API의 무료 보장"
+    },
+    {
+      "id": "lbnl_large_load_review",
+      "author": "Lawrence Berkeley National Laboratory",
+      "title": "Literature Review on Large Load Interconnection",
+      "published_on": null,
+      "source_url": "https://eta-publications.lbl.gov/sites/default/files/2026-03/lbnl_lllreview_feb_20update_2026_final_1.pdf",
+      "date_note": "파일 경로 2026-03; 이름은 Feb 20 update. 정식 발간일은 이 파일만으로 확정하지 않음.",
+      "read_extent": "공식 PDF의 대형 부하 수요 예측 및 접속 방법 검토",
+      "evidence_type": "literature review; not a project-level observational dataset",
+      "free_access": "공개 PDF",
+      "coverage": "대형 부하·전력 계획·연계 절차",
+      "method_relevant": "큰 부하의 신청·예측·연계 절차는 지역별로 다르므로 표준 용량 한 칸으로 합치면 투자 의무와 가동 조건을 잃는다.",
+      "change_to_our_method": "행위자·계약·규제 승인·접속·운영 이벤트를 분리한다.",
+      "what_not_available": "전국의 통일된 고객별 load queue 원장"
+    }
+  ],
+  "power_cases": [
+    {
+      "id": "aep_ohio",
+      "actors": {
+        "buyer": "공개되지 않은 데이터센터 소유자/개발사 집계",
+        "seller": "AEP Ohio",
+        "regulator": "Public Utilities Commission of Ohio",
+        "grid_operator": "PJM Interconnection"
+      },
+      "docket": "24-508-EL-ATA",
+      "source_url": "https://www.aepohio.com/company/about/rates/data-center-tariff/",
+      "tariff_adopted_on": "2025-07-09",
+      "tariff_effective_on": "2025-07-23",
+      "update_routes": [
+        {
+          "method": "public webpage → dated PDF/PUCO filing hyperlinks",
+          "url": "https://www.aepohio.com/company/about/rates/data-center-tariff/",
+          "access": "무인증 공개; 신청 PowerClerk 및 고객 계정은 사용하지 않음",
+          "frequency": "사건별; 갱신 SLA 미공개"
+        },
+        {
+          "method": "company announcement",
+          "url": "https://www.aepohio.com/company/news/view?releaseID=10753",
+          "published_on": "2026-02-13",
+          "observed_asof": "2026-02-12"
+        },
+        {
+          "method": "original load study letter PDF",
+          "url": "https://www.aepohio.com/lib/docs/ratesandtariffs/ohio/AEP-Ohio_DCT_Load_Study_Letter_25.11.7.pdf",
+          "published_on": "2025-11-07",
+          "access_verified": "web 도구에서 6쪽 읽음; 별도 다운로드 시 timeout"
+        },
+        {
+          "method": "PUCO filed update",
+          "url": "https://dis.puc.state.oh.us/ViewImage.aspx?CMID=A1001001A26B12B61453D00940",
+          "published_on": "2026-02-12",
+          "access_verified": "URL 확인; 본 조회에서 Request Rejected. 원문 수치는 회사 공식 발표로 교차 확인. PUCO 원문을 읽었다고 주장하지 않음"
+        }
+      ],
+      "observations": [
+        {
+          "stage_raw": "requests before adoption of Data Center Tariff",
+          "value": 30000,
+          "unit": "MW",
+          "precision": "approximate; company also says more than 30,000",
+          "observed_asof": null,
+          "cohort": "pre-tariff interest/request aggregate",
+          "basis": "announced requested power; not load"
+        },
+        {
+          "stage_raw": "asked and paid for study",
+          "value": 13022.7,
+          "unit": "MW",
+          "site_count": 36,
+          "application_deadline": "2025-09-08",
+          "document_on": "2025-11-07",
+          "cohort": "36 new sites entering the tariff study process; separates legacy contracts",
+          "basis": "study-request capacity; actual study cash amount not disclosed"
+        },
+        {
+          "stage_raw": "signed binding contracts under new tariff",
+          "value": 5642,
+          "unit": "MW",
+          "observed_asof": "2026-02-12",
+          "cohort": "new Data Center Tariff contracts reported in the update",
+          "basis": "contracted projects; customer-level collateral cash amount/status not public"
+        },
+        {
+          "stage_raw": "contracts signed before tariff",
+          "value": 12219,
+          "unit": "MW",
+          "observed_asof": "2026-02-12",
+          "cohort": "legacy pre-tariff signed contracts",
+          "basis": "contracted projects; not current demand"
+        },
+        {
+          "stage_raw": "total contracted data center projects",
+          "value": 17861,
+          "unit": "MW",
+          "observed_asof": "2026-02-12",
+          "cohort": "reported new plus legacy contract aggregate",
+          "target_period_end": "2035",
+          "basis": "progressive planned service; not simultaneous realized load"
+        }
+      ],
+      "constraints": {
+        "study_threshold": "25,000 kW or above requires study fee in the current process",
+        "regional_upgrade": "letter says all 36 sites require regional transmission upgrades",
+        "first_service_condition": "PJM 2025-W1-570 or an equivalent selected upgrade: Q4 2031 planning assumption for clusters 1 and 3",
+        "additional_constraint": "cluster 2 additional regional upgrades: 2033 planning estimate",
+        "generation_adequacy": "letter assumes sufficient generation; AEP Ohio does not own generation assets and the study does not establish generation adequacy or price",
+        "financial_event": "LOA can require reimbursement for local investment if cancellation occurs before energization; ESA ramp period and collateral or exemption are separate conditions",
+        "date_revision": "service dates and required works can change with signed contracts and PJM regional planning"
+      },
+      "forbidden_calculations": [
+        "5642/13022.7 as a measured cohort conversion rate: individual project matching/date definitions not provided",
+        "17861MW as today's electricity usage",
+        "MW × tariff or collateral terms as cash received without disclosed amount and instrument",
+        "flat 85% minimum-energy usage or revenue formula without reading the current tiered Schedule DCT"
+      ],
+      "inference": "약정 강화는 계획의 신뢰도를 높일 수 있는 선행 신호다. 계약 뒤 실제 공사·통전·계량을 따라가야 수요 실현을 확인할 수 있다."
+    },
+    {
+      "id": "pjm_observed_dc_load",
+      "actors": {
+        "supplier_data": "EDC/LSE",
+        "grid_operator": "PJM Interconnection",
+        "buyer": "대부분 고객 정체 비공개 집계"
+      },
+      "source_url": "https://www.pjm.com/planning/resource-adequacy-planning/load-forecast-dev-process",
+      "report_url": "https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-load-forecast-accuracy-report.pdf",
+      "file_url": "https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-accuracy-report.xlsx",
+      "published_on": "2026-05-29",
+      "observation_period": "XLS 역사 연간 July Peak는 최대2025년, 미래 forecast는 최대2046년. PDF 월별 DC 그림은 별도 자료이며 EDC/LSE 제공 범위에 한정.",
+      "measured_definition": "자동 수집 가능: XLS의 Zone/Year/Metric/Load MW에 있는 연간 Historical July Peak 및 vintage별 Load Forecast July Peak. 연간 원자료는 large-load adjustment로 관리한다. PDF의 Monthly Data Center Load Peak는 DC-filtered actual monthly peak/average daily peak로 별도 정의되지만 월별 raw series는 이 XLS에 없다.",
+      "coverage_gap": "역사 자료를 제공하지 않은 zone/EDC/LSE가 있고 단일 고객에 귀속되는 값은 억제된다. AEP zone과 AEP Ohio 법인 pipeline의 모집단은 같지 않다.",
+      "update_route": "공식 hub의 Accuracy Report PDF/Data XLS 게시날짜와 링크를 감시해 버전별 원본/해시 저장. XLS 연간 수치만 파일에서 자동 추출한다. 월별 PDF 곡선은 별도 정성 검토하며 정확한 월별 수치 자동수집은 raw source 확보 전 보류한다.",
+      "collection_status": "HTTP200 XLS50,175bytes; 전체23개시트·모든행의Metric확인. 월열/월별Metric없음. 스키마·원본SHA256 저장.",
+      "public_customer_load_letters": "이 집계 자료를 얻는 데 고객 계정 불필요; 개별 load letter 원본 공개 여부는 확인되지 않음",
+      "file_schema_verification": {
+        "file_url": "https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-accuracy-report.xlsx",
+        "published_on": "2026-05-29",
+        "download_checked_asof": "2026-10-03",
+        "http_status": 200,
+        "bytes": 50175,
+        "sha256": "e0f24fe03a79af016826089c653b2c2e15e55edcb04a7bd4be5fa643136425fc",
+        "sheet_count": 23,
+        "columns": [
+          "Zone",
+          "Year",
+          "Metric",
+          "Load MW"
+        ],
+        "all_metric_values": [
+          "2023 Load Forecast July Peak",
+          "2024 Load Forecast July Peak",
+          "2025 Load Forecast July Peak",
+          "2026 Load Forecast July Peak",
+          "Historical July Peak"
+        ],
+        "monthly_fields_present": false,
+        "annual_historical_last_year": 2025,
+        "forecast_target_last_year": 2046,
+        "duplicates_in_sheet_zone_year_metric": 0,
+        "aggregation_warning": "RTO contains its constituent zones; DOM contains Dominion/NOVEC/ODEC etc. Do not sum parent and child sheets. Sheet DOM uses Zone=VEPCO, so sheet labels are not reliable canonical join keys.",
+        "actual_category_warning": "The workbook labels its series as Historical July Peak and forecast July Peak without a load-category column. The report calls the annual charts large-load adjustments. Do not rename the XLS annual values as a DC-only monthly meter series.",
+        "monthly_document_definition": "The PDF separately shows monthly DC-filtered historical actual peak and average daily peak where EDC/LSE data is available. No monthly raw fields were found in any of the XLS sheets.",
+        "examples": [
+          {
+            "sheet": "RTO",
+            "Zone": "RTO",
+            "Year": 2024,
+            "Metric": "Historical July Peak",
+            "Load MW": 6135.6272438
+          },
+          {
+            "sheet": "RTO",
+            "Zone": "RTO",
+            "Year": 2025,
+            "Metric": "Historical July Peak",
+            "Load MW": 8167.1738136
+          },
+          {
+            "sheet": "AEP",
+            "Zone": "AEP",
+            "Year": 2024,
+            "Metric": "Historical July Peak",
+            "Load MW": 839.4
+          },
+          {
+            "sheet": "AEP",
+            "Zone": "AEP",
+            "Year": 2025,
+            "Metric": "Historical July Peak",
+            "Load MW": 1726.1
+          },
+          {
+            "sheet": "DOM",
+            "Zone": "VEPCO",
+            "Year": 2024,
+            "Metric": "Historical July Peak",
+            "Load MW": 4534.0152438
+          },
+          {
+            "sheet": "DOM",
+            "Zone": "VEPCO",
+            "Year": 2025,
+            "Metric": "Historical July Peak",
+            "Load MW": 5563.1688136
+          }
+        ],
+        "sheet_schema": [
+          {
+            "sheet": "RTO",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 86,
+            "metric_values": [
+              "2023 Load Forecast July Peak",
+              "2024 Load Forecast July Peak",
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak",
+              "Historical July Peak"
+            ],
+            "historical_years": [
+              2014,
+              2015,
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "zone_values": [
+              "RTO"
+            ],
+            "target_year_min": 2014,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "AEP",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 81,
+            "metric_values": [
+              "2023 Load Forecast July Peak",
+              "2024 Load Forecast July Peak",
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak",
+              "Historical July Peak"
+            ],
+            "historical_years": [
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "zone_values": [
+              "AEP"
+            ],
+            "target_year_min": 2019,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "APS",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 74,
+            "metric_values": [
+              "2023 Load Forecast July Peak",
+              "2024 Load Forecast July Peak",
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "APS"
+            ],
+            "target_year_min": 2023,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "APS - FirstEnergy",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 73,
+            "metric_values": [
+              "2023 Load Forecast July Peak",
+              "2024 Load Forecast July Peak",
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "APS - FirstEnergy"
+            ],
+            "target_year_min": 2023,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "APS - REC",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 38,
+            "metric_values": [
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "APS - REC"
+            ],
+            "target_year_min": 2025,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "ATSI",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 42,
+            "metric_values": [
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "ATSI"
+            ],
+            "target_year_min": 2025,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "BGE",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 42,
+            "metric_values": [
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "BGE"
+            ],
+            "target_year_min": 2025,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "COMED",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 54,
+            "metric_values": [
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak",
+              "Historical July Peak"
+            ],
+            "historical_years": [
+              2014,
+              2015,
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "zone_values": [
+              "COMED"
+            ],
+            "target_year_min": 2014,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "DAYTON",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 39,
+            "metric_values": [
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "DAYTON"
+            ],
+            "target_year_min": 2027,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "DOM",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 86,
+            "metric_values": [
+              "2023 Load Forecast July Peak",
+              "2024 Load Forecast July Peak",
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak",
+              "Historical July Peak"
+            ],
+            "historical_years": [
+              2014,
+              2015,
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "zone_values": [
+              "VEPCO"
+            ],
+            "target_year_min": 2014,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "DOM - Dominion Energy",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 67,
+            "metric_values": [
+              "2024 Load Forecast July Peak",
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak",
+              "Historical July Peak"
+            ],
+            "historical_years": [
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "zone_values": [
+              "DOM Energy"
+            ],
+            "target_year_min": 2017,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "DOM - NOVEC",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 70,
+            "metric_values": [
+              "2024 Load Forecast July Peak",
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak",
+              "Historical July Peak"
+            ],
+            "historical_years": [
+              2014,
+              2015,
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "zone_values": [
+              "NOVEC"
+            ],
+            "target_year_min": 2014,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "DOM - ODEC",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 63,
+            "metric_values": [
+              "2024 Load Forecast July Peak",
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak",
+              "Historical July Peak"
+            ],
+            "historical_years": [
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "zone_values": [
+              "ODEC"
+            ],
+            "target_year_min": 2021,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "DOM - REC",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 58,
+            "metric_values": [
+              "2024 Load Forecast July Peak",
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "REC"
+            ],
+            "target_year_min": 2024,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "DQE",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 17,
+            "metric_values": [
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "DQE"
+            ],
+            "target_year_min": 2030,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "JCPL",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 18,
+            "metric_values": [
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "JCPL"
+            ],
+            "target_year_min": 2029,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "METED",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 18,
+            "metric_values": [
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "METED"
+            ],
+            "target_year_min": 2029,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "PECO",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 41,
+            "metric_values": [
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "PECO"
+            ],
+            "target_year_min": 2026,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "PEPCO",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 17,
+            "metric_values": [
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "PEPCO"
+            ],
+            "target_year_min": 2030,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "PEPCO - Exelon",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 16,
+            "metric_values": [
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "PEPCO - Exelon"
+            ],
+            "target_year_min": 2031,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "PEPCO - SMECO",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 17,
+            "metric_values": [
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "SMECO"
+            ],
+            "target_year_min": 2030,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "PL",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 42,
+            "metric_values": [
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak"
+            ],
+            "historical_years": [],
+            "zone_values": [
+              "PL"
+            ],
+            "target_year_min": 2025,
+            "target_year_max": 2046
+          },
+          {
+            "sheet": "PS",
+            "columns": [
+              "Zone",
+              "Year",
+              "Metric",
+              "Load MW"
+            ],
+            "data_rows": 65,
+            "metric_values": [
+              "2024 Load Forecast July Peak",
+              "2025 Load Forecast July Peak",
+              "2026 Load Forecast July Peak",
+              "Historical July Peak"
+            ],
+            "historical_years": [
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "zone_values": [
+              "PS"
+            ],
+            "target_year_min": 2019,
+            "target_year_max": 2046
+          }
+        ]
+      }
+    }
+  ],
+  "industry_usage": [
+    {
+      "id": "openrouter-usage",
+      "title": "OpenRouter model usage and Datasets API",
+      "url": "https://openrouter.ai/docs/api/api-reference/datasets/daily-token-totals-for-top-50-models",
+      "public_url": "https://openrouter.ai/rankings",
+      "access": "Public rankings readable without login; API requires valid OpenRouter key. Dataset API fee not explicitly established in reviewed documentation; no paid access authorized.",
+      "license": "CC BY 4.0 with OpenRouter attribution and snapshot as_of",
+      "verified_detail": "Official documentation and live public rankings reviewed; public page showed usage through 2026-10-01. Authenticated API not tested.",
+      "what_to_adopt": "Model-day telemetry with source as_of and explicit aggregate remainder; exact and sampled slices kept apart.",
+      "limitation": "Platform-routed public usage only; tokens are not users, revenue, GPU hours or global demand; private usage excluded and provider tokenizers differ."
+    },
+    {
+      "id": "openrouter-session",
+      "title": "OpenRouter cost per session by harness and model",
+      "url": "https://openrouter.ai/docs/api/api-reference/datasets/cost-per-session-by-harness-and-model",
+      "access": "Key required; fee not explicitly established in reviewed documentation",
+      "license": "CC BY 4.0 with attribution",
+      "verified_detail": "Official endpoint and example fields reviewed, no authenticated retrieval",
+      "what_to_adopt": "Compare median session spend at a fixed application, model and turn-range; preserve meta.window_days and window_end_date.",
+      "limitation": "No session counts in reviewed response; median cannot be multiplied into total market spend. Weekly refreshed selected public harnesses only."
+    },
+    {
+      "id": "artificial-analysis",
+      "title": "Artificial Analysis free Data API",
+      "url": "https://artificialanalysis.ai/api-reference/",
+      "access": "Free account and x-api-key; 1000 requests/day",
+      "license": "Attribution required; Terms of Use and Data Platform Terms apply",
+      "verified_detail": "Official auth, limits, endpoint and fields reviewed; no new account/key or authenticated query",
+      "what_to_adopt": "Stable model/creator IDs and matched quality-price-speed comparisons as efficiency controls.",
+      "limitation": "Benchmarks and posted prices do not observe model adoption, revenue, paid demand or hardware utilization."
+    },
+    {
+      "id": "fred-semi",
+      "title": "Federal Reserve semiconductor and electronic component activity via FRED",
+      "url": "https://fred.stlouisfed.org/series/IPG3344S",
+      "other_url": "https://fred.stlouisfed.org/series/CAPUTLG3344S",
+      "access": "Public series pages; existing FRED key available but this current series API query not run",
+      "license": "Check original series source and FRED terms for reuse",
+      "verified_detail": "Official series IDs, units, source, frequency and NAICS scope reviewed",
+      "what_to_adopt": "Broad production and utilization confirmation, plus vintage awareness.",
+      "limitation": "US NAICS 3344 includes other electronic components; not AI chips, chip counts, individual fab capacity or global semiconductor production."
+    },
+    {
+      "id": "fred-electrical-orders",
+      "title": "Census electrical equipment unfilled orders via FRED",
+      "url": "https://fred.stlouisfed.org/series/A35SUO",
+      "access": "Public series page; FRED API with a registered provider API key, current query untested",
+      "license": "Original source and FRED terms",
+      "verified_detail": "Monthly, seasonally adjusted USD-million unfilled orders, Census M3 source reviewed",
+      "what_to_adopt": "Broad electrical equipment demand/backlog context paired with supplier-specific orders and cancellations.",
+      "limitation": "Electrical equipment, appliances and components; cannot isolate transformers, AI customers or units. Stock backlog is not current cash flow."
+    },
+    {
+      "id": "census-m3",
+      "title": "Census M3 data and methodology",
+      "url": "https://www.census.gov/manufacturing/m3/data/index.html",
+      "method_url": "https://www.census.gov/manufacturing/m3/definitions/index.html",
+      "history_url": "https://www.census.gov/manufacturing/m3/historical/timeseries.html",
+      "auth_url": "https://www.census.gov/library/video/2026/adrm/requesting-a-census-data-api-key.html",
+      "access": "Public XLS/PDF downloads; data API requires free Census key under May 2026 policy; metadata accessible without key",
+      "license": "Public government statistics; preserve source definitions",
+      "verified_detail": "Definitions, free files, historical discontinuation and current key rule reviewed; no data API query",
+      "what_to_adopt": "New orders net of cancellations, shipments and backlog as separate concepts; store revisions.",
+      "limitation": "Standalone semiconductor M3 industry estimate stopped in April 2010. Current broad aggregates cannot be labeled semiconductor-specific. Shipments are money values, not production counts."
+    },
+    {
+      "id": "seaj-billings",
+      "title": "SEAJ Japanese semiconductor equipment billings",
+      "url": "https://www.seaj.or.jp/english/statistics/index.html",
+      "access": "Free public monthly PDF summary; detailed data requires membership",
+      "license": "SEAJ restricts reproduction/commercial secondary use without permission; free reading is not an unrestricted republication license",
+      "verified_detail": "Official statistics and September 18 2026 update notice reviewed; current PDF data not extracted",
+      "what_to_adopt": "Japanese-headquartered manufacturer equipment billings, three-month moving average; preserve currency and averaging window.",
+      "limitation": "Billings confirm delivered/invoiced equipment activity and are not booking orders, AI-specific demand or fab readiness."
+    },
+    {
+      "id": "semi-availability",
+      "title": "SEMI equipment data availability and discontinued reports",
+      "url": "https://www.semi.org/en/products-services/market-data/equipment/billings-report",
+      "access": "Free summaries and periodic press releases; detailed FabView/World Fab Forecast/EMDS are paid",
+      "license": "Provider terms; licensed products not integrated",
+      "verified_detail": "North American Book-to-Bill stopped in 2017 with last bookings December 2016; free monthly billings press releases stopped February 2022",
+      "what_to_adopt": "Use detailed SEMI fab dimensions as a model for our facility schema, and separately published free summaries as context.",
+      "limitation": "Do not promise a free current North America Book-to-Bill API or reuse paid data without rights."
+    },
+    {
+      "id": "wsts",
+      "title": "WSTS forecasts and market statistics",
+      "url": "https://www.wsts.org/61/Forecasts",
+      "stats_url": "https://www.wsts.org/61/MARKET-STATISTICS",
+      "access": "Condensed forecast press releases free; full forecast and detailed monthly shipment statistics licensed",
+      "license": "WSTS publication and reproduction terms",
+      "verified_detail": "Official free condensed vs licensed detailed distinction reviewed",
+      "what_to_adopt": "Separate forecast scenarios from observed shipments; product and region taxonomy useful.",
+      "limitation": "Free press headlines are not a complete company/product-level monthly API."
+    },
+    {
+      "id": "mckinsey-transformers",
+      "title": "McKinsey: The transformer supercycle",
+      "url": "https://www.mckinsey.com/industries/electric-power-and-natural-gas/our-insights/the-transformer-supercycle-why-demand-is-outrunning-supply",
+      "access": "Public original research article",
+      "license": "Copyrighted article; use attributed framework, not bulk republication",
+      "verified_detail": "Original September 2026 analysis reviewed; supplier examples, electrical-steel input, qualification and commissioning constraints discussed",
+      "what_to_adopt": "Add transformer class, electrical steel, qualified suppliers, delivery/acceptance and equipment factory commissioning to bottleneck branches.",
+      "limitation": "Consultant model/interviews and forecast scenarios are not a continuous freely measured global lead-time series; grid replacement, renewable generation and electrification also drive demand."
+    }
+  ],
+  "publication_context": {
+    "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+    "as_of": "2026-10-03",
+    "empirical_dataset_admitted": false,
+    "human_gate_6_approved": false,
+    "predictive_validity_established": false,
+    "continuous_collection_implemented": false,
+    "boundary": "Research intake only. Apply the existing evidence and human-review contracts before empirical use. A source link or source review is not evidence approval."
+  }
+}
