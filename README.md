@@ -4,6 +4,8 @@ SK하이닉스의 영업·마케팅·상품기획·신제품사업화 직무를 
 
 시작 문서: [하이닉스 상품·고객·직무 관점](docs/research/supply_chain/sk_hynix_commercial_role_context.md).
 
+산업 배경: [반도체 산업 거시 구조](docs/research/supply_chain/semiconductor_macro_structure.md) — 제품·사업모델·공정·수요시장·지역과 실제 기업 역할을 연결한다. [메모리 사이클과 지표 수집 계획](docs/research/supply_chain/memory_cycle_signal_plan.md)은 수요·공급·자금의 관측 목적, 무료 경로와 미수집 공백을 정리한다.
+
 첫 구체 사례: [HBM3E × NVIDIA GB300 고객·상품 카드](docs/research/supply_chain/customer_product_cards/hbm_nvidia_gb300.md) — 고객 문제, 직무별 질문, 채택 사건과 무료 관측 후보 8개.
 
 ```text
@@ -28,6 +30,7 @@ Real decision problem
 - H1 검증 대기: 사람의 Gate 6 dataset freeze 및 Event 검토. 지표·lead/lag·실현율·verdict는 미계산
 - 연구 자료 추가: [반도체·AI·데이터센터·전력·금융 공급망](docs/research/supply_chain/README.md) — 기존 세 저장소의 방법론 검토와 2026-10-03 후보 자료
 - 현재 우선순위: [2026 하반기 직무·상품·고객 구조](docs/research/supply_chain/sk_hynix_commercial_role_context.md) — HBM·서버 DRAM·eSSD의 고객 문제와 채택 단계 학습
+- 거시 학습 구조 정리(2026-10-04): 산업 분류·기업 역할·메모리 사이클·18개 지표 후보와 원문 영수증. 현재 시장의 통합 관측 패널과 선행성 검증은 미구축
 - 첫 수집 실험: [경제적 목적](docs/research/supply_chain/decision_purpose.md)과 [OpenAI–CoreWeave 사례 검토](docs/research/supply_chain/first_case_review.md) — 고객 약정과 실제 집행의 공개 연결 범위를 구분
 - 후속: H1 최소 검증 후 H2 Bottleneck Migration
 - 보류: H3 Product-Mix Opportunity Cost는 공개정보가 충분할 때까지 `KNOWN_UNKNOWN` 중심 framework로 유지

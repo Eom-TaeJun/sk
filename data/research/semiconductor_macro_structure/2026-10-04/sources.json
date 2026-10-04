@@ -1,0 +1,512 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-10-04",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "purpose": "Semiconductor macro-structure learning baseline for SK hynix commercial roles",
+  "source_count": 8,
+  "new_capture_count": 8,
+  "reused_receipt_count": 0,
+  "originals_distribution": "Only bounded excerpts, nine selected values and receipts are redistributed. Full original PDF/HTML/XLSX responses stay at official public URLs and a private local review cache outside this public repository; public receipts alone cannot replay raw original bytes.",
+  "sources": [
+    {
+      "source_id": "SRC-MACRO-OECD-MAPPING25",
+      "requested_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/06/mapping-the-semiconductor-value-chain_5ba52971/4154cdbf-en.pdf",
+      "retrieved_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/06/mapping-the-semiconductor-value-chain_5ba52971/4154cdbf-en.pdf",
+      "response_status": 200,
+      "retrieved_at": "2026-10-04T11:34:20Z",
+      "sha256": "612623f3c3699bfb504d130f22d0044372a6c5281497236b617e3cc201b37f9b",
+      "byte_length": 5077727,
+      "format": "pdf",
+      "title": "Mapping the semiconductor value chain: Working towards identifying dependencies and vulnerabilities",
+      "publication_date_displayed": "2025-06-24",
+      "publication_date_evidence_url": "https://www.oecd.org/en/publications/mapping-the-semiconductor-value-chain_4154cdbf-en.html",
+      "publication_date_note": "Publication date displayed on the official publishing page; PDF edition is OECD STI Policy Paper No. 182 (2025).",
+      "locator": "Sections on the semiconductor value chain, manufacturing inputs and cross-country linkages; printed pages 9-21 and data-source appendix pages 45-48; PDF page offsets differ.",
+      "original_excerpts": [
+        "design, wafer fabrication and assembly, test and packaging"
+      ],
+      "source_role": "intergovernmental_published_research",
+      "used_for": [
+        "process taxonomy",
+        "materials, equipment and intangible inputs",
+        "business models",
+        "trade-data interpretation"
+      ],
+      "currentness_and_scope": "2025 structural research; underlying datasets have their own years. No firm-specific current capacity or market share is inferred from this report.",
+      "access_caveats": [
+        "Official PDF was downloaded without login/API key.",
+        "Cross-border trade is a flow of goods, not domestic production, final use or firm-level shipments; repeated border crossings and product-code scope require review."
+      ],
+      "public_original_url": "https://doi.org/10.1787/4154cdbf-en",
+      "original_excerpts_verified_in_downloaded_text": true,
+      "original_excerpt_word_count": 8,
+      "verified_excerpt_pdf_pages_one_based": {
+        "design, wafer fabrication and assembly, test and packaging": [
+          9
+        ]
+      },
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_original_redistributed": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "source_id": "SRC-MACRO-OECD-MODELS26",
+      "requested_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/03/review-of-the-dominican-republic-s-enabling-environment-for-the-semiconductor-and-microelectronics-industries_5abb0a7a/0b35b5a6-en.pdf",
+      "retrieved_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/03/review-of-the-dominican-republic-s-enabling-environment-for-the-semiconductor-and-microelectronics-industries_5abb0a7a/0b35b5a6-en.pdf",
+      "response_status": 200,
+      "retrieved_at": "2026-10-04T11:38:13Z",
+      "sha256": "02a8d11d5e7902ac92c8ddd4c4f1635e40a5f085920033a4e220c7142eeefa52",
+      "byte_length": 2546612,
+      "format": "pdf",
+      "title": "Review of the Dominican Republic's Enabling Environment for the Semiconductor and Microelectronics Industries: Annex A",
+      "publication_date_displayed": "2026-03-02",
+      "publication_date_evidence_url": "https://www.oecd.org/en/publications/review-of-the-dominican-republic-s-enabling-environment-for-the-semiconductor-and-microelectronics-industries_0b35b5a6-en/full-report/understanding-the-semiconductor-value-chain_bf6ec3f5.html",
+      "publication_date_note": "Report publication date displayed on the official page; Annex A is used only for structural definitions.",
+      "locator": "Annex A: Understanding the semiconductor value chain, printed pages 107-109; particularly Key business models in the semiconductor ecosystem on printed page 108.",
+      "original_excerpts": [
+        "IDMs may also offer",
+        "System firms"
+      ],
+      "source_role": "intergovernmental_published_research",
+      "used_for": [
+        "foundry, fabless, OSAT, IDM, system-firm and IP-vendor role definitions",
+        "process and business-model axes"
+      ],
+      "currentness_and_scope": "2026 report with simplified general definitions; not a current global supplier-market-share table. A firm may outsource processes or provide contract manufacturing alongside an IDM role.",
+      "access_caveats": [
+        "Direct HTML capture returned HTTP403; the official Download PDF route returned HTTP200. Both acquisition outcomes are retained separately.",
+        "No report financial estimates are used in this structural framework."
+      ],
+      "public_original_url": "https://www.oecd.org/en/publications/review-of-the-dominican-republic-s-enabling-environment-for-the-semiconductor-and-microelectronics-industries_0b35b5a6-en/full-report/understanding-the-semiconductor-value-chain_bf6ec3f5.html",
+      "original_excerpts_verified_in_downloaded_text": true,
+      "original_excerpt_word_count": 6,
+      "verified_excerpt_pdf_pages_one_based": {
+        "IDMs may also offer": [
+          110
+        ],
+        "System firms": [
+          110
+        ]
+      },
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_original_redistributed": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "source_id": "SRC-MACRO-SIA-FACTBOOK25",
+      "requested_url": "https://www.semiconductors.org/wp-content/uploads/2025/05/2025-SIA-Factbook-FINAL.pdf",
+      "retrieved_url": "https://www.semiconductors.org/wp-content/uploads/2025/05/2025-SIA-Factbook-FINAL.pdf",
+      "response_status": 200,
+      "retrieved_at": "2026-10-04T11:34:21Z",
+      "sha256": "0fc9e6e358417f6c2969259ca4e89607e1aed8222daaa3132164bc2cdd655f78",
+      "byte_length": 482249,
+      "format": "pdf",
+      "title": "2025 SIA Factbook",
+      "publication_date_displayed": "2025-05-27",
+      "publication_date_evidence_url": "https://www.semiconductors.org/resources/2025-sia-factbook/",
+      "publication_date_note": "Official resource page displays May 27, 2025. A separate introductory blog was published May 30, 2025; that later blog date is not the resource's publication date. PDF identifies its edition as 2025.",
+      "locator": "Section 2 Global Market, printed page 8 end-use categories (PDF page 11), printed page 9 product categories (PDF page 12), printed page 10 sales geography caveat (PDF page 13).",
+      "original_excerpts": [
+        "Annual Semiconductor Shipments by product type",
+        "sales of semiconductors to electronic equipment makers only"
+      ],
+      "source_role": "industry_association_published_primary_material",
+      "used_for": [
+        "end-use taxonomy",
+        "product-market taxonomy comparison",
+        "sales geography definition"
+      ],
+      "currentness_and_scope": "2025 edition; the cited end-use/product/geography charts report 2024. This structural reference is not a 2026 current-market panel.",
+      "access_caveats": [
+        "Direct official PDF was downloadable without login/API key; no email form submission was needed for that tested route.",
+        "Regional semiconductor sales to electronics makers differ from fab location and final electronic-product consumption.",
+        "SIA and WSTS tables may aggregate product classes differently; preserve the report-specific taxonomy before comparisons."
+      ],
+      "public_original_url": "https://www.semiconductors.org/wp-content/uploads/2025/05/2025-SIA-Factbook-FINAL.pdf",
+      "original_excerpts_verified_in_downloaded_text": true,
+      "original_excerpt_word_count": 14,
+      "verified_excerpt_pdf_pages_one_based": {
+        "Annual Semiconductor Shipments by product type": [
+          12
+        ],
+        "sales of semiconductors to electronic equipment makers only": [
+          13
+        ]
+      },
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_original_redistributed": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "source_id": "SRC-MACRO-WSTS-SPRING26",
+      "requested_url": "https://www.wsts.org/esraCMS/extension/media/f/WST/7618/WSTS_FC-Release-2026-May.pdf",
+      "retrieved_url": "https://www.wsts.org/esraCMS/extension/media/f/WST/7618/WSTS_FC-Release-2026-May.pdf",
+      "response_status": 200,
+      "retrieved_at": "2026-10-04T11:34:21Z",
+      "sha256": "41927174bea81823652742c1ed0f8ea5c33dcdfbeaef9af698466e9a3004d32b",
+      "byte_length": 256449,
+      "format": "pdf",
+      "title": "WSTS Spring 2026 Forecast Release",
+      "publication_date_displayed": "2026-06-02",
+      "publication_time_displayed": "06:00 UTC",
+      "locator": "PDF page 1 release dateline; page 2 WSTS Forecast Summary, Amounts in US$M, 2025 and 2026 columns, selected World/Analog/Logic/Memory rows.",
+      "original_excerpts": [
+        "Amounts in US$M",
+        "Year on Year Growth in %"
+      ],
+      "source_role": "industry_statistics_organization_published_forecast",
+      "used_for": [
+        "product taxonomy",
+        "bounded market-size baseline with historical and forecast years distinguished"
+      ],
+      "currentness_and_scope": "Spring 2026 forecast edition released June 2, 2026. It is a dated forecast, not asserted to be the newest forecast edition or an observed 2026 full-year outcome.",
+      "access_caveats": [
+        "Official forecast PDF was downloaded without login/API key.",
+        "2026 amounts are forecasts. 2025 is the past-year amount reported in this publication; its table does not explicitly label that column 'actual'.",
+        "Memory is the broad product group; these values do not separately identify HBM, DRAM or NAND.",
+        "Amounts are rounded to whole US$ millions; sums may differ slightly."
+      ],
+      "public_original_url": "https://www.wsts.org/esraCMS/extension/media/f/WST/7618/WSTS_FC-Release-2026-May.pdf",
+      "rendered_table_review_completed": true,
+      "review_method": "PDF page 2 was rendered with Poppler and visually checked for row labels, year columns, units and selected values; extracted text was cross-checked.",
+      "original_excerpts_verified_in_downloaded_text": true,
+      "original_excerpt_word_count": 9,
+      "verified_excerpt_pdf_pages_one_based": {
+        "Amounts in US$M": [
+          2
+        ],
+        "Year on Year Growth in %": [
+          2
+        ]
+      },
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_original_redistributed": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false,
+      "selected_numeric_observations": [
+        {
+          "product_group": "TOTAL_SEMICONDUCTORS",
+          "period": 2025,
+          "value": 795640,
+          "unit": "USD_MILLION",
+          "geography": "WORLD",
+          "data_status": "PAST_YEAR_REPORTED_IN_FORECAST_PUBLICATION",
+          "forecast_edition": "Spring 2026",
+          "source_id": "SRC-MACRO-WSTS-SPRING26",
+          "locator": "PDF page 2, WSTS Forecast Summary, Total World - $M row, 2025 Amounts in US$M column"
+        },
+        {
+          "product_group": "TOTAL_SEMICONDUCTORS",
+          "period": 2026,
+          "value": 1511248,
+          "unit": "USD_MILLION",
+          "geography": "WORLD",
+          "data_status": "FORECAST",
+          "forecast_edition": "Spring 2026",
+          "source_id": "SRC-MACRO-WSTS-SPRING26",
+          "locator": "PDF page 2, WSTS Forecast Summary, Total World - $M row, 2026 Amounts in US$M column"
+        },
+        {
+          "product_group": "MEMORY",
+          "period": 2025,
+          "value": 230042,
+          "unit": "USD_MILLION",
+          "geography": "WORLD",
+          "data_status": "PAST_YEAR_REPORTED_IN_FORECAST_PUBLICATION",
+          "forecast_edition": "Spring 2026",
+          "source_id": "SRC-MACRO-WSTS-SPRING26",
+          "locator": "PDF page 2, WSTS Forecast Summary, Memory row, 2025 Amounts in US$M column"
+        },
+        {
+          "product_group": "MEMORY",
+          "period": 2026,
+          "value": 803941,
+          "unit": "USD_MILLION",
+          "geography": "WORLD",
+          "data_status": "FORECAST",
+          "forecast_edition": "Spring 2026",
+          "source_id": "SRC-MACRO-WSTS-SPRING26",
+          "locator": "PDF page 2, WSTS Forecast Summary, Memory row, 2026 Amounts in US$M column"
+        },
+        {
+          "product_group": "LOGIC",
+          "period": 2025,
+          "value": 299547,
+          "unit": "USD_MILLION",
+          "geography": "WORLD",
+          "data_status": "PAST_YEAR_REPORTED_IN_FORECAST_PUBLICATION",
+          "forecast_edition": "Spring 2026",
+          "source_id": "SRC-MACRO-WSTS-SPRING26",
+          "locator": "PDF page 2, WSTS Forecast Summary, Logic row, 2025 Amounts in US$M column"
+        },
+        {
+          "product_group": "LOGIC",
+          "period": 2026,
+          "value": 411371,
+          "unit": "USD_MILLION",
+          "geography": "WORLD",
+          "data_status": "FORECAST",
+          "forecast_edition": "Spring 2026",
+          "source_id": "SRC-MACRO-WSTS-SPRING26",
+          "locator": "PDF page 2, WSTS Forecast Summary, Logic row, 2026 Amounts in US$M column"
+        },
+        {
+          "product_group": "ANALOG",
+          "period": 2025,
+          "value": 86519,
+          "unit": "USD_MILLION",
+          "geography": "WORLD",
+          "data_status": "PAST_YEAR_REPORTED_IN_FORECAST_PUBLICATION",
+          "forecast_edition": "Spring 2026",
+          "source_id": "SRC-MACRO-WSTS-SPRING26",
+          "locator": "PDF page 2, WSTS Forecast Summary, Analog row, 2025 Amounts in US$M column"
+        },
+        {
+          "product_group": "ANALOG",
+          "period": 2026,
+          "value": 95358,
+          "unit": "USD_MILLION",
+          "geography": "WORLD",
+          "data_status": "FORECAST",
+          "forecast_edition": "Spring 2026",
+          "source_id": "SRC-MACRO-WSTS-SPRING26",
+          "locator": "PDF page 2, WSTS Forecast Summary, Analog row, 2026 Amounts in US$M column"
+        }
+      ]
+    },
+    {
+      "source_id": "SRC-MACRO-WSTS-HISTORY",
+      "requested_url": "https://www.wsts.org/67/Historical-Billings-Report",
+      "retrieved_url": "https://www.wsts.org/67/Historical-Billings-Report",
+      "response_status": 200,
+      "retrieved_at": "2026-10-04T11:34:20Z",
+      "sha256": "bcce994d536006f94d77d9e2ca9fe63da559ecf4ec1e4ebfd8484b32ad2b2988",
+      "byte_length": 11699,
+      "format": "html",
+      "title": "WSTS Historical Billings Report",
+      "publication_date_displayed": null,
+      "publication_date_note": "No page publication date separately displayed/verified; retrieval date is not publication date. Page states latest data from July 2026.",
+      "locator": "Opening paragraphs under Historical Billings Report; Downloads and Copyright Notice.",
+      "original_excerpts": [
+        "No login is required.",
+        "total semiconductor revenues by the four regions"
+      ],
+      "source_role": "industry_statistics_organization_official_access_description",
+      "used_for": [
+        "free-access route",
+        "monthly versus three-month-moving-average scope",
+        "copyright/access boundary"
+      ],
+      "currentness_and_scope": "Access page checked on October 4, 2026; it advertised data through July 2026 at capture. Free aggregate history covers total semiconductor revenue by Americas, Europe, Japan and Asia Pacific.",
+      "access_caveats": [
+        "Public Excel/PDF aggregate history requires no login/API key; this is a download route, not an API.",
+        "The tested free history scope does not imply free access to all detailed WSTS Blue Book product series; detailed product/service access conditions are separate.",
+        "The page reserves WSTS publication reproduction rights. Full originals/entire tables are not redistributed in this public repository."
+      ],
+      "public_original_url": "https://www.wsts.org/67/Historical-Billings-Report",
+      "original_excerpts_verified_in_downloaded_text": true,
+      "original_excerpt_word_count": 11,
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_original_redistributed": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "source_id": "SRC-MACRO-OECD-CAPACITY25",
+      "requested_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/the-chip-landscape_27ef5d87/02dbd028-en.pdf",
+      "retrieved_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/the-chip-landscape_27ef5d87/02dbd028-en.pdf",
+      "response_status": 200,
+      "retrieved_at": "2026-10-04T11:38:16Z",
+      "sha256": "411bfad1d2864fc02448320aadfbb9da51c6b3a9a03a64bef69e4f00b5f4ab19",
+      "byte_length": 4140641,
+      "format": "pdf",
+      "title": "The chip landscape: Geographical distribution of wafer fabrication capacity",
+      "publication_date_displayed": "2025-12-01",
+      "publication_date_evidence_url": "https://www.oecd.org/en/publications/the-chip-landscape_02dbd028-en/full-report/component-6.html",
+      "publication_date_note": "Official publishing page displays December 1, 2025; PDF edition is OECD STI Policy Paper No. 188 (2025).",
+      "locator": "Section 2 Data and limitations; Section 3 Main findings, Figures 2, 4 and 9 and text on fab location, process/chip-type capacity and operational business models.",
+      "original_excerpts": [
+        "not where the companies are headquartered",
+        "WSPM 8-inch EQ"
+      ],
+      "source_role": "intergovernmental_published_research",
+      "used_for": [
+        "fab-location versus headquarters distinction",
+        "capacity-basis definition",
+        "operational/construction/planned stage separation",
+        "mixed-product and business-model capacity caveats"
+      ],
+      "currentness_and_scope": "2025 report, using commercial data and desk research with stated coverage/limitations. Its figures are not current October 2026 fab-level operating observations.",
+      "access_caveats": [
+        "Direct HTML capture returned HTTP403; the official Download PDF route returned HTTP200. Both acquisition outcomes are retained separately.",
+        "Capacity uses wafer starts per month expressed in 8-inch equivalents where specified; it is not good-die output, memory bits or shipments.",
+        "The underlying SEMI/TechInsights detailed commercial databases are not made freely accessible merely because the OECD report is public.",
+        "Process node alone does not establish product interchangeability; facility stage and data coverage must be preserved."
+      ],
+      "public_original_url": "https://www.oecd.org/en/publications/the-chip-landscape_02dbd028-en/full-report/component-6.html",
+      "original_excerpts_verified_in_downloaded_text": true,
+      "original_excerpt_word_count": 9,
+      "verified_excerpt_pdf_pages_one_based": {
+        "not where the companies are headquartered": [
+          26
+        ],
+        "WSPM 8-inch EQ": [
+          26
+        ]
+      },
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_original_redistributed": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "source_id": "SRC-MACRO-WSTS-HISTORY-XLSX",
+      "requested_url": "https://www.wsts.org/esraCMS/extension/media/f/WST/7771/WSTS-Historical-Billings-Report-Jul_2026.xlsx",
+      "retrieved_url": "https://www.wsts.org/esraCMS/extension/media/f/WST/7771/WSTS-Historical-Billings-Report-Jul_2026.xlsx",
+      "response_status": 200,
+      "retrieved_at": "2026-10-04T11:34:23Z",
+      "sha256": "03b4cf0eca77d0e77e675d5ca251af413c047b2121f3ed998d8c92f0f4bdcad8",
+      "byte_length": 154505,
+      "format": "xlsx",
+      "title": "WSTS Historical Billings Report July 2026 workbook",
+      "publication_date_displayed": null,
+      "publication_date_note": "No release date separately verified; latest data period is July 2026, and copyright year is not a release date.",
+      "locator": "Monthly Data and 3MMA worksheet headers; Monthly Data!A3 unit, H4 July, A245 year 2026, A250 Worldwide, H250 selected value.",
+      "original_excerpts": [
+        "All numbers are in 1000 US$."
+      ],
+      "source_role": "industry_statistics_organization_official_aggregate_history",
+      "used_for": [
+        "actual file/schema access check",
+        "one bounded monthly total-market observation"
+      ],
+      "currentness_and_scope": "Workbook retrieved October 4, 2026. Historical year blocks run 1986-2026; latest populated month in the 2026 Worldwide monthly row is July. Data may be revised by publisher; no revision-history validation was run.",
+      "access_caveats": [
+        "HTTP200 actual XLSX bytes parsed with openpyxl without login/API key.",
+        "Free total-market regions plus Worldwide only; no DRAM/NAND/Logic/HBM product breakdown, end-use, units or ASP fields in this workbook.",
+        "Monthly Data and 3MMA are distinct time series. Annual/YTD sum columns must not be treated as a single month.",
+        "Full original workbook/whole historical series are kept outside the public repository; one bounded observation and schema definitions are redistributed."
+      ],
+      "public_original_url": "https://www.wsts.org/esraCMS/extension/media/f/WST/7771/WSTS-Historical-Billings-Report-Jul_2026.xlsx",
+      "schema_review_completed": true,
+      "schema_summary": {
+        "worksheets": [
+          "Monthly Data",
+          "3MMA"
+        ],
+        "regions": [
+          "Americas",
+          "Europe",
+          "Japan",
+          "Asia Pacific",
+          "Worldwide"
+        ],
+        "product_scope": "TOTAL_SEMICONDUCTORS",
+        "unit": "1000_USD",
+        "earliest_year": 1986,
+        "latest_year": 2026,
+        "latest_month": "2026-07",
+        "product_detail_available": false,
+        "api_key_required_for_tested_route": false
+      },
+      "original_excerpts_verified_in_downloaded_text": true,
+      "original_excerpt_word_count": 6,
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_original_redistributed": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false,
+      "selected_numeric_observations": [
+        {
+          "period": "2026-07",
+          "geography": "WORLDWIDE",
+          "product_group": "TOTAL_SEMICONDUCTORS",
+          "value": 142480424,
+          "unit": "1000_USD",
+          "temporal_aggregation": "MONTHLY_REPORTED_VALUE",
+          "data_status": "AS_REPORTED_IN_RETRIEVED_WORKBOOK",
+          "source_id": "SRC-MACRO-WSTS-HISTORY-XLSX",
+          "locator": "Monthly Data!H250; year label A245=2026, row A250=Worldwide, month H4=July"
+        }
+      ]
+    },
+    {
+      "source_id": "SRC-MACRO-WSTS-SUBSCRIPTION",
+      "requested_url": "https://www.wsts.org/61/OVERVIEW",
+      "retrieved_url": "https://www.wsts.org/61/OVERVIEW",
+      "response_status": 200,
+      "retrieved_at": "2026-10-04T11:51:40Z",
+      "sha256": "6f37b3e04929f1ad35d3d7eab13167648dbd03207cc5e5081ac4bdcadc8e17b3",
+      "byte_length": 11433,
+      "format": "html",
+      "title": "WSTS Services Overview: subscription and licensed distributors",
+      "publication_date_displayed": null,
+      "publication_date_note": "No page publication date separately displayed/verified; retrieval date is not publication date.",
+      "locator": "Services Overview, paragraph explaining access by companies and organizations through WSTS licensed distributors.",
+      "original_excerpts": [
+        "licensed distributors"
+      ],
+      "source_role": "industry_statistics_organization_official_access_description",
+      "used_for": [
+        "subscription/license boundary distinct from tested free aggregate history"
+      ],
+      "currentness_and_scope": "Public access description checked October 4, 2026; underlying product-package terms and availability can vary by channel and subscription.",
+      "access_caveats": [
+        "The access-description page itself was captured without login/API key; this does not grant access to subscription datasets.",
+        "Free historical total-market XLSX and free forecast releases do not expose all detailed product series in WSTS subscription services.",
+        "No subscription was purchased, no account was registered and no protected detailed data was collected."
+      ],
+      "public_original_url": "https://www.wsts.org/61/OVERVIEW",
+      "original_excerpts_verified_in_downloaded_text": true,
+      "original_excerpt_word_count": 2,
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_original_redistributed": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    }
+  ],
+  "failed_acquisition_attempts": [
+    {
+      "source_id": "SRC-MACRO-OECD-CAPACITY25",
+      "requested_url": "https://www.oecd.org/en/publications/the-chip-landscape_02dbd028-en/full-report/component-6.html",
+      "response_status": 403,
+      "error_type": "HTTPError",
+      "error": "HTTP Error 403: Forbidden",
+      "retrieved_at": "2026-10-04T11:34:20Z"
+    },
+    {
+      "source_id": "SRC-MACRO-OECD-MODELS26",
+      "requested_url": "https://www.oecd.org/en/publications/review-of-the-dominican-republic-s-enabling-environment-for-the-semiconductor-and-microelectronics-industries_0b35b5a6-en/full-report/understanding-the-semiconductor-value-chain_bf6ec3f5.html",
+      "response_status": 403,
+      "error_type": "HTTPError",
+      "error": "HTTP Error 403: Forbidden",
+      "retrieved_at": "2026-10-04T11:34:19Z"
+    }
+  ],
+  "capture_repair_notes": [
+    "Two direct OECD HTML downloads returned HTTP403. Official publisher Download PDF URLs were discovered and captured independently; failed HTML attempts were preserved, not relabeled as successful original bytes.",
+    "A scratch XLSX header inspection initially requested column N from a narrower 3MMA row and raised IndexError. The review then explicitly padded inspected rows to 18 columns; no workbook bytes or source values were changed."
+  ],
+  "unresolved_capture_ids": [],
+  "human_evidence_approved": false,
+  "h1_admitted": false,
+  "predictive_signal_validated": false
+}

@@ -14,6 +14,7 @@ Build an SK hynix-centered customer, product and supply-chain knowledge base for
 - H1 full primary-source corpus and Gate 6 readiness package: prepared; human Gate 6 review/freeze remains pending
 - Supply-chain research intake (2026-10-03): candidate-only map, metric and free-access plans; not governed Evidence or an H1 dataset amendment
 - User purpose clarification (2026-10-03): SK hynix commercial-role learning is the primary use; HBM, server DRAM and eSSD customer/product relationships come first, with finance/power/materials as relevant context
+- Macro learning framework (2026-10-04): product/business-model/process/end-market/geography structure and memory-cycle measurement plans are documented; a current observations panel and empirical leadingness remain unbuilt
 - Bounded customer-commitment collection: purpose-first single-case capture/replay, with source provenance and separate failed attempts; not continuous monitoring or empirical validation
 - H1 metrics, lead/lag, realization rates, outcome analysis and verdict: not yet approved; require Gate 6 dataset freeze
 - H2: only after a credible H1 minimum pipeline
@@ -41,6 +42,7 @@ Do not treat deleted, historical, or interrupted H1 experiment artifacts as appr
 - Historical project facts: `application_evidence/`
 - Supply-chain research intake and legacy reference review: `docs/research/supply_chain/README.md`
 - Current user purpose, 2026 job-description evidence and product/customer learning structure: `docs/research/supply_chain/sk_hynix_commercial_role_context.md`
+- Macro industry structure and memory-cycle collection contracts: `docs/research/supply_chain/semiconductor_macro_structure.md`, `docs/research/supply_chain/memory_cycle_signal_plan.md`
 - First customer/product card, bounded source receipts and unresolved specification differences: `docs/research/supply_chain/customer_product_cards/hbm_nvidia_gb300.md`
 - Public candidate data and hashes: `data/research/semiconductor_supply_chain/2026-10-03/manifest.json`
 - Economic question and single-case boundaries: `docs/research/supply_chain/decision_purpose.md`
