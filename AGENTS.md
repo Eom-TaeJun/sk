@@ -20,6 +20,7 @@ Build an SK hynix-centered customer, product and supply-chain knowledge base for
 - Industry-route review (2026-10-05): product and manufacturing-function axes link AI/data centers, power, RF/space applications and policy/cooperation cases; propagation remains conditional and exact customer/site/order joins stay explicit
 - Independent purpose review (2026-10-05): start/middle/handoff management checkpoints distinguish chip design, manufacturing and separate data-center versus mission operation; earlier card recommendations remain dated history
 - Current user priority (2026-10-05): defer server DDR5 customer/product convergence; verify free API observability, exact datasets/fields, access outcomes, units, dates, joins and reuse conditions first. API feasibility is candidate research, not a recurring collector or leadingness result
+- Latest user steering (2026-10-05): define why each indicator is collected and what question/relationship/change it checks before further collection. `docs/research/supply_chain/indicator_collection_purpose.md` owns the current purpose and review; API-call pilot and DDR5 convergence remain deferred. Importance, access readiness and empirical leadingness are separate
 - Bounded customer-commitment collection: purpose-first single-case capture/replay, with source provenance and separate failed attempts; not continuous monitoring or empirical validation
 - H1 metrics, lead/lag, realization rates, outcome analysis and verdict: not yet approved; require Gate 6 dataset freeze
 - H2: only after a credible H1 minimum pipeline

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "as_of_date_kst": "2026-10-05",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "governed_evidence": false,
+  "human_evidence_approved": false,
+  "h1_admitted": false,
+  "predictive_signal_validated": false,
+  "recurring_collection_implemented": false,
+  "new_data_api_calls_performed": false,
+  "files": [
+    {
+      "path": "data/research/indicator_purpose_review/2026-10-05/purpose_registry.json",
+      "byte_size": 52592,
+      "sha256": "fb131e8734c62f39fac2f2d45e0015e88900ceac6ac628072f00f777200e85c0"
+    }
+  ],
+  "immutable_input_refs": [
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "byte_size": 46457,
+      "sha256": "244d18d5278cea01cf95b3ce1602cba8ddc97783f1957b5c3aa2178a11c2a418"
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/collection_index.json",
+      "byte_size": 90675,
+      "sha256": "ec13723d0002af4d994845730641fbd280c915dd4aaed154151daa3e92164c0e"
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "byte_size": 37281,
+      "sha256": "6134e7060e225f3b642da96990e5422e6247cdabefb587e3a464ced1a2879597"
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/manifest.json",
+      "byte_size": 4096,
+      "sha256": "3b370606902222610562f0d4debc99543c0dc67e321859cbd9489038b591b4ae"
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "byte_size": 123624,
+      "sha256": "db3d9570dd672e21f0264c346e4a00d70d9f463587801a89f7ba456577caf130"
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/taiwan_company_activity.json",
+      "byte_size": 28354,
+      "sha256": "3f577e0bba4e7c91aa74663a2e0e1c53a1c565c5a7fef04d088f43652c397ce9"
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "byte_size": 93892,
+      "sha256": "43826ebf9879866b27a7375d4942a6a12b00b4db001ff65f82ad0a50dc6d70b0"
+    }
+  ],
+  "documentation_paths": [
+    "docs/research/supply_chain/indicator_collection_purpose.md",
+    "docs/research/supply_chain/research_convergence_review.md",
+    "docs/exec-plans/completed/indicator_purpose_review_20261005.md"
+  ],
+  "verification_scope_ko": "목적·관계·측정 계약의 참조/범위 검토와 공개 JSON 바이트 무결성. 현재 API 접근·경제적 성과·선행성·법적 효력·정식 Evidence 승인은 포함하지 않음."
+}
