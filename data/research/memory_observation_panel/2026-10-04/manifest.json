@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-04",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "human_approved": false,
+  "included_in_h1": false,
+  "companies": 2,
+  "calendar_quarter": "2026Q2",
+  "candidate_entry_count": 24,
+  "candidate_entry_count_note": "12 per company; includes supplementary periods, plans, qualitative and reviewed-source missingness entries. Not 24 numeric same-quarter actuals.",
+  "core_comparison_pair_count": 6,
+  "primary_source_receipts": 6,
+  "acquisition_representation_counts": {
+    "core_original_http_bytes": 5,
+    "core_web_tool_normalized_text": 1,
+    "official_route_html_original_http_bytes": 3
+  },
+  "original_byte_access_failure": {
+    "source_id": "SRC-MEM-SK-Q226-PERIOD6K",
+    "status": "HTTP_403",
+    "successful_alternative": "web-tool normalized text reading only"
+  },
+  "files": [
+    {
+      "path": "data/research/memory_observation_panel/2026-10-04/sk_hynix.json",
+      "size_bytes": 35456,
+      "sha256": "acf06bb8c0b2d976a798943b05e61e6bdecb71fe1997ef632479e3d34e306618"
+    },
+    {
+      "path": "data/research/memory_observation_panel/2026-10-04/samsung.json",
+      "size_bytes": 38057,
+      "sha256": "3fd2c0fc145141532854dd8c720993a7f85597f545203129040d6fa05668b051"
+    },
+    {
+      "path": "data/research/memory_observation_panel/2026-10-04/comparison_contract.json",
+      "size_bytes": 10394,
+      "sha256": "1405ed138625533f54bc2a75718d94aa112197219619e9dda3ea4c5bb3b57e1d"
+    }
+  ],
+  "documentation_paths": [
+    "AGENTS.md",
+    "README.md",
+    "docs/research/supply_chain/README.md",
+    "docs/research/supply_chain/memory_cycle_signal_plan.md",
+    "docs/research/supply_chain/semiconductor_macro_structure.md",
+    "docs/research/supply_chain/sk_hynix_commercial_role_context.md",
+    "docs/research/supply_chain/memory_observation_panel_2026q2.md",
+    "docs/research/supply_chain/research_convergence_review.md",
+    "docs/exec-plans/completed/memory_observation_panel_20261004.md"
+  ],
+  "documentation_hash_policy": "Markdown paths only: Git line-ending conversion differs from immutable data/research bytes.",
+  "source_checks": {
+    "hash_and_size_checked": true,
+    "six_primary_source_excerpt_locators_checked": true,
+    "english_quote_counts": [
+      {
+        "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+        "excerpt_count": 9,
+        "verbatim_words": 24
+      },
+      {
+        "source_id": "SRC-MEM-SK-IR-LIST26",
+        "excerpt_count": 1,
+        "verbatim_words": 6
+      },
+      {
+        "source_id": "SRC-MEM-SK-Q226-PERIOD6K",
+        "excerpt_count": 2,
+        "verbatim_words": 10
+      },
+      {
+        "source_id": "SRC-MC-SAM26Q2-PRESENTATION",
+        "excerpt_count": 1,
+        "verbatim_words": 3
+      },
+      {
+        "source_id": "SRC-MC-SAM26Q2-FINANCIALS",
+        "excerpt_count": 2,
+        "verbatim_words": 7
+      },
+      {
+        "source_id": "SRC-MC-SAM26Q2-SCRIPT",
+        "excerpt_count": 1,
+        "verbatim_words": 9
+      }
+    ]
+  },
+  "boundaries": [
+    "No complete source documents or raw HTML/PDFs redistributed.",
+    "No credentials, private legacy source code or personal records imported.",
+    "No recurring collection, historical revision validation, same-SKU price comparison, empirical leadingness or H1 admission implemented."
+  ],
+  "source_receipt_scope": "Original HTTP response hashes and web-tool normalized capture hash are different representations; successful normalized reading does not erase SEC original-byte failure."
+}

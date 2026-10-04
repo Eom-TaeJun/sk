@@ -136,6 +136,8 @@ AI에서는 워크로드·모델·문맥 길이·동시성·정밀도·소프트
 | **SRC-HBM-NV-INFERENCE / MLPERF 및 카드의 사양 출처** | 추론 메모리 문제의 기술 배경, 공개 결과 접근 경로, 사양·구성의 차이. 실제 고객 사용량이나 새 메모리 구매량의 근거가 아님. | [HBM 카드 출처 영수증](../../../data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json), [HBM 카드](customer_product_cards/hbm_nvidia_gb300.md) |
 | 기존 `fred-semi`, `seaj-billings`, `semi-availability`와 SEC/ETF/교역/시설 계획 | 기관 정의·무료/유료·시리즈 중단·접근 시험 범위의 기존 조사. 일부는 경로/메타데이터 검토이며 해당 최신 관측 파일 수집이 아님. | [기관 벤치마크](../../../data/research/semiconductor_supply_chain/2026-10-03/source_benchmark_v2.json), [32개 카탈로그](../../../data/research/semiconductor_supply_chain/2026-10-03/signal_catalog_v2.json), [API 접근 계획](../../../data/research/semiconductor_supply_chain/2026-10-03/api_issuance_plan_v3.json), [수집 계획](collection_plan.md) |
 
-**현재 남은 공백:** 제품군·회사·기간별 bit shipment/ASP/재고/현금 CAPEX 관측표, 정확한 KOSIS 반도체 표·품목 ID, 같은 제품·조건의 가격 데이터 이용권, 메모리 직접 주문의 공개 범위, 부지별 투입·수율·유효 공급과 고객 배정이다. 역사·수정 검증과 선행 가설의 반증 검토도 미실행이다. 기존 벤치마크의 확인일과 이번 기준일을 구분하고, 신규 수집 전 정책·문서 버전을 재확인한다.
+**첫 관측 완료(2026-10-04):** [하이닉스·삼성 2026Q2 관측표](memory_observation_panel_2026q2.md)에서 MC07/08/09/16의 실제 공개 항목·범위 표현·원 단위·공백을 저장했다. 회사 총재고, 제품군별 비트·ASP, 현금 유형자산 취득과 CAPEX 계획은 별계열이며 회사별 같은 SKU·고객 물량의 관측이 아니다. [관리 검토](research_convergence_review.md)는 이를 고객·상품·공급 질문에 연결하는지 점검했다.
 
-**다음 작업 하나:** 하이닉스와 비교 기업의 DRAM·NAND 수급을 같은 분기·단위로 읽을 수 있도록 공개 재고·비트 출하·투자 설명을 모은 첫 관측표를 작성한다. MC07/08/09/16의 실제 공개 항목·정의·공백부터 확인하고 비공개 항목은 `KNOWN_UNKNOWN`으로 남긴다. 선행성 판정은 하지 않는다.
+**현재 남은 공백:** 반복·역사 관측표와 수정 이력, 정확한 KOSIS 반도체 표·품목 ID, 같은 제품·조건의 가격 데이터 이용권, 메모리 직접 주문의 공개 범위, 부지별 투입·수율·유효 공급과 고객 배정이다. 선행 가설의 반증 검토도 미실행이다. 기존 벤치마크의 확인일과 이번 기준일을 구분하고, 신규 수집 전 정책·문서 버전을 재확인한다.
+
+**다음 작업 하나:** 서버 DDR5–Intel Xeon 6–Dell R770 고객·상품 카드에서 요구 사양, 각각의 인증·전시 탑재와 주문 단계, 동일 SKU 여부 및 실제 구매자의 공개 공백을 구분한다.

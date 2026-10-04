@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-04",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "human_approved": false,
+  "included_in_h1": false,
+  "purpose_ko": "하이닉스 상업 직무 학습의 산업 배경을 고객·제품·채택·공급 질문에 연결하는 첫 분기 관측표",
+  "packet_field_mapping": {
+    "SK_HYNIX": {
+      "period": "measurement_period",
+      "unit": "original_unit",
+      "cash_sign": "value is signed; cash_outflow_positive_amount is display magnitude"
+    },
+    "SAMSUNG_ELECTRONICS": {
+      "period": "period",
+      "unit": "unit",
+      "cash_sign": "cash value is positive outflow magnitude; signed_original_value preserves the original negative amount"
+    }
+  },
+  "calendar_quarter": {
+    "label": "2026Q2",
+    "start": "2026-04-01",
+    "end": "2026-06-30"
+  },
+  "stock_as_of": "2026-06-30",
+  "pair_count": 6,
+  "pairs": [
+    {
+      "comparison_id": "PAIR-CONSOLIDATED-INVENTORY",
+      "metric_id": "MC07",
+      "label": "consolidated_inventory",
+      "period_basis": "STOCK",
+      "observations": [
+        {
+          "company_id": "SK_HYNIX",
+          "packet": "sk_hynix.json",
+          "observation_id": "SK26Q2-INVENTORY-END",
+          "original_unit": "KRW Billion",
+          "known_at": "2026-07-29",
+          "known_at_precision_or_note": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED"
+        },
+        {
+          "company_id": "SAMSUNG_ELECTRONICS",
+          "packet": "samsung.json",
+          "observation_id": "SAM26Q2-MC07-CON-INVENTORY",
+          "original_unit": "KRW_million",
+          "known_at": null,
+          "known_at_precision_or_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date."
+        }
+      ],
+      "comparability": "DESCRIPTIVE_SIDE_BY_SIDE_WITH_CONDITIONS",
+      "condition_ko": "회사 전체 연결 재고 장부금액; 사업 범위·원 단위·반올림·검토 수준이 다름. 메모리/HBM 재고 비트나 납기로 순위화하지 않음.",
+      "normalization_performed": false,
+      "company_ranking_permitted": false
+    },
+    {
+      "comparison_id": "PAIR-DRAM-BIT-SHIPMENT-QOQ",
+      "metric_id": "MC08",
+      "label": "dram_bit_shipment_qoq",
+      "period_basis": "FLOW_CHANGE_QOQ",
+      "observations": [
+        {
+          "company_id": "SK_HYNIX",
+          "packet": "sk_hynix.json",
+          "observation_id": "SK26Q2-DRAM-BITS-QOQ",
+          "original_unit": "percent_change_QoQ",
+          "known_at": "2026-07-29",
+          "known_at_precision_or_note": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED"
+        },
+        {
+          "company_id": "SAMSUNG_ELECTRONICS",
+          "packet": "samsung.json",
+          "observation_id": "SAM26Q2-MC08-DRAM-BIT-QOQ",
+          "original_unit": "percent_change_QoQ_reported_band",
+          "known_at": null,
+          "known_at_precision_or_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date."
+        }
+      ],
+      "comparability": "DESCRIPTIVE_SIDE_BY_SIDE_WITH_CONDITIONS",
+      "condition_ko": "각 회사 DRAM 제품군의 QoQ 설명. 제품 믹스와 모집단이 달라 특정 HBM·고객 구매량이나 업체 우열로 환산하지 않음.",
+      "normalization_performed": false,
+      "company_ranking_permitted": false
+    },
+    {
+      "comparison_id": "PAIR-NAND-BIT-SHIPMENT-QOQ",
+      "metric_id": "MC08",
+      "label": "nand_bit_shipment_qoq",
+      "period_basis": "FLOW_CHANGE_QOQ",
+      "observations": [
+        {
+          "company_id": "SK_HYNIX",
+          "packet": "sk_hynix.json",
+          "observation_id": "SK26Q2-NAND-BITS-QOQ",
+          "original_unit": "percent_change_QoQ",
+          "known_at": "2026-07-29",
+          "known_at_precision_or_note": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED"
+        },
+        {
+          "company_id": "SAMSUNG_ELECTRONICS",
+          "packet": "samsung.json",
+          "observation_id": "SAM26Q2-MC08-NAND-BIT-QOQ",
+          "original_unit": "percent_change_QoQ_reported_band",
+          "known_at": null,
+          "known_at_precision_or_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date."
+        }
+      ],
+      "comparability": "DESCRIPTIVE_SIDE_BY_SIDE_WITH_CONDITIONS",
+      "condition_ko": "각 회사 NAND 제품군의 QoQ 설명. 완성 SSD 대수·기명 고객 물량과 다르며 제품 믹스를 보정하지 않음.",
+      "normalization_performed": false,
+      "company_ranking_permitted": false
+    },
+    {
+      "comparison_id": "PAIR-DRAM-ASP-QOQ",
+      "metric_id": "MC09",
+      "label": "dram_asp_qoq",
+      "period_basis": "FLOW_CHANGE_QOQ",
+      "observations": [
+        {
+          "company_id": "SK_HYNIX",
+          "packet": "sk_hynix.json",
+          "observation_id": "SK26Q2-DRAM-ASP-QOQ",
+          "original_unit": "percent_change_QoQ",
+          "known_at": "2026-07-29",
+          "known_at_precision_or_note": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED"
+        },
+        {
+          "company_id": "SAMSUNG_ELECTRONICS",
+          "packet": "samsung.json",
+          "observation_id": "SAM26Q2-MC09-DRAM-ASP-QOQ",
+          "original_unit": "percent_change_QoQ_reported_band",
+          "known_at": null,
+          "known_at_precision_or_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date."
+        }
+      ],
+      "comparability": "DESCRIPTIVE_SIDE_BY_SIDE_WITH_CONDITIONS",
+      "condition_ko": "회사 DRAM 평균판매가격 변화. 믹스·거래 조건을 포함하므로 동일 SKU 계약가격이나 경쟁력 비교로 사용하지 않음.",
+      "normalization_performed": false,
+      "company_ranking_permitted": false
+    },
+    {
+      "comparison_id": "PAIR-NAND-ASP-QOQ",
+      "metric_id": "MC09",
+      "label": "nand_asp_qoq",
+      "period_basis": "FLOW_CHANGE_QOQ",
+      "observations": [
+        {
+          "company_id": "SK_HYNIX",
+          "packet": "sk_hynix.json",
+          "observation_id": "SK26Q2-NAND-ASP-QOQ",
+          "original_unit": "percent_change_QoQ",
+          "known_at": "2026-07-29",
+          "known_at_precision_or_note": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED"
+        },
+        {
+          "company_id": "SAMSUNG_ELECTRONICS",
+          "packet": "samsung.json",
+          "observation_id": "SAM26Q2-MC09-NAND-ASP-QOQ",
+          "original_unit": "percent_change_QoQ_reported_band",
+          "known_at": null,
+          "known_at_precision_or_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date."
+        }
+      ],
+      "comparability": "DESCRIPTIVE_SIDE_BY_SIDE_WITH_CONDITIONS",
+      "condition_ko": "회사 NAND 평균판매가격 변화. low/mid/high 밴드의 수치 경계·중간값은 원문에서 정의하지 않았으므로 생성하지 않음.",
+      "normalization_performed": false,
+      "company_ranking_permitted": false
+    },
+    {
+      "comparison_id": "PAIR-CASH-PPE-ACQUISITION",
+      "metric_id": "MC16",
+      "label": "cash_ppe_acquisition",
+      "period_basis": "FLOW",
+      "observations": [
+        {
+          "company_id": "SK_HYNIX",
+          "packet": "sk_hynix.json",
+          "observation_id": "SK26Q2-PPE-CASH-OUTFLOW",
+          "original_unit": "KRW Billion",
+          "known_at": "2026-07-29",
+          "known_at_precision_or_note": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED"
+        },
+        {
+          "company_id": "SAMSUNG_ELECTRONICS",
+          "packet": "samsung.json",
+          "observation_id": "SAM26Q2-MC16-Q2-CASH-PPE",
+          "original_unit": "KRW_trillion",
+          "known_at": null,
+          "known_at_precision_or_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date."
+        }
+      ],
+      "comparability": "DESCRIPTIVE_SIDE_BY_SIDE_WITH_CONDITIONS",
+      "condition_ko": "Q2 회사 전체 현금흐름표 유형자산 취득. DS/메모리 투자액·FY 계획·상반기 누적·당기 판매 가능 공급량과 별계열.",
+      "normalization_performed": false,
+      "company_ranking_permitted": false
+    }
+  ],
+  "outside_core_comparison": [
+    {
+      "company_id": "SK_HYNIX",
+      "observation_ids": [
+        "SK26Q1-INVENTORY-END",
+        "SK25Q4-INVENTORY-END",
+        "SK26Q1-PPE-CASH-OUTFLOW"
+      ],
+      "reason": "Different comparison periods retained as supplementary observations"
+    },
+    {
+      "company_id": "SK_HYNIX",
+      "observation_ids": [
+        "SK26Q3-DRAM-BITS-GUIDANCE",
+        "SK26Q3-NAND-BITS-GUIDANCE",
+        "SK26FY-CAPEX-GUIDANCE"
+      ],
+      "reason": "Q3 outlook / full-year plan, not Q2 actual"
+    },
+    {
+      "company_id": "SAMSUNG_ELECTRONICS",
+      "observation_ids": [
+        "SAM26Q2-MC07-DS-INVENTORY-MISSING",
+        "SAM26Q2-MC07-MEM-INVENTORY-MISSING",
+        "SAM26Q2-MC16-Q2-MEMORY-CAPEX-QUALITATIVE"
+      ],
+      "reason": "Missing within reviewed sources or qualitative scope; not a numeric observation"
+    },
+    {
+      "company_id": "SAMSUNG_ELECTRONICS",
+      "observation_ids": [
+        "SAM26Q2-MC16-YTD-CASH-PPE",
+        "SAM26Q2-MC16-Q2-REPORTED-CAPEX",
+        "SAM26Q2-MC16-Q2-DS-REPORTED-CAPEX"
+      ],
+      "reason": "H1 cumulative cash or company-reported CAPEX; not same period/definition as Q2 cash PP&E"
+    }
+  ],
+  "prohibitions": [
+    "Do not substitute low/mid/high bands with exact values or invented bounds.",
+    "Preserve signed cash-flow values, positive outflow display amounts and original units separately.",
+    "Do not infer customer orders, HBM volume, yield, facility capacity/allocation or causal leadingness.",
+    "Do not use earnings event/report-review/HTTP-modification dates as first-publication times.",
+    "Samsung known_at remains null; the August 13 review-report date is not first-publication evidence.",
+    "Corporate inventory includes different businesses; unit conversion would not solve scope differences.",
+    "Intel certification and Dell exhibition are separate cases; identical SKU or purchase chain is unverified."
+  ]
+}

@@ -30,7 +30,9 @@ Real decision problem
 - H1 검증 대기: 사람의 Gate 6 dataset freeze 및 Event 검토. 지표·lead/lag·실현율·verdict는 미계산
 - 연구 자료 추가: [반도체·AI·데이터센터·전력·금융 공급망](docs/research/supply_chain/README.md) — 기존 세 저장소의 방법론 검토와 2026-10-03 후보 자료
 - 현재 우선순위: [2026 하반기 직무·상품·고객 구조](docs/research/supply_chain/sk_hynix_commercial_role_context.md) — HBM·서버 DRAM·eSSD의 고객 문제와 채택 단계 학습
-- 거시 학습 구조 정리(2026-10-04): 산업 분류·기업 역할·메모리 사이클·18개 지표 후보와 원문 영수증. 현재 시장의 통합 관측 패널과 선행성 검증은 미구축
+- 거시 학습 구조 정리(2026-10-04): 산업 분류·기업 역할·메모리 사이클·18개 지표 후보와 원문 영수증
+- [첫 분기 관측표](docs/research/supply_chain/memory_observation_panel_2026q2.md)(2026-10-04): 하이닉스·삼성의 2026Q2 재고·DRAM/NAND 출하·ASP·설비 지출. 제품·사업·기간 범위를 보존한 후보 기록이며 반복·역사 패널과 선행성 검증은 미구축
+- [독립 목적 관리](docs/research/supply_chain/research_convergence_review.md): 실제 초기·중간·최종 검토와 수정 내역. 다음은 서버 DDR5의 Intel 인증 사례와 Dell 전시 탑재 사례를 고객·상품 카드로 구체화
 - 첫 수집 실험: [경제적 목적](docs/research/supply_chain/decision_purpose.md)과 [OpenAI–CoreWeave 사례 검토](docs/research/supply_chain/first_case_review.md) — 고객 약정과 실제 집행의 공개 연결 범위를 구분
 - 후속: H1 최소 검증 후 H2 Bottleneck Migration
 - 보류: H3 Product-Mix Opportunity Cost는 공개정보가 충분할 때까지 `KNOWN_UNKNOWN` 중심 framework로 유지
