@@ -12,7 +12,7 @@ SK하이닉스의 영업·마케팅·상품기획·신제품사업화 직무를 
 
 산업 간 연결: [반도체 제품에서 산업으로 이어지는 전파 경로](docs/research/supply_chain/semiconductor_industry_transmission_routes.md) — 제품 축과 파운드리·설계·후공정 기능을 분리하고 데이터센터·전력·통신·항공우주와 정책·협정의 조건부 연결을 점검한다.
 
-현재 수집 단계: [무료 API로 관측할 지표와 실제 접근 결과](docs/research/supply_chain/api_signal_feasibility.md) — 2026-10-05 사용자 지시에 따라 DDR5 고객 카드 수렴을 보류하고, 질문·dataset·필드·단위·시점·연결 키와 인증/파일/실패를 구분한다.
+현재 수집 기준: [지표를 왜 모으고 무엇을 체크하는가](docs/research/supply_chain/indicator_collection_purpose.md) — 경제 주체 관계·상품 요구·구매/공급/설치/자금 단계부터 정의하고 기존 후보를 검토한다. 중요도와 API 준비를 분리하며 호출 파일럿·DDR5 카드는 보류한다. [무료 API 접근 결과](docs/research/supply_chain/api_signal_feasibility.md)는 실제 endpoint·단위·인증/파일/실패 기록이다.
 
 ```text
 Real decision problem
@@ -41,7 +41,8 @@ Real decision problem
 - [AI 기술과 상품 요구 연결](docs/research/supply_chain/ai_technology_memory_links.md)(2026-10-04): 연결 일곱 가지, 구현·시험 조건과 채택·주문·공급 공백. 업계 총수요나 고객별 물량을 계산한 결과가 아님
 - [산업 전파 경로 점검](docs/research/supply_chain/semiconductor_industry_transmission_routes.md)(2026-10-05): 여러 제품과 제조 기능, 전력 규제·국가 간 협력·항공우주의 대표 관계와 연결 공백. 세계 전체 거래·규제 효력 또는 충격 크기를 확인한 결과가 아님
 - [무료 API 수집 가능성](docs/research/supply_chain/api_signal_feasibility.md)(2026-10-05): 데이터가 반환된 무키 경로, 인증 미시험·실패·파일 자료와 관측 계약. 반복 수집·선행성 검증은 미구현
-- [독립 목적 관리](docs/research/supply_chain/research_convergence_review.md): 실제 초기·중간·최종 검토와 수정 내역. 현재는 API 관측 가능성을 먼저 점검하며 이전 DDR5 카드 제안은 보류
+- [지표 수집 목적과 적합성](docs/research/supply_chain/indicator_collection_purpose.md): 7개 경제적 질문과 기존 34개 번호 지표·6개 가족 계약의 수집 역할/한계. 기존 접근 성공을 수집 중요도·선행성으로 승격하지 않음
+- [독립 목적 관리](docs/research/supply_chain/research_convergence_review.md): 실제 초기·중간·최종 검토와 수정 내역. 현재는 수집 목적을 고정한 뒤 후보 적합성을 검토하며 호출 파일럿·DDR5 제안은 보류
 - 첫 수집 실험: [경제적 목적](docs/research/supply_chain/decision_purpose.md)과 [OpenAI–CoreWeave 사례 검토](docs/research/supply_chain/first_case_review.md) — 고객 약정과 실제 집행의 공개 연결 범위를 구분
 - 후속: H1 최소 검증 후 H2 Bottleneck Migration
 - 보류: H3 Product-Mix Opportunity Cost는 공개정보가 충분할 때까지 `KNOWN_UNKNOWN` 중심 framework로 유지
