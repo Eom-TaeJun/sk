@@ -1,0 +1,2565 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-05",
+  "prepared_at_utc": "2026-10-04T17:38:54.936520+00:00",
+  "purpose_ko": "하이닉스 영업·상품기획 학습에서 고객 시스템 배치 및 fab 공급 준비의 전력·허가·정부 자금 조건을 무료 공개 데이터로 어디까지 확인할 수 있는지 정한다. 금융 투자 추천·수요 예측 검증이 아니다.",
+  "scope_ko": "7 family, 14 목적 지표와 무키read-onlyprobe3회. 개인 키/비공개 설정/개인 연락처를 추출하지 않고 계정가입·외부 메시지·댓글 제출은 하지 않았다.",
+  "source_count": 26,
+  "new_official_document_capture_count": 23,
+  "bounded_live_probe_count": 3,
+  "family_count": 7,
+  "metric_count": 14,
+  "raw_storage_scope": "OUTSIDE_PUBLIC_REPOSITORY",
+  "public_full_raw_responses_included": false,
+  "sources": [
+    {
+      "source_id": "SRC-API-PP-EIA-DEVELOPER",
+      "source_url": "https://www.eia.gov/developer/",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:37.585156+00:00",
+      "raw_file_basename": "eia-developer.html",
+      "response_status": 200,
+      "retrieved_url": "https://www.eia.gov/developer/",
+      "content_type": "text/html; charset=UTF-8",
+      "last_modified": null,
+      "byte_length": 46101,
+      "sha256": "8c31ce7bfbe52ba73e668a8495f8686fe153c81f61e6b69aa86d3261db602cd3",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "EIA Developer",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "date_basis_ko": "2026년 현재 공개 안내; 별도 게시일 미표시",
+      "original_excerpts": [
+        {
+          "text": "The EIA API is offered as a free tool. Registration is required.",
+          "locator": "Developer / Using EIA API"
+        }
+      ],
+      "english_verbatim_word_count": 12,
+      "support_scope_ko": "무료 API 등록과 무키 bulk 다운로드의 다른 접근 조건",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-EIA-V2-DOCS",
+      "source_url": "https://www.eia.gov/opendata/documentation.php",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:37.586767+00:00",
+      "raw_file_basename": "eia-v2-docs.html",
+      "response_status": 200,
+      "retrieved_url": "https://www.eia.gov/opendata/documentation.php",
+      "content_type": "text/html; charset=UTF-8",
+      "last_modified": null,
+      "byte_length": 127365,
+      "sha256": "0a591dde22f929994d42007cca1fbe6dbaeec8043067b4db3668d16826dbd07c",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "EIA API Technical Documentation",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": "2026-03",
+      "publication_date_precision": "month",
+      "date_basis_ko": "March 2026 patch / v2.1.12",
+      "original_excerpts": [
+        {
+          "text": "You must use the API key.",
+          "locator": "API key; /data; facets; frequency; pagination; patch notes"
+        }
+      ],
+      "english_verbatim_word_count": 6,
+      "support_scope_ko": "keyed v2 경로·메타데이터·값 문자열·JSON 5000행 제한",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-EIA-FAQ",
+      "source_url": "https://www.eia.gov/opendata/faqs.php",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:37.588793+00:00",
+      "raw_file_basename": "eia-faq.html",
+      "response_status": 200,
+      "retrieved_url": "https://www.eia.gov/opendata/faqs.php",
+      "content_type": "text/html; charset=UTF-8",
+      "last_modified": null,
+      "byte_length": 11781,
+      "sha256": "2a661de98f0aa5713becb095cfc6fe0fe57ae7545d08d7edec872dbffd307932",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "EIA Open Data FAQ",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "date_basis_ko": "별도 게시일 미표시",
+      "original_excerpts": [
+        {
+          "text": "It is updated constantly and not at regular intervals.",
+          "locator": "When is your API data updated?; throttle guidance"
+        }
+      ],
+      "english_verbatim_word_count": 9,
+      "support_scope_ko": "일괄 고정 지연이 아닌 route별 갱신·대략적 throttling 안내",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-EIA-REUSE",
+      "source_url": "https://www.eia.gov/about/copyrights_reuse.php",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:37.590801+00:00",
+      "raw_file_basename": "eia-reuse.html",
+      "response_status": 200,
+      "retrieved_url": "https://www.eia.gov/about/copyrights_reuse.php",
+      "content_type": "text/html; charset=UTF-8",
+      "last_modified": null,
+      "byte_length": 52512,
+      "sha256": "7f25492108c0654a2c4b89b7ec1593dcfa84ea934eb8a333fdc49b99fd5883af",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "EIA Copyrights and Reuse",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "date_basis_ko": "별도 게시일 미표시",
+      "original_excerpts": [
+        {
+          "text": "U.S. government publications are in the public domain",
+          "locator": "Public domain and use of EIA content; Protected materials"
+        }
+      ],
+      "english_verbatim_word_count": 8,
+      "support_scope_ko": "EIA 자료 출처·공표일 표시와 제3자 보호 자료의 예외",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-ENTSOE-TOKEN",
+      "source_url": "https://transparencyplatform.zendesk.com/hc/en-us/articles/12845911031188-How-to-get-security-token",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:48.503887+00:00",
+      "raw_file_basename": "entsoe-token.html",
+      "response_status": 200,
+      "retrieved_url": "https://transparencyplatform.zendesk.com/hc/en-us/articles/12845911031188-How-to-get-security-token",
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 28616,
+      "sha256": "1bfc98862f7fc44f411777af94b1c5da9045db6328ce7098781368bf5a2e2b38",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "ENTSO-E How to get security token?",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": "2026-01-28",
+      "publication_date_precision": "day",
+      "date_basis_ko": "Updated",
+      "original_excerpts": [
+        {
+          "text": "You will be granted within 3 working days",
+          "locator": "article body / registration, API access request, My Account token"
+        }
+      ],
+      "english_verbatim_word_count": 8,
+      "support_scope_ko": "등록·이메일 인증·별도 API 승인·토큰 생성 순서; 실제 승인 미실행",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-ENTSOE-RATE",
+      "source_url": "https://transparencyplatform.zendesk.com/hc/en-us/articles/12783148966036-API-Rate-Limit-Part-1",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:48.763085+00:00",
+      "raw_file_basename": "entsoe-rate.html",
+      "response_status": 200,
+      "retrieved_url": "https://transparencyplatform.zendesk.com/hc/en-us/articles/12783148966036-API-Rate-Limit-Part-1",
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 28859,
+      "sha256": "508f7756c67078f758b603b18e11e4667c3692fa19697725cff0168a6765751e",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "ENTSO-E API Rate Limit Part 1",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": "2026-04-20",
+      "publication_date_precision": "day",
+      "date_basis_ko": "Updated",
+      "original_excerpts": [
+        {
+          "text": "400 requests per minute",
+          "locator": "Primary Limit; Enforcement Scope; TP R3 token restriction"
+        }
+      ],
+      "english_verbatim_word_count": 4,
+      "support_scope_ko": "2026 안내의 사용자/토큰 기준 quota; IP별 quota로 환산하지 않음",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-ENTSOE-QUERY",
+      "source_url": "https://transparencyplatform.zendesk.com/hc/en-us/articles/15854421431060-Query-via-Web-Browser",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:49.196792+00:00",
+      "raw_file_basename": "entsoe-query.html",
+      "response_status": 200,
+      "retrieved_url": "https://transparencyplatform.zendesk.com/hc/en-us/articles/15854421431060-Query-via-Web-Browser",
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 26027,
+      "sha256": "c6a06e6d7c27e2c8a1013bc7510940cb03d8fdcae74ee10f227f0a9d9333cac0",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "ENTSO-E Query via Web Browser",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": "2023-06-05",
+      "publication_date_precision": "day",
+      "date_basis_ko": "Updated",
+      "original_excerpts": [
+        {
+          "text": "using Get method",
+          "locator": "article 6.1.A example / GET URL"
+        }
+      ],
+      "english_verbatim_word_count": 3,
+      "support_scope_ko": "official A65/A16 load 예시·production URL; 실제 XML 응답은 미확인",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-FR-DOCS",
+      "source_url": "https://www.federalregister.gov/developers/documentation/api/v1",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:49.236237+00:00",
+      "raw_file_basename": "federalregister-api.html",
+      "response_status": 200,
+      "retrieved_url": "https://www.federalregister.gov/developers/documentation/api/v1",
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 31934,
+      "sha256": "bce918492f541b5438b78d71577bc60a1d57d253387088474cc375a1ff88e48c",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "FederalRegister.gov API Documentation",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "date_basis_ko": "별도 게시일 미표시",
+      "original_excerpts": [
+        {
+          "text": "FederalRegister.gov APIs do not require API keys",
+          "locator": "FR API Documentation; Legal Status"
+        }
+      ],
+      "english_verbatim_word_count": 7,
+      "support_scope_ko": "무키 검색 접근과 비공식 XML 판본·공식 GPO PDF 검증의 구분",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-REGGOV-DOCS",
+      "source_url": "https://open.gsa.gov/api/regulationsgov/",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:49.936975+00:00",
+      "raw_file_basename": "regulationsgov-api.html",
+      "response_status": 200,
+      "retrieved_url": "https://open.gsa.gov/api/regulationsgov/",
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": "Thu, 02 Jul 2026 21:13:41 GMT",
+      "byte_length": 59455,
+      "sha256": "5cfc5d92d1f37805a2c0a5016e6925e91b1292f99f59a8a02a9933fdc9a58044",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "GSA Regulations.gov API",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "date_basis_ko": "별도 게시일 미표시",
+      "original_excerpts": [
+        {
+          "text": "X-Api-Key HTTP header",
+          "locator": "API key; document/docket GET; Examples; Frequently Asked Questions"
+        }
+      ],
+      "english_verbatim_word_count": 3,
+      "support_scope_ko": "읽기 GET 인증·docket/document 구분·withdrawn field·공개 DEMO_KEY의 탐색 한정; POST 제출 제외",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-APIDATAGOV-RATE",
+      "source_url": "https://api.data.gov/docs/developer-manual/",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:50.141425+00:00",
+      "raw_file_basename": "api-data-gov-rate.html",
+      "response_status": 200,
+      "retrieved_url": "https://api.data.gov/docs/developer-manual/",
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": "Wed, 13 May 2026 19:21:47 GMT",
+      "byte_length": 24393,
+      "sha256": "c09641f25041d3c81f39988262f0fef407a166eb9210fbecf04d803afadc0c62",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "api.data.gov Developer Manual",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "date_basis_ko": "별도 게시일 미표시",
+      "original_excerpts": [
+        {
+          "text": "Hourly Limit: 1,000 requests per hour",
+          "locator": "Rate Limits; DEMO_KEY Rate Limits; X-RateLimit headers"
+        }
+      ],
+      "english_verbatim_word_count": 6,
+      "support_scope_ko": "서비스 공통 기본 key quota와 실제 응답 header로 확인할 필요",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-USASPENDING-ENDPOINTS",
+      "source_url": "https://api.usaspending.gov/docs/endpoints",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:50.228875+00:00",
+      "raw_file_basename": "usaspending-endpoints.html",
+      "response_status": 200,
+      "retrieved_url": "https://api.usaspending.gov/docs/endpoints",
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 43874,
+      "sha256": "afd56dfed11ad19dbde864c0360250611b5c19f8b6a3012d61cbee186cf05d20",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "USAspending API Endpoints",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "date_basis_ko": "별도 게시일 미표시",
+      "original_excerpts": [
+        {
+          "text": "Endpoints do not currently require any authorization.",
+          "locator": "authorization; search; awards/last_updated; reporting/agencies/publish_dates"
+        }
+      ],
+      "english_verbatim_word_count": 7,
+      "support_scope_ko": "무키 endpoint와 read-only search POST의 목적",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-USASPENDING-AWARD-CONTRACT",
+      "source_url": "https://raw.githubusercontent.com/fedspendingtransparency/usaspending-api/master/usaspending_api/api_contracts/contracts/v2/search/spending_by_award.md",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:50.245443+00:00",
+      "raw_file_basename": "usaspending-award-contract.md",
+      "response_status": 200,
+      "retrieved_url": "https://raw.githubusercontent.com/fedspendingtransparency/usaspending-api/master/usaspending_api/api_contracts/contracts/v2/search/spending_by_award.md",
+      "content_type": "text/plain; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 17686,
+      "sha256": "69d3262a78e91d60a78121a73808b5e2dff457a32fa91b1f8378accea6ea8348",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "USAspending official API contract: spending_by_award",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "date_basis_ko": "GitHub master 조회 snapshot; commit 고정 미실행",
+      "original_excerpts": [
+        {
+          "text": "Spending by Award",
+          "locator": "POST; Base fields; Contracts; TimePeriodObject"
+        }
+      ],
+      "english_verbatim_word_count": 3,
+      "support_scope_ko": "award 요약 행·필터·기간·Award Amount와 Total Outlays 필드; 누적액의 분기 오독 방지",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-USASPENDING-GUIDE",
+      "source_url": "https://www.usaspending.gov/data/Federal-Spending-Guide.pdf",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:50.639130+00:00",
+      "raw_file_basename": "usaspending-guide.pdf",
+      "response_status": 200,
+      "retrieved_url": "https://www.usaspending.gov/data/Federal-Spending-Guide.pdf",
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 22 Sep 2026 21:17:43 GMT",
+      "byte_length": 422906,
+      "sha256": "8895f6c22d5642aa2ec5f8e15ded2201e14ee402912bcaf4c9aa3c290ad10dc7",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "page_count": 20,
+      "title": "USAspending Federal Spending Guide",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": "2023-04-26",
+      "publication_date_precision": "day",
+      "date_basis_ko": "Last Updated",
+      "original_excerpts": [
+        {
+          "text": "Obligations",
+          "locator": "physical pp.2–3 obligations/outlays/awards; pp.6 monthly outlays"
+        }
+      ],
+      "english_verbatim_word_count": 1,
+      "support_scope_ko": "의무액·실제 지급·prime/subaward·거래/요약·월별 outlay의 의미; 2023 정의 자료",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-PJM-DATAMINER",
+      "source_url": "https://www.pjm.com/markets-and-operations/etools/data-miner-2",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:50.975678+00:00",
+      "raw_file_basename": "pjm-data-miner.html",
+      "response_status": 200,
+      "retrieved_url": "https://www.pjm.com/markets-and-operations/etools/data-miner-2",
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 79442,
+      "sha256": "d0d70cda45275e360e8e7b5dfdec8a4580596623ec7286a8661ba6271b647c39",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "PJM Data Miner",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "date_basis_ko": "별도 게시일 미표시",
+      "original_excerpts": [
+        {
+          "text": "redistribution of information and or data contained in or derived from Data Miner is strictly prohibited without an active PJM Membership.",
+          "locator": "API Use Restrictions"
+        }
+      ],
+      "english_verbatim_word_count": 21,
+      "support_scope_ko": "회원/비회원 quota와 내부 이용·Data Miner 파생 자료 재배포 제한",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-PJM-API-GUIDE",
+      "source_url": "https://www.pjm.com/-/media/DotCom/etools/data-miner-2/data-miner-2-api-guide.pdf",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:51.246959+00:00",
+      "raw_file_basename": "pjm-api-guide.pdf",
+      "response_status": 200,
+      "retrieved_url": "https://www.pjm.com/-/media/DotCom/etools/data-miner-2/data-miner-2-api-guide.pdf",
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 10 Feb 2026 18:00:02 GMT",
+      "byte_length": 2634674,
+      "sha256": "eac805187af1bb83d3780f989e4b45077179ece2c0ea2c4da243f42c6972fa98",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "page_count": 65,
+      "title": "PJM Data Miner API Guide",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": "2026-02-10",
+      "publication_date_precision": "day",
+      "date_basis_ko": "version 15",
+      "original_excerpts": [
+        {
+          "text": "Hourly Load: Metered",
+          "locator": "physical pp.4–5 account/provisioning; p.36 API keys; p.62 feed list; p.65 changelog"
+        }
+      ],
+      "english_verbatim_word_count": 3,
+      "support_scope_ko": "무료 API key·비회원 provisioning·인증 header·metered/estimated/preliminary feed 분리",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-PJM-SERVICE-REQUESTS",
+      "source_url": "https://www.pjm.com/planning/service-requests",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:51.348994+00:00",
+      "raw_file_basename": "pjm-service-requests.html",
+      "response_status": 200,
+      "retrieved_url": "https://www.pjm.com/planning/service-requests",
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 48925,
+      "sha256": "61371d46a7dfabb8353a515ac9b01966b4034a36c82d5b8e11d8056e5de6c574",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "PJM Service Requests",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "date_basis_ko": "페이지에 2026-07-30 통계 링크; 별도 페이지 게시일 미표시",
+      "original_excerpts": [
+        {
+          "text": "generation interconnection requests",
+          "locator": "Serial Service Request Status; Cycle Service Request Status; statistics"
+        }
+      ],
+      "english_verbatim_word_count": 3,
+      "support_scope_ko": "발전·송전 접속 queue의 공개 웹 경로; 개별 DC 부하 queue API 확인은 아님",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-SG-DATASET",
+      "source_url": "https://data.gov.sg/datasets/d_ae4afbaf5bc96bde19d8ce85810ab9f4/view",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:52.681418+00:00",
+      "raw_file_basename": "sg-generation-dataset.html",
+      "response_status": 200,
+      "retrieved_url": "https://data.gov.sg/datasets/d_ae4afbaf5bc96bde19d8ce85810ab9f4/view",
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 3057618,
+      "sha256": "6e4333d86e120011738be064e3c58c368359dc9f51b784f3c85d4b0f642242e0",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "Singapore Electricity Generation, Monthly",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": "2026-08-21",
+      "publication_date_precision": "day",
+      "date_basis_ko": "Data Last Updated",
+      "original_excerpts": [
+        {
+          "text": "Data from Jan 1975 to May 2026",
+          "locator": "dataset header; data coverage; column legend; Source"
+        }
+      ],
+      "english_verbatim_word_count": 7,
+      "support_scope_ko": "SINGSTAT 공개 카탈로그·EMA 원자료·국가 월 발전량 GWh·1 wide row와 618열",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-SG-SEARCH-DOCS",
+      "source_url": "https://guide.data.gov.sg/developer-guide/dataset-apis/search-and-filter-within-dataset.md",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:52.737076+00:00",
+      "raw_file_basename": "sg-search-docs.md",
+      "response_status": 200,
+      "retrieved_url": "https://guide.data.gov.sg/developer-guide/dataset-apis/search-and-filter-within-dataset.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 4573,
+      "sha256": "0c65adfa434fc2eecb14e716aadde066b989edcfb61c0a9b1d8bcc208d66f8e8",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "data.gov.sg Datastore Search documentation",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "date_basis_ko": "별도 게시일 미표시",
+      "original_excerpts": [
+        {
+          "text": "datastore_search",
+          "locator": "endpoint; resource_id; fields; limit; offset"
+        }
+      ],
+      "english_verbatim_word_count": 1,
+      "support_scope_ko": "무키 데이터셋 검색과 필드 선택·페이지 범위",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-SG-RATE",
+      "source_url": "https://guide.data.gov.sg/developer-guide/api-overview/api-rate-limits.md",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:53.590318+00:00",
+      "raw_file_basename": "sg-rate.md",
+      "response_status": 200,
+      "retrieved_url": "https://guide.data.gov.sg/developer-guide/api-overview/api-rate-limits.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 2269,
+      "sha256": "f5e335f1932b2a38fa39361750831a9436732c5e46ca740a5ba4f3eea563cc1e",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "data.gov.sg API Rate Limits",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "date_basis_ko": "조회 시 현재 공식 표",
+      "original_excerpts": [
+        {
+          "text": "The rate limits are reset every 10 seconds",
+          "locator": "Rate Limits / Datastore Search row; Tier Definitions"
+        }
+      ],
+      "english_verbatim_word_count": 8,
+      "support_scope_ko": "무키 4/dev 8/prod 20회 per10seconds와 무료 탐색/production 권장 가입",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-SG-LICENCE",
+      "source_url": "https://data.gov.sg/open-data-licence",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:13:54.426759+00:00",
+      "raw_file_basename": "sg-licence.html",
+      "response_status": 200,
+      "retrieved_url": "https://data.gov.sg/open-data-licence",
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 97023,
+      "sha256": "ee980533e9f2da1288e956c5ec3c56213d6ca92801d8e5452ef8a32d8a8b0329",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "Singapore Open Data Licence version 1.0",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "date_basis_ko": "version 1.0; 별도 시행 날짜 미표시",
+      "original_excerpts": [
+        {
+          "text": "worldwide, perpetual, royalty-free, non-exclusive licence",
+          "locator": "What you can do; Limitations; Attribution; Disclaimers"
+        }
+      ],
+      "english_verbatim_word_count": 5,
+      "support_scope_ko": "상업/비상업 재사용 조건·출처/최신 라이선스 링크·개인정보/제3자 권리 예외",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-ENTSOE-PARAMETERS",
+      "source_url": "https://transparencyplatform.zendesk.com/hc/en-us/articles/15696716612372-Request-Parameters",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:18:55.436677+00:00",
+      "raw_file_basename": "entsoe-parameters.html",
+      "response_status": 200,
+      "retrieved_url": "https://transparencyplatform.zendesk.com/hc/en-us/articles/15696716612372-Request-Parameters",
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 28803,
+      "sha256": "ff7490ef303c27d8e1c4aaeff5a9a6ee7f0aba8d8fbf2a8d298156a8899a061f",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "ENTSO-E Request Parameters",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": "2026-01-15",
+      "publication_date_precision": "day",
+      "date_basis_ko": "Updated",
+      "original_excerpts": [
+        {
+          "text": "Parameter names are case sensitive.",
+          "locator": "case sensitivity; mandatory time interval; UTC and summer/winter time"
+        }
+      ],
+      "english_verbatim_word_count": 5,
+      "support_scope_ko": "필수 기간·UTC/DST·outage update 옵션의 적용 범위",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-ENTSOE-EIC",
+      "source_url": "https://transparencyplatform.zendesk.com/hc/en-us/articles/15885757676308-Area-List-with-Energy-Identification-Code-EIC",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:18:55.443249+00:00",
+      "raw_file_basename": "entsoe-eic.html",
+      "response_status": 200,
+      "retrieved_url": "https://transparencyplatform.zendesk.com/hc/en-us/articles/15885757676308-Area-List-with-Energy-Identification-Code-EIC",
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 48075,
+      "sha256": "7228b43222b4663ef45af22f8678c545ec76813c82bf468718b81e8d833139d7",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "ENTSO-E Area List with Energy Identification Code",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": "2026-09-21",
+      "publication_date_precision": "day",
+      "date_basis_ko": "Updated",
+      "original_excerpts": [
+        {
+          "text": "Area List with Energy Identification Code (EIC)",
+          "locator": "Area Type table; EIC list / 10YCZ-CEPS-----N"
+        }
+      ],
+      "english_verbatim_word_count": 7,
+      "support_scope_ko": "bidding zone/control area 등의 차이·Czech 예시 EIC",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-USASPENDING-TRANSACTION-CONTRACT",
+      "source_url": "https://raw.githubusercontent.com/fedspendingtransparency/usaspending-api/master/usaspending_api/api_contracts/contracts/v2/search/spending_by_transaction.md",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:18:55.451827+00:00",
+      "raw_file_basename": "usaspending-transaction-contract.md",
+      "response_status": 200,
+      "retrieved_url": "https://raw.githubusercontent.com/fedspendingtransparency/usaspending-api/master/usaspending_api/api_contracts/contracts/v2/search/spending_by_transaction.md",
+      "content_type": "text/plain; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 17889,
+      "sha256": "23bc2e1207f5873e29d2253e7c53461b9b50c44c2bc4e0f36ca263b2ad3c75b6",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "title": "USAspending official API contract: spending_by_transaction",
+      "source_role": "OFFICIAL_PRIMARY_API_DOCUMENTATION_OR_DATA_CATALOGUE",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "date_basis_ko": "GitHub master 조회 snapshot; commit 고정 미실행",
+      "original_excerpts": [
+        {
+          "text": "using the transaction's `action_date` field",
+          "locator": "POST fields; TimePeriodObject; FieldNameObject"
+        }
+      ],
+      "english_verbatim_word_count": 5,
+      "support_scope_ko": "분기 의무액을 transaction Action Date/Transaction Amount로 정의할 경로; 실제 해당 endpoint 호출 미실행",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-LIVE-FR",
+      "title": "PROBE-PP-FR-RULE-SEARCH bounded live response",
+      "source_role": "BOUNDED_READ_ONLY_PUBLIC_API_RESPONSE",
+      "source_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=large+load&conditions%5Bpublication_date%5D%5Bgte%5D=2026-01-01&conditions%5Bpublication_date%5D%5Blte%5D=2026-10-05&per_page=3&order=newest",
+      "retrieved_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=large+load&conditions%5Bpublication_date%5D%5Bgte%5D=2026-01-01&conditions%5Bpublication_date%5D%5Blte%5D=2026-10-05&per_page=3&order=newest",
+      "retrieved_at_utc": "2026-10-04T17:14:00.980985+00:00",
+      "response_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "03434d96e31f300d89c2d8172c527e9552a1fa43ce634d4199fb70d2afbe7807",
+      "byte_length": 9567,
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_file_basename": "probe-fr-search.json",
+      "publication_date": null,
+      "date_basis_ko": "응답 수집 시각과 각 행의 경제 관측 기간을 분리",
+      "capture_status": "HTTP_200_NON_EMPTY_JSON_SCHEMA_AND_BOUNDS_REVIEWED",
+      "original_excerpts": [],
+      "english_verbatim_word_count": 0,
+      "support_scope_ko": "접근 가능성과 실제 응답 형식의 제한된 검증; 연속 수집·지표 전체 커버리지 검증은 아님",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-LIVE-USASPENDING",
+      "title": "PROBE-PP-USASPENDING-AWARDS bounded live response",
+      "source_role": "BOUNDED_READ_ONLY_PUBLIC_API_RESPONSE",
+      "source_url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "retrieved_url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "retrieved_at_utc": "2026-10-04T17:14:01.865933+00:00",
+      "response_status": 200,
+      "content_type": "application/json",
+      "sha256": "12b86af803480948cacd932fbb02777e356667d4317844e8c55caa08c85e6708",
+      "byte_length": 1725,
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_file_basename": "probe-usaspending-awards.json",
+      "publication_date": null,
+      "date_basis_ko": "응답 수집 시각과 각 행의 경제 관측 기간을 분리",
+      "capture_status": "HTTP_200_NON_EMPTY_JSON_SCHEMA_AND_BOUNDS_REVIEWED",
+      "original_excerpts": [],
+      "english_verbatim_word_count": 0,
+      "support_scope_ko": "접근 가능성과 실제 응답 형식의 제한된 검증; 연속 수집·지표 전체 커버리지 검증은 아님",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-API-PP-LIVE-SG",
+      "title": "PROBE-PP-SG-GENERATION bounded live response",
+      "source_role": "BOUNDED_READ_ONLY_PUBLIC_API_RESPONSE",
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_ae4afbaf5bc96bde19d8ce85810ab9f4&limit=1&fields=DataSeries%2C2026May%2C2026Apr",
+      "retrieved_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_ae4afbaf5bc96bde19d8ce85810ab9f4&limit=1&fields=DataSeries%2C2026May%2C2026Apr",
+      "retrieved_at_utc": "2026-10-04T17:14:04.408458+00:00",
+      "response_status": 200,
+      "content_type": "application/json",
+      "sha256": "d732228606fac9cc67512f4a8f5fb81308276be7a4f5400037fc8e42dce9d7f9",
+      "byte_length": 481,
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_file_basename": "probe-sg-generation.json",
+      "publication_date": null,
+      "date_basis_ko": "응답 수집 시각과 각 행의 경제 관측 기간을 분리",
+      "capture_status": "HTTP_200_NON_EMPTY_JSON_SCHEMA_AND_BOUNDS_REVIEWED",
+      "original_excerpts": [],
+      "english_verbatim_word_count": 0,
+      "support_scope_ko": "접근 가능성과 실제 응답 형식의 제한된 검증; 연속 수집·지표 전체 커버리지 검증은 아님",
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    }
+  ],
+  "reused_source_refs": [
+    {
+      "source_id": "SRC-ROUTE-FERC-PJM-SHOWCAUSE26",
+      "existing_public_packet": "data/research/semiconductor_industry_routes/2026-10-05/policy_infrastructure_routes.json",
+      "packet_sha256_at_read": "bedba1e6430e59d44501c95d3fd780feffbb8b3df5302a5a5c62b6cd362c1ea8",
+      "original_source_url": "https://www.ferc.gov/sites/default/files/2026-06/EL26-67-000.pdf",
+      "original_sha256": "f9c747cfb6f16b646556d1149b529b467a402b6a62e7e7f861c583180a0a383f",
+      "original_byte_length": 1592865,
+      "original_retrieved_at_utc": "2026-10-04T15:56:05.688926+00:00",
+      "original_publication_date": "2026-06-18",
+      "reuse_ko": "원문 receipt와 scoped route 관계를 재사용; 이번 원문 재수집/효력 갱신 검증은 미실행.",
+      "quotes_repeated": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-ROUTE-BIS-VEU-REVOCATION25",
+      "existing_public_packet": "data/research/semiconductor_industry_routes/2026-10-05/policy_infrastructure_routes.json",
+      "packet_sha256_at_read": "bedba1e6430e59d44501c95d3fd780feffbb8b3df5302a5a5c62b6cd362c1ea8",
+      "original_source_url": "https://www.govinfo.gov/content/pkg/FR-2025-09-02/pdf/2025-16735.pdf",
+      "original_sha256": "256036a657ca0b4a9e8c1133e991c156f6cbd283c2ce75ad144498f8aac6f6e4",
+      "original_byte_length": 243393,
+      "original_retrieved_at_utc": "2026-10-04T15:56:05.692779+00:00",
+      "original_publication_date": "2025-09-02",
+      "reuse_ko": "원문 receipt와 scoped route 관계를 재사용; 이번 원문 재수집/효력 갱신 검증은 미실행.",
+      "quotes_repeated": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26",
+      "existing_public_packet": "data/research/semiconductor_industry_routes/2026-10-05/policy_infrastructure_routes.json",
+      "packet_sha256_at_read": "bedba1e6430e59d44501c95d3fd780feffbb8b3df5302a5a5c62b6cd362c1ea8",
+      "original_source_url": "https://www.ema.gov.sg/content/dam/corporate/news/media-releases/2026/20260807-Media-Release-Conditional-Approval-for-900MW-of-Electricity-Trade-Between-Peninsular%20Malaysia-SG.pdf.coredownload.pdf",
+      "original_sha256": "b47211a22c93559e68d0dd721c35b9cd17eff0c6f211e1be2ef1ebf9aad37b7b",
+      "original_byte_length": 153513,
+      "original_retrieved_at_utc": "2026-10-04T15:59:40.749008+00:00",
+      "original_publication_date": "2026-08-07",
+      "reuse_ko": "원문 receipt와 scoped route 관계를 재사용; 이번 원문 재수집/효력 갱신 검증은 미실행.",
+      "quotes_repeated": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "source_id": "SRC-ROUTE-EMA-ST-MOU20",
+      "existing_public_packet": "data/research/semiconductor_industry_routes/2026-10-05/policy_infrastructure_routes.json",
+      "packet_sha256_at_read": "bedba1e6430e59d44501c95d3fd780feffbb8b3df5302a5a5c62b6cd362c1ea8",
+      "original_source_url": "https://www.ema.gov.sg/content/dam/corporate/news/media-releases/2020/Media-Release-Singapore-Malaysia-Strengthen-Bilateral-Energy-Cooperation-20201028.pdf.coredownload.pdf",
+      "original_sha256": "2af2d4e9b7cbf8b5dce9ea9f1d510757759e2e9286e8266f153ba6b2e7d2be31",
+      "original_byte_length": 102957,
+      "original_retrieved_at_utc": "2026-10-04T15:59:40.752771+00:00",
+      "original_publication_date": "2020-10-28",
+      "reuse_ko": "원문 receipt와 scoped route 관계를 재사용; 이번 원문 재수집/효력 갱신 검증은 미실행.",
+      "quotes_repeated": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    }
+  ],
+  "families": [
+    {
+      "family_id": "API-FAMILY-PP-EIA",
+      "name": "EIA",
+      "metric_ids": [
+        "API-PP-01",
+        "API-PP-02",
+        "API-PP-03"
+      ],
+      "source_ids": [
+        "SRC-API-PP-EIA-DEVELOPER",
+        "SRC-API-PP-EIA-V2-DOCS",
+        "SRC-API-PP-EIA-FAQ",
+        "SRC-API-PP-EIA-REUSE"
+      ],
+      "free_access_ko": "공식 무료 API는 등록/key 필요. bulk download는 key 불필요. 860M/923 공개 파일은 기존 수집 계획의 무키 대안.",
+      "signup_key_ko": "API 등록 후 이메일 key; 이번에는 계정 가입·키 확인·인증 호출을 하지 않았다.",
+      "auth": {
+        "api_key_required": true,
+        "key_placement": "api_key query parameter",
+        "no_key_alternative": "bulk/public survey files",
+        "user_key_read": false,
+        "public_demo_auth_tested": false,
+        "demo_access_ko": "EIA 공식 developer/v2/FAQ 및 공식 도메인 검색에서 DEMO_KEY 허용 문구 미확인; 미실행은 key 보유 여부 판정이 아님."
+      },
+      "quota_ko": "JSON max5000rows/query(XML300). FAQ의 sustained~9000/hour, burst<5/sec는 조건부 throttle 안내이며 고정 보장 quota가 아니다.",
+      "license_ko": "EIA 자체 데이터는 재사용·배포와 출처/공표일 표시 안내 확인. 제3자 보호 자료·로고·사진 예외.",
+      "public_data_reuse_status": "EIA_DATA_REUSE_WITH_ACKNOWLEDGMENT_DOCUMENTED",
+      "documentation_status": "OFFICIAL_DOCS_CHECKED_RAW_CAPTURED",
+      "live_data_status": "KEYED_API_NOT_ATTEMPTED_NO_USER_KEY_READ",
+      "probe_ids": [],
+      "collection_priority": "USE_EXISTING_NO_KEY_FILES_FIRST",
+      "continuous_collector_implemented": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "jurisdiction_and_effect_bound": "United States statistical coverage; data access is not a project permit or power-service approval",
+      "current_effect": null
+    },
+    {
+      "family_id": "API-FAMILY-PP-ENTSOE",
+      "name": "ENTSO-E Transparency Platform",
+      "metric_ids": [
+        "API-PP-04"
+      ],
+      "source_ids": [
+        "SRC-API-PP-ENTSOE-TOKEN",
+        "SRC-API-PP-ENTSOE-RATE",
+        "SRC-API-PP-ENTSOE-QUERY",
+        "SRC-API-PP-ENTSOE-PARAMETERS",
+        "SRC-API-PP-ENTSOE-EIC"
+      ],
+      "free_access_ko": "공개 플랫폼/API 후보다. 현재 토큰 문서는 가입·승인을 요구하며 별도 요금 안내는 발견하지 못했다. 무료 문서 접근과 실제 API 인증 검증을 구분한다.",
+      "signup_key_ko": "플랫폼 계정·이메일 인증 → 공식 API access 승인 절차 → 승인 후 My Account에서 token 생성. 안내상 3 working days다. 이번에는 신규 신청·메시지를 수행하지 않았다.",
+      "auth": {
+        "api_key_required": true,
+        "key_placement": "securityToken query parameter",
+        "user_key_read": false,
+        "authenticated_call_performed": false
+      },
+      "quota_ko": "2026-04-20 안내: 사용자 계정/API token당 400 requests/min. IP당 limit으로 해석하지 않는다.",
+      "license_ko": "국가/항목별 재사용 조건은 추가 확인 필요. 공개 지도 원관측 게시 전 확인.",
+      "public_data_reuse_status": "TO_VERIFY_COUNTRY_ITEM_TERMS",
+      "documentation_status": "OFFICIAL_DOCS_CHECKED_RAW_CAPTURED",
+      "live_data_status": "TOKEN_REQUIRED_NOT_ATTEMPTED",
+      "probe_ids": [],
+      "collection_priority": "DEFER_UNTIL_EU_SITE_CASE_AND_RIGHTS_CHECK",
+      "continuous_collector_implemented": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "jurisdiction_and_effect_bound": "European Transparency Platform area/item coverage; country, bidding-zone and control-area boundaries differ; no site permit determination",
+      "current_effect": null
+    },
+    {
+      "family_id": "API-FAMILY-PP-FEDERAL-REGISTER",
+      "name": "Federal Register",
+      "metric_ids": [
+        "API-PP-05"
+      ],
+      "source_ids": [
+        "SRC-API-PP-FR-DOCS",
+        "SRC-API-PP-LIVE-FR"
+      ],
+      "free_access_ko": "공식 문서상 API key가 불필요하며 실제 무키 GET JSON 검색이 성공했다.",
+      "signup_key_ko": "검색 GET에 가입/key가 필요하지 않다. MyFR 개인 기능과 구분한다.",
+      "auth": {
+        "api_key_required": false,
+        "signup_required_for_probe": false
+      },
+      "quota_ko": "현재 검토 문서에서 정량 quota는 확인하지 못했다. 무제한으로 가정하지 않으며 이번에는 3행·1페이지 GET만 수행했다.",
+      "license_ko": "API 접근 조건과 전문/XML 재배포 권리를 구분한다. 공식 법적 판본은 govinfo PDF이며 현행 통합 법령의 판정은 별도다.",
+      "public_data_reuse_status": "METADATA_SAMPLE_ONLY_FULLTEXT_RIGHTS_NOT_ASSESSED",
+      "documentation_status": "OFFICIAL_DOCS_CHECKED_RAW_CAPTURED",
+      "live_data_status": "DATA_RETURNED_NON_EMPTY_JSON",
+      "probe_ids": [
+        "PROBE-PP-FR-RULE-SEARCH"
+      ],
+      "collection_priority": "NO_KEY_BOUNDED_POLICY_EVENT_CANDIDATE",
+      "continuous_collector_implemented": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "jurisdiction_and_effect_bound": "United States federal publication; agency and CFR part jurisdiction must be retained; not state/local permissions or consolidated current law",
+      "current_effect": null
+    },
+    {
+      "family_id": "API-FAMILY-PP-REGULATIONS-GOV",
+      "name": "Regulations.gov",
+      "metric_ids": [
+        "API-PP-06"
+      ],
+      "source_ids": [
+        "SRC-API-PP-REGGOV-DOCS",
+        "SRC-API-PP-APIDATAGOV-RATE"
+      ],
+      "free_access_ko": "공개 GET API/key 등록 경로가 있고 공식 문서는 탐색용 DEMO_KEY도 예시한다. 이번 key/demo 호출은 미실행이다.",
+      "signup_key_ko": "api.data.gov/GSA key가 필요하다. GET 읽기와 댓글 POST 활성화·개인/조직정보 제출은 별개다. 후자는 이번 수집에서 제외했다.",
+      "auth": {
+        "api_key_required": true,
+        "key_placement": "X-Api-Key header (preferred)",
+        "user_key_read": false,
+        "public_demo_documented": true,
+        "public_demo_tested": false,
+        "comment_submission_performed": false
+      },
+      "quota_ko": "api.data.gov 기본 1000/hour/key이며 서비스별로 다를 수 있다. 실제 X-RateLimit headers 확인이 필요하다. DEMO_KEY는 30/hour/IP·50/day/IP이며 이번에는 미사용이다. Comment POST의 50/min·500/hour를 GET quota로 사용하지 않는다.",
+      "license_ko": "공개 docket metadata 후보다. 개인 연락처·댓글 본문을 제외한다. Agency별 필드·게시 제한과 재사용 조건은 확인이 필요하다.",
+      "public_data_reuse_status": "METADATA_ONLY_RIGHTS_AND_PRIVACY_TO_VERIFY",
+      "documentation_status": "OFFICIAL_DOCS_CHECKED_RAW_CAPTURED",
+      "live_data_status": "KEYED_GET_NOT_ATTEMPTED",
+      "probe_ids": [],
+      "collection_priority": "DEFER_UNTIL_CONFIRMED_DOCKET_JOIN",
+      "continuous_collector_implemented": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "jurisdiction_and_effect_bound": "United States federal eRulemaking dockets for participating agencies; not all FERC, state PUC or municipal proceedings",
+      "current_effect": null
+    },
+    {
+      "family_id": "API-FAMILY-PP-USASPENDING",
+      "name": "USAspending",
+      "metric_ids": [
+        "API-PP-07",
+        "API-PP-08",
+        "API-PP-09"
+      ],
+      "source_ids": [
+        "SRC-API-PP-USASPENDING-ENDPOINTS",
+        "SRC-API-PP-USASPENDING-AWARD-CONTRACT",
+        "SRC-API-PP-USASPENDING-TRANSACTION-CONTRACT",
+        "SRC-API-PP-USASPENDING-GUIDE",
+        "SRC-API-PP-LIVE-USASPENDING"
+      ],
+      "free_access_ko": "공식 endpoint 안내상 인증이 불필요하며 무키 read-only POST 검색이 실제 성공했다.",
+      "signup_key_ko": "가입/key가 불필요하다. 조회 POST를 award 생성·댓글 제출 같은 외부 쓰기와 구분한다.",
+      "auth": {
+        "api_key_required": false,
+        "signup_required_for_probe": false,
+        "post_is_read_only_search": true
+      },
+      "quota_ko": "검토한 endpoint/contract에서 정량 quota를 확인하지 못했다. 이번에는 3행·1페이지 읽기 조회만 수행했다.",
+      "license_ko": "공개 정부지출 metadata/금액 필드의 검증표만 제공하며 전체 응답은 재배포하지 않았다. 별도 재사용 약관의 전수 검토는 미실행이다.",
+      "public_data_reuse_status": "BOUNDED_SCHEMA_AND_ID_SAMPLE_ONLY",
+      "documentation_status": "OFFICIAL_DOCS_AND_CONTRACTS_CHECKED_RAW_CAPTURED",
+      "live_data_status": "AWARD_ROWS_RETURNED_TRANSACTION_AND_MONTHLY_FLOW_NOT_COLLECTED",
+      "probe_ids": [
+        "PROBE-PP-USASPENDING-AWARDS"
+      ],
+      "collection_priority": "CONFIRMED_AWARD_AND_PROJECT_JOIN_BEFORE_MONEY_FLOW_AGGREGATION",
+      "continuous_collector_implemented": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "jurisdiction_and_effect_bound": "United States federal award reporting; place of performance can be foreign; not a local project license or company CAPEX disclosure",
+      "current_effect": null
+    },
+    {
+      "family_id": "API-FAMILY-PP-PJM",
+      "name": "PJM public planning and Data Miner",
+      "metric_ids": [
+        "API-PP-10",
+        "API-PP-11",
+        "API-PP-12"
+      ],
+      "source_ids": [
+        "SRC-API-PP-PJM-DATAMINER",
+        "SRC-API-PP-PJM-API-GUIDE",
+        "SRC-API-PP-PJM-SERVICE-REQUESTS"
+      ],
+      "free_access_ko": "Data Miner는 무료 API key를 안내한다. Public planning/service-request HTML 및 개별 파일은 별개의 무키 경로다.",
+      "signup_key_ko": "Data Miner는 PJM Tools 계정/API portal/provisioning 이후 key를 사용한다. 비회원 추가 승인 절차가 있다. 이번에는 계정·요청·메시지·key 발급을 수행하지 않았다.",
+      "auth": {
+        "api_key_required_for_data_miner": true,
+        "key_placement": "Ocp-Apim-Subscription-Key header or subscription-key parameter",
+        "signup_required_for_public_planning_html": false,
+        "user_key_read": false
+      },
+      "quota_ko": "Data Miner: PJM Members 600 connections/min, Non-members 6 connections/min. Public planning 파일에 같은 quota를 적용한다고 단정하지 않는다.",
+      "license_ko": "Data Miner 및 파생 자료는 내부 이용으로 한정한다. 재배포에는 active PJM membership, 최소 Associate가 필요하다고 공식 문서가 명시한다. Queue/public 파일의 구체 조건은 별도 확인 대상이다.",
+      "public_data_reuse_status": "DATAMINER_PUBLIC_REPUBLICATION_DEFERRED_MEMBERSHIP_REQUIRED_BY_DOCS",
+      "documentation_status": "OFFICIAL_DOCS_CHECKED_RAW_CAPTURED",
+      "live_data_status": "DATAMINER_NOT_PROBED_PUBLIC_QUEUE_HTML_CHECKED_RECORD_EXPORT_NOT_PROBED",
+      "probe_ids": [],
+      "collection_priority": "USE_PUBLIC_PLANNING_CONTEXT_ONLY_DEFER_DATA_MINER_PUBLIC_VALUES",
+      "continuous_collector_implemented": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "jurisdiction_and_effect_bound": "PJM regional grid/planning and data-use conditions; FERC/state/local approvals and tariffs remain separate instruments",
+      "current_effect": null
+    },
+    {
+      "family_id": "API-FAMILY-PP-SINGAPORE",
+      "name": "Singapore data.gov.sg / SINGSTAT / EMA",
+      "metric_ids": [
+        "API-PP-13",
+        "API-PP-14"
+      ],
+      "source_ids": [
+        "SRC-API-PP-SG-DATASET",
+        "SRC-API-PP-SG-SEARCH-DOCS",
+        "SRC-API-PP-SG-RATE",
+        "SRC-API-PP-SG-LICENCE",
+        "SRC-API-PP-LIVE-SG"
+      ],
+      "free_access_ko": "Datastore Search는 무료이며 무키 공개 탐색이 성공했다. Production에서 높은 limit를 사용하려면 가입/key를 권장한다.",
+      "signup_key_ko": "현재 소규모 탐색은 무가입/무키다. Dev/prod key는 선택 사항이며 미신청이다.",
+      "auth": {
+        "api_key_required_for_probe": false,
+        "signup_required_for_probe": false,
+        "dev_prod_key_optional": true
+      },
+      "quota_ko": "Datastore Search per 10 seconds: no-key 4, dev 8, prod 20. Reset은 10초다. 다른 realtime/download quota와 구분한다.",
+      "license_ko": "Singapore Open Data Licence 1.0에 따라 상업/비상업 이용 조건·출처 및 최신 licence 링크·개인정보/제3자 권리 예외·as-is 조건을 보존한다. 본 packet에 dataset 출처와 접근일을 표시했다.",
+      "public_data_reuse_status": "SINGAPORE_OPEN_DATA_LICENCE_ATTRIBUTION_REQUIRED",
+      "documentation_status": "OFFICIAL_DOCS_CATALOGUE_AND_LICENCE_CHECKED_RAW_CAPTURED",
+      "live_data_status": "NON_EMPTY_1_WIDE_ROW_2_MONTHS_RETURNED_PROJECT_LICENCE_API_NOT_CONFIRMED",
+      "probe_ids": [
+        "PROBE-PP-SG-GENERATION"
+      ],
+      "collection_priority": "NO_KEY_REGIONAL_CONTEXT_ONLY_NOT_SITE_SIGNAL",
+      "continuous_collector_implemented": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "jurisdiction_and_effect_bound": "Singapore national statistics; EMA individual import approval and Singapore/Malaysia regulator cooperation are separate dated instruments",
+      "current_effect": null
+    }
+  ],
+  "metrics": [
+    {
+      "metric_id": "API-PP-01",
+      "title_ko": "미국 발전기 계획·운전 상태",
+      "why_collect_ko": "DC 부근에서 공급 후보가 계획에 머무는지 운영 단계로 전환되는지 구분한다.",
+      "grain": "plant_id × generator_id × report_month × status/vintage",
+      "unit": "MW; planned/actual operation month; status code",
+      "cadence_and_lag_ko": "월별 860M 파일·잠정 수정. 기존 계획의 2026-08 파일은 09-24 공개; 이번 재다운로드 미실행. API 갱신 지연과 월 파일 지연은 별도.",
+      "join_keys": [
+        "plant_id",
+        "generator_id",
+        "report_month",
+        "latitude/longitude source",
+        "owner/operator"
+      ],
+      "observed_quantity_kind": "NAMEPLATE_CAPACITY_AND_STATUS_PROXY",
+      "related_route_ids": [
+        "ROUTE-PI-01"
+      ],
+      "related_existing_metric_ids": [
+        "power-p5-supply-realization-eia"
+      ],
+      "official_endpoints_or_files": [
+        "https://www.eia.gov/electricity/data/eia860m/",
+        "https://api.eia.gov/v2/electricity/operating-generator-capacity/"
+      ],
+      "source_ids": [
+        "SRC-API-PP-EIA-DEVELOPER",
+        "SRC-API-PP-EIA-V2-DOCS",
+        "SRC-API-PP-EIA-FAQ",
+        "SRC-API-PP-EIA-REUSE"
+      ],
+      "leading_signal_status": "UNVALIDATED_MECHANISM_HYPOTHESIS",
+      "candidate_mechanism_ko": "운전 월·상태의 변화는 지역 공급 준비를 살필 후보이다. 연결 송전·실제 발전·DC 서비스가 동시에 확인되어야 고객 납기 질문에 연결된다.",
+      "falsifiers_or_checks_ko": [
+        "지연/취소·out-of-service/standby",
+        "발전량 부재·송전 제약·다른 수요처"
+      ],
+      "limitations_ko": [
+        "API operating capacity와 860M planned sheet는 같은 범위가 아니다.",
+        "DC Net Capacity는 direct current를 뜻한다.",
+        "계획 MW는 실제 발전량 또는 AI IT load가 아니다."
+      ],
+      "current_effect": null,
+      "continuous_collector_implemented": false,
+      "access_status": "EXISTING_860M_FILE_CHECK_REUSED_NOT_REPROBED_KEYED_API_NOT_TESTED",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "family_id": "API-FAMILY-PP-EIA",
+      "jurisdiction_and_effect_bound": "United States statistical coverage; data access is not a project permit or power-service approval",
+      "existing_plan_refs": [
+        "docs/research/supply_chain/collection_plan.md",
+        "data/research/semiconductor_supply_chain/2026-10-03/api_issuance_plan_v3.json",
+        "data/research/semiconductor_supply_chain/2026-10-03/source_benchmark_v2.json"
+      ]
+    },
+    {
+      "metric_id": "API-PP-02",
+      "title_ko": "미국 발전소 월 순발전",
+      "why_collect_ko": "공급 후보가 실제 전력을 생산하는지 공급량 측면을 확인한다.",
+      "grain": "plant_id × prime_mover × fuel × month; generator_id only if supplied",
+      "unit": "MWh net generation",
+      "cadence_and_lag_ko": "월별 EIA923 잠정·개정. 기존 June 페이지/July ZIP의 최신 월 불일치 미해결; 이번 파일 내부 검사 미실행.",
+      "join_keys": [
+        "plant_id",
+        "prime_mover",
+        "fuel",
+        "month",
+        "operator"
+      ],
+      "observed_quantity_kind": "ACTUAL_REPORTED_GENERATION_NOT_DC_CONSUMPTION",
+      "related_route_ids": [
+        "ROUTE-PI-01"
+      ],
+      "related_existing_metric_ids": [
+        "power-p5-supply-realization-eia"
+      ],
+      "official_endpoints_or_files": [
+        "https://www.eia.gov/electricity/data/eia923/",
+        "https://api.eia.gov/v2/electricity/facility-fuel/"
+      ],
+      "source_ids": [
+        "SRC-API-PP-EIA-DEVELOPER",
+        "SRC-API-PP-EIA-V2-DOCS",
+        "SRC-API-PP-EIA-FAQ",
+        "SRC-API-PP-EIA-REUSE"
+      ],
+      "leading_signal_status": "UNVALIDATED_MECHANISM_HYPOTHESIS",
+      "candidate_mechanism_ko": "발전 재개·증가는 공급 가용성의 후보 확인이다. 특정 PPA 상대방·전달 가능성과 배치 일정이 별도 연결되어야 한다.",
+      "falsifiers_or_checks_ko": [
+        "계절·정비·수력 여건 변화",
+        "생산 전력을 다른 고객에게 공급"
+      ],
+      "limitations_ko": [
+        "발전량을 인접 DC 소비에 배정하지 않는다.",
+        "860M 발전기별 용량과923 연료/prime mover 행은 자연키가 다를 수 있다."
+      ],
+      "current_effect": null,
+      "continuous_collector_implemented": false,
+      "access_status": "FILE_AND_KEYED_DATA_NOT_PROBED_THIS_TASK",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "family_id": "API-FAMILY-PP-EIA",
+      "jurisdiction_and_effect_bound": "United States statistical coverage; data access is not a project permit or power-service approval",
+      "existing_plan_refs": [
+        "docs/research/supply_chain/collection_plan.md",
+        "data/research/semiconductor_supply_chain/2026-10-03/api_issuance_plan_v3.json",
+        "data/research/semiconductor_supply_chain/2026-10-03/source_benchmark_v2.json"
+      ]
+    },
+    {
+      "metric_id": "API-PP-03",
+      "title_ko": "미국 권역 전력 부하·예측 구분",
+      "why_collect_ko": "계통 수요 환경과 예측 대비 실제치를 구분한다.",
+      "grain": "balancing authority/respondent × period × type × data vintage",
+      "unit": "route metadata/response unit TO_VERIFY; demand MW vs energy MWh 구분",
+      "cadence_and_lag_ko": "RTO는 고빈도·일/시간 route 후보. API 상시 갱신이며 실제 route frequency·지연 미시험.",
+      "join_keys": [
+        "respondent/BA code",
+        "period",
+        "type",
+        "UTC/local timezone",
+        "revision vintage"
+      ],
+      "observed_quantity_kind": "REGIONAL_LOAD_CONTEXT_NOT_DC_LOAD",
+      "related_route_ids": [
+        "ROUTE-PI-01",
+        "ROUTE-PI-02"
+      ],
+      "related_existing_metric_ids": [
+        "power-p9-grid-baseload-proxy",
+        "power-p7-forecast-vintage"
+      ],
+      "official_endpoints_or_files": [
+        "https://api.eia.gov/v2/electricity/rto/"
+      ],
+      "source_ids": [
+        "SRC-API-PP-EIA-DEVELOPER",
+        "SRC-API-PP-EIA-V2-DOCS",
+        "SRC-API-PP-EIA-FAQ",
+        "SRC-API-PP-EIA-REUSE"
+      ],
+      "leading_signal_status": "UNVALIDATED_MECHANISM_HYPOTHESIS",
+      "candidate_mechanism_ko": "권역 부하 증가는 DC 운영 확대의 여러 가능한 설명 중 하나다. 날씨·산업·관측 보정과 함께 비교해야 한다.",
+      "falsifiers_or_checks_ko": [
+        "날씨·주거/산업 전력 변화",
+        "forecast/estimated/actual 계열 혼합",
+        "개별 DC 전력서비스 증거 부재"
+      ],
+      "limitations_ko": [
+        "단위·frequency를 응답 확인 전 확정하지 않는다.",
+        "DEMO_KEY 허용 문구는 EIA 공식 문서/한정 검색에서 확인되지 않아 demo probe 미실행."
+      ],
+      "current_effect": null,
+      "continuous_collector_implemented": false,
+      "access_status": "DOCUMENTATION_CHECKED_USER_KEY_NOT_READ_AUTHENTICATED_REQUEST_NOT_ATTEMPTED",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "family_id": "API-FAMILY-PP-EIA",
+      "jurisdiction_and_effect_bound": "United States statistical coverage; data access is not a project permit or power-service approval"
+    },
+    {
+      "metric_id": "API-PP-04",
+      "title_ko": "유럽 bidding zone 실제 부하 후보",
+      "why_collect_ko": "유럽 고객 지역의 계통 부하를 배경 자료로 비교한다.",
+      "grain": "EIC area × time interval × process/document type × revision",
+      "unit": "MW target; actual XML unit/resolution TO_VERIFY",
+      "cadence_and_lag_ko": "A65/A16 공식 예시. 각 TimeSeries resolution·공표/수정 시각을 실제 응답에서 확인해야 함.",
+      "join_keys": [
+        "EIC",
+        "area_type",
+        "documentType",
+        "processType",
+        "time interval UTC",
+        "revisionNumber if returned"
+      ],
+      "observed_quantity_kind": "REGIONAL_REPORTED_LOAD_CONTEXT",
+      "related_route_ids": [
+        "ROUTE-PI-01"
+      ],
+      "related_existing_metric_ids": [
+        "power-p9-grid-baseload-proxy"
+      ],
+      "official_endpoints_or_files": [
+        "https://web-api.tp.entsoe.eu/api"
+      ],
+      "source_ids": [
+        "SRC-API-PP-ENTSOE-TOKEN",
+        "SRC-API-PP-ENTSOE-RATE",
+        "SRC-API-PP-ENTSOE-QUERY",
+        "SRC-API-PP-ENTSOE-PARAMETERS",
+        "SRC-API-PP-ENTSOE-EIC"
+      ],
+      "leading_signal_status": "UNVALIDATED_MECHANISM_HYPOTHESIS",
+      "candidate_mechanism_ko": "지역 부하·공급 제약은 DC 설치 일정의 환경 변수 후보다. DC/site·계약 및 고객 시스템 준비 증거를 추가해야 한다.",
+      "falsifiers_or_checks_ko": [
+        "폭염/산업 변동",
+        "bidding zone과 행정 국가 오결합",
+        "DST·해상도·수정치 혼합"
+      ],
+      "limitations_ko": [
+        "인증 미실행, XML schema와 completeness 미검증.",
+        "국가별/item별 라이선스 검토 전 public 원관측값 게시 보류."
+      ],
+      "current_effect": null,
+      "continuous_collector_implemented": false,
+      "access_status": "DOCS_CHECKED_TOKEN_NOT_READ_NO_AUTHENTICATED_XML_CALL",
+      "query_template": {
+        "documentType": "A65",
+        "processType": "A16",
+        "outBiddingZone_Domain": "10YCZ-CEPS-----N",
+        "periodStart": "YYYYMMDDHHMM_UTC",
+        "periodEnd": "YYYYMMDDHHMM_UTC",
+        "securityToken": "<REDACTED_USER_TOKEN>"
+      },
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "family_id": "API-FAMILY-PP-ENTSOE",
+      "jurisdiction_and_effect_bound": "European Transparency Platform area/item coverage; country, bidding-zone and control-area boundaries differ; no site permit determination"
+    },
+    {
+      "metric_id": "API-PP-05",
+      "title_ko": "미국 반도체·전력 규칙 공표 이력",
+      "why_collect_ko": "장비·fab 또는 대규모 부하의 규제 조건을 날짜가 있는 사건으로 찾아 원문 검토 후보를 만든다.",
+      "grain": "FR document_number × agency × publication_date × instrument_type",
+      "unit": "document count; dates; CFR part reference; no economic capacity unit",
+      "cadence_and_lag_ko": "일별 공표/정정/철회 사건. API 조회 시각은 시행·허가일이 아니다.",
+      "join_keys": [
+        "document_number",
+        "agency_id/slug",
+        "docket_id where supplied",
+        "RIN where supplied",
+        "CFR title/part",
+        "jurisdiction"
+      ],
+      "observed_quantity_kind": "POLICY_PUBLICATION_EVENT_NOT_PERMISSION",
+      "related_route_ids": [
+        "ROUTE-PI-02",
+        "ROUTE-PI-03"
+      ],
+      "related_existing_metric_ids": [
+        "policy-export-control-change"
+      ],
+      "official_endpoints_or_files": [
+        "https://www.federalregister.gov/api/v1/documents.json",
+        "https://www.federalregister.gov/api/v1/documents/2025-16735.json"
+      ],
+      "source_ids": [
+        "SRC-API-PP-FR-DOCS",
+        "SRC-API-PP-LIVE-FR"
+      ],
+      "leading_signal_status": "UNVALIDATED_MECHANISM_HYPOTHESIS",
+      "candidate_mechanism_ko": "규칙 제안/최종 규칙/시행/후속 변경의 순서를 알면 영업 상대방·제품·국가의 승인 검토 질문을 만들 수 있다. 실제 납품 제약은 품목/거래별 검토가 필요하다.",
+      "falsifiers_or_checks_ko": [
+        "후속 개정·예외·재심",
+        "다른 기관·다른 관할의 문서",
+        "키워드 일치만 있고 품목/사이트 연결 없음"
+      ],
+      "limitations_ko": [
+        "FederalRegister.gov는 정보용 XML 판본이며 공식 GPO/govinfo PDF와 대조한다.",
+        "현재 통합 EAR/eCFR·개별 수출허가·주/지역 DC 허가의 전체 상태는 제공하지 않는다.",
+        "공표된 effective date를 실제 현행 효력으로 자동 판정하지 않는다."
+      ],
+      "current_effect": null,
+      "continuous_collector_implemented": false,
+      "access_status": "LIVE_NO_KEY_SEARCH_3_NON_EMPTY_ROWS",
+      "instrument_fields_to_preserve": [
+        "announcement/proposed_rule/final_rule/order/notice",
+        "publication_date",
+        "stated_effective_date",
+        "amendment/correction/withdrawal",
+        "jurisdiction",
+        "regulated_entity",
+        "product/technology",
+        "site_condition",
+        "current_effect=null"
+      ],
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "family_id": "API-FAMILY-PP-FEDERAL-REGISTER",
+      "jurisdiction_and_effect_bound": "United States federal publication; agency and CFR part jurisdiction must be retained; not state/local permissions or consolidated current law"
+    },
+    {
+      "metric_id": "API-PP-06",
+      "title_ko": "미국 규제 docket의 문서 단계·의견수렴 기한",
+      "why_collect_ko": "기관이 검토 중인 규칙의 문서·지원 자료·철회 여부를 docket별로 분리한다.",
+      "grain": "docketId × documentId/objectId × postedDate/lastModifiedDate",
+      "unit": "document count; dates; withdrawn boolean; comment count only where metadata supplied",
+      "cadence_and_lag_ko": "사건별 게시·수정. 고정 lag 미확인; postedDate/lastModifiedDate·commentDueDate를 별도 보존.",
+      "join_keys": [
+        "docketId",
+        "documentId",
+        "objectId",
+        "agencyId",
+        "RIN from docket detail"
+      ],
+      "observed_quantity_kind": "PROCEDURAL_DOCUMENT_STATUS_NOT_LICENSE",
+      "related_route_ids": [
+        "ROUTE-PI-02",
+        "ROUTE-PI-03"
+      ],
+      "related_existing_metric_ids": [],
+      "official_endpoints_or_files": [
+        "https://api.regulations.gov/v4/documents",
+        "https://api.regulations.gov/v4/dockets",
+        "https://api.regulations.gov/v4/comments"
+      ],
+      "source_ids": [
+        "SRC-API-PP-REGGOV-DOCS",
+        "SRC-API-PP-APIDATAGOV-RATE"
+      ],
+      "leading_signal_status": "UNVALIDATED_MECHANISM_HYPOTHESIS",
+      "candidate_mechanism_ko": "검토 단계·기한 변경은 제도 불확실성을 설명하는 후보다. 댓글 수는 수요·여론 대표성·규칙 효력의 측정치가 아니다.",
+      "falsifiers_or_checks_ko": [
+        "withdrawn/superseded",
+        "Rulemaking과Nonrulemaking 혼합",
+        "반복/동원 댓글·agency publication practices"
+      ],
+      "limitations_ko": [
+        "키·가입·실호출 미실행. 개인 이름·연락처·댓글 본문은 수집 계약에서 제외한다.",
+        "수집 GET과 의견 제출 POST는 서로 다른 행위이며 제출은 하지 않는다.",
+        "docket 상세 RIN과document objectId를 FR 문서번호로 자동 동일시하지 않는다."
+      ],
+      "current_effect": null,
+      "continuous_collector_implemented": false,
+      "access_status": "DOCS_CHECKED_KEY_NOT_READ_GET_NOT_ATTEMPTED",
+      "query_template": {
+        "filter[docketId]": "<CONFIRMED_DOCKET_ID>",
+        "filter[postedDate][ge]": "YYYY-MM-DD",
+        "filter[postedDate][le]": "YYYY-MM-DD",
+        "sort": "postedDate",
+        "authentication_header": "X-Api-Key: <REDACTED_USER_KEY>"
+      },
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "family_id": "API-FAMILY-PP-REGULATIONS-GOV",
+      "jurisdiction_and_effect_bound": "United States federal eRulemaking dockets for participating agencies; not all FERC, state PUC or municipal proceedings"
+    },
+    {
+      "metric_id": "API-PP-07",
+      "title_ko": "미국 정부 조달·지원 award 후보와 누적 의무액",
+      "why_collect_ko": "어떤 정부기관이 어떤 수행자·분야에 자금 약정을 하고 있는지 후보를 만든다.",
+      "grain": "prime award generated_internal_id × award_type × snapshot",
+      "unit": "USD Award Amount/obligations; type-specific loan/subsidy fields separate",
+      "cadence_and_lag_ko": "source/agency별 갱신. API last_updated 및 publish_dates를 추가 확인할 계획; 고정 공개 지연 미확인.",
+      "join_keys": [
+        "generated_internal_id",
+        "Award ID + awarding agency",
+        "Recipient UEI where available",
+        "place_of_performance region",
+        "NAICS/PSC for contracts",
+        "Assistance Listings for assistance"
+      ],
+      "observed_quantity_kind": "AWARD_LEVEL_CUMULATIVE_COMMITMENT_NOT_QUARTER_FLOW",
+      "related_route_ids": [
+        "ROUTE-PI-01",
+        "ROUTE-PI-03"
+      ],
+      "related_existing_metric_ids": [
+        "capital-contract-event-stage"
+      ],
+      "official_endpoints_or_files": [
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+        "https://api.usaspending.gov/api/v2/awards/last_updated/",
+        "https://api.usaspending.gov/api/v2/reporting/agencies/publish_dates/"
+      ],
+      "source_ids": [
+        "SRC-API-PP-USASPENDING-ENDPOINTS",
+        "SRC-API-PP-USASPENDING-AWARD-CONTRACT",
+        "SRC-API-PP-USASPENDING-TRANSACTION-CONTRACT",
+        "SRC-API-PP-USASPENDING-GUIDE",
+        "SRC-API-PP-LIVE-USASPENDING"
+      ],
+      "leading_signal_status": "UNVALIDATED_MECHANISM_HYPOTHESIS",
+      "candidate_mechanism_ko": "정부의 약정은 프로젝트 추진의 후보 자금 조건이다. award 설명·수행자·site·계약 종류를 확인한 뒤 제품 사용 가능성 질문으로 연결한다.",
+      "falsifiers_or_checks_ko": [
+        "deobligation·취소·규모 수정",
+        "키워드가 실제 반도체/전력 프로젝트와 무관",
+        "기존 award 수정이 신규 설비 투자로 오독됨"
+      ],
+      "limitations_ko": [
+        "실 probe는 contract A–D만 검색했다. CHIPS/전력 지원 grant coverage는 검증하지 않았다.",
+        "Award Amount를 기업 CAPEX·현금 지급·계약 상한·Q2 flow로 바꾸지 않는다.",
+        "recipient 본사와 place of performance/개별 site는 구분한다.",
+        "prime와subaward를 중복 합산하지 않는다."
+      ],
+      "current_effect": null,
+      "continuous_collector_implemented": false,
+      "access_status": "LIVE_NO_KEY_READ_ONLY_POST_3_ROWS_RELEVANCE_NOT_VALIDATED",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "family_id": "API-FAMILY-PP-USASPENDING",
+      "jurisdiction_and_effect_bound": "United States federal award reporting; place of performance can be foreign; not a local project license or company CAPEX disclosure"
+    },
+    {
+      "metric_id": "API-PP-08",
+      "title_ko": "미국 정부 분기별 조달 의무액 증감",
+      "why_collect_ko": "기존 award 누적 요약을 분기 투자 흐름으로 오독하지 않고 해당 분기 약정 변화를 추적한다.",
+      "grain": "prime award × transaction/action_date × modification/transaction identity",
+      "unit": "USD signed Transaction Amount / federal_action_obligation",
+      "cadence_and_lag_ko": "action_date 기준 flow; 공개 갱신일·수정일은 별도. 전체 transaction history 미수집.",
+      "join_keys": [
+        "generated_internal_id",
+        "Action Date",
+        "Mod",
+        "transaction unique ID when available",
+        "award_type"
+      ],
+      "observed_quantity_kind": "SIGNED_TRANSACTION_OBLIGATION_FLOW",
+      "related_route_ids": [
+        "ROUTE-PI-01",
+        "ROUTE-PI-03"
+      ],
+      "related_existing_metric_ids": [],
+      "official_endpoints_or_files": [
+        "https://api.usaspending.gov/api/v2/search/spending_by_transaction/"
+      ],
+      "source_ids": [
+        "SRC-API-PP-USASPENDING-ENDPOINTS",
+        "SRC-API-PP-USASPENDING-AWARD-CONTRACT",
+        "SRC-API-PP-USASPENDING-TRANSACTION-CONTRACT",
+        "SRC-API-PP-USASPENDING-GUIDE"
+      ],
+      "leading_signal_status": "UNVALIDATED_MECHANISM_HYPOTHESIS",
+      "candidate_mechanism_ko": "공공 조달/지원의 신규 약정·감액을 날짜별로 분리하면 프로젝트 추진의 자금 조건을 비교할 수 있다. 고객의 실제 장비 발주와 별도 확인한다.",
+      "falsifiers_or_checks_ko": [
+        "반복 modification/동일 거래 중복",
+        "감액·종료·회계 정정",
+        "지원금 분류·project site 불명"
+      ],
+      "limitations_ko": [
+        "이번 transaction endpoint 실호출은 하지 않았다.",
+        "음수 obligation은 deobligation/정정 후보이며 음수 현금 지급으로 취급하지 않는다.",
+        "분기별 약정을 메모리 매출·발주량으로 환산하지 않는다."
+      ],
+      "current_effect": null,
+      "continuous_collector_implemented": false,
+      "access_status": "OFFICIAL_ACTION_DATE_CONTRACT_CHECKED_ENDPOINT_NOT_PROBED",
+      "query_template": {
+        "filters": {
+          "award_type_codes": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "time_period": [
+            {
+              "start_date": "YYYY-MM-DD",
+              "end_date": "YYYY-MM-DD"
+            }
+          ],
+          "award_unique_id": "<CONFIRMED_GENERATED_AWARD_ID>"
+        },
+        "fields": [
+          "Award ID",
+          "Action Date",
+          "Transaction Amount",
+          "Mod",
+          "generated_internal_id"
+        ],
+        "limit": 3,
+        "page": 1,
+        "sort": "Transaction Amount",
+        "order": "desc"
+      },
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "family_id": "API-FAMILY-PP-USASPENDING",
+      "jurisdiction_and_effect_bound": "United States federal award reporting; place of performance can be foreign; not a local project license or company CAPEX disclosure"
+    },
+    {
+      "metric_id": "API-PP-09",
+      "title_ko": "미국 정부 실제 지급액의 보고 기간",
+      "why_collect_ko": "약정된 돈과 실제 집행·지급된 돈을 구분한다.",
+      "grain": "award × File C/TAS/reporting period × revision; detail scope to verify",
+      "unit": "USD outlays; cumulative vs reporting-period flow separated",
+      "cadence_and_lag_ko": "공식 2023 guide상 award-level outlays 월보고 의무는 FY2022부터. source/agency 시차 및 현재 completeness는 미검증.",
+      "join_keys": [
+        "generated_internal_id",
+        "TAS",
+        "reporting fiscal year/period",
+        "agency submission publish date",
+        "File C linkage"
+      ],
+      "observed_quantity_kind": "REPORTED_OUTLAY_NOT_COMPANY_CAPEX",
+      "related_route_ids": [
+        "ROUTE-PI-01",
+        "ROUTE-PI-03"
+      ],
+      "related_existing_metric_ids": [],
+      "official_endpoints_or_files": [
+        "https://api.usaspending.gov/api/v2/awards/<AWARD_ID>/",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+        "https://api.usaspending.gov/api/v2/reporting/agencies/publish_dates/"
+      ],
+      "source_ids": [
+        "SRC-API-PP-USASPENDING-ENDPOINTS",
+        "SRC-API-PP-USASPENDING-AWARD-CONTRACT",
+        "SRC-API-PP-USASPENDING-TRANSACTION-CONTRACT",
+        "SRC-API-PP-USASPENDING-GUIDE",
+        "SRC-API-PP-LIVE-USASPENDING"
+      ],
+      "leading_signal_status": "UNVALIDATED_MECHANISM_HYPOTHESIS",
+      "candidate_mechanism_ko": "지급 진행은 프로젝트 자금 집행의 후보 확인이다. 공급자·site·집행 목적과 장비 구매 단계가 확인되어야 고객 제품 질문에 쓸 수 있다.",
+      "falsifiers_or_checks_ko": [
+        "미연계/지연 File C",
+        "누적 총지급액의 분기 오독",
+        "운영비/서비스 지급·정부 채무와 회사설비 투자 혼동"
+      ],
+      "limitations_ko": [
+        "probe Total Outlays는 award 누적 요약이며 Q2 지급액이 아니다.",
+        "월별 세부 outlay endpoint/필드와 최초 업데이트 빈티지를 확인하기 전 분기 차분을 계산하지 않는다.",
+        "loans face value는 보조금 비용/실제 지급과 다르다."
+      ],
+      "current_effect": null,
+      "continuous_collector_implemented": false,
+      "access_status": "TOTAL_OUTLAYS_FIELD_RETURNED_REPORTING_PERIOD_FLOW_NOT_COLLECTED",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "family_id": "API-FAMILY-PP-USASPENDING",
+      "jurisdiction_and_effect_bound": "United States federal award reporting; place of performance can be foreign; not a local project license or company CAPEX disclosure"
+    },
+    {
+      "metric_id": "API-PP-10",
+      "title_ko": "PJM 발전·송전 접속 프로젝트 단계",
+      "why_collect_ko": "전력 공급/전달 후보가 대기·시공·in-service 중 어느 단계인지 검토한다.",
+      "grain": "queue/project ID × request type × status × snapshot",
+      "unit": "requested MW where published; milestone dates; status",
+      "cadence_and_lag_ko": "공개 status 페이지·사건/통계 갱신. 2026-07-30 통계 링크 확인; 반복 snapshot 미수집.",
+      "join_keys": [
+        "queue/project ID",
+        "service request type",
+        "point of interconnection",
+        "transmission owner",
+        "project location",
+        "snapshot date"
+      ],
+      "observed_quantity_kind": "GENERATION_OR_TRANSMISSION_QUEUE_PROXY",
+      "related_route_ids": [
+        "ROUTE-PI-01",
+        "ROUTE-PI-02"
+      ],
+      "related_existing_metric_ids": [
+        "power-p10-generation-queue",
+        "power-p4-transmission-service-date"
+      ],
+      "official_endpoints_or_files": [
+        "https://www.pjm.com/planning/service-requests"
+      ],
+      "source_ids": [
+        "SRC-API-PP-PJM-DATAMINER",
+        "SRC-API-PP-PJM-API-GUIDE",
+        "SRC-API-PP-PJM-SERVICE-REQUESTS"
+      ],
+      "leading_signal_status": "UNVALIDATED_MECHANISM_HYPOTHESIS",
+      "candidate_mechanism_ko": "공급·송전 milestone은 DC 통전 가능성의 조건 후보다. 실제 DC load service·전달 계약·발전 실적이 추가로 연결되어야 한다.",
+      "falsifiers_or_checks_ko": [
+        "queue withdrawal/delay",
+        "requested/in-service MW 차이",
+        "프로젝트와DC service 대상 미일치"
+      ],
+      "limitations_ko": [
+        "공식 공개 HTML의 queue 유형만 확인했다. 최신 구조화 export/API와 행 스키마는 미검증이다.",
+        "발전 queue를 DC load queue로 표시하지 않는다.",
+        "공개 계획/파일 경로와 Data Miner 인증/재배포 규정을 혼합하지 않는다."
+      ],
+      "current_effect": null,
+      "continuous_collector_implemented": false,
+      "access_status": "PUBLIC_HTML_SCOPE_CHECKED_QUEUE_RECORD_EXPORT_NOT_PROBED",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "family_id": "API-FAMILY-PP-PJM",
+      "jurisdiction_and_effect_bound": "PJM regional grid/planning and data-use conditions; FERC/state/local approvals and tariffs remain separate instruments"
+    },
+    {
+      "metric_id": "API-PP-11",
+      "title_ko": "PJM 권역 계측 부하·예측·잠정치 구분",
+      "why_collect_ko": "전력 수요 환경을 관측하되 계측·추정·잠정·예측을 구분한다.",
+      "grain": "PJM region/zone × hour × feed × revision",
+      "unit": "MW load; actual field/timezone/lag TO_VERIFY via authenticated response",
+      "cadence_and_lag_ko": "hourly feed candidate; publication lag and revisions 미시험. hrl_load_metered/estimated/prelim 별도.",
+      "join_keys": [
+        "zone/region",
+        "timestamp local/UTC",
+        "feed short name",
+        "revision/version if supplied"
+      ],
+      "observed_quantity_kind": "REGIONAL_METERED_LOAD_NOT_DC_CUSTOMER_CONSUMPTION",
+      "related_route_ids": [
+        "ROUTE-PI-01",
+        "ROUTE-PI-02"
+      ],
+      "related_existing_metric_ids": [
+        "power-p9-grid-baseload-proxy"
+      ],
+      "official_endpoints_or_files": [
+        "https://api.pjm.com/api/v1/hrl_load_metered",
+        "https://api.pjm.com/api/v1/hrl_load_estimated",
+        "https://api.pjm.com/api/v1/hrl_load_prelim",
+        "https://api.pjm.com/api/v1/load_frcstd_hist"
+      ],
+      "source_ids": [
+        "SRC-API-PP-PJM-DATAMINER",
+        "SRC-API-PP-PJM-API-GUIDE",
+        "SRC-API-PP-PJM-SERVICE-REQUESTS"
+      ],
+      "leading_signal_status": "UNVALIDATED_MECHANISM_HYPOTHESIS",
+      "candidate_mechanism_ko": "권역 수요와 예상치의 차이는 DC 설치/운영의 간접 배경 후보다. 개별 고객 소비/전력 계약이 없어 메모리 수요로 연결되지 않는다.",
+      "falsifiers_or_checks_ko": [
+        "기상·다른산업 수요",
+        "estimated/preliminary를계측으로표시",
+        "public redistribution rights 미충족"
+      ],
+      "limitations_ko": [
+        "실 데이터 호출 미실행. 내부 조회용 무료 key 접근과 public 배포 허용은 다르다.",
+        "Data Miner 및 파생 자료의 재배포는 active PJM membership 최소 Associate가 필요하다고 공식 안내한다.",
+        "권리 조건 확인 전 public 지도 원관측·파생값은 DEFER."
+      ],
+      "current_effect": null,
+      "continuous_collector_implemented": false,
+      "access_status": "DOCS_CHECKED_KEY_PROVISIONING_NOT_PERFORMED_DATA_PUBLICATION_DEFERRED",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "family_id": "API-FAMILY-PP-PJM",
+      "jurisdiction_and_effect_bound": "PJM regional grid/planning and data-use conditions; FERC/state/local approvals and tariffs remain separate instruments"
+    },
+    {
+      "metric_id": "API-PP-12",
+      "title_ko": "PJM 예측 vintage와 연간 실제 peak 비교",
+      "why_collect_ko": "같은 권역·연도·정의를 가진 예상 부하와 실제 부하를 비교하는 학습 기준을 유지한다.",
+      "grain": "canonical Zone/EDC/LSE × Year × Metric × forecast vintage",
+      "unit": "MW Historical July Peak or Load Forecast July Peak",
+      "cadence_and_lag_ko": "연간 공개 report. 기존 계획상 2026-05-29 게시·최대 역사 2025년; 이번 XLS 재수집 미실행.",
+      "join_keys": [
+        "Zone/EDC/LSE",
+        "Year",
+        "original Metric",
+        "forecast vintage",
+        "hierarchy"
+      ],
+      "observed_quantity_kind": "ANNUAL_PEAK_CONTEXT_NOT_MONTHLY_DC_ENERGY",
+      "related_route_ids": [
+        "ROUTE-PI-01",
+        "ROUTE-PI-02"
+      ],
+      "related_existing_metric_ids": [
+        "power-p2-actual-dc-peak",
+        "power-p7-forecast-vintage"
+      ],
+      "official_endpoints_or_files": [
+        "https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-accuracy-report.xlsx",
+        "https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-load-forecast-accuracy-report.pdf"
+      ],
+      "source_ids": [
+        "SRC-API-PP-PJM-DATAMINER",
+        "SRC-API-PP-PJM-API-GUIDE",
+        "SRC-API-PP-PJM-SERVICE-REQUESTS"
+      ],
+      "leading_signal_status": "UNVALIDATED_MECHANISM_HYPOTHESIS",
+      "candidate_mechanism_ko": "예측의 vintage·범위 차이를 이해하면 customer/site 일정과 계통 계획이 어떻게 다른지 질문할 수 있다. 예측 오류만으로 AI 고객 수요를 추정하지 않는다.",
+      "falsifiers_or_checks_ko": [
+        "상하위 구역 중복 합산",
+        "coincident/noncoincident peak 혼합",
+        "XLS연간과PDF DC-filtered 월별 범위혼합"
+      ],
+      "limitations_ko": [
+        "기존 collection_plan.md의 파일 검사 결과 참조이며 이번 live API 검증은 아니다.",
+        "파일별 reuse 조건 확인 대상. Data Miner 데이터 권리로 동일시하지 않는다."
+      ],
+      "current_effect": null,
+      "continuous_collector_implemented": false,
+      "access_status": "EXISTING_FILE_REVIEW_REFERENCED_NOT_REPROBED",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "family_id": "API-FAMILY-PP-PJM",
+      "jurisdiction_and_effect_bound": "PJM regional grid/planning and data-use conditions; FERC/state/local approvals and tariffs remain separate instruments",
+      "existing_plan_refs": [
+        "docs/research/supply_chain/collection_plan.md",
+        "data/research/semiconductor_supply_chain/2026-10-03/api_issuance_plan_v3.json",
+        "data/research/semiconductor_supply_chain/2026-10-03/source_benchmark_v2.json"
+      ]
+    },
+    {
+      "metric_id": "API-PP-13",
+      "title_ko": "싱가포르 국가 월 발전량",
+      "why_collect_ko": "Malaysia–Singapore 전력 협력 경로의 국가 공급 배경을 실제 월 발전량으로 보완한다.",
+      "grain": "Singapore × DataSeries × calendar month; source API is wide columns",
+      "unit": "GWh generation; string raw value parsed after schema validation",
+      "cadence_and_lag_ko": "monthly. catalogue updated2026-08-21·latest month2026-05. 관측월과 공개일의 차이를 보존하며 고정 3개월 lag로 일반화하지 않음.",
+      "join_keys": [
+        "resource_id",
+        "DataSeries",
+        "month column YYYYMon",
+        "country Singapore",
+        "catalogue update date"
+      ],
+      "observed_quantity_kind": "ACTUAL_NATIONAL_GENERATION_NOT_DC_USE_OR_IMPORT",
+      "related_route_ids": [
+        "ROUTE-PI-04"
+      ],
+      "related_existing_metric_ids": [],
+      "official_endpoints_or_files": [
+        "https://data.gov.sg/api/action/datastore_search?resource_id=d_ae4afbaf5bc96bde19d8ce85810ab9f4"
+      ],
+      "source_ids": [
+        "SRC-API-PP-SG-DATASET",
+        "SRC-API-PP-SG-SEARCH-DOCS",
+        "SRC-API-PP-SG-RATE",
+        "SRC-API-PP-SG-LICENCE",
+        "SRC-API-PP-LIVE-SG"
+      ],
+      "leading_signal_status": "UNVALIDATED_MECHANISM_HYPOTHESIS",
+      "candidate_mechanism_ko": "국가 공급 실적은 수급 환경의 배경 후보다. 수입 프로젝트 승인·실제 국경 흐름·DC 서비스와 별도 확인한다.",
+      "falsifiers_or_checks_ko": [
+        "수요/연료/정비에 따른국내발전변화",
+        "발전과소비·수입혼동",
+        "조건부승인과실제가동혼동"
+      ],
+      "limitations_ko": [
+        "EMA 원자료를 SINGSTAT/data.gov.sg가 공개한 dataset이다.",
+        "resource row1개618열을 월별 long table로 unpivot해야 한다.",
+        "이번 응답은두달만; API field schema는빈객체여서카탈로그단위교차확인."
+      ],
+      "current_effect": null,
+      "continuous_collector_implemented": false,
+      "access_status": "LIVE_NO_KEY_1_WIDE_ROW_2_MONTHS_RETURNED",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "family_id": "API-FAMILY-PP-SINGAPORE",
+      "jurisdiction_and_effect_bound": "Singapore national statistics; EMA individual import approval and Singapore/Malaysia regulator cooperation are separate dated instruments"
+    },
+    {
+      "metric_id": "API-PP-14",
+      "title_ko": "전력 수입 조건부 승인·협력협정 milestone",
+      "why_collect_ko": "국경간 전력 공급의 발표·협력·개별 조건부승인·PPA·financial close·운전 단계를 구분한다.",
+      "grain": "instrument/source ID × issuing body/parties × project × dated stage",
+      "unit": "MW stated conditional capacity; dates; stage; no actual import MWh observed",
+      "cadence_and_lag_ko": "사건별 official announcement/PDF. 기계적으로 검색·갱신하는 API는 이번 확인 범위에서 미확인.",
+      "join_keys": [
+        "issuer/regulator",
+        "instrument type",
+        "named corporate parties",
+        "project/site/connection",
+        "publication/event date",
+        "source locator"
+      ],
+      "observed_quantity_kind": "APPROVAL_OR_COOPERATION_PROXY_NOT_OPERATION",
+      "related_route_ids": [
+        "ROUTE-PI-04"
+      ],
+      "related_existing_metric_ids": [
+        "power-p3-energization-stage"
+      ],
+      "official_endpoints_or_files": [
+        "https://www.ema.gov.sg/news-events/news/media-releases",
+        "https://www.ema.gov.sg/news-events/news/media-releases/2020/singapore-and-malaysia-to-strengthen-bilateral-energy-cooperation"
+      ],
+      "source_ids": [
+        "SRC-API-PP-SG-DATASET"
+      ],
+      "leading_signal_status": "UNVALIDATED_MECHANISM_HYPOTHESIS",
+      "candidate_mechanism_ko": "조건부 승인·개발 milestone은 공급 예정의 후보 조건이다. 실제 송전·발전·양국 승인·DC 고객 계약을 확인한 뒤 시스템 도입 일정 질문에 연결한다.",
+      "falsifiers_or_checks_ko": [
+        "PPA/financing/양국최종승인미충족",
+        "MOU가특정프로젝트허가를부여한다고오독",
+        "동일프로젝트/기업명연결실패"
+      ],
+      "limitations_ko": [
+        "기존 policy route packet의 EMA conditional approval/MOU 원문 receipt를 재사용한다.",
+        "국가 발전량 API는 개별 수입 라이선스·국경 전력 흐름을 제공하지 않는다.",
+        "정부/규제기관 MOU, 기업 JDA, 개별 조건부 승인을 별개 유형으로 유지한다.",
+        "2020 MOU의 현행 법적 구속력/효력은 판정하지 않는다."
+      ],
+      "current_effect": null,
+      "continuous_collector_implemented": false,
+      "access_status": "EXISTING_OFFICIAL_RECEIPTS_REUSED_NO_PROJECT_API_FOUND",
+      "reused_source_ids": [
+        "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26",
+        "SRC-ROUTE-EMA-ST-MOU20"
+      ],
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "family_id": "API-FAMILY-PP-SINGAPORE",
+      "jurisdiction_and_effect_bound": "Singapore national statistics; EMA individual import approval and Singapore/Malaysia regulator cooperation are separate dated instruments"
+    }
+  ],
+  "probes": [
+    {
+      "source_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=large+load&conditions%5Bpublication_date%5D%5Bgte%5D=2026-01-01&conditions%5Bpublication_date%5D%5Blte%5D=2026-10-05&per_page=3&order=newest",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:14:00.980985+00:00",
+      "raw_file_basename": "probe-fr-search.json",
+      "response_status": 200,
+      "retrieved_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=large+load&conditions%5Bpublication_date%5D%5Bgte%5D=2026-01-01&conditions%5Bpublication_date%5D%5Blte%5D=2026-10-05&per_page=3&order=newest",
+      "content_type": "application/json; charset=utf-8",
+      "last_modified": null,
+      "byte_length": 9567,
+      "sha256": "03434d96e31f300d89c2d8172c527e9552a1fa43ce634d4199fb70d2afbe7807",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_BODY_SAVED_REVIEW_REQUIRED",
+      "response_top_level_keys": [
+        "description",
+        "count",
+        "total_pages",
+        "next_page_url",
+        "results"
+      ],
+      "returned_row_count": 3,
+      "data_status": "DATA_RETURNED",
+      "first_record_keys": [
+        "title",
+        "type",
+        "abstract",
+        "document_number",
+        "html_url",
+        "pdf_url",
+        "public_inspection_pdf_url",
+        "publication_date",
+        "agencies",
+        "excerpts"
+      ],
+      "query_total_result_count": 300,
+      "publication_dates": [
+        "2026-10-05",
+        "2026-10-01",
+        "2026-10-01"
+      ],
+      "probe_id": "PROBE-PP-FR-RULE-SEARCH",
+      "source_id": "SRC-API-PP-LIVE-FR",
+      "authentication_mode": "NO_KEY_NO_ACCOUNT",
+      "user_key_read": false,
+      "signup_performed": false,
+      "query_is_read_only": true,
+      "continuous_collector_implemented": false,
+      "public_full_response_included": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "response_validation_checks": [
+        "HTTP200",
+        "JSON_PARSED",
+        "EXPECTED_RECORD_LIST_PRESENT",
+        "NON_EMPTY_RECORD_LIST",
+        "QUERY_LIMIT_BOUNDED"
+      ],
+      "query_bounds": {
+        "term": "large load",
+        "publication_date_gte": "2026-01-01",
+        "publication_date_lte": "2026-10-05",
+        "per_page": 3,
+        "page": 1
+      },
+      "small_sample_schema": {
+        "document_number": "str",
+        "type": "str",
+        "publication_date": "str",
+        "agencies": "list",
+        "html_url": "str",
+        "pdf_url": "str"
+      },
+      "small_sample": [
+        {
+          "document_number": "2026-20360",
+          "type": "Proposed Rule",
+          "publication_date": "2026-10-05"
+        },
+        {
+          "document_number": "2026-20178",
+          "type": "Rule",
+          "publication_date": "2026-10-01"
+        }
+      ],
+      "limitations_ko": [
+        "키워드 검색 1페이지 3행이며 300개 전체 일치 결과를 수집하지 않았다.",
+        "검색 결과는 허가 완료·현재 효력·개별 프로젝트 가동 확인이 아니다.",
+        "공표일은 날짜이며 UTC 공표 시각으로 바꾸지 않는다.",
+        "검색 행에 effective_on이 없으므로 시행일은 상세 문서/GPO 원문 확인 대상이다."
+      ],
+      "observed_date_bounds": {
+        "publication_date_min": "2026-10-01",
+        "publication_date_max": "2026-10-05"
+      }
+    },
+    {
+      "source_url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "request_method": "POST",
+      "retrieved_at_utc": "2026-10-04T17:14:01.865933+00:00",
+      "raw_file_basename": "probe-usaspending-awards.json",
+      "response_status": 200,
+      "retrieved_url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "content_type": "application/json",
+      "last_modified": null,
+      "byte_length": 1725,
+      "sha256": "12b86af803480948cacd932fbb02777e356667d4317844e8c55caa08c85e6708",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_BODY_SAVED_REVIEW_REQUIRED",
+      "query_body": {
+        "filters": {
+          "award_type_codes": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "time_period": [
+            {
+              "start_date": "2026-04-01",
+              "end_date": "2026-06-30"
+            }
+          ],
+          "keywords": [
+            "semiconductor"
+          ]
+        },
+        "fields": [
+          "Award ID",
+          "Award Amount",
+          "Total Outlays",
+          "Start Date",
+          "End Date",
+          "Awarding Agency",
+          "generated_internal_id",
+          "Place of Performance Country Code",
+          "Place of Performance State Code"
+        ],
+        "limit": 3,
+        "page": 1,
+        "sort": "Award Amount",
+        "order": "desc",
+        "subawards": false
+      },
+      "response_top_level_keys": [
+        "spending_level",
+        "limit",
+        "results",
+        "page_metadata",
+        "messages"
+      ],
+      "returned_row_count": 3,
+      "data_status": "DATA_RETURNED",
+      "first_record_keys": [
+        "internal_id",
+        "Award ID",
+        "Award Amount",
+        "Total Outlays",
+        "Start Date",
+        "End Date",
+        "Awarding Agency",
+        "generated_internal_id",
+        "Place of Performance Country Code",
+        "Place of Performance State Code",
+        "awarding_agency_id",
+        "agency_slug"
+      ],
+      "page_metadata": {
+        "page": 1,
+        "hasNext": true,
+        "last_record_unique_id": 307252784,
+        "last_record_sort_value": "9131995500"
+      },
+      "returned_period_dates": [
+        {
+          "start_date": "2021-05-06",
+          "end_date": "2028-12-31"
+        },
+        {
+          "start_date": "2022-01-27",
+          "end_date": "2026-08-21"
+        },
+        {
+          "start_date": "2023-09-20",
+          "end_date": "2025-03-31"
+        }
+      ],
+      "probe_id": "PROBE-PP-USASPENDING-AWARDS",
+      "source_id": "SRC-API-PP-LIVE-USASPENDING",
+      "authentication_mode": "NO_KEY_NO_ACCOUNT",
+      "user_key_read": false,
+      "signup_performed": false,
+      "query_is_read_only": true,
+      "continuous_collector_implemented": false,
+      "public_full_response_included": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "response_validation_checks": [
+        "HTTP200",
+        "JSON_PARSED",
+        "EXPECTED_RECORD_LIST_PRESENT",
+        "NON_EMPTY_RECORD_LIST",
+        "QUERY_LIMIT_BOUNDED"
+      ],
+      "query_bounds": {
+        "filter_time_start": "2026-04-01",
+        "filter_time_end": "2026-06-30",
+        "keyword": "semiconductor",
+        "award_type_codes": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "limit": 3,
+        "page": 1,
+        "spending_level": "awards"
+      },
+      "small_sample_schema": {
+        "Award ID": "str",
+        "Award Amount": "float",
+        "Total Outlays": "float",
+        "Start Date": "str",
+        "End Date": "str",
+        "Awarding Agency": "str",
+        "generated_internal_id": "str",
+        "Place of Performance Country Code": "str",
+        "Place of Performance State Code": "str"
+      },
+      "small_sample": [
+        {
+          "Award ID": "SPE7MX21C0002",
+          "Start Date": "2021-05-06",
+          "End Date": "2028-12-31",
+          "Award Amount_type": "number",
+          "Total Outlays_type": "number",
+          "Place of Performance Country Code": "USA"
+        }
+      ],
+      "observed_date_bounds": {
+        "returned_award_start_date_min": "2021-05-06",
+        "returned_award_start_date_max": "2023-09-20",
+        "returned_award_end_date_min": "2025-03-31",
+        "returned_award_end_date_max": "2028-12-31",
+        "transaction_action_dates_returned": false
+      },
+      "limitations_ko": [
+        "분기 검색 조건은 award 선택 조건이다. 반환 Award Amount와 Total Outlays는 선택된 award의 누적 요약 필드이며 2026Q2 의무액·지급액이 아니다.",
+        "Start/End는 award 수행 기간이다. 분기 action_date가 반환되지 않았다.",
+        "semiconductor 키워드 3건은 분야·프로젝트·실물 장비 적합성 미검증이다. 정부 지원금 또는 반도체 기업 CAPEX로 합산하지 않는다.",
+        "금액을 이 공개 sample에 옮기지 않고 응답 형식만 보존했다. 누락은 0으로 대체하지 않는다."
+      ]
+    },
+    {
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_ae4afbaf5bc96bde19d8ce85810ab9f4&limit=1&fields=DataSeries%2C2026May%2C2026Apr",
+      "request_method": "GET",
+      "retrieved_at_utc": "2026-10-04T17:14:04.408458+00:00",
+      "raw_file_basename": "probe-sg-generation.json",
+      "response_status": 200,
+      "retrieved_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_ae4afbaf5bc96bde19d8ce85810ab9f4&limit=1&fields=DataSeries%2C2026May%2C2026Apr",
+      "content_type": "application/json",
+      "last_modified": "Sun, 04 Oct 2026 17:14:04 GMT",
+      "byte_length": 481,
+      "sha256": "d732228606fac9cc67512f4a8f5fb81308276be7a4f5400037fc8e42dce9d7f9",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "capture_status": "HTTP_200_BODY_SAVED_REVIEW_REQUIRED",
+      "response_top_level_keys": [
+        "success",
+        "result"
+      ],
+      "returned_row_count": 1,
+      "data_status": "DATA_RETURNED",
+      "first_record_keys": [
+        "DataSeries",
+        "2026May",
+        "2026Apr"
+      ],
+      "api_success_flag": true,
+      "dataset_total": 1,
+      "field_schema": [
+        {},
+        {},
+        {}
+      ],
+      "probe_id": "PROBE-PP-SG-GENERATION",
+      "source_id": "SRC-API-PP-LIVE-SG",
+      "authentication_mode": "NO_KEY_NO_ACCOUNT",
+      "user_key_read": false,
+      "signup_performed": false,
+      "query_is_read_only": true,
+      "continuous_collector_implemented": false,
+      "public_full_response_included": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "response_validation_checks": [
+        "HTTP200",
+        "JSON_PARSED",
+        "EXPECTED_RECORD_LIST_PRESENT",
+        "NON_EMPTY_RECORD_LIST",
+        "QUERY_LIMIT_BOUNDED"
+      ],
+      "query_bounds": {
+        "resource_id": "d_ae4afbaf5bc96bde19d8ce85810ab9f4",
+        "limit": 1,
+        "fields": [
+          "DataSeries",
+          "2026May",
+          "2026Apr"
+        ]
+      },
+      "small_sample_schema": {
+        "DataSeries": "str",
+        "2026May": "str",
+        "2026Apr": "str"
+      },
+      "small_sample": [
+        {
+          "period": "2026-04",
+          "data_series": "Electricity Generation",
+          "raw_value": "4850",
+          "value": 4850.0,
+          "unit": "GWh",
+          "scope": "Singapore national generation"
+        },
+        {
+          "period": "2026-05",
+          "data_series": "Electricity Generation",
+          "raw_value": "5108.1",
+          "value": 5108.1,
+          "unit": "GWh",
+          "scope": "Singapore national generation"
+        }
+      ],
+      "observed_date_bounds": {
+        "sample_month_min": "2026-04",
+        "sample_month_max": "2026-05",
+        "catalogue_data_updated": "2026-08-21",
+        "catalogue_coverage_min": "1975-01",
+        "catalogue_coverage_max": "2026-05"
+      },
+      "limitations_ko": [
+        "1 wide row에서 2개 월 열만 선택했다. 전체 월별 시계열을 수집한 것이 아니다.",
+        "숫자가 문자열이며 result.fields는 빈 객체 3개를 반환했다. 필드명·GWh 단위는 공식 catalogue column legend와 교차 확인했다.",
+        "국가 발전량은 개별 AI DC의 소비량·용량·전력 수입 실적·가동 확인이 아니다."
+      ]
+    }
+  ],
+  "cross_metric_join_contract_ko": [
+    "기업 본사·수행 지역·발전소 좌표·DC site·구매자/공급자/승인기관을 서로 대체하지 않는다.",
+    "계통 권역·국가 발전량은 지역 배경 자료이며 특정 고객의 소비량을 산정하지 않는다.",
+    "계약 약정/의무액/지급액/회사 CAPEX/정부 보조금/계약 상한을 별개 amount_type으로 보존한다.",
+    "nameplate/requested/approved MW와 net generation MWh·consumption MWh는 별도 관측이다.",
+    "project/site/customer/product/contract ID가 없으면 memory/HBM/DDR5/eSSD 수요량과 자동 연결하지 않는다.",
+    "event date·economic period·publication date·retrieval timestamp·revision vintage를 따로 저장한다.",
+    "기존 정책 source의 발표·시행 문구는 조건의 후보 근거다. current_effect=null을 유지하며 후속 rule/order·통합 법령의 전수 판정은 범위 밖이다."
+  ],
+  "observability_gaps_ko": [
+    "유틸리티별 확정 DC 부하·service agreement·통전일·실사용·PPA 실물 전달·실제 server 주문은 이 7 family만으로 수집되지 않는다.",
+    "Federal Register/Regulations.gov는 미국 연방 공표·docket 범위다. 주 PUC·지방 permit·개별 허가를 포괄하지 않는다. FERC 개별 order/tariff는 기존 원문 packet을 재사용하며 동 API로 완료 판정을 하지 않는다.",
+    "ENTSO-E/PJM 계측·기상 보정·국가별 재사용·인증 schema는 실호출 미확인이다. API key를 보유했는지 여부와 미실행 상태는 별개다.",
+    "정부 award는 project 설명과 유형의 수작업 검토가 필요하며 semiconductor 검색어는 전용 fab 투자 목록이 아니다.",
+    "국가간 협정·MOU·기업 JDA·조건부 수입 승인·실제 국경 전력 거래는 별개의 유형과 행이다.",
+    "1회 작은 응답 반환은 반복 수집기·coverage·freshness SLA·선행성·성과 검증이 아니다."
+  ],
+  "deferred_expansion_ko": [
+    "ENTSO-E 국경 actual flow 항목과 XML 전체 schema: 유럽의 특정 site 사례가 정해진 뒤 확인한다.",
+    "PJM queue 최신 export 행 schema와 파일별 재사용 조건: 실제 전력 공급 프로젝트 1건과 연결한 뒤 확인한다.",
+    "EIA keyed v2 DEMO_KEY: 공식 허용 문구 미확인으로 미실행이며 key 재발급 필요로 추론하지 않는다.",
+    "댓글 본문/개인 연락처/소셜 데이터/조달공고 쓰기/계정 발급: 이번 범위에서 제외했다."
+  ],
+  "collection_decision_ko": "무키 정부 공표·정부지출 API와 Singapore 배경값은 작은 실호출이 가능했다. 고객별 설치/납기 시그널에는 확정 site·계약·허가·실제 서비스와의 연결 검증을 우선해야 한다.",
+  "exactly_one_next_task_ko": "기존 DC 고객·전력 프로젝트 1건을 선택하여 project/site/customer 키를 고정하고 정부 문서/자금 또는 발전 실적 중 직접 연결되는 지표 1개만 첫 관측표로 수집한다.",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "human_evidence_approved": false,
+  "strong_inference_approved": false,
+  "governed_evidence": false,
+  "h1_admitted": false,
+  "predictive_validity_established": false,
+  "existing_public_plan_refs": [
+    {
+      "packet_path": "docs/research/supply_chain/collection_plan.md",
+      "sha256_at_read": "3caff7dcb52ff704ddaca7468f4031505cb2f3ab14a0e6dc2c556505fdbad651",
+      "byte_length_at_read": 32219,
+      "role": "EXISTING_CANDIDATE_COLLECTION_PLAN_NOT_NEW_PRIMARY_SOURCE",
+      "new_live_probe": false
+    },
+    {
+      "packet_path": "data/research/semiconductor_supply_chain/2026-10-03/api_issuance_plan_v3.json",
+      "sha256_at_read": "7d4e25761fa99f704660537f9a8e31d0bbef5263fcb4b4264c75156030e19be2",
+      "byte_length_at_read": 18408,
+      "role": "EXISTING_CANDIDATE_COLLECTION_PLAN_NOT_NEW_PRIMARY_SOURCE",
+      "new_live_probe": false
+    },
+    {
+      "packet_path": "data/research/semiconductor_supply_chain/2026-10-03/source_benchmark_v2.json",
+      "sha256_at_read": "e82d69af6822cecee9118751fc1eb4ac6aa5ffd75f3235afbd628f1b68d2b672",
+      "byte_length_at_read": 78102,
+      "role": "EXISTING_CANDIDATE_COLLECTION_PLAN_NOT_NEW_PRIMARY_SOURCE",
+      "new_live_probe": false
+    }
+  ],
+  "reused_file_receipts": [
+    {
+      "existing_public_packet": "data/research/semiconductor_supply_chain/2026-10-03/source_benchmark_v2.json",
+      "existing_record_id": "pjm_observed_dc_load",
+      "file_url": "https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-accuracy-report.xlsx",
+      "original_sha256": "e0f24fe03a79af016826089c653b2c2e15e55edcb04a7bd4be5fa643136425fc",
+      "original_byte_length": 50175,
+      "published_on": "2026-05-29",
+      "previous_checked_as_of": "2026-10-03",
+      "schema": [
+        "Zone",
+        "Year",
+        "Metric",
+        "Load MW"
+      ],
+      "new_download_or_api_probe": false,
+      "scope_ko": "기존 연간 Historical July Peak/forecast vintage 검사 결과를 참조한다. 월별 DC 부하 API 검증으로 표시하지 않는다.",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    }
+  ],
+  "failed_primary_byte_capture_attempts": [],
+  "navigation_attempts_not_counted_as_data_probes": [
+    {
+      "navigation_id": "NAV-PP-USASPENDING-HASH-WRONG-METHOD",
+      "url": "https://api.usaspending.gov/api/v2/references/hash/",
+      "method": "GET",
+      "access_channel": "WEB_BROWSE_LINK",
+      "reported_http_status": 405,
+      "outcome": "METHOD_NOT_ALLOWED_NOT_DATA_SUCCESS",
+      "raw_original_captured": false,
+      "sha256": null,
+      "reason_ko": "endpoint 목록의 링크를 문서 링크로 열었으나 POST 전용 조회 route였으므로 data probe에 사용하지 않았다. 후속 official API contract 원문을 별도로 확인했다."
+    },
+    {
+      "navigation_id": "NAV-PP-ENTSOE-POSTMAN-SPEC",
+      "url": "https://documenter.getpostman.com/view/7009892/2s93JtP3F6",
+      "access_channel": "WEB_BROWSE_OFFICIAL_DOCUMENTATION_LINK",
+      "outcome": "ZERO_EXTRACTED_TEXT_NOT_CONTENT_PROOF",
+      "raw_original_captured": false,
+      "sha256": null,
+      "reason_ko": "공식 Request Parameters가 연결한 Postman 문서의 가시 텍스트를 확보하지 못했다. 따라서 XML 전체 schema 검증이나 항목별 단위 확인으로 표시하지 않았다."
+    }
+  ],
+  "instrument_observation_contract": {
+    "announcement": "issuer statement only",
+    "proposed_rule": "proposal / consultation; final adoption not implied",
+    "final_rule": "publication plus stated effective date; later amendments and applicability not exhaustively assessed",
+    "order": "specific regulator proceeding scope; not all site permits or new power-service contracts",
+    "MOU": "named regulator/government cooperation; legal binding/current effect not decided",
+    "corporate_JDA": "named corporate development relationship; not automatically the same construction/import project",
+    "conditional_approval": "named project capacity and remaining conditions; not actual trade or operation",
+    "individual_license_or_permit": "requires issuing jurisdiction/entity/product/site and operative conditions; not inferred from search result",
+    "current_effect": null
+  }
+}

@@ -1,0 +1,1949 @@
+{
+  "schema_version": 1,
+  "as_of_date_kst": "2026-10-05",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "purpose_ko": "고객·상품 카드 수렴을 보류하고 수집 질문별 무료 API와 지표의 실제 관측 가능성을 확인한다.",
+  "governed_evidence": false,
+  "human_evidence_approved": false,
+  "h1_admitted": false,
+  "predictive_signal_validated": false,
+  "continuous_collection_implemented": false,
+  "accounts_created": false,
+  "keys_issued": false,
+  "credential_inventory_included": false,
+  "public_full_raw_responses_included": false,
+  "date_rule_ko": "한국 사용자 기준일과 실제 UTC 수집 시각, 관측기간, 공표/최초 공개/개정 날짜를 구분한다.",
+  "packet_refs": [
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "byte_length": 46457,
+      "sha256": "244d18d5278cea01cf95b3ce1602cba8ddc97783f1957b5c3aa2178a11c2a418",
+      "family_count": 3,
+      "numbered_indicator_count": 7,
+      "family_measurement_contract_count": 0
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "byte_length": 37281,
+      "sha256": "6134e7060e225f3b642da96990e5422e6247cdabefb587e3a464ced1a2879597",
+      "family_count": 5,
+      "numbered_indicator_count": 10,
+      "family_measurement_contract_count": 0
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "byte_length": 123624,
+      "sha256": "db3d9570dd672e21f0264c346e4a00d70d9f463587801a89f7ba456577caf130",
+      "family_count": 7,
+      "numbered_indicator_count": 14,
+      "family_measurement_contract_count": 0
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/taiwan_company_activity.json",
+      "byte_length": 28354,
+      "sha256": "3f577e0bba4e7c91aa74663a2e0e1c53a1c565c5a7fef04d088f43652c397ce9",
+      "family_count": 1,
+      "numbered_indicator_count": 3,
+      "family_measurement_contract_count": 0
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "byte_length": 93892,
+      "sha256": "43826ebf9879866b27a7375d4942a6a12b00b4db001ff65f82ad0a50dc6d70b0",
+      "family_count": 6,
+      "numbered_indicator_count": 0,
+      "family_measurement_contract_count": 6
+    }
+  ],
+  "preserved_input_refs": [
+    {
+      "path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "byte_length": 337455,
+      "sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138"
+    },
+    {
+      "path": "data/research/semiconductor_supply_chain/2026-10-03/api_issuance_plan_v3.json",
+      "byte_length": 18408,
+      "sha256": "7d4e25761fa99f704660537f9a8e31d0bbef5263fcb4b4264c75156030e19be2"
+    },
+    {
+      "path": "data/research/semiconductor_macro_structure/2026-10-04/sources.json",
+      "byte_length": 27851,
+      "sha256": "891e1f83bb78795396b98358a16de63e3bd64a314955e233d50d6867a6fc43c8"
+    },
+    {
+      "path": "data/research/ai_technology_memory_links/2026-10-04/links.json",
+      "byte_length": 22261,
+      "sha256": "6cd95b606851dc66e86c36eb498258093eaf8967bcc24e402de517a4d8ec2b45"
+    },
+    {
+      "path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "byte_length": 97626,
+      "sha256": "f6d7e5c8d62aa6d46ed05d87b77fceec2d9eccfb84fd6a4a96aabc1a653db283"
+    },
+    {
+      "path": "data/research/semiconductor_industry_routes/2026-10-05/policy_infrastructure_routes.json",
+      "byte_length": 77441,
+      "sha256": "bedba1e6430e59d44501c95d3fd780feffbb8b3df5302a5a5c62b6cd362c1ea8"
+    }
+  ],
+  "summary_counts": {
+    "source_families_including_files": 22,
+    "numbered_indicator_definitions": 34,
+    "trade_industry_family_measurement_contracts": 6,
+    "bounded_data_access_attempts": 23,
+    "non_empty_data_api_responses": 11,
+    "distinct_data_api_families_with_data": 10,
+    "metadata_responses": 2,
+    "static_data_file_responses": 1,
+    "static_document_file_responses": 2,
+    "failed_data_api_attempts": 4,
+    "failed_static_file_attempts": 3
+  },
+  "counts_interpretation_ko": "source family에는 API 미시험·파일 자료가 포함된다. API success에는 ECOS public sample과 OECD SDMX CSV가 포함되며 문서 검색/metadata/파일과 구분된다. source document receipt의 HTTP 실패는 23개 data access 통계에 합산하지 않는다. 34+6은 중복 없는 지표 총수가 아니다.",
+  "families": [
+    {
+      "family_id": "openrouter-datasets",
+      "provider": "OpenRouter",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "json_pointer": "/families/0",
+      "access_result_as_recorded": "AUTH_REQUIRED_NO_DATA",
+      "source_ids": [
+        "SRC-API-AI-OR-DATASETS"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "huggingface-hub-public-models",
+      "provider": "Hugging Face",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "json_pointer": "/families/1",
+      "access_result_as_recorded": "VALID_DATA_OBSERVED_KEYLESS",
+      "source_ids": [
+        "SRC-API-AI-HF-ENDPOINTS",
+        "SRC-API-AI-HF-MODELINFO",
+        "SRC-API-AI-HF-COUNTING",
+        "SRC-API-AI-HF-RATE",
+        "SRC-API-AI-HF-LICENSE"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "github-rest-public-technology",
+      "provider": "GitHub",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "json_pointer": "/families/2",
+      "access_result_as_recorded": "VALID_DATA_OBSERVED_KEYLESS",
+      "source_ids": [
+        "SRC-API-AI-GH-RELEASES",
+        "SRC-API-AI-GH-REPOS",
+        "SRC-API-AI-GH-RATE"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "root-sec",
+      "provider": "SEC EDGAR",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/families/0",
+      "access_result_as_recorded": "DOCUMENTED_KEYLESS_API_PROBED_HTTP403_NO_DATA",
+      "source_ids": [
+        "SRC-API-ROOT-SEC",
+        "SRC-API-ROOT-SEC-FAIR"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "root-fred",
+      "provider": "FRED v1 / ALFRED",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/families/1",
+      "access_result_as_recorded": "KEYED_API_NOT_CALLED_CSV_ALTERNATIVE_THREE_REQUESTS_FAILED",
+      "source_ids": [
+        "SRC-API-ROOT-FRED-KEY",
+        "SRC-API-ROOT-FRED-IP",
+        "SRC-API-ROOT-FRED-CU",
+        "SRC-API-ROOT-FRED-BACKLOG"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "root-dart",
+      "provider": "OpenDART",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/families/2",
+      "access_result_as_recorded": "OFFICIAL_API_SCOPE_CHECKED_AUTHENTICATED_CALL_NOT_PERFORMED",
+      "source_ids": [
+        "SRC-API-ROOT-DART-LIST",
+        "SRC-API-ROOT-DART-SEARCH"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "root-ecos",
+      "provider": "Bank of Korea ECOS",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/families/3",
+      "access_result_as_recorded": "PUBLIC_SAMPLE_METADATA_AND_THREE_DATA_ROWS_RETURNED",
+      "source_ids": [
+        "SRC-API-ROOT-ECOS"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "root-etf-file",
+      "provider": "iShares BAI official holdings CSV",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/families/4",
+      "access_result_as_recorded": "PUBLIC_CSV_VALID_FIFTY_EQUITY_ROWS_NOT_API",
+      "source_ids": [
+        "SRC-API-ROOT-ETF"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "API-FAMILY-PP-EIA",
+      "provider": "EIA",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/families/0",
+      "access_result_as_recorded": "KEYED_API_NOT_ATTEMPTED_NO_USER_KEY_READ",
+      "source_ids": [
+        "SRC-API-PP-EIA-DEVELOPER",
+        "SRC-API-PP-EIA-V2-DOCS",
+        "SRC-API-PP-EIA-FAQ",
+        "SRC-API-PP-EIA-REUSE"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "API-FAMILY-PP-ENTSOE",
+      "provider": "ENTSO-E Transparency Platform",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/families/1",
+      "access_result_as_recorded": "TOKEN_REQUIRED_NOT_ATTEMPTED",
+      "source_ids": [
+        "SRC-API-PP-ENTSOE-TOKEN",
+        "SRC-API-PP-ENTSOE-RATE",
+        "SRC-API-PP-ENTSOE-QUERY",
+        "SRC-API-PP-ENTSOE-PARAMETERS",
+        "SRC-API-PP-ENTSOE-EIC"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "API-FAMILY-PP-FEDERAL-REGISTER",
+      "provider": "Federal Register",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/families/2",
+      "access_result_as_recorded": "DATA_RETURNED_NON_EMPTY_JSON",
+      "source_ids": [
+        "SRC-API-PP-FR-DOCS",
+        "SRC-API-PP-LIVE-FR"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "API-FAMILY-PP-REGULATIONS-GOV",
+      "provider": "Regulations.gov",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/families/3",
+      "access_result_as_recorded": "KEYED_GET_NOT_ATTEMPTED",
+      "source_ids": [
+        "SRC-API-PP-REGGOV-DOCS",
+        "SRC-API-PP-APIDATAGOV-RATE"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "API-FAMILY-PP-USASPENDING",
+      "provider": "USAspending",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/families/4",
+      "access_result_as_recorded": "AWARD_ROWS_RETURNED_TRANSACTION_AND_MONTHLY_FLOW_NOT_COLLECTED",
+      "source_ids": [
+        "SRC-API-PP-USASPENDING-ENDPOINTS",
+        "SRC-API-PP-USASPENDING-AWARD-CONTRACT",
+        "SRC-API-PP-USASPENDING-TRANSACTION-CONTRACT",
+        "SRC-API-PP-USASPENDING-GUIDE",
+        "SRC-API-PP-LIVE-USASPENDING"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "API-FAMILY-PP-PJM",
+      "provider": "PJM public planning and Data Miner",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/families/5",
+      "access_result_as_recorded": "DATAMINER_NOT_PROBED_PUBLIC_QUEUE_HTML_CHECKED_RECORD_EXPORT_NOT_PROBED",
+      "source_ids": [
+        "SRC-API-PP-PJM-DATAMINER",
+        "SRC-API-PP-PJM-API-GUIDE",
+        "SRC-API-PP-PJM-SERVICE-REQUESTS"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "API-FAMILY-PP-SINGAPORE",
+      "provider": "Singapore data.gov.sg / SINGSTAT / EMA",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/families/6",
+      "access_result_as_recorded": "NON_EMPTY_1_WIDE_ROW_2_MONTHS_RETURNED_PROJECT_LICENCE_API_NOT_CONFIRMED",
+      "source_ids": [
+        "SRC-API-PP-SG-DATASET",
+        "SRC-API-PP-SG-SEARCH-DOCS",
+        "SRC-API-PP-SG-RATE",
+        "SRC-API-PP-SG-LICENCE",
+        "SRC-API-PP-LIVE-SG"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "twse-monthly-company-revenue",
+      "provider": "Taiwan Stock Exchange OpenAPI / MOPS monthly listed-company revenue",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/taiwan_company_activity.json",
+      "json_pointer": "/families/0",
+      "access_result_as_recorded": "VALID_DATA_OBSERVED_KEYLESS",
+      "source_ids": [
+        "SRC-API-TWSE-SWAGGER",
+        "SRC-API-TWSE-GOV-METADATA",
+        "SRC-API-TWSE-OPEN-LICENSE",
+        "SRC-API-TWSE-WINBOND-UNIT"
+      ],
+      "family_kind_as_recorded": null,
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "TM-01-UN-COMTRADE",
+      "provider": "UN Comtrade",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/families/0",
+      "access_result_as_recorded": "KEYLESS_PREVIEW_NONEMPTY_MATCHED_REGISTERED_API_NOT_CALLED",
+      "source_ids": [
+        "DOC-TM-COMTRADE-PREVIEW",
+        "DOC-TM-COMTRADE-KEY",
+        "DOC-TM-COMTRADE-SUB",
+        "DOC-TM-COMTRADE-REUSE",
+        "PROBE-TM-COMTRADE"
+      ],
+      "family_kind_as_recorded": "PRODUCT_TRADE_API",
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "TM-02-EUROSTAT",
+      "provider": "Eurostat",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/families/1",
+      "access_result_as_recorded": "STS_JSON_STAT_NONEMPTY_COMEXT_PRODCOM_AND_SDMX_FORMAT_NOT_CALLED",
+      "source_ids": [
+        "DOC-TM-EUROSTAT-INTRO",
+        "DOC-TM-EUROSTAT-LICENSE-ACTUAL",
+        "PROBE-TM-EUROSTAT"
+      ],
+      "family_kind_as_recorded": "INDUSTRY_INDEX_PRODUCT_PRODUCTION_AND_TRADE_API",
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "TM-03-OECD-TIVA",
+      "provider": "OECD",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/families/2",
+      "access_result_as_recorded": "CURRENT_METADATA_AND_ONE_DATA_ROW_SUCCESS_FIRST_LEGACY_QUERY_FAILED",
+      "source_ids": [
+        "DOC-TM-OECD-API",
+        "DOC-TM-OECD-LIMITS",
+        "DOC-TM-OECD-PARAMS",
+        "DOC-TM-OECD-TERMS",
+        "PROBE-TM-OECD-STRUCTURE",
+        "PROBE-TM-OECD",
+        "PROBE-TM-OECD-CORRECTED"
+      ],
+      "family_kind_as_recorded": "VALUE_ADDED_TRADE_STRUCTURAL_API",
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "TM-04-KOSIS",
+      "provider": "KOSIS / 통계작성기관",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/families/3",
+      "access_result_as_recorded": "API_DOCUMENTED_NOT_CALLED_KEY_REQUIRED_TABLE_MAPPING_TO_VERIFY",
+      "source_ids": [
+        "DOC-TM-KOSIS-GUIDE",
+        "DOC-TM-KOSIS-HOME",
+        "DOC-TM-KOSIS-TERMS-ACTUAL"
+      ],
+      "family_kind_as_recorded": "DOMESTIC_PRODUCTION_SHIPMENT_INVENTORY_API",
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "TM-05-KOREA-CUSTOMS",
+      "provider": "관세청 / 공공데이터포털",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/families/4",
+      "access_result_as_recorded": "API_DOCUMENTED_NOT_CALLED_KEY_REQUIRED",
+      "source_ids": [
+        "DOC-TM-CUSTOMS"
+      ],
+      "family_kind_as_recorded": "HS_COUNTRY_MONTHLY_TRADE_API",
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    },
+    {
+      "family_id": "TM-06-USGS-MATERIAL-FILES",
+      "provider": "USGS National Minerals Information Center",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/families/5",
+      "access_result_as_recorded": "TWO_ANNUAL_PDF_FILES_SUCCESS_NOT_API",
+      "source_ids": [
+        "DOC-TM-USGS-GALLIUM",
+        "DOC-TM-USGS-POLICY",
+        "PROBE-TM-USGS-FILE",
+        "PROBE-TM-USGS-REE-FILE"
+      ],
+      "family_kind_as_recorded": "ANNUAL_OFFICIAL_FILES_NOT_NUMERIC_API",
+      "access_and_measurement_authority_ko": "인증·무료·quota·license와 세부 계약은 원 packet에서 읽는다. 문서 확인을 data success로 정규화하지 않음."
+    }
+  ],
+  "numbered_indicators": [
+    {
+      "indicator_id": "AIAPI01-PLATFORM-TOKENS",
+      "family_id": "openrouter-datasets",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "json_pointer": "/indicators/0",
+      "purpose_ko": "어떤 공개 모델 variant로 OpenRouter 사용이 이동하는가?",
+      "grain": [
+        "platform",
+        "UTC day",
+        "model variant"
+      ],
+      "unit": "provider tokenizer token count",
+      "join_keys": [
+        "model_permaslug",
+        "model/version mapping verified separately",
+        "UTC date",
+        "same filters/vintage"
+      ],
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-05-HBM-ASIC",
+        "PROD-04-NAND-ESSD"
+      ],
+      "measurement_result_as_recorded": null,
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "AIAPI02-MODEL-DOWNLOADS30",
+      "family_id": "huggingface-hub-public-models",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "json_pointer": "/indicators/1",
+      "purpose_ko": "고정 모델군의 배포·개발 관심이 어떻게 달라지는가?",
+      "grain": [
+        "public Hub model repo",
+        "snapshot"
+      ],
+      "unit": "counted HTTP requests",
+      "join_keys": [
+        "Hub model id",
+        "sha",
+        "same cohort",
+        "snapshot/window"
+      ],
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-05-HBM-ASIC"
+      ],
+      "measurement_result_as_recorded": null,
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "AIAPI03-MODEL-LIKES",
+      "family_id": "huggingface-hub-public-models",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "json_pointer": "/indicators/2",
+      "purpose_ko": "모델에 대한 누적 공개 관심을 다운로드와 별도로 볼 수 있는가?",
+      "grain": [
+        "public Hub model repo",
+        "snapshot"
+      ],
+      "unit": "current accumulated likes",
+      "join_keys": [
+        "Hub model id",
+        "snapshot timestamp"
+      ],
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-05-HBM-ASIC"
+      ],
+      "measurement_result_as_recorded": null,
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "AIAPI04-MODEL-VERSION-TASK",
+      "family_id": "huggingface-hub-public-models",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "json_pointer": "/indicators/3",
+      "purpose_ko": "업무 종류·모델 버전·메모리 요구 해석의 조건을 추적할 수 있는가?",
+      "grain": [
+        "public Hub model repository",
+        "revision metadata"
+      ],
+      "unit": "IDs, categories, timestamps",
+      "join_keys": [
+        "model id",
+        "sha",
+        "backend/commit and quantization/context/batch verified separately"
+      ],
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-02-DDR-CPU",
+        "PROD-03-LPDDR-CPU",
+        "PROD-04-NAND-ESSD",
+        "PROD-05-HBM-ASIC"
+      ],
+      "measurement_result_as_recorded": null,
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "AIAPI05-SOFTWARE-RELEASE",
+      "family_id": "github-rest-public-technology",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "json_pointer": "/indicators/4",
+      "purpose_ko": "vLLM 같은 실행 소프트웨어의 기술 변경 시점과 버전을 API로 식별할 수 있는가?",
+      "grain": [
+        "repository numeric id",
+        "release numeric id"
+      ],
+      "unit": "published release event",
+      "join_keys": [
+        "repo numeric id/full_name",
+        "release id/tag",
+        "resolved immutable commit SHA",
+        "backend/version",
+        "test configuration"
+      ],
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-04-NAND-ESSD",
+        "PROD-05-HBM-ASIC"
+      ],
+      "measurement_result_as_recorded": null,
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "AIAPI06-DEVELOPER-INTEREST",
+      "family_id": "github-rest-public-technology",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "json_pointer": "/indicators/5",
+      "purpose_ko": "공개 실행 생태계에 대한 개발자 관심을 수치 snapshot으로 보존할 수 있는가?",
+      "grain": [
+        "public repository numeric id",
+        "snapshot"
+      ],
+      "unit": "accumulated public stars and forks",
+      "join_keys": [
+        "repo numeric id",
+        "full_name",
+        "same snapshot timestamps"
+      ],
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-05-HBM-ASIC"
+      ],
+      "measurement_result_as_recorded": null,
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "AIAPI07-REPO-FRESHNESS",
+      "family_id": "github-rest-public-technology",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "json_pointer": "/indicators/6",
+      "purpose_ko": "참고 기술 repo가 수정·중단·이동됐는가?",
+      "grain": [
+        "public repository numeric id",
+        "snapshot"
+      ],
+      "unit": "timestamps and state flags",
+      "join_keys": [
+        "repo numeric id",
+        "immutable commit resolved separately",
+        "capture timestamp"
+      ],
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-04-NAND-ESSD"
+      ],
+      "measurement_result_as_recorded": null,
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "ROOTAPI01-CUSTOMER-CASH",
+      "family_id": "root-sec",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/indicators/0",
+      "purpose_ko": "투자 가이던스와 실제 고객 법인 현금 시설투자가 일치하는가?",
+      "grain": [
+        "legal entity CIK",
+        "tag/account definition",
+        "currency",
+        "start/end",
+        "accession and filing version"
+      ],
+      "unit": "reported currency",
+      "join_keys": [
+        "legal entity CIK",
+        "tag/account definition",
+        "currency",
+        "start/end",
+        "accession and filing version"
+      ],
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-05-HBM-ASIC"
+      ],
+      "measurement_result_as_recorded": "API_FAILED_NO_VALUES",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "ROOTAPI02-CONTRACT-FILING-EVENT",
+      "family_id": "root-sec",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/indicators/1",
+      "purpose_ko": "기명 구매·투자·공급 계약과 수정 공시를 찾을 수 있는가?",
+      "grain": [
+        "legal entity CIK",
+        "accession",
+        "document/exhibit",
+        "contract/project",
+        "event date and disclosed date"
+      ],
+      "unit": "event and original currency/quantity only when disclosed",
+      "join_keys": [
+        "legal entity CIK",
+        "accession",
+        "document/exhibit",
+        "contract/project",
+        "event date and disclosed date"
+      ],
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-05-HBM-ASIC"
+      ],
+      "measurement_result_as_recorded": "API_FAILED_NO_VALUES",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "ROOTAPI03-KR-CASH-INVENTORY",
+      "family_id": "root-dart",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/indicators/2",
+      "purpose_ko": "한국 공급망 법인의 재고·시설 현금 지출과 보고 범위를 확보할 수 있는가?",
+      "grain": [
+        "DART corp_code",
+        "receipt/version",
+        "CFS/OFS",
+        "statement/account",
+        "raw period and currency"
+      ],
+      "unit": "raw statement currency/book value",
+      "join_keys": [
+        "DART corp_code",
+        "receipt/version",
+        "CFS/OFS",
+        "statement/account",
+        "raw period and currency"
+      ],
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-02-DDR-CPU",
+        "PROD-04-NAND-ESSD"
+      ],
+      "measurement_result_as_recorded": "AUTHENTICATED_API_NOT_CALLED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "ROOTAPI04-KR-FILING-SEARCH",
+      "family_id": "root-dart",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/indicators/3",
+      "purpose_ko": "제품·고객·투자 관련 공시 및 정정을 원문으로 연결할 수 있는가?",
+      "grain": [
+        "corp_code",
+        "receipt/document",
+        "form/type",
+        "publication/event date"
+      ],
+      "unit": "filing event",
+      "join_keys": [
+        "corp_code",
+        "receipt/document",
+        "form/type",
+        "publication/event date"
+      ],
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-02-DDR-CPU"
+      ],
+      "measurement_result_as_recorded": "AUTHENTICATED_API_NOT_CALLED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "ROOTAPI05-US-PRODUCTION",
+      "family_id": "root-fred",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/indicators/4",
+      "purpose_ko": "미국 반도체·전자부품 산업의 실행 변화",
+      "grain": [
+        "series id",
+        "industry definition",
+        "country",
+        "month",
+        "vintage"
+      ],
+      "unit": "raw Index 2017=100 SA",
+      "join_keys": [
+        "series id",
+        "industry definition",
+        "country",
+        "month",
+        "vintage"
+      ],
+      "route_ids": [
+        "PROD-06-FOUNDRY-NODES"
+      ],
+      "measurement_result_as_recorded": "API_NOT_CALLED_CSV_FAILED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "ROOTAPI06-US-UTILIZATION",
+      "family_id": "root-fred",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/indicators/5",
+      "purpose_ko": "미국 반도체·전자부품 산업의 가동 압력",
+      "grain": [
+        "series id",
+        "industry definition",
+        "country",
+        "month",
+        "vintage"
+      ],
+      "unit": "raw Percent SA",
+      "join_keys": [
+        "series id",
+        "industry definition",
+        "country",
+        "month",
+        "vintage"
+      ],
+      "route_ids": [
+        "PROD-06-FOUNDRY-NODES"
+      ],
+      "measurement_result_as_recorded": "API_NOT_CALLED_CSV_FAILED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "ROOTAPI07-ELECTRICAL-BACKLOG",
+      "family_id": "root-fred",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/indicators/6",
+      "purpose_ko": "전력 장비 등의 공급 지연을 넓은 업종 주문잔고로 교차 확인",
+      "grain": [
+        "series id",
+        "industry definition",
+        "country",
+        "month",
+        "vintage"
+      ],
+      "unit": "raw Millions USD SA end-of-period",
+      "join_keys": [
+        "series id",
+        "industry definition",
+        "country",
+        "month",
+        "vintage"
+      ],
+      "route_ids": [
+        "PROD-09-GAN-SIC-POWER"
+      ],
+      "measurement_result_as_recorded": "API_NOT_CALLED_CSV_FAILED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "ROOTAPI08-FX-CONTROL",
+      "family_id": "root-ecos",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/indicators/7",
+      "purpose_ko": "통화 차이를 정리할 보조 정의·관측값을 API로 얻는가?",
+      "grain": [
+        "stat code 731Y001",
+        "item code 0000001",
+        "D cycle",
+        "observation day"
+      ],
+      "unit": "KRW per USD (raw UNIT_NAME=원, item denomination=미국달러)",
+      "join_keys": [
+        "stat code 731Y001",
+        "item code 0000001",
+        "D cycle",
+        "observation day"
+      ],
+      "route_ids": [],
+      "measurement_result_as_recorded": "PUBLIC_SAMPLE_THREE_VALUES_OBSERVED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "ROOTAPI09-ETF-POSITION",
+      "family_id": "root-etf-file",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/indicators/8",
+      "purpose_ko": "기관/투자자 배분에서 가격 효과와 보유 수량을 나눌 수 있는가?",
+      "grain": [
+        "fund/share class",
+        "security id or ticker+exchange+currency",
+        "holdings date",
+        "asset class",
+        "file hash"
+      ],
+      "unit": "Equity shares / weight % / ETF shares",
+      "join_keys": [
+        "fund/share class",
+        "security id or ticker+exchange+currency",
+        "holdings date",
+        "asset class",
+        "file hash"
+      ],
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-06-FOUNDRY-NODES"
+      ],
+      "measurement_result_as_recorded": "FILE_FIELDS_OBSERVED_NO_FLOW_COMPUTED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "ROOTAPI10-ETF-NETCREATION",
+      "family_id": "root-etf-file",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/indicators/9",
+      "purpose_ko": "펀드 규모와 투자자 순설정 압력의 추정 후보를 만들 수 있는가?",
+      "grain": [
+        "fund/share class",
+        "same valuation date",
+        "currency",
+        "corporate action"
+      ],
+      "unit": "same-date NAV valued change in ETF shares",
+      "join_keys": [
+        "fund/share class",
+        "same valuation date",
+        "currency",
+        "corporate action"
+      ],
+      "route_ids": [],
+      "measurement_result_as_recorded": "REQUIRED_FIELDS_NOT_COLLECTED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "API-PP-01",
+      "family_id": "API-FAMILY-PP-EIA",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/metrics/0",
+      "purpose_ko": "DC 부근에서 공급 후보가 계획에 머무는지 운영 단계로 전환되는지 구분한다.",
+      "grain": "plant_id × generator_id × report_month × status/vintage",
+      "unit": "MW; planned/actual operation month; status code",
+      "join_keys": [
+        "plant_id",
+        "generator_id",
+        "report_month",
+        "latitude/longitude source",
+        "owner/operator"
+      ],
+      "route_ids": [
+        "ROUTE-PI-01"
+      ],
+      "measurement_result_as_recorded": "EXISTING_860M_FILE_CHECK_REUSED_NOT_REPROBED_KEYED_API_NOT_TESTED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "API-PP-02",
+      "family_id": "API-FAMILY-PP-EIA",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/metrics/1",
+      "purpose_ko": "공급 후보가 실제 전력을 생산하는지 공급량 측면을 확인한다.",
+      "grain": "plant_id × prime_mover × fuel × month; generator_id only if supplied",
+      "unit": "MWh net generation",
+      "join_keys": [
+        "plant_id",
+        "prime_mover",
+        "fuel",
+        "month",
+        "operator"
+      ],
+      "route_ids": [
+        "ROUTE-PI-01"
+      ],
+      "measurement_result_as_recorded": "FILE_AND_KEYED_DATA_NOT_PROBED_THIS_TASK",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "API-PP-03",
+      "family_id": "API-FAMILY-PP-EIA",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/metrics/2",
+      "purpose_ko": "계통 수요 환경과 예측 대비 실제치를 구분한다.",
+      "grain": "balancing authority/respondent × period × type × data vintage",
+      "unit": "route metadata/response unit TO_VERIFY; demand MW vs energy MWh 구분",
+      "join_keys": [
+        "respondent/BA code",
+        "period",
+        "type",
+        "UTC/local timezone",
+        "revision vintage"
+      ],
+      "route_ids": [
+        "ROUTE-PI-01",
+        "ROUTE-PI-02"
+      ],
+      "measurement_result_as_recorded": "DOCUMENTATION_CHECKED_USER_KEY_NOT_READ_AUTHENTICATED_REQUEST_NOT_ATTEMPTED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "API-PP-04",
+      "family_id": "API-FAMILY-PP-ENTSOE",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/metrics/3",
+      "purpose_ko": "유럽 고객 지역의 계통 부하를 배경 자료로 비교한다.",
+      "grain": "EIC area × time interval × process/document type × revision",
+      "unit": "MW target; actual XML unit/resolution TO_VERIFY",
+      "join_keys": [
+        "EIC",
+        "area_type",
+        "documentType",
+        "processType",
+        "time interval UTC",
+        "revisionNumber if returned"
+      ],
+      "route_ids": [
+        "ROUTE-PI-01"
+      ],
+      "measurement_result_as_recorded": "DOCS_CHECKED_TOKEN_NOT_READ_NO_AUTHENTICATED_XML_CALL",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "API-PP-05",
+      "family_id": "API-FAMILY-PP-FEDERAL-REGISTER",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/metrics/4",
+      "purpose_ko": "장비·fab 또는 대규모 부하의 규제 조건을 날짜가 있는 사건으로 찾아 원문 검토 후보를 만든다.",
+      "grain": "FR document_number × agency × publication_date × instrument_type",
+      "unit": "document count; dates; CFR part reference; no economic capacity unit",
+      "join_keys": [
+        "document_number",
+        "agency_id/slug",
+        "docket_id where supplied",
+        "RIN where supplied",
+        "CFR title/part",
+        "jurisdiction"
+      ],
+      "route_ids": [
+        "ROUTE-PI-02",
+        "ROUTE-PI-03"
+      ],
+      "measurement_result_as_recorded": "LIVE_NO_KEY_SEARCH_3_NON_EMPTY_ROWS",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "API-PP-06",
+      "family_id": "API-FAMILY-PP-REGULATIONS-GOV",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/metrics/5",
+      "purpose_ko": "기관이 검토 중인 규칙의 문서·지원 자료·철회 여부를 docket별로 분리한다.",
+      "grain": "docketId × documentId/objectId × postedDate/lastModifiedDate",
+      "unit": "document count; dates; withdrawn boolean; comment count only where metadata supplied",
+      "join_keys": [
+        "docketId",
+        "documentId",
+        "objectId",
+        "agencyId",
+        "RIN from docket detail"
+      ],
+      "route_ids": [
+        "ROUTE-PI-02",
+        "ROUTE-PI-03"
+      ],
+      "measurement_result_as_recorded": "DOCS_CHECKED_KEY_NOT_READ_GET_NOT_ATTEMPTED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "API-PP-07",
+      "family_id": "API-FAMILY-PP-USASPENDING",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/metrics/6",
+      "purpose_ko": "어떤 정부기관이 어떤 수행자·분야에 자금 약정을 하고 있는지 후보를 만든다.",
+      "grain": "prime award generated_internal_id × award_type × snapshot",
+      "unit": "USD Award Amount/obligations; type-specific loan/subsidy fields separate",
+      "join_keys": [
+        "generated_internal_id",
+        "Award ID + awarding agency",
+        "Recipient UEI where available",
+        "place_of_performance region",
+        "NAICS/PSC for contracts",
+        "Assistance Listings for assistance"
+      ],
+      "route_ids": [
+        "ROUTE-PI-01",
+        "ROUTE-PI-03"
+      ],
+      "measurement_result_as_recorded": "LIVE_NO_KEY_READ_ONLY_POST_3_ROWS_RELEVANCE_NOT_VALIDATED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "API-PP-08",
+      "family_id": "API-FAMILY-PP-USASPENDING",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/metrics/7",
+      "purpose_ko": "기존 award 누적 요약을 분기 투자 흐름으로 오독하지 않고 해당 분기 약정 변화를 추적한다.",
+      "grain": "prime award × transaction/action_date × modification/transaction identity",
+      "unit": "USD signed Transaction Amount / federal_action_obligation",
+      "join_keys": [
+        "generated_internal_id",
+        "Action Date",
+        "Mod",
+        "transaction unique ID when available",
+        "award_type"
+      ],
+      "route_ids": [
+        "ROUTE-PI-01",
+        "ROUTE-PI-03"
+      ],
+      "measurement_result_as_recorded": "OFFICIAL_ACTION_DATE_CONTRACT_CHECKED_ENDPOINT_NOT_PROBED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "API-PP-09",
+      "family_id": "API-FAMILY-PP-USASPENDING",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/metrics/8",
+      "purpose_ko": "약정된 돈과 실제 집행·지급된 돈을 구분한다.",
+      "grain": "award × File C/TAS/reporting period × revision; detail scope to verify",
+      "unit": "USD outlays; cumulative vs reporting-period flow separated",
+      "join_keys": [
+        "generated_internal_id",
+        "TAS",
+        "reporting fiscal year/period",
+        "agency submission publish date",
+        "File C linkage"
+      ],
+      "route_ids": [
+        "ROUTE-PI-01",
+        "ROUTE-PI-03"
+      ],
+      "measurement_result_as_recorded": "TOTAL_OUTLAYS_FIELD_RETURNED_REPORTING_PERIOD_FLOW_NOT_COLLECTED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "API-PP-10",
+      "family_id": "API-FAMILY-PP-PJM",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/metrics/9",
+      "purpose_ko": "전력 공급/전달 후보가 대기·시공·in-service 중 어느 단계인지 검토한다.",
+      "grain": "queue/project ID × request type × status × snapshot",
+      "unit": "requested MW where published; milestone dates; status",
+      "join_keys": [
+        "queue/project ID",
+        "service request type",
+        "point of interconnection",
+        "transmission owner",
+        "project location",
+        "snapshot date"
+      ],
+      "route_ids": [
+        "ROUTE-PI-01",
+        "ROUTE-PI-02"
+      ],
+      "measurement_result_as_recorded": "PUBLIC_HTML_SCOPE_CHECKED_QUEUE_RECORD_EXPORT_NOT_PROBED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "API-PP-11",
+      "family_id": "API-FAMILY-PP-PJM",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/metrics/10",
+      "purpose_ko": "전력 수요 환경을 관측하되 계측·추정·잠정·예측을 구분한다.",
+      "grain": "PJM region/zone × hour × feed × revision",
+      "unit": "MW load; actual field/timezone/lag TO_VERIFY via authenticated response",
+      "join_keys": [
+        "zone/region",
+        "timestamp local/UTC",
+        "feed short name",
+        "revision/version if supplied"
+      ],
+      "route_ids": [
+        "ROUTE-PI-01",
+        "ROUTE-PI-02"
+      ],
+      "measurement_result_as_recorded": "DOCS_CHECKED_KEY_PROVISIONING_NOT_PERFORMED_DATA_PUBLICATION_DEFERRED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "API-PP-12",
+      "family_id": "API-FAMILY-PP-PJM",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/metrics/11",
+      "purpose_ko": "같은 권역·연도·정의를 가진 예상 부하와 실제 부하를 비교하는 학습 기준을 유지한다.",
+      "grain": "canonical Zone/EDC/LSE × Year × Metric × forecast vintage",
+      "unit": "MW Historical July Peak or Load Forecast July Peak",
+      "join_keys": [
+        "Zone/EDC/LSE",
+        "Year",
+        "original Metric",
+        "forecast vintage",
+        "hierarchy"
+      ],
+      "route_ids": [
+        "ROUTE-PI-01",
+        "ROUTE-PI-02"
+      ],
+      "measurement_result_as_recorded": "EXISTING_FILE_REVIEW_REFERENCED_NOT_REPROBED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "API-PP-13",
+      "family_id": "API-FAMILY-PP-SINGAPORE",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/metrics/12",
+      "purpose_ko": "Malaysia–Singapore 전력 협력 경로의 국가 공급 배경을 실제 월 발전량으로 보완한다.",
+      "grain": "Singapore × DataSeries × calendar month; source API is wide columns",
+      "unit": "GWh generation; string raw value parsed after schema validation",
+      "join_keys": [
+        "resource_id",
+        "DataSeries",
+        "month column YYYYMon",
+        "country Singapore",
+        "catalogue update date"
+      ],
+      "route_ids": [
+        "ROUTE-PI-04"
+      ],
+      "measurement_result_as_recorded": "LIVE_NO_KEY_1_WIDE_ROW_2_MONTHS_RETURNED",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "API-PP-14",
+      "family_id": "API-FAMILY-PP-SINGAPORE",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/metrics/13",
+      "purpose_ko": "국경간 전력 공급의 발표·협력·개별 조건부승인·PPA·financial close·운전 단계를 구분한다.",
+      "grain": "instrument/source ID × issuing body/parties × project × dated stage",
+      "unit": "MW stated conditional capacity; dates; stage; no actual import MWh observed",
+      "join_keys": [
+        "issuer/regulator",
+        "instrument type",
+        "named corporate parties",
+        "project/site/connection",
+        "publication/event date",
+        "source locator"
+      ],
+      "route_ids": [
+        "ROUTE-PI-04"
+      ],
+      "measurement_result_as_recorded": "EXISTING_OFFICIAL_RECEIPTS_REUSED_NO_PROJECT_API_FOUND",
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "TWAPI01-MONTHLY-REVENUE",
+      "family_id": "twse-monthly-company-revenue",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/taiwan_company_activity.json",
+      "json_pointer": "/indicators/0",
+      "purpose_ko": "대만 메모리·파운드리·후공정 기업의 실제 신고 매출을 분기 공시 전에 월 단위로 비교할 수 있는가?",
+      "grain": "company × reporting month × table date × snapshot",
+      "unit": "raw monetary strings; only Winbond sample unit TWD thousand verified",
+      "join_keys": null,
+      "route_ids": [
+        "PROD-02-DDR-CPU",
+        "PROD-04-NAND-ESSD",
+        "PROD-06-FOUNDRY-NODES",
+        "PROD-07-EDA-IP-PACK-TEST"
+      ],
+      "measurement_result_as_recorded": null,
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "TWAPI02-PROVIDER-COMPARATIVES",
+      "family_id": "twse-monthly-company-revenue",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/taiwan_company_activity.json",
+      "json_pointer": "/indicators/1",
+      "purpose_ko": "제공자가 신고한 전월/전년동월/누적 비교 수치와 원 비교 금액을 함께 수집할 수 있는가?",
+      "grain": "company × same reporting month × provider comparative definition × vintage",
+      "unit": "provider percentage strings + raw monetary strings",
+      "join_keys": null,
+      "route_ids": [],
+      "measurement_result_as_recorded": null,
+      "predictive_signal_validated": false
+    },
+    {
+      "indicator_id": "TWAPI03-PERIOD-COVERAGE-FRESHNESS",
+      "family_id": "twse-monthly-company-revenue",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/taiwan_company_activity.json",
+      "json_pointer": "/indicators/2",
+      "purpose_ko": "같은 API에서 기업별 관측월·원 표작성일·자료 수정이 서로 맞는가?",
+      "grain": "company × reporting period × API snapshot",
+      "unit": "dates/periods and availability state",
+      "join_keys": null,
+      "route_ids": [],
+      "measurement_result_as_recorded": null,
+      "predictive_signal_validated": false
+    }
+  ],
+  "trade_industry_measurement_contracts": [
+    {
+      "contract_id": "TM-01-UN-COMTRADE",
+      "family_id": "TM-01-UN-COMTRADE",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/families/0/measurement_contract",
+      "purpose_ko": "메모리·장비·소재의 국가 간 이동과 조달 국가 집중을 관찰하고 제품별 실제 수요·생산 질문의 외부 검증 자료로 사용한다.",
+      "measurement_contract": {
+        "grain": "reporter × period × classification edition × cmdCode × flowCode × partnerCode × partner2Code × customsCode × motCode",
+        "units": [
+          "primaryValue/fobvalue/cifvalue: USD, 평가방식별 분리",
+          "netWgt/grossWgt: kg",
+          "qty/altQty: qtyUnitCode와 qtyUnitAbbr 보존; 개수로 일괄 환산 금지"
+        ],
+        "frequency": "monthly or annual; actual probe monthly 2025-01",
+        "publication_lag_days": null,
+        "publication_lag_note_ko": "신고국·기간별 제출 시점 차이. 고정 월간 지연을 검증하지 않았고 역사 1행은 현재 자료의 최신성을 증명하지 않는다.",
+        "revision_ko": "보고국 제출·수정·추계의 변화 가능. 조회시각과 원문 해시, isReported/isOriginalClassification 및 추계 플래그를 보존한다.",
+        "classification": {
+          "requested": "HS (automatic available edition)",
+          "observed_response_codes": [
+            "H6"
+          ],
+          "edition_label_crosswalk_verified": false,
+          "item": "854232",
+          "hs_to_memory_sku_mapping": "NOT_AVAILABLE_IN_REVIEWED_FIELDS",
+          "candidate_basket_vintage": "TO_VERIFY_PER_PRODUCT"
+        },
+        "reporter_partner_flow": {
+          "probe_reporter": "410 Korea",
+          "probe_partner": "0 World",
+          "probe_partner2": "0 World",
+          "probe_flow": "X export",
+          "import_query_template_flow": "M",
+          "directional_grain_warning_ko": "이번 World 합계 1행으로 상대국 집중도를 계산할 수 없음. 파트너별 행은 별도 수집해야 한다."
+        },
+        "collection_keys": [
+          "classificationCode",
+          "classificationSearchCode",
+          "reporterCode",
+          "partnerCode",
+          "partner2Code",
+          "period",
+          "cmdCode",
+          "flowCode",
+          "customsCode",
+          "motCode",
+          "qtyUnitCode",
+          "altQtyUnitCode",
+          "isQtyEstimated",
+          "isAltQtyEstimated",
+          "isNetWgtEstimated",
+          "isGrossWgtEstimated",
+          "isReported",
+          "isOriginalClassification",
+          "retrieved_at_utc"
+        ]
+      },
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-02-DDR-CPU",
+        "PROD-03-LPDDR-CPU",
+        "PROD-04-NAND-ESSD",
+        "PROD-05-HBM-ASIC",
+        "PROD-06-FOUNDRY-NODES",
+        "PROD-08-EQUIPMENT-MATERIALS"
+      ],
+      "is_distinct_numbered_indicator": false
+    },
+    {
+      "contract_id": "TM-02-EUROSTAT",
+      "family_id": "TM-02-EUROSTAT",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/families/1/measurement_contract",
+      "purpose_ko": "유럽의 전자부품 생산 활동을 관찰하고, 필요시 Comext 국경 이동과 Prodcom 제품별 판매 생산을 구분해 공급 기반을 확인한다.",
+      "measurement_contract": {
+        "grain": "STS: freq × indic_bt × nace_r2 × s_adj × unit × geo × time; Comext/Prodcom: selected DSD dimensions must be discovered first",
+        "units": [
+          "현재 시험 I21: Index 2021=100; PRD 생산량 지수",
+          "Comext: 단위·EUR 가치/수량/순중량은 선택한 DSD별 검증 필요",
+          "Prodcom: 판매 생산액·물량과 생산량을 혼용하지 않고 제품별 unit 확인"
+        ],
+        "frequency": "current STS monthly; Comext and Prodcom frequency dataset-specific",
+        "publication_lag_days": null,
+        "publication_lag_note_ko": "현재 독일 C261의 공식 첫 공개 지연을 검증하지 않음. API DB의 11:00/23:00 CET 갱신은 통계 관측 빈도나 생산지수 공개 지연이 아니다.",
+        "revision_ko": "최신 데이터베이스 중심이며 이전 버전 저장을 보장하지 않으므로 응답 snapshot/hash와 status 플래그를 보존. 계절조정·기준년 변경을 분리.",
+        "classification": {
+          "sts": "NACE Rev.2 C261",
+          "cn_edition": null,
+          "prodcom_list_edition": null,
+          "cn_prodcom_table_mapping_status": "TO_VERIFY"
+        },
+        "reporter_partner_flow": {
+          "current_sts_reporter": "DE Germany",
+          "current_sts_partner": null,
+          "current_sts_flow": null,
+          "candidate_comext": "reporter/partner/import/export required; not validated in this probe"
+        },
+        "collection_keys": [
+          "freq",
+          "indic_bt",
+          "nace_r2",
+          "s_adj",
+          "unit",
+          "geo",
+          "time",
+          "observation status",
+          "dataset ID and DSD version",
+          "CN/Prodcom product vintage if used",
+          "retrieved_at_utc"
+        ]
+      },
+      "route_ids": [
+        "PROD-02-DDR-CPU",
+        "PROD-06-FOUNDRY-NODES",
+        "PROD-07-EDA-IP-PACK-TEST",
+        "PROD-08-EQUIPMENT-MATERIALS",
+        "PROD-11-GAN-RF"
+      ],
+      "is_distinct_numbered_indicator": false
+    },
+    {
+      "contract_id": "TM-03-OECD-TIVA",
+      "family_id": "TM-03-OECD-TIVA",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/families/2/measurement_contract",
+      "purpose_ko": "전자·광학 산업 수출에 포함된 해외 부가가치 등 국가 간 산업 의존 구조를 지도 배경으로 사용한다.",
+      "measurement_contract": {
+        "grain": "MEASURE × REF_AREA × ACTIVITY × COUNTERPART_AREA × UNIT_MEASURE × FREQ × TIME_PERIOD",
+        "units": [
+          "PT_EXGR: gross exports percentage (unit multiplier preserved)"
+        ],
+        "frequency": "annual historical input-output/TiVA edition; bounded probe year 2020",
+        "publication_lag_days": null,
+        "publication_lag_note_ko": "에디션별 과거 투입산출 자료이며 현시점 월간 선행지표가 아님. 최신 관측 종료 연도·개정 간격을 이번 한 행에서 확정하지 않음.",
+        "revision_ko": "TiVA 입력 자료·추정·에디션 개정 가능. dataflow version 1.1과 DSD/codelist 응답 해시를 보존; 버전 생략시 최신 차원 변경 위험.",
+        "classification": {
+          "activity": "C26",
+          "activity_codelist": "CL_ACTIVITY_ISIC4 1.4",
+          "measure": "EXGR_FVA",
+          "unit": "PT_EXGR",
+          "hs_cn": null,
+          "c261_data_availability": "NOT_PROVEN_BY_CODELIST_MEMBERSHIP"
+        },
+        "reporter_partner_flow": {
+          "probe_ref_area": "KOR",
+          "probe_counterpart_area": "W World",
+          "probe_measure": "foreign value added in gross exports",
+          "customs_import_export_flow": null
+        },
+        "collection_keys": [
+          "dataflow agency, ID and version",
+          "MEASURE",
+          "REF_AREA",
+          "ACTIVITY",
+          "COUNTERPART_AREA",
+          "UNIT_MEASURE",
+          "FREQ",
+          "TIME_PERIOD",
+          "UNIT_MULT",
+          "observation flags if returned",
+          "retrieved_at_utc"
+        ]
+      },
+      "route_ids": [
+        "PROD-06-FOUNDRY-NODES",
+        "PROD-07-EDA-IP-PACK-TEST",
+        "PROD-08-EQUIPMENT-MATERIALS"
+      ],
+      "is_distinct_numbered_indicator": false
+    },
+    {
+      "contract_id": "TM-04-KOSIS",
+      "family_id": "TM-04-KOSIS",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/families/3/measurement_contract",
+      "purpose_ko": "한국 반도체 산업의 생산·출하·재고 지수를 나란히 관찰해 무역액 증가가 생산·재고 소진과 같은 방향인지 질문한다.",
+      "measurement_contract": {
+        "grain": "orgId × tblId × itmId × objL1…objL8 × prdSe × PRD_DE; exact table mapping not yet verified",
+        "units": [
+          "candidate production/shipment/inventory index; actual UNIT_ID/UNIT_NM and base year TO_VERIFY"
+        ],
+        "frequency": "monthly candidate; prdSe and actual table frequency TO_VERIFY",
+        "publication_lag_days": null,
+        "publication_lag_note_ko": "표별 작성기관의 최초 공개 일정 미확인. 응답 LST_CHN_DE는 최종 변경일이며 최초 공개일과 구분.",
+        "revision_ko": "지수 기준년·산업분류·잠정/확정·계절조정·통계 기호를 고정. LST_CHN_DE와 snapshot hash를 보존.",
+        "classification": {
+          "orgId": null,
+          "tblId": null,
+          "itmId": null,
+          "objL1": null,
+          "industrial_classification_vintage": null,
+          "mapping_status": "TO_VERIFY_EXACT_TABLE_AND_ITEM",
+          "hs_cn": null
+        },
+        "reporter_partner_flow": {
+          "reporter": "Korea domestic industry candidate",
+          "partner": null,
+          "flow": "production / shipment / inventory items must be separated"
+        },
+        "collection_keys": [
+          "ORG_ID",
+          "TBL_ID",
+          "ITM_ID",
+          "C1…C8",
+          "UNIT_ID",
+          "UNIT_NM",
+          "PRD_SE",
+          "PRD_DE",
+          "DT",
+          "LST_CHN_DE",
+          "symbol/seasonal adjustment/base year metadata",
+          "retrieved_at_utc"
+        ]
+      },
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-02-DDR-CPU",
+        "PROD-03-LPDDR-CPU",
+        "PROD-04-NAND-ESSD",
+        "PROD-05-HBM-ASIC",
+        "PROD-06-FOUNDRY-NODES"
+      ],
+      "is_distinct_numbered_indicator": false
+    },
+    {
+      "contract_id": "TM-05-KOREA-CUSTOMS",
+      "family_id": "TM-05-KOREA-CUSTOMS",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/families/4/measurement_contract",
+      "purpose_ko": "한국의 품목별 국가별 수출입을 월간으로 확인하고 메모리·장비·소재 조달/판매국 이동을 추적할 수 있는지를 검증한다.",
+      "measurement_contract": {
+        "grain": "year(YYYY.MM) × hsCd × statCd / Korea fixed reporter; requested period range and HS detail retained",
+        "units": [
+          "expDlr USD (FOB)",
+          "impDlr USD (CIF)",
+          "expWgt kg",
+          "impWgt kg",
+          "balPayments USD"
+        ],
+        "frequency": "monthly; dataset overview also says real-time but detailed economic data notes specify prior-month update on the 15th",
+        "publication_lag_days": null,
+        "publication_schedule_ko": "공식 상세 설명상 매월 15일 전월 자료 갱신. 신고 정정·취하로 과거 값 변경 가능. 10일/20일 속보 품목×국가 API로 확대하지 않음.",
+        "revision_ko": "수출입 신고 수정·취하를 반영해 변경 가능. 월/품목/국가를 고정한 재수집 snapshot과 통계 기준을 보존.",
+        "classification": {
+          "allowed_hs_digits": [
+            2,
+            4,
+            6,
+            10
+          ],
+          "hs_edition": null,
+          "hs10_memory_mapping": null,
+          "mapping_status": "TO_VERIFY_KOREAN_TARIFF_VINTAGE"
+        },
+        "reporter_partner_flow": {
+          "reporter": "Korea",
+          "partner_request": "cntyCd",
+          "partner_output": "statCd / statCdCntnKor1",
+          "flows": "import and export in distinct output fields",
+          "partner_origin_definition_verified": false
+        },
+        "collection_keys": [
+          "strtYymm",
+          "endYymm",
+          "cntyCd",
+          "hsSgn",
+          "year",
+          "hsCd",
+          "statKor",
+          "statCd",
+          "statCdCntnKor1",
+          "expDlr",
+          "impDlr",
+          "expWgt",
+          "impWgt",
+          "retrieved_at_utc",
+          "HS tariff vintage"
+        ]
+      },
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-02-DDR-CPU",
+        "PROD-03-LPDDR-CPU",
+        "PROD-04-NAND-ESSD",
+        "PROD-05-HBM-ASIC",
+        "PROD-08-EQUIPMENT-MATERIALS"
+      ],
+      "is_distinct_numbered_indicator": false
+    },
+    {
+      "contract_id": "TM-06-USGS-MATERIAL-FILES",
+      "family_id": "TM-06-USGS-MATERIAL-FILES",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/families/5/measurement_contract",
+      "purpose_ko": "갈륨과 희토류의 국가별 생산·매장·능력 구조를 공급 제약의 배경으로 보존하며 반도체용 정제·공급 단계가 어디에서 누락되는지 찾는다.",
+      "measurement_contract": {
+        "grain": "commodity × country × measurement type × reference year × release edition × estimate/withheld status",
+        "units": [
+          "2026 gallium PDF: kilograms, gallium content unless otherwise specified; low-purity primary production/capacity separately",
+          "2026 rare-earths PDF: metric tons, REO equivalent unless otherwise specified; mine production/reserves separately"
+        ],
+        "frequency": "annual MCS; 2026 edition mainly covers 2025 estimates; not monthly",
+        "publication_lag_days": null,
+        "publication_lag_note_ko": "MCS 에디션과 측정 연도 구분. 최초 게시일·시각을 파일 수신일이나 HTTP Date로 대신하지 않음. Minerals Yearbook 게시 중단 안내를 현행 갱신 제약으로 기록.",
+        "revision_ko": "추정치 e, 비공개/알 수 없음 기호와 후속 에디션 개정을 보존. 광산·저순도·정제·회수·순도별 범위와 문서 표 번호를 분리.",
+        "classification": {
+          "hs_cn": null,
+          "gallium_material_form": "low-purity primary / high-purity refined / recovered are not interchangeable",
+          "rare_earth_basis": "REO equivalent, not separated-element metal or magnet grade"
+        },
+        "reporter_partner_flow": {
+          "reporter": "country rows; US salient/import reliance are separate measurements",
+          "partner": "country tables and US import sources if extracted separately",
+          "trade_direction": "not a harmonized HS trade table"
+        },
+        "collection_keys": [
+          "commodity",
+          "edition_year",
+          "measurement_year",
+          "country",
+          "table/section",
+          "material form/purity",
+          "unit",
+          "estimate/withheld symbol",
+          "retrieved_at_utc",
+          "file sha256"
+        ]
+      },
+      "route_ids": [
+        "PROD-08-EQUIPMENT-MATERIALS",
+        "PROD-09-GAN-SIC-POWER",
+        "PROD-11-GAN-RF"
+      ],
+      "is_distinct_numbered_indicator": false
+    }
+  ],
+  "bounded_access_results": [
+    {
+      "probe_id": "probe-hf-models",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "json_pointer": "/probes/0",
+      "acquisition_mode": "DATA_API",
+      "result": "NON_EMPTY_API_DATA",
+      "status_as_recorded": "VALID_DATA_OBSERVED",
+      "http_status": 200,
+      "returned_count_as_recorded": 2,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://huggingface.co/api/models?pipeline_tag=text-generation&sort=downloads&direction=-1&limit=2&full=true",
+      "retrieved_at_utc": "2026-10-04T17:08:32.953706Z",
+      "raw_response_hash": "96db5465cdf209cdb02c08e616c898a8ef903cdd8a8d8eac590aae97ee03701a",
+      "hash_representation_as_recorded": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "probe-github-releases",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "json_pointer": "/probes/1",
+      "acquisition_mode": "DATA_API",
+      "result": "NON_EMPTY_API_DATA",
+      "status_as_recorded": "VALID_DATA_OBSERVED",
+      "http_status": 200,
+      "returned_count_as_recorded": 1,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://api.github.com/repos/vllm-project/vllm/releases?per_page=1&page=1",
+      "retrieved_at_utc": "2026-10-04T17:08:32.957546Z",
+      "raw_response_hash": "fed9e4bb85d8b29af51001bc6dcc33b7d607f25f795f131e45e6f4edff3dceb7",
+      "hash_representation_as_recorded": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "probe-github-repo",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "json_pointer": "/probes/2",
+      "acquisition_mode": "DATA_API",
+      "result": "NON_EMPTY_API_DATA",
+      "status_as_recorded": "VALID_DATA_OBSERVED",
+      "http_status": 200,
+      "returned_count_as_recorded": null,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://api.github.com/repos/vllm-project/vllm",
+      "retrieved_at_utc": "2026-10-04T17:08:32.961950Z",
+      "raw_response_hash": "58f4a01b57c9dfeacbd4a1fa546e0a2016ae0c68f49c706ccdeb122247afae47",
+      "hash_representation_as_recorded": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "probe-openrouter-no-key",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "json_pointer": "/probes/3",
+      "acquisition_mode": "DATA_API",
+      "result": "FAILED_NO_DATA",
+      "status_as_recorded": "AUTH_REQUIRED_NO_DATA",
+      "http_status": 401,
+      "returned_count_as_recorded": null,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2026-10-03&end_date=2026-10-03",
+      "retrieved_at_utc": "2026-10-04T17:08:32.965554Z",
+      "raw_response_hash": "36c1407c049a212826f183eabdf3eae02172f79f80806f9afed93f5eeb68c49c",
+      "hash_representation_as_recorded": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "sec-capex",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/probes/0",
+      "acquisition_mode": "DATA_API",
+      "result": "FAILED_NO_DATA",
+      "status_as_recorded": "HTTP_FAILED_NO_DATA",
+      "http_status": 403,
+      "returned_count_as_recorded": null,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000789019/us-gaap/PaymentsToAcquirePropertyPlantAndEquipment.json",
+      "retrieved_at_utc": "2026-10-04T17:13:31.987505+00:00",
+      "raw_response_hash": "88e18d6c806c803c95524c314cc1bad775685e9307f1ac940ffa7fa8303f6fb2",
+      "hash_representation_as_recorded": "SHA256_CAPTURED_ERROR_BODY_PREFIX_MAX_8192_NOT_ASSERTED_FULL_RESPONSE",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "sec-submissions",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/probes/1",
+      "acquisition_mode": "DATA_API",
+      "result": "FAILED_NO_DATA",
+      "status_as_recorded": "HTTP_FAILED_NO_DATA",
+      "http_status": 403,
+      "returned_count_as_recorded": null,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://data.sec.gov/submissions/CIK0000789019.json",
+      "retrieved_at_utc": "2026-10-04T17:13:33.695677+00:00",
+      "raw_response_hash": "76e7934f0ba326ee30a3a082cb286ec7433d21b2b8eec40e5194b335d8ba8944",
+      "hash_representation_as_recorded": "SHA256_CAPTURED_ERROR_BODY_PREFIX_MAX_8192_NOT_ASSERTED_FULL_RESPONSE",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "fred-IPG3344S",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/probes/2",
+      "acquisition_mode": "STATIC_DATA_FILE",
+      "result": "FAILED_NO_DATA",
+      "status_as_recorded": "REQUEST_OR_PARSE_FAILED_NO_DATA",
+      "http_status": null,
+      "returned_count_as_recorded": null,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=IPG3344S&cosd=2025-01-01&coed=2026-09-01",
+      "retrieved_at_utc": "2026-10-04T17:13:33.924789+00:00",
+      "raw_response_hash": null,
+      "hash_representation_as_recorded": null,
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "fred-CAPUTLG3344S",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/probes/3",
+      "acquisition_mode": "STATIC_DATA_FILE",
+      "result": "FAILED_NO_DATA",
+      "status_as_recorded": "REQUEST_OR_PARSE_FAILED_NO_DATA",
+      "http_status": null,
+      "returned_count_as_recorded": null,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CAPUTLG3344S&cosd=2025-01-01&coed=2026-09-01",
+      "retrieved_at_utc": "2026-10-04T17:13:59.058247+00:00",
+      "raw_response_hash": null,
+      "hash_representation_as_recorded": null,
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "fred-A35SUO",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/probes/4",
+      "acquisition_mode": "STATIC_DATA_FILE",
+      "result": "FAILED_NO_DATA",
+      "status_as_recorded": "REQUEST_OR_PARSE_FAILED_NO_DATA",
+      "http_status": null,
+      "returned_count_as_recorded": null,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=A35SUO&cosd=2025-01-01&coed=2026-09-01",
+      "retrieved_at_utc": "2026-10-04T17:14:20.828652+00:00",
+      "raw_response_hash": null,
+      "hash_representation_as_recorded": null,
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "ishares-bai",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/probes/5",
+      "acquisition_mode": "STATIC_DATA_FILE",
+      "result": "NON_EMPTY_FILE_DATA",
+      "status_as_recorded": "FILE_DATA_RETURNED",
+      "http_status": 200,
+      "returned_count_as_recorded": 50,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://www.ishares.com/us/products/339081/ishares-a-i-innovation-and-tech-active-etf/latest-holdings.csv",
+      "retrieved_at_utc": "2026-10-04T17:14:40.163917+00:00",
+      "raw_response_hash": "341a7bb0fdfec2d75e015922968728cdd9b988a27e05bb504bc9c71e83dee69a",
+      "hash_representation_as_recorded": "SHA256_ORIGINAL_HTTP_RESPONSE_BODY",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "ecos-items",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/probes/6",
+      "acquisition_mode": "API_METADATA",
+      "result": "METADATA_RETURNED_NOT_OBSERVATION",
+      "status_as_recorded": "API_METADATA_RETURNED",
+      "http_status": 200,
+      "returned_count_as_recorded": 10,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://ecos.bok.or.kr/api/StatisticItemList/sample/json/kr/1/10/731Y001",
+      "retrieved_at_utc": "2026-10-04T17:14:40.509204+00:00",
+      "raw_response_hash": "e8b46adb38d8c3e30d47f8fe66f5ec4b7232971b13cd462828b480a9b00c470d",
+      "hash_representation_as_recorded": "SHA256_ORIGINAL_HTTP_RESPONSE_BODY",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "ecos-fx-sample",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "json_pointer": "/probes/7",
+      "acquisition_mode": "DATA_API",
+      "result": "NON_EMPTY_API_DATA",
+      "status_as_recorded": "API_DATA_RETURNED",
+      "http_status": 200,
+      "returned_count_as_recorded": 3,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/3/731Y001/D/20260928/20260930/0000001",
+      "retrieved_at_utc": "2026-10-04T17:21:24.468316+00:00",
+      "raw_response_hash": "49d78293971c8a23191eeb563788718044f3542801d8e3d2fc042c85c5b25a42",
+      "hash_representation_as_recorded": "SHA256_ORIGINAL_HTTP_RESPONSE_BODY",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "PROBE-PP-FR-RULE-SEARCH",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/probes/0",
+      "acquisition_mode": "DATA_API",
+      "result": "NON_EMPTY_API_DATA",
+      "status_as_recorded": "DATA_RETURNED",
+      "http_status": 200,
+      "returned_count_as_recorded": 3,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=large+load&conditions%5Bpublication_date%5D%5Bgte%5D=2026-01-01&conditions%5Bpublication_date%5D%5Blte%5D=2026-10-05&per_page=3&order=newest",
+      "retrieved_at_utc": "2026-10-04T17:14:00.980985+00:00",
+      "raw_response_hash": "03434d96e31f300d89c2d8172c527e9552a1fa43ce634d4199fb70d2afbe7807",
+      "hash_representation_as_recorded": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "PROBE-PP-USASPENDING-AWARDS",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/probes/1",
+      "acquisition_mode": "DATA_API",
+      "result": "NON_EMPTY_API_DATA",
+      "status_as_recorded": "DATA_RETURNED",
+      "http_status": 200,
+      "returned_count_as_recorded": 3,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "retrieved_at_utc": "2026-10-04T17:14:01.865933+00:00",
+      "raw_response_hash": "12b86af803480948cacd932fbb02777e356667d4317844e8c55caa08c85e6708",
+      "hash_representation_as_recorded": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "PROBE-PP-SG-GENERATION",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "json_pointer": "/probes/2",
+      "acquisition_mode": "DATA_API",
+      "result": "NON_EMPTY_API_DATA",
+      "status_as_recorded": "DATA_RETURNED",
+      "http_status": 200,
+      "returned_count_as_recorded": 1,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_ae4afbaf5bc96bde19d8ce85810ab9f4&limit=1&fields=DataSeries%2C2026May%2C2026Apr",
+      "retrieved_at_utc": "2026-10-04T17:14:04.408458+00:00",
+      "raw_response_hash": "d732228606fac9cc67512f4a8f5fb81308276be7a4f5400037fc8e42dce9d7f9",
+      "hash_representation_as_recorded": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "probe-twse-monthly",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/taiwan_company_activity.json",
+      "json_pointer": "/probes/0",
+      "acquisition_mode": "DATA_API",
+      "result": "NON_EMPTY_API_DATA",
+      "status_as_recorded": "VALID_DATA_OBSERVED",
+      "http_status": 200,
+      "returned_count_as_recorded": 1086,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+      "retrieved_at_utc": "2026-10-04T17:25:37.107939Z",
+      "raw_response_hash": "83480ff80b337e936821b45e2cef1c2a48ba92f112fb3e31027501810e8bccf5",
+      "hash_representation_as_recorded": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "PROBE-TM-COMTRADE",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/probe_receipts/14",
+      "acquisition_mode": "DATA_API",
+      "result": "NON_EMPTY_API_DATA",
+      "status_as_recorded": "DATA_RESPONSE_NONEMPTY_MATCHED",
+      "http_status": 200,
+      "returned_count_as_recorded": 1,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://comtradeapi.un.org/public/v1/preview/C/M/HS?period=202501&reporterCode=410&cmdCode=854232&flowCode=X&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&maxRecords=1",
+      "retrieved_at_utc": "2026-10-04T17:10:27.973279+00:00",
+      "raw_response_hash": "2b66a5b34e2274f44b669eb90de382ff2bf531ef82a37e407c1fee1525867e3b",
+      "hash_representation_as_recorded": "RAW_HTTP_RESPONSE_BODY",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "PROBE-TM-EUROSTAT",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/probe_receipts/15",
+      "acquisition_mode": "DATA_API",
+      "result": "NON_EMPTY_API_DATA",
+      "status_as_recorded": "DATA_RESPONSE_NONEMPTY",
+      "http_status": 200,
+      "returned_count_as_recorded": 1,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sts_inpr_m?lang=en&freq=M&unit=I21&nace_r2=C261&s_adj=SCA&geo=DE&time=2025-01",
+      "retrieved_at_utc": "2026-10-04T17:10:28.751141+00:00",
+      "raw_response_hash": "49a1e3ee556b5c8f74226e05a6e0919a8db24913ad6c20f7642303fe7e1f8a1f",
+      "hash_representation_as_recorded": "RAW_HTTP_RESPONSE_BODY",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "PROBE-TM-OECD",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/probe_receipts/16",
+      "acquisition_mode": "DATA_API",
+      "result": "FAILED_NO_DATA",
+      "status_as_recorded": "HTTP_ERROR",
+      "http_status": 404,
+      "returned_count_as_recorded": null,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://sdmx.oecd.org/sti-public/rest/data/OECD.STI.PIE,DSD_TIVA_MAINSH@DF_MAINSH,1.1/EXGR_FVASH.KOR.D26.W..A?startPeriod=2020&endPeriod=2020&dimensionAtObservation=AllDimensions&format=csvfilewithlabels",
+      "retrieved_at_utc": "2026-10-04T17:10:29.682366+00:00",
+      "raw_response_hash": "23714ac852cb0afe23052aac153af6c68819c67559d3163f4f7a44511144031e",
+      "hash_representation_as_recorded": "RAW_HTTP_ERROR_BODY",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "PROBE-TM-USGS-FILE",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/probe_receipts/17",
+      "acquisition_mode": "STATIC_DOCUMENT_FILE",
+      "result": "DOCUMENT_FILE_RECEIVED_NOT_API_DATA",
+      "status_as_recorded": "FILE_DOCUMENT_SUCCESS_NOT_API",
+      "http_status": 200,
+      "returned_count_as_recorded": null,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-gallium.pdf",
+      "retrieved_at_utc": "2026-10-04T17:10:30.143310+00:00",
+      "raw_response_hash": "15df2a3ef3ed992b8bb9e1785809a83219864286626b289c207ca5fda84ca27c",
+      "hash_representation_as_recorded": "RAW_HTTP_RESPONSE_BODY",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "PROBE-TM-OECD-STRUCTURE",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/probe_receipts/21",
+      "acquisition_mode": "API_METADATA",
+      "result": "METADATA_RETURNED_NOT_OBSERVATION",
+      "status_as_recorded": "METADATA_STRUCTURE_PARSED_NOT_DATA",
+      "http_status": 200,
+      "returned_count_as_recorded": null,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://sdmx.oecd.org/sti-public/rest/dataflow/OECD.STI.PIE/DSD_TIVA_MAINSH@DF_MAINSH/1.1?references=all",
+      "retrieved_at_utc": "2026-10-04T17:14:58.293347+00:00",
+      "raw_response_hash": "09290d577d98303d073883a83dea30f3f8973588a86e5e6ce55992ea40b96f87",
+      "hash_representation_as_recorded": "RAW_HTTP_RESPONSE_BODY",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "PROBE-TM-OECD-CORRECTED",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/probe_receipts/22",
+      "acquisition_mode": "DATA_API",
+      "result": "NON_EMPTY_API_DATA",
+      "status_as_recorded": "DATA_RESPONSE_NONEMPTY",
+      "http_status": 200,
+      "returned_count_as_recorded": 1,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://sdmx.oecd.org/sti-public/rest/data/OECD.STI.PIE,DSD_TIVA_MAINSH@DF_MAINSH,1.1/EXGR_FVA.KOR.C26.W.PT_EXGR.A?startPeriod=2020&endPeriod=2020&dimensionAtObservation=AllDimensions&format=csvfilewithlabels",
+      "retrieved_at_utc": "2026-10-04T17:19:05.329631+00:00",
+      "raw_response_hash": "0d60be4c92c4c777822a37db8758d300fb805825bdaad72f6b6f1fc874172c02",
+      "hash_representation_as_recorded": "RAW_HTTP_RESPONSE_BODY",
+      "all_history_or_all_pages_collected": false
+    },
+    {
+      "probe_id": "PROBE-TM-USGS-REE-FILE",
+      "packet_path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "json_pointer": "/probe_receipts/24",
+      "acquisition_mode": "STATIC_DOCUMENT_FILE",
+      "result": "DOCUMENT_FILE_RECEIVED_NOT_API_DATA",
+      "status_as_recorded": "FILE_DOCUMENT_SUCCESS_NOT_API",
+      "http_status": 200,
+      "returned_count_as_recorded": null,
+      "count_semantics_ko": "원 receipt의 반환 레코드/관측 수. GitHub repo는 예상 필드가 있는 단일 객체로 검증하며 list count는 null. SG wide 행과 월 수, TWSE 전체 행과 선택 회사 수, metadata와 관측을 합치지 않음.",
+      "requested_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+      "retrieved_at_utc": "2026-10-04T17:19:09.700862+00:00",
+      "raw_response_hash": "0116a192336fec41c38d8e11dad553bb7703308c1fbd1f97dc14b75c7e7d9900",
+      "hash_representation_as_recorded": "RAW_HTTP_RESPONSE_BODY",
+      "all_history_or_all_pages_collected": false
+    }
+  ],
+  "collection_priority_ko": [
+    "Comtrade·Eurostat·TWSE: 공급 이동·산업 실행·월별 기업 실현 관측 정의를 고정",
+    "FR·HF·GitHub: 규칙/기술 사건 탐색; 도입·실제 주문은 별도 확인",
+    "USAspending: award 적합성·동일 프로젝트·transaction/보고기간 확인 후 돈흐름 분석",
+    "DART/FRED 기존 인증 연결, 한국 KOSIS/관세청, EIA는 exact dataset/권한을 확인한 제한 인증 시험",
+    "OpenRouter 비용/권한 미확정·PJM 재배포 제한·기명 시설/고객 관측 공백 보존"
+  ],
+  "join_contract_ko": [
+    "provider/dataset/version/entity-or-area/classification/period/unit/adjustment/release-vintage를 공통 관측 키로 저장",
+    "DART corp_code·SEC CIK·TWSE company_code crosswalk는 같은 법인·유효기간 확인",
+    "국가 품목·산업·TiVA 구조와 제품 경로는 구조 매핑이며 SKU·고객별 주문 join이 아님",
+    "기명 자금/전력/설치에는 같은 contract/award/project/site/customer/period와 원문이 필요",
+    "API data 접근 성공·무료 호출·quota·전체 역사·재배포는 각각 다른 상태"
+  ],
+  "source_packet_next_action_rule_ko": "각 packet의 provider별 다음 조치는 지역·인증·추가 정의 후보이며 현재 전체 후속 작업은 exactly_one_next_task만 따른다.",
+  "exactly_one_next_task": {
+    "task_id": "NEXT-API-MONTHLY-BOUNDED-PILOT",
+    "task_ko": "Comtrade 한국 HS854232 수출과 Eurostat 독일 C261 생산지수의 분류 판·단위·기준년·계절조정을 고정한 2025 월별 소량 API 관측 파일럿",
+    "family_ids": [
+      "TM-01-UN-COMTRADE",
+      "TM-02-EUROSTAT"
+    ],
+    "bounds_ko": [
+      "Comtrade 반환 H6의 판 대응과 Eurostat indic_bt=PRD·I21·SCA를 고정; 값·flag·단위·기간·공표/개정 시점을 먼저 확인",
+      "같은 월 범위의 서로 다른 국가·측정이며 하나의 거래·인과나 하이닉스 생산량으로 합치지 않음",
+      "사용자 보류한 DDR5 카드는 재개하지 않음; 카드·H1·선행성 계산을 이 작업에 포함하지 않음"
+    ],
+    "implemented": false
+  },
+  "documentation_paths": [
+    "docs/research/supply_chain/api_signal_feasibility.md",
+    "docs/research/supply_chain/research_convergence_review.md"
+  ]
+}
