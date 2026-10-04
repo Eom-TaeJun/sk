@@ -1,0 +1,341 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-10-04",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "purpose": "AI 기술·병목·메모리 요구를 기명 플랫폼의 독립 채택 단계와 연결해 직무 질문을 좁힌다. 고객 주문·수요 물량·성능 효과를 입증하는 표가 아니다.",
+  "human_evidence_approved": false,
+  "h1_admitted": false,
+  "new_sources": [
+    {
+      "source_id": "SRC-AITECH-HBF-FMS26",
+      "requested_url": "https://news.skhynix.com/en/hbf-at-fms-2026/",
+      "retrieved_url": "https://news.skhynix.com/en/hbf-at-fms-2026/",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-04T14:18:42.250921+00:00",
+      "sha256": "79ddc495c14dae93d152d4e07df466a93aef403ffb1a47e237f97c11c9a06e27",
+      "size_bytes": 150849,
+      "capture_representation": "ORIGINAL_HTTP_RESPONSE_BODY_BYTES",
+      "publication_date_displayed": "2026-08-04",
+      "event_date_in_dateline": "2026-08-04",
+      "credentials_used": null,
+      "access_outcome": "PUBLIC_HTTP_SUCCESS",
+      "failed_attempts": [],
+      "title": "SK hynix Unveils First HBF Standard Specifications with Sandisk, Presenting AI Memory Solutions at FMS 2026",
+      "source_role": "ISSUER_PUBLISHED_STANDARD_RELEASE_CLAIM",
+      "publication_date_precision": "DAY",
+      "known_at": "2026-08-04",
+      "known_at_precision": "DAY_PUBLICATION_TIME_UNVERIFIED",
+      "excerpts": [
+        {
+          "excerpt_id": "HBF-E01",
+          "text": "new memory layer between HBM and SSDs.",
+          "locator": "Body paragraph beginning HBF technology is; after FMS date paragraph"
+        },
+        {
+          "excerpt_id": "HBF-E02",
+          "text": "first standard specifications for High Bandwidth Flash (HBF)",
+          "locator": "Opening Seoul, August 4, 2026 dateline paragraph"
+        },
+        {
+          "excerpt_id": "HBF-E03",
+          "text": "disclosed through the Open Compute Project (OCP)",
+          "locator": "Body paragraph beginning The specification was disclosed"
+        }
+      ],
+      "quote_word_count": 22,
+      "raw_original_redistributed": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "limitations": [
+        "The issuer says the specification was disclosed through OCP; the original OCP specification and conformance process were not independently inspected.",
+        "Specifications and ecosystem participation are not a qualified customer order or mass-shipment observation.",
+        "The separate 375-layer NAND/eSSD future mass-production plan in this article is not an HBF shipment schedule."
+      ]
+    }
+  ],
+  "reused_source_ids": [
+    "SRC-HY26-INTEL",
+    "SRC-HY26-DELL",
+    "SRC-HY26-VAST",
+    "SRC-HY26-SSD-WORKLOAD"
+  ],
+  "reused_source_receipt_path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+  "related_existing_hbm_card": {
+    "path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/card.json",
+    "source_receipt_path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+    "role": "기존 GPU 메모리 사례 참고; 이 파일에서 재인용·수치 복제·인증 단계 합치기 없음"
+  },
+  "examples": [
+    {
+      "example_id": "ADOPT-DDR5-INTEL-XEON6",
+      "product_family": "SERVER_DDR5_DRAM_MODULE",
+      "named_product_platform": "SK hynix 32Gb 1b die-based 256GB DDR5 RDIMM / Intel Xeon 6",
+      "technical_use": "CPU 서버의 고용량 시스템 메모리. GPU HBM과 별도 상품·플랫폼이다.",
+      "bottleneck_requirement": {
+        "issuer_framing": "AI 추론의 실시간 데이터 처리에 용량·성능·전력 효율과 CPU 플랫폼 호환성이 필요하다고 설명한다.",
+        "specifications": [
+          "32Gb는 DRAM die 용량, 256GB는 모듈 용량으로 별도 단위",
+          "Intel Xeon 6와의 검증 범위; 서버 전체 메모리 구성은 미확인"
+        ],
+        "customer_specific_bottleneck_measured": false
+      },
+      "actor_roles": {
+        "seller_developer": "SK hynix",
+        "platform_specification_and_validation": "Intel / Advanced Data Center Development Laboratory",
+        "oem_system_specification_decider": null,
+        "legal_buyer_payer": null,
+        "named_end_user": null
+      },
+      "stage_events": [
+        {
+          "stage": "ISSUER_REPORTED_PLATFORM_COMPATIBILITY_CERTIFICATION_COMPLETED",
+          "publication_date": "2025-12-17",
+          "event_dateline_date": "2025-12-18",
+          "source_id": "SRC-HY26-INTEL",
+          "scope": "32Gb 1b 기반 256GB DDR5 RDIMM에 대한 Intel Data Center Certified 절차 완료라는 공급사 발표",
+          "not_implied": "Intel 구매·특정 OEM 채택·발주·고객 납품"
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-HY26-INTEL",
+          "source_receipt_path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+          "locator": "Opening dateline paragraph and paragraph naming Intel Advanced Data Center Development Laboratory; issuer workload/value framing paragraphs",
+          "receipt_reused_without_requoting": true
+        }
+      ],
+      "sku_and_order_gaps": {
+        "exact_part_number": null,
+        "same_sku_as_dell_r770_example": null,
+        "named_purchase_order": null,
+        "quantity_price_delivery_date": null
+      },
+      "supply_conditions_to_check": [
+        "OEM의 실제 BOM·지원 목록, DIMM 구성·속도·펌웨어와 시스템별 추가 인증",
+        "기명 고객의 발주 조건·납기·생산/품질 준비; CPU 플랫폼 인증만으로 확보됐다고 보지 않음"
+      ],
+      "commercial_learning_question": "인증된 용량·공정·플랫폼을 바탕으로 어떤 OEM 구성과 고객 업무에 제안할지, OEM 인증과 발주 단계에서 무엇이 더 필요한가?",
+      "question_kind": "OUR_LEARNING_QUESTION_NOT_BUSINESS_RECOMMENDATION",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "leadingness_validated": false
+    },
+    {
+      "example_id": "ADOPT-DDR5-ESSD-DELL-R770",
+      "product_family": "SERVER_DDR5_MODULE_AND_NVME_ESSD_RECORDED_SEPARATELY",
+      "named_product_platform": "Dell R770 / SK hynix 6400MT/s DDR5 RDIMM / PS1010 E3.S",
+      "technical_use": "한 서버 안의 시스템 DRAM과 비휘발성 저장장치가 함께 전시된 사례. 두 상품의 용도·규격을 따로 기록한다.",
+      "bottleneck_requirement": {
+        "issuer_framing": "실제 Dell 서버에 설치된 제품을 전시하여 시스템 통합을 설명한다.",
+        "specifications": [
+          "6400MT/s는 DDR5 모듈의 전송률 표시; 용량·part number는 이 문단에 없음",
+          "PS1010 E3.S는 전시된 저장 제품 표기; Intel 인증 모듈과 동일 SKU인지 미확인"
+        ],
+        "customer_specific_bottleneck_measured": false
+      },
+      "actor_roles": {
+        "seller_developer": "SK hynix",
+        "system_oem_integrator": "Dell Technologies",
+        "system_specification_decider": "Dell이라는 OEM 역할에 근거한 조사 대상; 실제 결정 조직 미확인",
+        "certification_authority_and_scope": null,
+        "legal_buyer_payer": null,
+        "named_end_user": null
+      },
+      "stage_events": [
+        {
+          "stage": "ISSUER_REPORTED_CERTIFIED_PRODUCTS_INSTALLED_IN_EXHIBITION_SYSTEM",
+          "publication_date": "2026-08-26",
+          "event_date": "2026-08-25",
+          "source_id": "SRC-HY26-DELL",
+          "scope": "DTF Seoul AI Reality 구역의 Dell R770 설치 제품 전시",
+          "not_implied": "Intel 256GB 인증 SKU와의 동일성·전 고객 상업 출하·기명 주문·수량"
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-HY26-DELL",
+          "source_receipt_path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+          "locator": "Opening paragraph: August 25 DTF Seoul; AI Reality paragraph after Dell executives caption, naming R770 installed certified products",
+          "receipt_reused_without_requoting": true
+        }
+      ],
+      "sku_and_order_gaps": {
+        "ddr5_exact_capacity_part_number": null,
+        "same_sku_as_intel_certification_example": null,
+        "certification_body_document": null,
+        "named_purchase_order": null,
+        "quantity_price_delivery_date": null
+      },
+      "supply_conditions_to_check": [
+        "Dell 공식 지원 목록·BOM에서 인증 범위와 모듈 part number·구성 확인",
+        "전시 구성과 판매 가능한 SKU·고객 구매 구성, 두 상품의 공급 법인·납기 구분"
+      ],
+      "commercial_learning_question": "Dell 서버의 어떤 업무·구성에서 DRAM 용량/속도와 eSSD 성능/내구성이 각각 구매 조건이 되는가? 전시에서 실제 고객 채택으로 가려면 어떤 근거가 더 필요한가?",
+      "question_kind": "OUR_LEARNING_QUESTION_NOT_BUSINESS_RECOMMENDATION",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "leadingness_validated": false
+    },
+    {
+      "example_id": "ADOPT-ESSD-SOLIDIGM-VAST",
+      "product_family": "HIGH_DENSITY_DATACENTER_SSD",
+      "named_product_platform": "Solidigm high-density SSDs / VAST Data storage technology; exact SSD SKU not specified in reviewed testimonial body",
+      "technical_use": "AI 데이터의 접근 속도·저장 용량과 데이터센터 전력/공간 조건을 연결하는 기명 저장 시스템 활용 사례.",
+      "bottleneck_requirement": {
+        "issuer_customer_framing": "VAST 발언을 인용한 공급사 사례는 느린 데이터 접근으로 GPU가 기다리는 문제와 전력 제약 아래 저장 용량을 맞추는 문제를 제시한다.",
+        "conditions_to_measure": [
+          "워크로드별 읽기/쓰기 패턴·성능/QoS·용량·내구성·전력·TCO 비교 조건",
+          "VAST 구체 시스템의 SSD SKU·구성 및 실제 고객의 측정 결과"
+        ],
+        "customer_specific_bottleneck_measured_by_this_work": false
+      },
+      "actor_roles": {
+        "ssd_supplier": "Solidigm",
+        "named_system_technology_partner_and_testimonial_actor": "VAST Data",
+        "specification_decider": "VAST 시스템 역할에 근거한 조사 대상; 고객별 결정 조직 미확인",
+        "certification_authority": null,
+        "legal_buyer_payer": null,
+        "ultimate_operator_end_user": null
+      },
+      "stage_events": [
+        {
+          "stage": "ISSUER_HOSTED_NAMED_CUSTOMER_TESTIMONIAL_AND_USAGE_CLAIM",
+          "publication_date": "2026-02-03",
+          "event_date": null,
+          "source_id": "SRC-HY26-VAST",
+          "scope": "VAST가 Solidigm 고밀도 SSD를 활용한다는 기명 사례와 가치 주장",
+          "not_implied": "특정 SKU PO·고객별 공급량·발주/납품 날짜·일반화 가능한 비용 절감 결과"
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-HY26-VAST",
+          "source_receipt_path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+          "locator": "Main article opening, power/GPU idle-time discussion and VAST representative video transcript; navigation product names excluded",
+          "receipt_reused_without_requoting": true
+        },
+        {
+          "source_id": "SRC-HY26-SSD-WORKLOAD",
+          "source_receipt_path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+          "locator": "Results and Analysis: Inference v4.1 disk configurations; conclusion and engineering-sample/test-system limitations",
+          "receipt_reused_without_requoting": true
+        }
+      ],
+      "workload_countercheck": "기존 Solidigm 시험에서는 메모리에 사전 적재된 추론의 디스크 추가 효과가 작고 저장 민감 학습에서는 효과가 달랐다. 해당 시험은 특정 시스템·구성과 engineering samples에 대한 잠정 결과다. 이를 VAST 고객 측정값으로 쓰거나 모든 AI에 SSD가 병목이라고 일반화하지 않는다.",
+      "sku_and_order_gaps": {
+        "exact_ssd_sku": null,
+        "specific_customer_workload_configuration": null,
+        "named_purchase_order": null,
+        "quantity_price_delivery_date": null
+      },
+      "supply_conditions_to_check": [
+        "펌웨어·시스템 지원·성능/내구성 인증과 제품 수명·출하 준비",
+        "고객 데이터 접근 패턴 및 전력/공간 조건이 실제 SSD 선택·대수에 연결되는지 별도 확인"
+      ],
+      "commercial_learning_question": "어떤 업무에서 고밀도 SSD의 용량·전력·지속 성능이 구매 가치이며, GPU/메모리/네트워크가 먼저 병목인 경우에는 어떤 제안이 달라지는가?",
+      "question_kind": "OUR_LEARNING_QUESTION_NOT_BUSINESS_RECOMMENDATION",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "leadingness_validated": false
+    },
+    {
+      "example_id": "ADOPT-HBF-SANDISK-OCP",
+      "product_family": "NAND_BASED_HBF_PROPOSED_MEMORY_STORAGE_TIER",
+      "named_product_platform": "SK hynix–Sandisk HBF specifications; no qualified processor platform or shipping product SKU identified",
+      "technical_use": "회사는 AI 추론의 용량·대역폭 확장 요구에 대해 HBM과 SSD 사이의 NAND 기반 층을 제안한다. CPU/GPU와의 UCIe 연결은 규격의 통합 방향이다.",
+      "bottleneck_requirement": {
+        "issuer_framing": "한 종류의 메모리로 복합 요구를 해결하기 어렵다는 tiered memory 관점의 규격 공개",
+        "source_specifications": {
+          "capacity": {
+            "upper_value": 512,
+            "unit": "GB",
+            "basis": "up to, with 8-high/16-high NAND-die stack configurations"
+          },
+          "bandwidth": {
+            "lower_value": 0.4,
+            "upper_value": 3.0,
+            "unit": "TB/s",
+            "basis": "approximate specification grades 1–3; not measured customer throughput"
+          },
+          "interface": "UCIe"
+        },
+        "customer_specific_bottleneck_measured": false
+      },
+      "actor_roles": {
+        "specification_development_partners": [
+          "SK hynix",
+          "Sandisk"
+        ],
+        "company_reported_specification_disclosure_venue": "OCP",
+        "company_reported_consortium_participants_not_buyers": [
+          "Google",
+          "Tenstorrent"
+        ],
+        "processor_platform_qualification_authority": null,
+        "legal_buyer_payer": null,
+        "named_end_user": null
+      },
+      "stage_events": [
+        {
+          "stage": "ISSUER_REPORTED_FIRST_SPECIFICATION_DISCLOSURE_AND_ECOSYSTEM_DEVELOPMENT",
+          "publication_date": "2026-08-04",
+          "event_dateline_date": "2026-08-04",
+          "source_id": "SRC-AITECH-HBF-FMS26",
+          "scope": "FMS 개막 시점의 첫 규격 공개와 표준화/생태계 방향",
+          "not_implied": "OCP 최종 인증·특정 CPU/GPU 채택·현재 HBF 양산 납품·Google/Tenstorrent 구매"
+        }
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-AITECH-HBF-FMS26",
+          "locator": "HBF layer paragraph; capacity/grades paragraph; UCIe and electrical/reliability/software I/O paragraphs; OCP disclosure and consortium paragraphs",
+          "excerpt_refs": [
+            "HBF-E01",
+            "HBF-E02",
+            "HBF-E03"
+          ]
+        }
+      ],
+      "sku_and_order_gaps": {
+        "shipping_product_sku": null,
+        "qualified_cpu_gpu_platform": null,
+        "named_purchase_order": null,
+        "hbf_mass_shipment_date_quantity": null
+      },
+      "supply_conditions_to_check": [
+        "규격 원문·개정, CPU/GPU의 실제 설계 선택과 인터페이스·패키징·전기/신뢰성 검증",
+        "소프트웨어 I/O·워크로드별 성능/내구성, 고객 인증·제품 샘플·양산 준비 단계"
+      ],
+      "commercial_learning_question": "표준화 단계의 상품이 어떤 고객 아키텍처 문제를 해결하도록 설계되는가? 개발 협력·샘플·인증·기명 채택·상업 출하를 각각 언제 확인할 수 있는가?",
+      "question_kind": "OUR_LEARNING_QUESTION_NOT_BUSINESS_RECOMMENDATION",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "leadingness_validated": false
+    }
+  ],
+  "join_constraints": [
+    "Intel 인증 모듈과 Dell 전시 DDR5는 동일 part number·용량 근거 없이 하나의 SKU/주문 경로로 합치지 않는다.",
+    "기명 VAST 사례·별도 Solidigm 시험·Dell 전시 PS1010은 같은 고객 환경/납품으로 합치지 않는다.",
+    "HBF 규격의 최대/등급 값은 현재 생산품 성능·수요 비트·HBM 대체 비율로 환산하지 않는다.",
+    "공급자 발표의 인증·전시·활용·표준화는 각각 독립 사건이며 구매·출하·사용량으로 자동 승격하지 않는다."
+  ],
+  "checks": {
+    "reused_source_original_hashes_verified": [
+      "SRC-HY26-INTEL",
+      "SRC-HY26-DELL",
+      "SRC-HY26-VAST",
+      "SRC-HY26-SSD-WORKLOAD"
+    ],
+    "new_source_original_hash_verified": true,
+    "new_source_visible_text_excerpt_verified": true,
+    "new_source_quote_words": 22,
+    "new_source_original_redistributed": false,
+    "customer_private_order_values_invented": false,
+    "product_part_number_join_verified": false,
+    "independent_customer_performance_validation_performed": false
+  }
+}

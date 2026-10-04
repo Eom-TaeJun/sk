@@ -12,6 +12,8 @@
 
 ## 시작할 문서와 데이터
 
+- [AI 기술·업무와 메모리 상품 요구의 연결](ai_technology_memory_links.md): 기술 조건·병목·상품·기명 채택·공급을 잇는 일곱 연결, 소프트웨어 반론과 직무별 질문.
+- [첫 분기 관측표](memory_observation_panel_2026q2.md), [독립 목적 검토](research_convergence_review.md): 공개 수급 항목과 실제 발산·수렴·수정 기록.
 - [반도체 산업 거시 구조](semiconductor_macro_structure.md): 공통 분류, 하이닉스 위치, 실제 기업 21개와 근거 성숙도, 지역·소재·시장 비교 기준.
 - [메모리 사이클과 지표 수집 계획](memory_cycle_signal_plan.md): 18개 후보의 목적·단위·무료 경로·접근 상태·연결 키·반증 조건.
 - [거시 구조 원문 영수증](../../../data/research/semiconductor_macro_structure/2026-10-04/sources.json), [공개 패키지 manifest](../../../data/research/semiconductor_macro_structure/2026-10-04/manifest.json): 새 캡처와 기존 근거의 구분, 원문 날짜·해시·locator와 재배포 경계.

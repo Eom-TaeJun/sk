@@ -1,0 +1,546 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-04",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "purpose_ko": "하이닉스 영업·상품기획 학습을 위해 AI 기술과 제품 요구를 연결할 때 필요한 소프트웨어·워크로드 조건과 반증을 명시한다.",
+  "source_count": 3,
+  "condition_count": 4,
+  "sources": [
+    {
+      "source_id": "SRC-AI-SW-NV-INFERENCE",
+      "requested_url": "https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/",
+      "retrieved_url": "https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/",
+      "retrieved_at": "2026-10-04T14:18:17.974532+00:00",
+      "response_status": 200,
+      "sha256": "6776de98c371f38e83a483d84a85ef8af196a0092a8eb5a18ed0999fc92cd5da",
+      "byte_length": 365791,
+      "content_type": "text/html; charset=UTF-8",
+      "http_last_modified": null,
+      "capture_outcome": "HTTP_200_BYTES_SAVED",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "source_role": "vendor_published_original_technical_explanation",
+      "free_access": "Public HTML, no account or API key required for the captured page",
+      "api_key_required": false,
+      "raw_original_redistributed": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "strong_inference_approved": false,
+      "predictive_validity_established": false,
+      "title": "Mastering LLM Techniques: Inference Optimization",
+      "publication_date_displayed": "2023-11-17",
+      "last_updated_date_displayed": null,
+      "date_note": "Original post date is displayed; later edits have no separately verified date. AI-generated summary is excluded from technical support.",
+      "same_url_as_previous_source_id": "SRC-HBM-NV-INFERENCE",
+      "same_raw_bytes_as_previous_capture_claimed": false,
+      "original_excerpts": [
+        {
+          "text": "the two main contributors to the GPU LLM memory requirement are model weights and the KV cache.",
+          "locator": "Original article body / LLM memory requirement, not AI-Generated Summary"
+        }
+      ],
+      "scope": "Decoder-only autoregressive transformer inference explanation and selected model parallelization discussion; no complete training memory accounting.",
+      "english_verbatim_word_count": 17
+    },
+    {
+      "source_id": "SRC-AI-SW-TRT-QUANTIZATION",
+      "requested_url": "https://nvidia.github.io/TensorRT-LLM/features/quantization.html",
+      "retrieved_url": "https://nvidia.github.io/TensorRT-LLM/features/quantization.html",
+      "retrieved_at": "2026-10-04T14:18:18.004531+00:00",
+      "response_status": 200,
+      "sha256": "2000e7d8225e11111c1738e15d2d48641f60aaf53217d8f65ef673d6f96c589c",
+      "byte_length": 76237,
+      "content_type": "text/html; charset=utf-8",
+      "http_last_modified": "Tue, 29 Sep 2026 09:00:23 GMT",
+      "capture_outcome": "HTTP_200_BYTES_SAVED",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "source_role": "vendor_published_original_technical_explanation",
+      "free_access": "Public HTML, no account or API key required for the captured page",
+      "api_key_required": false,
+      "raw_original_redistributed": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "strong_inference_approved": false,
+      "predictive_validity_established": false,
+      "title": "Quantization — TensorRT LLM",
+      "publication_date_displayed": null,
+      "last_updated_date_displayed": "2026-09-26",
+      "documentation_commit_displayed": "c76f4a8",
+      "date_note": "Footer last-update date and generated commit are not HTTP Last-Modified or initial publication date.",
+      "original_excerpts": [
+        {
+          "text": "Quantization is a technique used to reduce memory footprint and computational cost",
+          "locator": "Quantization in TensorRT LLM / opening paragraph"
+        },
+        {
+          "text": "enable the FP8 KV cache manually",
+          "locator": "Usage / Running Pre-quantized Models / FP8 KV Cache note"
+        }
+      ],
+      "scope": "Captured 2026 PyTorch-backend documentation; model/hardware support and KV dtype must be checked at deployment version.",
+      "english_verbatim_word_count": 18
+    },
+    {
+      "source_id": "SRC-AI-SW-TRT-KV-REUSE",
+      "requested_url": "https://nvidia.github.io/TensorRT-LLM/advanced/kv-cache-reuse.html",
+      "retrieved_url": "https://nvidia.github.io/TensorRT-LLM/advanced/kv-cache-reuse.html",
+      "retrieved_at": "2026-10-04T14:18:18.031562+00:00",
+      "response_status": 200,
+      "sha256": "c870e4a7387a1eec6804f6b954a0f0cd809787b25fb8b2d035655bca53ebc887",
+      "byte_length": 43555,
+      "content_type": "text/html; charset=utf-8",
+      "http_last_modified": "Tue, 29 Sep 2026 09:00:20 GMT",
+      "capture_outcome": "HTTP_200_BYTES_SAVED",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "source_role": "vendor_published_original_technical_explanation",
+      "free_access": "Public HTML, no account or API key required for the captured page",
+      "api_key_required": false,
+      "raw_original_redistributed": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "strong_inference_approved": false,
+      "predictive_validity_established": false,
+      "title": "KV cache reuse — TensorRT-LLM",
+      "publication_date_displayed": null,
+      "last_updated_date_displayed": "2025-09-15",
+      "documentation_commit_displayed": "0c9430e",
+      "date_note": "Older TensorRT Engine/Executor documentation remains publicly available. Do not apply its defaults or reuse timing to all newer PyTorch-backend implementations.",
+      "original_excerpts": [
+        {
+          "text": "requests that start with the same prompt",
+          "locator": "Opening paragraph"
+        },
+        {
+          "text": "KV cache state only becomes reusable after the request that computed the state terminates.",
+          "locator": "Situations that can prevent kv cache reuse / first paragraph"
+        }
+      ],
+      "scope": "Snapshot-specific paged context attention / KVCacheManager / Executor reuse and host-offload behavior, including exclusions and transfer cost.",
+      "english_verbatim_word_count": 21
+    }
+  ],
+  "conditions": [
+    {
+      "condition_id": "SWCOND-01-TRAINING-PREFILL-DECODE",
+      "title_ko": "학습과 추론을 구분하고, 추론의 입력·출력 단계를 나눈다",
+      "source_support": [
+        {
+          "source_id": "SRC-AI-SW-NV-INFERENCE",
+          "locator": "Original article: Understanding LLM inference / Prefill phase / Decode phase; Scaling up LLMs / Pipeline parallelism",
+          "support_scope": "Decoder-only inference phases and forward/backward/gradient accumulation as different training discussion"
+        }
+      ],
+      "technical_explanation_ko": "입력 토큰 처리(prefill)는 병렬 처리되는 행렬 연산, 출력 생성(decode)은 순차적인 자기회귀 연산으로 설명된다. 이 글의 decode 설명은 메모리 이동이 지연을 지배하는 상황이다. 학습의 앞·뒤 연산과 기울기 누적은 별도 맥락이다.",
+      "applicability_conditions_ko": "학습·미세조정·추론을 구분한다. inference 설명을 학습 전체 메모리 예산에 적용하지 않는다. prefill/decode 병목은 모델·배치·하드웨어·런타임별로 다시 측정한다.",
+      "bottleneck_candidates": [
+        "compute",
+        "memory_bandwidth",
+        "software_scheduling",
+        "inter_device_communication"
+      ],
+      "product_requirement_hypothesis_ko": "같은 AI라는 이름보다 고객의 단계별 지연·처리량 목표와 실제 병목을 먼저 확인해야 용량·대역폭 상품 요구를 묻는다. 특정 플랫폼의 GPU 탑재 메모리가 HBM인지와 하이닉스 SKU 채택은 별도 사양·관계 근거가 필요하다.",
+      "interpretation_status": "TECHNICAL_CONDITION_AND_MEASUREMENT_PLAN_NOT_PURCHASE_FORECAST",
+      "measurement_plan": {
+        "grain": "model/version × workload/request population × system/runtime configuration × test period",
+        "required_configuration_fields": [
+          "learning_or_serving_phase",
+          "model_id_and_version",
+          "architecture",
+          "input_output_token_lengths",
+          "tokenizer",
+          "effective_batch_size",
+          "request_concurrency",
+          "GPU_model_and_count",
+          "runtime_backend_and_version",
+          "parallelism",
+          "memory_dtype"
+        ],
+        "outcome_fields": [
+          {
+            "name": "time_to_first_token",
+            "unit": "milliseconds",
+            "population": "same request workload"
+          },
+          {
+            "name": "time_per_output_token",
+            "unit": "milliseconds/token",
+            "population": "same completed decode population"
+          },
+          {
+            "name": "throughput",
+            "unit": "tokens/second",
+            "population": "same tokenizer and comparable request population"
+          },
+          {
+            "name": "measured_stage_resource_bottleneck",
+            "unit": "profiled category",
+            "population": "prefill and decode separately"
+          }
+        ],
+        "controls_ko": "한 번에 비교할 변수를 정하고 다른 구성·품질 기준·요청 모집단을 고정하거나 차이를 기록한다. 벤더 테스트와 실제 고객 운영 관측을 구분한다.",
+        "values_collected": false,
+        "test_executed": false
+      },
+      "falsifiers_or_exclusions_ko": [
+        "배치·스케줄링·모델 구조가 다르면 모든 decode를 동일한 메모리 대역폭 병목으로 분류할 수 없다.",
+        "GPU·커널·통신·CPU 등 여러 요소가 함께 바뀐 결과를 HBM 단독 효과로 분해하지 않는다.",
+        "학습 optimizer 상태의 완전한 메모리 계산은 이 3개 자료의 확인 범위 밖이다."
+      ],
+      "customer_roles": [
+        "AI service operator",
+        "training team",
+        "inference software engineer",
+        "platform architect",
+        "memory supplier technical marketing"
+      ],
+      "commercial_learning_question_ko": "고객이 학습 효율, 최초 응답 지연, 토큰 생성 속도 중 무엇을 개선하려고 메모리 구성을 바꾸는가?",
+      "free_collection_routes": [
+        {
+          "source_id": "SRC-AI-SW-NV-INFERENCE",
+          "method": "Read provider official HTML; preserve raw hash, page sections, date/commit and version changes",
+          "free": true,
+          "api_key_required": false,
+          "access_status": "ACCESS_TESTED_AND_SOURCE_BYTES_SAVED",
+          "runtime_test_executed": false
+        }
+      ],
+      "actual_customer_or_sku_identified": false,
+      "legal_buyer_known": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "strong_inference_approved": false,
+      "predictive_validity_established": false
+    },
+    {
+      "condition_id": "SWCOND-02-CONTEXT-CONCURRENCY",
+      "title_ko": "문맥·배치·동시 요청과 모델 구조를 함께 확인한다",
+      "source_support": [
+        {
+          "source_id": "SRC-AI-SW-NV-INFERENCE",
+          "locator": "LLM memory requirement / Batching / Key-value caching; Multi-query attention / Grouped-query attention",
+          "support_scope": "Weights, per-request KV cache, sequence and batch dimensions; attention architecture changes KV-head footprint"
+        }
+      ],
+      "technical_explanation_ko": "추론 메모리는 가중치와 KV cache로 설명되며, 같은 모델에서 문맥 길이·배치가 늘면 cache 보관 요구가 커질 수 있다. KV head를 공유하는 MQA/GQA와 재사용은 단순한 배치×길이 환산의 조건을 바꾼다.",
+      "applicability_conditions_ko": "동일 모델·attention 구조·정밀도와 재사용/offload 정책을 정한다. 전체 요청 수, 동시에 활성화된 요청 수와 실제 실행 배치는 다른 필드로 기록한다.",
+      "bottleneck_candidates": [
+        "memory_capacity",
+        "memory_bandwidth",
+        "cache_management"
+      ],
+      "product_requirement_hypothesis_ko": "긴 문맥이나 동시 요청 증가는 서비스 품질 조건 아래 GPU 메모리 용량·대역폭을 살펴볼 이유가 된다. 소프트웨어가 cache를 줄이거나 다른 계층에 옮기면 필요한 구성도 바뀌므로 토큰에서 구매 비트를 환산하지 않는다.",
+      "interpretation_status": "TECHNICAL_CONDITION_AND_MEASUREMENT_PLAN_NOT_PURCHASE_FORECAST",
+      "measurement_plan": {
+        "grain": "model/version × workload/request population × system/runtime configuration × test period",
+        "required_configuration_fields": [
+          "model_id_and_version",
+          "number_of_layers",
+          "number_of_query_heads",
+          "number_of_KV_heads",
+          "head_dimension",
+          "input_output_token_length_distribution",
+          "active_request_concurrency",
+          "effective_batch_size",
+          "weight_dtype",
+          "KV_cache_dtype",
+          "cache_allocation_policy",
+          "reuse_policy",
+          "offload_policy"
+        ],
+        "outcome_fields": [
+          {
+            "name": "peak_GPU_memory",
+            "unit": "bytes or GiB; unit retained",
+            "population": "fixed workload and complete run"
+          },
+          {
+            "name": "KV_cache_allocation",
+            "unit": "bytes; live versus reserved separately",
+            "population": "same active request set"
+          },
+          {
+            "name": "completed_request_throughput",
+            "unit": "requests/second",
+            "population": "same latency and quality criterion"
+          }
+        ],
+        "controls_ko": "한 번에 비교할 변수를 정하고 다른 구성·품질 기준·요청 모집단을 고정하거나 차이를 기록한다. 벤더 테스트와 실제 고객 운영 관측을 구분한다.",
+        "values_collected": false,
+        "test_executed": false
+      },
+      "falsifiers_or_exclusions_ko": [
+        "모델 구조·KV dtype·출력 길이·재사용 비율이 다르면 문맥이나 요청 수만으로 요구량을 설명하지 못한다.",
+        "예약한 메모리와 실제 사용·peak를 섞거나 최대 context를 모든 실제 요청 길이로 처리하면 제외한다.",
+        "MQA/GQA를 고려하지 않은 단순 hidden-size 식을 모든 모델의 실제 cache 규모로 적용하지 않는다."
+      ],
+      "customer_roles": [
+        "cloud service operator",
+        "enterprise application operator",
+        "inference engineer",
+        "GPU platform designer",
+        "memory product planner"
+      ],
+      "commercial_learning_question_ko": "고객의 최대 문맥 사양과 실제 문맥·동시성 분포 중 어느 것이 제품 용량 선택을 좌우하는가?",
+      "free_collection_routes": [
+        {
+          "source_id": "SRC-AI-SW-NV-INFERENCE",
+          "method": "Read provider official HTML; preserve raw hash, page sections, date/commit and version changes",
+          "free": true,
+          "api_key_required": false,
+          "access_status": "ACCESS_TESTED_AND_SOURCE_BYTES_SAVED",
+          "runtime_test_executed": false
+        }
+      ],
+      "actual_customer_or_sku_identified": false,
+      "legal_buyer_known": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "strong_inference_approved": false,
+      "predictive_validity_established": false
+    },
+    {
+      "condition_id": "SWCOND-03-PRECISION-KV-QUANTIZATION",
+      "title_ko": "가중치 정밀도와 KV cache 양자화를 따로 기록한다",
+      "source_support": [
+        {
+          "source_id": "SRC-AI-SW-TRT-QUANTIZATION",
+          "locator": "Quantization in TensorRT LLM; Usage / FP8 KV Cache / NVFP4 KV Cache; Model and Hardware Support Matrix",
+          "support_scope": "Lower-precision weight/activation representation, separately configured KV cache dtype and version-specific support"
+        },
+        {
+          "source_id": "SRC-AI-SW-NV-INFERENCE",
+          "locator": "Original article: Model optimization techniques / Quantization",
+          "support_scope": "Precision reduction, rounding/clipping and bandwidth-bound model considerations"
+        }
+      ],
+      "technical_explanation_ko": "양자화는 가중치/활성값의 표현 정밀도를 낮춘다. TensorRT 문서는 KV dtype의 별도 설정과 모델·GPU별 지원 조건도 제공한다. 가중치 양자화와 KV cache 양자화의 적용 여부를 따로 확인한다.",
+      "applicability_conditions_ko": "동일 checkpoint·품질 평가·대표 입력·장치·런타임에서 weight/activation/KV dtype과 scaling·calibration 설정을 보존한다. 문서에 지원이 있어도 실제 고객 구성의 활성화를 확인해야 한다.",
+      "bottleneck_candidates": [
+        "memory_capacity",
+        "memory_bandwidth",
+        "quantization_kernel_support",
+        "quality_constraint"
+      ],
+      "product_requirement_hypothesis_ko": "같은 모델과 업무에서 더 작은 표현은 메모리 보관·이동 요구를 바꿀 수 있다. 품질 목표·커널 지원·다른 병목이 구매 조건을 제한할 수 있으며 한 설정의 절감률을 전체 HBM 수요 변화로 바꾸지 않는다.",
+      "interpretation_status": "TECHNICAL_CONDITION_AND_MEASUREMENT_PLAN_NOT_PURCHASE_FORECAST",
+      "measurement_plan": {
+        "grain": "model/version × workload/request population × system/runtime configuration × test period",
+        "required_configuration_fields": [
+          "checkpoint_and_model_version",
+          "representative_calibration_dataset_if_used",
+          "weight_dtype",
+          "activation_dtype",
+          "KV_cache_dtype",
+          "scaling_recipe",
+          "GPU_architecture",
+          "runtime_backend_version_and_commit",
+          "input_output_lengths",
+          "effective_batch",
+          "quality_evaluation_dataset_and_metric"
+        ],
+        "outcome_fields": [
+          {
+            "name": "weight_and_KV_memory_allocation",
+            "unit": "bytes; components separately",
+            "population": "same serving workload"
+          },
+          {
+            "name": "latency_and_throughput",
+            "unit": "milliseconds and tokens/second",
+            "population": "same tokenizer and request criteria"
+          },
+          {
+            "name": "quality_evaluation_result",
+            "unit": "source benchmark metric",
+            "population": "same evaluation set and acceptance condition"
+          }
+        ],
+        "controls_ko": "한 번에 비교할 변수를 정하고 다른 구성·품질 기준·요청 모집단을 고정하거나 차이를 기록한다. 벤더 테스트와 실제 고객 운영 관측을 구분한다.",
+        "values_collected": false,
+        "test_executed": false
+      },
+      "falsifiers_or_exclusions_ko": [
+        "품질 기준을 통과하지 못하거나 대상 모델·GPU·backend에서 기능이 지원/활성화되지 않으면 상품 요구 개선 가설을 보류한다.",
+        "변환·dequantization·cache metadata·스케줄링 비용이나 다른 병목으로 실제 성능이 개선되지 않을 수 있다.",
+        "가중치 정밀도만 낮췄다는 발표에서 KV cache 정밀도와 실제 GPU 메모리 총량을 단정하지 않는다."
+      ],
+      "customer_roles": [
+        "model deployer",
+        "software optimization team",
+        "platform qualification team",
+        "memory supplier technical marketing"
+      ],
+      "commercial_learning_question_ko": "어떤 정밀도·품질 기준·runtime에서 고객이 실제로 용량 또는 대역폭 부족을 경험하는가?",
+      "free_collection_routes": [
+        {
+          "source_id": "SRC-AI-SW-TRT-QUANTIZATION",
+          "method": "Read provider official HTML; preserve raw hash, page sections, date/commit and version changes",
+          "free": true,
+          "api_key_required": false,
+          "access_status": "ACCESS_TESTED_AND_SOURCE_BYTES_SAVED",
+          "runtime_test_executed": false
+        },
+        {
+          "source_id": "SRC-AI-SW-NV-INFERENCE",
+          "method": "Read provider official HTML; preserve raw hash, page sections, date/commit and version changes",
+          "free": true,
+          "api_key_required": false,
+          "access_status": "ACCESS_TESTED_AND_SOURCE_BYTES_SAVED",
+          "runtime_test_executed": false
+        }
+      ],
+      "actual_customer_or_sku_identified": false,
+      "legal_buyer_known": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "strong_inference_approved": false,
+      "predictive_validity_established": false,
+      "documentation_scope_note": "Quantization page snapshot is 2026-09-26 / c76f4a8 with current PyTorch-backend context; do not merge implementation defaults with the older reuse page."
+    },
+    {
+      "condition_id": "SWCOND-04-PREFIX-REUSE-OFFLOAD",
+      "title_ko": "공통 prompt 재사용과 host offload에는 성립 조건·비용이 있다",
+      "source_support": [
+        {
+          "source_id": "SRC-AI-SW-TRT-KV-REUSE",
+          "locator": "Opening / Performance expectations / Situations that can prevent kv cache reuse / Offloading to host memory",
+          "support_scope": "Same-prefix reuse, completed-request timing, eviction/block constraints and host-GPU transfer cost in captured implementation"
+        }
+      ],
+      "technical_explanation_ko": "이 구현 설명에서 공통 prompt의 cache 재사용은 최초 토큰 지연을 줄일 수 있다. 요청 완료 시점·블록 단위·eviction이 재사용을 제한하며, host offload는 GPU와 host 사이의 전송 비용을 추가한다.",
+      "applicability_conditions_ko": "같은 prefix·모델·cache identity를 확인한다. 이 2025 Engine/Executor 구현의 요청 완료·default 설정을 모든 최신 backend에 적용하지 않는다. warm/cold 요청과 실제 재사용 가능 상태를 나눈다.",
+      "bottleneck_candidates": [
+        "prefill_recomputation",
+        "GPU_cache_capacity",
+        "host_memory_capacity",
+        "host_GPU_link",
+        "cache_eviction_and_scheduling"
+      ],
+      "product_requirement_hypothesis_ko": "재사용이 성립하면 중복 입력 처리와 cache 관리의 효율이 달라질 수 있다. host offload를 쓰면 host 메모리·연결 대역폭의 요구도 물어볼 수 있지만 DDR5/SOCAMM2/HBM SKU와 용량 선택은 고객 플랫폼·측정 근거가 필요하다.",
+      "interpretation_status": "TECHNICAL_CONDITION_AND_MEASUREMENT_PLAN_NOT_PURCHASE_FORECAST",
+      "measurement_plan": {
+        "grain": "model/version × workload/request population × system/runtime configuration × test period",
+        "required_configuration_fields": [
+          "model_and_runtime_version",
+          "prefix_identity_and_length",
+          "cache_reuse_enabled",
+          "warm_or_cold",
+          "request_start_and_completion_order",
+          "tokens_per_block",
+          "cache_budget",
+          "eviction_policy",
+          "host_offload_enabled_and_buffer",
+          "host_memory_kind",
+          "host_GPU_link_architecture",
+          "input_output_length_distribution",
+          "active_concurrency"
+        ],
+        "outcome_fields": [
+          {
+            "name": "time_to_first_token",
+            "unit": "milliseconds",
+            "population": "matched cold and reusable-prefix workloads separately"
+          },
+          {
+            "name": "reused_cache_fraction_or_hit_rate",
+            "unit": "source-defined fraction",
+            "population": "same request scheduling regime"
+          },
+          {
+            "name": "GPU_and_host_cache_memory",
+            "unit": "bytes; two tiers separately",
+            "population": "same request population"
+          },
+          {
+            "name": "host_GPU_transfer_time",
+            "unit": "milliseconds",
+            "population": "offload/onboarding events"
+          }
+        ],
+        "controls_ko": "한 번에 비교할 변수를 정하고 다른 구성·품질 기준·요청 모집단을 고정하거나 차이를 기록한다. 벤더 테스트와 실제 고객 운영 관측을 구분한다.",
+        "values_collected": false,
+        "test_executed": false
+      },
+      "falsifiers_or_exclusions_ko": [
+        "공통 prefix가 없거나 cache가 준비되지 않았거나 evicted되면 예상 재사용 이득이 성립하지 않는다.",
+        "대규모 동시 배치·긴 출력·블록 경계 때문에 cache hit가 낮아질 수 있다.",
+        "host-GPU 전송 비용이 절약한 처리 비용을 상쇄하면 offload 성능 개선을 단정하지 않는다.",
+        "이 source의 host offload 설명을 SSD까지 포함한 고객의 실제 cache hierarchy 채택으로 확대하지 않는다."
+      ],
+      "customer_roles": [
+        "CSP serving operator",
+        "inference scheduler engineer",
+        "CPU_GPU platform designer",
+        "memory supplier technical sales"
+      ],
+      "commercial_learning_question_ko": "고객의 반복 prompt·동시성·cache hit·host 연결 조건에서 어느 메모리 계층이 실제 병목인가?",
+      "free_collection_routes": [
+        {
+          "source_id": "SRC-AI-SW-TRT-KV-REUSE",
+          "method": "Read provider official HTML; preserve raw hash, page sections, date/commit and version changes",
+          "free": true,
+          "api_key_required": false,
+          "access_status": "ACCESS_TESTED_AND_SOURCE_BYTES_SAVED",
+          "runtime_test_executed": false
+        }
+      ],
+      "actual_customer_or_sku_identified": false,
+      "legal_buyer_known": false,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "strong_inference_approved": false,
+      "predictive_validity_established": false,
+      "documentation_scope_note": "Public page footer: 2025-09-15 / 0c9430e. Current deployment behavior must be verified separately; no live runtime test was run."
+    }
+  ],
+  "access_attempts": [
+    {
+      "source_id": "SRC-AI-SW-NV-INFERENCE",
+      "requested_url": "https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/",
+      "outcome": "HTTP_200_BYTES_SAVED",
+      "response_status": 200,
+      "retrieved_at": "2026-10-04T14:18:17.974532+00:00"
+    },
+    {
+      "source_id": "SRC-AI-SW-TRT-QUANTIZATION",
+      "requested_url": "https://nvidia.github.io/TensorRT-LLM/features/quantization.html",
+      "outcome": "HTTP_200_BYTES_SAVED",
+      "response_status": 200,
+      "retrieved_at": "2026-10-04T14:18:18.004531+00:00"
+    },
+    {
+      "source_id": "SRC-AI-SW-TRT-KV-REUSE",
+      "requested_url": "https://nvidia.github.io/TensorRT-LLM/advanced/kv-cache-reuse.html",
+      "outcome": "HTTP_200_BYTES_SAVED",
+      "response_status": 200,
+      "retrieved_at": "2026-10-04T14:18:18.031562+00:00"
+    }
+  ],
+  "measurement_status": "Definitions and official source bytes saved; no workload measurements, runtime execution or customer purchase observations collected.",
+  "global_interpretation_limits_ko": [
+    "개별 업무에서 효율이 좋아져도 업계 총수요가 증가/감소한다고 단정하지 않는다. 가격·서비스 확대·모델 변화·보급·구매 시점은 별도 관측이 필요하다.",
+    "벤치마크·요청·토큰·정밀도에서 메모리 구매량·가격·CAPA·고객 배정을 환산하지 않는다.",
+    "GPU 시스템 성능 변화는 메모리뿐 아니라 연산·커널·통신·소프트웨어·구성 변화가 함께 영향을 줄 수 있으므로 HBM 단독 효과로 분해하지 않는다.",
+    "학습, 추론 prefill/decode, 실제 사용과 벤더 기능 설명은 서로 다른 관측 범위다. 공개 문서의 default와 지원표는 날짜·backend·commit별로 보존한다."
+  ],
+  "public_originals_distribution": "Only bounded source quotes and receipts are public. Full HTML and extracted review copies are outside the public repository.",
+  "quote_policy": "English verbatim excerpts are counted per source and kept at or below 25 words. Conditions use Korean paraphrases and separately labelled measurement hypotheses.",
+  "human_evidence_approved": false,
+  "h1_admitted": false,
+  "governed_evidence": false,
+  "strong_inference_approved": false,
+  "predictive_validity_established": false
+}

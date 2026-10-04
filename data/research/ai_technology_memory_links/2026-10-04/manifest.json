@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-04",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "human_evidence_approved": false,
+  "h1_admitted": false,
+  "counts": {
+    "links": 7,
+    "software_conditions": 4,
+    "product_adoption_examples": 4,
+    "new_original_http_sources": 6,
+    "reused_source_references": 11
+  },
+  "files": [
+    {
+      "path": "data/research/ai_technology_memory_links/2026-10-04/platform_sources.json",
+      "sha256": "ba10151a985daf8c325d7887466634a50719b4037d21b68d067ce8da73f63409",
+      "byte_length": 4417
+    },
+    {
+      "path": "data/research/ai_technology_memory_links/2026-10-04/software_workload_conditions.json",
+      "sha256": "7ec4488774fdda4072a9893cf368bda600ade130039f6626261991a1e6cbe8a0",
+      "byte_length": 29367
+    },
+    {
+      "path": "data/research/ai_technology_memory_links/2026-10-04/product_adoption_examples.json",
+      "sha256": "f3558c8b6d2f5593705565f7b1f61d2ae4edc61327d7b3b08537fa8e8a6c73ba",
+      "byte_length": 17818
+    },
+    {
+      "path": "data/research/ai_technology_memory_links/2026-10-04/links.json",
+      "sha256": "6cd95b606851dc66e86c36eb498258093eaf8967bcc24e402de517a4d8ec2b45",
+      "byte_length": 22261
+    }
+  ],
+  "previous_immutable_inputs": [
+    {
+      "path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+      "sha256": "24bf6f4d40c6bb8208d8dc90c65e14fa025f10c7ffb9b0b9079dfb73568d3451",
+      "byte_length": 13569
+    },
+    {
+      "path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+      "sha256": "7d5bf4d6e52e96945b22047f190edb8837c3b80eb3cdbd282ec635912ad43a94",
+      "byte_length": 22659
+    },
+    {
+      "path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/card.json",
+      "sha256": "244654332b6a2682c3dca11d7fc158a46d4369faf985317aa199c7d77ca2b192",
+      "byte_length": 42152
+    },
+    {
+      "path": "data/research/memory_observation_panel/2026-10-04/sk_hynix.json",
+      "sha256": "acf06bb8c0b2d976a798943b05e61e6bdecb71fe1997ef632479e3d34e306618",
+      "byte_length": 35456
+    },
+    {
+      "path": "data/research/memory_observation_panel/2026-10-04/samsung.json",
+      "sha256": "3fd2c0fc145141532854dd8c720993a7f85597f545203129040d6fa05668b051",
+      "byte_length": 38057
+    }
+  ],
+  "documentation_paths": [
+    "AGENTS.md",
+    "README.md",
+    "docs/research/supply_chain/README.md",
+    "docs/research/supply_chain/sk_hynix_commercial_role_context.md",
+    "docs/research/supply_chain/memory_cycle_signal_plan.md",
+    "docs/research/supply_chain/memory_observation_panel_2026q2.md",
+    "docs/research/supply_chain/customer_product_cards/hbm_nvidia_gb300.md",
+    "docs/research/supply_chain/ai_technology_memory_links.md",
+    "docs/research/supply_chain/research_convergence_review.md",
+    "docs/exec-plans/completed/ai_technology_memory_links_20261004.md"
+  ],
+  "documentation_hash_policy": "Reference Markdown by path; immutable data/research byte hashes are separate from Git Markdown line-ending conversion.",
+  "new_source_checks": [
+    {
+      "source_id": "SRC-AITECH-NV-CMX-BLOG26",
+      "verbatim_words": 11,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-AITECH-NV-CMX-PRODUCT",
+      "verbatim_words": 14,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-AI-SW-NV-INFERENCE",
+      "verbatim_words": 17,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-AI-SW-TRT-QUANTIZATION",
+      "verbatim_words": 18,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-AI-SW-TRT-KV-REUSE",
+      "verbatim_words": 21,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-AITECH-HBF-FMS26",
+      "verbatim_words": 22,
+      "hash_size_excerpt_checked": true
+    }
+  ],
+  "scope": "Source/grain/version/reference integrity and commercial-role learning; not independent truth certification, causal inference or purchasing/forecasting results.",
+  "originals_redistributed": false,
+  "private_legacy_materials_included": false,
+  "runtime_or_automatic_collection_implemented": false,
+  "public_source_access_note": "Captured official HTML pages were free and required no login/API key. This does not guarantee complete/free histories, stable endpoints or future API access."
+}

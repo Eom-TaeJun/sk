@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-04",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "human_approved": false,
+  "included_in_h1": false,
+  "sources": [
+    {
+      "source_id": "SRC-AITECH-NV-CMX-BLOG26",
+      "title": "NVIDIA BlueField-4 powered CMX technical explanation",
+      "requested_url": "https://developer.nvidia.com/blog/introducing-nvidia-bluefield-4-powered-inference-context-memory-storage-platform-for-the-next-frontier-of-ai/",
+      "retrieved_url": "https://developer.nvidia.com/blog/introducing-nvidia-bluefield-4-powered-inference-context-memory-storage-platform-for-the-next-frontier-of-ai/",
+      "response_status": 200,
+      "retrieved_at_utc": "2026-10-04T14:20:34.858446+00:00",
+      "capture_representation": "ORIGINAL_HTTP_RESPONSE_BODY",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "sha256": "401f3f425af7a8956547db0a0c434cb1b799c323d92e6b30395455b317d2beab",
+      "byte_length": 257261,
+      "publication_date_displayed": "2026-03-16",
+      "publication_date_note": "Blog displays March 16, 2026 and update note of that day; not a first-posting timestamp.",
+      "source_role": "ISSUER_TECHNICAL_EXPLANATION",
+      "excerpts": [
+        {
+          "excerpt_id": "CMX-G1",
+          "text": "G1 (GPU HBM)",
+          "locator": "A new inference paradigm and a context storage challenge / G1-G4 list"
+        },
+        {
+          "excerpt_id": "CMX-G2",
+          "text": "G2 (system RAM)",
+          "locator": "Same section / G2 list item"
+        },
+        {
+          "excerpt_id": "CMX-G3",
+          "text": "G3 (local SSDs)",
+          "locator": "Same section / G3 list item"
+        },
+        {
+          "excerpt_id": "CMX-G35",
+          "text": "G3.5 layer",
+          "locator": "Introducing the NVIDIA CMX context memory storage platform / flash-tier paragraph"
+        }
+      ],
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_approved": false,
+      "included_in_h1": false,
+      "limitations": [
+        "Company architecture/technical description, not independent customer workload measurement or SK hynix purchase evidence.",
+        "GPU HBM / host RAM / SSD / network context tier are distinct; CPU memory type requires a named platform source.",
+        "Do not quote vendor performance multiples as measured demand, NAND purchases, universal benefits or HBM-only effects."
+      ]
+    },
+    {
+      "source_id": "SRC-AITECH-NV-CMX-PRODUCT",
+      "title": "NVIDIA CMX product architecture and ecosystem",
+      "requested_url": "https://www.nvidia.com/en-us/data-center/ai-storage/cmx/",
+      "retrieved_url": "https://www.nvidia.com/en-us/data-center/ai-storage/cmx/",
+      "response_status": 200,
+      "retrieved_at_utc": "2026-10-04T14:20:36.640271+00:00",
+      "capture_representation": "ORIGINAL_HTTP_RESPONSE_BODY",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "sha256": "f2087881c2a8c5b7b2fb95e6fd1b6a20c7bd5667c5d952d2bad7f8f90edcca28",
+      "byte_length": 340957,
+      "publication_date_displayed": null,
+      "publication_date_note": "No first-publication timestamp verified for this dynamic product page.",
+      "source_role": "ISSUER_PRODUCT_ARCHITECTURE_ECOSYSTEM",
+      "excerpts": [
+        {
+          "excerpt_id": "CMXP-SSD",
+          "text": "manages Non-Volatile Memory Express (NVMe) solid-state drives (SSDs)",
+          "locator": "Products / NVIDIA BlueField-4"
+        },
+        {
+          "excerpt_id": "CMXP-PARTNERS",
+          "text": "NVIDIA CMX Context Memory Storage Partners",
+          "locator": "Ecosystem / partner list heading"
+        }
+      ],
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_approved": false,
+      "included_in_h1": false,
+      "limitations": [
+        "Company architecture/technical description, not independent customer workload measurement or SK hynix purchase evidence.",
+        "GPU HBM / host RAM / SSD / network context tier are distinct; CPU memory type requires a named platform source.",
+        "Do not quote vendor performance multiples as measured demand, NAND purchases, universal benefits or HBM-only effects."
+      ]
+    }
+  ],
+  "acquisition_failures": [],
+  "purpose": "Platform memory hierarchy evidence for SK hynix commercial-role learning"
+}

@@ -1,0 +1,539 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-04",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "human_evidence_approved": false,
+  "h1_admitted": false,
+  "purpose_ko": "하이닉스 상업 직무 학습에서 AI업무·조건→병목→상품요구→채택→공급을근거와공백으로연결",
+  "source_references": [
+    {
+      "source_id": "SRC-AITECH-NV-CMX-BLOG26",
+      "packet_path": "data/research/ai_technology_memory_links/2026-10-04/platform_sources.json",
+      "representation": "NEW_CAPTURE_SOURCE_RECEIPT"
+    },
+    {
+      "source_id": "SRC-AITECH-NV-CMX-PRODUCT",
+      "packet_path": "data/research/ai_technology_memory_links/2026-10-04/platform_sources.json",
+      "representation": "NEW_CAPTURE_SOURCE_RECEIPT"
+    },
+    {
+      "source_id": "SRC-AI-SW-NV-INFERENCE",
+      "packet_path": "data/research/ai_technology_memory_links/2026-10-04/software_workload_conditions.json",
+      "representation": "NEW_CAPTURE_SOURCE_RECEIPT"
+    },
+    {
+      "source_id": "SRC-AI-SW-TRT-QUANTIZATION",
+      "packet_path": "data/research/ai_technology_memory_links/2026-10-04/software_workload_conditions.json",
+      "representation": "NEW_CAPTURE_SOURCE_RECEIPT"
+    },
+    {
+      "source_id": "SRC-AI-SW-TRT-KV-REUSE",
+      "packet_path": "data/research/ai_technology_memory_links/2026-10-04/software_workload_conditions.json",
+      "representation": "NEW_CAPTURE_SOURCE_RECEIPT"
+    },
+    {
+      "source_id": "SRC-AITECH-HBF-FMS26",
+      "packet_path": "data/research/ai_technology_memory_links/2026-10-04/product_adoption_examples.json",
+      "representation": "NEW_CAPTURE_SOURCE_RECEIPT"
+    },
+    {
+      "source_id": "SRC-HBM-NV-PRODUCT",
+      "packet_path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+      "original_capture_sha256": "a89d170e32cf2cc6c6a2d87b03dae2c6cfa91ba0506142d3823478813960b38f",
+      "publication_date_displayed": null,
+      "event_date_in_dateline": null,
+      "locator": "Specifications / Configuration, GPU Memory and CPU Memory rows",
+      "reused_without_requoting": true,
+      "fresh_acquisition_claimed": false
+    },
+    {
+      "source_id": "SRC-HBM-OCP25",
+      "packet_path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+      "original_capture_sha256": "f4a3d986df14ae58142148a363d4d8be0ff00fbafcf5055a9a7a1fd1319bd049",
+      "publication_date_displayed": "2025-10-31",
+      "event_date_in_dateline": null,
+      "locator": "HBM exhibit paragraph immediately below GB300 module image",
+      "reused_without_requoting": true,
+      "fresh_acquisition_claimed": false
+    },
+    {
+      "source_id": "SRC-HBM-GTC",
+      "packet_path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+      "original_capture_sha256": "bf823e7962055d395ab460f87cb01600d873bebf67c0f5db09582b9eaf68edfc",
+      "publication_date_displayed": "2026-03-16",
+      "event_date_in_dateline": null,
+      "locator": "NVIDIA Collaboration zone",
+      "reused_without_requoting": true,
+      "fresh_acquisition_claimed": false
+    },
+    {
+      "source_id": "SRC-HBM-TSMC-MOU",
+      "packet_path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+      "original_capture_sha256": "29acee5c38da9f3a311de724407fff911309bb1e727897559a106624282caa1a",
+      "publication_date_displayed": "2024-04-19",
+      "event_date_in_dateline": null,
+      "locator": "HBM4 base die and CoWoS development cooperation paragraphs",
+      "reused_without_requoting": true,
+      "fresh_acquisition_claimed": false
+    },
+    {
+      "source_id": "SRC-HBM-SUPERMICRO",
+      "packet_path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+      "original_capture_sha256": "2f19477d86ff0d3723148bf180d42aeaff41b361851060acd4ec5ae8cda77494",
+      "publication_date_displayed": "2025-09-11",
+      "event_date_in_dateline": null,
+      "locator": "Opening highlights and San Jose dateline",
+      "reused_without_requoting": true,
+      "fresh_acquisition_claimed": false
+    },
+    {
+      "source_id": "SRC-HBM-AWS",
+      "packet_path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+      "original_capture_sha256": "6124e13694d86b93ed1c51e8e6900a3ff96d46bc9be7880c3423b73e266a26f5",
+      "publication_date_displayed": "2025-12-02",
+      "event_date_in_dateline": null,
+      "locator": "What's New announcement body / general availability",
+      "reused_without_requoting": true,
+      "fresh_acquisition_claimed": false
+    },
+    {
+      "source_id": "SRC-HY26-INTEL",
+      "packet_path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+      "original_capture_sha256": "f5e3a365f6378e2c92e1c89a4e7f3c810083b95a6bf21e04e6d5d52c44b5c269",
+      "publication_date_displayed": "2025-12-17",
+      "event_date_in_dateline": "2025-12-18",
+      "locator": "Opening paragraph after Seoul, December 18, 2025 dateline",
+      "reused_without_requoting": true,
+      "fresh_acquisition_claimed": false
+    },
+    {
+      "source_id": "SRC-HY26-DELL",
+      "packet_path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+      "original_capture_sha256": "d5123240e4909c1f051e4e789543bdb4981ebb63109f55fd3f20ec94c0e8d1fe",
+      "publication_date_displayed": "2026-08-26",
+      "event_date_in_dateline": null,
+      "locator": "AI Reality paragraph describing Dell R770",
+      "reused_without_requoting": true,
+      "fresh_acquisition_claimed": false
+    },
+    {
+      "source_id": "SRC-HY26-VAST",
+      "packet_path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+      "original_capture_sha256": "991001128d24ac383659791777a0d0798cff85bfd81ed46ce1265f0e9599df24",
+      "publication_date_displayed": "2026-02-03",
+      "event_date_in_dateline": null,
+      "locator": "Opening paragraph above numbered TCO/power discussion",
+      "reused_without_requoting": true,
+      "fresh_acquisition_claimed": false
+    },
+    {
+      "source_id": "SRC-HY26-SSD-WORKLOAD",
+      "packet_path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+      "original_capture_sha256": "8a3e22c34904aea0c09e0d48d8ba57c9ff2a24967115289124e788d6bee12b82",
+      "publication_date_displayed": "2025-10-14",
+      "event_date_in_dateline": null,
+      "locator": "Results and Analysis / MLPerf Inference v4.1 Disk Configuration Performance Analysis",
+      "reused_without_requoting": true,
+      "fresh_acquisition_claimed": false
+    },
+    {
+      "source_id": "SRC-HY26-Q2",
+      "packet_path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+      "original_capture_sha256": "1ebe2bfae67904e4455164da7a4794a5d9637bacae8b13317de8fae3ea7809be",
+      "publication_date_displayed": "2026-07-29",
+      "event_date_in_dateline": null,
+      "locator": "HBM4 and HBM4E product-status paragraph",
+      "reused_without_requoting": true,
+      "fresh_acquisition_claimed": false
+    }
+  ],
+  "reused_source_packet_integrity": [
+    {
+      "path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+      "sha256": "24bf6f4d40c6bb8208d8dc90c65e14fa025f10c7ffb9b0b9079dfb73568d3451",
+      "byte_length": 13569
+    },
+    {
+      "path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+      "sha256": "7d5bf4d6e52e96945b22047f190edb8837c3b80eb3cdbd282ec635912ad43a94",
+      "byte_length": 22659
+    }
+  ],
+  "links": [
+    {
+      "link_id": "AIL01",
+      "title_ko": "학습과 추론의 실행 단계 구분",
+      "workload_conditions_ko": "모델·학습/미세조정/추론·정밀도·배치·병렬 구성",
+      "bottleneck_to_investigate_ko": "계산·GPU 메모리·장치 간 통신의 조건별 제약",
+      "memory_product_families": [
+        "HBM"
+      ],
+      "source_ids": [
+        "SRC-AI-SW-NV-INFERENCE",
+        "SRC-HBM-GTC",
+        "SRC-HBM-OCP25",
+        "SRC-HBM-NV-PRODUCT"
+      ],
+      "software_condition_ids": [
+        "SWCOND-01-TRAINING-PREFILL-DECODE"
+      ],
+      "product_adoption_example_ids": [],
+      "metric_contract_refs": [
+        "MC02",
+        "MC04",
+        "MC03",
+        "MC15"
+      ],
+      "claim_boundary_ko": "기술 설명과 GB300 적용 발표는 별개 근거. 해당 시스템의 고객 학습 업무·구매·HBM 배정은 미확인.",
+      "technical_to_commercial_mapping_status": "OUR_RESEARCH_MAP_WITH_SOURCE_BACKED_PARTS_NOT_CAUSAL_PROOF",
+      "customer_specific_bottleneck_measured": false,
+      "legal_buyer": null,
+      "customer_quantity_price": null,
+      "supply_allocation": null,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "adoption_evidence_scope": "ISSUER_REPORTED_GB300_HBM_APPLICATION_SEPARATE_FROM_WORKLOAD",
+      "actor_roles_to_distinguish": [
+        "NVIDIA: platform specifications",
+        "SK hynix: memory developer/supplier"
+      ],
+      "supply_readiness_questions": [
+        "HBM product/process scope, packaging/test and named platform qualification",
+        "TSMC HBM4 cooperation is background, not GB300 capacity allocation"
+      ],
+      "requirement_dimensions": [
+        "capacity",
+        "bandwidth",
+        "latency",
+        "power",
+        "compatibility"
+      ],
+      "existing_product_card_path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/card.json"
+    },
+    {
+      "link_id": "AIL02",
+      "title_ko": "prefill과decode의 처리 목표",
+      "workload_conditions_ko": "입력/출력 길이·동시성·effective batch·TTFT/TPOT·runtime",
+      "bottleneck_to_investigate_ko": "단계별 계산·메모리 이동·지연",
+      "memory_product_families": [
+        "HBM"
+      ],
+      "source_ids": [
+        "SRC-AI-SW-NV-INFERENCE",
+        "SRC-HBM-NV-PRODUCT"
+      ],
+      "software_condition_ids": [
+        "SWCOND-01-TRAINING-PREFILL-DECODE",
+        "SWCOND-02-CONTEXT-CONCURRENCY"
+      ],
+      "product_adoption_example_ids": [],
+      "metric_contract_refs": [
+        "MC02",
+        "MC04"
+      ],
+      "claim_boundary_ko": "모든 decode를 메모리 병목으로 고정하거나 같은 GPU 시험을 HBM 구매량으로 환산하지 않음.",
+      "technical_to_commercial_mapping_status": "OUR_RESEARCH_MAP_WITH_SOURCE_BACKED_PARTS_NOT_CAUSAL_PROOF",
+      "customer_specific_bottleneck_measured": false,
+      "legal_buyer": null,
+      "customer_quantity_price": null,
+      "supply_allocation": null,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "adoption_evidence_scope": "TECHNICAL_PHASE_DESCRIPTION_NO_CUSTOMER_PURCHASE",
+      "actor_roles_to_distinguish": [
+        "AI operator: latency/throughput requirements",
+        "platform architect: configuration"
+      ],
+      "supply_readiness_questions": [
+        "Same workload profiling and platform memory specification",
+        "No supplier allocation or per-customer shipment measured"
+      ],
+      "requirement_dimensions": [
+        "capacity",
+        "bandwidth",
+        "latency",
+        "power",
+        "compatibility"
+      ],
+      "existing_product_card_path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/card.json"
+    },
+    {
+      "link_id": "AIL03",
+      "title_ko": "긴 문맥·다회 추론의KV계층배치",
+      "workload_conditions_ko": "문맥·모델구조/KV heads·active concurrency·재사용·계층별전송",
+      "bottleneck_to_investigate_ko": "KV용량·계층간대역폭·지연·전력",
+      "memory_product_families": [
+        "HBM",
+        "HOST_DRAM_PLATFORM_SPECIFIC",
+        "LOCAL_SSD",
+        "NETWORK_ATTACHED_FLASH"
+      ],
+      "source_ids": [
+        "SRC-AITECH-NV-CMX-BLOG26",
+        "SRC-AITECH-NV-CMX-PRODUCT",
+        "SRC-AI-SW-NV-INFERENCE",
+        "SRC-AI-SW-TRT-KV-REUSE"
+      ],
+      "software_condition_ids": [
+        "SWCOND-02-CONTEXT-CONCURRENCY",
+        "SWCOND-04-PREFIX-REUSE-OFFLOAD"
+      ],
+      "product_adoption_example_ids": [],
+      "metric_contract_refs": [
+        "MC02",
+        "MC04",
+        "MC03",
+        "MC17"
+      ],
+      "claim_boundary_ko": "CMX 아키텍처·파트너 목록은 특정 하이닉스 SKU·구매·고객 설치의 근거가 아님. 호스트 RAM 규격은 플랫폼별 확인.",
+      "technical_to_commercial_mapping_status": "OUR_RESEARCH_MAP_WITH_SOURCE_BACKED_PARTS_NOT_CAUSAL_PROOF",
+      "customer_specific_bottleneck_measured": false,
+      "legal_buyer": null,
+      "customer_quantity_price": null,
+      "supply_allocation": null,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "adoption_evidence_scope": "ISSUER_ARCHITECTURE_AND_PARTNER_LIST",
+      "actor_roles_to_distinguish": [
+        "NVIDIA: CMX architecture",
+        "listed partners: ecosystem roles only"
+      ],
+      "supply_readiness_questions": [
+        "Named CMX hardware/SSD integration and software qualification",
+        "Actual purchase, SKU, site installation/power/use remain unknown"
+      ],
+      "requirement_dimensions": [
+        "capacity",
+        "bandwidth",
+        "latency",
+        "power",
+        "compatibility"
+      ]
+    },
+    {
+      "link_id": "AIL04",
+      "title_ko": "정밀도·캐시재사용·offload의대체설명",
+      "workload_conditions_ko": "weight/activation/KV dtype·품질·같은prompt·eviction·backend/commit·cold/warm",
+      "bottleneck_to_investigate_ko": "메모리점유·재계산·hostlink전송비용의상충",
+      "memory_product_families": [
+        "GPU_MEMORY_PLATFORM_SPECIFIC",
+        "HOST_MEMORY_PLATFORM_SPECIFIC",
+        "STORAGE_WHEN_SUPPORTED"
+      ],
+      "source_ids": [
+        "SRC-AI-SW-TRT-QUANTIZATION",
+        "SRC-AI-SW-TRT-KV-REUSE"
+      ],
+      "software_condition_ids": [
+        "SWCOND-03-PRECISION-KV-QUANTIZATION",
+        "SWCOND-04-PREFIX-REUSE-OFFLOAD"
+      ],
+      "product_adoption_example_ids": [],
+      "metric_contract_refs": [
+        "MC04",
+        "MC02"
+      ],
+      "claim_boundary_ko": "문서의 지원 조건이며 운영 실측이 아님. 효율 개선을 산업 총수요·구매 증감으로 변환하지 않음.",
+      "technical_to_commercial_mapping_status": "OUR_RESEARCH_MAP_WITH_SOURCE_BACKED_PARTS_NOT_CAUSAL_PROOF",
+      "customer_specific_bottleneck_measured": false,
+      "legal_buyer": null,
+      "customer_quantity_price": null,
+      "supply_allocation": null,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "adoption_evidence_scope": "SOFTWARE_DOCUMENTATION_SUPPORT_CONDITIONS_NOT_ADOPTION_MEASUREMENT",
+      "actor_roles_to_distinguish": [
+        "inference team: backend and workload",
+        "platform/product planner: compatible configuration"
+      ],
+      "supply_readiness_questions": [
+        "Backend/commit/model/hardware support and output quality",
+        "Reuse/offload success, eviction and host-link costs need controlled measurement"
+      ],
+      "requirement_dimensions": [
+        "capacity",
+        "bandwidth",
+        "latency",
+        "power",
+        "compatibility"
+      ]
+    },
+    {
+      "link_id": "AIL05",
+      "title_ko": "CPU서버고용량시스템메모리",
+      "workload_conditions_ko": "서버업무·Xeon플랫폼·모듈용량/속도·DIMM구성·품질/전력",
+      "bottleneck_to_investigate_ko": "CPU메모리용량·대역폭·플랫폼호환성",
+      "memory_product_families": [
+        "SERVER_DDR5_RDIMM"
+      ],
+      "source_ids": [
+        "SRC-HY26-INTEL",
+        "SRC-HY26-DELL"
+      ],
+      "software_condition_ids": [],
+      "product_adoption_example_ids": [
+        "ADOPT-DDR5-INTEL-XEON6",
+        "ADOPT-DDR5-ESSD-DELL-R770"
+      ],
+      "metric_contract_refs": [
+        "MC02",
+        "MC03",
+        "MC04",
+        "MC06",
+        "MC15"
+      ],
+      "claim_boundary_ko": "Intel 인증과 Dell 전시 설치는 각각의 사건. 동일 SKU·고객 AI 업무·발주·대량 출하 미확인.",
+      "technical_to_commercial_mapping_status": "OUR_RESEARCH_MAP_WITH_SOURCE_BACKED_PARTS_NOT_CAUSAL_PROOF",
+      "customer_specific_bottleneck_measured": false,
+      "legal_buyer": null,
+      "customer_quantity_price": null,
+      "supply_allocation": null,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "adoption_evidence_scope": "SEPARATE_INTEL_CERTIFICATION_AND_DELL_EXHIBITION_EVENTS",
+      "actor_roles_to_distinguish": [
+        "Intel: platform validation",
+        "Dell: exhibited system",
+        "SK hynix: module/SSD supplier framing"
+      ],
+      "supply_readiness_questions": [
+        "Exact part number, DIMM configuration, OEM qualification and commercial shipment",
+        "Identical Intel/Dell SKU and order are unverified"
+      ],
+      "requirement_dimensions": [
+        "capacity",
+        "bandwidth",
+        "latency",
+        "power",
+        "compatibility"
+      ]
+    },
+    {
+      "link_id": "AIL06",
+      "title_ko": "저장용량·데이터접근과eSSD",
+      "workload_conditions_ko": "업무·읽기/쓰기·block size·cache state·IOPS/latency·내구성·공간/전력/TCO",
+      "bottleneck_to_investigate_ko": "데이터보관·저장I/O·시스템균형",
+      "memory_product_families": [
+        "NAND",
+        "ENTERPRISE_SSD"
+      ],
+      "source_ids": [
+        "SRC-HY26-VAST",
+        "SRC-HY26-SSD-WORKLOAD",
+        "SRC-HY26-DELL"
+      ],
+      "software_condition_ids": [],
+      "product_adoption_example_ids": [
+        "ADOPT-ESSD-SOLIDIGM-VAST",
+        "ADOPT-DDR5-ESSD-DELL-R770"
+      ],
+      "metric_contract_refs": [
+        "MC02",
+        "MC03",
+        "MC04",
+        "MC06",
+        "MC17"
+      ],
+      "claim_boundary_ko": "기명 활용·공급사 시험·전시 설치는 별개. SKU·PO·고객 실측은 미확인. SSD 추가가 모든 추론 성능을 개선하지 않음.",
+      "technical_to_commercial_mapping_status": "OUR_RESEARCH_MAP_WITH_SOURCE_BACKED_PARTS_NOT_CAUSAL_PROOF",
+      "customer_specific_bottleneck_measured": false,
+      "legal_buyer": null,
+      "customer_quantity_price": null,
+      "supply_allocation": null,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "adoption_evidence_scope": "NAMED_CUSTOMER_USE_VENDOR_TEST_AND_EXHIBITION_ARE_SEPARATE",
+      "actor_roles_to_distinguish": [
+        "VAST: named storage customer/user in issuer story",
+        "Solidigm: SSD vendor",
+        "Dell: exhibition system"
+      ],
+      "supply_readiness_questions": [
+        "Exact SSD/model/controller/firmware, I/O/endurance and system compatibility",
+        "Same-condition performance/power/TCO and actual order/use remain unknown"
+      ],
+      "requirement_dimensions": [
+        "capacity",
+        "IOPS",
+        "I/O_latency",
+        "endurance",
+        "power",
+        "TCO"
+      ]
+    },
+    {
+      "link_id": "AIL07",
+      "title_ko": "HBF신규메모리계층제안",
+      "workload_conditions_ko": "공개규격·NANDstack·용량/대역폭grade·UCIe·프로세서/컨트롤러호환성",
+      "bottleneck_to_investigate_ko": "추론용용량·대역폭문제에대한미래설계선택지",
+      "memory_product_families": [
+        "HBF_NAND_BASED_EMERGING_TECHNOLOGY"
+      ],
+      "source_ids": [
+        "SRC-AITECH-HBF-FMS26"
+      ],
+      "software_condition_ids": [],
+      "product_adoption_example_ids": [
+        "ADOPT-HBF-SANDISK-OCP"
+      ],
+      "metric_contract_refs": [
+        "MC02",
+        "MC03",
+        "MC15"
+      ],
+      "claim_boundary_ko": "표준 규격 공개·생태계 참여 사건. OCP 원규격·인증과 고객 양산 채택·납품 미확인. CMX flash와 동일 상품으로 취급하지 않음.",
+      "technical_to_commercial_mapping_status": "OUR_RESEARCH_MAP_WITH_SOURCE_BACKED_PARTS_NOT_CAUSAL_PROOF",
+      "customer_specific_bottleneck_measured": false,
+      "legal_buyer": null,
+      "customer_quantity_price": null,
+      "supply_allocation": null,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "adoption_evidence_scope": "ISSUER_REPORTED_STANDARD_SPECIFICATION_AND_ECOSYSTEM_EVENT",
+      "actor_roles_to_distinguish": [
+        "SK hynix/Sandisk: standardization partners"
+      ],
+      "supply_readiness_questions": [
+        "Original OCP specification/conformance, processor integration, controller and customer qualification",
+        "No customer HBF mass-shipment or facility allocation measured"
+      ],
+      "requirement_dimensions": [
+        "capacity",
+        "bandwidth",
+        "latency",
+        "power",
+        "compatibility"
+      ]
+    }
+  ],
+  "join_grain": "workload/model-version x platform/configuration x product/SKU x actor/role x document/event-version",
+  "metric_contract_path": "docs/research/supply_chain/memory_cycle_signal_plan.md",
+  "field_interpretation": {
+    "bottleneck_to_investigate_ko": "Investigation target; not an observed customer bottleneck",
+    "source_ids": "Support for specific technical/issuer parts; not approval of the entire causal chain",
+    "product_adoption_example_ids": "Separate existing public examples; not one purchase chain",
+    "customer_quantity_price": "Null unless explicit same-product customer evidence is collected"
+  },
+  "learning_output_by_role": {
+    "sales": "account roles, adoption/order gaps and supply timetable",
+    "marketing": "workload-specific value and controlled comparison conditions",
+    "product_planning": "memory tier, specification, platform and documentation version",
+    "commercialization": "sample/certification/exhibition/shipment and readiness gaps"
+  },
+  "not_implemented": [
+    "runtime benchmark",
+    "customer utilization measurement",
+    "recurring collection",
+    "global semiconductor demand estimate",
+    "empirical leadingness",
+    "H1 admission",
+    "new API account issuance"
+  ]
+}
