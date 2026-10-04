@@ -8,6 +8,8 @@
 
 함께 읽을 문서: [메모리 사이클과 지표 수집 계획](memory_cycle_signal_plan.md), [하이닉스 직무와 상품](sk_hynix_commercial_role_context.md), [HBM3E와 GB300 사례](customer_product_cards/hbm_nvidia_gb300.md).
 
+2026-10-05 후속 [산업 전파 경로 점검](semiconductor_industry_transmission_routes.md)은 이 제품·사업모델·공정 분류를 사용해 비메모리 제품, 데이터센터·전력 규제·국가 간 협력과 RF/우주 전원 용도의 관계를 보완한다. 이 문서의 기존 통계·출처 기준일을 전수 갱신한 것은 아니다.
+
 ## 분류와 공정의 전체 그림
 
 아래 그림은 산업 기능의 연결이다. 화살표는 특정 기업의 계약이나 지급을 증명하지 않는다. 실제 거래는 별도의 기명 근거로 연결한다.
