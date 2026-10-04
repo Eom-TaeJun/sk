@@ -1,0 +1,1949 @@
+{
+  "schema_version": 1,
+  "as_of_date_kst": "2026-10-05",
+  "purpose_ko": "SK hynix 영업·마케팅·상품기획 배경 지도를 위한 무료 무역·산업·소재 수집 경로의 실증. 가능한 질문과 정의·접근·실패·미확정 항목을 고정한다.",
+  "scope": "RESEARCH_CANDIDATE_ACCESS_FEASIBILITY_NOT_METRIC_VALUE_PANEL",
+  "research_candidate": true,
+  "human_approved": false,
+  "h1_eligible": false,
+  "governed_dataset_changed": false,
+  "accounts_created": false,
+  "keys_issued": false,
+  "private_credentials_read": false,
+  "external_messages_sent": false,
+  "measurement_periods_probed": [
+    "2025-01",
+    "2020",
+    "MCS2026 reference-year 2025 estimates"
+  ],
+  "period_note_ko": "접근 가능성 검증을 위한 작은 역사 기간 요청. 가장 최근 경제 관측·현재 수요/공급 상태나 선행성을 검증하지 않는다.",
+  "sources": [
+    {
+      "id": "DOC-TM-COMTRADE-PREVIEW",
+      "official_original_url": "https://uncomtrade.org/docs/what-is-data-preview/",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:18.498713+00:00",
+      "access_status": "DOC_HTTP_BODY_CAPTURED",
+      "http_status": 200,
+      "original_http_body_sha256": "1b90c37b587c6019eb257483e7121db222f1b220c7877137a844a599c60661a3",
+      "original_http_body_bytes": 443196,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "Data preview / maximum preview records",
+      "support_scope_ko": [
+        "익명 preview의 일부 응답과 전체 통계 추출의 차이"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-COMTRADE-KEY",
+      "official_original_url": "https://uncomtrade.org/docs/api-subscription-keys/",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:18.502879+00:00",
+      "access_status": "DOC_HTTP_BODY_CAPTURED",
+      "http_status": 200,
+      "original_http_body_sha256": "e35871478e20d4562f891c56e850052302704d8eb0e7cfca0719a2cdfd0e85ef",
+      "original_http_body_bytes": 427891,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "API subscription keys / free registration and MyAPI",
+      "support_scope_ko": [
+        "등록 무료 API 키 발급 경로; 실제 키 발급은 수행하지 않음"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-COMTRADE-SUB",
+      "official_original_url": "https://uncomtrade.org/docs/subscriptions/",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:18.506446+00:00",
+      "access_status": "DOC_HTTP_BODY_CAPTURED",
+      "http_status": 200,
+      "original_http_body_sha256": "da5204e004aebf20526e27e73663df69467d8b5790e8e3b8a1fdd516f9a88394",
+      "original_http_body_bytes": 459424,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "Basic individual subscription table / record and call limits",
+      "support_scope_ko": [
+        "공용 preview와 등록 무료 계정의 서로 다른 제한"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-COMTRADE-REUSE",
+      "official_original_url": "https://uncomtrade.org/docs/policy-on-use-and-re-dissemination/",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:18.508999+00:00",
+      "access_status": "DOC_HTTP_BODY_CAPTURED",
+      "http_status": 200,
+      "original_http_body_sha256": "095f53a49b43ad10f6ecb6b864ded524bbd31e9816878c6e2787af9510cef62a",
+      "original_http_body_bytes": 462784,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "Policy on use and re-dissemination / acceptable use and limits",
+      "support_scope_ko": [
+        "재배포 조건과 제한 변경 가능성"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-EUROSTAT-INTRO",
+      "official_original_url": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-introduction",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:25.486505+00:00",
+      "access_status": "DOC_HTTP_BODY_CAPTURED",
+      "http_status": 200,
+      "original_http_body_sha256": "e859078bce47c22edbfb080177b84899bb62154e5bdb22bc874084c2bf943966",
+      "original_http_body_bytes": 216465,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "API introduction / supported formats, update times, Comext/Prodcom base",
+      "support_scope_ko": [
+        "무료 형식별 API; 최신 DB 갱신과 경제통계 주기는 별개"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-OECD-API",
+      "official_original_url": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html",
+      "published_or_displayed_date": "2025-04-30",
+      "publication_date_note_ko": "문서 화면의 날짜; URL 연도와 다를 수 있음. 최초 게시 시각의 독립 확인 아님.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:25.893853+00:00",
+      "access_status": "HTTP_ERROR_WEB_TOOL_BODY_REVIEWED",
+      "http_status": 403,
+      "original_http_body_sha256": null,
+      "original_http_body_bytes": null,
+      "http_error_body_receipt": {
+        "sha256": "3ab6cdc78a27bc04faba70063d484f3b33dccbef91015a1d1638e12d4dd80ff0",
+        "bytes": 5720,
+        "representation": "HTTP_ERROR_BODY_NOT_OFFICIAL_DOCUMENT_CONTENT"
+      },
+      "web_review_capture": {
+        "bundle_sha256": "e9bfc826ca9e986c112dd23cfddda21987da6768a3d9a97737f3c71e745068d4",
+        "bundle_bytes": 29374,
+        "representation": "WEB_TOOL_NORMALIZED_RESPONSE_BUNDLE_NOT_ORIGINAL_HTTP_BYTES",
+        "page_url": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html"
+      },
+      "locator": "API explainer / free SDMX API, dataflow and version",
+      "support_scope_ko": [
+        "무료 SDMX 접근과 버전 고정; 웹 도구 본문으로 확인"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-OECD-LIMITS",
+      "official_original_url": "https://www.oecd.org/en/data/insights/data-explainers/2024/11/Api-best-practices-and-recommendations.html",
+      "published_or_displayed_date": "2026-03-18",
+      "publication_date_note_ko": "문서 화면의 날짜; URL 연도와 다를 수 있음. 최초 게시 시각의 독립 확인 아님.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:25.964014+00:00",
+      "access_status": "HTTP_ERROR_WEB_TOOL_BODY_REVIEWED",
+      "http_status": 403,
+      "original_http_body_sha256": null,
+      "original_http_body_bytes": null,
+      "http_error_body_receipt": {
+        "sha256": "4bd1b5d222975e529d72d17f150d86d21b92dae440393f77f353a06603719d11",
+        "bytes": 5868,
+        "representation": "HTTP_ERROR_BODY_NOT_OFFICIAL_DOCUMENT_CONTENT"
+      },
+      "web_review_capture": {
+        "bundle_sha256": "e9bfc826ca9e986c112dd23cfddda21987da6768a3d9a97737f3c71e745068d4",
+        "bundle_bytes": 29374,
+        "representation": "WEB_TOOL_NORMALIZED_RESPONSE_BUNDLE_NOT_ORIGINAL_HTTP_BYTES",
+        "page_url": "https://www.oecd.org/en/data/insights/data-explainers/2024/11/Api-best-practices-and-recommendations.html"
+      },
+      "locator": "Best practices / 60 downloads per hour, VPN, metadata cache",
+      "support_scope_ko": [
+        "다운로드 제한과 요청 최소화; 웹 도구 본문으로 확인"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-OECD-PARAMS",
+      "official_original_url": "https://www.oecd.org/en/data/insights/data-explainers/2026/03/Restricted-API-parameter.html",
+      "published_or_displayed_date": "2025-03-18",
+      "publication_date_note_ko": "문서 화면의 날짜; URL 연도와 다를 수 있음. 최초 게시 시각의 독립 확인 아님.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:26.032639+00:00",
+      "access_status": "HTTP_ERROR_WEB_TOOL_BODY_REVIEWED",
+      "http_status": 403,
+      "original_http_body_sha256": null,
+      "original_http_body_bytes": null,
+      "http_error_body_receipt": {
+        "sha256": "8853bb18751376e334b3a5ee7afbf6d63da2663570ce6f33def1d8413b83ba23",
+        "bytes": 5805,
+        "representation": "HTTP_ERROR_BODY_NOT_OFFICIAL_DOCUMENT_CONTENT"
+      },
+      "web_review_capture": {
+        "bundle_sha256": "e9bfc826ca9e986c112dd23cfddda21987da6768a3d9a97737f3c71e745068d4",
+        "bundle_bytes": 29374,
+        "representation": "WEB_TOOL_NORMALIZED_RESPONSE_BUNDLE_NOT_ORIGINAL_HTTP_BYTES",
+        "page_url": "https://www.oecd.org/en/data/insights/data-explainers/2026/03/Restricted-API-parameter.html"
+      },
+      "locator": "Restricted API parameters / STI TiVA firstNObservations and lastNObservations",
+      "support_scope_ko": [
+        "TiVA 제한 파라미터; 해당 파라미터는 사용하지 않음"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-KOSIS-GUIDE",
+      "official_original_url": "https://kosis.kr/openapi/devGuide/devGuide_0201List.do",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:26.051869+00:00",
+      "access_status": "DOC_HTTP_BODY_CAPTURED",
+      "http_status": 200,
+      "original_http_body_sha256": "ffa38d0e4afaf09d54b8e3542fe815b5a4cc1237a4376b4812ce49fd15b07c52",
+      "original_http_body_bytes": 93406,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "통계자료 / 통계표 선택 방식 / 요청·출력 변수",
+      "support_scope_ko": [
+        "apiKey와 표·항목·분류·기간 파라미터; 공개 예시 키는 사용·복제하지 않음"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-KOSIS-HOME",
+      "official_original_url": "https://kosis.kr/openapi/index/index.jsp",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:26.117024+00:00",
+      "access_status": "DOC_HTTP_BODY_CAPTURED",
+      "http_status": 200,
+      "original_http_body_sha256": "bc55fd3b76dc0e1ba920f2f91dad9cd3b1ea0b9ba09b6d6b82d39554fffecdbe",
+      "original_http_body_bytes": 20999,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "공지사항 / 2026-07-09 분당 호출 제한; 2026-02-05 HTTP 종료",
+      "support_scope_ko": [
+        "호출 제한 공지의 존재와 HTTPS 사용; 숫자 제한은 미확정"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-KOSIS-TERMS",
+      "official_original_url": "https://kosis.kr/openapi/service/service_0301List.do",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:26.330949+00:00",
+      "access_status": "HTTP_ERROR",
+      "http_status": 404,
+      "original_http_body_sha256": null,
+      "original_http_body_bytes": null,
+      "http_error_body_receipt": {
+        "sha256": "d90aac2c6ad0c7a59ab8ce2251991eccd7c02dded3f86a670bf6d4774d2b940b",
+        "bytes": 1560,
+        "representation": "HTTP_ERROR_BODY_NOT_OFFICIAL_DOCUMENT_CONTENT"
+      },
+      "web_review_capture": null,
+      "locator": "Attempted URL returned HTTP 404",
+      "support_scope_ko": [],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-CUSTOMS",
+      "official_original_url": "https://www.data.go.kr/data/15100475/openapi.do",
+      "published_or_displayed_date": "2026-05-22",
+      "publication_date_note_ko": "문서 화면의 날짜; URL 연도와 다를 수 있음. 최초 게시 시각의 독립 확인 아님.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:26.586428+00:00",
+      "access_status": "DOC_HTTP_BODY_CAPTURED",
+      "http_status": 200,
+      "original_http_body_sha256": "86053c0cd306af8ac76f7c6fdf995f0180270f83fb50ff9e2bdc0e0adf61dcd7",
+      "original_http_body_bytes": 206594,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "활용 명세 / 요청·출력 항목; 유의사항; 이용허락범위",
+      "support_scope_ko": [
+        "HS별 국가별 월간 API, CIF/FOB, 공개일·수정·기간·키·트래픽"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-USGS-GALLIUM",
+      "official_original_url": "https://www.usgs.gov/centers/national-minerals-information-center/gallium-statistics-and-information",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:26.955281+00:00",
+      "access_status": "DOC_HTTP_BODY_CAPTURED",
+      "http_status": 200,
+      "original_http_body_sha256": "48bdd82de45557c6e2b21b5fed3c3282f98757ddeb5af9aa652b13a11a6ea5c6",
+      "original_http_body_bytes": 105270,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "Mineral Commodity Summaries / 2026; Minerals Yearbook posting notice",
+      "support_scope_ko": [
+        "갈륨 연간 자료의 공식 파일 경로와 Yearbook 게시 중단 안내"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-USGS-POLICY",
+      "official_original_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:27.109509+00:00",
+      "access_status": "DOC_HTTP_BODY_CAPTURED",
+      "http_status": 200,
+      "original_http_body_sha256": "e95039e1a0d2972e33bb724bc181af796531f77d45b43fc7bd4059e064824f3e",
+      "original_http_body_bytes": 88963,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "USGS-authored works / public domain and credits",
+      "support_scope_ko": [
+        "미국 연방 저작물 재사용 원칙과 별도 크레딧 확인"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "PROBE-TM-COMTRADE",
+      "official_original_url": "https://comtradeapi.un.org/public/v1/preview/C/M/HS?period=202501&reporterCode=410&cmdCode=854232&flowCode=X&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&maxRecords=1",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:27.973279+00:00",
+      "access_status": "DATA_RESPONSE_NONEMPTY_MATCHED",
+      "http_status": 200,
+      "original_http_body_sha256": "2b66a5b34e2274f44b669eb90de382ff2bf531ef82a37e407c1fee1525867e3b",
+      "original_http_body_bytes": 967,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "JSON data[0] / classificationCode, requested reporter-period-product-flow",
+      "support_scope_ko": [
+        "요청과 일치하는 일부 1행을 실제 수신; 경제 지표값은 공개 산출물에서 제외"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "PROBE-TM-EUROSTAT",
+      "official_original_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sts_inpr_m?lang=en&freq=M&unit=I21&nace_r2=C261&s_adj=SCA&geo=DE&time=2025-01",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:28.751141+00:00",
+      "access_status": "DATA_RESPONSE_NONEMPTY",
+      "http_status": 200,
+      "original_http_body_sha256": "49a1e3ee556b5c8f74226e05a6e0919a8db24913ad6c20f7642303fe7e1f8a1f",
+      "original_http_body_bytes": 3559,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "JSON-stat dimension labels and value dictionary",
+      "support_scope_ko": [
+        "독일 C261 월간 생산지수 1개 관측을 실제 수신; 호출 형식은 JSON-stat"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "PROBE-TM-OECD",
+      "official_original_url": "https://sdmx.oecd.org/sti-public/rest/data/OECD.STI.PIE,DSD_TIVA_MAINSH@DF_MAINSH,1.1/EXGR_FVASH.KOR.D26.W..A?startPeriod=2020&endPeriod=2020&dimensionAtObservation=AllDimensions&format=csvfilewithlabels",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:29.682366+00:00",
+      "access_status": "HTTP_ERROR",
+      "http_status": 404,
+      "original_http_body_sha256": null,
+      "original_http_body_bytes": null,
+      "http_error_body_receipt": {
+        "sha256": "23714ac852cb0afe23052aac153af6c68819c67559d3163f4f7a44511144031e",
+        "bytes": 14,
+        "representation": "HTTP_ERROR_BODY_NOT_OFFICIAL_DOCUMENT_CONTENT"
+      },
+      "web_review_capture": null,
+      "locator": "HTTP error response body / NoResultsFound",
+      "support_scope_ko": [
+        "구 코드 조합으로 요청한 첫 호출의 실제 실패"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "PROBE-TM-USGS-FILE",
+      "official_original_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-gallium.pdf",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:10:30.143310+00:00",
+      "access_status": "FILE_DOCUMENT_SUCCESS_NOT_API",
+      "http_status": 200,
+      "original_http_body_sha256": "15df2a3ef3ed992b8bb9e1785809a83219864286626b289c207ca5fda84ca27c",
+      "original_http_body_bytes": 136626,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "PDF pp.1–2 / units, World Low-Purity Production and Production Capacity",
+      "support_scope_ko": [
+        "갈륨 2026 연간 파일; 국가별 저순도 1차 생산·능력과 단위"
+      ],
+      "english_excerpt": "Data in kilograms, gallium content, unless otherwise specified",
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-KOSIS-TERMS-ACTUAL",
+      "official_original_url": "https://kosis.kr/openapi/introduce/introduce_02List.do",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:14:55.899926+00:00",
+      "access_status": "DOC_HTTP_BODY_CAPTURED",
+      "http_status": 200,
+      "original_http_body_sha256": "3bd3bb68b25f11c04510079394f34219593f243755720dca2d2f803d01baf7ba",
+      "original_http_body_bytes": 36241,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "이용약관 / 제7조 출처 표시, 제8조 상업적 이용 및 국제통계 예외, 제10조 무상 제공 원칙",
+      "support_scope_ko": [
+        "국내 통계 이용 조건; 기관·통계별 예외; 공식 서비스 무상 제공 원칙과 별도 제공 비용 예외"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-EUROSTAT-LICENSE",
+      "official_original_url": "https://ec.europa.eu/eurostat/about-us/policies/copyright",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:14:56.301178+00:00",
+      "access_status": "HTTP_ERROR",
+      "http_status": 404,
+      "original_http_body_sha256": null,
+      "original_http_body_bytes": null,
+      "http_error_body_receipt": {
+        "sha256": "36828b66289013699f8987f765508acb62f3a9e0b49360fef148cfa70b1df89b",
+        "bytes": 159306,
+        "representation": "HTTP_ERROR_BODY_NOT_OFFICIAL_DOCUMENT_CONTENT"
+      },
+      "web_review_capture": null,
+      "locator": "Attempted previous URL returned HTTP 404",
+      "support_scope_ko": [],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-OECD-TERMS",
+      "official_original_url": "https://www.oecd.org/en/about/terms-conditions.html",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:14:58.140838+00:00",
+      "access_status": "HTTP_ERROR_WEB_TOOL_BODY_REVIEWED",
+      "http_status": 403,
+      "original_http_body_sha256": null,
+      "original_http_body_bytes": null,
+      "http_error_body_receipt": {
+        "sha256": "de2e778ef9240627df2575b4ad0fbfbb6d9b497e56c4ed1dea246a71cfb2cdf1",
+        "bytes": 5621,
+        "representation": "HTTP_ERROR_BODY_NOT_OFFICIAL_DOCUMENT_CONTENT"
+      },
+      "web_review_capture": {
+        "bundle_sha256": "e9bfc826ca9e986c112dd23cfddda21987da6768a3d9a97737f3c71e745068d4",
+        "bundle_bytes": 29374,
+        "representation": "WEB_TOOL_NORMALIZED_RESPONSE_BUNDLE_NOT_ORIGINAL_HTTP_BYTES",
+        "page_url": "https://www.oecd.org/en/about/terms-conditions.html"
+      },
+      "locator": "Terms / separate Data section",
+      "support_scope_ko": [
+        "자료 재사용 조건; 저작물 일반 CC BY 문구와 데이터 조건 구분"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "PROBE-TM-OECD-STRUCTURE",
+      "official_original_url": "https://sdmx.oecd.org/sti-public/rest/dataflow/OECD.STI.PIE/DSD_TIVA_MAINSH@DF_MAINSH/1.1?references=all",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:14:58.293347+00:00",
+      "access_status": "METADATA_STRUCTURE_PARSED_NOT_DATA",
+      "http_status": 200,
+      "original_http_body_sha256": "09290d577d98303d073883a83dea30f3f8973588a86e5e6ce55992ea40b96f87",
+      "original_http_body_bytes": 2171555,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "SDMX XML DataStructure dimensions and referenced code lists",
+      "support_scope_ko": [
+        "현재 차원 순서와 C26, EXGR_FVA, PT_EXGR 코드; 통계값 응답은 아님"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "PROBE-TM-OECD-CORRECTED",
+      "official_original_url": "https://sdmx.oecd.org/sti-public/rest/data/OECD.STI.PIE,DSD_TIVA_MAINSH@DF_MAINSH,1.1/EXGR_FVA.KOR.C26.W.PT_EXGR.A?startPeriod=2020&endPeriod=2020&dimensionAtObservation=AllDimensions&format=csvfilewithlabels",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:19:05.329631+00:00",
+      "access_status": "DATA_RESPONSE_NONEMPTY",
+      "http_status": 200,
+      "original_http_body_sha256": "0d60be4c92c4c777822a37db8758d300fb805825bdaad72f6b6f1fc874172c02",
+      "original_http_body_bytes": 607,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "SDMX CSV header and one data row / nonempty OBS_VALUE",
+      "support_scope_ko": [
+        "메타데이터에 맞춘 C26 외국 부가가치 수출 비중 1행 실제 수신"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "DOC-TM-EUROSTAT-LICENSE-ACTUAL",
+      "official_original_url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:19:06.940632+00:00",
+      "access_status": "DOC_HTTP_BODY_CAPTURED",
+      "http_status": 200,
+      "original_http_body_sha256": "43040b3113f96b2db5288d072e7ddb3b5bba222079b770d7033c69185164fcf8",
+      "original_http_body_bytes": 177245,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "Reuse of data / acknowledgement and commercial exceptions",
+      "support_scope_ko": [
+        "통계·메타데이터 재사용 및 상세 무역·제3자 예외"
+      ],
+      "english_excerpt": null,
+      "credentials_used": null,
+      "raw_redistributed": false
+    },
+    {
+      "id": "PROBE-TM-USGS-REE-FILE",
+      "official_original_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+      "published_or_displayed_date": null,
+      "publication_date_note_ko": "검토 자료에서 독립적인 최초 게시 날짜·시각을 확정하지 않음.",
+      "checked_date_kst": "2026-10-05",
+      "retrieved_at_utc": "2026-10-04T17:19:09.700862+00:00",
+      "access_status": "FILE_DOCUMENT_SUCCESS_NOT_API",
+      "http_status": 200,
+      "original_http_body_sha256": "0116a192336fec41c38d8e11dad553bb7703308c1fbd1f97dc14b75c7e7d9900",
+      "original_http_body_bytes": 639984,
+      "http_error_body_receipt": null,
+      "web_review_capture": null,
+      "locator": "PDF pp.1–2 / units, World Mine Production and Reserves",
+      "support_scope_ko": [
+        "희토류 2026 연간 파일; REO 환산 광산 생산·매장량 단위"
+      ],
+      "english_excerpt": "Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified",
+      "credentials_used": null,
+      "raw_redistributed": false
+    }
+  ],
+  "families": [
+    {
+      "id": "TM-01-UN-COMTRADE",
+      "provider": "UN Comtrade",
+      "family_kind": "PRODUCT_TRADE_API",
+      "purpose_ko": "메모리·장비·소재의 국가 간 이동과 조달 국가 집중을 관찰하고 제품별 실제 수요·생산 질문의 외부 검증 자료로 사용한다.",
+      "customer_role_question_ko": "메모리 구매자·서버 OEM·제조사의 수출입 경로가 바뀌는지 묻되, 무역 상대국을 실제 고객 회사로 치환하지 않는다.",
+      "metric_ids_reused": [
+        "capital-comtrade-physical-trade",
+        "supply-component-country-concentration"
+      ],
+      "memory_cycle_metric_ids_reused": [
+        "MC12"
+      ],
+      "route_ids_reused": [
+        "PROD-01-HBM-GPU",
+        "PROD-02-DDR-CPU",
+        "PROD-03-LPDDR-CPU",
+        "PROD-04-NAND-ESSD",
+        "PROD-05-HBM-ASIC",
+        "PROD-06-FOUNDRY-NODES",
+        "PROD-08-EQUIPMENT-MATERIALS"
+      ],
+      "products_processes_ko": [
+        "HS 854232 메모리 집적회로: HBM/DDR/LPDDR/NAND 세분 식별 불가",
+        "제조장비·소재는 별도 HS 판별표가 필요한 후보 바스켓; 이번 호출에 포함하지 않음"
+      ],
+      "measurement_contract": {
+        "grain": "reporter × period × classification edition × cmdCode × flowCode × partnerCode × partner2Code × customsCode × motCode",
+        "units": [
+          "primaryValue/fobvalue/cifvalue: USD, 평가방식별 분리",
+          "netWgt/grossWgt: kg",
+          "qty/altQty: qtyUnitCode와 qtyUnitAbbr 보존; 개수로 일괄 환산 금지"
+        ],
+        "frequency": "monthly or annual; actual probe monthly 2025-01",
+        "publication_lag_days": null,
+        "publication_lag_note_ko": "신고국·기간별 제출 시점 차이. 고정 월간 지연을 검증하지 않았고 역사 1행은 현재 자료의 최신성을 증명하지 않는다.",
+        "revision_ko": "보고국 제출·수정·추계의 변화 가능. 조회시각과 원문 해시, isReported/isOriginalClassification 및 추계 플래그를 보존한다.",
+        "classification": {
+          "requested": "HS (automatic available edition)",
+          "observed_response_codes": [
+            "H6"
+          ],
+          "edition_label_crosswalk_verified": false,
+          "item": "854232",
+          "hs_to_memory_sku_mapping": "NOT_AVAILABLE_IN_REVIEWED_FIELDS",
+          "candidate_basket_vintage": "TO_VERIFY_PER_PRODUCT"
+        },
+        "reporter_partner_flow": {
+          "probe_reporter": "410 Korea",
+          "probe_partner": "0 World",
+          "probe_partner2": "0 World",
+          "probe_flow": "X export",
+          "import_query_template_flow": "M",
+          "directional_grain_warning_ko": "이번 World 합계 1행으로 상대국 집중도를 계산할 수 없음. 파트너별 행은 별도 수집해야 한다."
+        },
+        "collection_keys": [
+          "classificationCode",
+          "classificationSearchCode",
+          "reporterCode",
+          "partnerCode",
+          "partner2Code",
+          "period",
+          "cmdCode",
+          "flowCode",
+          "customsCode",
+          "motCode",
+          "qtyUnitCode",
+          "altQtyUnitCode",
+          "isQtyEstimated",
+          "isAltQtyEstimated",
+          "isNetWgtEstimated",
+          "isGrossWgtEstimated",
+          "isReported",
+          "isOriginalClassification",
+          "retrieved_at_utc"
+        ]
+      },
+      "access": {
+        "cost": "free preview; free registered basic individual tier available",
+        "key_required": {
+          "public_preview": false,
+          "registered_basic_api": true
+        },
+        "signup_required": {
+          "public_preview": false,
+          "registered_basic_api": true
+        },
+        "signup_performed": false,
+        "key_issued_or_read": false,
+        "issuance_url": "https://comtradedeveloper.un.org/",
+        "issuance_process_ko": "공식 설명: 무료 계정 생성 후 MyAPI에서 API key 생성. 실행하지 않음.",
+        "quotas": {
+          "preview_max_records": 500,
+          "preview_periods_per_call": 1,
+          "preview_products_per_call": 1,
+          "registered_free_records_per_call": 100000,
+          "registered_free_calls_per_day": 500,
+          "registered_free_calls_per_second": 1,
+          "anonymous_numeric_call_rate_verified": false
+        },
+        "quota_note_ko": "이번 maxRecords=1은 시험 범위이며 계정 전체 한도가 아님. 공용 제한·정책은 변경 가능; 벌크/비동기 유료 기능과 분리.",
+        "license_ko": "공식 사용·재배포 정책과 라이선스 적용. 분석·시각화와 대량 원자료 재배포의 조건을 구분하며 공개 JSON에 원자료 경제값을 재배포하지 않는다.",
+        "license_urls": [
+          "https://uncomtrade.org/docs/policy-on-use-and-re-dissemination/",
+          "https://comtrade.un.org/licenseagreement.html"
+        ]
+      },
+      "endpoints": [
+        {
+          "url_or_template": "https://comtradeapi.un.org/public/v1/preview/C/M/HS?period=202501&reporterCode=410&cmdCode=854232&flowCode=X&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&maxRecords=1",
+          "verification_status": "DATA_RESPONSE_NONEMPTY_MATCHED",
+          "parameter_names": [],
+          "probe_receipt_ids": [
+            "PROBE-TM-COMTRADE"
+          ],
+          "note_ko": null,
+          "credentials_used": null
+        },
+        {
+          "url_or_template": "https://comtradeapi.un.org/public/v1/preview/{typeCode}/{freqCode}/{classificationCode}",
+          "verification_status": "DOCUMENTED_SAME_PREVIEW_FAMILY",
+          "parameter_names": [
+            "period",
+            "reporterCode",
+            "cmdCode",
+            "flowCode",
+            "partnerCode",
+            "partner2Code",
+            "customsCode",
+            "motCode",
+            "maxRecords"
+          ],
+          "probe_receipt_ids": [],
+          "note_ko": null,
+          "credentials_used": null
+        },
+        {
+          "url_or_template": "https://comtradeapi.un.org/",
+          "verification_status": "AUTHENTICATED_ROUTE_TO_VERIFY_NOT_CALLED",
+          "parameter_names": [],
+          "probe_receipt_ids": [],
+          "note_ko": "공개 preview를 인증된 전체 추출 API의 검증으로 확대하지 않음. 공식 서비스 base만 기록하며 발급 이후 해당 구독의 정확한 route 확인이 별도 필요.",
+          "credentials_used": null
+        }
+      ],
+      "actual_collection_status": "KEYLESS_PREVIEW_NONEMPTY_MATCHED_REGISTERED_API_NOT_CALLED",
+      "source_ids": [
+        "DOC-TM-COMTRADE-PREVIEW",
+        "DOC-TM-COMTRADE-KEY",
+        "DOC-TM-COMTRADE-SUB",
+        "DOC-TM-COMTRADE-REUSE",
+        "PROBE-TM-COMTRADE"
+      ],
+      "proxy_limits_ko": [
+        "국경 이동은 생산량·비트 출하·고객 주문량과 다르다. 재수출과 가공 단계 이동으로 중복될 수 있다.",
+        "USD 변화에는 단가·제품 믹스·환율이 섞이고 kg 변화도 메모리 비트·웨이퍼 개수를 뜻하지 않는다.",
+        "수입 상대국/수출 목적국/원산지는 같은 개념이 아니다. 원산지 규칙과 거울 통계 차이를 별도 보존한다.",
+        "HS 854232는 HBM 전용 품목이 아니며 SK hynix의 점유율·고객을 직접 식별하지 못한다."
+      ],
+      "propagation_conditions_ko": [
+        "HS 판·동일 바스켓·방향·평가방식·단위를 고정한 뒤 양 방향 및 국가별 자료를 비교한다.",
+        "제품별 출하·ASP·국내 생산과 나란히 검토할 때만 수급 질문을 보완한다."
+      ],
+      "next_needed_ko": [
+        "HS 판별표와 반도체·장비·소재 바스켓 고정",
+        "무료 등록 API의 키 발급 및 구독 route·전체 페이지 종료 조건 검증"
+      ]
+    },
+    {
+      "id": "TM-02-EUROSTAT",
+      "provider": "Eurostat",
+      "family_kind": "INDUSTRY_INDEX_PRODUCT_PRODUCTION_AND_TRADE_API",
+      "purpose_ko": "유럽의 전자부품 생산 활동을 관찰하고, 필요시 Comext 국경 이동과 Prodcom 제품별 판매 생산을 구분해 공급 기반을 확인한다.",
+      "customer_role_question_ko": "유럽 제조·장비·통신 고객의 활동이 메모리 채택 및 발주 질문을 뒷받침하는지 조사한다.",
+      "metric_ids_reused": [
+        "supply-component-country-concentration"
+      ],
+      "metric_reuse_scope_ko": "국가 집중 지표는 향후 Comext 품목×국가 바스켓에만 해당. 실제 조회한 STS 생산지수는 MC13의 보조 산업 proxy이며 같은 집중 지표가 아니다.",
+      "memory_cycle_metric_ids_reused": [
+        "MC12",
+        "MC13"
+      ],
+      "route_ids_reused": [
+        "PROD-02-DDR-CPU",
+        "PROD-06-FOUNDRY-NODES",
+        "PROD-07-EDA-IP-PACK-TEST",
+        "PROD-08-EQUIPMENT-MATERIALS",
+        "PROD-11-GAN-RF"
+      ],
+      "products_processes_ko": [
+        "현재 시험: NACE Rev.2 C261 전자부품 및 전자회로기판 제조의 생산량 지수",
+        "Comext CN 제품 바스켓/Prodcom 반도체 제품은 후보이며 정확한 표·품목 매핑 미확정"
+      ],
+      "measurement_contract": {
+        "grain": "STS: freq × indic_bt × nace_r2 × s_adj × unit × geo × time; Comext/Prodcom: selected DSD dimensions must be discovered first",
+        "units": [
+          "현재 시험 I21: Index 2021=100; PRD 생산량 지수",
+          "Comext: 단위·EUR 가치/수량/순중량은 선택한 DSD별 검증 필요",
+          "Prodcom: 판매 생산액·물량과 생산량을 혼용하지 않고 제품별 unit 확인"
+        ],
+        "frequency": "current STS monthly; Comext and Prodcom frequency dataset-specific",
+        "publication_lag_days": null,
+        "publication_lag_note_ko": "현재 독일 C261의 공식 첫 공개 지연을 검증하지 않음. API DB의 11:00/23:00 CET 갱신은 통계 관측 빈도나 생산지수 공개 지연이 아니다.",
+        "revision_ko": "최신 데이터베이스 중심이며 이전 버전 저장을 보장하지 않으므로 응답 snapshot/hash와 status 플래그를 보존. 계절조정·기준년 변경을 분리.",
+        "classification": {
+          "sts": "NACE Rev.2 C261",
+          "cn_edition": null,
+          "prodcom_list_edition": null,
+          "cn_prodcom_table_mapping_status": "TO_VERIFY"
+        },
+        "reporter_partner_flow": {
+          "current_sts_reporter": "DE Germany",
+          "current_sts_partner": null,
+          "current_sts_flow": null,
+          "candidate_comext": "reporter/partner/import/export required; not validated in this probe"
+        },
+        "collection_keys": [
+          "freq",
+          "indic_bt",
+          "nace_r2",
+          "s_adj",
+          "unit",
+          "geo",
+          "time",
+          "observation status",
+          "dataset ID and DSD version",
+          "CN/Prodcom product vintage if used",
+          "retrieved_at_utc"
+        ]
+      },
+      "access": {
+        "cost": "free public API",
+        "key_required": false,
+        "signup_required": false,
+        "signup_performed": false,
+        "key_issued_or_read": false,
+        "quotas": {
+          "numeric_requests_per_time_window": null
+        },
+        "quota_note_ko": "검토한 공식 소개에서 고정 숫자 요청 한도를 확정하지 못함. 작은 기간·세분 범위로 호출하고 오류·비동기 처리 조건 확인.",
+        "license_ko": "출처를 표시하여 통계·메타데이터 재사용 가능. 상세 무역의 일부 신고국/세분 등급 상업 재사용 및 제3자 자료 예외는 개별 조건 확인. 통계 자료 전체를 일괄 CC BY 4로 표시하지 않는다.",
+        "license_urls": [
+          "https://ec.europa.eu/eurostat/help/copyright-notice"
+        ]
+      },
+      "endpoints": [
+        {
+          "url_or_template": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sts_inpr_m?lang=en&freq=M&unit=I21&nace_r2=C261&s_adj=SCA&geo=DE&time=2025-01",
+          "verification_status": "DATA_RESPONSE_NONEMPTY_JSON_STAT",
+          "parameter_names": [],
+          "probe_receipt_ids": [
+            "PROBE-TM-EUROSTAT"
+          ],
+          "note_ko": "실제 호출은 통계 REST JSON-stat. SDMX 형식 응답을 받은 것으로 표시하지 않음.",
+          "credentials_used": null
+        },
+        {
+          "url_or_template": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/{DATASET}/{DIMENSION_KEY}",
+          "verification_status": "API_DOCUMENTED_NOT_CALLED",
+          "parameter_names": [],
+          "probe_receipt_ids": [],
+          "note_ko": "일반 SDMX base 확인; 형식별 live probe 미실행.",
+          "credentials_used": null
+        },
+        {
+          "url_or_template": "https://ec.europa.eu/eurostat/api/comext/dissemination/sdmx/2.1/data/{DS_DATASET}/{DIMENSION_KEY}",
+          "verification_status": "API_DOCUMENTED_NOT_CALLED",
+          "parameter_names": [],
+          "probe_receipt_ids": [],
+          "note_ko": "DS-로 시작하는 Comext/Prodcom의 별도 base 확인. 정확한 반도체 DS 표와 CN/Prodcom key 미확정.",
+          "credentials_used": null
+        }
+      ],
+      "actual_collection_status": "STS_JSON_STAT_NONEMPTY_COMEXT_PRODCOM_AND_SDMX_FORMAT_NOT_CALLED",
+      "source_ids": [
+        "DOC-TM-EUROSTAT-INTRO",
+        "DOC-TM-EUROSTAT-LICENSE-ACTUAL",
+        "PROBE-TM-EUROSTAT"
+      ],
+      "proxy_limits_ko": [
+        "C261은 전자부품과 기판을 포함해 메모리·웨이퍼·첨단 공정 전용 생산량이 아니다.",
+        "생산지수는 개수·CAPA·가동률·기업 생산량으로 바로 환산할 수 없다.",
+        "CN의 매년 개정과 Prodcom 품목의 단위·기밀성·판매/생산 정의 차이를 해결해야 제품 바스켓 비교 가능.",
+        "EU 생산지역과 반도체 최종 사용처·원산지·고객 소재지는 서로 다를 수 있다."
+      ],
+      "propagation_conditions_ko": [
+        "동일 기준년·계절조정·산업 범위를 유지한 시계열에 한정한다.",
+        "Comext/Prodcom 정확한 표·제품 매핑과 공개/기밀 플래그 확인 이후 제품별 자료를 연결한다."
+      ],
+      "next_needed_ko": [
+        "반도체 후보 CN/Prodcom 코드와 실제 DSD의 단위·방향 고정",
+        "선택한 국가 생산지수의 공개 일정과 재수정 처리 확인"
+      ]
+    },
+    {
+      "id": "TM-03-OECD-TIVA",
+      "provider": "OECD",
+      "family_kind": "VALUE_ADDED_TRADE_STRUCTURAL_API",
+      "purpose_ko": "전자·광학 산업 수출에 포함된 해외 부가가치 등 국가 간 산업 의존 구조를 지도 배경으로 사용한다.",
+      "customer_role_question_ko": "판매·조달 시장의 산업 의존 구조를 이해하는 배경 자료이며 현재 고객 주문이나 월간 수요 신호를 판단하지 않는다.",
+      "metric_ids_reused": [],
+      "related_metric_ids_not_same_measurement": [
+        "supply-component-country-concentration"
+      ],
+      "metric_reuse_scope_ko": "TiVA C26 수출의 해외 부가가치 비중은 HS 품목별 국가 집중 지표와 다른 측정이다. 기존 지표의 의존 구조 설명을 보완하는 배경 참조만 남긴다.",
+      "memory_cycle_metric_ids_reused": [],
+      "route_ids_reused": [
+        "PROD-06-FOUNDRY-NODES",
+        "PROD-07-EDA-IP-PACK-TEST",
+        "PROD-08-EQUIPMENT-MATERIALS"
+      ],
+      "products_processes_ko": [
+        "ISIC Rev.4 C26 컴퓨터·전자·광학 제품 산업; 반도체 전용 제품 바스켓 아님"
+      ],
+      "measurement_contract": {
+        "grain": "MEASURE × REF_AREA × ACTIVITY × COUNTERPART_AREA × UNIT_MEASURE × FREQ × TIME_PERIOD",
+        "units": [
+          "PT_EXGR: gross exports percentage (unit multiplier preserved)"
+        ],
+        "frequency": "annual historical input-output/TiVA edition; bounded probe year 2020",
+        "publication_lag_days": null,
+        "publication_lag_note_ko": "에디션별 과거 투입산출 자료이며 현시점 월간 선행지표가 아님. 최신 관측 종료 연도·개정 간격을 이번 한 행에서 확정하지 않음.",
+        "revision_ko": "TiVA 입력 자료·추정·에디션 개정 가능. dataflow version 1.1과 DSD/codelist 응답 해시를 보존; 버전 생략시 최신 차원 변경 위험.",
+        "classification": {
+          "activity": "C26",
+          "activity_codelist": "CL_ACTIVITY_ISIC4 1.4",
+          "measure": "EXGR_FVA",
+          "unit": "PT_EXGR",
+          "hs_cn": null,
+          "c261_data_availability": "NOT_PROVEN_BY_CODELIST_MEMBERSHIP"
+        },
+        "reporter_partner_flow": {
+          "probe_ref_area": "KOR",
+          "probe_counterpart_area": "W World",
+          "probe_measure": "foreign value added in gross exports",
+          "customs_import_export_flow": null
+        },
+        "collection_keys": [
+          "dataflow agency, ID and version",
+          "MEASURE",
+          "REF_AREA",
+          "ACTIVITY",
+          "COUNTERPART_AREA",
+          "UNIT_MEASURE",
+          "FREQ",
+          "TIME_PERIOD",
+          "UNIT_MULT",
+          "observation flags if returned",
+          "retrieved_at_utc"
+        ]
+      },
+      "access": {
+        "cost": "free SDMX API",
+        "key_required": false,
+        "signup_required": false,
+        "signup_performed": false,
+        "key_issued_or_read": false,
+        "quotas": {
+          "data_downloads_per_hour": 60
+        },
+        "quota_note_ko": "공식 현재 모범 사례 문서의 데이터 다운로드 제한. VPN/익명화 트래픽 회피, metadata cache 및 작은 요청 권고.",
+        "parameter_restrictions": [
+          "STI TiVA: firstNObservations and lastNObservations prohibited; documented 413; not attempted"
+        ],
+        "license_ko": "OECD 약관의 별도 Data 항목 및 추가/제3자 제한 확인, 출처 표시. 저작물 일반 CC BY 조항을 모든 데이터의 동일 라이선스로 대신하지 않는다.",
+        "license_urls": [
+          "https://www.oecd.org/en/about/terms-conditions.html"
+        ]
+      },
+      "endpoints": [
+        {
+          "url_or_template": "https://sdmx.oecd.org/sti-public/rest/dataflow/OECD.STI.PIE/DSD_TIVA_MAINSH@DF_MAINSH/1.1?references=all",
+          "verification_status": "METADATA_STRUCTURE_PARSED_NOT_DATA",
+          "parameter_names": [],
+          "probe_receipt_ids": [
+            "PROBE-TM-OECD-STRUCTURE"
+          ],
+          "note_ko": null,
+          "credentials_used": null
+        },
+        {
+          "url_or_template": "https://sdmx.oecd.org/sti-public/rest/data/OECD.STI.PIE,DSD_TIVA_MAINSH@DF_MAINSH,1.1/EXGR_FVASH.KOR.D26.W..A?startPeriod=2020&endPeriod=2020&dimensionAtObservation=AllDimensions&format=csvfilewithlabels",
+          "verification_status": "HTTP_404_NO_RESULTS_LEGACY_CODES",
+          "parameter_names": [],
+          "probe_receipt_ids": [
+            "PROBE-TM-OECD"
+          ],
+          "note_ko": null,
+          "credentials_used": null
+        },
+        {
+          "url_or_template": "https://sdmx.oecd.org/sti-public/rest/data/OECD.STI.PIE,DSD_TIVA_MAINSH@DF_MAINSH,1.1/EXGR_FVA.KOR.C26.W.PT_EXGR.A?startPeriod=2020&endPeriod=2020&dimensionAtObservation=AllDimensions&format=csvfilewithlabels",
+          "verification_status": "DATA_RESPONSE_NONEMPTY_SDMX_CSV",
+          "parameter_names": [],
+          "probe_receipt_ids": [
+            "PROBE-TM-OECD-CORRECTED"
+          ],
+          "note_ko": null,
+          "credentials_used": null
+        }
+      ],
+      "actual_collection_status": "CURRENT_METADATA_AND_ONE_DATA_ROW_SUCCESS_FIRST_LEGACY_QUERY_FAILED",
+      "source_ids": [
+        "DOC-TM-OECD-API",
+        "DOC-TM-OECD-LIMITS",
+        "DOC-TM-OECD-PARAMS",
+        "DOC-TM-OECD-TERMS",
+        "PROBE-TM-OECD-STRUCTURE",
+        "PROBE-TM-OECD",
+        "PROBE-TM-OECD-CORRECTED"
+      ],
+      "proxy_limits_ko": [
+        "총수출의 해외 부가가치는 실물 부품 출하·국가별 반도체 생산량·고객 기업 공급망을 뜻하지 않는다.",
+        "C26은 컴퓨터·전자·광학 전체를 포함하고 HBM/DRAM/NAND 제품 구분을 제공하지 않는다.",
+        "허용 코드 리스트에 C261이 있는 것만으로 해당 TiVA 세부 산업의 실제 값이 존재한다고 단정하지 않는다.",
+        "모형·투입산출 연간 구조를 현재 고객 주문이나 구매 가능성의 선행 신호로 사용하지 않는다."
+      ],
+      "propagation_conditions_ko": [
+        "동일 TiVA 에디션·산업·측정 정의로 국가 의존 구조만 비교한다.",
+        "현재 제품 채택·공시·국경 이동과 함께 배경을 설명할 때 사용하며 시점/범위 차이를 명시한다."
+      ],
+      "next_needed_ko": [
+        "지도 구조 설명에 필요한 TiVA 에디션·측정 항목만 고정하고 최신 월간 수요 신호와 분리"
+      ]
+    },
+    {
+      "id": "TM-04-KOSIS",
+      "provider": "KOSIS / 통계작성기관",
+      "family_kind": "DOMESTIC_PRODUCTION_SHIPMENT_INVENTORY_API",
+      "purpose_ko": "한국 반도체 산업의 생산·출하·재고 지수를 나란히 관찰해 무역액 증가가 생산·재고 소진과 같은 방향인지 질문한다.",
+      "customer_role_question_ko": "판매자가 생산·출하를 늘릴 여력이 있는지와 재고 부담이 어떻게 변하는지 묻되 고객 주문·SK hynix 재고로 치환하지 않는다.",
+      "metric_ids_reused": [],
+      "memory_cycle_metric_ids_reused": [
+        "MC13"
+      ],
+      "route_ids_reused": [
+        "PROD-01-HBM-GPU",
+        "PROD-02-DDR-CPU",
+        "PROD-03-LPDDR-CPU",
+        "PROD-04-NAND-ESSD",
+        "PROD-05-HBM-ASIC",
+        "PROD-06-FOUNDRY-NODES"
+      ],
+      "products_processes_ko": [
+        "반도체 생산·출하·재고 지수 후보. 정확한 표·KSIC 분류·항목·기준년은 미확정"
+      ],
+      "measurement_contract": {
+        "grain": "orgId × tblId × itmId × objL1…objL8 × prdSe × PRD_DE; exact table mapping not yet verified",
+        "units": [
+          "candidate production/shipment/inventory index; actual UNIT_ID/UNIT_NM and base year TO_VERIFY"
+        ],
+        "frequency": "monthly candidate; prdSe and actual table frequency TO_VERIFY",
+        "publication_lag_days": null,
+        "publication_lag_note_ko": "표별 작성기관의 최초 공개 일정 미확인. 응답 LST_CHN_DE는 최종 변경일이며 최초 공개일과 구분.",
+        "revision_ko": "지수 기준년·산업분류·잠정/확정·계절조정·통계 기호를 고정. LST_CHN_DE와 snapshot hash를 보존.",
+        "classification": {
+          "orgId": null,
+          "tblId": null,
+          "itmId": null,
+          "objL1": null,
+          "industrial_classification_vintage": null,
+          "mapping_status": "TO_VERIFY_EXACT_TABLE_AND_ITEM",
+          "hs_cn": null
+        },
+        "reporter_partner_flow": {
+          "reporter": "Korea domestic industry candidate",
+          "partner": null,
+          "flow": "production / shipment / inventory items must be separated"
+        },
+        "collection_keys": [
+          "ORG_ID",
+          "TBL_ID",
+          "ITM_ID",
+          "C1…C8",
+          "UNIT_ID",
+          "UNIT_NM",
+          "PRD_SE",
+          "PRD_DE",
+          "DT",
+          "LST_CHN_DE",
+          "symbol/seasonal adjustment/base year metadata",
+          "retrieved_at_utc"
+        ]
+      },
+      "access": {
+        "cost": "공식 OpenAPI 서비스는 약관 제10조 무상 제공 원칙; 별도 방식 정보 제공 비용 예외",
+        "key_required": true,
+        "signup_required": true,
+        "signup_performed": false,
+        "key_issued_or_read": false,
+        "issuance_url": "https://kosis.kr/openapi/serviceUse/serviceUseUnityReg_01Detail.do",
+        "issuance_process_ko": "KOSIS 회원 인증 및 OpenAPI 이용 신청이 필요. 현재 키 발급·로그인·호출 미실행.",
+        "quotas": {
+          "numeric_calls_per_minute": null,
+          "numeric_calls_per_day": null
+        },
+        "quota_note_ko": "홈페이지에 2026-07-09 분당 호출 제한 안내가 있으나 정확한 숫자 미확정. 2026-02-05 HTTP 종료 안내에 따라 HTTPS endpoint만 표기.",
+        "license_ko": "공식 약관의 출처 표시와 국내 통계 상업 이용 조건 적용. 국제통계 등 기관·표별 예외를 확인. 이용 약관 기간 문구를 API key 만료일로 바꾸지 않는다.",
+        "license_urls": [
+          "https://kosis.kr/openapi/introduce/introduce_02List.do"
+        ]
+      },
+      "endpoints": [
+        {
+          "url_or_template": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList",
+          "verification_status": "API_DOCUMENTED_NOT_CALLED",
+          "parameter_names": [
+            "apiKey",
+            "orgId",
+            "tblId",
+            "objL1",
+            "objL2…objL8",
+            "itmId",
+            "prdSe",
+            "startPrdDe",
+            "endPrdDe",
+            "newEstPrdCnt",
+            "format",
+            "jsonVD",
+            "smblChk"
+          ],
+          "probe_receipt_ids": [],
+          "note_ko": "통계표 선택 방식. endpoint 확인과 실제 반도체 표 매핑·성공 호출은 별개.",
+          "credentials_used": null
+        },
+        {
+          "url_or_template": "https://kosis.kr/openapi/statisticsData.do?method=getList",
+          "verification_status": "API_DOCUMENTED_NOT_CALLED",
+          "parameter_names": [
+            "apiKey",
+            "userStatsId",
+            "prdSe",
+            "startPrdDe",
+            "endPrdDe",
+            "format"
+          ],
+          "probe_receipt_ids": [],
+          "note_ko": "URL 생성/등록 방식과 표 파라미터 방식 구분; 공개 문서 예시 키를 복사하거나 호출하지 않음.",
+          "credentials_used": null
+        }
+      ],
+      "actual_collection_status": "API_DOCUMENTED_NOT_CALLED_KEY_REQUIRED_TABLE_MAPPING_TO_VERIFY",
+      "source_ids": [
+        "DOC-TM-KOSIS-GUIDE",
+        "DOC-TM-KOSIS-HOME",
+        "DOC-TM-KOSIS-TERMS-ACTUAL"
+      ],
+      "proxy_limits_ko": [
+        "국내 산업 지수를 SK hynix 기업 생산량·비트 출하·제품 재고로 배분할 수 없다.",
+        "출하지수는 고객의 최종 사용량·신규 주문·정확한 판매 대수와 다르다.",
+        "정확한 반도체 표·범위·기준년·계절조정이 확인될 때까지 반도체 시계열 수집 완료로 표시하지 않는다.",
+        "국내 생산과 통관 이동은 기간·대상·평가방식이 다르며 생산지수/무역액의 단순 비율을 수급 균형으로 해석하지 않는다."
+      ],
+      "propagation_conditions_ko": [
+        "정확한 생산·출하·재고 세 항목과 동일 범위·기준년을 먼저 고정한다.",
+        "키 발급 후 작은 한 기간 요청을 통해 기호·단위·개정일과 비어 있지 않은 응답을 검증한다."
+      ],
+      "next_needed_ko": [
+        "정확한 반도체 통계표 orgId/tblId/itmId/분류·기준년 매핑",
+        "이용 신청과 실제 인증 호출은 별도 단계로 수행"
+      ]
+    },
+    {
+      "id": "TM-05-KOREA-CUSTOMS",
+      "provider": "관세청 / 공공데이터포털",
+      "family_kind": "HS_COUNTRY_MONTHLY_TRADE_API",
+      "purpose_ko": "한국의 품목별 국가별 수출입을 월간으로 확인하고 메모리·장비·소재 조달/판매국 이동을 추적할 수 있는지를 검증한다.",
+      "customer_role_question_ko": "판매 시장과 조달 경로 변화를 묻되 국가를 특정 구매자·인증자·사용자로 단정하지 않는다.",
+      "metric_ids_reused": [
+        "capital-comtrade-physical-trade",
+        "supply-component-country-concentration"
+      ],
+      "memory_cycle_metric_ids_reused": [
+        "MC12"
+      ],
+      "route_ids_reused": [
+        "PROD-01-HBM-GPU",
+        "PROD-02-DDR-CPU",
+        "PROD-03-LPDDR-CPU",
+        "PROD-04-NAND-ESSD",
+        "PROD-05-HBM-ASIC",
+        "PROD-08-EQUIPMENT-MATERIALS"
+      ],
+      "products_processes_ko": [
+        "HS 2/4/6/10단위 국가별 무역; 메모리 HS 854232 바스켓 후보",
+        "HBM·DRAM/NAND 또는 장비·소재의 한국 HS10 분리 여부와 판은 별도 확인"
+      ],
+      "measurement_contract": {
+        "grain": "year(YYYY.MM) × hsCd × statCd / Korea fixed reporter; requested period range and HS detail retained",
+        "units": [
+          "expDlr USD (FOB)",
+          "impDlr USD (CIF)",
+          "expWgt kg",
+          "impWgt kg",
+          "balPayments USD"
+        ],
+        "frequency": "monthly; dataset overview also says real-time but detailed economic data notes specify prior-month update on the 15th",
+        "publication_lag_days": null,
+        "publication_schedule_ko": "공식 상세 설명상 매월 15일 전월 자료 갱신. 신고 정정·취하로 과거 값 변경 가능. 10일/20일 속보 품목×국가 API로 확대하지 않음.",
+        "revision_ko": "수출입 신고 수정·취하를 반영해 변경 가능. 월/품목/국가를 고정한 재수집 snapshot과 통계 기준을 보존.",
+        "classification": {
+          "allowed_hs_digits": [
+            2,
+            4,
+            6,
+            10
+          ],
+          "hs_edition": null,
+          "hs10_memory_mapping": null,
+          "mapping_status": "TO_VERIFY_KOREAN_TARIFF_VINTAGE"
+        },
+        "reporter_partner_flow": {
+          "reporter": "Korea",
+          "partner_request": "cntyCd",
+          "partner_output": "statCd / statCdCntnKor1",
+          "flows": "import and export in distinct output fields",
+          "partner_origin_definition_verified": false
+        },
+        "collection_keys": [
+          "strtYymm",
+          "endYymm",
+          "cntyCd",
+          "hsSgn",
+          "year",
+          "hsCd",
+          "statKor",
+          "statCd",
+          "statCdCntnKor1",
+          "expDlr",
+          "impDlr",
+          "expWgt",
+          "impWgt",
+          "retrieved_at_utc",
+          "HS tariff vintage"
+        ]
+      },
+      "access": {
+        "cost": "무료",
+        "key_required": true,
+        "signup_required": true,
+        "signup_performed": false,
+        "key_issued_or_read": false,
+        "issuance_url": "https://www.data.go.kr/data/15100475/openapi.do",
+        "issuance_process_ko": "공공데이터포털 활용 신청, 개발 자동 승인/운영 심의 구분. 신청·키 발급·인증 호출 미실행.",
+        "quotas": {
+          "development_traffic_displayed": 10000,
+          "development_traffic_period_verified": false,
+          "maximum_months_per_query": 12
+        },
+        "quota_note_ko": "포털 개발 트래픽 표시 10,000의 시간 단위를 독립 확정하지 않음. 조회기간 최대 1년. 운영 한도·페이지 처리 별도 확인.",
+        "license_ko": "해당 데이터셋 페이지 이용허락범위는 제한 없음으로 표시. 실제 호출·개발/운영 트래픽 조건과 구분.",
+        "license_urls": [
+          "https://www.data.go.kr/data/15100475/openapi.do"
+        ]
+      },
+      "endpoints": [
+        {
+          "url_or_template": "https://apis.data.go.kr/1220000/nitemtrade/getNitemtradeList",
+          "verification_status": "API_DOCUMENTED_NOT_CALLED",
+          "parameter_names": [
+            "serviceKey",
+            "strtYymm",
+            "endYymm",
+            "cntyCd",
+            "hsSgn"
+          ],
+          "probe_receipt_ids": [],
+          "note_ko": "serviceKey 필수, 국가 필수·HS 선택. 무효 키 요청은 수행하지 않음.",
+          "credentials_used": null
+        }
+      ],
+      "actual_collection_status": "API_DOCUMENTED_NOT_CALLED_KEY_REQUIRED",
+      "source_ids": [
+        "DOC-TM-CUSTOMS"
+      ],
+      "proxy_limits_ko": [
+        "수출 FOB와 수입 CIF의 평가방식을 동일 가격으로 비교하지 않는다.",
+        "통관 실적은 생산·비트 출하·재고·주문 자료가 아니다. kg/USD에서 HBM 수량·기업 CAPA를 계산하지 않는다.",
+        "cntyCd/statCd가 원산지·출발국·최종 사용국 중 어떤 개념인지 상세 통계 기준 확인 전 확정하지 않는다.",
+        "HS 854232 내 세부 제품과 기업·고객을 식별할 수 있다는 근거가 없다."
+      ],
+      "propagation_conditions_ko": [
+        "한국 HS 판·HS10 제품 바스켓과 국가 기준을 고정하고 수입/수출을 분리한다.",
+        "Comtrade와 맞출 때 HS 판·시간·보고국·평가방식·수정 시점을 비교한 후 거울 통계 차이도 기록한다."
+      ],
+      "next_needed_ko": [
+        "한국 HS10 바스켓·판·상대국 통계 정의 고정",
+        "포털 키 발급 후 한 기간·한 품목·한 국가 비어 있지 않은 응답 검증"
+      ]
+    },
+    {
+      "id": "TM-06-USGS-MATERIAL-FILES",
+      "provider": "USGS National Minerals Information Center",
+      "family_kind": "ANNUAL_OFFICIAL_FILES_NOT_NUMERIC_API",
+      "purpose_ko": "갈륨과 희토류의 국가별 생산·매장·능력 구조를 공급 제약의 배경으로 보존하며 반도체용 정제·공급 단계가 어디에서 누락되는지 찾는다.",
+      "customer_role_question_ko": "소재 공급자가 제공할 수 있는 등급·정제 단계와 실제 장비/제품 조달 조건을 묻는 배경 자료. 광산 생산을 반도체 고객의 즉시 가용 재고로 치환하지 않는다.",
+      "metric_ids_reused": [
+        "capital-usgs-structural-resource-risk"
+      ],
+      "memory_cycle_metric_ids_reused": [],
+      "route_ids_reused": [
+        "PROD-08-EQUIPMENT-MATERIALS",
+        "PROD-09-GAN-SIC-POWER",
+        "PROD-11-GAN-RF"
+      ],
+      "products_processes_ko": [
+        "갈륨: 저순도 1차 생산·능력과 고순도 정제/회수 구분; GaAs/GaN 공급 검토의 배경",
+        "희토류: 광산 생산·REO 환산 매장량; 정제 원소·자석·장비 부품 단계 연결은 별도 근거 필요",
+        "SiC에 갈륨 사용을 필수 조건으로 붙이지 않음; DRAM/NAND의 직접 갈륨 투입량 주장 없음"
+      ],
+      "measurement_contract": {
+        "grain": "commodity × country × measurement type × reference year × release edition × estimate/withheld status",
+        "units": [
+          "2026 gallium PDF: kilograms, gallium content unless otherwise specified; low-purity primary production/capacity separately",
+          "2026 rare-earths PDF: metric tons, REO equivalent unless otherwise specified; mine production/reserves separately"
+        ],
+        "frequency": "annual MCS; 2026 edition mainly covers 2025 estimates; not monthly",
+        "publication_lag_days": null,
+        "publication_lag_note_ko": "MCS 에디션과 측정 연도 구분. 최초 게시일·시각을 파일 수신일이나 HTTP Date로 대신하지 않음. Minerals Yearbook 게시 중단 안내를 현행 갱신 제약으로 기록.",
+        "revision_ko": "추정치 e, 비공개/알 수 없음 기호와 후속 에디션 개정을 보존. 광산·저순도·정제·회수·순도별 범위와 문서 표 번호를 분리.",
+        "classification": {
+          "hs_cn": null,
+          "gallium_material_form": "low-purity primary / high-purity refined / recovered are not interchangeable",
+          "rare_earth_basis": "REO equivalent, not separated-element metal or magnet grade"
+        },
+        "reporter_partner_flow": {
+          "reporter": "country rows; US salient/import reliance are separate measurements",
+          "partner": "country tables and US import sources if extracted separately",
+          "trade_direction": "not a harmonized HS trade table"
+        },
+        "collection_keys": [
+          "commodity",
+          "edition_year",
+          "measurement_year",
+          "country",
+          "table/section",
+          "material form/purity",
+          "unit",
+          "estimate/withheld symbol",
+          "retrieved_at_utc",
+          "file sha256"
+        ]
+      },
+      "access": {
+        "cost": "free official files",
+        "key_required": false,
+        "signup_required": false,
+        "signup_performed": false,
+        "key_issued_or_read": false,
+        "quotas": {
+          "numeric_download_rate_verified": false
+        },
+        "quota_note_ko": "선택 자료는 정적 PDF 다운로드. 수치 API와 API key 발급 대상으로 표시하지 않음.",
+        "license_ko": "USGS 작성 연방 저작물의 공개 도메인 원칙과 파일별 제3자 크레딧 예외 확인, 출처 표시. 공개 산출물에 전체 PDF나 표를 재배포하지 않는다.",
+        "license_urls": [
+          "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits"
+        ]
+      },
+      "endpoints": [
+        {
+          "url_or_template": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-gallium.pdf",
+          "verification_status": "FILE_DOCUMENT_SUCCESS_NOT_API",
+          "parameter_names": [],
+          "probe_receipt_ids": [
+            "PROBE-TM-USGS-FILE"
+          ],
+          "note_ko": null,
+          "credentials_used": null
+        },
+        {
+          "url_or_template": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+          "verification_status": "FILE_DOCUMENT_SUCCESS_NOT_API",
+          "parameter_names": [],
+          "probe_receipt_ids": [
+            "PROBE-TM-USGS-REE-FILE"
+          ],
+          "note_ko": "웹 읽기 도구에서는 403, stdlib HTTPS 파일 수신은 200. 접근 경로별 결과를 구분.",
+          "credentials_used": null
+        }
+      ],
+      "actual_collection_status": "TWO_ANNUAL_PDF_FILES_SUCCESS_NOT_API",
+      "source_ids": [
+        "DOC-TM-USGS-GALLIUM",
+        "DOC-TM-USGS-POLICY",
+        "PROBE-TM-USGS-FILE",
+        "PROBE-TM-USGS-REE-FILE"
+      ],
+      "proxy_limits_ko": [
+        "저순도 갈륨 생산·능력은 반도체급 고순도 정제 가용량·전구체·기판 공급량과 다르다.",
+        "희토류 광산 REO 생산/매장량은 분리 원소·자석·반도체 제조 장비 부품의 즉시 납품량이 아니다.",
+        "소재의 수출 규제·정제 순도·고객 인증·재고·물류를 별도로 관찰해야 현재 공급 병목을 판단할 수 있다.",
+        "연간 국가 구조 자료는 제품별 고객 주문이나 반도체 매출의 선행성 검증을 제공하지 않는다."
+      ],
+      "propagation_conditions_ko": [
+        "소재 형태·순도·가공 단계가 일치하는 무역·공급사·인증 자료를 확보한 후 특정 제품 경로로 연결한다.",
+        "희토류와 메모리의 직접 투입 연쇄는 미확인으로 두고 장비/기타 제품 연결을 조건부 가설로만 사용한다."
+      ],
+      "next_needed_ko": [
+        "갈륨 정제/전구체·기판 등급의 공식 제품·고객 인증 경로와 무역 코드 매핑",
+        "희토류 원소/정제/자석 단계별 정의가 필요한 특정 장비 경로를 먼저 선택"
+      ]
+    }
+  ],
+  "probe_receipts": [
+    {
+      "id": "DOC-TM-COMTRADE-PREVIEW",
+      "url_redacted": "https://uncomtrade.org/docs/what-is-data-preview/",
+      "retrieved_url_redacted": "https://uncomtrade.org/docs/what-is-data-preview/",
+      "requested_at_utc": "2026-10-04T17:10:18.498713+00:00",
+      "response_status": 200,
+      "status": "DOC_HTTP_BODY_CAPTURED",
+      "byte_length": 443196,
+      "sha256": "1b90c37b587c6019eb257483e7121db222f1b220c7877137a844a599c60661a3",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "DOC-TM-COMTRADE-KEY",
+      "url_redacted": "https://uncomtrade.org/docs/api-subscription-keys/",
+      "retrieved_url_redacted": "https://uncomtrade.org/docs/api-subscription-keys/",
+      "requested_at_utc": "2026-10-04T17:10:18.502879+00:00",
+      "response_status": 200,
+      "status": "DOC_HTTP_BODY_CAPTURED",
+      "byte_length": 427891,
+      "sha256": "e35871478e20d4562f891c56e850052302704d8eb0e7cfca0719a2cdfd0e85ef",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "DOC-TM-COMTRADE-SUB",
+      "url_redacted": "https://uncomtrade.org/docs/subscriptions/",
+      "retrieved_url_redacted": "https://uncomtrade.org/docs/subscriptions/",
+      "requested_at_utc": "2026-10-04T17:10:18.506446+00:00",
+      "response_status": 200,
+      "status": "DOC_HTTP_BODY_CAPTURED",
+      "byte_length": 459424,
+      "sha256": "da5204e004aebf20526e27e73663df69467d8b5790e8e3b8a1fdd516f9a88394",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "DOC-TM-COMTRADE-REUSE",
+      "url_redacted": "https://uncomtrade.org/docs/policy-on-use-and-re-dissemination/",
+      "retrieved_url_redacted": "https://uncomtrade.org/docs/policy-on-use-and-re-dissemination/",
+      "requested_at_utc": "2026-10-04T17:10:18.508999+00:00",
+      "response_status": 200,
+      "status": "DOC_HTTP_BODY_CAPTURED",
+      "byte_length": 462784,
+      "sha256": "095f53a49b43ad10f6ecb6b864ded524bbd31e9816878c6e2787af9510cef62a",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "DOC-TM-EUROSTAT-INTRO",
+      "url_redacted": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-introduction",
+      "retrieved_url_redacted": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-introduction",
+      "requested_at_utc": "2026-10-04T17:10:25.486505+00:00",
+      "response_status": 200,
+      "status": "DOC_HTTP_BODY_CAPTURED",
+      "byte_length": 216465,
+      "sha256": "e859078bce47c22edbfb080177b84899bb62154e5bdb22bc874084c2bf943966",
+      "content_type": "text/html;charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "DOC-TM-OECD-API",
+      "url_redacted": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html",
+      "retrieved_url_redacted": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html",
+      "requested_at_utc": "2026-10-04T17:10:25.893853+00:00",
+      "response_status": 403,
+      "status": "HTTP_ERROR",
+      "byte_length": 5720,
+      "sha256": "3ab6cdc78a27bc04faba70063d484f3b33dccbef91015a1d1638e12d4dd80ff0",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_ERROR_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false,
+      "failure_interpretation_ko": "stdlib HTTP 경로의 403. 현재 공식 본문은 별도 웹 도구로 검토; 403 HTML을 원문 문서로 해시하지 않음."
+    },
+    {
+      "id": "DOC-TM-OECD-LIMITS",
+      "url_redacted": "https://www.oecd.org/en/data/insights/data-explainers/2024/11/Api-best-practices-and-recommendations.html",
+      "retrieved_url_redacted": "https://www.oecd.org/en/data/insights/data-explainers/2024/11/Api-best-practices-and-recommendations.html",
+      "requested_at_utc": "2026-10-04T17:10:25.964014+00:00",
+      "response_status": 403,
+      "status": "HTTP_ERROR",
+      "byte_length": 5868,
+      "sha256": "4bd1b5d222975e529d72d17f150d86d21b92dae440393f77f353a06603719d11",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_ERROR_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false,
+      "failure_interpretation_ko": "stdlib HTTP 경로의 403. 현재 공식 본문은 별도 웹 도구로 검토; 403 HTML을 원문 문서로 해시하지 않음."
+    },
+    {
+      "id": "DOC-TM-OECD-PARAMS",
+      "url_redacted": "https://www.oecd.org/en/data/insights/data-explainers/2026/03/Restricted-API-parameter.html",
+      "retrieved_url_redacted": "https://www.oecd.org/en/data/insights/data-explainers/2026/03/Restricted-API-parameter.html",
+      "requested_at_utc": "2026-10-04T17:10:26.032639+00:00",
+      "response_status": 403,
+      "status": "HTTP_ERROR",
+      "byte_length": 5805,
+      "sha256": "8853bb18751376e334b3a5ee7afbf6d63da2663570ce6f33def1d8413b83ba23",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_ERROR_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false,
+      "failure_interpretation_ko": "stdlib HTTP 경로의 403. 현재 공식 본문은 별도 웹 도구로 검토; 403 HTML을 원문 문서로 해시하지 않음."
+    },
+    {
+      "id": "DOC-TM-KOSIS-GUIDE",
+      "url_redacted": "https://kosis.kr/openapi/devGuide/devGuide_0201List.do",
+      "retrieved_url_redacted": "https://kosis.kr/openapi/devGuide/devGuide_0201List.do",
+      "requested_at_utc": "2026-10-04T17:10:26.051869+00:00",
+      "response_status": 200,
+      "status": "DOC_HTTP_BODY_CAPTURED",
+      "byte_length": 93406,
+      "sha256": "ffa38d0e4afaf09d54b8e3542fe815b5a4cc1237a4376b4812ce49fd15b07c52",
+      "content_type": "text/html;charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "DOC-TM-KOSIS-HOME",
+      "url_redacted": "https://kosis.kr/openapi/index/index.jsp",
+      "retrieved_url_redacted": "https://kosis.kr/openapi/index/index.jsp",
+      "requested_at_utc": "2026-10-04T17:10:26.117024+00:00",
+      "response_status": 200,
+      "status": "DOC_HTTP_BODY_CAPTURED",
+      "byte_length": 20999,
+      "sha256": "bc55fd3b76dc0e1ba920f2f91dad9cd3b1ea0b9ba09b6d6b82d39554fffecdbe",
+      "content_type": "text/html;charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "DOC-TM-KOSIS-TERMS",
+      "url_redacted": "https://kosis.kr/openapi/service/service_0301List.do",
+      "retrieved_url_redacted": "https://kosis.kr/openapi/service/service_0301List.do",
+      "requested_at_utc": "2026-10-04T17:10:26.330949+00:00",
+      "response_status": 404,
+      "status": "HTTP_ERROR",
+      "byte_length": 1560,
+      "sha256": "d90aac2c6ad0c7a59ab8ce2251991eccd7c02dded3f86a670bf6d4774d2b940b",
+      "content_type": "text/html;charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_ERROR_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false,
+      "failure_interpretation_ko": "처음 탐색한 문서 경로의 404. 올바른 공식 링크를 찾은 후 200으로 보존."
+    },
+    {
+      "id": "DOC-TM-CUSTOMS",
+      "url_redacted": "https://www.data.go.kr/data/15100475/openapi.do",
+      "retrieved_url_redacted": "https://www.data.go.kr/data/15100475/openapi.do",
+      "requested_at_utc": "2026-10-04T17:10:26.586428+00:00",
+      "response_status": 200,
+      "status": "DOC_HTTP_BODY_CAPTURED",
+      "byte_length": 206594,
+      "sha256": "86053c0cd306af8ac76f7c6fdf995f0180270f83fb50ff9e2bdc0e0adf61dcd7",
+      "content_type": "text/html;charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "DOC-TM-USGS-GALLIUM",
+      "url_redacted": "https://www.usgs.gov/centers/national-minerals-information-center/gallium-statistics-and-information",
+      "retrieved_url_redacted": "https://www.usgs.gov/centers/national-minerals-information-center/gallium-statistics-and-information",
+      "requested_at_utc": "2026-10-04T17:10:26.955281+00:00",
+      "response_status": 200,
+      "status": "DOC_HTTP_BODY_CAPTURED",
+      "byte_length": 105270,
+      "sha256": "48bdd82de45557c6e2b21b5fed3c3282f98757ddeb5af9aa652b13a11a6ea5c6",
+      "content_type": "text/html; charset=utf-8",
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "DOC-TM-USGS-POLICY",
+      "url_redacted": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+      "retrieved_url_redacted": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+      "requested_at_utc": "2026-10-04T17:10:27.109509+00:00",
+      "response_status": 200,
+      "status": "DOC_HTTP_BODY_CAPTURED",
+      "byte_length": 88963,
+      "sha256": "e95039e1a0d2972e33bb724bc181af796531f77d45b43fc7bd4059e064824f3e",
+      "content_type": "text/html; charset=utf-8",
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "PROBE-TM-COMTRADE",
+      "url_redacted": "https://comtradeapi.un.org/public/v1/preview/C/M/HS?period=202501&reporterCode=410&cmdCode=854232&flowCode=X&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&maxRecords=1",
+      "retrieved_url_redacted": "https://comtradeapi.un.org/public/v1/preview/C/M/HS?period=202501&reporterCode=410&cmdCode=854232&flowCode=X&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&maxRecords=1",
+      "requested_at_utc": "2026-10-04T17:10:27.973279+00:00",
+      "response_status": 200,
+      "status": "DATA_RESPONSE_NONEMPTY_MATCHED",
+      "byte_length": 967,
+      "sha256": "2b66a5b34e2274f44b669eb90de382ff2bf531ef82a37e407c1fee1525867e3b",
+      "content_type": "application/json; charset=utf-8",
+      "returned_row_count": 1,
+      "observed_field_names": [
+        "aggrLevel",
+        "altQty",
+        "altQtyUnitAbbr",
+        "altQtyUnitCode",
+        "cifvalue",
+        "classificationCode",
+        "classificationSearchCode",
+        "cmdCode",
+        "cmdDesc",
+        "customsCode",
+        "customsDesc",
+        "flowCode",
+        "flowDesc",
+        "fobvalue",
+        "freqCode",
+        "grossWgt",
+        "isAggregate",
+        "isAltQtyEstimated",
+        "isGrossWgtEstimated",
+        "isLeaf",
+        "isNetWgtEstimated",
+        "isOriginalClassification",
+        "isQtyEstimated",
+        "isReported",
+        "legacyEstimationFlag",
+        "mosCode",
+        "motCode",
+        "motDesc",
+        "netWgt",
+        "partner2Code",
+        "partner2Desc",
+        "partner2ISO",
+        "partnerCode",
+        "partnerDesc",
+        "partnerISO",
+        "period",
+        "primaryValue",
+        "qty",
+        "qtyUnitAbbr",
+        "qtyUnitCode",
+        "refMonth",
+        "refPeriodId",
+        "refYear",
+        "reporterCode",
+        "reporterDesc",
+        "reporterISO",
+        "typeCode"
+      ],
+      "query_period": "202501",
+      "classification_codes_seen": [
+        "H6"
+      ],
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "PROBE-TM-EUROSTAT",
+      "url_redacted": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sts_inpr_m?lang=en&freq=M&unit=I21&nace_r2=C261&s_adj=SCA&geo=DE&time=2025-01",
+      "retrieved_url_redacted": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sts_inpr_m?lang=en&freq=M&unit=I21&nace_r2=C261&s_adj=SCA&geo=DE&time=2025-01",
+      "requested_at_utc": "2026-10-04T17:10:28.751141+00:00",
+      "response_status": 200,
+      "status": "DATA_RESPONSE_NONEMPTY",
+      "byte_length": 3559,
+      "sha256": "49a1e3ee556b5c8f74226e05a6e0919a8db24913ad6c20f7642303fe7e1f8a1f",
+      "content_type": "application/json",
+      "observation_count": 1,
+      "query_period": "2025-01",
+      "error_summary": null,
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "PROBE-TM-OECD",
+      "url_redacted": "https://sdmx.oecd.org/sti-public/rest/data/OECD.STI.PIE,DSD_TIVA_MAINSH@DF_MAINSH,1.1/EXGR_FVASH.KOR.D26.W..A?startPeriod=2020&endPeriod=2020&dimensionAtObservation=AllDimensions&format=csvfilewithlabels",
+      "retrieved_url_redacted": "https://sdmx.oecd.org/sti-public/rest/data/OECD.STI.PIE,DSD_TIVA_MAINSH@DF_MAINSH,1.1/EXGR_FVASH.KOR.D26.W..A?startPeriod=2020&endPeriod=2020&dimensionAtObservation=AllDimensions&format=csvfilewithlabels",
+      "requested_at_utc": "2026-10-04T17:10:29.682366+00:00",
+      "response_status": 404,
+      "status": "HTTP_ERROR",
+      "byte_length": 14,
+      "sha256": "23714ac852cb0afe23052aac153af6c68819c67559d3163f4f7a44511144031e",
+      "content_type": "text/plain",
+      "sha256_representation": "RAW_HTTP_ERROR_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false,
+      "error_body_short": "NoResultsFound",
+      "failure_interpretation_ko": "현재 DSD와 다른 구 코드 조합의 실패. 제공기관 전체 API 장애나 데이터 없음으로 일반화하지 않음.",
+      "resolved_by_receipt_ids": [
+        "PROBE-TM-OECD-STRUCTURE",
+        "PROBE-TM-OECD-CORRECTED"
+      ]
+    },
+    {
+      "id": "PROBE-TM-USGS-FILE",
+      "url_redacted": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-gallium.pdf",
+      "retrieved_url_redacted": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-gallium.pdf",
+      "requested_at_utc": "2026-10-04T17:10:30.143310+00:00",
+      "response_status": 200,
+      "status": "FILE_DOCUMENT_SUCCESS_NOT_API",
+      "byte_length": 136626,
+      "sha256": "15df2a3ef3ed992b8bb9e1785809a83219864286626b289c207ca5fda84ca27c",
+      "content_type": "application/pdf",
+      "pdf_page_count": 2,
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "DOC-TM-KOSIS-TERMS-ACTUAL",
+      "url_redacted": "https://kosis.kr/openapi/introduce/introduce_02List.do",
+      "retrieved_url_redacted": "https://kosis.kr/openapi/introduce/introduce_02List.do",
+      "requested_at_utc": "2026-10-04T17:14:55.899926+00:00",
+      "response_status": 200,
+      "status": "DOC_HTTP_BODY_CAPTURED",
+      "byte_length": 36241,
+      "sha256": "3bd3bb68b25f11c04510079394f34219593f243755720dca2d2f803d01baf7ba",
+      "content_type": "text/html;charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "DOC-TM-EUROSTAT-LICENSE",
+      "url_redacted": "https://ec.europa.eu/eurostat/about-us/policies/copyright",
+      "retrieved_url_redacted": "https://ec.europa.eu/eurostat/about-us/policies/copyright",
+      "requested_at_utc": "2026-10-04T17:14:56.301178+00:00",
+      "response_status": 404,
+      "status": "HTTP_ERROR",
+      "byte_length": 159306,
+      "sha256": "36828b66289013699f8987f765508acb62f3a9e0b49360fef148cfa70b1df89b",
+      "content_type": "text/html;charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_ERROR_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false,
+      "failure_interpretation_ko": "처음 탐색한 문서 경로의 404. 올바른 공식 링크를 찾은 후 200으로 보존."
+    },
+    {
+      "id": "DOC-TM-OECD-TERMS",
+      "url_redacted": "https://www.oecd.org/en/about/terms-conditions.html",
+      "retrieved_url_redacted": "https://www.oecd.org/en/about/terms-conditions.html",
+      "requested_at_utc": "2026-10-04T17:14:58.140838+00:00",
+      "response_status": 403,
+      "status": "HTTP_ERROR",
+      "byte_length": 5621,
+      "sha256": "de2e778ef9240627df2575b4ad0fbfbb6d9b497e56c4ed1dea246a71cfb2cdf1",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_ERROR_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false,
+      "failure_interpretation_ko": "stdlib HTTP 경로의 403. 현재 공식 본문은 별도 웹 도구로 검토; 403 HTML을 원문 문서로 해시하지 않음."
+    },
+    {
+      "id": "PROBE-TM-OECD-STRUCTURE",
+      "url_redacted": "https://sdmx.oecd.org/sti-public/rest/dataflow/OECD.STI.PIE/DSD_TIVA_MAINSH@DF_MAINSH/1.1?references=all",
+      "retrieved_url_redacted": "https://sdmx.oecd.org/sti-public/rest/dataflow/OECD.STI.PIE/DSD_TIVA_MAINSH@DF_MAINSH/1.1?references=all",
+      "requested_at_utc": "2026-10-04T17:14:58.293347+00:00",
+      "response_status": 200,
+      "status": "METADATA_STRUCTURE_PARSED_NOT_DATA",
+      "byte_length": 2171555,
+      "sha256": "09290d577d98303d073883a83dea30f3f8973588a86e5e6ce55992ea40b96f87",
+      "content_type": "application/vnd.sdmx.structure+xml; version=2.1; charset=utf-8",
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "PROBE-TM-OECD-CORRECTED",
+      "url_redacted": "https://sdmx.oecd.org/sti-public/rest/data/OECD.STI.PIE,DSD_TIVA_MAINSH@DF_MAINSH,1.1/EXGR_FVA.KOR.C26.W.PT_EXGR.A?startPeriod=2020&endPeriod=2020&dimensionAtObservation=AllDimensions&format=csvfilewithlabels",
+      "retrieved_url_redacted": "https://sdmx.oecd.org/sti-public/rest/data/OECD.STI.PIE,DSD_TIVA_MAINSH@DF_MAINSH,1.1/EXGR_FVA.KOR.C26.W.PT_EXGR.A?startPeriod=2020&endPeriod=2020&dimensionAtObservation=AllDimensions&format=csvfilewithlabels",
+      "requested_at_utc": "2026-10-04T17:19:05.329631+00:00",
+      "response_status": 200,
+      "status": "DATA_RESPONSE_NONEMPTY",
+      "byte_length": 607,
+      "sha256": "0d60be4c92c4c777822a37db8758d300fb805825bdaad72f6b6f1fc874172c02",
+      "content_type": "application/vnd.sdmx.data+csv; version=2; charset=utf-8; labels=name",
+      "returned_row_count": 1,
+      "observed_field_names": [
+        "STRUCTURE",
+        "STRUCTURE_ID",
+        "STRUCTURE_NAME",
+        "ACTION",
+        "MEASURE",
+        "Measure",
+        "REF_AREA",
+        "Reference area",
+        "ACTIVITY",
+        "Economic activity",
+        "COUNTERPART_AREA",
+        "Counterpart area",
+        "UNIT_MEASURE",
+        "Unit of measure",
+        "FREQ",
+        "Frequency of observation",
+        "TIME_PERIOD",
+        "Time period",
+        "OBS_VALUE",
+        "Observation value",
+        "UNIT_MULT",
+        "Unit multiplier"
+      ],
+      "query_period": "2020",
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "DOC-TM-EUROSTAT-LICENSE-ACTUAL",
+      "url_redacted": "https://ec.europa.eu/eurostat/help/copyright-notice",
+      "retrieved_url_redacted": "https://ec.europa.eu/eurostat/help/copyright-notice",
+      "requested_at_utc": "2026-10-04T17:19:06.940632+00:00",
+      "response_status": 200,
+      "status": "DOC_HTTP_BODY_CAPTURED",
+      "byte_length": 177245,
+      "sha256": "43040b3113f96b2db5288d072e7ddb3b5bba222079b770d7033c69185164fcf8",
+      "content_type": "text/html;charset=UTF-8",
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    },
+    {
+      "id": "PROBE-TM-USGS-REE-FILE",
+      "url_redacted": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+      "retrieved_url_redacted": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+      "requested_at_utc": "2026-10-04T17:19:09.700862+00:00",
+      "response_status": 200,
+      "status": "FILE_DOCUMENT_SUCCESS_NOT_API",
+      "byte_length": 639984,
+      "sha256": "0116a192336fec41c38d8e11dad553bb7703308c1fbd1f97dc14b75c7e7d9900",
+      "content_type": "application/pdf",
+      "pdf_page_count": 2,
+      "sha256_representation": "RAW_HTTP_RESPONSE_BODY",
+      "credentials_used": null,
+      "economic_values_in_public_artifact": false
+    }
+  ],
+  "reused_references": [
+    {
+      "path": "data/research/semiconductor_supply_chain/2026-10-03/api_issuance_plan_v3.json",
+      "kind": "existing_access_plan",
+      "ids": [
+        "un-comtrade",
+        "korea-customs-hs-country"
+      ],
+      "locator": "additional_access; KOSIS in core_sources"
+    },
+    {
+      "path": "data/research/semiconductor_supply_chain/2026-10-03/signal_catalog_v2.json",
+      "kind": "existing_metric_definitions",
+      "ids": [
+        "capital-comtrade-physical-trade",
+        "supply-component-country-concentration",
+        "capital-usgs-structural-resource-risk"
+      ],
+      "locator": "metrics[]"
+    },
+    {
+      "path": "docs/research/supply_chain/memory_cycle_signal_plan.md",
+      "kind": "existing_memory_cycle_plan",
+      "ids": [
+        "MC12",
+        "MC13"
+      ],
+      "locator": "product trade and domestic production/shipment/inventory sections"
+    },
+    {
+      "path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "kind": "existing_product_routes",
+      "ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-02-DDR-CPU",
+        "PROD-03-LPDDR-CPU",
+        "PROD-04-NAND-ESSD",
+        "PROD-05-HBM-ASIC",
+        "PROD-06-FOUNDRY-NODES",
+        "PROD-07-EDA-IP-PACK-TEST",
+        "PROD-08-EQUIPMENT-MATERIALS",
+        "PROD-09-GAN-SIC-POWER",
+        "PROD-11-GAN-RF"
+      ],
+      "locator": "routes[]"
+    }
+  ],
+  "collection_validation": {
+    "data_success_definition": "nonempty correctly parsed data with requested scope checked where feasible; HTTP 200 alone is insufficient",
+    "nonempty_data_receipt_ids": [
+      "PROBE-TM-COMTRADE",
+      "PROBE-TM-EUROSTAT",
+      "PROBE-TM-OECD-CORRECTED"
+    ],
+    "metadata_only_success_receipt_ids": [
+      "PROBE-TM-OECD-STRUCTURE"
+    ],
+    "file_success_not_api_receipt_ids": [
+      "PROBE-TM-USGS-FILE",
+      "PROBE-TM-USGS-REE-FILE"
+    ],
+    "authenticated_api_not_called_family_ids": [
+      "TM-04-KOSIS",
+      "TM-05-KOREA-CUSTOMS"
+    ],
+    "record_count_note_ko": "Comtrade 한 행, Eurostat 한 관측, OECD 한 행은 API 응답을 확인한 범위이며 전체 바스켓·최신 시점·완전한 시계열의 검증이 아니다.",
+    "actual_failure_receipt_ids": [
+      "DOC-TM-OECD-API",
+      "DOC-TM-OECD-LIMITS",
+      "DOC-TM-OECD-PARAMS",
+      "DOC-TM-KOSIS-TERMS",
+      "PROBE-TM-OECD",
+      "DOC-TM-EUROSTAT-LICENSE",
+      "DOC-TM-OECD-TERMS"
+    ],
+    "web_tool_only_failure": {
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+      "http_status": 403,
+      "receipt_type": "WEB_TOOL_ERROR_NOT_RAW_HTTP_CAPTURE",
+      "raw_sha256": null,
+      "raw_bytes": null,
+      "resolution_receipt_id": "PROBE-TM-USGS-REE-FILE"
+    },
+    "raw_originals_location_policy": "original HTTP bodies, PDFs, error bodies and normalized web captures retained outside the public repository; no raw originals redistributed"
+  },
+  "limitations_ko": [
+    "HS/CN 제품, 국내 산업분류 지수, TiVA 산업, USGS 소재 형태는 서로 다른 분류축이다. 국가 이름만 같다고 join하지 않는다.",
+    "trade value/weight/index/value-added/mineral content의 단위를 교차 환산하지 않는다. 반도체 제품/공정/순도·원산지·측정시점·공개시점을 따로 보존한다.",
+    "국가 무역이나 생산자료는 구매 회사·주문 계약·고객 인증·제품별 가용 CAPA를 직접 증명하지 못한다.",
+    "선행지표 후보의 방향은 연구 질문이며, 전체 값 패널·과거 예측·지연 상관 검증을 수행하지 않았다.",
+    "API key를 가진 사실·발급 여부와 공식 문서의 key 요구 여부는 다르다. 이번 작업은 개인 키·기존 비밀 폴더를 읽지 않았고 신규 계정을 만들지 않았다."
+  ],
+  "recommended_next_single_task_ko": "Comtrade와 Eurostat에서 HS 판·품목 바스켓과 생산 산업분류·기준년·계절조정을 고정한 뒤, 같은 월 범위의 소량 API 관측 파일럿을 수행한다.",
+  "artifact_validation": {
+    "all_raw_receipt_hashes_and_bytes_verified": true,
+    "family_count": 6,
+    "source_count": 25,
+    "http_error_receipt_count": 7,
+    "maximum_english_excerpt_words_per_source_url": 10,
+    "existing_metric_route_access_ids_verified": true,
+    "nonempty_data_scope_verified": true,
+    "public_economic_metric_values_included": false,
+    "encoding": "UTF-8",
+    "line_endings": "LF"
+  }
+}

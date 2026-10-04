@@ -1,0 +1,939 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-05",
+  "title_ko": "회사 투자와 산업 실행 및 투자자 배분의 API 가능성",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "governed_evidence": false,
+  "human_evidence_approved": false,
+  "h1_admitted": false,
+  "predictive_signal_validated": false,
+  "continuous_collection_implemented": false,
+  "credential_inventory_included": false,
+  "baseline_references": [
+    {
+      "repository_path": "data/research/semiconductor_supply_chain/2026-10-03/api_issuance_plan_v3.json",
+      "repository_file_sha256": "7d4e25761fa99f704660537f9a8e31d0bbef5263fcb4b4264c75156030e19be2",
+      "byte_length": 18408,
+      "reference_role": "dated candidate definitions/routes; not current source recapture"
+    },
+    {
+      "repository_path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "repository_file_sha256": "f6d7e5c8d62aa6d46ed05d87b77fceec2d9eccfb84fd6a4a96aabc1a653db283",
+      "byte_length": 97626,
+      "reference_role": "dated candidate definitions/routes; not current source recapture"
+    },
+    {
+      "repository_path": "data/research/semiconductor_industry_routes/2026-10-05/policy_infrastructure_routes.json",
+      "repository_file_sha256": "bedba1e6430e59d44501c95d3fd780feffbb8b3df5302a5a5c62b6cd362c1ea8",
+      "byte_length": 77441,
+      "reference_role": "dated candidate definitions/routes; not current source recapture"
+    }
+  ],
+  "families": [
+    {
+      "id": "root-sec",
+      "provider": "SEC EDGAR",
+      "purpose_ko": "미국 고객·장비·전력 공급자의 공시 사건과 실제 법인 현금 지출 확인",
+      "endpoint": "https://data.sec.gov/api/xbrl/companyconcept/CIK{cik}/{taxonomy}/{tag}.json",
+      "additional_endpoints": [
+        "https://data.sec.gov/submissions/CIK{cik}.json",
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json"
+      ],
+      "method": "GET",
+      "source_ids": [
+        "SRC-API-ROOT-SEC",
+        "SRC-API-ROOT-SEC-FAIR"
+      ],
+      "probe_ids": [
+        "sec-capex",
+        "sec-submissions"
+      ],
+      "access": {
+        "current_status": "DOCUMENTED_KEYLESS_API_PROBED_HTTP403_NO_DATA",
+        "api_key_required": false,
+        "signup_required_for_public_api": false,
+        "free_public_access_documented": true,
+        "quota_requests_per_second_per_user": 10,
+        "automated_identity_required": true,
+        "identity_used_ko": "개인정보 없는 공개 연구 프로젝트 URL 식별자",
+        "license_status": "SEC public data access; source attachments and third-party material require individual rights review"
+      },
+      "bounds_ko": [
+        "Microsoft CIK0000789019 두 endpoint가 403. API가 유료이거나 키가 필요한 것으로 추론하지 않음.",
+        "회사 전체 표준 XBRL만으로 AI 투자·SKU·기명 고객/시설 돈을 배분하지 않음.",
+        "계약 내용·샘플·인증·기명 공급자는 filing 원문/exhibit 검토가 추가로 필요."
+      ]
+    },
+    {
+      "id": "root-fred",
+      "provider": "FRED v1 / ALFRED",
+      "purpose_ko": "공급 실행·산업 가동과 전력장비 지연의 넓은 보조 관측",
+      "endpoint": "https://api.stlouisfed.org/fred/series/observations",
+      "method": "GET",
+      "request_fields": [
+        "series_id",
+        "observation_start",
+        "observation_end",
+        "realtime_start",
+        "realtime_end",
+        "api_key securely injected",
+        "file_type=json"
+      ],
+      "source_ids": [
+        "SRC-API-ROOT-FRED-KEY",
+        "SRC-API-ROOT-FRED-IP",
+        "SRC-API-ROOT-FRED-CU",
+        "SRC-API-ROOT-FRED-BACKLOG"
+      ],
+      "probe_ids": [
+        "fred-IPG3344S",
+        "fred-CAPUTLG3344S",
+        "fred-A35SUO"
+      ],
+      "access": {
+        "current_status": "KEYED_API_NOT_CALLED_CSV_ALTERNATIVE_THREE_REQUESTS_FAILED",
+        "api_key_required": true,
+        "key_issuance_performed": false,
+        "authenticated_call_performed": false,
+        "quota_documented": null,
+        "quota_status": "TO_VERIFY",
+        "free_path_ko": "공식 series 페이지 열람. 정규 v1 API는 등록 키 필요; 이번 CSV 조회는 timeout/연결 종료.",
+        "license_status": "series별 원 제공기관·rights, FRED/ALFRED terms를 함께 검토"
+      },
+      "bounds_ko": [
+        "CSV endpoint 호출은 API 인증 검증이 아님. 이번 세 CSV에서 유효 데이터를 받지 못함.",
+        "현재 수정된 history와 realtime vintage를 구분하며 향후 first-release 공표 날짜를 별도 보존.",
+        "월간 산업집계는 실제 메모리 주문·개별 공장·변압기 대수와 다름."
+      ]
+    },
+    {
+      "id": "root-dart",
+      "provider": "OpenDART",
+      "purpose_ko": "하이닉스 및 한국 공급망 법인의 공시·재고·현금 시설투자를 같은 보고 범위에서 확인",
+      "endpoint": "https://opendart.fss.or.kr/api/fnlttSinglAcntAll.json",
+      "additional_endpoints": [
+        "https://opendart.fss.or.kr/api/list.json",
+        "https://opendart.fss.or.kr/api/document.xml",
+        "https://opendart.fss.or.kr/api/corpCode.xml"
+      ],
+      "method": "GET",
+      "request_fields": [
+        "crtfc_key securely injected",
+        "corp_code",
+        "bsns_year",
+        "reprt_code",
+        "fs_div CFS/OFS"
+      ],
+      "source_ids": [
+        "SRC-API-ROOT-DART-LIST",
+        "SRC-API-ROOT-DART-SEARCH"
+      ],
+      "probe_ids": [],
+      "access": {
+        "current_status": "OFFICIAL_API_SCOPE_CHECKED_AUTHENTICATED_CALL_NOT_PERFORMED",
+        "api_key_required": true,
+        "key_issuance_performed": false,
+        "authenticated_call_performed": false,
+        "price_status": "기존 무료 공시 API 후보; 사용자 계정의 현재 권한/제한·상세 guide는 이번에 인증하지 않음.",
+        "quota_documented": null,
+        "quota_status": "TO_VERIFY_ACCOUNT_CONFIGURATION",
+        "detail_guide_http_status": "WEB_TOOL_TIMEOUT",
+        "license_status": "공식 API 이용약관과 제출인/정정 경계; 원문 전체 재배포는 별도 확인"
+      },
+      "bounds_ko": [
+        "사용자별 키 보유·활성화 상태는 공개 기록에 포함하지 않음.",
+        "정기보고서의 재고 장부금액·CF를 제품별 비트·주문으로 배분하지 않음.",
+        "연결/별도·회계기간·누적/당분기·account_id와 정정 보고서를 구분."
+      ]
+    },
+    {
+      "id": "root-ecos",
+      "provider": "Bank of Korea ECOS",
+      "purpose_ko": "서로 다른 통화·기간의 비용/거래 비교를 위한 보조 환율 정의 확인",
+      "endpoint": "https://ecos.bok.or.kr/api/StatisticSearch/{secure_key_or_public_sample}/json/kr/{start}/{end}/{stat_code}/{cycle}/{period_start}/{period_end}/{item_code}",
+      "method": "GET",
+      "source_ids": [
+        "SRC-API-ROOT-ECOS"
+      ],
+      "probe_ids": [
+        "ecos-items",
+        "ecos-fx-sample"
+      ],
+      "access": {
+        "current_status": "PUBLIC_SAMPLE_METADATA_AND_THREE_DATA_ROWS_RETURNED",
+        "sample_authentication": "PUBLIC_SAMPLE_NOT_USER_ACCOUNT",
+        "normal_registered_key_authenticated": false,
+        "key_issuance_performed": false,
+        "general_free_quota_status": "TO_VERIFY",
+        "license_status": "official public sample; current normal-service terms/redistribution TO_VERIFY"
+      },
+      "bounds_ko": [
+        "표731Y001·항목0000001은 실제 반환된 D 주기. sample 10행 구조와 3일 값이 전체 역사·일반 사용자 권한을 증명하지 않음.",
+        "시장 가격·환율 보조 지표이므로 반도체 수요/공급 선행 핵심 지표로 고르지 않음.",
+        "분기 현금흐름을 단일 날짜 환율로 자동 환산하지 않음."
+      ]
+    },
+    {
+      "id": "root-etf-file",
+      "provider": "iShares BAI official holdings CSV",
+      "purpose_ko": "투자자 증권 배분을 실제 기업의 고객 현금/설비 자금과 나누어 관측",
+      "endpoint": "https://www.ishares.com/us/products/339081/ishares-a-i-innovation-and-tech-active-etf/latest-holdings.csv",
+      "method": "GET_FILE",
+      "source_ids": [
+        "SRC-API-ROOT-ETF"
+      ],
+      "probe_ids": [
+        "ishares-bai"
+      ],
+      "access": {
+        "current_status": "PUBLIC_CSV_VALID_FIFTY_EQUITY_ROWS_NOT_API",
+        "api_available_verified": false,
+        "api_key_required_for_this_file": false,
+        "signup_required_for_this_file": false,
+        "free_file_access_observed": true,
+        "rate_limit_documented": null,
+        "license_status": "official site/file terms; bulk redistribution TO_VERIFY; original CSV not published"
+      },
+      "bounds_ko": [
+        "실제 파일 기준일2026-10-01, Equity Quantity 50행. API나 일별 누적 패널 구축으로 표시하지 않음.",
+        "Quantity는 Equity 보유 수량의 원 필드. Shares라는 열을 가정하지 않음. 다른 asset class와 cash/footer 제외.",
+        "같은 파일의 Shares Outstanding는 펀드 단위. 이전 S·동일일 NAV가 없어 순설정 흐름 미계산.",
+        "비중은 가격·분모 효과를 포함하고 현물 설정/환매가 가능하므로 운용 거래/기업 현금 유입 아님."
+      ]
+    }
+  ],
+  "indicators": [
+    {
+      "id": "ROOTAPI01-CUSTOMER-CASH",
+      "family_id": "root-sec",
+      "purpose_ko": "투자 가이던스와 실제 고객 법인 현금 시설투자가 일치하는가?",
+      "fields": [
+        "cik",
+        "taxonomy",
+        "tag",
+        "units",
+        "start",
+        "end",
+        "val",
+        "filed",
+        "accn",
+        "fy",
+        "fp",
+        "form",
+        "frame"
+      ],
+      "grain": [
+        "legal entity CIK",
+        "tag/account definition",
+        "currency",
+        "start/end",
+        "accession and filing version"
+      ],
+      "unit": "reported currency",
+      "frequency": "filing event / quarter / year",
+      "series_or_dataset": "us-gaap/PaymentsToAcquirePropertyPlantAndEquipment",
+      "product_route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-05-HBM-ASIC"
+      ],
+      "join_keys": [
+        "legal entity CIK",
+        "tag/account definition",
+        "currency",
+        "start/end",
+        "accession and filing version"
+      ],
+      "measurement_status": "API_FAILED_NO_VALUES",
+      "known_at_rule_ko": "측정 기간·공시/공표 시점·개정/vintage·수집 시각을 분리. 최초 공개 시각이 없으면 null/날짜 정밀도를 보존.",
+      "interpretation_bounds_ko": [
+        "PaymentsToAcquirePropertyPlantAndEquipment는 실제 법인 현금 취득 후보; 특정 AI 시설/메모리 금액은 별도 명시될 때만.",
+        "CF 누적과 단독 분기·비현금 리스를 분리. fiscal quarter와 calendar quarter를 합치지 않음."
+      ],
+      "predictive_signal_validated": false,
+      "specific_customer_volume_known": false
+    },
+    {
+      "id": "ROOTAPI02-CONTRACT-FILING-EVENT",
+      "family_id": "root-sec",
+      "purpose_ko": "기명 구매·투자·공급 계약과 수정 공시를 찾을 수 있는가?",
+      "fields": [
+        "accessionNumber",
+        "filingDate",
+        "reportDate",
+        "form",
+        "primaryDocument",
+        "original exhibit/stage"
+      ],
+      "grain": [
+        "legal entity CIK",
+        "accession",
+        "document/exhibit",
+        "contract/project",
+        "event date and disclosed date"
+      ],
+      "unit": "event and original currency/quantity only when disclosed",
+      "frequency": "event",
+      "series_or_dataset": null,
+      "product_route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-05-HBM-ASIC"
+      ],
+      "join_keys": [
+        "legal entity CIK",
+        "accession",
+        "document/exhibit",
+        "contract/project",
+        "event date and disclosed date"
+      ],
+      "measurement_status": "API_FAILED_NO_VALUES",
+      "known_at_rule_ko": "측정 기간·공시/공표 시점·개정/vintage·수집 시각을 분리. 최초 공개 시각이 없으면 null/날짜 정밀도를 보존.",
+      "interpretation_bounds_ko": [
+        "Submissions는 계약 조건 자체의 데이터 API가 아님. 원문에서 LTA/취소/선수금/인도·현금을 구분."
+      ],
+      "predictive_signal_validated": false,
+      "specific_customer_volume_known": false
+    },
+    {
+      "id": "ROOTAPI03-KR-CASH-INVENTORY",
+      "family_id": "root-dart",
+      "purpose_ko": "한국 공급망 법인의 재고·시설 현금 지출과 보고 범위를 확보할 수 있는가?",
+      "fields": [
+        "corp_code",
+        "rcept_no",
+        "bsns_year",
+        "reprt_code",
+        "fs_div",
+        "sj_div",
+        "account_id",
+        "account_nm",
+        "thstrm_amount",
+        "thstrm_add_amount when provided",
+        "currency"
+      ],
+      "grain": [
+        "DART corp_code",
+        "receipt/version",
+        "CFS/OFS",
+        "statement/account",
+        "raw period and currency"
+      ],
+      "unit": "raw statement currency/book value",
+      "frequency": "quarter / half-year / annual",
+      "series_or_dataset": null,
+      "product_route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-02-DDR-CPU",
+        "PROD-04-NAND-ESSD"
+      ],
+      "join_keys": [
+        "DART corp_code",
+        "receipt/version",
+        "CFS/OFS",
+        "statement/account",
+        "raw period and currency"
+      ],
+      "measurement_status": "AUTHENTICATED_API_NOT_CALLED",
+      "known_at_rule_ko": "측정 기간·공시/공표 시점·개정/vintage·수집 시각을 분리. 최초 공개 시각이 없으면 null/날짜 정밀도를 보존.",
+      "interpretation_bounds_ko": [
+        "현금흐름표 전체 계정 필요. CF YTD/재고 시점/분기 설명을 섞지 않음. API account_id·누적 필드는 실제 응답 검증이 남음.",
+        "DART 고유번호와 종목코드의 mapping 및 유효기간을 별도 검증."
+      ],
+      "predictive_signal_validated": false,
+      "specific_customer_volume_known": false
+    },
+    {
+      "id": "ROOTAPI04-KR-FILING-SEARCH",
+      "family_id": "root-dart",
+      "purpose_ko": "제품·고객·투자 관련 공시 및 정정을 원문으로 연결할 수 있는가?",
+      "fields": [
+        "corp_code",
+        "rcept_no",
+        "report_nm",
+        "rcept_dt",
+        "pblntf_ty",
+        "pblntf_detail_ty",
+        "rm"
+      ],
+      "grain": [
+        "corp_code",
+        "receipt/document",
+        "form/type",
+        "publication/event date"
+      ],
+      "unit": "filing event",
+      "frequency": "event",
+      "series_or_dataset": null,
+      "product_route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-02-DDR-CPU"
+      ],
+      "join_keys": [
+        "corp_code",
+        "receipt/document",
+        "form/type",
+        "publication/event date"
+      ],
+      "measurement_status": "AUTHENTICATED_API_NOT_CALLED",
+      "known_at_rule_ko": "측정 기간·공시/공표 시점·개정/vintage·수집 시각을 분리. 최초 공개 시각이 없으면 null/날짜 정밀도를 보존.",
+      "interpretation_bounds_ko": [
+        "공시 검색 결과와 원문 계약/고객 사양은 다른 데이터. 특정 발표일을 최초 공표 시각으로 확정하지 않음."
+      ],
+      "predictive_signal_validated": false,
+      "specific_customer_volume_known": false
+    },
+    {
+      "id": "ROOTAPI05-US-PRODUCTION",
+      "family_id": "root-fred",
+      "purpose_ko": "미국 반도체·전자부품 산업의 실행 변화",
+      "fields": [
+        "series_id",
+        "date",
+        "value",
+        "realtime_start",
+        "realtime_end",
+        "units",
+        "seasonal_adjustment"
+      ],
+      "grain": [
+        "series id",
+        "industry definition",
+        "country",
+        "month",
+        "vintage"
+      ],
+      "unit": "raw Index 2017=100 SA",
+      "frequency": "monthly",
+      "series_or_dataset": "IPG3344S",
+      "product_route_ids": [
+        "PROD-06-FOUNDRY-NODES"
+      ],
+      "join_keys": [
+        "series id",
+        "industry definition",
+        "country",
+        "month",
+        "vintage"
+      ],
+      "measurement_status": "API_NOT_CALLED_CSV_FAILED",
+      "known_at_rule_ko": "측정 기간·공시/공표 시점·개정/vintage·수집 시각을 분리. 최초 공개 시각이 없으면 null/날짜 정밀도를 보존.",
+      "interpretation_bounds_ko": [
+        "광범위 업종 집계이며 특정 칩·하이닉스·AI/DC 변압기 단독 지표가 아님.",
+        "단위·기준연도·SA·빈티지/수정과 발표 지연 보존."
+      ],
+      "predictive_signal_validated": false,
+      "specific_customer_volume_known": false
+    },
+    {
+      "id": "ROOTAPI06-US-UTILIZATION",
+      "family_id": "root-fred",
+      "purpose_ko": "미국 반도체·전자부품 산업의 가동 압력",
+      "fields": [
+        "series_id",
+        "date",
+        "value",
+        "realtime_start",
+        "realtime_end",
+        "units",
+        "seasonal_adjustment"
+      ],
+      "grain": [
+        "series id",
+        "industry definition",
+        "country",
+        "month",
+        "vintage"
+      ],
+      "unit": "raw Percent SA",
+      "frequency": "monthly",
+      "series_or_dataset": "CAPUTLG3344S",
+      "product_route_ids": [
+        "PROD-06-FOUNDRY-NODES"
+      ],
+      "join_keys": [
+        "series id",
+        "industry definition",
+        "country",
+        "month",
+        "vintage"
+      ],
+      "measurement_status": "API_NOT_CALLED_CSV_FAILED",
+      "known_at_rule_ko": "측정 기간·공시/공표 시점·개정/vintage·수집 시각을 분리. 최초 공개 시각이 없으면 null/날짜 정밀도를 보존.",
+      "interpretation_bounds_ko": [
+        "광범위 업종 집계이며 특정 칩·하이닉스·AI/DC 변압기 단독 지표가 아님.",
+        "단위·기준연도·SA·빈티지/수정과 발표 지연 보존."
+      ],
+      "predictive_signal_validated": false,
+      "specific_customer_volume_known": false
+    },
+    {
+      "id": "ROOTAPI07-ELECTRICAL-BACKLOG",
+      "family_id": "root-fred",
+      "purpose_ko": "전력 장비 등의 공급 지연을 넓은 업종 주문잔고로 교차 확인",
+      "fields": [
+        "series_id",
+        "date",
+        "value",
+        "realtime_start",
+        "realtime_end",
+        "units",
+        "seasonal_adjustment"
+      ],
+      "grain": [
+        "series id",
+        "industry definition",
+        "country",
+        "month",
+        "vintage"
+      ],
+      "unit": "raw Millions USD SA end-of-period",
+      "frequency": "monthly",
+      "series_or_dataset": "A35SUO",
+      "product_route_ids": [
+        "PROD-09-GAN-SIC-POWER"
+      ],
+      "join_keys": [
+        "series id",
+        "industry definition",
+        "country",
+        "month",
+        "vintage"
+      ],
+      "measurement_status": "API_NOT_CALLED_CSV_FAILED",
+      "known_at_rule_ko": "측정 기간·공시/공표 시점·개정/vintage·수집 시각을 분리. 최초 공개 시각이 없으면 null/날짜 정밀도를 보존.",
+      "interpretation_bounds_ko": [
+        "광범위 업종 집계이며 특정 칩·하이닉스·AI/DC 변압기 단독 지표가 아님.",
+        "단위·기준연도·SA·빈티지/수정과 발표 지연 보존."
+      ],
+      "predictive_signal_validated": false,
+      "specific_customer_volume_known": false
+    },
+    {
+      "id": "ROOTAPI08-FX-CONTROL",
+      "family_id": "root-ecos",
+      "purpose_ko": "통화 차이를 정리할 보조 정의·관측값을 API로 얻는가?",
+      "fields": [
+        "STAT_CODE",
+        "ITEM_CODE1",
+        "ITEM_NAME1",
+        "CYCLE",
+        "TIME",
+        "DATA_VALUE",
+        "UNIT_NAME"
+      ],
+      "grain": [
+        "stat code 731Y001",
+        "item code 0000001",
+        "D cycle",
+        "observation day"
+      ],
+      "unit": "KRW per USD (raw UNIT_NAME=원, item denomination=미국달러)",
+      "frequency": "daily",
+      "series_or_dataset": "731Y001/0000001/D",
+      "product_route_ids": [],
+      "join_keys": [
+        "stat code 731Y001",
+        "item code 0000001",
+        "D cycle",
+        "observation day"
+      ],
+      "measurement_status": "PUBLIC_SAMPLE_THREE_VALUES_OBSERVED",
+      "known_at_rule_ko": "측정 기간·공시/공표 시점·개정/vintage·수집 시각을 분리. 최초 공개 시각이 없으면 null/날짜 정밀도를 보존.",
+      "interpretation_bounds_ko": [
+        "공개 sample의2026-09-28~30 세 행만 확인. 일반 키·전 범위·쿼터는 미검증.",
+        "보조 가격 변수이며 구매/생산 지표가 아님."
+      ],
+      "predictive_signal_validated": false,
+      "specific_customer_volume_known": false
+    },
+    {
+      "id": "ROOTAPI09-ETF-POSITION",
+      "family_id": "root-etf-file",
+      "purpose_ko": "기관/투자자 배분에서 가격 효과와 보유 수량을 나눌 수 있는가?",
+      "fields": [
+        "Ticker",
+        "Name",
+        "Asset Class",
+        "Quantity",
+        "Weight (%)",
+        "fund holdings as of",
+        "Shares Outstanding"
+      ],
+      "grain": [
+        "fund/share class",
+        "security id or ticker+exchange+currency",
+        "holdings date",
+        "asset class",
+        "file hash"
+      ],
+      "unit": "Equity shares / weight % / ETF shares",
+      "frequency": "provider snapshot; daily archive proposed",
+      "series_or_dataset": "BAI official holdings CSV",
+      "product_route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-06-FOUNDRY-NODES"
+      ],
+      "join_keys": [
+        "fund/share class",
+        "security id or ticker+exchange+currency",
+        "holdings date",
+        "asset class",
+        "file hash"
+      ],
+      "measurement_status": "FILE_FIELDS_OBSERVED_NO_FLOW_COMPUTED",
+      "known_at_rule_ko": "측정 기간·공시/공표 시점·개정/vintage·수집 시각을 분리. 최초 공개 시각이 없으면 null/날짜 정밀도를 보존.",
+      "interpretation_bounds_ko": [
+        "API 아님. 동일일 원값과 증권/기업행동 mapping 필요. q/S는 정의 후보만; 펀드별 거래금액·기명 회사 현금 유입 아님."
+      ],
+      "predictive_signal_validated": false,
+      "specific_customer_volume_known": false
+    },
+    {
+      "id": "ROOTAPI10-ETF-NETCREATION",
+      "family_id": "root-etf-file",
+      "purpose_ko": "펀드 규모와 투자자 순설정 압력의 추정 후보를 만들 수 있는가?",
+      "fields": [
+        "prior/current Shares Outstanding",
+        "same-date NAV",
+        "split/corporate-action factor"
+      ],
+      "grain": [
+        "fund/share class",
+        "same valuation date",
+        "currency",
+        "corporate action"
+      ],
+      "unit": "same-date NAV valued change in ETF shares",
+      "frequency": "provider snapshot",
+      "series_or_dataset": "BAI official share count + NAV",
+      "product_route_ids": [],
+      "join_keys": [
+        "fund/share class",
+        "same valuation date",
+        "currency",
+        "corporate action"
+      ],
+      "measurement_status": "REQUIRED_FIELDS_NOT_COLLECTED",
+      "known_at_rule_ko": "측정 기간·공시/공표 시점·개정/vintage·수집 시각을 분리. 최초 공개 시각이 없으면 null/날짜 정밀도를 보존.",
+      "interpretation_bounds_ko": [
+        "이전 S와 같은 날짜 NAV 미수집, 흐름 미계산. 현물 설정/환매·gross 거래·운용사의 매매대금·기업 CAPEX와 다름."
+      ],
+      "predictive_signal_validated": false,
+      "specific_customer_volume_known": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-API-ROOT-SEC",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "title": "SEC EDGAR data APIs",
+      "review_as_of": "2026-10-05",
+      "review_representation": "OFFICIAL_WEB_TOOL_TEXT_REVIEW_NOT_ORIGINAL_HTTP_BYTES",
+      "sha256": null,
+      "raw_original_captured": false,
+      "publication_date_displayed": "2024-06-06",
+      "support_scope_ko": "무키 submissions와 표준 taxonomy·전체 법인 XBRL, 단위별 facts·공시/기간/개정; 원문 계약 자체의 정형 API 아님.",
+      "original_excerpt": null,
+      "english_verbatim_word_count": 0
+    },
+    {
+      "id": "SRC-API-ROOT-SEC-FAIR",
+      "source_url": "https://www.sec.gov/about/developer-resources",
+      "title": "SEC developer resources",
+      "review_as_of": "2026-10-05",
+      "review_representation": "OFFICIAL_WEB_TOOL_TEXT_REVIEW_NOT_ORIGINAL_HTTP_BYTES",
+      "sha256": null,
+      "raw_original_captured": false,
+      "publication_date_displayed": "2024-06-25",
+      "support_scope_ko": "현재 공정접근 10요청/초/사용자, 요청 최소화·자동 도구 식별; 403 원인을 이 문서만으로 확정하지 않음.",
+      "original_excerpt": null,
+      "english_verbatim_word_count": 0
+    },
+    {
+      "id": "SRC-API-ROOT-FRED-KEY",
+      "source_url": "https://fred.stlouisfed.org/docs/api/api_key.html",
+      "title": "FRED API v1 key",
+      "review_as_of": "2026-10-05",
+      "review_representation": "OFFICIAL_WEB_TOOL_TEXT_REVIEW_NOT_ORIGINAL_HTTP_BYTES",
+      "sha256": null,
+      "raw_original_captured": false,
+      "publication_date_displayed": null,
+      "support_scope_ko": "API key와 계정 로그인 안내. 문서 확인을 사용자 키 보유·인증 성공으로 바꾸지 않음.",
+      "original_excerpt": null,
+      "english_verbatim_word_count": 0
+    },
+    {
+      "id": "SRC-API-ROOT-FRED-IP",
+      "source_url": "https://fred.stlouisfed.org/series/IPG3344S",
+      "title": "FRED semiconductor and other electronic components production",
+      "review_as_of": "2026-10-05",
+      "review_representation": "OFFICIAL_WEB_TOOL_TEXT_REVIEW_NOT_ORIGINAL_HTTP_BYTES",
+      "sha256": null,
+      "raw_original_captured": false,
+      "publication_date_displayed": null,
+      "support_scope_ko": "미국 NAICS3344 월간 SA 생산지수, 2017=100. 개별 메모리/AI 칩 물량 아님.",
+      "original_excerpt": null,
+      "english_verbatim_word_count": 0
+    },
+    {
+      "id": "SRC-API-ROOT-FRED-CU",
+      "source_url": "https://fred.stlouisfed.org/series/CAPUTLG3344S",
+      "title": "FRED semiconductor and other electronic components utilization",
+      "review_as_of": "2026-10-05",
+      "review_representation": "OFFICIAL_WEB_TOOL_TEXT_REVIEW_NOT_ORIGINAL_HTTP_BYTES",
+      "sha256": null,
+      "raw_original_captured": false,
+      "publication_date_displayed": null,
+      "support_scope_ko": "미국 NAICS3344 월간 SA 가동률 %. 하이닉스·세계 fab의 가동률 아님.",
+      "original_excerpt": null,
+      "english_verbatim_word_count": 0
+    },
+    {
+      "id": "SRC-API-ROOT-FRED-BACKLOG",
+      "source_url": "https://fred.stlouisfed.org/series/A35SUO",
+      "title": "FRED electrical equipment unfilled orders",
+      "review_as_of": "2026-10-05",
+      "review_representation": "OFFICIAL_WEB_TOOL_TEXT_REVIEW_NOT_ORIGINAL_HTTP_BYTES",
+      "sha256": null,
+      "raw_original_captured": false,
+      "publication_date_displayed": null,
+      "support_scope_ko": "전기 장비·가전·부품의 월말 미이행 주문, 백만 USD, SA. 변압기·AI/DC의 기명 backlog 아님.",
+      "original_excerpt": null,
+      "english_verbatim_word_count": 0
+    },
+    {
+      "id": "SRC-API-ROOT-DART-LIST",
+      "source_url": "https://opendart.fss.or.kr/guide/main.do?apiGrpCd=DS003",
+      "title": "OpenDART financial data API list",
+      "review_as_of": "2026-10-05",
+      "review_representation": "OFFICIAL_WEB_TOOL_TEXT_REVIEW_NOT_ORIGINAL_HTTP_BYTES",
+      "sha256": null,
+      "raw_original_captured": false,
+      "publication_date_displayed": null,
+      "support_scope_ko": "전체 재무제표/XBRL API의 제공 범위, 제출인 책임·정정 가능성. 상세 guide 직접 열람은 timeout이라 전체 세부 계약 재확인과 인증은 남아 있음.",
+      "original_excerpt": null,
+      "english_verbatim_word_count": 0
+    },
+    {
+      "id": "SRC-API-ROOT-DART-SEARCH",
+      "source_url": "https://opendart.fss.or.kr/guide/detail.do?apiGrpCd=DS001&apiId=2019001",
+      "title": "OpenDART filing search guide",
+      "review_as_of": "2026-10-05",
+      "review_representation": "OFFICIAL_WEB_TOOL_TEXT_REVIEW_NOT_ORIGINAL_HTTP_BYTES",
+      "sha256": null,
+      "raw_original_captured": false,
+      "publication_date_displayed": null,
+      "support_scope_ko": "공시 검색의 key·접수번호·회사·날짜 및 000/010/013/020 오류 구분. 통상 20,000 요청 초과 설명은 사용자별 설정과 기간을 추가 확인해야 함.",
+      "original_excerpt": null,
+      "english_verbatim_word_count": 0
+    },
+    {
+      "id": "SRC-API-ROOT-ECOS",
+      "source_url": "https://ecos.bok.or.kr/api/",
+      "title": "Bank of Korea ECOS",
+      "review_as_of": "2026-10-05",
+      "review_representation": "OFFICIAL_WEB_TOOL_TEXT_REVIEW_NOT_ORIGINAL_HTTP_BYTES",
+      "sha256": null,
+      "raw_original_captured": false,
+      "publication_date_displayed": null,
+      "support_scope_ko": "공식 API 서비스 입구는 동적 화면으로 본문 미확보. 이번 표/항목·주기·값은 실제 sample API 응답으로 확인하며 일반 등록키 권한·쿼터·전체 범위는 미확인.",
+      "original_excerpt": null,
+      "english_verbatim_word_count": 0
+    },
+    {
+      "id": "SRC-API-ROOT-ETF",
+      "source_url": "https://www.ishares.com/us/products/339081/ishares-a-i-innovation-and-tech-active-etf",
+      "title": "iShares BAI official holdings",
+      "review_as_of": "2026-10-05",
+      "review_representation": "OFFICIAL_WEB_TOOL_TEXT_REVIEW_NOT_ORIGINAL_HTTP_BYTES",
+      "sha256": null,
+      "raw_original_captured": false,
+      "publication_date_displayed": null,
+      "support_scope_ko": "공식 holdings CSV와 펀드별 주수/NAV. 현재/투자 장부 가격·시점 차이를 보존하며 무료 열람을 재배포 권리로 승격하지 않음.",
+      "original_excerpt": null,
+      "english_verbatim_word_count": 0
+    }
+  ],
+  "probes": [
+    {
+      "id": "sec-capex",
+      "requested_url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000789019/us-gaap/PaymentsToAcquirePropertyPlantAndEquipment.json",
+      "retrieved_at_utc": "2026-10-04T17:13:31.987505+00:00",
+      "mode": "json",
+      "authentication": "none",
+      "request_count": 1,
+      "max_bytes": 2097152,
+      "http_status": 403,
+      "status": "HTTP_FAILED_NO_DATA",
+      "error_class": "HTTPError",
+      "error_body_sha256": "88e18d6c806c803c95524c314cc1bad775685e9307f1ac940ffa7fa8303f6fb2",
+      "error_body_bytes": 4819,
+      "raw_original_redistributed": false,
+      "content_hash_type": "SHA256_CAPTURED_ERROR_BODY_PREFIX_MAX_8192_NOT_ASSERTED_FULL_RESPONSE"
+    },
+    {
+      "id": "sec-submissions",
+      "requested_url": "https://data.sec.gov/submissions/CIK0000789019.json",
+      "retrieved_at_utc": "2026-10-04T17:13:33.695677+00:00",
+      "mode": "json",
+      "authentication": "none",
+      "request_count": 1,
+      "max_bytes": 2097152,
+      "http_status": 403,
+      "status": "HTTP_FAILED_NO_DATA",
+      "error_class": "HTTPError",
+      "error_body_sha256": "76e7934f0ba326ee30a3a082cb286ec7433d21b2b8eec40e5194b335d8ba8944",
+      "error_body_bytes": 4819,
+      "raw_original_redistributed": false,
+      "content_hash_type": "SHA256_CAPTURED_ERROR_BODY_PREFIX_MAX_8192_NOT_ASSERTED_FULL_RESPONSE"
+    },
+    {
+      "id": "fred-IPG3344S",
+      "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=IPG3344S&cosd=2025-01-01&coed=2026-09-01",
+      "retrieved_at_utc": "2026-10-04T17:13:33.924789+00:00",
+      "mode": "csv",
+      "authentication": "none",
+      "request_count": 1,
+      "max_bytes": 2097152,
+      "status": "REQUEST_OR_PARSE_FAILED_NO_DATA",
+      "error_class": "TimeoutError",
+      "error_summary": "The read operation timed out",
+      "raw_original_redistributed": false
+    },
+    {
+      "id": "fred-CAPUTLG3344S",
+      "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CAPUTLG3344S&cosd=2025-01-01&coed=2026-09-01",
+      "retrieved_at_utc": "2026-10-04T17:13:59.058247+00:00",
+      "mode": "csv",
+      "authentication": "none",
+      "request_count": 1,
+      "max_bytes": 2097152,
+      "status": "REQUEST_OR_PARSE_FAILED_NO_DATA",
+      "error_class": "RemoteDisconnected",
+      "error_summary": "Remote end closed connection without response",
+      "raw_original_redistributed": false
+    },
+    {
+      "id": "fred-A35SUO",
+      "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=A35SUO&cosd=2025-01-01&coed=2026-09-01",
+      "retrieved_at_utc": "2026-10-04T17:14:20.828652+00:00",
+      "mode": "csv",
+      "authentication": "none",
+      "request_count": 1,
+      "max_bytes": 2097152,
+      "status": "REQUEST_OR_PARSE_FAILED_NO_DATA",
+      "error_class": "RemoteDisconnected",
+      "error_summary": "Remote end closed connection without response",
+      "raw_original_redistributed": false
+    },
+    {
+      "id": "ishares-bai",
+      "requested_url": "https://www.ishares.com/us/products/339081/ishares-a-i-innovation-and-tech-active-etf/latest-holdings.csv",
+      "retrieved_at_utc": "2026-10-04T17:14:40.163917+00:00",
+      "mode": "csv",
+      "authentication": "none",
+      "request_count": 1,
+      "max_bytes": 2097152,
+      "http_status": 200,
+      "final_url": "https://www.ishares.com/us/products/339081/ishares-a-i-innovation-and-tech-active-etf/latest-holdings.csv",
+      "content_type": "text/plain; charset=utf-8",
+      "byte_length": 10282,
+      "sha256": "341a7bb0fdfec2d75e015922968728cdd9b988a27e05bb504bc9c71e83dee69a",
+      "raw_filename": "ishares-bai.csv",
+      "status": "FILE_DATA_RETURNED",
+      "row_count": 50,
+      "fields": [
+        "Ticker",
+        "Name",
+        "Sector",
+        "Asset Class",
+        "Market Value",
+        "Weight (%)",
+        "Notional Value",
+        "Quantity",
+        "Price",
+        "Location",
+        "Exchange",
+        "Currency",
+        "FX Rate",
+        "Market Currency",
+        "Accrual Date"
+      ],
+      "raw_original_redistributed": false,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BODY"
+    },
+    {
+      "id": "ecos-items",
+      "requested_url": "https://ecos.bok.or.kr/api/StatisticItemList/sample/json/kr/1/10/731Y001",
+      "retrieved_at_utc": "2026-10-04T17:14:40.509204+00:00",
+      "mode": "metadata",
+      "authentication": "PUBLIC_SAMPLE_KEY_NOT_USER_CREDENTIAL",
+      "request_count": 1,
+      "max_bytes": 2097152,
+      "http_status": 200,
+      "final_url": "https://ecos.bok.or.kr/api/StatisticItemList/sample/json/kr/1/10/731Y001",
+      "content_type": "application/json; charset=UTF-8",
+      "byte_length": 3393,
+      "sha256": "e8b46adb38d8c3e30d47f8fe66f5ec4b7232971b13cd462828b480a9b00c470d",
+      "raw_filename": "ecos-items.json",
+      "status": "API_METADATA_RETURNED",
+      "row_count": 10,
+      "fields": [
+        "STAT_CODE",
+        "STAT_NAME",
+        "GRP_CODE",
+        "GRP_NAME",
+        "ITEM_CODE",
+        "ITEM_NAME",
+        "P_ITEM_CODE",
+        "P_ITEM_NAME",
+        "CYCLE",
+        "START_TIME",
+        "END_TIME",
+        "DATA_CNT",
+        "UNIT_NAME",
+        "WEIGHT"
+      ],
+      "provider_message": null,
+      "raw_original_redistributed": false,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BODY"
+    },
+    {
+      "id": "ecos-fx-sample",
+      "requested_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/3/731Y001/D/20260928/20260930/0000001",
+      "retrieved_at_utc": "2026-10-04T17:21:24.468316+00:00",
+      "mode": "json",
+      "authentication": "PUBLIC_SAMPLE_KEY_NOT_USER_CREDENTIAL",
+      "request_count": 1,
+      "max_bytes": 100000,
+      "http_status": 200,
+      "final_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/3/731Y001/D/20260928/20260930/0000001",
+      "byte_length": 1045,
+      "sha256": "49d78293971c8a23191eeb563788718044f3542801d8e3d2fc042c85c5b25a42",
+      "raw_filename": "ecos-fx-sample.json",
+      "status": "API_DATA_RETURNED",
+      "row_count": 3,
+      "fields": [
+        "STAT_CODE",
+        "STAT_NAME",
+        "ITEM_CODE1",
+        "ITEM_NAME1",
+        "ITEM_CODE2",
+        "ITEM_NAME2",
+        "ITEM_CODE3",
+        "ITEM_NAME3",
+        "ITEM_CODE4",
+        "ITEM_NAME4",
+        "UNIT_NAME",
+        "WGT",
+        "TIME",
+        "DATA_VALUE"
+      ],
+      "provider_message": null,
+      "raw_original_redistributed": false,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BODY"
+    }
+  ],
+  "data_stage_rule_ko": "API·metadata·file·문서 확인과 실패를 분리. 일반 인증키/계정 상태를 공개 데이터나 무키 sample으로 추론하지 않음.",
+  "execution_review_ko": "개인 식별자 포함 요청은 실행 전 자동 승인 검토에서 거절됨. 이후 개인정보 없는 요청만 송신했으며 SEC 403를 실패로 보존함.",
+  "actual_demand_supply_or_cash_counterparty_validated": false
+}

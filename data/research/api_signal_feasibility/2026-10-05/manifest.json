@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "as_of_date_kst": "2026-10-05",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "files": [
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/ai_usage_technology.json",
+      "byte_length": 46457,
+      "sha256": "244d18d5278cea01cf95b3ce1602cba8ddc97783f1957b5c3aa2178a11c2a418"
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/finance_macro_etf.json",
+      "byte_length": 37281,
+      "sha256": "6134e7060e225f3b642da96990e5422e6247cdabefb587e3a464ced1a2879597"
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/power_policy_infrastructure.json",
+      "byte_length": 123624,
+      "sha256": "db3d9570dd672e21f0264c346e4a00d70d9f463587801a89f7ba456577caf130"
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/taiwan_company_activity.json",
+      "byte_length": 28354,
+      "sha256": "3f577e0bba4e7c91aa74663a2e0e1c53a1c565c5a7fef04d088f43652c397ce9"
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/trade_industry_materials.json",
+      "byte_length": 93892,
+      "sha256": "43826ebf9879866b27a7375d4942a6a12b00b4db001ff65f82ad0a50dc6d70b0"
+    },
+    {
+      "path": "data/research/api_signal_feasibility/2026-10-05/collection_index.json",
+      "byte_length": 90675,
+      "sha256": "ec13723d0002af4d994845730641fbd280c915dd4aaed154151daa3e92164c0e"
+    }
+  ],
+  "preserved_input_refs": [
+    {
+      "path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "byte_length": 337455,
+      "sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138"
+    },
+    {
+      "path": "data/research/semiconductor_supply_chain/2026-10-03/api_issuance_plan_v3.json",
+      "byte_length": 18408,
+      "sha256": "7d4e25761fa99f704660537f9a8e31d0bbef5263fcb4b4264c75156030e19be2"
+    },
+    {
+      "path": "data/research/semiconductor_macro_structure/2026-10-04/sources.json",
+      "byte_length": 27851,
+      "sha256": "891e1f83bb78795396b98358a16de63e3bd64a314955e233d50d6867a6fc43c8"
+    },
+    {
+      "path": "data/research/ai_technology_memory_links/2026-10-04/links.json",
+      "byte_length": 22261,
+      "sha256": "6cd95b606851dc66e86c36eb498258093eaf8967bcc24e402de517a4d8ec2b45"
+    },
+    {
+      "path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "byte_length": 97626,
+      "sha256": "f6d7e5c8d62aa6d46ed05d87b77fceec2d9eccfb84fd6a4a96aabc1a653db283"
+    },
+    {
+      "path": "data/research/semiconductor_industry_routes/2026-10-05/policy_infrastructure_routes.json",
+      "byte_length": 77441,
+      "sha256": "bedba1e6430e59d44501c95d3fd780feffbb8b3df5302a5a5c62b6cd362c1ea8"
+    }
+  ],
+  "summary_counts": {
+    "source_families_including_files": 22,
+    "numbered_indicator_definitions": 34,
+    "trade_industry_family_measurement_contracts": 6,
+    "bounded_data_access_attempts": 23,
+    "non_empty_data_api_responses": 11,
+    "distinct_data_api_families_with_data": 10,
+    "metadata_responses": 2,
+    "static_data_file_responses": 1,
+    "static_document_file_responses": 2,
+    "failed_data_api_attempts": 4,
+    "failed_static_file_attempts": 3
+  },
+  "public_transform_ko": "원본 전체·개인 계정/연락처·키·비공개 코드 제외. packet별 schema와 원문/정규화/문서 리뷰 표현 보존. 인덱스는 참조·접근 결과만 통합하며 원본 값/시점 수정 없음.",
+  "hash_scope_ko": "files는 공개 JSON 원바이트, 원문 HTTP와 error prefix·정규화 web review의 hash는 packet 내 명시 범위. 이 manifest 자신과 변경 가능한 Markdown은 self-hash 또는 immutable input으로 포함하지 않음.",
+  "raw_originals_redistributed": false,
+  "human_evidence_approved": false,
+  "h1_admitted": false,
+  "predictive_signal_validated": false,
+  "documentation_paths": [
+    "docs/research/supply_chain/api_signal_feasibility.md",
+    "docs/research/supply_chain/research_convergence_review.md"
+  ],
+  "exactly_one_next_task_id": "NEXT-API-MONTHLY-BOUNDED-PILOT"
+}

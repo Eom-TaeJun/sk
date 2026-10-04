@@ -1,0 +1,1071 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-10-05",
+  "title_ko": "AI 사용·기술 변화의 무료 API 접근 점검",
+  "purpose_ko": "서버 DDR5 고객 카드는 미루고, 공개 API의 실제 수집 가능 범위와 SK hynix 제품/고객 질문에 연결할 관측 후보를 확인한다.",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "governed_evidence": false,
+  "human_evidence_approved": false,
+  "h1_admitted": false,
+  "predictive_signal_validated": false,
+  "continuous_collection_implemented": false,
+  "authenticated_collection_implemented": false,
+  "acquisition_scope_ko": "OpenRouter Datasets, Hugging Face Hub public models, GitHub REST public repo/releases 세 family. 제한 GET 4건, official docs GET 9건. 로그인·가입·키 읽기·결제·추론·전체 역사 수집 없음.",
+  "date_rule_ko": "as_of는 한국 사용자 기준일 2026-10-05. 실제 retrieval UTC는 2026-10-04이며 UTC 응답 Date·각 사건/관측시점·문서 발행일을 분리한다.",
+  "baseline_references": [
+    {
+      "repository_path": "docs/research/supply_chain/collection_plan.md",
+      "snapshot_as_of": "2026-10-03",
+      "reference_role": "기존 AI token 수집 목적·인증 미확인 경계",
+      "reference_scope_ko": "기존 2026-10-03 계획의 역사 정의 참조. 현재 Markdown의 byte hash를 불변 입력으로 고정하지 않음."
+    },
+    {
+      "repository_path": "data/research/semiconductor_supply_chain/2026-10-03/api_issuance_plan_v3.json",
+      "snapshot_as_of": "2026-10-03",
+      "reference_role": "OpenRouter 비용/권한 TO_VERIFY를 이번 authenticated access 성공으로 바꾸지 않음",
+      "repository_file_sha256": "7d4e25761fa99f704660537f9a8e31d0bbef5263fcb4b4264c75156030e19be2"
+    },
+    {
+      "repository_path": "data/research/ai_technology_memory_links/2026-10-04/links.json",
+      "snapshot_as_of": "2026-10-04",
+      "reference_role": "AIL01–07 업무·상품 가설 IDs 재사용. HBF 신규 API 관측은 이번 범위 밖.",
+      "repository_file_sha256": "6cd95b606851dc66e86c36eb498258093eaf8967bcc24e402de517a4d8ec2b45"
+    },
+    {
+      "repository_path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "snapshot_as_of": "2026-10-05",
+      "reference_role": "PROD 제품 경로 IDs만 연결. 실제 고객·SKU·시설의 동일 거래 연결이 아님.",
+      "repository_file_sha256": "f6d7e5c8d62aa6d46ed05d87b77fceec2d9eccfb84fd6a4a96aabc1a653db283"
+    }
+  ],
+  "families": [
+    {
+      "id": "openrouter-datasets",
+      "provider": "OpenRouter",
+      "purpose_ko": "플랫폼 내 공개 AI 모델의 실제 토큰 사용 방향을 후보 관측으로 살펴본다.",
+      "endpoint": "https://openrouter.ai/api/v1/datasets/rankings-daily",
+      "method": "GET",
+      "probe_ids": [
+        "probe-openrouter-no-key"
+      ],
+      "source_ids": [
+        "SRC-API-AI-OR-DATASETS"
+      ],
+      "access": {
+        "current_status": "AUTH_REQUIRED_NO_DATA",
+        "public_keyless": false,
+        "free_access": null,
+        "free_access_status": "TO_VERIFY_DATASET_CALL_PRICE",
+        "api_key_required": true,
+        "account_required_for_key": true,
+        "existing_user_key_status": "NOT_READ_NOT_TESTED",
+        "authenticated_data_call_tested": false,
+        "signup_performed": false,
+        "key_issued": false,
+        "payment_or_inference_called": false,
+        "signup_url": "https://openrouter.ai/",
+        "key_url": "https://openrouter.ai/keys",
+        "quota_documented": {
+          "requests_per_minute_per_key": 30,
+          "requests_per_day_per_account": 500
+        },
+        "license_documented": "CC BY 4.0 for aggregated data returned by Data API",
+        "attribution_template": "Source: OpenRouter (openrouter.ai/rankings), as of <meta.as_of>.",
+        "license_scope_ko": "API 집계 데이터만. 고객별 물량·사용자별 데이터까지 공개된다는 뜻이 아니며 대체 무료 API 재서비스 용도로 쓰지 않음.",
+        "cost_boundary_ko": "valid key 필요와 데이터 license는 확인했으나 무료 가격을 단정하지 않음. free model의 추론 가격과 Dataset 호출 가격을 합치지 않음."
+      },
+      "collection_contract": {
+        "grain": [
+          "UTC date",
+          "model_permaslug including :variant",
+          "same filters",
+          "response vintage"
+        ],
+        "fields_documented": [
+          "data.date",
+          "data.model_permaslug",
+          "data.total_tokens",
+          "meta.as_of",
+          "meta.start_date",
+          "meta.end_date",
+          "meta.version"
+        ],
+        "unit": "upstream-provider reported prompt_tokens + completion_tokens; decimal integer represented as JSON string",
+        "frequency": "UTC daily buckets; dataset may refresh continuously",
+        "history_floor_documented": "2025-01-01",
+        "recommended_polling_ko": "무료·권한 확인 후 완료 UTC일을 하루 한 번 보존하는 제안. 반복 수집은 미구현.",
+        "revision_ko": "meta.as_of·version·query bounds를 저장. 현재 UTC일은 진행 중이며 과거 완료 bucket의 불변성도 가정하지 않음.",
+        "coverage_ko": "각 일 top 50 public models + other(빈 long tail이면 생략). private models/endpoints와 zero-data-retention traffic 제외.",
+        "bounds_ko": [
+          "플랫폼 범위이며 세계 AI 사용·매출·GPU시간·HBM 수요가 아님.",
+          "서로 다른 provider tokenizer의 토큰은 직접 비교 가능한 연산량 단위가 아님.",
+          "API schema는 문서만 확인. 무키 401에 사용 관측 숫자는 없음."
+        ],
+        "max_span_between_start_end_days_documented": 366,
+        "query_parameters_documented": [
+          "start_date",
+          "end_date"
+        ]
+      }
+    },
+    {
+      "id": "huggingface-hub-public-models",
+      "provider": "Hugging Face",
+      "purpose_ko": "오픈 모델의 배포 관심·모델 버전·업무 종류 변화를 기술 요구 확인의 입구로 삼는다.",
+      "endpoint": "https://huggingface.co/api/models",
+      "method": "GET",
+      "probe_ids": [
+        "probe-hf-models"
+      ],
+      "source_ids": [
+        "SRC-API-AI-HF-ENDPOINTS",
+        "SRC-API-AI-HF-MODELINFO",
+        "SRC-API-AI-HF-COUNTING",
+        "SRC-API-AI-HF-RATE",
+        "SRC-API-AI-HF-LICENSE"
+      ],
+      "access": {
+        "current_status": "VALID_DATA_OBSERVED_KEYLESS",
+        "public_keyless": true,
+        "free_access": true,
+        "free_access_status": "PUBLIC_METADATA_NO_CHARGE_PROBE",
+        "api_key_required_for_this_scope": false,
+        "account_required_for_this_scope": false,
+        "signup_performed": false,
+        "key_issued": false,
+        "payment_or_inference_called": false,
+        "quota_documented": {
+          "anonymous_api_requests_per_5_minutes_per_ip": 500,
+          "policy_date_label": "September 2025",
+          "variable_policy": true
+        },
+        "quota_response_verified": {
+          "header_q": 500,
+          "header_w_seconds": 300
+        },
+        "license_documented": "Model repository license is defined in its card; public metadata has no blanket dataset redistribution license established here.",
+        "license_status": "MODEL_CARD_LICENSE_REQUIRED_FOR_CONTENT; METADATA_BULK_REDISTRIBUTION_TO_VERIFY",
+        "scope_ko": "public metadata GET만. gated/private weights, 추론·호스팅, Premium analytics를 사용하지 않음."
+      },
+      "collection_contract": {
+        "grain": [
+          "model repository id",
+          "commit sha if present",
+          "same search/filter cohort",
+          "snapshot timestamp"
+        ],
+        "fields_observed": [
+          "id",
+          "downloads",
+          "likes",
+          "lastModified",
+          "createdAt",
+          "sha",
+          "pipeline_tag",
+          "library_name",
+          "tags",
+          "private",
+          "gated"
+        ],
+        "optional_documented_fields_not_probed": [
+          "downloadsAllTime",
+          "config",
+          "safetensors",
+          "inferenceProviderMapping",
+          "gguf"
+        ],
+        "unit": "download-counted HTTP requests over trailing 30 days; cumulative likes; repository timestamps and commit SHA",
+        "frequency": "current metadata snapshot; precise download refresh schedule not established",
+        "window_documented": "downloads trailing 30 days; likes current accumulated count",
+        "recommended_polling_ko": "고정 모델 목록의 일별 snapshot 및 모델 sha 변경 확인을 제안. 현재 2행 접근 시험이며 전체 cohort·역사 패널 아님.",
+        "revision_ko": "겹치는 30일 window를 보존. 두 snapshot의 downloads 차이를 그 사이의 신규 다운로드로 계산하지 않음. likes의 unlike·정정, repo 이동/삭제·등록 기준 변화도 별도 기록.",
+        "pagination_ko": "응답 next Link가 있었으나 다음 페이지는 요청하지 않음. Cursor 재사용 범위를 snapshot 계약에 정해야 함.",
+        "bounds_ko": [
+          "downloads는 query-file GET/HEAD 집계. CI·중복·캐시·라이브러리별 집계 차이가 있으며 unique user가 아님.",
+          "모델 다운로드·좋아요·repo commit 날짜는 추론 사용량·고객 채택·메모리 구매가 아님.",
+          "createdAt은 Hub 저장소 생성 시각. 저장 시작 하한 2022-03-02T23:29:04.000Z의 레코드는 실제 모델 출시일을 복원하지 못함.",
+          "tags·pipeline·license·config는 저장소 메타데이터이며 별도 제품 사양·실측 검증이 필요."
+        ]
+      }
+    },
+    {
+      "id": "github-rest-public-technology",
+      "provider": "GitHub",
+      "purpose_ko": "추론 실행 소프트웨어의 공개 릴리스·버전과 개발자 관심 변화 후보를 확인한다.",
+      "endpoints": [
+        "https://api.github.com/repos/{owner}/{repo}/releases",
+        "https://api.github.com/repos/{owner}/{repo}"
+      ],
+      "method": "GET",
+      "probe_ids": [
+        "probe-github-releases",
+        "probe-github-repo"
+      ],
+      "source_ids": [
+        "SRC-API-AI-GH-RELEASES",
+        "SRC-API-AI-GH-REPOS",
+        "SRC-API-AI-GH-RATE"
+      ],
+      "access": {
+        "current_status": "VALID_DATA_OBSERVED_KEYLESS",
+        "public_keyless": true,
+        "free_access": true,
+        "free_access_status": "PUBLIC_METADATA_NO_CHARGE_PROBE",
+        "api_key_required_for_this_scope": false,
+        "account_required_for_this_scope": false,
+        "signup_performed": false,
+        "key_issued": false,
+        "payment_or_inference_called": false,
+        "api_version_header_used": "2026-03-10",
+        "quota_documented": {
+          "unauthenticated_primary_requests_per_hour_per_ip": 60,
+          "authenticated_standard_requests_per_hour": 5000,
+          "secondary_limits_apply": true
+        },
+        "quota_response_verified": {
+          "x_ratelimit_limit": 60,
+          "x_ratelimit_resource": "core"
+        },
+        "license_observed_example": "vllm-project/vllm repository response license.spdx_id = Apache-2.0",
+        "license_scope_ko": "저장소 코드의 license를 API 메타데이터·모든 release text의 포괄 권한으로 바꾸지 않음. GitHub API terms와 원 저장소 license 조건을 반복·재배포 전에 확인.",
+        "license_status": "API_METADATA_REDISTRIBUTION_NOT_CERTIFIED"
+      },
+      "collection_contract": {
+        "grain": [
+          "stable repository numeric id",
+          "full_name",
+          "release numeric id/tag where available",
+          "snapshot timestamp"
+        ],
+        "fields_observed": [
+          "release.id",
+          "release.tag_name",
+          "release.target_commitish",
+          "release.draft",
+          "release.prerelease",
+          "release.created_at",
+          "release.published_at",
+          "release.updated_at",
+          "repo.id",
+          "repo.full_name",
+          "repo.stargazers_count",
+          "repo.forks_count",
+          "repo.pushed_at",
+          "repo.updated_at",
+          "repo.created_at",
+          "repo.archived",
+          "repo.default_branch"
+        ],
+        "unit": "published release event and repository snapshot counts/timestamps",
+        "frequency": "release events + mutable current repo snapshot; no guaranteed fixed provider update interval established",
+        "recommended_polling_ko": "정해진 공개 기술 repo의 일별 ETag/Last-Modified 조건부 확인, release ID 변경 시 원 release·구현 commit 검토를 제안. 자동 수집 미구현.",
+        "revision_ko": "releases can be edited/deleted and repo can be renamed/transferred. numeric IDs·retrieved_at·ETag·release updated_at를 보존. tag 이름은 수정 가능하고 target_commitish=main은 고정 commit SHA가 아님.",
+        "pagination_ko": "per_page=1 page=1의 첫 반환 행만 시험. public drafts 미포함, 일반 Git tags는 release에 자동 포함되지 않음. 전체 release 역사·최신 안정 버전 판정 아님.",
+        "bounds_ko": [
+          "release는 공급된 소프트웨어 사건이며 기업 고객의 운영 채택이 아님.",
+          "stars/forks는 developer interest proxy. 기업·시설·유료 이용·GPU시간·메모리 주문으로 환산하지 않음.",
+          "pushed_at·updated_at 변경은 독립적인 기술 개선·채택·성능 향상을 뜻하지 않음.",
+          "릴리스의 양자화·KV cache·hardware backend 지원은 release 원문과 특정 commit의 문서·동일 시험 구성으로 추가 확인."
+        ]
+      }
+    }
+  ],
+  "indicators": [
+    {
+      "id": "AIAPI01-PLATFORM-TOKENS",
+      "family_id": "openrouter-datasets",
+      "purpose_ko": "어떤 공개 모델 variant로 OpenRouter 사용이 이동하는가?",
+      "fields": [
+        "date",
+        "model_permaslug",
+        "total_tokens",
+        "meta.as_of",
+        "meta.version"
+      ],
+      "grain": [
+        "platform",
+        "UTC day",
+        "model variant"
+      ],
+      "unit": "provider tokenizer token count",
+      "window": "completed daily buckets; inclusive bounds; maximum start/end span 366 days per documentation",
+      "product_route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-05-HBM-ASIC",
+        "PROD-04-NAND-ESSD"
+      ],
+      "ai_memory_link_ids": [
+        "AIL01",
+        "AIL02",
+        "AIL03",
+        "AIL06"
+      ],
+      "join_keys": [
+        "model_permaslug",
+        "model/version mapping verified separately",
+        "UTC date",
+        "same filters/vintage"
+      ],
+      "possible_signal_ko": "플랫폼 내 공개 추론 사용 방향의 후보. 사용 모델 변화 후 workload·context·backend 조건을 추가 확인.",
+      "interpretation_bounds_ko": [
+        "인증·비용 미확인 상태이며 이번 token row 미수집.",
+        "세계 수요·회사 매출·특정 GPU/HBM 주문으로 변환하지 않음.",
+        "다른 tokenizer 합계/other는 연산량 비교나 GPU시간으로 사용하지 않음."
+      ],
+      "predictive_signal_validated": false,
+      "customer_specific_volume_known": false,
+      "commercial_role_use_ko": "마케팅·상품기획의 고객 업무/구성 질문과 영업·사업화의 채택 확인 질문을 만드는 배경 관측."
+    },
+    {
+      "id": "AIAPI02-MODEL-DOWNLOADS30",
+      "family_id": "huggingface-hub-public-models",
+      "purpose_ko": "고정 모델군의 배포·개발 관심이 어떻게 달라지는가?",
+      "fields": [
+        "id",
+        "downloads",
+        "sha"
+      ],
+      "grain": [
+        "public Hub model repo",
+        "snapshot"
+      ],
+      "unit": "counted HTTP requests",
+      "window": "trailing 30 days",
+      "product_route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-05-HBM-ASIC"
+      ],
+      "ai_memory_link_ids": [
+        "AIL01",
+        "AIL02",
+        "AIL04"
+      ],
+      "join_keys": [
+        "Hub model id",
+        "sha",
+        "same cohort",
+        "snapshot/window"
+      ],
+      "possible_signal_ko": "특정 모델·library 관심 변화의 후보로 사용할 수 있음. 고정 cohort snapshot 확보 후 비교해야 함.",
+      "interpretation_bounds_ko": [
+        "고유 사용자·실제 추론 요청·trained GPU-hours가 아님.",
+        "겹치는 window 차이는 신규 다운로드 수가 아니며 CI·HEAD·캐시·GGUF 중복 등 정의 차이를 보존."
+      ],
+      "predictive_signal_validated": false,
+      "customer_specific_volume_known": false,
+      "commercial_role_use_ko": "마케팅·상품기획의 고객 업무/구성 질문과 영업·사업화의 채택 확인 질문을 만드는 배경 관측."
+    },
+    {
+      "id": "AIAPI03-MODEL-LIKES",
+      "family_id": "huggingface-hub-public-models",
+      "purpose_ko": "모델에 대한 누적 공개 관심을 다운로드와 별도로 볼 수 있는가?",
+      "fields": [
+        "id",
+        "likes"
+      ],
+      "grain": [
+        "public Hub model repo",
+        "snapshot"
+      ],
+      "unit": "current accumulated likes",
+      "window": "current snapshot",
+      "product_route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-05-HBM-ASIC"
+      ],
+      "ai_memory_link_ids": [
+        "AIL01",
+        "AIL04"
+      ],
+      "join_keys": [
+        "Hub model id",
+        "snapshot timestamp"
+      ],
+      "possible_signal_ko": "개발자 관심의 보조 후보. 같은 모델의 version/workload 검토를 촉발.",
+      "interpretation_bounds_ko": [
+        "사용·고객 수·기업 채택이 아님. unlike·정정·repo 상태 변화를 경제적 주문 취소로 보지 않음."
+      ],
+      "predictive_signal_validated": false,
+      "customer_specific_volume_known": false,
+      "commercial_role_use_ko": "마케팅·상품기획의 고객 업무/구성 질문과 영업·사업화의 채택 확인 질문을 만드는 배경 관측."
+    },
+    {
+      "id": "AIAPI04-MODEL-VERSION-TASK",
+      "family_id": "huggingface-hub-public-models",
+      "purpose_ko": "업무 종류·모델 버전·메모리 요구 해석의 조건을 추적할 수 있는가?",
+      "fields": [
+        "id",
+        "sha",
+        "lastModified",
+        "createdAt",
+        "pipeline_tag",
+        "library_name",
+        "tags"
+      ],
+      "grain": [
+        "public Hub model repository",
+        "revision metadata"
+      ],
+      "unit": "IDs, categories, timestamps",
+      "window": "current version metadata",
+      "product_route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-02-DDR-CPU",
+        "PROD-03-LPDDR-CPU",
+        "PROD-04-NAND-ESSD",
+        "PROD-05-HBM-ASIC"
+      ],
+      "ai_memory_link_ids": [
+        "AIL01",
+        "AIL02",
+        "AIL03",
+        "AIL04",
+        "AIL05",
+        "AIL06"
+      ],
+      "join_keys": [
+        "model id",
+        "sha",
+        "backend/commit and quantization/context/batch verified separately"
+      ],
+      "possible_signal_ko": "task/library/모델 revision 변경을 원문 검토·동일 시험 조건의 요구 비교 대상으로 잡을 수 있음.",
+      "interpretation_bounds_ko": [
+        "metadata만으로 parameter 수·VRAM·HBM/DDR/SSD 물량을 계산하지 않음.",
+        "lastModified는 repo last commit, createdAt는 Hub repo 생성 시각으로 AI 기술 출시·채택일과 다름."
+      ],
+      "predictive_signal_validated": false,
+      "customer_specific_volume_known": false,
+      "commercial_role_use_ko": "마케팅·상품기획의 고객 업무/구성 질문과 영업·사업화의 채택 확인 질문을 만드는 배경 관측."
+    },
+    {
+      "id": "AIAPI05-SOFTWARE-RELEASE",
+      "family_id": "github-rest-public-technology",
+      "purpose_ko": "vLLM 같은 실행 소프트웨어의 기술 변경 시점과 버전을 API로 식별할 수 있는가?",
+      "fields": [
+        "release.id",
+        "tag_name",
+        "draft",
+        "prerelease",
+        "created_at",
+        "published_at",
+        "updated_at",
+        "target_commitish"
+      ],
+      "grain": [
+        "repository numeric id",
+        "release numeric id"
+      ],
+      "unit": "published release event",
+      "window": "event dates + captured vintage",
+      "product_route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-04-NAND-ESSD",
+        "PROD-05-HBM-ASIC"
+      ],
+      "ai_memory_link_ids": [
+        "AIL02",
+        "AIL03",
+        "AIL04",
+        "AIL06"
+      ],
+      "join_keys": [
+        "repo numeric id/full_name",
+        "release id/tag",
+        "resolved immutable commit SHA",
+        "backend/version",
+        "test configuration"
+      ],
+      "possible_signal_ko": "양자화·캐시·메모리 이동·hardware 지원의 바뀐 조건을 기술 원문에서 확인할 계기.",
+      "interpretation_bounds_ko": [
+        "release 사건을 운영 고객 채택으로 보지 않음.",
+        "이번 1행은 반환 표본이며 전체 releases/최신 안정 버전 판정이 아님. target_commitish main은 immutable SHA가 아님."
+      ],
+      "predictive_signal_validated": false,
+      "customer_specific_volume_known": false,
+      "commercial_role_use_ko": "마케팅·상품기획의 고객 업무/구성 질문과 영업·사업화의 채택 확인 질문을 만드는 배경 관측."
+    },
+    {
+      "id": "AIAPI06-DEVELOPER-INTEREST",
+      "family_id": "github-rest-public-technology",
+      "purpose_ko": "공개 실행 생태계에 대한 개발자 관심을 수치 snapshot으로 보존할 수 있는가?",
+      "fields": [
+        "repo.id",
+        "full_name",
+        "stargazers_count",
+        "forks_count"
+      ],
+      "grain": [
+        "public repository numeric id",
+        "snapshot"
+      ],
+      "unit": "accumulated public stars and forks",
+      "window": "current snapshot",
+      "product_route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-05-HBM-ASIC"
+      ],
+      "ai_memory_link_ids": [
+        "AIL02",
+        "AIL04"
+      ],
+      "join_keys": [
+        "repo numeric id",
+        "full_name",
+        "same snapshot timestamps"
+      ],
+      "possible_signal_ko": "관심·개발 활동의 보조 후보. release·실사용·고객 구성 확인과 분리.",
+      "interpretation_bounds_ko": [
+        "stars/forks는 developer interest proxy이며 기업 채택·매출·사용량이 아님.",
+        "counter 증감을 신규 순수 사용자 수로 계산하지 않음."
+      ],
+      "predictive_signal_validated": false,
+      "customer_specific_volume_known": false,
+      "commercial_role_use_ko": "마케팅·상품기획의 고객 업무/구성 질문과 영업·사업화의 채택 확인 질문을 만드는 배경 관측."
+    },
+    {
+      "id": "AIAPI07-REPO-FRESHNESS",
+      "family_id": "github-rest-public-technology",
+      "purpose_ko": "참고 기술 repo가 수정·중단·이동됐는가?",
+      "fields": [
+        "repo.id",
+        "pushed_at",
+        "updated_at",
+        "archived",
+        "default_branch"
+      ],
+      "grain": [
+        "public repository numeric id",
+        "snapshot"
+      ],
+      "unit": "timestamps and state flags",
+      "window": "current snapshot",
+      "product_route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-04-NAND-ESSD"
+      ],
+      "ai_memory_link_ids": [
+        "AIL03",
+        "AIL04",
+        "AIL06"
+      ],
+      "join_keys": [
+        "repo numeric id",
+        "immutable commit resolved separately",
+        "capture timestamp"
+      ],
+      "possible_signal_ko": "원문 기술 조건의 오래됨·보존할 문서/commit 버전을 점검하는 운영 지표.",
+      "interpretation_bounds_ko": [
+        "updated_at/pushed_at는 버전 기능·성능이나 고객 실제 채택을 입증하지 않음.",
+        "archived 상태·삭제를 고객 취소나 업계 기술 포기로 일반화하지 않음."
+      ],
+      "predictive_signal_validated": false,
+      "customer_specific_volume_known": false,
+      "commercial_role_use_ko": "마케팅·상품기획의 고객 업무/구성 질문과 영업·사업화의 채택 확인 질문을 만드는 배경 관측."
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-API-AI-HF-ENDPOINTS",
+      "source_url": "https://huggingface.co/.well-known/openapi.md",
+      "retrieved_url": "https://huggingface.co/.well-known/openapi.md",
+      "retrieved_at_utc": "2026-10-04T17:08:33.582980Z",
+      "publication_date_displayed": null,
+      "date_basis": "문서의 게시/개정 날짜가 확인되지 않음. retrieval은 사건·통계 관측 날짜가 아님.",
+      "status": "OFFICIAL_DOCUMENT_ORIGINAL_HTTP_CAPTURED",
+      "raw_file_basename": "doc-hf-openapi.md",
+      "sha256": "61a4a3bc3443b37a9014c41225d2b1a614dc23224a044f2eb4e2317bd02329dc",
+      "byte_length": 382514,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "raw_original_redistributed": false,
+      "locator": "Hub API Endpoints / opening paragraph",
+      "original_excerpt": "We have open endpoints that you can use to retrieve information from the Hub",
+      "english_verbatim_word_count": 14,
+      "support_scope_ko": "공개 Hub 메타데이터 경로와 공식 API 정의의 입구. 실제 응답 필드는 probe와 HfApi 정의를 함께 사용."
+    },
+    {
+      "id": "SRC-API-AI-HF-MODELINFO",
+      "source_url": "https://huggingface.co/docs/huggingface_hub/package_reference/hf_api",
+      "retrieved_url": "https://huggingface.co/docs/huggingface_hub/package_reference/hf_api",
+      "retrieved_at_utc": "2026-10-04T17:08:33.784756Z",
+      "publication_date_displayed": null,
+      "date_basis": "문서의 게시/개정 날짜가 확인되지 않음. retrieval은 사건·통계 관측 날짜가 아님.",
+      "status": "OFFICIAL_DOCUMENT_ORIGINAL_HTTP_CAPTURED",
+      "raw_file_basename": "doc-hf-modelinfo.html",
+      "sha256": "01a01ba4f77c0ab7baaa2cef8b39988adaa7d705f4faa585d1209efd146eff45",
+      "byte_length": 3318123,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "raw_original_redistributed": false,
+      "locator": "ModelInfo / downloads",
+      "original_excerpt": "Number of downloads of the model over the last 30 days.",
+      "english_verbatim_word_count": 11,
+      "support_scope_ko": "downloads의 30일 범위, likes·lastModified·sha·createdAt와 선택 필드 정의."
+    },
+    {
+      "id": "SRC-API-AI-HF-COUNTING",
+      "source_url": "https://huggingface.co/docs/hub/models-download-stats",
+      "retrieved_url": "https://huggingface.co/docs/hub/models-download-stats",
+      "retrieved_at_utc": "2026-10-04T17:08:33.893601Z",
+      "publication_date_displayed": null,
+      "date_basis": "문서의 게시/개정 날짜가 확인되지 않음. retrieval은 사건·통계 관측 날짜가 아님.",
+      "status": "OFFICIAL_DOCUMENT_ORIGINAL_HTTP_CAPTURED",
+      "raw_file_basename": "doc-hf-downloads.html",
+      "sha256": "403936a26100292ed19fe8972463762382b0509451238e995c2a3f59f689e433",
+      "byte_length": 193281,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "raw_original_redistributed": false,
+      "locator": "How are downloads counted for models?",
+      "original_excerpt": "Every HTTP request to these files, including GET and HEAD, will be counted as a download.",
+      "english_verbatim_word_count": 16,
+      "support_scope_ko": "query file의 서버 측 HTTP 요청 집계이며 모델 파일 전체·고유 사용자·추론 횟수가 아님."
+    },
+    {
+      "id": "SRC-API-AI-HF-RATE",
+      "source_url": "https://huggingface.co/docs/hub/rate-limits",
+      "retrieved_url": "https://huggingface.co/docs/hub/rate-limits",
+      "retrieved_at_utc": "2026-10-04T17:08:33.991677Z",
+      "publication_date_displayed": null,
+      "date_basis": "문서의 게시/개정 날짜가 확인되지 않음. retrieval은 사건·통계 관측 날짜가 아님.",
+      "status": "OFFICIAL_DOCUMENT_ORIGINAL_HTTP_CAPTURED",
+      "raw_file_basename": "doc-hf-rate.html",
+      "sha256": "a42c02f388faed1d543198fbce9068516ea35673b5b3d40ee88641f764f8f6a3",
+      "byte_length": 193953,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "raw_original_redistributed": false,
+      "locator": "Rate limit Tiers / fixed windows",
+      "original_excerpt": "All quotas are calculated over 5-minute fixed windows.",
+      "english_verbatim_word_count": 8,
+      "support_scope_ko": "문서에 표시된 September 2025 tier와 가변 anonymous 정책을 현재 수집 응답 header로 대조."
+    },
+    {
+      "id": "SRC-API-AI-HF-LICENSE",
+      "source_url": "https://huggingface.co/docs/hub/repositories-licenses",
+      "retrieved_url": "https://huggingface.co/docs/hub/repositories-licenses",
+      "retrieved_at_utc": "2026-10-04T17:08:34.044991Z",
+      "publication_date_displayed": null,
+      "date_basis": "문서의 게시/개정 날짜가 확인되지 않음. retrieval은 사건·통계 관측 날짜가 아님.",
+      "status": "OFFICIAL_DOCUMENT_ORIGINAL_HTTP_CAPTURED",
+      "raw_file_basename": "doc-hf-license.html",
+      "sha256": "4bcb6790dfeb4eae6bbcc464ac1d5770f7d10e4cfedca5bd3c72d4a7450eaa0d",
+      "byte_length": 192320,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "raw_original_redistributed": false,
+      "locator": "Licenses / introductory guidance",
+      "original_excerpt": "Remember to seek out and respect a project’s license if you’re considering using their code or data.",
+      "english_verbatim_word_count": 17,
+      "support_scope_ko": "각 모델 저장소의 코드·데이터 이용권을 확인해야 하며 public 조회 성공 자체가 포괄 재배포 허가가 아님."
+    },
+    {
+      "id": "SRC-API-AI-GH-RELEASES",
+      "source_url": "https://docs.github.com/en/rest/releases/releases",
+      "retrieved_url": "https://docs.github.com/en/rest/releases/releases",
+      "retrieved_at_utc": "2026-10-04T17:08:34.718468Z",
+      "publication_date_displayed": null,
+      "date_basis": "문서의 게시/개정 날짜가 확인되지 않음. retrieval은 사건·통계 관측 날짜가 아님.",
+      "status": "OFFICIAL_DOCUMENT_ORIGINAL_HTTP_CAPTURED",
+      "raw_file_basename": "doc-github-releases.html",
+      "sha256": "dbe39d84eec02154b88fdc66bc89369bf32096f3c84a1fdd873cb58ad213f24a",
+      "byte_length": 468269,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "raw_original_redistributed": false,
+      "locator": "List releases / public published releases",
+      "original_excerpt": "Information about published releases are available to everyone.",
+      "english_verbatim_word_count": 8,
+      "support_scope_ko": "public published releases 무키 조회, Git tag와 release 구분, 페이지 방식."
+    },
+    {
+      "id": "SRC-API-AI-GH-REPOS",
+      "source_url": "https://docs.github.com/en/rest/repos/repos",
+      "retrieved_url": "https://docs.github.com/en/rest/repos/repos",
+      "retrieved_at_utc": "2026-10-04T17:08:34.729751Z",
+      "publication_date_displayed": null,
+      "date_basis": "문서의 게시/개정 날짜가 확인되지 않음. retrieval은 사건·통계 관측 날짜가 아님.",
+      "status": "OFFICIAL_DOCUMENT_ORIGINAL_HTTP_CAPTURED",
+      "raw_file_basename": "doc-github-repos.html",
+      "sha256": "ea0ea8ddaf20e5fbe86d44e4b076aa45ddf2dd25e0168b9c9ee607bf931d92dd",
+      "byte_length": 1400388,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "raw_original_redistributed": false,
+      "locator": "Get a repository / authentication and response schema",
+      "original_excerpt": "This endpoint can be used without authentication or the aforementioned permissions if only public resources are requested.",
+      "english_verbatim_word_count": 17,
+      "support_scope_ko": "공개 repo 메타데이터 응답 정의. raw code나 private repositories를 수집하지 않음."
+    },
+    {
+      "id": "SRC-API-AI-GH-RATE",
+      "source_url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+      "retrieved_url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+      "retrieved_at_utc": "2026-10-04T17:08:34.808224Z",
+      "publication_date_displayed": null,
+      "date_basis": "문서의 게시/개정 날짜가 확인되지 않음. retrieval은 사건·통계 관측 날짜가 아님.",
+      "status": "OFFICIAL_DOCUMENT_ORIGINAL_HTTP_CAPTURED",
+      "raw_file_basename": "doc-github-rate.html",
+      "sha256": "57e60bb105f82450fdd08ae87af21e3ba081c76086c4626da73e8f476f08aa55",
+      "byte_length": 335423,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "raw_original_redistributed": false,
+      "locator": "Primary rate limit for unauthenticated users",
+      "original_excerpt": "The primary rate limit for unauthenticated requests is 60 requests per hour.",
+      "english_verbatim_word_count": 12,
+      "support_scope_ko": "무인증 IP 단위의 primary quota와 response headers·secondary rate limit."
+    },
+    {
+      "id": "SRC-API-AI-OR-DATASETS",
+      "source_url": "https://openrouter.ai/docs/cookbook/administration/data-api",
+      "retrieved_url": "https://openrouter.ai/docs/cookbook/administration/data-api",
+      "retrieved_at_utc": "2026-10-04T17:08:35.080741Z",
+      "publication_date_displayed": null,
+      "date_basis": "문서의 게시/개정 날짜가 확인되지 않음. retrieval은 사건·통계 관측 날짜가 아님.",
+      "status": "OFFICIAL_DOCUMENT_ORIGINAL_HTTP_CAPTURED",
+      "raw_file_basename": "doc-openrouter-datasets.html",
+      "sha256": "2bfd88ef244631ba8dcf877c03fc61a0e4cbc99a1086350b3b0c019b5c43a118",
+      "byte_length": 918676,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "raw_original_redistributed": false,
+      "locator": "License and citation",
+      "original_excerpt": "Data returned by the Data API is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).",
+      "english_verbatim_word_count": 17,
+      "support_scope_ko": "집계 API 라이선스, token bucket·필터·날짜·인증·quotas. Dataset 호출 가격은 별도 미확인."
+    }
+  ],
+  "probes": [
+    {
+      "id": "probe-hf-models",
+      "requested_url": "https://huggingface.co/api/models?pipeline_tag=text-generation&sort=downloads&direction=-1&limit=2&full=true",
+      "retrieved_at_utc": "2026-10-04T17:08:32.953706Z",
+      "authentication_sent": false,
+      "retry_count": 0,
+      "status_code": 200,
+      "retrieved_url": "https://huggingface.co/api/models?pipeline_tag=text-generation&sort=downloads&direction=-1&limit=2&full=true",
+      "content_type": "application/json; charset=utf-8",
+      "raw_file_basename": "probe-hf-models.json",
+      "sha256": "96db5465cdf209cdb02c08e616c898a8ef903cdd8a8d8eac590aae97ee03701a",
+      "byte_length": 2504,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "json_parse_success": true,
+      "top_level_type": "list",
+      "record_count": 2,
+      "payload_error_code": null,
+      "outcome": "VALID_DATA_OBSERVED",
+      "sample_rows": [
+        {
+          "id": "Qwen/Qwen3-0.6B",
+          "downloads": 29646527,
+          "likes": 1730,
+          "lastModified": "2025-07-26T03:46:27.000Z",
+          "createdAt": "2025-04-27T03:40:08.000Z",
+          "sha": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "pipeline_tag": "text-generation",
+          "library_name": "transformers",
+          "private": false,
+          "gated": false
+        },
+        {
+          "id": "openai-community/gpt2",
+          "downloads": 15508105,
+          "likes": 4198,
+          "lastModified": "2024-02-19T10:57:45.000Z",
+          "createdAt": "2022-03-02T23:29:04.000Z",
+          "sha": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+          "pipeline_tag": "text-generation",
+          "library_name": "transformers",
+          "private": false,
+          "gated": false
+        }
+      ],
+      "actual_fields": [
+        "_id",
+        "author",
+        "createdAt",
+        "downloads",
+        "gated",
+        "id",
+        "lastModified",
+        "library_name",
+        "likes",
+        "modelId",
+        "pipeline_tag",
+        "private",
+        "sha",
+        "siblings",
+        "tags"
+      ],
+      "response_headers": {
+        "date": "Sun, 04 Oct 2026 17:08:33 GMT",
+        "etag": "W/\"9c8-Me6Vbi/Ddi2jsVdDUHQJ1mNWOVY\"",
+        "ratelimit": "\"api\";r=499;t=123",
+        "ratelimit-policy": "\"fixed window\";\"api\";q=500;w=300"
+      },
+      "raw_original_redistributed": false,
+      "sample_projection_only": true,
+      "all_pages_collected": false,
+      "provider_publication_date": null,
+      "sample_date_rule_ko": "API Date는 응답 시각. 각 레코드의 lastModified/published_at 등과 별개.",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "probe-github-releases",
+      "requested_url": "https://api.github.com/repos/vllm-project/vllm/releases?per_page=1&page=1",
+      "retrieved_at_utc": "2026-10-04T17:08:32.957546Z",
+      "authentication_sent": false,
+      "retry_count": 0,
+      "status_code": 200,
+      "retrieved_url": "https://api.github.com/repos/vllm-project/vllm/releases?per_page=1&page=1",
+      "content_type": "application/json; charset=utf-8",
+      "raw_file_basename": "probe-github-releases.json",
+      "sha256": "fed9e4bb85d8b29af51001bc6dcc33b7d607f25f795f131e45e6f4edff3dceb7",
+      "byte_length": 65350,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "json_parse_success": true,
+      "top_level_type": "list",
+      "record_count": 1,
+      "payload_error_code": null,
+      "outcome": "VALID_DATA_OBSERVED",
+      "sample_rows": [
+        {
+          "id": 393467280,
+          "tag_name": "v0.30.0",
+          "target_commitish": "main",
+          "name": "v0.30.0",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-09-21T22:32:49Z",
+          "published_at": "2026-09-22T05:20:54Z",
+          "updated_at": "2026-09-22T05:20:54Z",
+          "html_url": "https://github.com/vllm-project/vllm/releases/tag/v0.30.0"
+        }
+      ],
+      "actual_fields": [
+        "assets",
+        "assets_url",
+        "author",
+        "body",
+        "created_at",
+        "draft",
+        "html_url",
+        "id",
+        "immutable",
+        "mentions_count",
+        "name",
+        "node_id",
+        "prerelease",
+        "published_at",
+        "reactions",
+        "tag_name",
+        "tarball_url",
+        "target_commitish",
+        "updated_at",
+        "upload_url",
+        "url",
+        "zipball_url"
+      ],
+      "response_headers": {
+        "date": "Sun, 04 Oct 2026 17:08:33 GMT",
+        "etag": "W/\"48fceff6d40866daaddd2550f6ea34113791454c1dc0fde7d644c0dbc1367717\"",
+        "x-ratelimit-limit": "60",
+        "x-ratelimit-remaining": "59",
+        "x-ratelimit-resource": "core",
+        "x-ratelimit-reset": "1791137313"
+      },
+      "raw_original_redistributed": false,
+      "sample_projection_only": true,
+      "all_pages_collected": false,
+      "provider_publication_date": null,
+      "sample_date_rule_ko": "API Date는 응답 시각. 각 레코드의 lastModified/published_at 등과 별개.",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "probe-github-repo",
+      "requested_url": "https://api.github.com/repos/vllm-project/vllm",
+      "retrieved_at_utc": "2026-10-04T17:08:32.961950Z",
+      "authentication_sent": false,
+      "retry_count": 0,
+      "status_code": 200,
+      "retrieved_url": "https://api.github.com/repos/vllm-project/vllm",
+      "content_type": "application/json; charset=utf-8",
+      "raw_file_basename": "probe-github-repo.json",
+      "sha256": "58f4a01b57c9dfeacbd4a1fa546e0a2016ae0c68f49c706ccdeb122247afae47",
+      "byte_length": 6473,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "json_parse_success": true,
+      "top_level_type": "dict",
+      "record_count": null,
+      "payload_error_code": null,
+      "outcome": "VALID_DATA_OBSERVED",
+      "sample_rows": [
+        {
+          "id": 599547518,
+          "full_name": "vllm-project/vllm",
+          "stargazers_count": 93168,
+          "forks_count": 22981,
+          "open_issues_count": 8439,
+          "pushed_at": "2026-10-04T17:07:47Z",
+          "updated_at": "2026-10-04T17:07:54Z",
+          "created_at": "2023-02-09T11:23:20Z",
+          "archived": false,
+          "default_branch": "main",
+          "license_spdx_id": "Apache-2.0"
+        }
+      ],
+      "actual_fields": [
+        "allow_forking",
+        "archive_url",
+        "archived",
+        "assignees_url",
+        "blobs_url",
+        "branches_url",
+        "clone_url",
+        "collaborators_url",
+        "comments_url",
+        "commits_url",
+        "compare_url",
+        "contents_url",
+        "contributors_url",
+        "created_at",
+        "custom_properties",
+        "default_branch",
+        "deployments_url",
+        "description",
+        "disabled",
+        "downloads_url",
+        "events_url",
+        "fork",
+        "forks",
+        "forks_count",
+        "forks_url",
+        "full_name",
+        "git_commits_url",
+        "git_refs_url",
+        "git_tags_url",
+        "git_url",
+        "has_discussions",
+        "has_issues",
+        "has_pages",
+        "has_projects",
+        "has_pull_requests",
+        "has_wiki",
+        "homepage",
+        "hooks_url",
+        "html_url",
+        "id",
+        "is_template",
+        "issue_comment_url",
+        "issue_events_url",
+        "issues_url",
+        "keys_url",
+        "labels_url",
+        "language",
+        "languages_url",
+        "license",
+        "merges_url",
+        "milestones_url",
+        "mirror_url",
+        "name",
+        "network_count",
+        "node_id",
+        "notifications_url",
+        "open_issues",
+        "open_issues_count",
+        "organization",
+        "owner",
+        "private",
+        "pull_request_creation_policy",
+        "pulls_url",
+        "pushed_at",
+        "releases_url",
+        "size",
+        "ssh_url",
+        "stargazers_count",
+        "stargazers_url",
+        "statuses_url",
+        "subscribers_count",
+        "subscribers_url",
+        "subscription_url",
+        "svn_url",
+        "tags_url",
+        "teams_url",
+        "temp_clone_token",
+        "topics",
+        "trees_url",
+        "updated_at",
+        "url",
+        "visibility",
+        "watchers",
+        "watchers_count",
+        "web_commit_signoff_required"
+      ],
+      "response_headers": {
+        "date": "Sun, 04 Oct 2026 17:08:33 GMT",
+        "etag": "W/\"875c792b5c873ecd49f131489fcf8f521393babf837f93921784472d50e6249b\"",
+        "last-modified": "Sun, 04 Oct 2026 17:07:54 GMT",
+        "x-ratelimit-limit": "60",
+        "x-ratelimit-remaining": "58",
+        "x-ratelimit-resource": "core",
+        "x-ratelimit-reset": "1791137313"
+      },
+      "raw_original_redistributed": false,
+      "sample_projection_only": true,
+      "all_pages_collected": false,
+      "provider_publication_date": null,
+      "sample_date_rule_ko": "API Date는 응답 시각. 각 레코드의 lastModified/published_at 등과 별개.",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "probe-openrouter-no-key",
+      "requested_url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2026-10-03&end_date=2026-10-03",
+      "retrieved_at_utc": "2026-10-04T17:08:32.965554Z",
+      "authentication_sent": false,
+      "retry_count": 0,
+      "status_code": 401,
+      "retrieved_url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2026-10-03&end_date=2026-10-03",
+      "content_type": "application/json",
+      "raw_file_basename": "probe-openrouter-no-key.json",
+      "sha256": "36c1407c049a212826f183eabdf3eae02172f79f80806f9afed93f5eeb68c49c",
+      "byte_length": 67,
+      "content_hash_type": "SHA256_ORIGINAL_HTTP_RESPONSE_BYTES",
+      "json_parse_success": true,
+      "top_level_type": "dict",
+      "record_count": null,
+      "payload_error_code": 401,
+      "outcome": "AUTH_REQUIRED_NO_DATA",
+      "response_headers": {
+        "date": "Sun, 04 Oct 2026 17:08:33 GMT"
+      },
+      "raw_original_redistributed": false,
+      "sample_projection_only": true,
+      "all_pages_collected": false,
+      "provider_publication_date": null,
+      "sample_date_rule_ko": "API Date는 응답 시각. 각 레코드의 lastModified/published_at 등과 별개.",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    }
+  ],
+  "summary_counts": {
+    "api_families": 3,
+    "candidate_indicators": 7,
+    "data_get_attempts": 4,
+    "valid_data_get_responses": 3,
+    "valid_sample_records": 4,
+    "authentication_required_no_data": 1,
+    "official_document_http_captures": 9,
+    "raw_public_redistribution_files": 0,
+    "new_keys_issued": 0,
+    "new_accounts_created": 0
+  },
+  "same_case_join_contract_ko": [
+    "OpenRouter permaslug와 HF model id/GitHub repo는 자동 일치하지 않음. 원 제공자·모델 버전·variant·license와 naming map을 별도로 검증.",
+    "실제 메모리 수요로 연결하려면 workload/model revision × context/input-output length × batch/concurrency × precision/cache × backend/commit × GPU/system/SKU × 측정 기간이 필요.",
+    "기명 구매자·시설·제품 SKU·주문/배정/실사용은 이 세 API가 제공하지 않음. 기존 공급망 edge에 실제 주문·현금·HBM 할당을 새로 채우지 않음."
+  ],
+  "next_access_action_ko": "무키 HF·GitHub 고정 cohort 정의를 수집 설계로 확정하고, OpenRouter는 계정·키 권한과 Dataset 호출 비용을 확인한 뒤 완료 UTC 1일 데이터 GET 1건을 인증 시험 대상으로 삼는다. 현재 인증 시험은 미실행."
+}

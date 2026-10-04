@@ -12,6 +12,7 @@
 
 ## 시작할 문서와 데이터
 
+- [무료 API로 수집할 지표와 실제 접근 결과](api_signal_feasibility.md)(2026-10-05): **현재 우선 작업**. 질문·dataset·필드·단위·시점·연결 키·무료/인증/재배포 조건. 사용자 지시에 따라 DDR5 카드 수렴을 보류하고 API 관측 가능성부터 확인했다.
 - [반도체 제품에서 산업으로 이어지는 전파 경로](semiconductor_industry_transmission_routes.md)(2026-10-05): 여러 제품·제조 기능에서 데이터센터·전력·통신·항공우주로 이어지는 대표 경로, 정책·협정의 적용 범위, 연결 조건·반론·무료 관측.
 - [AI 기술·업무와 메모리 상품 요구의 연결](ai_technology_memory_links.md): 기술 조건·병목·상품·기명 채택·공급을 잇는 일곱 연결, 소프트웨어 반론과 직무별 질문.
 - [첫 분기 관측표](memory_observation_panel_2026q2.md), [독립 목적 검토](research_convergence_review.md): 공개 수급 항목과 실제 발산·수렴·수정 기록.

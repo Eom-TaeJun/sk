@@ -12,6 +12,8 @@ SK하이닉스의 영업·마케팅·상품기획·신제품사업화 직무를 
 
 산업 간 연결: [반도체 제품에서 산업으로 이어지는 전파 경로](docs/research/supply_chain/semiconductor_industry_transmission_routes.md) — 제품 축과 파운드리·설계·후공정 기능을 분리하고 데이터센터·전력·통신·항공우주와 정책·협정의 조건부 연결을 점검한다.
 
+현재 수집 단계: [무료 API로 관측할 지표와 실제 접근 결과](docs/research/supply_chain/api_signal_feasibility.md) — 2026-10-05 사용자 지시에 따라 DDR5 고객 카드 수렴을 보류하고, 질문·dataset·필드·단위·시점·연결 키와 인증/파일/실패를 구분한다.
+
 ```text
 Real decision problem
 → economic / industry model
@@ -38,7 +40,8 @@ Real decision problem
 - [첫 분기 관측표](docs/research/supply_chain/memory_observation_panel_2026q2.md)(2026-10-04): 하이닉스·삼성의 2026Q2 재고·DRAM/NAND 출하·ASP·설비 지출. 제품·사업·기간 범위를 보존한 후보 기록이며 반복·역사 패널과 선행성 검증은 미구축
 - [AI 기술과 상품 요구 연결](docs/research/supply_chain/ai_technology_memory_links.md)(2026-10-04): 연결 일곱 가지, 구현·시험 조건과 채택·주문·공급 공백. 업계 총수요나 고객별 물량을 계산한 결과가 아님
 - [산업 전파 경로 점검](docs/research/supply_chain/semiconductor_industry_transmission_routes.md)(2026-10-05): 여러 제품과 제조 기능, 전력 규제·국가 간 협력·항공우주의 대표 관계와 연결 공백. 세계 전체 거래·규제 효력 또는 충격 크기를 확인한 결과가 아님
-- [독립 목적 관리](docs/research/supply_chain/research_convergence_review.md): 실제 초기·중간·최종 검토와 수정 내역. 산업 간 구조 점검을 바탕으로 서버 DDR5의 Intel 인증·Dell 전시 탑재 사례를 고객·상품 카드로 구체화
+- [무료 API 수집 가능성](docs/research/supply_chain/api_signal_feasibility.md)(2026-10-05): 데이터가 반환된 무키 경로, 인증 미시험·실패·파일 자료와 관측 계약. 반복 수집·선행성 검증은 미구현
+- [독립 목적 관리](docs/research/supply_chain/research_convergence_review.md): 실제 초기·중간·최종 검토와 수정 내역. 현재는 API 관측 가능성을 먼저 점검하며 이전 DDR5 카드 제안은 보류
 - 첫 수집 실험: [경제적 목적](docs/research/supply_chain/decision_purpose.md)과 [OpenAI–CoreWeave 사례 검토](docs/research/supply_chain/first_case_review.md) — 고객 약정과 실제 집행의 공개 연결 범위를 구분
 - 후속: H1 최소 검증 후 H2 Bottleneck Migration
 - 보류: H3 Product-Mix Opportunity Cost는 공개정보가 충분할 때까지 `KNOWN_UNKNOWN` 중심 framework로 유지
