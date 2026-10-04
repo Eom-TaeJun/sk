@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-10-04",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "purpose": "SK hynix commercial-role macro industry learning and public observation design",
+  "created_at": "2026-10-04T11:56:21.693041+00:00",
+  "scope": {
+    "new_source_captures": 8,
+    "source_formats": {
+      "pdf": 5,
+      "html": 2,
+      "xlsx": 1
+    },
+    "company_examples": 21,
+    "metric_candidates": 18,
+    "selected_forecast_table_values": 8,
+    "selected_monthly_billings_values": 1
+  },
+  "completion": {
+    "macro_learning_framework_documented": true,
+    "original_source_integrity_checked": true,
+    "current_market_observations_panel_implemented": false,
+    "continuous_collection_implemented": false,
+    "complete_world_map": false,
+    "empirical_leadingness_validated": false,
+    "human_evidence_approved": false,
+    "h1_admitted": false,
+    "h1_dataset_changed": false
+  },
+  "distribution": "Original PDF/HTML/XLSX responses stay outside the public repository. Only bounded excerpts, selected reference values and receipts are included.",
+  "validation_scope": "Source bytes/excerpts, public package hashes, metric IDs, referenced files and explicit limitations; not source truth, economic causality or predictive validity.",
+  "artifacts": [
+    {
+      "path": "data/research/semiconductor_macro_structure/2026-10-04/sources.json",
+      "sha256": "891e1f83bb78795396b98358a16de63e3bd64a314955e233d50d6867a6fc43c8",
+      "byte_length": 27851
+    }
+  ],
+  "documentation": [
+    "docs/research/supply_chain/semiconductor_macro_structure.md",
+    "docs/research/supply_chain/memory_cycle_signal_plan.md"
+  ],
+  "reused_inputs": [
+    {
+      "path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+      "sha256": "24bf6f4d40c6bb8208d8dc90c65e14fa025f10c7ffb9b0b9079dfb73568d3451",
+      "role": "Historical receipt or candidate design reused without recapture or evidence promotion"
+    },
+    {
+      "path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+      "sha256": "7d5bf4d6e52e96945b22047f190edb8837c3b80eb3cdbd282ec635912ad43a94",
+      "role": "Historical receipt or candidate design reused without recapture or evidence promotion"
+    },
+    {
+      "path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "role": "Historical receipt or candidate design reused without recapture or evidence promotion"
+    },
+    {
+      "path": "data/research/semiconductor_supply_chain/2026-10-03/source_benchmark_v2.json",
+      "sha256": "e82d69af6822cecee9118751fc1eb4ac6aa5ffd75f3235afbd628f1b68d2b672",
+      "role": "Historical receipt or candidate design reused without recapture or evidence promotion"
+    },
+    {
+      "path": "data/research/semiconductor_supply_chain/2026-10-03/signal_catalog_v2.json",
+      "sha256": "8577f3637e0b7b61607bcc0a4d920d851ec811302ec440896e2b23b3f86748cc",
+      "role": "Historical receipt or candidate design reused without recapture or evidence promotion"
+    }
+  ],
+  "documentation_hash_note": "Markdown uses normal Git text normalization and is referenced by path; immutable byte hashes apply only to research data covered by repository -text attributes.",
+  "known_gaps": [
+    "Product-specific bit/ASP/inventory observation panel",
+    "Current like-for-like competitive shares",
+    "Current worldwide product/site capacity",
+    "Exact KOSIS table and item IDs",
+    "Direct customer orders, volumes, prices, yield and allocation",
+    "Historical revisions and empirical signal validation"
+  ],
+  "next_task": "Build one same-period DRAM/NAND public inventory, bit-shipment and investment observation table for SK hynix and comparison firms."
+}
