@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-05",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "human_evidence_approved": false,
+  "h1_admitted": false,
+  "files": [
+    {
+      "path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "sha256": "f6d7e5c8d62aa6d46ed05d87b77fceec2d9eccfb84fd6a4a96aabc1a653db283",
+      "byte_length": 97626
+    },
+    {
+      "path": "data/research/semiconductor_industry_routes/2026-10-05/policy_infrastructure_routes.json",
+      "sha256": "bedba1e6430e59d44501c95d3fd780feffbb8b3df5302a5a5c62b6cd362c1ea8",
+      "byte_length": 77441
+    },
+    {
+      "path": "data/research/semiconductor_industry_routes/2026-10-05/route_index.json",
+      "sha256": "9c3507ebae468e8016ff4fd4edd91ebfdbf540203ea4b1f99a08d1afbe7ac4bc",
+      "byte_length": 15574
+    }
+  ],
+  "preserved_inputs": [
+    {
+      "path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "byte_length": 337455
+    },
+    {
+      "path": "data/research/semiconductor_macro_structure/2026-10-04/sources.json",
+      "sha256": "891e1f83bb78795396b98358a16de63e3bd64a314955e233d50d6867a6fc43c8",
+      "byte_length": 27851
+    },
+    {
+      "path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+      "sha256": "24bf6f4d40c6bb8208d8dc90c65e14fa025f10c7ffb9b0b9079dfb73568d3451",
+      "byte_length": 13569
+    },
+    {
+      "path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+      "sha256": "7d5bf4d6e52e96945b22047f190edb8837c3b80eb3cdbd282ec635912ad43a94",
+      "byte_length": 22659
+    },
+    {
+      "path": "data/research/ai_technology_memory_links/2026-10-04/links.json",
+      "sha256": "6cd95b606851dc66e86c36eb498258093eaf8967bcc24e402de517a4d8ec2b45",
+      "byte_length": 22261
+    },
+    {
+      "path": "data/research/semiconductor_supply_chain/2026-10-03/api_issuance_plan_v3.json",
+      "sha256": "7d4e25761fa99f704660537f9a8e31d0bbef5263fcb4b4264c75156030e19be2",
+      "byte_length": 18408
+    }
+  ],
+  "documentation_paths": [
+    "AGENTS.md",
+    "README.md",
+    "docs/research/supply_chain/README.md",
+    "docs/research/supply_chain/ai_technology_memory_links.md",
+    "docs/research/supply_chain/semiconductor_macro_structure.md",
+    "docs/research/supply_chain/sk_hynix_commercial_role_context.md",
+    "docs/research/supply_chain/semiconductor_industry_transmission_routes.md",
+    "docs/research/supply_chain/research_convergence_review.md",
+    "docs/exec-plans/completed/semiconductor_industry_routes_20261005.md"
+  ],
+  "counts": {
+    "product_routes": 12,
+    "policy_routes": 4,
+    "original_http_captures": 10,
+    "normalized_web_text": 1,
+    "reused_product_refs": 18,
+    "policy_reused_packet": 1,
+    "bridges": 5
+  },
+  "source_checks": [
+    {
+      "source_id": "SRC-ROUTE-TSMC-AR25",
+      "representation": "ORIGINAL_HTTP_BODY",
+      "quoted_words": 12,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-ROUTE-TSMC-3DFABRIC",
+      "representation": "ORIGINAL_HTTP_BODY",
+      "quoted_words": 16,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-ROUTE-ASML-DUV",
+      "representation": "ORIGINAL_HTTP_BODY",
+      "quoted_words": 13,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-ROUTE-AWS-TRN3",
+      "representation": "ORIGINAL_HTTP_BODY",
+      "quoted_words": 15,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-ROUTE-QORVO-QPA0524",
+      "representation": "NORMALIZED_WEB_TEXT_NOT_ORIGINAL_HTTP",
+      "quoted_words": 10,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-ROUTE-TI-TPS7H4001",
+      "representation": "ORIGINAL_HTTP_BODY",
+      "quoted_words": 9,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-ROUTE-FERC-PJM-SHOWCAUSE26",
+      "representation": "ORIGINAL_HTTP_BODY",
+      "quoted_words": 16,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-ROUTE-BIS-VEU-REVOCATION25",
+      "representation": "ORIGINAL_HTTP_BODY",
+      "quoted_words": 7,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-ROUTE-CENSUS-C79-26",
+      "representation": "ORIGINAL_HTTP_BODY",
+      "quoted_words": 4,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26",
+      "representation": "ORIGINAL_HTTP_BODY",
+      "quoted_words": 16,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-ROUTE-EMA-ST-MOU20",
+      "representation": "ORIGINAL_HTTP_BODY",
+      "quoted_words": 6,
+      "hash_size_excerpt_checked": true
+    },
+    {
+      "source_id": "SRC-ROUTE-REUSED-MAP03",
+      "representation": "REUSED_PACKET_NOT_NEW_ORIGINAL",
+      "quoted_words": 0,
+      "hash_size_excerpt_checked": true
+    }
+  ],
+  "scope": "Structure, provenance, references, representation boundaries and commercial-role learning; not global coverage, legal-effect certification, economic causality or predictive validity.",
+  "originals_redistributed": false,
+  "automatic_collection_implemented": false,
+  "private_materials_included": false,
+  "documentation_hash_policy": "Markdown paths only; immutable research JSON byte hashes remain separate from Git text normalization."
+}

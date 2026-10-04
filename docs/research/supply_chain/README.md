@@ -12,6 +12,7 @@
 
 ## 시작할 문서와 데이터
 
+- [반도체 제품에서 산업으로 이어지는 전파 경로](semiconductor_industry_transmission_routes.md)(2026-10-05): 여러 제품·제조 기능에서 데이터센터·전력·통신·항공우주로 이어지는 대표 경로, 정책·협정의 적용 범위, 연결 조건·반론·무료 관측.
 - [AI 기술·업무와 메모리 상품 요구의 연결](ai_technology_memory_links.md): 기술 조건·병목·상품·기명 채택·공급을 잇는 일곱 연결, 소프트웨어 반론과 직무별 질문.
 - [첫 분기 관측표](memory_observation_panel_2026q2.md), [독립 목적 검토](research_convergence_review.md): 공개 수급 항목과 실제 발산·수렴·수정 기록.
 - [반도체 산업 거시 구조](semiconductor_macro_structure.md): 공통 분류, 하이닉스 위치, 실제 기업 21개와 근거 성숙도, 지역·소재·시장 비교 기준.
@@ -29,6 +30,8 @@
 - [수집용 증거 구조 제안](../../../data/research/semiconductor_supply_chain/2026-10-03/evidence_schema_v2.json), [출처·방법론 검토](../../../data/research/semiconductor_supply_chain/2026-10-03/source_benchmark_v2.json), [무료 API 접근 계획](../../../data/research/semiconductor_supply_chain/2026-10-03/api_issuance_plan_v3.json).
 
 ## 현재 범위
+
+아래 숫자는 **2026-10-03 v3 지도 스냅샷**의 범위다. 2026-10-05 산업 경로 점검은 기존 관계를 날짜·hash와 함께 참조하는 별도 보완층이다. 신규 제품 용도·정책 절차와 이월 관계를 실제 거래로 합치거나 중복 주체를 더해 전세계 커버리지로 부르지 않는다.
 
 | 대상 | 현재 연구 자료 | 한계 |
 | --- | ---: | --- |

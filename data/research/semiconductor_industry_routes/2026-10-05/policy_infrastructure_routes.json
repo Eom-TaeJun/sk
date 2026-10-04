@@ -1,0 +1,1764 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-05",
+  "prepared_at_utc": "2026-10-04T16:18:09.076719+00:00",
+  "purpose_ko": "하이닉스 영업·상품기획 학습에서 반도체·AI 고객의 시스템 도입 일정과 공급 fab 준비를 전력·허가·수출 승인·국가 간 에너지 협력의 구체적 상대방 및 조건에 연결한다.",
+  "new_primary_capture_count": 5,
+  "reused_public_packet_count": 1,
+  "source_count": 6,
+  "route_count": 4,
+  "instrument_count": 7,
+  "sources": [
+    {
+      "source_id": "SRC-ROUTE-FERC-PJM-SHOWCAUSE26",
+      "title": "PJM Interconnection, L.L.C. et al., Order to Show Cause, EL26-67-000 / 195 FERC ¶ 61,211",
+      "source_url": "https://www.ferc.gov/sites/default/files/2026-06/EL26-67-000.pdf",
+      "retrieved_url": "https://www.ferc.gov/sites/default/files/2026-06/EL26-67-000.pdf",
+      "retrieved_at_utc": "2026-10-04T15:56:05.688926+00:00",
+      "source_role": "regulator_majority_order_with_separate_concurrences",
+      "publication_date_displayed": "2026-06-18",
+      "date_basis": "문서 표기 공표일; HTTP 수정일과 별개",
+      "sha256": "f9c747cfb6f16b646556d1149b529b467a402b6a62e7e7f861c583180a0a383f",
+      "byte_length": 1592865,
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_file_basename": "ferc-pjm-showcause-20260618.pdf",
+      "response_status": 200,
+      "content_type": "application/pdf",
+      "capture_outcome": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "free_access": "공개 PDF/HTML 열람; 이번 원문 요청은 가입·API key 없이 성공",
+      "api_key_required_for_this_capture": false,
+      "raw_original_redistributed": false,
+      "original_excerpts": [
+        {
+          "text": "This proceeding is not intended to disrupt existing commercial arrangements, but rather to establish prospective reforms.",
+          "locator": "PDF physical page 8 / order paragraph 8; majority order, not appended concurrence"
+        }
+      ],
+      "english_verbatim_word_count": 16,
+      "support_scope_ko": "PJM 및 제목에 기재된 관할 송전 소유자의 대규모 부하 송전서비스 절차·비용·유연 부하 쟁점. 명령 부분과 동시 별도 co-location 결정의 인용을 구분한다.",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "page_count": 114,
+      "locators": [
+        "physical pp.7–8, paragraphs 6–8",
+        "physical pp.19–21, section II.A",
+        "physical pp.32–34, section III.A.1",
+        "physical p.61, section III.D.1",
+        "physical pp.69–71, sections IV and ordering paragraphs A–G"
+      ],
+      "scope_exclusions_ko": [
+        "이번 source는 별도 co-location 재심 결정 195 FERC ¶ 61,209의 원문이 아니다.",
+        "명령 이후 compliance·tariff filing·재심·법원 결정의 전수 갱신은 하지 않았다.",
+        "appendix의 이해관계자 주장과 각 위원 별도 의견을 본문 결정으로 취급하지 않는다."
+      ]
+    },
+    {
+      "source_id": "SRC-ROUTE-BIS-VEU-REVOCATION25",
+      "title": "Revocation of Validated End-User Authorizations in the People's Republic of China / FR Doc 2025-16735",
+      "source_url": "https://www.govinfo.gov/content/pkg/FR-2025-09-02/pdf/2025-16735.pdf",
+      "retrieved_url": "https://www.govinfo.gov/content/pkg/FR-2025-09-02/pdf/2025-16735.pdf",
+      "retrieved_at_utc": "2026-10-04T15:56:05.692779+00:00",
+      "source_role": "official_gpo_federal_register_final_rule",
+      "publication_date_displayed": "2025-09-02",
+      "date_basis": "문서 표기 공표일; HTTP 수정일과 별개",
+      "sha256": "256036a657ca0b4a9e8c1133e991c156f6cbd283c2ce75ad144498f8aac6f6e4",
+      "byte_length": 243393,
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_file_basename": "bis-veu-revocation-20250902.pdf",
+      "response_status": 200,
+      "content_type": "application/pdf",
+      "capture_outcome": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "free_access": "공개 PDF/HTML 열람; 이번 원문 요청은 가입·API key 없이 성공",
+      "api_key_required_for_this_capture": false,
+      "raw_original_redistributed": false,
+      "original_excerpts": [
+        {
+          "text": "This rule is effective December 31, 2025.",
+          "locator": "PDF physical page 1 / printed page 42321 / FR Doc 2025-16735 DATES"
+        }
+      ],
+      "english_verbatim_word_count": 7,
+      "support_scope_ko": "15 CFR Part 748 Supplement No.7의 세 중국 VEU 항목 삭제와 문서의 시행일. 품목별·거래별 허가와 후속 개정의 현재 상태는 판정하지 않는다.",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "page_count": 2,
+      "locators": [
+        "physical p.1 / printed p.42321 / SUMMARY, DATES, sections I–II",
+        "physical p.2 / printed p.42322 / Supplement No.7 amendment"
+      ],
+      "scope_exclusions_ko": [
+        "같은 GPO 2쪽에 인접한 Syria·노동부 규칙도 포함되어 있으나 본 packet의 근거에서 제외했다."
+      ]
+    },
+    {
+      "source_id": "SRC-ROUTE-CENSUS-C79-26",
+      "title": "NEW BIS LICENSE TYPE C79 - Fab License",
+      "source_url": "https://content.govdelivery.com/accounts/USCENSUS/bulletins/4008e2b",
+      "retrieved_url": "https://content.govdelivery.com/accounts/USCENSUS/bulletins/4008e2b",
+      "retrieved_at_utc": "2026-10-04T15:56:05.697311+00:00",
+      "source_role": "us_census_official_operational_reporting_notice",
+      "publication_date_displayed": "2026-01-05",
+      "date_basis": "문서 표기 공표일; HTTP 수정일과 별개",
+      "sha256": "a35153380a9881aceb408936e8229c1da496fefa760eb50477c8334e10025b0b",
+      "byte_length": 37840,
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_file_basename": "census-c79-20260105.html",
+      "response_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "capture_outcome": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "free_access": "공개 PDF/HTML 열람; 이번 원문 요청은 가입·API key 없이 성공",
+      "api_key_required_for_this_capture": false,
+      "raw_original_redistributed": false,
+      "original_excerpts": [
+        {
+          "text": "If authorization is granted",
+          "locator": "HTML bulletin article / paragraph beginning Instead, authorizations / conditional license sentence"
+        }
+      ],
+      "english_verbatim_word_count": 4,
+      "support_scope_ko": "VEU 삭제 뒤 해당 fab의 H로 시작하는 검증된 허가 번호 및 C79 AES 신고 안내. C79 코드 자체가 허가를 부여하거나 모든 품목을 허용하는 것은 아니다.",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "locators": [
+        "article title and January 5, 2026 date",
+        "Instead, authorizations paragraph",
+        "AES reporting bullet list: License Code, License Number, Allowable ECCNs, Allowable countries"
+      ],
+      "scope_exclusions_ko": [
+        "개별 삼성·하이닉스 허가의 발급일·허용 품목·기간·업그레이드 조건은 이 notice로 확인하지 않았다."
+      ]
+    },
+    {
+      "source_id": "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26",
+      "title": "EMA grants Conditional Approvals for 900MW of electricity trade between Peninsular Malaysia and Singapore",
+      "source_url": "https://www.ema.gov.sg/content/dam/corporate/news/media-releases/2026/20260807-Media-Release-Conditional-Approval-for-900MW-of-Electricity-Trade-Between-Peninsular%20Malaysia-SG.pdf.coredownload.pdf",
+      "retrieved_url": "https://www.ema.gov.sg/content/dam/corporate/news/media-releases/2026/20260807-Media-Release-Conditional-Approval-for-900MW-of-Electricity-Trade-Between-Peninsular%20Malaysia-SG.pdf.coredownload.pdf",
+      "retrieved_at_utc": "2026-10-04T15:59:40.749008+00:00",
+      "source_role": "national_energy_regulator_media_release",
+      "publication_date_displayed": "2026-08-07",
+      "date_basis": "문서 표기 공표일; HTTP 수정일과 별개",
+      "sha256": "b47211a22c93559e68d0dd721c35b9cd17eff0c6f211e1be2ef1ebf9aad37b7b",
+      "byte_length": 153513,
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_file_basename": "ema-my-sg-20260807.pdf",
+      "response_status": 200,
+      "content_type": "application/pdf",
+      "capture_outcome": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "free_access": "공개 PDF/HTML 열람; 이번 원문 요청은 가입·API key 없이 성공",
+      "api_key_required_for_this_capture": false,
+      "raw_original_redistributed": false,
+      "original_excerpts": [
+        {
+          "text": "obtain all requisite approvals from relevant jurisdictions, conclude power purchase agreements with buyers, secure sufficient financing",
+          "locator": "PDF physical page 1 / paragraph 2"
+        }
+      ],
+      "english_verbatim_word_count": 16,
+      "support_scope_ko": "Johor solar·BESS 공급원의 두 제안 수입 프로젝트에 대한 조건부 승인과 남은 조건, 별도 두 번째 연계선 JDA 타당성 조사. 실제 수입·특정 DC 구매를 증명하지 않는다.",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "http_last_modified": "Thu, 06 Aug 2026 15:07:04 GMT",
+      "page_count": 2,
+      "discovery_page_url": "https://www.ema.gov.sg/news-events/news/media-releases/2026/ema-grants-conditional-approvals-900mw-electricity-trade-between-peninsular-malaysia-singapore",
+      "locators": [
+        "physical p.1 / paragraphs 1–3"
+      ],
+      "scope_exclusions_ko": [
+        "조건부 승인문·허가증·PPA·JDA 서명 원문은 확보하지 않았고 기관의 공식 발표만 검토했다."
+      ]
+    },
+    {
+      "source_id": "SRC-ROUTE-EMA-ST-MOU20",
+      "title": "Singapore and Malaysia to Strengthen Bilateral Energy Cooperation",
+      "source_url": "https://www.ema.gov.sg/content/dam/corporate/news/media-releases/2020/Media-Release-Singapore-Malaysia-Strengthen-Bilateral-Energy-Cooperation-20201028.pdf.coredownload.pdf",
+      "retrieved_url": "https://www.ema.gov.sg/content/dam/corporate/news/media-releases/2020/Media-Release-Singapore-Malaysia-Strengthen-Bilateral-Energy-Cooperation-20201028.pdf.coredownload.pdf",
+      "retrieved_at_utc": "2026-10-04T15:59:40.752771+00:00",
+      "source_role": "national_energy_regulator_media_release_reporting_regulator_mou",
+      "publication_date_displayed": "2020-10-28",
+      "date_basis": "문서 표기 공표일; HTTP 수정일과 별개",
+      "sha256": "2af2d4e9b7cbf8b5dce9ea9f1d510757759e2e9286e8266f153ba6b2e7d2be31",
+      "byte_length": 102957,
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "raw_file_basename": "ema-st-mou-20201028.pdf",
+      "response_status": 200,
+      "content_type": "application/pdf",
+      "capture_outcome": "HTTP_200_ORIGINAL_BYTES_SAVED_AND_CONTENT_REVIEWED",
+      "free_access": "공개 PDF/HTML 열람; 이번 원문 요청은 가입·API key 없이 성공",
+      "api_key_required_for_this_capture": false,
+      "raw_original_redistributed": false,
+      "original_excerpts": [
+        {
+          "text": "enhance knowledge sharing and technical cooperation",
+          "locator": "PDF physical page 1 / paragraph 2"
+        }
+      ],
+      "english_verbatim_word_count": 6,
+      "support_scope_ko": "싱가포르 EMA와 말레이시아 Energy Commission(ST)의 규제기관 간 협력 MOU 체결 발표와 기술·시장 규제 협력 범위. 현재 효력·법적 구속력·수입 허가를 증명하지 않는다.",
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "http_last_modified": "Fri, 11 Aug 2023 14:11:56 GMT",
+      "page_count": 2,
+      "discovery_page_url": "https://www.ema.gov.sg/news-events/news/media-releases/2020/singapore-and-malaysia-to-strengthen-bilateral-energy-cooperation",
+      "locators": [
+        "physical p.1 / paragraphs 1–2",
+        "physical p.2 / About the Energy Commission"
+      ],
+      "scope_exclusions_ko": [
+        "MOU 서명 전문·유효기간·갱신·해지·집행 상태는 미확인이다."
+      ]
+    },
+    {
+      "source_id": "SRC-ROUTE-REUSED-MAP03",
+      "title": "Existing public supply_chain_map_v3.json power-03/power-04 source pointers",
+      "source_role": "reused_public_candidate_packet_not_new_primary_original",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025030559/a20250611pressreleasebusin.htm",
+      "followup_source_url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000066/tln-20260630.htm",
+      "publication_date_displayed": null,
+      "source_date_in_reused_records": "2025-06-11",
+      "followup_source_period": "2026-06-30",
+      "packet_as_of": "2026-10-03",
+      "packet_path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "old_record_ids": [
+        "power-03",
+        "power-04"
+      ],
+      "packet_sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "content_hash_type": "SHA256_REUSED_PUBLIC_PACKET_NOT_PRIMARY_ORIGINAL",
+      "byte_length": 337455,
+      "raw_primary_sha256": null,
+      "raw_primary_byte_length": null,
+      "original_excerpts": [],
+      "english_verbatim_word_count": 0,
+      "capture_outcome": "EXISTING_PACKET_REUSED_OFFICIAL_WEB_FULLTEXT_RECHECKED_RAW_RECAPTURE_FAILED",
+      "rechecked_at_local_date": "2026-10-05",
+      "recheck_locator": "2025-06-11 SEC exhibit paragraphs on delivery ramp and PPL role; 2026Q2 10-Q glossary AWS PPA, SEC HTML and issuer-linked PDF physical p.46 / printed p.45",
+      "recheck_discovery_url": "https://ir.talenenergy.com/financial-information/sec-filings",
+      "issuer_recheck_url": "https://ir.talenenergy.com/static-files/649bfa16-a54e-4997-914b-a8a5d2e00900",
+      "recheck_provenance_ko": "웹 도구에서 SEC 및 발행사 전문을 열고 기존 관계를 재확인했다. SEC HTTP403과 발행사 HTTP read timeout 때문에 새 원문 bytes hash는 없다. 위 sha256은 기존 공개 packet만 검증한다.",
+      "support_scope_ko": "AWS 구매자, Talen 발전·판매자, PPL 송전·전달 담당, PJM 계통 역할과 April 2026 새 PPA 전환 보고를 제한적으로 재사용한다. October 2026의 전 물량 공급·특정 DC 통전은 확인하지 않는다.",
+      "free_access": "공개 웹 전문 검토 가능; shell 재캡처는 실패",
+      "api_key_required_for_this_capture": false,
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    }
+  ],
+  "instruments": [
+    {
+      "id": "PI-AWS-TALEN-PPA",
+      "title_ko": "AWS–Talen 전력 구매 계약",
+      "instrument_type": "PRIVATE_POWER_PURCHASE_AGREEMENT",
+      "parties": [
+        "AWS Inc. and affiliates",
+        "Talen Energy Corporation and consolidated subsidiaries"
+      ],
+      "jurisdiction": [
+        "United States",
+        "Pennsylvania",
+        "PJM region"
+      ],
+      "regulated_entity_or_counterparty": [
+        "AWS Inc. and affiliates",
+        "Talen Energy Corporation and consolidated subsidiaries"
+      ],
+      "product_or_service": "nuclear electricity; front-of-the-meter delivery model",
+      "site_condition_ko": "Susquehanna 관련 AWS campus 및 Pennsylvania 다른 site로 전달 가능하다는 2025 발표; 특정 site의 설치·실제 사용은 별도",
+      "announcement_date": "2025-06-11",
+      "rule_publication_date": null,
+      "order_issued_date": null,
+      "signature_date": null,
+      "effective_date": null,
+      "effective_period": null,
+      "reported_event_date": null,
+      "current_effect": null,
+      "current_effect_reason_ko": "선택한 문서의 역사적 사실·조건만 검토; 기준일 현재 후속 변경과 개별 적용을 전수 판정하지 않음",
+      "source_ids": [
+        "SRC-ROUTE-REUSED-MAP03"
+      ],
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "signature_period": "2025-06",
+      "reported_event_period": "2026-04",
+      "date_precision": "month",
+      "latest_reviewed_source_period_end": "2026-06-30",
+      "scope_ko": "최종 계약 물량 상한 및 전달 구조와 전환 공시. 개별 AWS–PPL 계약 전문은 미확인."
+    },
+    {
+      "id": "PI-FERC-PJM-SHOWCAUSE",
+      "title_ko": "PJM 대규모 부하 show-cause 명령",
+      "instrument_type": "REGULATORY_SHOW_CAUSE_ORDER",
+      "parties": [
+        "PJM Interconnection, L.L.C.",
+        "FERC-jurisdictional transmission owners named in order"
+      ],
+      "jurisdiction": [
+        "United States",
+        "FERC interstate transmission jurisdiction",
+        "PJM tariff"
+      ],
+      "regulated_entity_or_counterparty": [
+        "PJM Interconnection, L.L.C.",
+        "FERC-jurisdictional transmission owners named in order"
+      ],
+      "product_or_service": "transmission-service applications, studies, cost allocation and flexible-load arrangements",
+      "site_condition_ko": "PJM 관할 송전서비스 쟁점; state retail service 및 개별 토지·건축 허가와 구분",
+      "announcement_date": null,
+      "rule_publication_date": null,
+      "order_issued_date": "2026-06-18",
+      "signature_date": null,
+      "effective_date": null,
+      "effective_period": null,
+      "reported_event_date": null,
+      "current_effect": null,
+      "current_effect_reason_ko": "선택한 문서의 역사적 사실·조건만 검토; 기준일 현재 후속 변경과 개별 적용을 전수 판정하지 않음",
+      "source_ids": [
+        "SRC-ROUTE-FERC-PJM-SHOWCAUSE26"
+      ],
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "order_reference": "EL26-67-000 / 195 FERC ¶ 61,211",
+      "scope_ko": "60일 show-cause/대안 설명, 30일 자원적정성 보고 지시. 후속 제출·승인 이행을 관측하지 않았으므로 최종 요금규정 변경으로 표시하지 않음."
+    },
+    {
+      "id": "PI-BIS-VEU-REMOVAL",
+      "title_ko": "중국 세 fab VEU 일반 승인 항목 삭제",
+      "instrument_type": "EXPORT_AUTHORIZATION_LIST_FINAL_RULE",
+      "parties": [
+        "Intel Semiconductor (Dalian) Ltd",
+        "Samsung China Semiconductor Co. Ltd",
+        "SK hynix Semiconductor (China) Ltd"
+      ],
+      "jurisdiction": [
+        "United States EAR",
+        "China eligible end-user destinations"
+      ],
+      "regulated_entity_or_counterparty": [
+        "Intel Semiconductor (Dalian) Ltd",
+        "Samsung China Semiconductor Co. Ltd",
+        "SK hynix Semiconductor (China) Ltd"
+      ],
+      "product_or_service": "eligible commodities, software and technology subject to EAR; per eligible entity/site/items",
+      "site_condition_ko": "지정 법인·시설·품목 및 거래 적용 범위를 확인해야 함; 중국 반도체 생산 전체나 모든 장비의 금지를 뜻하지 않음",
+      "announcement_date": null,
+      "rule_publication_date": "2025-09-02",
+      "order_issued_date": null,
+      "signature_date": null,
+      "effective_date": "2025-12-31",
+      "effective_period": null,
+      "reported_event_date": null,
+      "current_effect": null,
+      "current_effect_reason_ko": "선택한 문서의 역사적 사실·조건만 검토; 기준일 현재 후속 변경과 개별 적용을 전수 판정하지 않음",
+      "source_ids": [
+        "SRC-ROUTE-BIS-VEU-REVOCATION25",
+        "SRC-ROUTE-CENSUS-C79-26"
+      ],
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "rule_reference": "FR Doc 2025-16735 / 90 FR 42321 / 15 CFR Part 748 Supplement No.7",
+      "scope_ko": "발표 당시 VEU 삭제 및 시행일은 원문에서 확인; 개별 fab 허가와 현재 통합 EAR의 후속 개정은 미확인."
+    },
+    {
+      "id": "PI-C79-NOTICE",
+      "title_ko": "C79 Fab License AES 신고 안내",
+      "instrument_type": "OPERATIONAL_REPORTING_NOTICE",
+      "parties": [
+        "US Census Bureau",
+        "BIS-licensed fab ultimate consignee",
+        "exporters/reexporters/transferors"
+      ],
+      "jurisdiction": [
+        "United States AES/EAR",
+        "China transactions in the reviewed notice"
+      ],
+      "regulated_entity_or_counterparty": [
+        "US Census Bureau",
+        "BIS-licensed fab ultimate consignee",
+        "exporters/reexporters/transferors"
+      ],
+      "product_or_service": "validated H-number license and AES C79 filing",
+      "site_condition_ko": "실제 허가가 부여된 경우 관련 조건·번호를 받는 구조; 신고 코드로 허가 성립을 추정할 수 없음",
+      "announcement_date": "2026-01-05",
+      "rule_publication_date": null,
+      "order_issued_date": null,
+      "signature_date": null,
+      "effective_date": null,
+      "effective_period": null,
+      "reported_event_date": null,
+      "current_effect": null,
+      "current_effect_reason_ko": "선택한 문서의 역사적 사실·조건만 검토; 기준일 현재 후속 변경과 개별 적용을 전수 판정하지 않음",
+      "source_ids": [
+        "SRC-ROUTE-CENSUS-C79-26"
+      ],
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "scope_ko": "선택 notice의 신고 처리 안내이며 각 회사에 특정 장비·신증설 허가가 부여됐다는 증거는 아님."
+    },
+    {
+      "id": "PI-EMA-CONDITIONAL-IMPORT",
+      "title_ko": "말레이시아발 전력 수입 조건부 승인",
+      "instrument_type": "CONDITIONAL_ELECTRICITY_IMPORT_APPROVAL",
+      "parties": [
+        "EMA",
+        "Sembcorp Utilities Pte Ltd",
+        "Southern Solar Alliance Pte Ltd (Ditrolic Energy Holdings subsidiary)"
+      ],
+      "jurisdiction": [
+        "Singapore",
+        "Malaysia approvals also required"
+      ],
+      "regulated_entity_or_counterparty": [
+        "EMA",
+        "Sembcorp Utilities Pte Ltd",
+        "Southern Solar Alliance Pte Ltd (Ditrolic Energy Holdings subsidiary)"
+      ],
+      "product_or_service": "proposed electricity imports generated by solar and BESS in Johor",
+      "site_condition_ko": "양국 승인·buyers PPA·금융조달·개발 milestone·financial close가 남음",
+      "announcement_date": "2026-08-07",
+      "rule_publication_date": null,
+      "order_issued_date": null,
+      "signature_date": null,
+      "effective_date": null,
+      "effective_period": null,
+      "reported_event_date": null,
+      "current_effect": null,
+      "current_effect_reason_ko": "선택한 문서의 역사적 사실·조건만 검토; 기준일 현재 후속 변경과 개별 적용을 전수 판정하지 않음",
+      "source_ids": [
+        "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26"
+      ],
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "scope_ko": "개별 조건부 승인 발표. 정부 간 국제협정·최종 수입 licence·상업 가동·현재 국경 전력량과 구분."
+    },
+    {
+      "id": "PI-MY-SG-INTERCONNECTOR-JDA",
+      "title_ko": "SGEI–SP Group–TNB 두 번째 연계선 조사 협정",
+      "instrument_type": "CORPORATE_JOINT_DEVELOPMENT_FEASIBILITY_AGREEMENT",
+      "parties": [
+        "Singapore Energy Interconnections (SGEI)",
+        "SP Group",
+        "Tenaga Nasional Berhad (TNB)"
+      ],
+      "jurisdiction": [
+        "Singapore",
+        "Peninsular Malaysia"
+      ],
+      "regulated_entity_or_counterparty": [
+        "Singapore Energy Interconnections (SGEI)",
+        "SP Group",
+        "Tenaga Nasional Berhad (TNB)"
+      ],
+      "product_or_service": "detailed feasibility study of a second electricity interconnection",
+      "site_condition_ko": "기업 간 타당성 조사 JDA; 900MW 두 프로젝트의 전용 연결선이라고 단정하지 않음",
+      "announcement_date": "2026-08-07",
+      "rule_publication_date": null,
+      "order_issued_date": null,
+      "signature_date": null,
+      "effective_date": null,
+      "effective_period": null,
+      "reported_event_date": null,
+      "current_effect": null,
+      "current_effect_reason_ko": "선택한 문서의 역사적 사실·조건만 검토; 기준일 현재 후속 변경과 개별 적용을 전수 판정하지 않음",
+      "source_ids": [
+        "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26"
+      ],
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "announcement_date_basis": "이 media release가 JDA 체결을 소개한 날; JDA 서명일은 본 source에 없음",
+      "scope_ko": "JDA 원문·서명일·비용분담·건설 확정·완공일은 미확인."
+    },
+    {
+      "id": "PI-EMA-ST-MOU",
+      "title_ko": "EMA–말레이시아 ST 규제기관 간 에너지 협력 MOU",
+      "instrument_type": "BILATERAL_ENERGY_REGULATOR_COOPERATION_MOU",
+      "parties": [
+        "Energy Market Authority of Singapore (EMA)",
+        "Energy Commission of Malaysia (Suruhanjaya Tenaga, ST)"
+      ],
+      "jurisdiction": [
+        "Singapore",
+        "Malaysia"
+      ],
+      "regulated_entity_or_counterparty": [
+        "Energy Market Authority of Singapore (EMA)",
+        "Energy Commission of Malaysia (Suruhanjaya Tenaga, ST)"
+      ],
+      "product_or_service": "knowledge exchange and technical cooperation in gas/electricity system planning/reliability and wholesale/retail regulation",
+      "site_condition_ko": "국가가 다른 규제기관의 협력 틀. 수입 프로젝트 허가나 전력 구매 의무를 부여한 것으로 해석하지 않음",
+      "announcement_date": "2020-10-28",
+      "rule_publication_date": null,
+      "order_issued_date": null,
+      "signature_date": "2020-10-28",
+      "effective_date": null,
+      "effective_period": null,
+      "reported_event_date": null,
+      "current_effect": null,
+      "current_effect_reason_ko": "선택한 문서의 역사적 사실·조건만 검토; 기준일 현재 후속 변경과 개별 적용을 전수 판정하지 않음",
+      "source_ids": [
+        "SRC-ROUTE-EMA-ST-MOU20"
+      ],
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false,
+      "signature_date_basis": "공식 체결 발표의 today와 공표일",
+      "scope_ko": "MOU 서명 발표만 검토했으며 법적 구속력·현재 유효기간·갱신 상태는 null."
+    }
+  ],
+  "routes": [
+    {
+      "id": "ROUTE-PI-01",
+      "title_ko": "데이터센터 계획에서 전력 확보와 실제 가동까지",
+      "nodes": [
+        {
+          "id": "dc-plan",
+          "label_ko": "데이터센터 부지·부하 계획",
+          "kind": "프로젝트단계"
+        },
+        {
+          "id": "aws",
+          "label_ko": "AWS 구매자·운영자",
+          "kind": "기업"
+        },
+        {
+          "id": "ppa",
+          "label_ko": "AWS–Talen PPA",
+          "kind": "계약"
+        },
+        {
+          "id": "talen",
+          "label_ko": "Talen 발전·전력 판매",
+          "kind": "기업"
+        },
+        {
+          "id": "susquehanna",
+          "label_ko": "Susquehanna 원전",
+          "kind": "시설"
+        },
+        {
+          "id": "ppl",
+          "label_ko": "PPL 송전·전달",
+          "kind": "기업"
+        },
+        {
+          "id": "pjm",
+          "label_ko": "PJM 계통·시장 운영",
+          "kind": "계통운영기관"
+        },
+        {
+          "id": "service-study",
+          "label_ko": "해당 송전서비스 신청·영향 연구",
+          "kind": "절차"
+        },
+        {
+          "id": "grid-upgrade",
+          "label_ko": "송전·변전 설비 준비",
+          "kind": "시설단계"
+        },
+        {
+          "id": "permit",
+          "label_ko": "입지별 인허가·안전 조건",
+          "kind": "승인단계"
+        },
+        {
+          "id": "dc-energized",
+          "label_ko": "데이터센터 통전·냉각 준비",
+          "kind": "시설단계"
+        },
+        {
+          "id": "it-use",
+          "label_ko": "IT 장비 설치·실제 서비스 사용",
+          "kind": "사용단계"
+        },
+        {
+          "id": "sk-memory",
+          "label_ko": "하이닉스 HBM·서버 DRAM·eSSD 요구",
+          "kind": "상품요구"
+        }
+      ],
+      "edges": [
+        {
+          "from": "dc-plan",
+          "to": "service-study",
+          "type": "REQUESTS_TRANSMISSION_SERVICE",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-FERC-PJM-SHOWCAUSE26"
+          ],
+          "claim_ko": "PJM 송전서비스 신청·연구 경로를 검토하며 프로젝트 적용은 별도 확인한다."
+        },
+        {
+          "from": "aws",
+          "to": "ppa",
+          "type": "BUYER_PARTY",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-REUSED-MAP03"
+          ],
+          "claim_ko": "AWS의 전력 구매 관계를 기존 map에서 재사용한다."
+        },
+        {
+          "from": "talen",
+          "to": "ppa",
+          "type": "SELLER_PARTY",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-REUSED-MAP03"
+          ],
+          "claim_ko": "Talen의 공급·판매 역할을 재사용한다."
+        },
+        {
+          "from": "susquehanna",
+          "to": "pjm",
+          "type": "GENERATION_TO_GRID_ARRANGEMENT",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-REUSED-MAP03"
+          ],
+          "claim_ko": "front-of-meter 전달 구조에서 원전 출력은 PJM grid로 공급된다."
+        },
+        {
+          "from": "ppl",
+          "to": "aws",
+          "type": "TRANSMISSION_DELIVERY_ROLE",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-REUSED-MAP03"
+          ],
+          "claim_ko": "PPL의 송전·전달 역할과 개별 계약 전문을 구분한다."
+        },
+        {
+          "from": "service-study",
+          "to": "grid-upgrade",
+          "type": "MAY_REQUIRE_NETWORK_UPGRADES",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-FERC-PJM-SHOWCAUSE26"
+          ],
+          "claim_ko": "연구 결과에 따라 보강 필요 여부가 달라진다."
+        },
+        {
+          "from": "ppa",
+          "to": "dc-energized",
+          "type": "CONDITIONAL_POWER_READINESS",
+          "support_kind": "HYPOTHESIS_NOT_VALIDATED",
+          "source_ids": [
+            "SRC-ROUTE-REUSED-MAP03"
+          ],
+          "claim_ko": "PPA만으로 통전 완료를 판단할 수 없다."
+        },
+        {
+          "from": "grid-upgrade",
+          "to": "dc-energized",
+          "type": "SITE_READINESS_CONDITION",
+          "support_kind": "HYPOTHESIS_NOT_VALIDATED",
+          "source_ids": [
+            "SRC-ROUTE-FERC-PJM-SHOWCAUSE26"
+          ],
+          "claim_ko": "실제 필요한 보강·연결 작업 완료가 확인되어야 한다."
+        },
+        {
+          "from": "permit",
+          "to": "dc-energized",
+          "type": "SITE_READINESS_CONDITION",
+          "support_kind": "HYPOTHESIS_NOT_VALIDATED",
+          "source_ids": [],
+          "claim_ko": "해당 지자체·시설별 허가 요건과 이행은 아직 조사하지 않았다."
+        },
+        {
+          "from": "dc-energized",
+          "to": "it-use",
+          "type": "ENABLES_INSTALLATION_CONDITIONALLY",
+          "support_kind": "HYPOTHESIS_NOT_VALIDATED",
+          "source_ids": [],
+          "claim_ko": "수전·냉각·네트워크 준비와 IT 설치·실사용을 따로 관측한다."
+        },
+        {
+          "from": "it-use",
+          "to": "sk-memory",
+          "type": "MAY_CHANGE_PRODUCT_TIMING",
+          "support_kind": "HYPOTHESIS_NOT_VALIDATED",
+          "source_ids": [],
+          "claim_ko": "고객 플랫폼·OEM·구매 일정이 확인될 때 메모리 제품 요구와 연결한다."
+        }
+      ],
+      "mechanism_ko": "발전·전력 구매·송전서비스·시설 준비는 서로 다른 상대방과 계약을 가진다. 하나의 전력 발표로 장비 설치와 메모리 주문을 확정할 수 없다.",
+      "propagation_hypothesis_ko": "특정 고객 site의 전력·냉각 준비가 실제 장비 설치 일정의 제약이면, 준비 지연 또는 해소가 해당 시스템의 납품·메모리 인수 일정에 영향을 줄 수 있다.",
+      "conditions_ko": [
+        "동일 site ID·단계·계약 ramp·송전서비스 종류를 매칭한다.",
+        "고객/OEM의 시스템 구성·승인·발주·납기 일정이 별도로 확인되어야 한다.",
+        "입지·기술별 필요한 허가와 실제 이행을 확인한다."
+      ],
+      "alternative_explanations_ko": [
+        "다른 site로 이동하거나 기존 powered site·colocation을 사용할 수 있다.",
+        "미리 장비를 구매·재고화하거나 전력 사용과 다른 시점에 메모리를 인수할 수 있다.",
+        "모델 효율·사용률·워크로드와 냉각 방식 변경으로 IT 장비 요구가 달라진다."
+      ],
+      "falsifiers_ko": [
+        "전력 준비 지연에도 같은 고객의 해당 시스템 납품 일정이 유지되거나 다른 site로 대체된다."
+      ],
+      "unknowns_ko": [
+        "site별 통전·허가·commissioning 날짜",
+        "AWS 실제 MWh와 AI 전용 비중",
+        "AWS–PPL 개별 계약·수수료·납입 현금",
+        "연결된 서버·가속기·메모리 구매 물량"
+      ],
+      "observations": [
+        {
+          "id": "OBS-PI-AWS-TRANSITION",
+          "claim_ko": "Q2 공시는 새 AWS PPA 방식으로의 전환을 April 2026으로 보고한다. 전량 1920MW 가동을 보고한 것이 아니다.",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-REUSED-MAP03"
+          ],
+          "locator": "Q2 10-Q glossary AWS PPA; SEC HTML / issuer PDF physical p.46 printed p.45",
+          "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+          "human_evidence_approved": false,
+          "strong_inference_approved": false,
+          "governed_evidence": false,
+          "h1_admitted": false,
+          "predictive_validity_established": false,
+          "reported_event_period": "2026-04",
+          "event_date": null,
+          "date_precision": "month",
+          "source_period_end": "2026-06-30",
+          "observation_basis": "REPORTED_CONTRACT_DELIVERY_MODEL_TRANSITION",
+          "actual_power_consumption_mwh": null
+        },
+        {
+          "id": "OBS-PI-AWS-PPA-CAP",
+          "claim_ko": "1920MW는 up-to 최종 계약 전력 기준이고 2042는 보고된 계약 기간 끝이다.",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-REUSED-MAP03"
+          ],
+          "locator": "2025 exhibit expanded PPA paragraph; 2026Q2 glossary AWS PPA",
+          "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+          "human_evidence_approved": false,
+          "strong_inference_approved": false,
+          "governed_evidence": false,
+          "h1_admitted": false,
+          "predictive_validity_established": false,
+          "value": 1920,
+          "unit": "MW",
+          "basis": "UP_TO_FINAL_CONTRACT_POWER_QUANTITY_NOT_ACTUAL_LOAD",
+          "actual_it_power_mw": null
+        }
+      ],
+      "free_collection": [
+        {
+          "id": "COLLECT-PI-SITE-STAGES",
+          "purpose_ko": "계획·신청·약정·공사·통전·실사용을 site별로 분리",
+          "free_collection_urls": [
+            "https://ir.talenenergy.com/financial-information/sec-filings",
+            "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000066/tln-20260630.htm",
+            "https://www.ferc.gov/media/e-7-el26-67-000"
+          ],
+          "api_key_required": false,
+          "access_status": "공식 웹 전문 검토; SEC shell403 및 IR timeout. site별 관측값 미수집",
+          "api_execution_status": "NOT_EXECUTED_UNLESS_CAPTURE_SPECIFIES_HTTP_DOCUMENT_GET",
+          "cadence_plan": "사건별; 분기 공시 재검토",
+          "collector_running": false,
+          "join_fields": [
+            "site/project ID",
+            "buyer/seller/owner/operator",
+            "contract type and ramp",
+            "PJM service request/docket",
+            "source period/publication/retrieval date"
+          ],
+          "limitations_ko": [
+            "PPA MW와 실제 MWh, 발전소 좌표와 DC 좌표, generation queue와 load application을 혼합하지 않는다.",
+            "지자체 허가 원문·계측 소비는 별도 미수집이며 무료 API 존재도 확인하지 않았다."
+          ]
+        }
+      ],
+      "customer_learning_questions_ko": [
+        "고객의 장비 도입 희망일과 확정된 수전·냉각 준비일 중 무엇이 납기의 제약인가?",
+        "하이닉스가 직접 판매하는 상대와 최종 DC 운영자의 요구를 어떤 OEM·플랫폼 경로로 연결할 것인가?"
+      ],
+      "source_ids": [
+        "SRC-ROUTE-REUSED-MAP03",
+        "SRC-ROUTE-FERC-PJM-SHOWCAUSE26"
+      ],
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "id": "ROUTE-PI-02",
+      "title_ko": "전력망 규제와 기존 계약을 다른 단계로 읽기",
+      "nodes": [
+        {
+          "id": "ferc",
+          "label_ko": "FERC",
+          "kind": "규제기관"
+        },
+        {
+          "id": "pjm",
+          "label_ko": "PJM",
+          "kind": "계통운영기관"
+        },
+        {
+          "id": "transmission-owners",
+          "label_ko": "관할 송전 소유자",
+          "kind": "기업집합"
+        },
+        {
+          "id": "show-cause",
+          "label_ko": "EL26-67-000 show-cause 명령",
+          "kind": "정책문서"
+        },
+        {
+          "id": "tariff-process",
+          "label_ko": "응답·공개 논의·후속 요금규정 절차",
+          "kind": "규제절차"
+        },
+        {
+          "id": "existing-agreements",
+          "label_ko": "기존 또는 마무리 중인 계약",
+          "kind": "계약범위"
+        },
+        {
+          "id": "state-retail",
+          "label_ko": "주정부 소매전력·resource planning 권한",
+          "kind": "관할범위"
+        },
+        {
+          "id": "load-service",
+          "label_ko": "대규모 부하 송전서비스 조건",
+          "kind": "서비스요건"
+        }
+      ],
+      "edges": [
+        {
+          "from": "ferc",
+          "to": "show-cause",
+          "type": "ISSUED_ORDER",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-FERC-PJM-SHOWCAUSE26"
+          ],
+          "claim_ko": "FERC의 2026-06-18 본문 명령을 캡처했다."
+        },
+        {
+          "from": "show-cause",
+          "to": "pjm",
+          "type": "DIRECTS_SHOW_CAUSE_RESPONSE",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-FERC-PJM-SHOWCAUSE26"
+          ],
+          "claim_ko": "PJM 및 기재된 관할 송전 소유자에게 답변·대안 설명을 지시한다."
+        },
+        {
+          "from": "show-cause",
+          "to": "tariff-process",
+          "type": "INITIATES_PROCEEDING",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-FERC-PJM-SHOWCAUSE26"
+          ],
+          "claim_ko": "명령은 후속 tariff 절차를 시작한다; 모든 제안이 확정되었다고 해석하지 않는다."
+        },
+        {
+          "from": "show-cause",
+          "to": "existing-agreements",
+          "type": "REQUIRES_TRANSITION_CONSIDERATION",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-FERC-PJM-SHOWCAUSE26"
+          ],
+          "claim_ko": "기존 commercial arrangements의 혼란을 최소화할 이행 기간을 고려하도록 한다."
+        },
+        {
+          "from": "tariff-process",
+          "to": "load-service",
+          "type": "MAY_CHANGE_PROSPECTIVE_TERMS",
+          "support_kind": "HYPOTHESIS_NOT_VALIDATED",
+          "source_ids": [
+            "SRC-ROUTE-FERC-PJM-SHOWCAUSE26"
+          ],
+          "claim_ko": "후속 결정·효력·각 서비스 적용이 확인되어야 한다."
+        },
+        {
+          "from": "state-retail",
+          "to": "load-service",
+          "type": "SEPARATE_JURISDICTION",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-FERC-PJM-SHOWCAUSE26"
+          ],
+          "claim_ko": "명령은 주정부 소매서비스 및 resource planning 권한과 구분한다."
+        }
+      ],
+      "mechanism_ko": "규제기관 명령·계통 운영 규정·개별 계약·시설 허가의 범위를 각각 추적한다.",
+      "propagation_hypothesis_ko": "확정되어 해당 고객에 적용되는 새 서비스·비용·유연성 조건이 있다면 입지 선택과 설치 일정의 조건을 바꿀 수 있다.",
+      "conditions_ko": [
+        "후속 원문·시행일·계약 경과조치·서비스 종류가 확인되어야 한다.",
+        "기업별 전력 계약과 해당 regulated entity·site를 연결한다."
+      ],
+      "alternative_explanations_ko": [
+        "기존 계약 경과조치·비관할 utility·다른 서비스 구조로 적용 범위가 달라질 수 있다."
+      ],
+      "falsifiers_ko": [
+        "해당 site가 새 규정 적용 대상이 아니거나 계약 이행 일정에 영향을 받지 않는다."
+      ],
+      "unknowns_ko": [
+        "명령 이후 모든 response/compliance·재심·법원 진행",
+        "기존 AWS 계약의 상세 경과조치",
+        "site별 허가·서비스 승인 현황"
+      ],
+      "observations": [
+        {
+          "id": "OBS-PI-FERC-PROCESS",
+          "claim_ko": "June 18 명령의 절차 지시는 확인했다. 기준일 현재 최종 적용 tariff를 전수 갱신하지 않았다.",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-FERC-PJM-SHOWCAUSE26"
+          ],
+          "locator": "majority order physical pp.7–8,69–71 / ordering paragraphs A–G",
+          "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+          "human_evidence_approved": false,
+          "strong_inference_approved": false,
+          "governed_evidence": false,
+          "h1_admitted": false,
+          "predictive_validity_established": false,
+          "order_issued_date": "2026-06-18",
+          "current_effect": null,
+          "observation_basis": "ORDER_TEXT_PROCEDURAL_DIRECTIVES"
+        }
+      ],
+      "free_collection": [
+        {
+          "id": "COLLECT-PI-FERC-DOCKET",
+          "purpose_ko": "규제 발표→명령→제출→효력→개별 적용의 변경 확인",
+          "free_collection_urls": [
+            "https://www.ferc.gov/media/e-7-el26-67-000",
+            "https://elibrary.ferc.gov/eLibrary/search"
+          ],
+          "api_key_required": false,
+          "access_status": "원문 PDF GET200/hash 검증; eLibrary 자동/API 호출 미실행",
+          "api_execution_status": "NOT_EXECUTED_UNLESS_CAPTURE_SPECIFIES_HTTP_DOCUMENT_GET",
+          "cadence_plan": "사건별, 월별 후속 검토 계획",
+          "collector_running": false,
+          "join_fields": [
+            "docket",
+            "order citation",
+            "regulated entities",
+            "issue/effective dates",
+            "service type",
+            "site/contract"
+          ],
+          "limitations_ko": [
+            "eLibrary 자동 접근·공개 검색 조건은 TO_VERIFY. 문서가 없는 날을 승인0으로 기록하지 않는다.",
+            "order 안의 타 사건 인용·위원 의견을 독립 원문 수집이나 binding 본문으로 취급하지 않는다."
+          ]
+        }
+      ],
+      "customer_learning_questions_ko": [
+        "고객이 약정한 firm/non-firm 전력 서비스와 중단 허용 조건을 서버 사용 방식에 맞춰 확인했는가?"
+      ],
+      "source_ids": [
+        "SRC-ROUTE-FERC-PJM-SHOWCAUSE26"
+      ],
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "id": "ROUTE-PI-03",
+      "title_ko": "수출 허가 경로에서 장비·fab 공급 준비까지",
+      "nodes": [
+        {
+          "id": "bis",
+          "label_ko": "BIS 수출 규제",
+          "kind": "규제기관"
+        },
+        {
+          "id": "veu-rule",
+          "label_ko": "2025 VEU 항목 삭제 규칙",
+          "kind": "정책문서"
+        },
+        {
+          "id": "exporter",
+          "label_ko": "EAR 대상 품목 수출·재수출자",
+          "kind": "경제주체"
+        },
+        {
+          "id": "item-classification",
+          "label_ko": "품목·기술·end-use·목적지 검토",
+          "kind": "조건"
+        },
+        {
+          "id": "fab-license",
+          "label_ko": "특정 fab의 허가·기간·조건",
+          "kind": "승인범위"
+        },
+        {
+          "id": "aes",
+          "label_ko": "C79/H번호 신고",
+          "kind": "절차"
+        },
+        {
+          "id": "china-fabs",
+          "label_ko": "지정 삼성·하이닉스·Intel 중국 법인/시설",
+          "kind": "기업시설집합"
+        },
+        {
+          "id": "equipment-readiness",
+          "label_ko": "장비 반입·유지보수·공정전환 준비",
+          "kind": "공급조건"
+        },
+        {
+          "id": "memory-supply",
+          "label_ko": "고객용 메모리 공급·인수 일정",
+          "kind": "상품공급"
+        },
+        {
+          "id": "trade-investment",
+          "label_ko": "무역·투자 협정",
+          "kind": "협정유형"
+        },
+        {
+          "id": "resource-controls",
+          "label_ko": "갈륨·희토류 등 소재별 수출 규칙",
+          "kind": "정책검토공백"
+        }
+      ],
+      "edges": [
+        {
+          "from": "bis",
+          "to": "veu-rule",
+          "type": "ISSUED_FINAL_RULE",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-BIS-VEU-REVOCATION25"
+          ],
+          "claim_ko": "지정 VEU 항목 삭제와 문서 시행일을 확인했다."
+        },
+        {
+          "from": "veu-rule",
+          "to": "china-fabs",
+          "type": "REMOVES_GENERAL_AUTHORIZATION_ENTRIES",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-BIS-VEU-REVOCATION25"
+          ],
+          "claim_ko": "세 법인 항목 삭제로 제한한다; 전 중국 fab 생산 중단으로 일반화하지 않는다."
+        },
+        {
+          "from": "exporter",
+          "to": "item-classification",
+          "type": "REQUIRES_TRANSACTION_SPECIFIC_REVIEW",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-BIS-VEU-REVOCATION25"
+          ],
+          "claim_ko": "EAR 적용 품목·법인·시설·거래 조건의 검토 경로를 분리한다."
+        },
+        {
+          "from": "fab-license",
+          "to": "aes",
+          "type": "CONDITIONAL_REPORTING_ROUTE",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-CENSUS-C79-26"
+          ],
+          "claim_ko": "허가가 부여된 경우 H번호와 C79 신고 안내를 검토한다."
+        },
+        {
+          "from": "fab-license",
+          "to": "equipment-readiness",
+          "type": "MAY_AFFECT_DELIVERY_TIMING",
+          "support_kind": "HYPOTHESIS_NOT_VALIDATED",
+          "source_ids": [
+            "SRC-ROUTE-BIS-VEU-REVOCATION25",
+            "SRC-ROUTE-CENSUS-C79-26"
+          ],
+          "claim_ko": "허가의 실제 품목·기간·조건과 장비 납기가 확인되어야 한다."
+        },
+        {
+          "from": "equipment-readiness",
+          "to": "memory-supply",
+          "type": "MAY_CHANGE_SUPPLY_READINESS",
+          "support_kind": "HYPOTHESIS_NOT_VALIDATED",
+          "source_ids": [],
+          "claim_ko": "장비 반입과 공정 준비가 해당 제품 인수 일정의 제약인 경우만 연결한다."
+        },
+        {
+          "from": "trade-investment",
+          "to": "fab-license",
+          "type": "NOT_AN_EQUIVALENT_AUTHORIZATION",
+          "support_kind": "ANALYTICAL_CLASSIFICATION_NOT_CASE_EVIDENCE",
+          "source_ids": [],
+          "claim_ko": "관세·시장접근·투자 협정이 개별 수출 허가를 자동 대체한다고 가정하지 않는다."
+        },
+        {
+          "from": "resource-controls",
+          "to": "equipment-readiness",
+          "type": "POSSIBLE_ITEM_SPECIFIC_INPUT_CONSTRAINT",
+          "support_kind": "KNOWN_UNKNOWN",
+          "source_ids": [],
+          "claim_ko": "갈륨·희토류의 형태·용도·국가별 현재 규칙은 이번 원문 범위에서 미검토했다."
+        }
+      ],
+      "mechanism_ko": "일반 승인 변경과 별도 허가·신고·물리적 반입은 단계가 다르며 장비와 소재, 장비 판매자와 fab 구매자의 조건을 각각 조사한다.",
+      "propagation_hypothesis_ko": "특정 장비·기술의 허가 지연이 유지보수 또는 필요한 공정 전환을 제약하면 해당 fab 제품 공급 준비 일정에 영향을 줄 수 있다.",
+      "conditions_ko": [
+        "ECCN/EAR 적용·법인·실제 site·end-use·허가 범위가 필요하다.",
+        "유지보수·기존 생산·증설·업그레이드를 구분하고 회사의 이행 공시와 연결한다."
+      ],
+      "alternative_explanations_ko": [
+        "조건부 별도 허가·비통제 품목·다른 장비 또는 다른 fab의 대체 공급 가능성",
+        "기존 장비·재고·공정 성숙도로 당장 생산 영향이 없을 수 있음"
+      ],
+      "falsifiers_ko": [
+        "필요 장비가 유효 허가로 일정대로 반입되거나 해당 제품 공급 준비가 다른 경로로 유지된다."
+      ],
+      "unknowns_ko": [
+        "삼성·하이닉스 각 fab의 현행 허가 품목·기간·증설 제한",
+        "장비 출하·설치·인수 실제 사건",
+        "후속 EAR 개정과 한국·네덜란드·일본의 다른 관할 규칙",
+        "갈륨/희토류 품목별 현행 수출통제 및 예외·licence",
+        "실제 생산량·수율·고객 인수에 미친 효과"
+      ],
+      "observations": [
+        {
+          "id": "OBS-PI-BIS-EFFECTIVE-DATE",
+          "claim_ko": "선택 final rule의 공표일과 명시 시행일을 구분한다.",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-BIS-VEU-REVOCATION25"
+          ],
+          "locator": "FR Doc 2025-16735 physical p.1 DATES; p.2 amendment",
+          "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+          "human_evidence_approved": false,
+          "strong_inference_approved": false,
+          "governed_evidence": false,
+          "h1_admitted": false,
+          "predictive_validity_established": false,
+          "publication_date": "2025-09-02",
+          "effective_date_displayed": "2025-12-31",
+          "current_effect": null,
+          "basis": "HISTORICAL_RULE_TEXT"
+        },
+        {
+          "id": "OBS-PI-C79-CONDITIONAL",
+          "claim_ko": "2026-01-05 공식 안내는 허가 부여 시의 H번호/C79 신고 경로를 설명한다.",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-CENSUS-C79-26"
+          ],
+          "locator": "article conditional authorization paragraph and AES reporting bullets",
+          "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+          "human_evidence_approved": false,
+          "strong_inference_approved": false,
+          "governed_evidence": false,
+          "h1_admitted": false,
+          "predictive_validity_established": false,
+          "publication_date": "2026-01-05",
+          "company_specific_license_observed": false,
+          "basis": "OPERATIONAL_NOTICE_NOT_COMPANY_LICENSE"
+        }
+      ],
+      "free_collection": [
+        {
+          "id": "COLLECT-PI-EXPORT-AUTH",
+          "purpose_ko": "발표·규칙·시행일·허가·실제 배송을 구분",
+          "free_collection_urls": [
+            "https://www.govinfo.gov/content/pkg/FR-2025-09-02/pdf/2025-16735.pdf",
+            "https://www.federalregister.gov/documents/2025/09/02/2025-16735/revocation-of-validated-end-user-authorizations-in-the-peoples-republic-of-china",
+            "https://content.govdelivery.com/accounts/USCENSUS/bulletins/4008e2b",
+            "https://www.federalregister.gov/developers/documentation/api/v1"
+          ],
+          "api_key_required": false,
+          "access_status": "GPO PDF/Census HTML GET200; FederalRegister API 문서 무키 안내 전문 확인, 실제 API endpoint 미호출",
+          "api_execution_status": "NOT_EXECUTED_UNLESS_CAPTURE_SPECIFIES_HTTP_DOCUMENT_GET",
+          "cadence_plan": "사건별 규칙 수집, 월별 후속 검토 계획",
+          "collector_running": false,
+          "join_fields": [
+            "jurisdiction",
+            "FR document/docket",
+            "publish/effective dates",
+            "entity/site",
+            "ECCN/item form/end-use",
+            "license scope",
+            "shipment event"
+          ],
+          "limitations_ko": [
+            "공개 notice로 비공개 licence 조건을 복원할 수 없다.",
+            "FederalRegister XML은 검색용; official GPO PDF와 구분한다. API doc는 수집 계획 안내 링크이며 신규 원문 receipt에 포함하지 않았다."
+          ]
+        },
+        {
+          "id": "COLLECT-PI-TRADE-MATERIALS",
+          "purpose_ko": "법적 수출 가능성과 실제 품목 이동의 차이 확인",
+          "free_collection_urls": [
+            "https://uncomtrade.org/docs/un-comtrade-api/",
+            "https://www.usitc.gov/applications/dataweb/api/dataweb_query_api.html"
+          ],
+          "api_key_required": null,
+          "access_status": "기존 collection_plan/api_issuance_plan만 재사용; 신규 인증 호출 미실행",
+          "api_execution_status": "NOT_EXECUTED_UNLESS_CAPTURE_SPECIFIES_HTTP_DOCUMENT_GET",
+          "cadence_plan": "월간/연간 원자료 공표 후",
+          "collector_running": false,
+          "join_fields": [
+            "reporter/partner",
+            "HS/HTS edition/code",
+            "commodity form",
+            "flow",
+            "quantity unit",
+            "period"
+          ],
+          "limitations_ko": [
+            "국가 교역은 생산량·특정 fab 반입·허가 결과가 아니다.",
+            "갈륨 금속과 화합물·웨이퍼를 무검증 합산하지 않는다. 현재 품목별 법규는 별도 검토가 필요하다."
+          ]
+        }
+      ],
+      "customer_learning_questions_ko": [
+        "하이닉스 영업은 공급 예정 fab의 어떤 준비 조건을 고객 납기 설명에 넣을 수 있고, 무엇을 아직 확인해야 하는가?"
+      ],
+      "source_ids": [
+        "SRC-ROUTE-BIS-VEU-REVOCATION25",
+        "SRC-ROUTE-CENSUS-C79-26"
+      ],
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    },
+    {
+      "id": "ROUTE-PI-04",
+      "title_ko": "국가 간 에너지 협력에서 조건부 수입과 가동까지",
+      "nodes": [
+        {
+          "id": "ema",
+          "label_ko": "싱가포르 EMA",
+          "kind": "규제기관"
+        },
+        {
+          "id": "st",
+          "label_ko": "말레이시아 Energy Commission/ST",
+          "kind": "규제기관"
+        },
+        {
+          "id": "mou",
+          "label_ko": "2020 EMA–ST 협력 MOU",
+          "kind": "국가간규제기관협정"
+        },
+        {
+          "id": "reg-cooperation",
+          "label_ko": "규제·기술 협력 및 지식 공유",
+          "kind": "협력범위"
+        },
+        {
+          "id": "jda",
+          "label_ko": "SGEI·SP Group·TNB JDA",
+          "kind": "기업간협정"
+        },
+        {
+          "id": "sgei",
+          "label_ko": "Singapore Energy Interconnections",
+          "kind": "기업"
+        },
+        {
+          "id": "sp",
+          "label_ko": "SP Group",
+          "kind": "기업"
+        },
+        {
+          "id": "tnb",
+          "label_ko": "Tenaga Nasional Berhad",
+          "kind": "기업"
+        },
+        {
+          "id": "my",
+          "label_ko": "Peninsular Malaysia/Johor",
+          "kind": "지역"
+        },
+        {
+          "id": "sg",
+          "label_ko": "Singapore",
+          "kind": "지역"
+        },
+        {
+          "id": "importers",
+          "label_ko": "Sembcorp Utilities·Southern Solar Alliance",
+          "kind": "기업집합"
+        },
+        {
+          "id": "conditional",
+          "label_ko": "2026 EMA 조건부 승인",
+          "kind": "승인단계"
+        },
+        {
+          "id": "solar-bess",
+          "label_ko": "Johor solar·BESS 공급 프로젝트",
+          "kind": "발전저장프로젝트"
+        },
+        {
+          "id": "development",
+          "label_ko": "양국 승인·PPA·financing·financial close",
+          "kind": "개발조건"
+        },
+        {
+          "id": "interconnector",
+          "label_ko": "두 번째 연계선 타당성·물리 연계",
+          "kind": "송전프로젝트"
+        },
+        {
+          "id": "flow",
+          "label_ko": "실제 국경 전력 거래·수입 MWh",
+          "kind": "사용관측"
+        },
+        {
+          "id": "dc-customer",
+          "label_ko": "아직 특정되지 않은 DC 전력 구매자",
+          "kind": "고객후보"
+        }
+      ],
+      "edges": [
+        {
+          "from": "ema",
+          "to": "mou",
+          "type": "SIGNATORY_ROLE",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-EMA-ST-MOU20"
+          ],
+          "claim_ko": "EMA와 ST가 서명했다고 공식 발표했다."
+        },
+        {
+          "from": "st",
+          "to": "mou",
+          "type": "SIGNATORY_ROLE",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-EMA-ST-MOU20"
+          ],
+          "claim_ko": "말레이시아 국가 에너지 규제기관 ST를 기업 TNB와 구분한다."
+        },
+        {
+          "from": "mou",
+          "to": "reg-cooperation",
+          "type": "COOPERATION_FRAMEWORK",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-EMA-ST-MOU20"
+          ],
+          "claim_ko": "규제·기술 협력과 지식 공유 범위만 연결한다. 2026 개별 프로젝트 개발 조건과 직접 연결하지 않는다."
+        },
+        {
+          "from": "sgei",
+          "to": "jda",
+          "type": "SIGNATORY_ROLE",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26"
+          ],
+          "claim_ko": "공식 발표가 소개한 JDA 참여 기업이다."
+        },
+        {
+          "from": "sp",
+          "to": "jda",
+          "type": "SIGNATORY_ROLE",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26"
+          ],
+          "claim_ko": "공식 발표가 소개한 JDA 참여 기업이다."
+        },
+        {
+          "from": "tnb",
+          "to": "jda",
+          "type": "SIGNATORY_ROLE",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26"
+          ],
+          "claim_ko": "공식 발표가 소개한 JDA 참여 기업이다."
+        },
+        {
+          "from": "jda",
+          "to": "interconnector",
+          "type": "COMMITS_TO_FEASIBILITY_STUDY",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26"
+          ],
+          "claim_ko": "두 번째 연계선의 상세 타당성 조사 목적; 건설 확정으로 표시하지 않는다."
+        },
+        {
+          "from": "ema",
+          "to": "conditional",
+          "type": "ANNOUNCED_CONDITIONAL_APPROVAL",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26"
+          ],
+          "claim_ko": "두 importer의 제안 수입 프로젝트에 조건부 승인을 발표했다."
+        },
+        {
+          "from": "conditional",
+          "to": "importers",
+          "type": "PROJECT_SPECIFIC_APPROVAL",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26"
+          ],
+          "claim_ko": "Sembcorp Utilities와 Southern Solar Alliance를 대상으로 한다."
+        },
+        {
+          "from": "solar-bess",
+          "to": "importers",
+          "type": "PROPOSED_GENERATION_SOURCE",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26"
+          ],
+          "claim_ko": "Johor solar·BESS 공급원이라는 제안 범위다."
+        },
+        {
+          "from": "importers",
+          "to": "development",
+          "type": "REQUIRES_DEVELOPMENT_CONDITIONS",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26"
+          ],
+          "claim_ko": "양국 승인·PPA·금융·개발 milestone 충족이 남아 있다."
+        },
+        {
+          "from": "development",
+          "to": "flow",
+          "type": "MAY_ENABLE_COMMERCIAL_IMPORT",
+          "support_kind": "HYPOTHESIS_NOT_VALIDATED",
+          "source_ids": [
+            "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26"
+          ],
+          "claim_ko": "허가·금융·시설·실제 국경 운영 확인 후에만 수입 관측으로 전환한다."
+        },
+        {
+          "from": "flow",
+          "to": "dc-customer",
+          "type": "POTENTIAL_GRID_SUPPLY_CONTEXT",
+          "support_kind": "HYPOTHESIS_NOT_VALIDATED",
+          "source_ids": [],
+          "claim_ko": "발표에 DC buyer가 특정되어 있지 않아 메모리 수요 연결은 가설로 남긴다."
+        }
+      ],
+      "mechanism_ko": "국가 간 규제기관 협력 MOU, 기업 간 조사 JDA, EMA 프로젝트 승인, 전력 PPA, 실제 수입의 의미와 주체를 분리한다.",
+      "propagation_hypothesis_ko": "실제 개발·계통 연계·상업 수입이 이루어지고 특정 DC 고객의 전력 조달과 연결되면 해당 입지의 시스템 설치 조건을 보완할 수 있다.",
+      "conditions_ko": [
+        "양국 승인·PPA·금융·개발 milestone과 상업 가동을 각각 확인한다.",
+        "제안 수입 용량과 시간별 실제 flow·사용자 계약을 구분한다.",
+        "특정 DC 계약·수전·IT 시스템 채택 경로가 확인되어야 메모리 상품 요구에 연결한다."
+      ],
+      "alternative_explanations_ko": [
+        "수입 전력은 DC 외 수요·탈탄소 목적에도 쓰일 수 있다.",
+        "조건 미충족·공사 지연·기술 조건·다른 수입 프로젝트로 일정과 사용자가 달라질 수 있다."
+      ],
+      "falsifiers_ko": [
+        "승인 프로젝트가 financial close·가동으로 이어지지 않거나 대상 DC의 전력 조달이 다른 공급원으로 이루어진다."
+      ],
+      "unknowns_ko": [
+        "MOU 현재 효력·법적 구속력",
+        "JDA 전문·서명일·건설 결정",
+        "조건부 승인증/최종 import licence·PPA buyer/price",
+        "연계선·발전·저장 시설 완공·상업 가동",
+        "해당 경로 실제 flow 및 DC 사용량"
+      ],
+      "observations": [
+        {
+          "id": "OBS-PI-MOU-SIGNING",
+          "claim_ko": "2020-10-28 EMA와 ST의 국가 간 규제기관 협력 MOU 체결 발표를 확인했다.",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-EMA-ST-MOU20"
+          ],
+          "locator": "PDF p.1 paragraphs 1–2",
+          "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+          "human_evidence_approved": false,
+          "strong_inference_approved": false,
+          "governed_evidence": false,
+          "h1_admitted": false,
+          "predictive_validity_established": false,
+          "announcement_date": "2020-10-28",
+          "signature_date_reported": "2020-10-28",
+          "binding_status": null,
+          "current_effect": null
+        },
+        {
+          "id": "OBS-PI-EMA-CONDITIONAL",
+          "claim_ko": "두 프로젝트의 900MW는 제안 수입 용량 합계이며 around 2029는 목표 상업운영 시점이다.",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26"
+          ],
+          "locator": "PDF p.1 paragraphs 1–2",
+          "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+          "human_evidence_approved": false,
+          "strong_inference_approved": false,
+          "governed_evidence": false,
+          "h1_admitted": false,
+          "predictive_validity_established": false,
+          "announcement_date": "2026-08-07",
+          "value": 900,
+          "unit": "MW",
+          "basis": "PROPOSED_IMPORT_CAPACITY_WITH_CONDITIONAL_APPROVAL",
+          "project_components": [
+            {
+              "importer": "Sembcorp Utilities Pte Ltd",
+              "proposed_capacity_mw": 300
+            },
+            {
+              "importer": "Southern Solar Alliance Pte Ltd",
+              "proposed_capacity_mw": 600
+            }
+          ],
+          "target_commercial_operations_year": 2029,
+          "target_date_qualifier": "around",
+          "actual_import_mwh": null
+        },
+        {
+          "id": "OBS-PI-JDA-STUDY",
+          "claim_ko": "별도 JDA는 up-to 2GW 두 번째 연계선의 상세 타당성 조사 목적이다; 900MW와 합산하지 않는다.",
+          "support_kind": "SOURCE_BACKED_CANDIDATE",
+          "source_ids": [
+            "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26"
+          ],
+          "locator": "PDF p.1 paragraph 3",
+          "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+          "human_evidence_approved": false,
+          "strong_inference_approved": false,
+          "governed_evidence": false,
+          "h1_admitted": false,
+          "predictive_validity_established": false,
+          "announcement_reference_date": "2026-08-07",
+          "signature_date": null,
+          "value": 2,
+          "unit": "GW",
+          "basis": "UP_TO_INTERCONNECTION_FEASIBILITY_STUDY_SCOPE_NOT_COMMISSIONED_CAPACITY"
+        }
+      ],
+      "free_collection": [
+        {
+          "id": "COLLECT-PI-EMA-MILESTONES",
+          "purpose_ko": "협정·승인·조건 이행·가동·실제 수입 상태의 증거를 별도로 수집",
+          "free_collection_urls": [
+            "https://www.ema.gov.sg/news-events/news/media-releases/2026/ema-grants-conditional-approvals-900mw-electricity-trade-between-peninsular-malaysia-singapore",
+            "https://www.ema.gov.sg/news-events/news/media-releases/2020/singapore-and-malaysia-to-strengthen-bilateral-energy-cooperation",
+            "https://www.st.gov.my/"
+          ],
+          "api_key_required": false,
+          "access_status": "EMA 공식 연결 PDF GET200/hash 검증; 2026 HTML WAF shell은 실패. ST 사이트 신규 API 검증은 미실행",
+          "api_execution_status": "NOT_EXECUTED_UNLESS_CAPTURE_SPECIFIES_HTTP_DOCUMENT_GET",
+          "cadence_plan": "사건별, 월별 milestone 재검토 계획",
+          "collector_running": false,
+          "join_fields": [
+            "project/importer",
+            "origin/destination",
+            "instrument type",
+            "signatories/approver",
+            "announcement/signature/effective dates",
+            "capacity basis",
+            "commercial date",
+            "flow period"
+          ],
+          "limitations_ko": [
+            "이번 packet에서 전력 flow API·현행 licence registry를 검증하지 않았다.",
+            "무료 열람과 재배포·자동수집 권리는 별도. 특정 DC 구매자는 source에 없으므로 생성하지 않는다."
+          ]
+        }
+      ],
+      "customer_learning_questions_ko": [
+        "전력 공급 계획의 실제 구매자·사업 단계가 어떤 DC 입지와 시스템 도입 일정에 연결되는가?"
+      ],
+      "source_ids": [
+        "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26",
+        "SRC-ROUTE-EMA-ST-MOU20"
+      ],
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "strong_inference_approved": false,
+      "governed_evidence": false,
+      "h1_admitted": false,
+      "predictive_validity_established": false
+    }
+  ],
+  "acquisition_failures": [
+    {
+      "source_id": "SRC-ROUTE-EMA-MY-SG-CONDITIONAL26",
+      "original_url": "https://www.ema.gov.sg/news-events/news/media-releases/2026/ema-grants-conditional-approvals-900mw-electricity-trade-between-peninsular-malaysia-singapore",
+      "retrieved_at_utc": "2026-10-04T15:56:07.280680+00:00",
+      "status": "HTTP_200_NON_CONTENT_WAF_CHALLENGE",
+      "http_status": 200,
+      "bytes": 212,
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
+      "error_type": "ExpectedContentAbsent",
+      "error_message": "212-byte Incapsula script shell does not contain the media release; retained as failed content acquisition.",
+      "failure_is_economic_observation": false
+    },
+    {
+      "source_id": "SRC-ROUTE-TALEN-Q226",
+      "original_url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000066/tln-20260630.htm",
+      "retrieved_at_utc": "2026-10-04T15:56:07.711975+00:00",
+      "status": "FAILED",
+      "http_status": 403,
+      "error_type": "HTTPError",
+      "error_message": "HTTP Error 403: Forbidden",
+      "failure_is_economic_observation": false
+    },
+    {
+      "source_id": "SRC-ROUTE-TALEN-Q226",
+      "original_url": "https://ir.talenenergy.com/static-files/649bfa16-a54e-4997-914b-a8a5d2e00900",
+      "retrieved_at_utc": "2026-10-04T15:59:40.756407+00:00",
+      "status": "FAILED",
+      "http_status": null,
+      "error_type": "TimeoutError",
+      "error_message": "The read operation timed out",
+      "failure_is_economic_observation": false
+    },
+    {
+      "source_id": "SRC-ROUTE-TALEN-Q226",
+      "original_url": "https://ir.talenenergy.com/node/9536/html",
+      "retrieved_at_utc": "2026-10-04T16:02:31.643319+00:00",
+      "status": "FAILED",
+      "http_status": null,
+      "error_type": "TimeoutError",
+      "error_message": "The read operation timed out",
+      "failure_is_economic_observation": false
+    }
+  ],
+  "related_existing_docs": [
+    "docs/research/supply_chain/semiconductor_macro_structure.md",
+    "docs/research/supply_chain/collection_plan.md"
+  ],
+  "instrument_type_distinctions": [
+    {
+      "type": "TRADE_AGREEMENT",
+      "purpose_ko": "관세·시장 접근·상품 교역 협정",
+      "specific_agreement_verified_this_packet": false
+    },
+    {
+      "type": "INVESTMENT_AGREEMENT",
+      "purpose_ko": "투자·보호·사업 조건의 협정",
+      "specific_agreement_verified_this_packet": false
+    },
+    {
+      "type": "EXPORT_AUTHORIZATION_RULE_OR_LICENSE",
+      "purpose_ko": "관할 품목·법인·시설·end-use·거래의 수출 승인 규칙/허가",
+      "examples": [
+        "PI-BIS-VEU-REMOVAL",
+        "PI-C79-NOTICE"
+      ]
+    },
+    {
+      "type": "PRIVATE_POWER_PURCHASE_AGREEMENT",
+      "purpose_ko": "전력 구매자와 판매자의 상업 계약; 물리 송전·허가와 별개",
+      "examples": [
+        "PI-AWS-TALEN-PPA"
+      ]
+    },
+    {
+      "type": "BILATERAL_ENERGY_REGULATOR_COOPERATION_MOU",
+      "purpose_ko": "국가가 다른 규제기관 간 협력 틀; 현재 효력·binding 여부 미확인",
+      "examples": [
+        "PI-EMA-ST-MOU"
+      ]
+    },
+    {
+      "type": "CORPORATE_JOINT_DEVELOPMENT_FEASIBILITY_AGREEMENT",
+      "purpose_ko": "기업 간 개발·타당성 조사 합의; 정부 간 무역협정·PPA·건설 확정과 별개",
+      "examples": [
+        "PI-MY-SG-INTERCONNECTOR-JDA"
+      ]
+    },
+    {
+      "type": "CONDITIONAL_APPROVAL",
+      "purpose_ko": "개별 제안 프로젝트에 조건을 둔 승인; 최종 licence·실운영과 별개",
+      "examples": [
+        "PI-EMA-CONDITIONAL-IMPORT"
+      ]
+    }
+  ],
+  "guardrails_ko": [
+    "선택한 원문 5개와 기존 후보 map 재사용만 검토했다. 현재 유효 법규·협정·계약의 전수판단이나 법률 자문을 수행한 것이 아니다.",
+    "규제 발표·명령·시행일·허가·PPA·공사·통전·실제 사용을 동일 사건으로 합치지 않는다.",
+    "정책→가동→메모리 구매량·가격·시장점유의 자동 인과나 정량 효과를 계산하지 않는다.",
+    "시설 MW·계약 상한·계통 용량·실제 MWh·IT power를 분리한다.",
+    "수출 장비와 소재 통제, 무역·투자 협정과 에너지 협정을 서로 대체하지 않는다.",
+    "수집 실패를 경제적 활동0 또는 공개자료 부재로 바꾸지 않는다.",
+    "반복 수집·API 인증·예측 시그널 검증은 실행하지 않았다.",
+    "신규 원문 full bytes와 추출문은 public repo 밖에만 보존했다."
+  ],
+  "handoff": {
+    "scope_review": "CONTINUE_WITH_BOUNDED_PATHS",
+    "exactly_one_next_task_ko": "통합자가 이 네 경로를 반도체 상품·고객 경로와 연결하면서 모든 가설 edge와 미확인 현재 효력을 독립 검토한다."
+  },
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "human_evidence_approved": false,
+  "strong_inference_approved": false,
+  "governed_evidence": false,
+  "h1_admitted": false,
+  "predictive_validity_established": false
+}

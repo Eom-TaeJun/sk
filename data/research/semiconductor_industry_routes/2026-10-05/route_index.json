@@ -1,0 +1,345 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-05",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "human_evidence_approved": false,
+  "governed_evidence": false,
+  "h1_admitted": false,
+  "predictive_validity_established": false,
+  "complete_world_map": false,
+  "automatic_collection_implemented": false,
+  "purpose_ko": "하이닉스 직무 학습을 위한 반도체 제품·제조 기능·산업·정책의 관계와 조건부 전파 경로",
+  "baseline_inputs": [
+    {
+      "path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "byte_length": 337455
+    },
+    {
+      "path": "data/research/semiconductor_macro_structure/2026-10-04/sources.json",
+      "sha256": "891e1f83bb78795396b98358a16de63e3bd64a314955e233d50d6867a6fc43c8",
+      "byte_length": 27851
+    },
+    {
+      "path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+      "sha256": "24bf6f4d40c6bb8208d8dc90c65e14fa025f10c7ffb9b0b9079dfb73568d3451",
+      "byte_length": 13569
+    },
+    {
+      "path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+      "sha256": "7d5bf4d6e52e96945b22047f190edb8837c3b80eb3cdbd282ec635912ad43a94",
+      "byte_length": 22659
+    },
+    {
+      "path": "data/research/ai_technology_memory_links/2026-10-04/links.json",
+      "sha256": "6cd95b606851dc66e86c36eb498258093eaf8967bcc24e402de517a4d8ec2b45",
+      "byte_length": 22261
+    },
+    {
+      "path": "data/research/semiconductor_supply_chain/2026-10-03/api_issuance_plan_v3.json",
+      "sha256": "7d4e25761fa99f704660537f9a8e31d0bbef5263fcb4b4264c75156030e19be2",
+      "byte_length": 18408
+    }
+  ],
+  "baseline_structural_check": {
+    "baseline_as_of": "2026-10-03",
+    "counts": {
+      "actors": 69,
+      "relations": 58,
+      "case_paths": 6
+    },
+    "duplicate_actor_ids": 0,
+    "duplicate_relation_ids": 0,
+    "orphan_relation_actor_ids": [],
+    "case_path_relation_refs_valid": true
+  },
+  "packets": [
+    {
+      "path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "sha256": "f6d7e5c8d62aa6d46ed05d87b77fceec2d9eccfb84fd6a4a96aabc1a653db283",
+      "byte_length": 97626
+    },
+    {
+      "path": "data/research/semiconductor_industry_routes/2026-10-05/policy_infrastructure_routes.json",
+      "sha256": "bedba1e6430e59d44501c95d3fd780feffbb8b3df5302a5a5c62b6cd362c1ea8",
+      "byte_length": 77441
+    }
+  ],
+  "routes": [
+    {
+      "id": "PROD-01-HBM-GPU",
+      "title_ko": "HBM → GPU 가속기 → AI 서버/클러스터",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "PROD-02-DDR-CPU",
+      "title_ko": "DDR5 RDIMM → CPU 플랫폼 인증 → 서버 OEM",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "PROD-03-LPDDR-CPU",
+      "title_ko": "LPDDR5X → Grace CPU → AI 서버의 호스트 메모리",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "PROD-04-NAND-ESSD",
+      "title_ko": "NAND 저장소 → eSSD 완제품 → 서버/데이터 플랫폼",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "PROD-05-HBM-ASIC",
+      "title_ko": "HBM3e → AWS Trainium3 AI ASIC → Trn3 서비스",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "PROD-06-FOUNDRY-NODES",
+      "title_ko": "제조서비스 → 선단/성숙 특화공정 → 설계된 반도체",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "PROD-07-EDA-IP-PACK-TEST",
+      "title_ko": "EDA/IP → 패키지 설계 → HBM 결합·OSAT·검사",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "PROD-08-EQUIPMENT-MATERIALS",
+      "title_ko": "노광·웨이퍼·가스·CMP → 공정별 입력 → 반도체 제조",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "PROD-09-GAN-SIC-POWER",
+      "title_ko": "GaN/SiC 전력반도체 → 전력변환 → AI 데이터센터",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "PROD-10-OPTICAL-INTERCONNECT",
+      "title_ko": "광 DSP/레이저 → 네트워크 연결 → AI 클러스터",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "PROD-11-GAN-RF",
+      "title_ko": "GaN-on-SiC RF PA → 5G/Satcom/레이더",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "PROD-12-SPACE-POWER",
+      "title_ko": "방사선 대응 전원 IC → ASIC/FPGA 전원 → 우주 전자장치",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/product_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "ROUTE-PI-01",
+      "title_ko": "데이터센터 계획에서 전력 확보와 실제 가동까지",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/policy_infrastructure_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "ROUTE-PI-02",
+      "title_ko": "전력망 규제와 기존 계약을 다른 단계로 읽기",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/policy_infrastructure_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "ROUTE-PI-03",
+      "title_ko": "수출 허가 경로에서 장비·fab 공급 준비까지",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/policy_infrastructure_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "ROUTE-PI-04",
+      "title_ko": "국가 간 에너지 협력에서 조건부 수입과 가동까지",
+      "packet_path": "data/research/semiconductor_industry_routes/2026-10-05/policy_infrastructure_routes.json",
+      "node_scope": "ROUTE_LOCAL_ID_NOT_GLOBAL_LEGAL_ENTITY_ID",
+      "propagation_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    }
+  ],
+  "route_bridges": [
+    {
+      "id": "BRIDGE-AI-MANUFACTURING",
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-05-HBM-ASIC",
+        "PROD-06-FOUNDRY-NODES",
+        "PROD-07-EDA-IP-PACK-TEST"
+      ],
+      "shared_context_ko": "연산 플랫폼·메모리·고객 설계의 제조·후공정",
+      "required_match_ko": "같은 세대/SKU·다이/패키지·메모리·제조/통합 법인",
+      "known_gap_ko": "Trainium3의 HBM 제조사·현 파운드리·패키지 등 실제 구성은 미확인",
+      "join_status": "CONCEPTUAL_BRIDGE_REQUIRES_SAME_CASE_MATCH",
+      "actual_single_order_confirmed": false,
+      "economic_causality_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "BRIDGE-DC-ENERGY",
+      "route_ids": [
+        "PROD-01-HBM-GPU",
+        "PROD-02-DDR-CPU",
+        "PROD-04-NAND-ESSD",
+        "PROD-05-HBM-ASIC",
+        "PROD-09-GAN-SIC-POWER",
+        "ROUTE-PI-01",
+        "ROUTE-PI-02"
+      ],
+      "shared_context_ko": "서버·저장·전력변환과 DC 설치·전력 조달 조건",
+      "required_match_ko": "같은 DC·고객 법인·하드웨어 구성·전력 계약/접속·기간",
+      "known_gap_ko": "AWS 이름의 일치만으로 모든 Trainium3를 Talen 전력 계약에 배정하지 않는다",
+      "join_status": "CONCEPTUAL_BRIDGE_REQUIRES_SAME_CASE_MATCH",
+      "actual_single_order_confirmed": false,
+      "economic_causality_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "BRIDGE-CROSSBORDER-POWER",
+      "route_ids": [
+        "ROUTE-PI-04",
+        "PROD-01-HBM-GPU",
+        "PROD-09-GAN-SIC-POWER"
+      ],
+      "shared_context_ko": "국가 간 전력 협력과 조건부 개발·수입, 향후 입지 조건",
+      "required_match_ko": "같은 협정/프로젝트·최종 허가·PPA buyer·계통·가동·실제 MWh·기명 DC",
+      "known_gap_ko": "MOU·기업 JDA·개별 승인 사이의 인과와 해당 DC 계약은 미확인",
+      "join_status": "CONCEPTUAL_BRIDGE_REQUIRES_SAME_CASE_MATCH",
+      "actual_single_order_confirmed": false,
+      "economic_causality_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "BRIDGE-POLICY-SUPPLY",
+      "route_ids": [
+        "ROUTE-PI-03",
+        "PROD-06-FOUNDRY-NODES",
+        "PROD-08-EQUIPMENT-MATERIALS",
+        "PROD-02-DDR-CPU"
+      ],
+      "shared_context_ko": "품목별 허가·장비 접근과 fab 공급 준비, 고객 상품 일정",
+      "required_match_ko": "품목/EAR·법인·허가·시설·공정·장비 인수·해당 고객 상품",
+      "known_gap_ko": "규칙만으로 생산량·수율·메모리 고객 납기의 실제 변화를 계산하지 않는다",
+      "join_status": "CONCEPTUAL_BRIDGE_REQUIRES_SAME_CASE_MATCH",
+      "actual_single_order_confirmed": false,
+      "economic_causality_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    },
+    {
+      "id": "BRIDGE-MATERIAL-MISSION",
+      "route_ids": [
+        "PROD-08-EQUIPMENT-MATERIALS",
+        "PROD-09-GAN-SIC-POWER",
+        "PROD-11-GAN-RF",
+        "PROD-12-SPACE-POWER"
+      ],
+      "shared_context_ko": "원소·화합물·형태와 전력/RF/우주 임무별 기능",
+      "required_match_ko": "형태·등급·부품/공정·인증·원산지·기명 시스템",
+      "known_gap_ko": "GaN 전력용·RF용 조달은 다르며 직접 공급·원산지·임무 채택·현행 자원 통제는 공백",
+      "join_status": "CONCEPTUAL_BRIDGE_REQUIRES_SAME_CASE_MATCH",
+      "actual_single_order_confirmed": false,
+      "economic_causality_verified": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false
+    }
+  ],
+  "classification_axes": {
+    "product": "Memory/Logic/Micro/Analog/Discrete/Optoelectronics/Sensors의 분류와 하위 상품·시스템 구성",
+    "business_model_function": "IDM/fabless/foundry/OSAT/EDA/IP/장비·소재/통합·운영; 관계마다 복수 역할 가능",
+    "process": "설계·검증/웨이퍼 제조/패키징·검사/모듈·시스템/설치·운영",
+    "end_market_workload": "AI 업무 태그와 서버/DC·통신·차량·산업·우주 임무 등을 분리",
+    "geography": "법인/본사·공장·최종시설·수출입국·규제 관할을 각각 기록"
+  },
+  "transmission_contract": {
+    "unit": "관계 주체×상품/플랫폼×공정/시설×사건/문서 버전",
+    "edge_directions": "각 edge의 from/to와 type이 방향을 정의; 기존 지도 구매자→공급자 방향을 새 경로에 자동 이식하지 않는다.",
+    "direct_evidence": "제품 용도·회원·공식 발표·계약·절차의 source 범위만 지지; 연결 자체가 실제 현금·구매·인과의 증명은 아니다.",
+    "cross_route_join": "지역·산업·제품 기능의 공통점과 실제 거래의 동일성은 별개; route-local id를 전역 회사 ID로 자동 병합하지 않는다.",
+    "required_join_keys": [
+      "product_SKU_and_generation",
+      "platform_configuration",
+      "named_legal_entity_and_role",
+      "site_or_project",
+      "jurisdiction_and_item_scope",
+      "event_date_and_publication_date",
+      "stage_and_document_version"
+    ],
+    "stop_rules": [
+      "중간 제품·법인·시설 또는 기간 불일치/미확인이면 실제 주문·현금 경로 연결을 중단한다.",
+      "정책 발표/MOU/JDA/조건부 승인과 개별 허가·건설·상업 가동을 다른 사건으로 둔다.",
+      "사양×다른 모집단 출하·승인MW×메모리·ETF 비중×기업 CAPEX를 구매량으로 계산하지 않는다."
+    ],
+    "unobserved_values": {
+      "legal_buyer_when_not_disclosed": null,
+      "customer_order_quantity": null,
+      "customer_price": null,
+      "product_facility_allocation": null,
+      "impact_magnitude": null,
+      "lead_months": null
+    }
+  },
+  "coverage_gaps_ko": [
+    "센서·민항전자·자동차 등의 기명 신규 채택·조달 사례는 미수집",
+    "국가별 갈륨·희토류의 현행 수출통제와 정확한 형태·기업 노출은 미검토",
+    "협정 전문·최신 통합 법령·개별 허가·후속 규제 절차의 전수 점검은 미실행",
+    "기명 제품의 세계 시설·공정별 유효 공급·주문·현재 가동/사용·기간별 자금 집행의 연결은 미완성"
+  ],
+  "next_task_ko": "서버 DDR5–Intel Xeon 6–Dell R770 고객·상품 카드에서 인증·전시·동일 SKU·실제 구매자의 공백을 구분한다."
+}

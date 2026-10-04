@@ -1,0 +1,2445 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-10-05",
+  "title_ko": "제품군·제조기능별 반도체 산업 연쇄 경로",
+  "purpose_ko": "SK hynix 영업/마케팅/상품기획/신제품사업화 배경 지식: 고객·사양·채택·공급의 질문을 제품군별로 구분한다.",
+  "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "governed_evidence": false,
+  "human_evidence_approved": false,
+  "h1_admitted": false,
+  "predictive_signal_validated": false,
+  "classification_axes": {
+    "product_family": [
+      "HBM",
+      "DDR",
+      "LPDDR",
+      "NAND",
+      "eSSD",
+      "CPU",
+      "GPU",
+      "AI ASIC",
+      "아날로그/전원관리",
+      "GaN/SiC 전력",
+      "광/RF"
+    ],
+    "business_model": [
+      "IDM/메모리 판매",
+      "fabless 설계·판매",
+      "파운드리 제조서비스",
+      "OSAT",
+      "EDA/IP"
+    ],
+    "process": [
+      "선단/성숙·특화",
+      "노광/증착/식각",
+      "첨단 패키징",
+      "조립/검사"
+    ],
+    "end_market": [
+      "AI",
+      "데이터센터",
+      "전력",
+      "통신",
+      "항공우주"
+    ]
+  },
+  "interpretation_rules_ko": [
+    "기업은 관계마다 판매자·구매자·설계자·승인자·사용자로 역할이 바뀐다.",
+    "TSMC는 기업/제조서비스, GPU는 제품군, CoWoS는 공정이다. 서로 같은 제품축으로 집계하지 않는다.",
+    "관찰된 공식 제품 설명·기명 사건과 이후 수요 전파 가설을 edge support_kind로 분리한다.",
+    "표준화·인증·전시·계약 발표·실제 출하·현금·가동을 같은 단계로 합치지 않는다.",
+    "무료 웹/PDF 문서를 확인한 것이며 공개 API 제공·연속 수집기를 확인한 것은 아니다.",
+    "기존 snapshot refs는 이번 작업에서 재검증한 2026-10-05 신규 자료로 표현하지 않는다."
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-ROUTE-TSMC-AR25",
+      "title": "TSMC 2025 Annual Report",
+      "public_original_url": "https://investor.tsmc.com/sites/ir/annual-report/2025/2025%20Annual%20Report.E.pdf",
+      "publication_date_displayed": null,
+      "publication_date_note": "2025 annual report; exact publication day not independently verified",
+      "checked_on_local_date": "2026-10-05",
+      "source_role": "organization_published_primary_material",
+      "locator": "PDF physical page 6 (letter), page 12 (technology services)",
+      "original_excerpts": [
+        "On mature nodes",
+        "advanced packaging and 3D chip stacking technologies",
+        "manufacturing services"
+      ],
+      "support_scope_ko": "선단·성숙 특화공정과 적층/패키징 제조서비스의 기능. 2025 보고기간 문맥이며 2026 특정 고객 CAPA·주문을 입증하지 않음.",
+      "raw_original_redistributed": false,
+      "credentials_used": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false,
+      "requested_url": "https://investor.tsmc.com/sites/ir/annual-report/2025/2025%20Annual%20Report.E.pdf",
+      "retrieved_url": "https://investor.tsmc.com/sites/ir/annual-report/2025/2025%20Annual%20Report.E.pdf",
+      "retrieved_at_utc": "2026-10-04T16:00:32.055061+00:00",
+      "response_status": 200,
+      "capture_status": "PUBLIC_HTTP_SUCCESS",
+      "byte_length": 8077530,
+      "sha256": "993a65b9b91c1ebbb9935dad339430f070b02d9dd7ccbd1d5362f4bc1c681d80",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "prior_access_failures": [
+        {
+          "requested_url": "https://investor.tsmc.com/static/annualReports/2025/english/index.html",
+          "retrieved_at_utc": "2026-10-04T15:53:23.519080+00:00",
+          "response_status": 403,
+          "capture_status": "ACCESS_FAILED",
+          "error": "HTTP Error 403: Forbidden",
+          "byte_length": null,
+          "sha256": null
+        }
+      ],
+      "alternate_source_note": "Same issuer, different official document URL; source date and support scope belong to this successful alternate, not to the failed listing.",
+      "local_cache_filename": "SRC-ROUTE-TSMC-AR25-alternate.pdf",
+      "reporting_period": "2025",
+      "pdf_physical_page_count": 98,
+      "original_excerpts_verified_in_downloaded_text": true,
+      "quoted_english_word_count": 12
+    },
+    {
+      "source_id": "SRC-ROUTE-TSMC-3DFABRIC",
+      "title": "TSMC OIP 3DFabric Alliance launch",
+      "public_original_url": "https://pr.tsmc.com/english/news/2968",
+      "publication_date_displayed": "2022-10-27",
+      "publication_date_note": "Official issued-on date and dateline agree",
+      "checked_on_local_date": "2026-10-05",
+      "source_role": "organization_published_primary_material",
+      "locator": "OIP 3DFabric Alliance; New Collaboration with 3DFabric Alliance Partners; Alliance Member Quotes",
+      "original_excerpts": [
+        "EDA and IP",
+        "semiconductor design, memory modules, substrate technology, testing, manufacturing, and packaging.",
+        "future HBM generations"
+      ],
+      "support_scope_ko": "2022 당시 EDA/IP·메모리·OSAT·기판·테스트 협업 기능 및 NVIDIA GPU/AWS Trainium 협력 설명. 현재 Trainium3 BOM·파트너 목록·거래량으로 확대하지 않음.",
+      "raw_original_redistributed": false,
+      "credentials_used": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false,
+      "requested_url": "https://pr.tsmc.com/english/news/2968",
+      "retrieved_url": "https://pr.tsmc.com/english/news/2968",
+      "retrieved_at_utc": "2026-10-04T16:00:32.059224+00:00",
+      "response_status": 200,
+      "capture_status": "PUBLIC_HTTP_SUCCESS",
+      "byte_length": 221146,
+      "sha256": "8518594dd77e0d4b68a16228a4ada6cbd5ad39ed5b65ef7af31cbd76b7ce2abc",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "prior_access_failures": [
+        {
+          "requested_url": "https://www.tsmc.com/english/dedicatedFoundry/oip/3dfabric_alliance",
+          "retrieved_at_utc": "2026-10-04T15:53:23.527842+00:00",
+          "response_status": 403,
+          "capture_status": "ACCESS_FAILED",
+          "error": "HTTP Error 403: Forbidden",
+          "byte_length": null,
+          "sha256": null
+        }
+      ],
+      "alternate_source_note": "Same issuer, different official document URL; source date and support scope belong to this successful alternate, not to the failed listing.",
+      "local_cache_filename": "SRC-ROUTE-TSMC-3DFABRIC-alternate.html",
+      "original_excerpts_verified_in_downloaded_text": true,
+      "quoted_english_word_count": 16
+    },
+    {
+      "source_id": "SRC-ROUTE-ASML-DUV",
+      "title": "ASML DUV lithography systems",
+      "public_original_url": "https://www.asml.com/en/products/duv-lithography-systems",
+      "publication_date_displayed": null,
+      "publication_date_note": "Undated product page; retrieval date is not publication date",
+      "checked_on_local_date": "2026-10-05",
+      "source_role": "organization_published_primary_material",
+      "locator": "Immersion systems / Dry systems",
+      "original_excerpts": [
+        "high-volume manufacturing of the most advanced Logic and Memory chips.",
+        "dry lithography systems"
+      ],
+      "support_scope_ko": "선단 Logic/Memory의 immersion DUV와 다층 칩에서 dry DUV/EUV의 층별 공존. 특정 팹의 장비 발주·가동률·CAPA와는 다름.",
+      "raw_original_redistributed": false,
+      "credentials_used": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false,
+      "requested_url": "https://www.asml.com/en/products/duv-lithography-systems",
+      "retrieved_url": "https://www.asml.com/en/products/duv-lithography-systems",
+      "retrieved_at_utc": "2026-10-04T15:53:23.536613+00:00",
+      "response_status": 200,
+      "capture_status": "PUBLIC_HTTP_SUCCESS",
+      "byte_length": 186169,
+      "sha256": "e626569f5cc1cba60c4db3d164c77266be753ff748c760e2c65a73a7ea71a99c",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "local_cache_filename": "SRC-ROUTE-ASML-DUV.html",
+      "original_excerpts_verified_in_downloaded_text": true,
+      "quoted_english_word_count": 13
+    },
+    {
+      "source_id": "SRC-ROUTE-AWS-TRN3",
+      "title": "Amazon EC2 Trn3 UltraServers",
+      "public_original_url": "https://aws.amazon.com/ec2/instance-types/trn3/",
+      "publication_date_displayed": null,
+      "publication_date_note": "Undated current product page; date first published not verified",
+      "checked_on_local_date": "2026-10-05",
+      "source_role": "organization_published_primary_material",
+      "locator": "Benefits / Up to 20.7 TB HBM3e and 706 TB/s aggregate memory bandwidth",
+      "original_excerpts": [
+        "AWS Trainium3 delivers 144 GB of HBM3e and 4.9 TB/s of memory bandwidth."
+      ],
+      "support_scope_ko": "Trainium3 칩 단위 HBM3e 용량·대역폭과 Trn3 서비스 용도. HBM 제조사, 파운드리, 실제 설치 수·사용률·구매량은 확인되지 않음.",
+      "raw_original_redistributed": false,
+      "credentials_used": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false,
+      "requested_url": "https://aws.amazon.com/ec2/instance-types/trn3/",
+      "retrieved_url": "https://aws.amazon.com/ec2/instance-types/trn3/",
+      "retrieved_at_utc": "2026-10-04T15:53:23.543615+00:00",
+      "response_status": 200,
+      "capture_status": "PUBLIC_HTTP_SUCCESS",
+      "byte_length": 378129,
+      "sha256": "c4d98693b5da174c73ea303ce990ec5eaf639b6ea805259fa87741d7f6d35c25",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "local_cache_filename": "SRC-ROUTE-AWS-TRN3.html",
+      "original_excerpts_verified_in_downloaded_text": true,
+      "quoted_english_word_count": 13
+    },
+    {
+      "source_id": "SRC-ROUTE-QORVO-QPA0524",
+      "title": "Qorvo QPA0524 GaN RF power amplifier",
+      "public_original_url": "https://www.qorvo.com/products/p/QPA0524",
+      "publication_date_displayed": null,
+      "publication_date_note": "Undated product page; linked datasheet version Jan 2024 is not page publication date",
+      "checked_on_local_date": "2026-10-05",
+      "source_role": "organization_published_primary_material",
+      "locator": "Product Overview paragraphs; Key Features; Related Solutions",
+      "original_excerpts": [
+        "GaN-on-SiC process (QGaN15)",
+        "5G linear power, communications, and radar applications"
+      ],
+      "support_scope_ko": "GaN-on-SiC RF 증폭기와 5G/Satcom/radar 기능적 용도. 우주 방사선 인증·특정 위성/항공기 설계채택·실제 거래를 입증하지 않음.",
+      "raw_original_redistributed": false,
+      "credentials_used": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false,
+      "requested_url": "https://www.qorvo.com/products/p/QPA0524",
+      "retrieved_url": null,
+      "retrieved_at_utc": "2026-10-04T15:53:24.415884+00:00",
+      "response_status": 429,
+      "capture_status": "RAW_HTTP_FAILED_WEB_TOOL_TEXT_REVIEWED",
+      "byte_length": null,
+      "sha256": null,
+      "content_hash_type": null,
+      "web_text_capture": {
+        "representation": "WEB_TOOL_NORMALIZED_RESPONSE_NOT_ORIGINAL_HTTP_BYTES",
+        "local_cache_filename": "SRC-ROUTE-QORVO-QPA0524-webtool.txt",
+        "byte_length": 11276,
+        "sha256": "d39ddf5b014fed181c35e30f8728d0dbfbede34f9ae1ee1c3d15d2a84e552331",
+        "artifact_written_at_utc": "2026-10-04T16:02:13.406710+00:00",
+        "checked_on_local_date": "2026-10-05",
+        "timestamp_note": "Local artifact write time is not an issuer publication timestamp or an independently verified HTTP retrieval time."
+      },
+      "access_failure": {
+        "requested_url": "https://www.qorvo.com/products/p/QPA0524",
+        "retrieved_at_utc": "2026-10-04T15:53:24.415884+00:00",
+        "response_status": 429,
+        "error": "HTTP Error 429: Too Many Requests"
+      },
+      "data_quality_notes_ko": [
+        "개요의 Ku-Band 명칭과 표시 주파수, 개요 35dB와 표의 23dB가 일치하지 않아 대역/이득 수치 비교에서 제외했다.",
+        "웹 도구는 공개 본문을 반환했으나 HTTP 429 다운로드 실패를 원문 성공으로 바꾸지 않았다. 분배사 재고 숫자는 채택·공급 신호로 사용하지 않는다."
+      ],
+      "quoted_english_word_count": 10
+    },
+    {
+      "source_id": "SRC-ROUTE-TI-TPS7H4001",
+      "title": "TI TPS7H4001-SP radiation-hardness-assured buck converter",
+      "public_original_url": "https://www.ti.com/product/TPS7H4001-SP",
+      "publication_date_displayed": null,
+      "publication_date_note": "Undated product page; datasheet revision date is not page publication date",
+      "checked_on_local_date": "2026-10-05",
+      "source_role": "organization_published_primary_material",
+      "locator": "Product details / Description / TPS7H4001EVM-CVAL evaluation board",
+      "original_excerpts": [
+        "Rating Space",
+        "radiation-hardness-assured",
+        "such as powering ASICs and FPGAs."
+      ],
+      "support_scope_ko": "Space 등급 TPS7H4001-SP 전원 변환 기능과 EVM의 ASIC/FPGA 전원 용도. 평가보드는 비행 실적이 아니며 특정 위성 주문은 미확인.",
+      "raw_original_redistributed": false,
+      "credentials_used": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false,
+      "requested_url": "https://www.ti.com/product/TPS7H4001-SP",
+      "retrieved_url": "https://www.ti.com/product/TPS7H4001-SP",
+      "retrieved_at_utc": "2026-10-04T15:53:24.643617+00:00",
+      "response_status": 200,
+      "capture_status": "PUBLIC_HTTP_SUCCESS",
+      "byte_length": 372138,
+      "sha256": "6a0dd76e1d3823769960d30f13b569d648714f2795aead81aaea563a02daa12b",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "local_cache_filename": "SRC-ROUTE-TI-TPS7H4001.html",
+      "original_excerpts_verified_in_downloaded_text": true,
+      "quoted_english_word_count": 9
+    }
+  ],
+  "reused_reference_registry": [
+    {
+      "id": "REF-HBM-GTC",
+      "repository_path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+      "source_id": "SRC-HBM-GTC",
+      "reference_kind": "EXISTING_PRIMARY_SOURCE_RECEIPT",
+      "repository_file_sha256": "7d5bf4d6e52e96945b22047f190edb8837c3b80eb3cdbd282ec635912ad43a94",
+      "public_original_url": "https://news.skhynix.com/en/gtc-2026-exhibition-booth/",
+      "publication_date_displayed": "2026-03-16",
+      "event_date_in_dateline": null,
+      "locator": "NVIDIA Collaboration zone",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-HBM-NV-CONFIG",
+      "repository_path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+      "source_id": "SRC-HBM-NV-PRODUCT",
+      "reference_kind": "EXISTING_PRIMARY_SOURCE_RECEIPT",
+      "repository_file_sha256": "7d5bf4d6e52e96945b22047f190edb8837c3b80eb3cdbd282ec635912ad43a94",
+      "public_original_url": "https://www.nvidia.com/en-us/data-center/gb300-nvl72/",
+      "publication_date_displayed": null,
+      "event_date_in_dateline": null,
+      "locator": "Specifications / Configuration, GPU Memory and CPU Memory rows",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-HBM-TSMC-MOU",
+      "repository_path": "data/research/customer_product_cards/hbm_nvidia_gb300/2026-10-03/sources.json",
+      "source_id": "SRC-HBM-TSMC-MOU",
+      "reference_kind": "EXISTING_PRIMARY_SOURCE_RECEIPT",
+      "repository_file_sha256": "7d5bf4d6e52e96945b22047f190edb8837c3b80eb3cdbd282ec635912ad43a94",
+      "public_original_url": "https://news.skhynix.com/en/sk-hynix-partners-with-tsmc-to-strengthen-hbm-technological-leadership/",
+      "publication_date_displayed": "2024-04-19",
+      "event_date_in_dateline": null,
+      "locator": "HBM4 base die and CoWoS development cooperation paragraphs",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-DDR-INTEL",
+      "repository_path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+      "source_id": "SRC-HY26-INTEL",
+      "reference_kind": "EXISTING_PRIMARY_SOURCE_RECEIPT",
+      "repository_file_sha256": "24bf6f4d40c6bb8208d8dc90c65e14fa025f10c7ffb9b0b9079dfb73568d3451",
+      "public_original_url": "https://news.skhynix.com/en/sk-hynix-first-to-complete-intel-data-center-certificationfor-32gb-die-based-256gb-server-ddr5-rdimm/",
+      "publication_date_displayed": "2025-12-17",
+      "event_date_in_dateline": "2025-12-18",
+      "locator": "Opening paragraph after Seoul, December 18, 2025 dateline",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-DELL-EXHIBIT",
+      "repository_path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+      "source_id": "SRC-HY26-DELL",
+      "reference_kind": "EXISTING_PRIMARY_SOURCE_RECEIPT",
+      "repository_file_sha256": "24bf6f4d40c6bb8208d8dc90c65e14fa025f10c7ffb9b0b9079dfb73568d3451",
+      "public_original_url": "https://news.skhynix.com/en/dtf-2026/",
+      "publication_date_displayed": "2026-08-26",
+      "event_date_in_dateline": null,
+      "locator": "AI Reality paragraph describing Dell R770",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-VAST-SSD",
+      "repository_path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+      "source_id": "SRC-HY26-VAST",
+      "reference_kind": "EXISTING_PRIMARY_SOURCE_RECEIPT",
+      "repository_file_sha256": "24bf6f4d40c6bb8208d8dc90c65e14fa025f10c7ffb9b0b9079dfb73568d3451",
+      "public_original_url": "https://www.solidigm.com/products/technology/vast-data-customer-testimonial.html",
+      "publication_date_displayed": "2026-02-03",
+      "event_date_in_dateline": null,
+      "locator": "Opening paragraph above numbered TCO/power discussion",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-SSD-WORKLOAD",
+      "repository_path": "data/research/sk_hynix_commercial_context/2026-10-03/sources.json",
+      "source_id": "SRC-HY26-SSD-WORKLOAD",
+      "reference_kind": "EXISTING_PRIMARY_SOURCE_RECEIPT",
+      "repository_file_sha256": "24bf6f4d40c6bb8208d8dc90c65e14fa025f10c7ffb9b0b9079dfb73568d3451",
+      "public_original_url": "https://www.solidigm.com/products/technology/mlperf-ai-workloads-with-solidigm-ssds.html",
+      "publication_date_displayed": "2025-10-14",
+      "event_date_in_dateline": null,
+      "locator": "Results and Analysis / MLPerf Inference v4.1 Disk Configuration Performance Analysis",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-NV-TSMC-NODE",
+      "repository_path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "relation_id": "semi-rel-01",
+      "reference_kind": "EXISTING_RELATION_PRIMARY_URL_REFERENCE",
+      "repository_file_sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "public_original_url": "https://developer.nvidia.com/blog/inside-nvidia-blackwell-ultra-the-chip-powering-the-ai-factory-era",
+      "source_date": "2025-08-22",
+      "locator": "relations[id=semi-rel-01] / source and stage fields",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-TSMC-AMKOR",
+      "repository_path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "relation_id": "semi-rel-06",
+      "reference_kind": "EXISTING_RELATION_PRIMARY_URL_REFERENCE",
+      "repository_file_sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "public_original_url": "https://ir.amkor.com/news-releases/news-release-details/tsmc-and-amkor-technology-announce-long-term-partnership",
+      "source_date": "2026-06-16",
+      "locator": "relations[id=semi-rel-06] / source and stage fields",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-NV-ADVANTEST",
+      "repository_path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "relation_id": "v3-nvidia-advantest",
+      "reference_kind": "EXISTING_RELATION_PRIMARY_URL_REFERENCE",
+      "repository_file_sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "public_original_url": "https://www.advantest.com/en/news/2025/2025100602.html",
+      "source_date": "2025-10-06",
+      "locator": "relations[id=v3-nvidia-advantest] / source and stage fields",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-AWS-MARVELL",
+      "repository_path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "relation_id": "v3-aws-marvell",
+      "reference_kind": "EXISTING_RELATION_PRIMARY_URL_REFERENCE",
+      "repository_file_sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "public_original_url": "https://www.marvell.com/company/newsroom/marvell-expands-strategic-collaboration-aws-enable-accelerated-infrastructure-ai-cloud.html",
+      "source_date": "2024-12-02",
+      "locator": "relations[id=v3-aws-marvell] / source and stage fields",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-NV-COHERENT",
+      "repository_path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "relation_id": "mn-coherent-nvidia-purchase",
+      "reference_kind": "EXISTING_RELATION_PRIMARY_URL_REFERENCE",
+      "repository_file_sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "public_original_url": "https://www.coherent.com/news/press-releases/nvidia-and-coherent-announce-strategic-partnership",
+      "source_date": "2026-03-02",
+      "locator": "relations[id=mn-coherent-nvidia-purchase] / source and stage fields",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-NV-NAVITAS",
+      "repository_path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "relation_id": "mn-navitas-nvidia",
+      "reference_kind": "EXISTING_RELATION_PRIMARY_URL_REFERENCE",
+      "repository_file_sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "public_original_url": "https://ir.navitassemi.com/news-releases/news-release-details/nvidia-selects-navitas-collaborate-next-generation-800-v-hvdc",
+      "source_date": "2025-05-21",
+      "locator": "relations[id=mn-navitas-nvidia] / source and stage fields",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-EATON-INFINEON",
+      "repository_path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "relation_id": "mn-infineon-eaton",
+      "reference_kind": "EXISTING_RELATION_PRIMARY_URL_REFERENCE",
+      "repository_file_sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "public_original_url": "https://www.infineon.com/press-release/2026/infpr202609-146",
+      "source_date": "2026-09-29",
+      "locator": "relations[id=mn-infineon-eaton] / source and stage fields",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-SAMSUNG-LINDE",
+      "repository_path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "relation_id": "mn-linde-samsung",
+      "reference_kind": "EXISTING_RELATION_PRIMARY_URL_REFERENCE",
+      "repository_file_sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "public_original_url": "https://www.linde.com/news-and-media/2025/linde-to-expand-supply-of-industrial-gases-to-samsung-in-south-korea",
+      "source_date": "2025-04-29",
+      "locator": "relations[id=mn-linde-samsung] / source and stage fields",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-AL-MATERIALS",
+      "repository_path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "relation_id": "mn-airliquide-deposition",
+      "reference_kind": "EXISTING_RELATION_PRIMARY_URL_REFERENCE",
+      "repository_file_sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "public_original_url": "https://www.airliquide.com/group/press-releases-news/2026-03-25/air-liquide-inaugurates-its-first-advanced-materials-manufacturing-plant-taiwan-strengthening-next",
+      "source_date": "2026-03-25",
+      "locator": "relations[id=mn-airliquide-deposition] / source and stage fields",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-PACK-CMP",
+      "repository_path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "relation_id": "mn-entegris-cmp",
+      "reference_kind": "EXISTING_RELATION_PRIMARY_URL_REFERENCE",
+      "repository_file_sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "public_original_url": "https://www.entegris.com/en/home/our-science/by-industry/microelectronics/semiconductor/advanced-packaging/cmp.html",
+      "source_date": null,
+      "locator": "relations[id=mn-entegris-cmp] / source and stage fields",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "REF-MICRON-WAFER",
+      "repository_path": "data/research/semiconductor_supply_chain/2026-10-03/supply_chain_map_v3.json",
+      "relation_id": "mn-globalwafers-micron-supply",
+      "reference_kind": "EXISTING_RELATION_PRIMARY_URL_REFERENCE",
+      "repository_file_sha256": "0f6e7130d9d8ecc7bdb243e44c504b9b32ecfdbec19dd6c05bd37ca544efa138",
+      "public_original_url": "https://investors.micron.com/news/press-release/2026/Micron-Announces-Up-to-3-Billion-Strategic-Investment-to-Strengthen-U-S--Semiconductor-Ecosystem/default.aspx",
+      "source_date": "2026-07-09",
+      "locator": "relations[id=mn-globalwafers-micron-supply] / source and stage fields",
+      "snapshot_as_of": "2026-10-03",
+      "freshness_status": "REUSED_EXISTING_SNAPSHOT_NOT_RECHECKED_THIS_TASK",
+      "duplicate_original_excerpt_included": false,
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    }
+  ],
+  "routes": [
+    {
+      "id": "PROD-01-HBM-GPU",
+      "title_ko": "HBM → GPU 가속기 → AI 서버/클러스터",
+      "start_axis": "startproduct",
+      "product_families": [
+        "HBM",
+        "GPU"
+      ],
+      "sectors": [
+        "AI",
+        "데이터센터"
+      ],
+      "nodes": [
+        {
+          "id": "sk",
+          "label_ko": "SK hynix",
+          "kind": "기업"
+        },
+        {
+          "id": "hbm",
+          "label_ko": "HBM3E",
+          "kind": "제품",
+          "classification_axis": "memory_family"
+        },
+        {
+          "id": "nv",
+          "label_ko": "NVIDIA",
+          "kind": "기업"
+        },
+        {
+          "id": "gpu",
+          "label_ko": "GB300 Blackwell Ultra GPU",
+          "kind": "제품",
+          "classification_axis": "compute_family"
+        },
+        {
+          "id": "dc",
+          "label_ko": "AI 서버·클러스터",
+          "kind": "기술·서비스",
+          "classification_axis": "end_market"
+        }
+      ],
+      "edges": [
+        {
+          "from": "sk",
+          "to": "hbm",
+          "type": "PRODUCT_SELLER",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "SK hynix가 GB300 시스템에 사용된 HBM3E를 공개했다.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-HBM-GTC"
+          ]
+        },
+        {
+          "from": "hbm",
+          "to": "gpu",
+          "type": "DISCLOSED_PRODUCT_APPLICATION",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "GB300 시스템 적용 발표 범위이며 모든 NVL72의 공급 비중·SKU·계약법인을 뜻하지 않는다.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-HBM-GTC"
+          ]
+        },
+        {
+          "from": "nv",
+          "to": "gpu",
+          "type": "PRODUCT_DESIGNER",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "NVIDIA의 GB300 플랫폼 사양을 별도 참조한다.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-HBM-NV-CONFIG"
+          ]
+        },
+        {
+          "from": "gpu",
+          "to": "dc",
+          "type": "WORKLOAD_USE",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "GPU 연산과 HBM 용량·대역폭을 AI 워크로드에 사용하는 플랫폼 경로.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-HBM-NV-CONFIG"
+          ]
+        }
+      ],
+      "propagation_hypothesis_ko": "가속기 채택·설치가 실제로 늘고 같은 세대 HBM 구성이 유지되면 HBM 비트·패키지 수요로 전파될 수 있다.",
+      "conditions_ko": [
+        "GPU 세대/SKU와 HBM 스택 구성·용량·벤더 비중 확인",
+        "생산/주문/설치 수량과 실제 운영 시점 분리",
+        "고객 플랫폼 인증·패키징·수율 제약을 함께 확인"
+      ],
+      "alternative_explanations_ko": [
+        "HBM 용량 증가는 GPU 수량 감소·재고 소진으로 상쇄될 수 있음",
+        "모델 양자화·캐시 정책·소프트웨어 최적화가 필요 용량을 바꿈"
+      ],
+      "unknowns_ko": [
+        "SK HBM 공급 비중·가격·기명 주문량·NVL72별 동일 SKU는 미확인"
+      ],
+      "observations": [
+        {
+          "key": "hbm_platform_config",
+          "purpose_ko": "설계당 HBM 구성 변화와 채택 단계를 따로 확인",
+          "free_collection_ko": "무료 제조사 제품 페이지/공식 전시 발표 + OEM 출시/출하 발표",
+          "fields": [
+            "platform_id",
+            "gpu_sku",
+            "hbm_generation",
+            "GB_per_gpu",
+            "stack_count",
+            "adoption_stage",
+            "announcement_date"
+          ],
+          "source_ids": [],
+          "reused_references": [
+            "REF-HBM-GTC",
+            "REF-HBM-NV-CONFIG"
+          ],
+          "value": null,
+          "unit": null,
+          "grain": null,
+          "limitation_ko": "사양·전시는 실제 구매량·수익성·운영 수요가 아니다.",
+          "measurement_status": "COLLECTION_SPEC_NOT_COLLECTED",
+          "api_key_required": false
+        }
+      ],
+      "commercial_role_question_ko": "영업은 플랫폼 승인자와 구매 법인을, 상품기획은 용량·대역폭·전력의 요구 조합을 구분해야 한다.",
+      "source_ids": [],
+      "reused_references": [
+        "REF-HBM-GTC",
+        "REF-HBM-NV-CONFIG"
+      ],
+      "specific_named_purchase_order": null,
+      "actual_cash_paid": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "PROD-02-DDR-CPU",
+      "title_ko": "DDR5 RDIMM → CPU 플랫폼 인증 → 서버 OEM",
+      "start_axis": "startproduct",
+      "product_families": [
+        "DDR",
+        "CPU"
+      ],
+      "sectors": [
+        "AI",
+        "데이터센터"
+      ],
+      "nodes": [
+        {
+          "id": "sk",
+          "label_ko": "SK hynix",
+          "kind": "기업"
+        },
+        {
+          "id": "ddr",
+          "label_ko": "DDR5 RDIMM",
+          "kind": "제품",
+          "classification_axis": "memory_family"
+        },
+        {
+          "id": "intel",
+          "label_ko": "Intel",
+          "kind": "기업"
+        },
+        {
+          "id": "xeon",
+          "label_ko": "Xeon 6 CPU 플랫폼",
+          "kind": "제품",
+          "classification_axis": "compute_family"
+        },
+        {
+          "id": "dell",
+          "label_ko": "Dell PowerEdge R770",
+          "kind": "제품",
+          "classification_axis": "system_product"
+        }
+      ],
+      "edges": [
+        {
+          "from": "sk",
+          "to": "ddr",
+          "type": "PRODUCT_SELLER",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "32Gb 기반 256GB DDR5 RDIMM 제품.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-DDR-INTEL"
+          ]
+        },
+        {
+          "from": "ddr",
+          "to": "intel",
+          "type": "PLATFORM_VALIDATION",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "Intel Data Center 인증 완료 발표; Intel의 구매를 뜻하지 않는다.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-DDR-INTEL"
+          ]
+        },
+        {
+          "from": "intel",
+          "to": "xeon",
+          "type": "SPECIFICATION_AUTHORITY",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "CPU 메모리 플랫폼 호환성 검증의 주체.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-DDR-INTEL"
+          ]
+        },
+        {
+          "from": "ddr",
+          "to": "dell",
+          "type": "EXHIBITED_PRODUCT_APPLICATION",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "R770에 6400MT/s DDR5 RDIMM이 설치된 전시 사례. Intel 인증 제품과 동일 SKU는 미확인.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-DELL-EXHIBIT"
+          ]
+        }
+      ],
+      "propagation_hypothesis_ko": "플랫폼 검증이 OEM의 정확한 DIMM SKU 승인·시스템 출하로 이어질 때 서버당 메모리 요구가 구매 수요로 연결될 수 있다.",
+      "conditions_ko": [
+        "CPU 세대·메모리 채널·슬롯·속도와 OEM 승인 목록 매칭",
+        "256GB 인증 DIMM과 Dell 전시 DIMM의 part number 확인",
+        "DIMM 장착률·모듈 수·출하와 계약 구매자 확인"
+      ],
+      "alternative_explanations_ko": [
+        "고용량 DIMM은 슬롯 수를 줄일 수 있음",
+        "기존 서버 업그레이드·재고 사용과 신규 시스템 구매를 구분해야 함"
+      ],
+      "unknowns_ko": [
+        "Dell 전시 RDIMM의 용량·part number·기명 구매량 미확인",
+        "인텔 인증 완료와 Dell 채택을 동일 사건으로 연결할 수 없음"
+      ],
+      "observations": [
+        {
+          "key": "ddr_platform_qvl",
+          "purpose_ko": "호환성 검증에서 실제 OEM 채택으로 넘어가는 단계 확인",
+          "free_collection_ko": "무료 Intel/OEM 인증·지원목록·서버 사양 PDF",
+          "fields": [
+            "cpu_generation",
+            "dimm_part_number",
+            "density_Gb",
+            "module_capacity_GB",
+            "MT_per_s",
+            "slots_populated",
+            "certification_date",
+            "shipping_stage"
+          ],
+          "source_ids": [],
+          "reused_references": [
+            "REF-DDR-INTEL",
+            "REF-DELL-EXHIBIT"
+          ],
+          "value": null,
+          "unit": null,
+          "grain": null,
+          "limitation_ko": "QVL은 주문서가 아니며 동일 SKU 확인이 필요하다.",
+          "measurement_status": "COLLECTION_SPEC_NOT_COLLECTED",
+          "api_key_required": false
+        }
+      ],
+      "commercial_role_question_ko": "인증 주체·OEM 사양 결정자·구매 법인·최종 운영자를 분리해 고용량 DDR의 목표 고객을 정한다.",
+      "source_ids": [],
+      "reused_references": [
+        "REF-DDR-INTEL",
+        "REF-DELL-EXHIBIT"
+      ],
+      "specific_named_purchase_order": null,
+      "actual_cash_paid": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "PROD-03-LPDDR-CPU",
+      "title_ko": "LPDDR5X → Grace CPU → AI 서버의 호스트 메모리",
+      "start_axis": "startproduct",
+      "product_families": [
+        "LPDDR",
+        "CPU"
+      ],
+      "sectors": [
+        "AI",
+        "데이터센터"
+      ],
+      "nodes": [
+        {
+          "id": "lpddr",
+          "label_ko": "LPDDR5X 호스트 메모리",
+          "kind": "제품",
+          "classification_axis": "memory_family"
+        },
+        {
+          "id": "grace",
+          "label_ko": "NVIDIA Grace CPU",
+          "kind": "제품",
+          "classification_axis": "compute_family"
+        },
+        {
+          "id": "nvl",
+          "label_ko": "GB300 NVL72",
+          "kind": "제품",
+          "classification_axis": "system_product"
+        },
+        {
+          "id": "ops",
+          "label_ko": "AI 시스템 운영자",
+          "kind": "업무",
+          "classification_axis": "end_market"
+        }
+      ],
+      "edges": [
+        {
+          "from": "lpddr",
+          "to": "grace",
+          "type": "PLATFORM_MEMORY_CONFIGURATION",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "NVL72 사양은 CPU 메모리를 LPDDR5X로 명시한다. 서버 호스트 메모리가 항상 DDR DIMM인 것은 아니다.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-HBM-NV-CONFIG"
+          ]
+        },
+        {
+          "from": "grace",
+          "to": "nvl",
+          "type": "PLATFORM_CONFIGURATION",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "Grace CPU와 Blackwell GPU의 메모리를 서로 다른 계층으로 추적한다.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-HBM-NV-CONFIG"
+          ]
+        },
+        {
+          "from": "nvl",
+          "to": "ops",
+          "type": "CONDITIONAL_USE",
+          "support_kind": "CONDITIONAL_MECHANISM",
+          "claim_ko": "해당 구성을 구매·운영하면 호스트 메모리 요구가 발생한다.",
+          "source_ids": [],
+          "reused_references": []
+        }
+      ],
+      "propagation_hypothesis_ko": "CPU 플랫폼 선택이 DDR 모듈 대신 LPDDR 계열 용량·전력·실장 요구로 수요 믹스를 바꿀 수 있다.",
+      "conditions_ko": [
+        "CPU/시스템 SKU와 호스트 메모리 형태 확인",
+        "LPDDR 공급사·인증·실장 단위 확인",
+        "HBM GPU 메모리와 LPDDR CPU 메모리의 합산 단위 분리"
+      ],
+      "alternative_explanations_ko": [
+        "CPU 플랫폼 교체가 DDR 시장 전체의 감소를 의미하지 않음",
+        "서버 증설 없이 메모리 구성만 바뀔 수 있음"
+      ],
+      "unknowns_ko": [
+        "Grace 플랫폼 LPDDR 제조사·SK hynix 공급·주문량은 미확인"
+      ],
+      "observations": [
+        {
+          "key": "host_memory_architecture",
+          "purpose_ko": "CPU별 DDR/LPDDR 구성 차이 확인",
+          "free_collection_ko": "무료 플랫폼 제품 사양·OEM 보드/서비스 매뉴얼",
+          "fields": [
+            "platform_id",
+            "cpu_sku",
+            "host_memory_family",
+            "host_memory_GB",
+            "soldered_or_module",
+            "supplier_if_disclosed"
+          ],
+          "source_ids": [],
+          "reused_references": [
+            "REF-HBM-NV-CONFIG"
+          ],
+          "value": null,
+          "unit": null,
+          "grain": null,
+          "limitation_ko": "랙 용량을 칩·모듈 출하량으로 바로 환산하지 않는다.",
+          "measurement_status": "COLLECTION_SPEC_NOT_COLLECTED",
+          "api_key_required": false
+        }
+      ],
+      "commercial_role_question_ko": "상품기획은 서버라는 시장명보다 CPU 아키텍처와 메모리 실장 요구를 먼저 확인한다.",
+      "source_ids": [],
+      "reused_references": [
+        "REF-HBM-NV-CONFIG"
+      ],
+      "specific_named_purchase_order": null,
+      "actual_cash_paid": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "PROD-04-NAND-ESSD",
+      "title_ko": "NAND 저장소 → eSSD 완제품 → 서버/데이터 플랫폼",
+      "start_axis": "startproduct",
+      "product_families": [
+        "NAND",
+        "eSSD"
+      ],
+      "sectors": [
+        "AI",
+        "데이터센터"
+      ],
+      "nodes": [
+        {
+          "id": "nand",
+          "label_ko": "NAND 비휘발성 메모리",
+          "kind": "제품",
+          "classification_axis": "memory_family"
+        },
+        {
+          "id": "ssd",
+          "label_ko": "eSSD: NAND·컨트롤러·펌웨어·인터페이스",
+          "kind": "제품",
+          "classification_axis": "storage_device"
+        },
+        {
+          "id": "sk",
+          "label_ko": "SK hynix / Solidigm",
+          "kind": "기업"
+        },
+        {
+          "id": "dell",
+          "label_ko": "Dell R770 전시 PS1010 E3.S",
+          "kind": "제품",
+          "classification_axis": "system_product"
+        },
+        {
+          "id": "vast",
+          "label_ko": "VAST Data 데이터 플랫폼",
+          "kind": "기술·서비스",
+          "classification_axis": "end_market"
+        }
+      ],
+      "edges": [
+        {
+          "from": "nand",
+          "to": "ssd",
+          "type": "DEVICE_COMPOSITION",
+          "support_kind": "CONDITIONAL_MECHANISM",
+          "claim_ko": "NAND는 저장 매체, eSSD는 시스템에 연결되는 완제품이라는 단위 구분. 같은 제품 판매량으로 합치지 않는다.",
+          "source_ids": [],
+          "reused_references": []
+        },
+        {
+          "from": "sk",
+          "to": "dell",
+          "type": "EXHIBITED_PRODUCT_APPLICATION",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "PS1010 E3.S를 설치한 서버 전시 사례.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-DELL-EXHIBIT"
+          ]
+        },
+        {
+          "from": "sk",
+          "to": "vast",
+          "type": "ISSUER_CUSTOMER_TESTIMONIAL",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "Solidigm 고밀도 SSD 활용 설명. 정확한 본문 SKU·주문 규모는 공백.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-VAST-SSD"
+          ]
+        },
+        {
+          "from": "ssd",
+          "to": "vast",
+          "type": "WORKLOAD_CONDITIONAL_USE",
+          "support_kind": "CONDITIONAL_MECHANISM",
+          "claim_ko": "저장 용량·IO 대기·지속 처리량·내구성이 해당 워크로드 제약일 때 활용 이득이 생긴다.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-SSD-WORKLOAD"
+          ]
+        }
+      ],
+      "propagation_hypothesis_ko": "데이터 생성·보존·AI IO 요구가 실제 저장 설계와 구매로 이어지면 eSSD 구성 및 NAND 비트 수요에 영향을 줄 수 있다.",
+      "conditions_ko": [
+        "워크로드·읽기/쓰기·지속/랜덤·큐 깊이·캐시 계층 확인",
+        "SSD SKU/컨트롤러/펌웨어/용량과 NAND 세대 매칭",
+        "인증·전시·벤치마크·주문·출하를 별도 기록"
+      ],
+      "alternative_explanations_ko": [
+        "데이터 압축·중복 제거·캐시가 NAND 비트를 줄일 수 있음",
+        "SSD 단가·미디어/컨트롤러 공급·기존 HDD 대체가 AI 수요와 별도로 작용"
+      ],
+      "unknowns_ko": [
+        "VAST 정확한 SSD SKU·기명 주문·실제 NAND 공급 비중 미확인",
+        "특정 engineering sample 벤치마크를 모든 SSD/AI에 일반화할 수 없음"
+      ],
+      "observations": [
+        {
+          "key": "ssd_workload_adoption",
+          "purpose_ko": "IO 병목 해결과 제품 채택 단계 확인",
+          "free_collection_ko": "무료 OEM 호환성 목록·스토리지 제품 PDF·공개 시험의 구성/방법 표",
+          "fields": [
+            "ssd_sku",
+            "form_factor",
+            "interface",
+            "usable_TB",
+            "DWPD",
+            "firmware",
+            "workload",
+            "test_method",
+            "adoption_stage"
+          ],
+          "source_ids": [],
+          "reused_references": [
+            "REF-DELL-EXHIBIT",
+            "REF-VAST-SSD",
+            "REF-SSD-WORKLOAD"
+          ],
+          "value": null,
+          "unit": null,
+          "grain": null,
+          "limitation_ko": "SSD TB를 NAND 웨이퍼·수익으로 연결하려면 제품 믹스·수율·가격이 추가 필요하다.",
+          "measurement_status": "COLLECTION_SPEC_NOT_COLLECTED",
+          "api_key_required": false
+        }
+      ],
+      "commercial_role_question_ko": "영업·신제품사업화는 서버 OEM 인증과 데이터 플랫폼 사용 사례를 서로 다른 고객 접점으로 본다.",
+      "source_ids": [],
+      "reused_references": [
+        "REF-DELL-EXHIBIT",
+        "REF-SSD-WORKLOAD",
+        "REF-VAST-SSD"
+      ],
+      "specific_named_purchase_order": null,
+      "actual_cash_paid": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "PROD-05-HBM-ASIC",
+      "title_ko": "HBM3e → AWS Trainium3 AI ASIC → Trn3 서비스",
+      "start_axis": "startproduct",
+      "product_families": [
+        "HBM",
+        "AI ASIC"
+      ],
+      "sectors": [
+        "AI",
+        "데이터센터"
+      ],
+      "nodes": [
+        {
+          "id": "aws",
+          "label_ko": "AWS / Annapurna Labs",
+          "kind": "기업"
+        },
+        {
+          "id": "asic",
+          "label_ko": "Trainium3",
+          "kind": "제품",
+          "classification_axis": "compute_family"
+        },
+        {
+          "id": "hbm",
+          "label_ko": "HBM3e",
+          "kind": "제품",
+          "classification_axis": "memory_family"
+        },
+        {
+          "id": "trn",
+          "label_ko": "EC2 Trn3 UltraServer",
+          "kind": "기술·서비스",
+          "classification_axis": "system_service"
+        },
+        {
+          "id": "ai",
+          "label_ko": "AI 학습·추론 워크로드",
+          "kind": "업무",
+          "classification_axis": "end_market"
+        }
+      ],
+      "edges": [
+        {
+          "from": "aws",
+          "to": "asic",
+          "type": "CUSTOM_ACCELERATOR_DESIGN",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "AWS의 3nm AI 칩 Trainium3 제품 설명.",
+          "source_ids": [
+            "SRC-ROUTE-AWS-TRN3"
+          ],
+          "reused_references": []
+        },
+        {
+          "from": "hbm",
+          "to": "asic",
+          "type": "ISSUER_PRODUCT_SPECIFICATION",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "칩당 HBM3e 144GB·메모리 대역폭 4.9TB/s를 명시한다. 제조사는 미공개.",
+          "source_ids": [
+            "SRC-ROUTE-AWS-TRN3"
+          ],
+          "reused_references": []
+        },
+        {
+          "from": "asic",
+          "to": "trn",
+          "type": "SERVICE_CONFIGURATION",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "Trainium3를 사용하는 Trn3 서비스/UltraServer 구성.",
+          "source_ids": [
+            "SRC-ROUTE-AWS-TRN3"
+          ],
+          "reused_references": []
+        },
+        {
+          "from": "trn",
+          "to": "ai",
+          "type": "WORKLOAD_TARGET",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "agentic·reasoning·video generation 등 대상 용도.",
+          "source_ids": [
+            "SRC-ROUTE-AWS-TRN3"
+          ],
+          "reused_references": []
+        }
+      ],
+      "propagation_hypothesis_ko": "GPU 외 자체 AI ASIC 확대도 HBM 수요 경로가 될 수 있으나 서비스 구성 공개만으로 설치·사용·주문을 알 수 없다.",
+      "conditions_ko": [
+        "서비스 GA/리전·실제 설치 수량·가동률·세대 교체를 별도 확인",
+        "컴파일러/프레임워크 적합성과 워크로드 전환 검증",
+        "HBM 공급사·패키징 방식·세대별 파운드리를 별도로 확인"
+      ],
+      "alternative_explanations_ko": [
+        "서비스 수요가 GPU에서 ASIC으로 이동하면 전체 메모리 수요 순증과 다를 수 있음",
+        "사용률·소프트웨어 효율·기존 장비 교체가 칩 수요를 바꿈"
+      ],
+      "unknowns_ko": [
+        "Trainium3 HBM 제조사·SK 공급·파운드리·현재 패키지 BOM 미확인",
+        "2022 Trainium–TSMC CoWoS 관계를 Trainium3로 승계할 수 없음"
+      ],
+      "observations": [
+        {
+          "key": "trn3_hbm_per_chip_GB",
+          "purpose_ko": "칩과 서버 합산 단위를 분리",
+          "free_collection_ko": "무료 AWS Trn3 제품 페이지 사양",
+          "fields": [
+            "chip_generation",
+            "HBM_generation",
+            "GB_per_chip"
+          ],
+          "source_ids": [
+            "SRC-ROUTE-AWS-TRN3"
+          ],
+          "reused_references": [],
+          "value": 144,
+          "unit": "GB",
+          "grain": "ONE_TRAINIUM3_CHIP",
+          "limitation_ko": "칩당 사양이며 실제 판매·설치·조달 비트가 아니다.",
+          "measurement_status": "OBSERVED_PRODUCT_CONFIGURATION",
+          "api_key_required": false
+        },
+        {
+          "key": "trn3_memory_bandwidth_TB_per_s",
+          "purpose_ko": "메모리 대역폭 제약을 구체화",
+          "free_collection_ko": "같은 AWS 공식 사양",
+          "fields": [
+            "chip_generation",
+            "memory_bandwidth_TB_per_s"
+          ],
+          "source_ids": [
+            "SRC-ROUTE-AWS-TRN3"
+          ],
+          "reused_references": [],
+          "value": 4.9,
+          "unit": "TB/s",
+          "grain": "ONE_TRAINIUM3_CHIP",
+          "limitation_ko": "대역폭은 워크로드 실효 처리량과 다르다.",
+          "measurement_status": "OBSERVED_PRODUCT_CONFIGURATION",
+          "api_key_required": false
+        }
+      ],
+      "commercial_role_question_ko": "상품기획은 GPU만을 HBM 고객시장으로 잡지 않고 자체 ASIC 설계자와 서비스 운영자를 구분한다.",
+      "source_ids": [
+        "SRC-ROUTE-AWS-TRN3"
+      ],
+      "reused_references": [],
+      "specific_named_purchase_order": null,
+      "actual_cash_paid": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "PROD-06-FOUNDRY-NODES",
+      "title_ko": "제조서비스 → 선단/성숙 특화공정 → 설계된 반도체",
+      "start_axis": "manufacturing_function",
+      "product_families": [
+        "CPU",
+        "GPU",
+        "AI ASIC",
+        "아날로그"
+      ],
+      "sectors": [
+        "AI",
+        "데이터센터",
+        "통신"
+      ],
+      "nodes": [
+        {
+          "id": "tsmc",
+          "label_ko": "TSMC",
+          "kind": "기업",
+          "classification_axis": "business_model"
+        },
+        {
+          "id": "service",
+          "label_ko": "파운드리 웨이퍼 제조서비스",
+          "kind": "기술·서비스",
+          "classification_axis": "business_model"
+        },
+        {
+          "id": "advanced",
+          "label_ko": "선단 Logic 공정",
+          "kind": "공정",
+          "classification_axis": "process"
+        },
+        {
+          "id": "mature",
+          "label_ko": "성숙 노드의 특화공정",
+          "kind": "공정",
+          "classification_axis": "process"
+        },
+        {
+          "id": "design",
+          "label_ko": "고객의 제품 설계/SKU",
+          "kind": "업무",
+          "classification_axis": "product_design"
+        },
+        {
+          "id": "gpu",
+          "label_ko": "NVIDIA Blackwell Ultra",
+          "kind": "제품",
+          "classification_axis": "compute_family"
+        }
+      ],
+      "edges": [
+        {
+          "from": "tsmc",
+          "to": "service",
+          "type": "MANUFACTURING_SERVICE_PROVIDER",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "TSMC는 고객 설계를 제조하는 서비스 제공자로 분류하고 GPU라는 제품군과 같은 축에 놓지 않는다.",
+          "source_ids": [
+            "SRC-ROUTE-TSMC-AR25"
+          ],
+          "reused_references": []
+        },
+        {
+          "from": "service",
+          "to": "advanced",
+          "type": "PROCESS_CAPABILITY",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "선단 기술·고효율 컴퓨팅에 대한 제조 기술 설명.",
+          "source_ids": [
+            "SRC-ROUTE-TSMC-AR25"
+          ],
+          "reused_references": []
+        },
+        {
+          "from": "service",
+          "to": "mature",
+          "type": "PROCESS_CAPABILITY",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "성숙 노드에서도 고객 요구에 맞춘 특화 기술을 개발한다고 설명한다.",
+          "source_ids": [
+            "SRC-ROUTE-TSMC-AR25"
+          ],
+          "reused_references": []
+        },
+        {
+          "from": "design",
+          "to": "advanced",
+          "type": "CONDITIONAL_PROCESS_SELECTION",
+          "support_kind": "CONDITIONAL_MECHANISM",
+          "claim_ko": "SKU의 성능·전력·비용·IP·수율 요구에 따라 선택하며 모든 AI 제품이 같은 노드를 쓰는 것은 아니다.",
+          "source_ids": [],
+          "reused_references": []
+        },
+        {
+          "from": "advanced",
+          "to": "gpu",
+          "type": "REUSED_DISCLOSED_NODE",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "기존 지도는 Blackwell Ultra의 TSMC 4NP 사용을 기록한다. 전체 NVIDIA SKU·시설 배정으로 확장하지 않는다.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-NV-TSMC-NODE"
+          ]
+        }
+      ],
+      "propagation_hypothesis_ko": "제품 설계 채택이 해당 공정 테이프아웃·웨이퍼 투입·검사·패키징·출하로 이어져야 제조서비스 수요가 된다.",
+      "conditions_ko": [
+        "제품·리비전·노드·다이 면적·수율·팹을 매칭",
+        "선단과 성숙/특화의 공급능력·장비·IP 대체 가능성을 따로 검토",
+        "계획 CAPA와 실제 가동/고객 배정을 분리"
+      ],
+      "alternative_explanations_ko": [
+        "다이 면적 축소·수율 개선·재고 조정으로 제품 수요와 웨이퍼 수요가 다르게 움직임",
+        "특화 아날로그/RF 요구는 최신 Logic 노드 전환과 다름"
+      ],
+      "unknowns_ko": [
+        "성숙 특화공정의 특정 고객 SKU·2026 제품별 배정 CAPA는 여기서 수집하지 않음",
+        "AWS Trainium3 파운드리를 3nm 표현만으로 TSMC라고 할 수 없음"
+      ],
+      "observations": [
+        {
+          "key": "product_node_fab_match",
+          "purpose_ko": "제품 수요가 어느 제조서비스에 전파되는지 확인",
+          "free_collection_ko": "무료 제품 아키텍처 발표·파운드리 IR·팹 가동 발표",
+          "fields": [
+            "chip_sku",
+            "revision",
+            "foundry",
+            "node",
+            "die_area_mm2",
+            "facility",
+            "tapeout_or_ramp_stage",
+            "customer_allocation_if_disclosed"
+          ],
+          "source_ids": [
+            "SRC-ROUTE-TSMC-AR25"
+          ],
+          "reused_references": [
+            "REF-NV-TSMC-NODE"
+          ],
+          "value": null,
+          "unit": null,
+          "grain": null,
+          "limitation_ko": "회사 전체 CAPA·매출을 특정 GPU/메모리 물량으로 배분하지 않는다.",
+          "measurement_status": "COLLECTION_SPEC_NOT_COLLECTED",
+          "api_key_required": false
+        }
+      ],
+      "commercial_role_question_ko": "시장 접근은 칩 판매자, 공정 사양 결정자, 제조서비스 공급자, 고객 배정 결정자를 별개로 파악한다.",
+      "source_ids": [
+        "SRC-ROUTE-TSMC-AR25"
+      ],
+      "reused_references": [
+        "REF-NV-TSMC-NODE"
+      ],
+      "specific_named_purchase_order": null,
+      "actual_cash_paid": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "PROD-07-EDA-IP-PACK-TEST",
+      "title_ko": "EDA/IP → 패키지 설계 → HBM 결합·OSAT·검사",
+      "start_axis": "manufacturing_function",
+      "product_families": [
+        "HBM",
+        "CPU",
+        "GPU",
+        "AI ASIC"
+      ],
+      "sectors": [
+        "AI",
+        "데이터센터",
+        "통신"
+      ],
+      "nodes": [
+        {
+          "id": "eda",
+          "label_ko": "Cadence·Siemens EDA·Synopsys 설계 도구",
+          "kind": "기술·서비스",
+          "classification_axis": "design_input"
+        },
+        {
+          "id": "ip",
+          "label_ko": "Arm·die-to-die 등 IP 기능",
+          "kind": "기술·서비스",
+          "classification_axis": "design_input"
+        },
+        {
+          "id": "tsmc",
+          "label_ko": "TSMC 3DFabric/CoWoS/SoIC",
+          "kind": "공정",
+          "classification_axis": "package_process"
+        },
+        {
+          "id": "hbm",
+          "label_ko": "HBM 사양·기술 정렬",
+          "kind": "제품",
+          "classification_axis": "memory_family"
+        },
+        {
+          "id": "osat",
+          "label_ko": "Amkor·OSAT 조립/검사",
+          "kind": "업무",
+          "classification_axis": "manufacturing_function"
+        },
+        {
+          "id": "test",
+          "label_ko": "Advantest·테스트 방법/인프라",
+          "kind": "기술·서비스",
+          "classification_axis": "manufacturing_function"
+        }
+      ],
+      "edges": [
+        {
+          "from": "eda",
+          "to": "tsmc",
+          "type": "HISTORICAL_ECOSYSTEM_ENABLEMENT",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "2022 발표는 3D IC 설계 도구·설계 흐름과 3Dblox 검증을 설명한다. 현재 모든 제품 계약이 아니다.",
+          "source_ids": [
+            "SRC-ROUTE-TSMC-3DFABRIC"
+          ],
+          "reused_references": []
+        },
+        {
+          "from": "ip",
+          "to": "tsmc",
+          "type": "HISTORICAL_IP_ENABLEMENT",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "die-to-die 표준·3DFabric 호환 IP 역할. Arm 등 기업 예시는 당시 파트너 기능 문맥.",
+          "source_ids": [
+            "SRC-ROUTE-TSMC-3DFABRIC"
+          ],
+          "reused_references": []
+        },
+        {
+          "from": "hbm",
+          "to": "tsmc",
+          "type": "EARLY_TECHNICAL_ALIGNMENT",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "HBM 세대 요구·설계기준 조기 정렬; SK–TSMC HBM4 MOU는 별도 개발 계획.",
+          "source_ids": [
+            "SRC-ROUTE-TSMC-3DFABRIC"
+          ],
+          "reused_references": [
+            "REF-HBM-TSMC-MOU"
+          ]
+        },
+        {
+          "from": "tsmc",
+          "to": "osat",
+          "type": "ASSEMBLY_TEST_FUNCTION",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "OSAT의 조립·검사 기능 및 기존 TSMC–Amkor 프레임워크 발표. 실제 수량·시설 배정과 분리.",
+          "source_ids": [
+            "SRC-ROUTE-TSMC-3DFABRIC"
+          ],
+          "reused_references": [
+            "REF-TSMC-AMKOR"
+          ]
+        },
+        {
+          "from": "tsmc",
+          "to": "test",
+          "type": "TEST_ENABLEMENT",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "패키지 신뢰성/스트레스 테스트 방법과 기존 NVIDIA–Advantest 테스트 인프라 적용 사례.",
+          "source_ids": [
+            "SRC-ROUTE-TSMC-3DFABRIC"
+          ],
+          "reused_references": [
+            "REF-NV-ADVANTEST"
+          ]
+        }
+      ],
+      "propagation_hypothesis_ko": "적층 칩 설계가 검증·기판·HBM·조립·검사 요구를 함께 만들 수 있으나 단계별 준비 완료가 필요하다.",
+      "conditions_ko": [
+        "구체적 제품·패키지·HBM 인터페이스·검사 흐름 확인",
+        "EDA 인증·IP 사용 허가·샘플 검증·양산 수율을 별도 단계로 기록",
+        "OSAT 시설/라인·장비 및 고객 배정 확인"
+      ],
+      "alternative_explanations_ko": [
+        "칩렛 구성·테스트 시간·수율·기판 공급이 패키징 수요를 다르게 바꿈",
+        "도구 인증/회원가입은 유료 라이선스 매출이나 양산 채택과 다름"
+      ],
+      "unknowns_ko": [
+        "2022 파트너 목록을 2026 현재 계약 목록으로 사용하지 않음",
+        "특정 GB300/Trainium3의 EDA·IP·OSAT·검사 장비 BOM 미확인"
+      ],
+      "observations": [
+        {
+          "key": "package_qualification_chain",
+          "purpose_ko": "설계부터 출하까지 단계 누락과 병목 후보 확인",
+          "free_collection_ko": "무료 파운드리/OIP 발표·EDA 인증 보도자료·OSAT/검사 IR",
+          "fields": [
+            "chip_sku",
+            "package_type",
+            "HBM_generation",
+            "substrate",
+            "EDA_certification",
+            "IP_version",
+            "reliability_test",
+            "yield_if_disclosed",
+            "ramp_stage"
+          ],
+          "source_ids": [
+            "SRC-ROUTE-TSMC-3DFABRIC"
+          ],
+          "reused_references": [
+            "REF-HBM-TSMC-MOU",
+            "REF-TSMC-AMKOR",
+            "REF-NV-ADVANTEST"
+          ],
+          "value": null,
+          "unit": null,
+          "grain": null,
+          "limitation_ko": "파트너십과 인증을 고객 주문·생산량으로 변환하지 않는다.",
+          "measurement_status": "COLLECTION_SPEC_NOT_COLLECTED",
+          "api_key_required": false
+        }
+      ],
+      "commercial_role_question_ko": "신제품사업화는 기술 검증의 주체와 양산 공급·고객 승인의 주체를 구분해 단계별 협업 대상을 정한다.",
+      "source_ids": [
+        "SRC-ROUTE-TSMC-3DFABRIC"
+      ],
+      "reused_references": [
+        "REF-HBM-TSMC-MOU",
+        "REF-NV-ADVANTEST",
+        "REF-TSMC-AMKOR"
+      ],
+      "specific_named_purchase_order": null,
+      "actual_cash_paid": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "PROD-08-EQUIPMENT-MATERIALS",
+      "title_ko": "노광·웨이퍼·가스·CMP → 공정별 입력 → 반도체 제조",
+      "start_axis": "manufacturing_function",
+      "product_families": [
+        "HBM",
+        "DDR",
+        "LPDDR",
+        "NAND",
+        "CPU",
+        "GPU",
+        "AI ASIC"
+      ],
+      "sectors": [
+        "AI",
+        "데이터센터",
+        "통신"
+      ],
+      "nodes": [
+        {
+          "id": "asml",
+          "label_ko": "ASML DUV/EUV 노광 장비",
+          "kind": "제품",
+          "classification_axis": "equipment"
+        },
+        {
+          "id": "layers",
+          "label_ko": "칩 층별 패터닝",
+          "kind": "공정",
+          "classification_axis": "process"
+        },
+        {
+          "id": "wafer",
+          "label_ko": "GlobalWafers: 300mm 실리콘 웨이퍼",
+          "kind": "제품",
+          "classification_axis": "material"
+        },
+        {
+          "id": "gas",
+          "label_ko": "Linde: N2/O2/Ar 등 팹 가스",
+          "kind": "제품",
+          "classification_axis": "material"
+        },
+        {
+          "id": "dep",
+          "label_ko": "Air Liquide: 증착·식각 재료",
+          "kind": "제품",
+          "classification_axis": "material"
+        },
+        {
+          "id": "cmp",
+          "label_ko": "Entegris: 패키징 CMP 재료",
+          "kind": "제품",
+          "classification_axis": "material"
+        },
+        {
+          "id": "fab",
+          "label_ko": "제품별 팹/패키지 공정",
+          "kind": "공정",
+          "classification_axis": "manufacturing_function"
+        }
+      ],
+      "edges": [
+        {
+          "from": "asml",
+          "to": "layers",
+          "type": "PROCESS_EQUIPMENT_FUNCTION",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "immersion DUV는 선단 Logic/Memory에도 쓰이며 dry DUV/EUV 역할은 칩 층별로 나뉜다.",
+          "source_ids": [
+            "SRC-ROUTE-ASML-DUV"
+          ],
+          "reused_references": []
+        },
+        {
+          "from": "layers",
+          "to": "fab",
+          "type": "CONDITIONAL_PROCESS_INPUT",
+          "support_kind": "CONDITIONAL_MECHANISM",
+          "claim_ko": "노드명만으로 장비 수·실제 가동시간을 결정할 수 없다.",
+          "source_ids": [],
+          "reused_references": []
+        },
+        {
+          "from": "wafer",
+          "to": "fab",
+          "type": "REUSED_SUPPLY_AGREEMENT_CANDIDATE",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "GlobalWafers–Micron 웨이퍼 공급 합의는 메모리 팹 입력 사례. 모든 제품 실제 출하 물량은 미확인.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-MICRON-WAFER"
+          ]
+        },
+        {
+          "from": "gas",
+          "to": "fab",
+          "type": "REUSED_SITE_SUPPLY_CANDIDATE",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "Linde–Samsung Pyeongtaek 가스 공급/ASU 확대 발표. 예정 신규 시작과 실제 시작을 분리.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-SAMSUNG-LINDE"
+          ]
+        },
+        {
+          "from": "dep",
+          "to": "fab",
+          "type": "MATERIAL_PROCESS_FUNCTION",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "증착·식각용 advanced materials 기능. Taiwan 시설을 TSMC 고객으로 추정하지 않는다.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-AL-MATERIALS"
+          ]
+        },
+        {
+          "from": "cmp",
+          "to": "fab",
+          "type": "PACKAGING_MATERIAL_FUNCTION",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "첨단 패키징 CMP의 슬러리·패드·필터/청정 기능; 특정 고객 공급은 미확인.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-PACK-CMP"
+          ]
+        }
+      ],
+      "propagation_hypothesis_ko": "실제 공정 투입·패키징 증가가 공정별 소모재와 장비 운용 수요로 전파될 수 있으나 각 입력의 사용 위치가 다르다.",
+      "conditions_ko": [
+        "노드+층+공정 단계+팹 단위로 입력 품목 매칭",
+        "장비 신규 발주·설치·업그레이드·가동률 분리",
+        "소모재 순도/등급·공급시설·품질 승인 확인"
+      ],
+      "alternative_explanations_ko": [
+        "재활용·효율·층수·수율·기존 장비 재사용이 필요 입력을 바꿈",
+        "가스 시설 계약·기술 카탈로그는 현재 고객별 소비량이 아님"
+      ],
+      "unknowns_ko": [
+        "ASML 장비 사양상의 처리량을 실제 팹 생산량으로 사용하지 않음",
+        "갈륨·SiC·희토류의 각 용도 없이 HBM 전체의 직접 원재료 병목으로 연결할 수 없음"
+      ],
+      "observations": [
+        {
+          "key": "process_input_stage",
+          "purpose_ko": "입력 산업의 수요 위치와 공장 단위를 확인",
+          "free_collection_ko": "무료 장비 제품 문서·공급사 공식 계약·시설 운영 발표",
+          "fields": [
+            "fab",
+            "process_step",
+            "layer",
+            "material_grade",
+            "supplier",
+            "qualification",
+            "start_status",
+            "tool_install_or_upgrade",
+            "consumption_if_disclosed"
+          ],
+          "source_ids": [
+            "SRC-ROUTE-ASML-DUV"
+          ],
+          "reused_references": [
+            "REF-MICRON-WAFER",
+            "REF-SAMSUNG-LINDE",
+            "REF-AL-MATERIALS",
+            "REF-PACK-CMP"
+          ],
+          "value": null,
+          "unit": null,
+          "grain": null,
+          "limitation_ko": "총 장비 매출·무역 HS 코드·소재 가격만으로 특정 메모리 생산량을 직접 추정하지 않는다.",
+          "measurement_status": "COLLECTION_SPEC_NOT_COLLECTED",
+          "api_key_required": false
+        }
+      ],
+      "commercial_role_question_ko": "영업 배경 지식은 자원명보다 어느 공정·등급·승인·시설에서 필요해지는지로 병목 후보를 좁힌다.",
+      "source_ids": [
+        "SRC-ROUTE-ASML-DUV"
+      ],
+      "reused_references": [
+        "REF-AL-MATERIALS",
+        "REF-MICRON-WAFER",
+        "REF-PACK-CMP",
+        "REF-SAMSUNG-LINDE"
+      ],
+      "specific_named_purchase_order": null,
+      "actual_cash_paid": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "PROD-09-GAN-SIC-POWER",
+      "title_ko": "GaN/SiC 전력반도체 → 전력변환 → AI 데이터센터",
+      "start_axis": "startproduct",
+      "product_families": [
+        "GaN 전력반도체",
+        "SiC 전력반도체"
+      ],
+      "sectors": [
+        "AI",
+        "데이터센터",
+        "전력"
+      ],
+      "nodes": [
+        {
+          "id": "nav",
+          "label_ko": "Navitas GaNFast/GeneSiC",
+          "kind": "제품",
+          "classification_axis": "power_device"
+        },
+        {
+          "id": "ifx",
+          "label_ko": "Infineon SiC",
+          "kind": "제품",
+          "classification_axis": "power_device"
+        },
+        {
+          "id": "nvp",
+          "label_ko": "NVIDIA 800V HVDC 아키텍처",
+          "kind": "기술·서비스",
+          "classification_axis": "power_architecture"
+        },
+        {
+          "id": "eaton",
+          "label_ko": "Eaton MVSST 2.0",
+          "kind": "제품",
+          "classification_axis": "power_conversion_system"
+        },
+        {
+          "id": "dc",
+          "label_ko": "데이터센터 전원 체계",
+          "kind": "기술·서비스",
+          "classification_axis": "end_market"
+        }
+      ],
+      "edges": [
+        {
+          "from": "nav",
+          "to": "nvp",
+          "type": "REUSED_DEVELOPMENT_COLLABORATION",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "800V HVDC 협업 대상 선정 발표. 현재 양산 납품·금액은 확인하지 않음.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-NV-NAVITAS"
+          ]
+        },
+        {
+          "from": "ifx",
+          "to": "eaton",
+          "type": "REUSED_SUPPLY_PLAN",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "Eaton 중전압 SST 플랫폼에 대한 SiC 협력/공급 기대 발표. 특정 데이터센터 납품과 분리.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-EATON-INFINEON"
+          ]
+        },
+        {
+          "from": "nvp",
+          "to": "dc",
+          "type": "CONDITIONAL_POWER_ARCHITECTURE",
+          "support_kind": "CONDITIONAL_MECHANISM",
+          "claim_ko": "해당 전원 구조를 채택한 설치에 한해 변환 단계의 반도체 요구로 연결될 수 있다.",
+          "source_ids": [],
+          "reused_references": []
+        },
+        {
+          "from": "eaton",
+          "to": "dc",
+          "type": "CONDITIONAL_SYSTEM_DEPLOYMENT",
+          "support_kind": "CONDITIONAL_MECHANISM",
+          "claim_ko": "현장 채택·전력망 접속·기술 승인 및 설치가 필요하다.",
+          "source_ids": [],
+          "reused_references": []
+        }
+      ],
+      "propagation_hypothesis_ko": "랙 전력·전압 체계 변화가 전력변환 부품 설계와 현장 조달을 바꿀 수 있지만 칩 종류·회로·공급자 승인에 따라 다르다.",
+      "conditions_ko": [
+        "현장 전압·변환 단계·부품 SKU·설계 승인 확인",
+        "개발/시제품·제품 출시·주문·현장 시운전을 별도 기록",
+        "랙 TDP·실제 사용전력·시설 전력 용량 분리"
+      ],
+      "alternative_explanations_ko": [
+        "효율 개선·전원 토폴로지·기존 silicon 소자 선택으로 GaN/SiC 요구가 다르게 움직임",
+        "새 데이터센터 대신 기존 전원 교체의 구매일 수 있음"
+      ],
+      "unknowns_ko": [
+        "구체 데이터센터 BOM·실제 공급 수량·납품 시점·기명 주문 미확인",
+        "RF GaN-on-SiC와 전력 SiC 소자를 같은 판매 제품으로 합치지 않음"
+      ],
+      "observations": [
+        {
+          "key": "dc_power_device_adoption",
+          "purpose_ko": "전력 요구가 제품 채택으로 바뀌는 단계 확인",
+          "free_collection_ko": "무료 전원 아키텍처/전력장비 발표·부품 데이터시트·현장 준공자료",
+          "fields": [
+            "site",
+            "voltage_architecture",
+            "conversion_stage",
+            "device_material",
+            "part_number",
+            "design_win_stage",
+            "commissioning_date"
+          ],
+          "source_ids": [],
+          "reused_references": [
+            "REF-NV-NAVITAS",
+            "REF-EATON-INFINEON"
+          ],
+          "value": null,
+          "unit": null,
+          "grain": null,
+          "limitation_ko": "제품 협업·명목 효율·설계 최대값은 현재 판매·실사용 전력과 다르다.",
+          "measurement_status": "COLLECTION_SPEC_NOT_COLLECTED",
+          "api_key_required": false
+        }
+      ],
+      "commercial_role_question_ko": "HBM 고객 수요를 전력 회사와 직접 거래로 잇지 않고 랙/OEM·전원 장비·시설 결정자를 거쳐 질문한다.",
+      "source_ids": [],
+      "reused_references": [
+        "REF-EATON-INFINEON",
+        "REF-NV-NAVITAS"
+      ],
+      "specific_named_purchase_order": null,
+      "actual_cash_paid": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "PROD-10-OPTICAL-INTERCONNECT",
+      "title_ko": "광 DSP/레이저 → 네트워크 연결 → AI 클러스터",
+      "start_axis": "startproduct",
+      "product_families": [
+        "광 DSP",
+        "광학/레이저",
+        "네트워크 반도체"
+      ],
+      "sectors": [
+        "AI",
+        "데이터센터",
+        "통신"
+      ],
+      "nodes": [
+        {
+          "id": "mrvl",
+          "label_ko": "Marvell",
+          "kind": "기업"
+        },
+        {
+          "id": "dsp",
+          "label_ko": "광/전기 DSP·retimer·DCI·Ethernet",
+          "kind": "제품",
+          "classification_axis": "networking_device"
+        },
+        {
+          "id": "aws",
+          "label_ko": "AWS",
+          "kind": "기업"
+        },
+        {
+          "id": "coh",
+          "label_ko": "Coherent 레이저/광 네트워크",
+          "kind": "제품",
+          "classification_axis": "optoelectronics"
+        },
+        {
+          "id": "nv",
+          "label_ko": "NVIDIA",
+          "kind": "기업"
+        },
+        {
+          "id": "cluster",
+          "label_ko": "AI 클러스터 연결",
+          "kind": "기술·서비스",
+          "classification_axis": "end_market"
+        }
+      ],
+      "edges": [
+        {
+          "from": "mrvl",
+          "to": "aws",
+          "type": "REUSED_MULTIGENERATION_AGREEMENT",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "기존 2024 협력 발표는 여러 네트워크·custom AI 제품군을 포함한다. Trainium3 개별 칩 BOM은 아니다.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-AWS-MARVELL"
+          ]
+        },
+        {
+          "from": "dsp",
+          "to": "cluster",
+          "type": "CONDITIONAL_LINK_REQUIREMENT",
+          "support_kind": "CONDITIONAL_MECHANISM",
+          "claim_ko": "네트워크 속도·거리·토폴로지에 따라 DSP/retimer/광 연결 요구가 달라진다.",
+          "source_ids": [],
+          "reused_references": []
+        },
+        {
+          "from": "coh",
+          "to": "nv",
+          "type": "REUSED_PURCHASE_COMMITMENT_CANDIDATE",
+          "support_kind": "REUSED_PRIMARY_CANDIDATE",
+          "claim_ko": "기존 전략 구매 약정·미래 capacity 권리 발표. 실제 주문/납품/현금과 분리.",
+          "source_ids": [],
+          "reused_references": [
+            "REF-NV-COHERENT"
+          ]
+        },
+        {
+          "from": "nv",
+          "to": "cluster",
+          "type": "CONDITIONAL_SYSTEM_DEPLOYMENT",
+          "support_kind": "CONDITIONAL_MECHANISM",
+          "claim_ko": "정확한 네트워크 설계·공급자 및 현장 설치 확인이 필요하다.",
+          "source_ids": [],
+          "reused_references": []
+        }
+      ],
+      "propagation_hypothesis_ko": "서버 간 통신 병목이 커질 때 링크 구성과 광/전기 부품 수요가 바뀔 수 있으나 제품군별 역할·토폴로지가 필요하다.",
+      "conditions_ko": [
+        "링크 속도·포트·거리·광/전기·토폴로지와 부품 SKU 매칭",
+        "구매 약정·예약 capacity·실제 납품·설치 분리",
+        "소프트웨어 통신 패턴·스위치/광 모듈 승인 확인"
+      ],
+      "alternative_explanations_ko": [
+        "노드 통합·통신 압축·기존 네트워크 활용이 링크 수요를 줄일 수 있음",
+        "컴퓨팅 증설보다 장거리 DCI·일반 통신 수요가 원인일 수 있음"
+      ],
+      "unknowns_ko": [
+        "특정 플랫폼의 레이저·DSP·광 모듈 BOM 및 실제 수량은 미확인"
+      ],
+      "observations": [
+        {
+          "key": "optical_link_topology",
+          "purpose_ko": "연결 수요의 물리 단위와 채택 확인",
+          "free_collection_ko": "무료 네트워크 아키텍처/광 모듈 데이터시트·공식 계약/출하 발표",
+          "fields": [
+            "platform",
+            "topology",
+            "link_Gbps",
+            "port_count",
+            "distance",
+            "optical_or_electrical",
+            "module_sku",
+            "purchase_stage"
+          ],
+          "source_ids": [],
+          "reused_references": [
+            "REF-AWS-MARVELL",
+            "REF-NV-COHERENT"
+          ],
+          "value": null,
+          "unit": null,
+          "grain": null,
+          "limitation_ko": "조달 약정 금액·포트 속도를 실제 출하·가동 링크로 대체하지 않는다.",
+          "measurement_status": "COLLECTION_SPEC_NOT_COLLECTED",
+          "api_key_required": false
+        }
+      ],
+      "commercial_role_question_ko": "클러스터 요구를 HBM·네트워크·광 부품의 서로 다른 구매자와 승인자에 나누어 묻는다.",
+      "source_ids": [],
+      "reused_references": [
+        "REF-AWS-MARVELL",
+        "REF-NV-COHERENT"
+      ],
+      "specific_named_purchase_order": null,
+      "actual_cash_paid": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false
+    },
+    {
+      "id": "PROD-11-GAN-RF",
+      "title_ko": "GaN-on-SiC RF PA → 5G/Satcom/레이더",
+      "start_axis": "startproduct",
+      "product_families": [
+        "RF",
+        "GaN-on-SiC RF 증폭기"
+      ],
+      "sectors": [
+        "통신",
+        "항공우주"
+      ],
+      "nodes": [
+        {
+          "id": "q",
+          "label_ko": "Qorvo",
+          "kind": "기업"
+        },
+        {
+          "id": "pa",
+          "label_ko": "QPA0524 GaN-on-SiC RF PA",
+          "kind": "제품",
+          "classification_axis": "RF_device"
+        },
+        {
+          "id": "radio",
+          "label_ko": "5G·위성통신·레이더 송신 기능",
+          "kind": "업무",
+          "classification_axis": "application_function"
+        },
+        {
+          "id": "system",
+          "label_ko": "통신/항공우주 시스템 설계자",
+          "kind": "업무",
+          "classification_axis": "end_market"
+        }
+      ],
+      "edges": [
+        {
+          "from": "q",
+          "to": "pa",
+          "type": "PRODUCT_SELLER",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "Qorvo가 생산 공정과 RF 증폭기 제품을 공개한다. 특정 물량 출하는 미확인.",
+          "source_ids": [
+            "SRC-ROUTE-QORVO-QPA0524"
+          ],
+          "reused_references": []
+        },
+        {
+          "from": "pa",
+          "to": "radio",
+          "type": "MANUFACTURER_APPLICATION_TARGET",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "5G/Satcom/radar 대상 기능을 명시한다. Space 방사선 인증/탑재 실적은 아니다.",
+          "source_ids": [
+            "SRC-ROUTE-QORVO-QPA0524"
+          ],
+          "reused_references": []
+        },
+        {
+          "from": "radio",
+          "to": "system",
+          "type": "CONDITIONAL_SYSTEM_ADOPTION",
+          "support_kind": "CONDITIONAL_MECHANISM",
+          "claim_ko": "주파수·선형성·전력·열·신뢰성 요구를 맞춘 기명 설계채택이 추가로 필요하다.",
+          "source_ids": [],
+          "reused_references": []
+        }
+      ],
+      "propagation_hypothesis_ko": "무선 시스템의 송신 요구가 해당 RF PA 설계채택으로 이어지면 GaN-on-SiC 디바이스 경로가 생긴다. AI GPU의 직접 원재료 관계는 아니다.",
+      "conditions_ko": [
+        "실제 요구 대역·회로·전력·열과 정확한 part number 확인",
+        "우주/항공 환경 인증·설계채택·기명 탑재·양산 주문 분리",
+        "소재·RF 공정·패키지 공급조건 확인"
+      ],
+      "alternative_explanations_ko": [
+        "다른 RF 주파수·GaAs/SiGe/silicon 소자·전력 결합 구조를 선택할 수 있음",
+        "지상 5G·군용 레이더와 위성통신 수요를 같은 주문으로 볼 수 없음"
+      ],
+      "unknowns_ko": [
+        "특정 항공기·위성·임무·구매자·실제 주문 모두 null",
+        "페이지 대역명/이득 수치 충돌을 해결하지 않아 정량 성능 비교 제외"
+      ],
+      "observations": [
+        {
+          "key": "rf_named_design_win",
+          "purpose_ko": "RF 기능적 용도에서 검증된 채택으로 좁히기",
+          "free_collection_ko": "무료 공식 제품 문서·시스템 제조사 탑재 발표·인증 자료",
+          "fields": [
+            "part_number",
+            "application",
+            "frequency_requirement",
+            "material_process",
+            "qualification_grade",
+            "named_program",
+            "design_in_stage"
+          ],
+          "source_ids": [
+            "SRC-ROUTE-QORVO-QPA0524"
+          ],
+          "reused_references": [],
+          "value": null,
+          "unit": null,
+          "grain": null,
+          "limitation_ko": "Production 표시는 특정 프로그램 주문이나 우주 인증을 뜻하지 않는다.",
+          "measurement_status": "COLLECTION_SPEC_NOT_COLLECTED",
+          "api_key_required": false
+        }
+      ],
+      "commercial_role_question_ko": "영업 대상은 RF 시스템 설계·인증 주체이며, 반도체 재료명만으로 HBM 고객과 연결하지 않는다.",
+      "source_ids": [
+        "SRC-ROUTE-QORVO-QPA0524"
+      ],
+      "reused_references": [],
+      "specific_named_purchase_order": null,
+      "actual_cash_paid": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false,
+      "named_program": null,
+      "named_aircraft": null,
+      "named_satellite": null,
+      "named_system_buyer": null,
+      "flight_adoption_confirmed": false
+    },
+    {
+      "id": "PROD-12-SPACE-POWER",
+      "title_ko": "방사선 대응 전원 IC → ASIC/FPGA 전원 → 우주 전자장치",
+      "start_axis": "startproduct",
+      "product_families": [
+        "아날로그",
+        "전원관리 IC",
+        "ASIC",
+        "FPGA"
+      ],
+      "sectors": [
+        "항공우주"
+      ],
+      "nodes": [
+        {
+          "id": "ti",
+          "label_ko": "Texas Instruments",
+          "kind": "기업"
+        },
+        {
+          "id": "buck",
+          "label_ko": "TPS7H4001-SP Space 등급 buck converter",
+          "kind": "제품",
+          "classification_axis": "power_management_IC"
+        },
+        {
+          "id": "eval",
+          "label_ko": "TPS7H4001EVM-CVAL 평가보드",
+          "kind": "제품",
+          "classification_axis": "evaluation_board"
+        },
+        {
+          "id": "logic",
+          "label_ko": "ASIC/FPGA 전원 레일",
+          "kind": "업무",
+          "classification_axis": "application_function"
+        },
+        {
+          "id": "space",
+          "label_ko": "우주 전자장치 설계/인증 주체",
+          "kind": "업무",
+          "classification_axis": "end_market"
+        }
+      ],
+      "edges": [
+        {
+          "from": "ti",
+          "to": "buck",
+          "type": "PRODUCT_SELLER",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "방사선 대응 Space 등급 전원 IC이며 해당 part number의 요구를 확인한다.",
+          "source_ids": [
+            "SRC-ROUTE-TI-TPS7H4001"
+          ],
+          "reused_references": []
+        },
+        {
+          "from": "buck",
+          "to": "eval",
+          "type": "EVALUATION_SUPPORT",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "평가보드로 point-of-load 전원 기능을 검토하는 단계.",
+          "source_ids": [
+            "SRC-ROUTE-TI-TPS7H4001"
+          ],
+          "reused_references": []
+        },
+        {
+          "from": "eval",
+          "to": "logic",
+          "type": "MANUFACTURER_EVALUATION_APPLICATION",
+          "support_kind": "NEW_OFFICIAL_ISSUER_REPRESENTATION",
+          "claim_ko": "ASIC/FPGA의 정밀 전원용 평가를 설명한다. 실제 위성 탑재 실적이 아니다.",
+          "source_ids": [
+            "SRC-ROUTE-TI-TPS7H4001"
+          ],
+          "reused_references": []
+        },
+        {
+          "from": "logic",
+          "to": "space",
+          "type": "CONDITIONAL_FLIGHT_QUALIFICATION",
+          "support_kind": "CONDITIONAL_MECHANISM",
+          "claim_ko": "임무별 방사선/온도/수명/품질 승인과 시스템 BOM 확인을 거쳐야 한다.",
+          "source_ids": [],
+          "reused_references": []
+        }
+      ],
+      "propagation_hypothesis_ko": "우주 ASIC/FPGA 설계 채택은 방사선·신뢰성 등급을 맞춘 전원부와 시험 요구로 연결될 수 있다.",
+      "conditions_ko": [
+        "정확한 소자·패키지·방사선 보증/온도·품질 등급 확인",
+        "평가·설계 승인·비행 검증·실제 납품을 분리",
+        "위성/항공기 임무와 구매·인증 법인을 확인"
+      ],
+      "alternative_explanations_ko": [
+        "상업용 평가 키트는 비행 BOM이 아닐 수 있음",
+        "대체 전원 IC·전원 구조·임무 요구가 선택을 바꿈"
+      ],
+      "unknowns_ko": [
+        "특정 위성·항공기·임무의 탑재·기명 주문·금액·출하 수량 미확인",
+        "상용 DDR/LPDDR를 같은 우주 등급·비행 승인 제품으로 확장하지 않음"
+      ],
+      "observations": [
+        {
+          "key": "space_part_qualification",
+          "purpose_ko": "제품 기능과 비행 검증의 공백 확인",
+          "free_collection_ko": "무료 TI 제품/데이터시트·시스템 기업 공식 임무/인증 발표",
+          "fields": [
+            "part_number",
+            "space_grade",
+            "qualification_standard",
+            "radiation_test_condition",
+            "input_V",
+            "Iout_max_A",
+            "evaluation_or_flight",
+            "named_program"
+          ],
+          "source_ids": [
+            "SRC-ROUTE-TI-TPS7H4001"
+          ],
+          "reused_references": [],
+          "value": null,
+          "unit": null,
+          "grain": null,
+          "limitation_ko": "수치 전원 사양·Space 등급·평가보드는 실제 임무 구매량이 아니다.",
+          "measurement_status": "COLLECTION_SPEC_NOT_COLLECTED",
+          "api_key_required": false
+        }
+      ],
+      "commercial_role_question_ko": "항공우주에서는 시스템 인증자·전원/ASIC 설계자·프로그램 구매자를 나누고 SK 메모리의 공급 가능성은 별도 인증 질문으로 남긴다.",
+      "source_ids": [
+        "SRC-ROUTE-TI-TPS7H4001"
+      ],
+      "reused_references": [],
+      "specific_named_purchase_order": null,
+      "actual_cash_paid": null,
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "governed_evidence": false,
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "predictive_signal_validated": false,
+      "named_program": null,
+      "named_aircraft": null,
+      "named_satellite": null,
+      "named_system_buyer": null,
+      "flight_adoption_confirmed": false
+    }
+  ],
+  "coverage": {
+    "new_source_count": 6,
+    "original_http_success_count": 5,
+    "normalized_web_only_count": 1,
+    "reused_reference_count": 18,
+    "route_count": 12,
+    "complete_industry_map": false,
+    "current_named_demand_or_orders_validated": false,
+    "continuous_collectors_running": false,
+    "remaining_gaps_ko": [
+      "제품별 실제 기명 주문·공급 비중·가격·설치/사용률 패널 없음",
+      "성숙 특화·우주/통신의 대표 기능 사례는 실제 개별 프로그램 공급망 전체를 뜻하지 않음",
+      "각 기술 변화가 메모리 매출보다 앞선다는 시간 선행성은 미검증"
+    ]
+  },
+  "originals_distribution": "Only bounded excerpts, public source receipts and references are published. Original response bodies and normalized review copies stay outside the public repository under work/benchmark/semiconductor_industry_routes/products.",
+  "next_task_ko": "제품별 경로를 거시 coverage 표와 연결해 누락된 고객·채택·공급 단계만 후속 수집 대상으로 고정한다."
+}

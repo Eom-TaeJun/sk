@@ -17,7 +17,8 @@ Build an SK hynix-centered customer, product and supply-chain knowledge base for
 - Macro learning framework (2026-10-04): product/business-model/process/end-market/geography structure and memory-cycle measurement plans are documented
 - First memory observations (2026-10-04): SK hynix/Samsung calendar 2026Q2 inventory, DRAM/NAND bit-shipment/ASP and investment disclosures are candidate-only; a recurring/historical panel and empirical leadingness remain unbuilt
 - AI technology-to-product framework (2026-10-04): seven workload/bottleneck/product links reuse GB300, DDR5 and SSD examples; software conditions, backend/version differences and adoption gaps remain explicit, without customer demand quantification
-- Independent purpose review (2026-10-04): start/middle/handoff management checkpoints were performed; next learning case is server DDR5 with separate Intel Xeon 6 certification and Dell R770 exhibition examples
+- Industry-route review (2026-10-05): product and manufacturing-function axes link AI/data centers, power, RF/space applications and policy/cooperation cases; propagation remains conditional and exact customer/site/order joins stay explicit
+- Independent purpose review (2026-10-05): start/middle/handoff management checkpoints distinguish chip design, manufacturing and separate data-center versus mission operation; return to the server DDR5 customer/product case after this wider structure review
 - Bounded customer-commitment collection: purpose-first single-case capture/replay, with source provenance and separate failed attempts; not continuous monitoring or empirical validation
 - H1 metrics, lead/lag, realization rates, outcome analysis and verdict: not yet approved; require Gate 6 dataset freeze
 - H2: only after a credible H1 minimum pipeline
@@ -48,6 +49,7 @@ Do not treat deleted, historical, or interrupted H1 experiment artifacts as appr
 - Macro industry structure and memory-cycle collection contracts: `docs/research/supply_chain/semiconductor_macro_structure.md`, `docs/research/supply_chain/memory_cycle_signal_plan.md`
 - Same-quarter observations and independent purpose review: `docs/research/supply_chain/memory_observation_panel_2026q2.md`, `docs/research/supply_chain/research_convergence_review.md`
 - AI workload, memory requirement, adoption and supply relationships: `docs/research/supply_chain/ai_technology_memory_links.md`
+- Product/function routes across industries, power regulation and cross-border cooperation: `docs/research/supply_chain/semiconductor_industry_transmission_routes.md`
 - First customer/product card, bounded source receipts and unresolved specification differences: `docs/research/supply_chain/customer_product_cards/hbm_nvidia_gb300.md`
 - Public candidate data and hashes: `data/research/semiconductor_supply_chain/2026-10-03/manifest.json`
 - Economic question and single-case boundaries: `docs/research/supply_chain/decision_purpose.md`
