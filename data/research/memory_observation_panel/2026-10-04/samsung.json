@@ -1,0 +1,810 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-04",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "company": {
+    "legal_name": "Samsung Electronics Co., Ltd.",
+    "security_mapping_used": false,
+    "country_of_parent": "Korea",
+    "comparison_role": "Competitor product/industry learning; not stock investment ranking"
+  },
+  "learning_purpose": "하이닉스 영업·상품기획 관점에서 동일 calendar quarter의 공개 범위·제품 믹스·공급 실행 질문을 비교한다.",
+  "target_period": {
+    "start": "2026-04-01",
+    "end": "2026-06-30",
+    "label": "calendar_2026Q2",
+    "fiscal_period_alignment": "Samsung Electronics calendar-quarter 2Q26"
+  },
+  "additional_periods": {
+    "stock": {
+      "as_of": "2026-06-30",
+      "label": "2026Q2_END_STOCK",
+      "fiscal_period_alignment": "Period-end stock, not quarterly flow"
+    },
+    "ytd_cash_flow": {
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "label": "calendar_2026H1_YTD",
+      "fiscal_period_alignment": "Six-month period ended June 30, 2026; not standalone Q2"
+    }
+  },
+  "primary_source_count": 3,
+  "acquisition_provenance_count": 3,
+  "observation_count": 12,
+  "sources": [
+    {
+      "requested_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_2Q_conference_eng.pdf",
+      "retrieved_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_2Q_conference_eng.pdf",
+      "retrieved_at": "2026-10-04T12:21:46.847881+00:00",
+      "response_status": 200,
+      "sha256": "e90b8e4829403339206fa77821aeadd71e39a611f3830a4cbcd349321de9e0cf",
+      "byte_length": 3186227,
+      "source_id": "SRC-MC-SAM26Q2-PRESENTATION",
+      "title": "Samsung Electronics 2Q 2026 Earnings Call presentation",
+      "source_role": "issuer_financial_presentation",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "content_type": "application/pdf",
+      "page_count": 16,
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "http_last_modified": "Wed, 29 Jul 2026 23:49:38 GMT",
+      "publication_date_displayed": null,
+      "publication_date_note": "The direct PDF has no independently verified first-publication timestamp. HTTP Last-Modified is retained separately and is not treated as publication date.",
+      "associated_earnings_release_date": "2026-07-30",
+      "associated_release_date_source_url": "https://www.samsung.com/global/ir/reports-disclosures/public-disclosure-view.84745/",
+      "review_status": "Presentation states it precedes completion of external review; preserve this preliminary publication status.",
+      "original_excerpts": [
+        {
+          "text": "Purchase of PP&E",
+          "locator": "PDF physical page 15 / Appendix 4: Cash Flow (Summary), row label"
+        }
+      ],
+      "english_verbatim_word_count": 3
+    },
+    {
+      "requested_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_con_quarter02_all.pdf",
+      "retrieved_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_con_quarter02_all.pdf",
+      "retrieved_at": "2026-10-04T12:21:48.051326+00:00",
+      "response_status": 200,
+      "sha256": "a65ba9eed3eea69dad3f1d870ce433f1b6144934b18ffe1d3308554f449cb9fc",
+      "byte_length": 1208833,
+      "source_id": "SRC-MC-SAM26Q2-FINANCIALS",
+      "title": "Samsung Electronics Co., Ltd. and subsidiaries: Interim Consolidated Financial Statements",
+      "source_role": "issuer_reviewed_consolidated_financial_statements",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "content_type": "application/pdf",
+      "page_count": 69,
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "http_last_modified": "Mon, 31 Aug 2026 11:40:43 GMT",
+      "publication_date_displayed": null,
+      "publication_date_note": "The direct PDF has no independently verified first-publication timestamp. HTTP Last-Modified is retained separately and is not treated as publication date.",
+      "review_report_date": "2026-08-13",
+      "review_report_date_locator": "PDF physical page 4 / printed page 2",
+      "review_status": "Independent auditors interim review, not a full audit opinion.",
+      "original_excerpts": [
+        {
+          "text": "Inventories",
+          "locator": "PDF physical page 5 / printed page 3, current-assets row"
+        },
+        {
+          "text": "Acquisition of property, plant and equipment",
+          "locator": "PDF physical page 14 / printed page 12, investing-activities row"
+        }
+      ],
+      "english_verbatim_word_count": 7
+    },
+    {
+      "requested_url": "https://irsvc.teletogether.com/sec/pdf/2026Q2_script_eng.pdf?1",
+      "retrieved_url": "https://irsvc.teletogether.com/sec/pdf/2026Q2_script_eng.pdf?1",
+      "retrieved_at": "2026-10-04T12:26:08.966379+00:00",
+      "response_status": 200,
+      "sha256": "e5534ba776267a2bf8a199a0bf81421e9e50f22d8805a0faa52bc4481c8be4ef",
+      "byte_length": 596279,
+      "source_id": "SRC-MC-SAM26Q2-SCRIPT",
+      "title": "Samsung Electronics 2026 Q2 Earnings Call audio script",
+      "source_role": "issuer_script_on_officially_linked_webcast_provider",
+      "content_hash_type": "SHA256_RAW_HTTP_RESPONSE_BODY",
+      "content_type": "application/pdf",
+      "page_count": 38,
+      "raw_original_redistributed": false,
+      "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "http_last_modified": "Thu, 06 Aug 2026 04:09:45 GMT",
+      "publication_date_displayed": null,
+      "publication_date_note": "The direct PDF has no independently verified first-publication timestamp. HTTP Last-Modified is retained separately and is not treated as publication date.",
+      "earnings_call_event_date": "2026-07-30",
+      "event_date_note": "Associated Samsung IR earnings release; exact script publication date is not established.",
+      "discovery_path_verified": true,
+      "queryless_capture_sha256": "e5534ba776267a2bf8a199a0bf81421e9e50f22d8805a0faa52bc4481c8be4ef",
+      "linked_query_capture_same_bytes": true,
+      "original_excerpts": [
+        {
+          "text": "Capex for the second quarter was 16.8 trillion won",
+          "locator": "PDF physical page 6 / printed 6 of 38, Daniel Oh capital expenditure update"
+        }
+      ],
+      "english_verbatim_word_count": 18
+    }
+  ],
+  "acquisition_provenance": [
+    {
+      "requested_url": "https://www.samsung.com/global/ir/financial-information/earnings-release/",
+      "retrieved_url": "https://www.samsung.com/global/ir/financial-information/earnings-release/",
+      "retrieved_at": "2026-10-04T12:26:08.561010+00:00",
+      "response_status": 200,
+      "sha256": "90fb650d1c43fe5cb50f53d82cf1909235fccc33bd6e5f27db0fa25e1868413e",
+      "byte_length": 211043,
+      "provenance_id": "SAM26Q2-ROUTE-IR",
+      "role": "Samsung official earnings release index links to provider webcast",
+      "document_role": "DISCOVERY_SUPPORT_NOT_METRIC_SOURCE",
+      "raw_original_redistributed": false
+    },
+    {
+      "requested_url": "https://irsvc.teletogether.com/sec/2026Q2/eng/eng.php",
+      "retrieved_url": "https://irsvc.teletogether.com/sec/2026Q2/eng/eng.php",
+      "retrieved_at": "2026-10-04T12:21:49.772773+00:00",
+      "response_status": 200,
+      "sha256": "66561f6c0d9f51daf56d4040d8f679a2b14eaf7ed8646eb2398750dac1f08c27",
+      "byte_length": 3367,
+      "provenance_id": "SAM26Q2-ROUTE-ENTRY",
+      "role": "Linked 2026Q2 webcast entry redirects to current player",
+      "document_role": "DISCOVERY_SUPPORT_NOT_METRIC_SOURCE",
+      "raw_original_redistributed": false
+    },
+    {
+      "requested_url": "https://irsvc.teletogether.com/sec/sec.php?c=sec&y=3629",
+      "retrieved_url": "https://irsvc.teletogether.com/sec/sec.php?c=sec&y=3629",
+      "retrieved_at": "2026-10-04T12:24:59.750989+00:00",
+      "response_status": 200,
+      "sha256": "30ed6221c41ae56dee21fd3c3adc89c29b92ac8a8ab10b0bc65c4f1d94ccc0b0",
+      "byte_length": 13923,
+      "provenance_id": "SAM26Q2-ROUTE-PLAYER",
+      "role": "Player contains Audio Script Download link",
+      "document_role": "DISCOVERY_SUPPORT_NOT_METRIC_SOURCE",
+      "raw_original_redistributed": false
+    }
+  ],
+  "source_discovery_chain": {
+    "official_ir_index": "https://www.samsung.com/global/ir/financial-information/earnings-release/",
+    "official_index_linked_webcast": "https://irsvc.teletogether.com/sec/2026Q2/eng/eng.php",
+    "observed_player_redirect": "https://irsvc.teletogether.com/sec/sec.php?c=sec&y=3629",
+    "observed_script_href": "pdf/2026Q2_script_eng.pdf?1",
+    "resolved_script_download": "https://irsvc.teletogether.com/sec/pdf/2026Q2_script_eng.pdf?1",
+    "exact_linked_bytes_match_queryless_capture": true
+  },
+  "observations": [
+    {
+      "observation_id": "SAM26Q2-MC07-CON-INVENTORY",
+      "metric_id": "MC07",
+      "label_ko": "삼성전자 연결 총재고 장부금액",
+      "source_ids": [
+        "SRC-MC-SAM26Q2-FINANCIALS"
+      ],
+      "locators": [
+        {
+          "source_id": "SRC-MC-SAM26Q2-FINANCIALS",
+          "pdf_physical_page": 5,
+          "printed_page": "3",
+          "section": "Interim consolidated statements of financial position / Inventories / June 30, 2026 KRW column"
+        },
+        {
+          "source_id": "SRC-MC-SAM26Q2-FINANCIALS",
+          "pdf_physical_page": 34,
+          "printed_page": "32",
+          "section": "Note 5 Inventories / Total carrying amount / June 30, 2026"
+        }
+      ],
+      "value": 71389118,
+      "raw_text": "71,389,118",
+      "unit": "KRW_million",
+      "currency": "KRW",
+      "period": {
+        "as_of": "2026-06-30",
+        "label": "2026Q2_END_STOCK",
+        "fiscal_period_alignment": "Period-end stock, not quarterly flow"
+      },
+      "period_basis": "STOCK",
+      "scope": "Samsung Electronics Co., Ltd. and all consolidated subsidiaries; all businesses",
+      "status": "OBSERVED_PUBLIC_COMPANY_DISCLOSURE",
+      "actual_or_guidance": "ACTUAL_REPORTED",
+      "known_at": null,
+      "known_at_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date.",
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "predictive_validity_established": false,
+      "definition": "재고 평가충당금 반영 후 연결 장부금액; 총삼성전자 값이며 메모리·DS 전용 재고가 아님.",
+      "cross_company_comparability": "전체 삼성전자 범위에는 모바일·가전·디스플레이·Harman 등도 포함되므로 SK하이닉스 메모리 중심 재고와 동일 기능 범위로 직접 비교하지 않는다.",
+      "visual_review": "PDF physical page 5 rendered and read; note 5 numeric row checked in extracted text.",
+      "independent_crosscheck": {
+        "source_id": "SRC-MC-SAM26Q2-PRESENTATION",
+        "pdf_physical_page": 14,
+        "value": 71389.1,
+        "unit": "KRW_billion",
+        "precision": "presentation rounded summary",
+        "same_scope": true,
+        "count_as_additional_observation": false
+      }
+    },
+    {
+      "observation_id": "SAM26Q2-MC07-DS-INVENTORY-MISSING",
+      "metric_id": "MC07",
+      "label_ko": "DS 부문 재고 장부금액 미발견",
+      "source_ids": [
+        "SRC-MC-SAM26Q2-FINANCIALS",
+        "SRC-MC-SAM26Q2-PRESENTATION",
+        "SRC-MC-SAM26Q2-SCRIPT"
+      ],
+      "locators": [
+        {
+          "source_id": "SRC-MC-SAM26Q2-FINANCIALS",
+          "pdf_physical_page": 34,
+          "printed_page": "32",
+          "section": "Note 5 inventories, total group breakdown"
+        },
+        {
+          "source_id": "SRC-MC-SAM26Q2-FINANCIALS",
+          "pdf_physical_page": 63,
+          "printed_page": "61",
+          "section": "Note 27 Segment information; reported segment dimensions"
+        },
+        {
+          "source_id": "SRC-MC-SAM26Q2-SCRIPT",
+          "pdf_physical_page": 9,
+          "printed_page": "9 / 38",
+          "section": "Memory outlook qualitative inventory commentary; no separate carrying amount"
+        }
+      ],
+      "value": null,
+      "raw_text": null,
+      "unit": null,
+      "currency": null,
+      "period": {
+        "as_of": "2026-06-30",
+        "label": "2026Q2_END_STOCK",
+        "fiscal_period_alignment": "Period-end stock, not quarterly flow"
+      },
+      "period_basis": "STOCK",
+      "scope": "Samsung DS 부문",
+      "status": "DISCLOSURE_NOT_FOUND_IN_REVIEWED_SOURCES",
+      "actual_or_guidance": null,
+      "known_at": null,
+      "known_at_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date.",
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "predictive_validity_established": false,
+      "definition": "검토한 3개 원문에서 해당 범위의 2026-06-30 재고 장부금액을 찾지 못했다. 전 세계 모든 공개자료에 없다는 주장이 아니다.",
+      "missing_reason": "Reviewed sources give consolidated all-business inventory and qualitative memory inventory commentary; no scoped carrying amount found.",
+      "numeric_zero_imputed": false
+    },
+    {
+      "observation_id": "SAM26Q2-MC07-MEM-INVENTORY-MISSING",
+      "metric_id": "MC07",
+      "label_ko": "메모리 사업 재고 장부금액 미발견",
+      "source_ids": [
+        "SRC-MC-SAM26Q2-FINANCIALS",
+        "SRC-MC-SAM26Q2-PRESENTATION",
+        "SRC-MC-SAM26Q2-SCRIPT"
+      ],
+      "locators": [
+        {
+          "source_id": "SRC-MC-SAM26Q2-FINANCIALS",
+          "pdf_physical_page": 34,
+          "printed_page": "32",
+          "section": "Note 5 inventories, total group breakdown"
+        },
+        {
+          "source_id": "SRC-MC-SAM26Q2-FINANCIALS",
+          "pdf_physical_page": 63,
+          "printed_page": "61",
+          "section": "Note 27 Segment information; reported segment dimensions"
+        },
+        {
+          "source_id": "SRC-MC-SAM26Q2-SCRIPT",
+          "pdf_physical_page": 9,
+          "printed_page": "9 / 38",
+          "section": "Memory outlook qualitative inventory commentary; no separate carrying amount"
+        }
+      ],
+      "value": null,
+      "raw_text": null,
+      "unit": null,
+      "currency": null,
+      "period": {
+        "as_of": "2026-06-30",
+        "label": "2026Q2_END_STOCK",
+        "fiscal_period_alignment": "Period-end stock, not quarterly flow"
+      },
+      "period_basis": "STOCK",
+      "scope": "Samsung 메모리 사업",
+      "status": "DISCLOSURE_NOT_FOUND_IN_REVIEWED_SOURCES",
+      "actual_or_guidance": null,
+      "known_at": null,
+      "known_at_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date.",
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "predictive_validity_established": false,
+      "definition": "검토한 3개 원문에서 해당 범위의 2026-06-30 재고 장부금액을 찾지 못했다. 전 세계 모든 공개자료에 없다는 주장이 아니다.",
+      "missing_reason": "Reviewed sources give consolidated all-business inventory and qualitative memory inventory commentary; no scoped carrying amount found.",
+      "numeric_zero_imputed": false
+    },
+    {
+      "observation_id": "SAM26Q2-MC08-DRAM-BIT-QOQ",
+      "metric_id": "MC08",
+      "label_ko": "DRAM 실제 QoQ 비트 출하 변화",
+      "source_ids": [
+        "SRC-MC-SAM26Q2-SCRIPT"
+      ],
+      "locators": [
+        {
+          "source_id": "SRC-MC-SAM26Q2-SCRIPT",
+          "pdf_physical_page": 8,
+          "printed_page": "8 / 38",
+          "section": "Memory Global Sales & Marketing prepared remarks, paragraph starting with second-quarter DRAM bit shipments; following NAND and ASP sentence"
+        }
+      ],
+      "value": null,
+      "raw_text": "low teens",
+      "unit": "percent_change_QoQ_reported_band",
+      "currency": null,
+      "period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar_2026Q2",
+        "fiscal_period_alignment": "Samsung Electronics calendar-quarter 2Q26"
+      },
+      "period_basis": "FLOW_CHANGE_QOQ",
+      "scope": "Samsung Memory business / DRAM",
+      "status": "REPORTED_BAND",
+      "actual_or_guidance": "ACTUAL_REPORTED",
+      "known_at": null,
+      "known_at_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date.",
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "predictive_validity_established": false,
+      "reported_band": "low teens",
+      "reported_direction": "INCREASE",
+      "value_lower": null,
+      "value_upper": null,
+      "band_numerically_defined_by_source": false,
+      "baseline_period": {
+        "start": "2026-01-01",
+        "end": "2026-03-31"
+      },
+      "definition": "회사가 공개한 정성 구간을 원문 그대로 보존. 절대 출하 비트/단가, numeric bounds 또는 midpoint를 만들지 않는다.",
+      "product_mix_adjusted": null,
+      "visual_review": "PDF physical page 8 rendered and read.",
+      "guidance_exclusion": "The separate third-quarter bit-growth outlook on PDF page 9 is future guidance and is excluded from this Q2 actual observation."
+    },
+    {
+      "observation_id": "SAM26Q2-MC08-NAND-BIT-QOQ",
+      "metric_id": "MC08",
+      "label_ko": "NAND 실제 QoQ 비트 출하 변화",
+      "source_ids": [
+        "SRC-MC-SAM26Q2-SCRIPT"
+      ],
+      "locators": [
+        {
+          "source_id": "SRC-MC-SAM26Q2-SCRIPT",
+          "pdf_physical_page": 8,
+          "printed_page": "8 / 38",
+          "section": "Memory Global Sales & Marketing prepared remarks, paragraph starting with second-quarter DRAM bit shipments; following NAND and ASP sentence"
+        }
+      ],
+      "value": null,
+      "raw_text": "low-single-digit",
+      "unit": "percent_change_QoQ_reported_band",
+      "currency": null,
+      "period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar_2026Q2",
+        "fiscal_period_alignment": "Samsung Electronics calendar-quarter 2Q26"
+      },
+      "period_basis": "FLOW_CHANGE_QOQ",
+      "scope": "Samsung Memory business / NAND",
+      "status": "REPORTED_BAND",
+      "actual_or_guidance": "ACTUAL_REPORTED",
+      "known_at": null,
+      "known_at_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date.",
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "predictive_validity_established": false,
+      "reported_band": "low-single-digit",
+      "reported_direction": "INCREASE",
+      "value_lower": null,
+      "value_upper": null,
+      "band_numerically_defined_by_source": false,
+      "baseline_period": {
+        "start": "2026-01-01",
+        "end": "2026-03-31"
+      },
+      "definition": "회사가 공개한 정성 구간을 원문 그대로 보존. 절대 출하 비트/단가, numeric bounds 또는 midpoint를 만들지 않는다.",
+      "product_mix_adjusted": null,
+      "visual_review": "PDF physical page 8 rendered and read.",
+      "guidance_exclusion": "The separate third-quarter bit-growth outlook on PDF page 9 is future guidance and is excluded from this Q2 actual observation."
+    },
+    {
+      "observation_id": "SAM26Q2-MC09-DRAM-ASP-QOQ",
+      "metric_id": "MC09",
+      "label_ko": "DRAM 실제 QoQ ASP 변화",
+      "source_ids": [
+        "SRC-MC-SAM26Q2-SCRIPT"
+      ],
+      "locators": [
+        {
+          "source_id": "SRC-MC-SAM26Q2-SCRIPT",
+          "pdf_physical_page": 8,
+          "printed_page": "8 / 38",
+          "section": "Memory Global Sales & Marketing prepared remarks, paragraph starting with second-quarter DRAM bit shipments; following NAND and ASP sentence"
+        }
+      ],
+      "value": null,
+      "raw_text": "mid 40%",
+      "unit": "percent_change_QoQ_reported_band",
+      "currency": null,
+      "period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar_2026Q2",
+        "fiscal_period_alignment": "Samsung Electronics calendar-quarter 2Q26"
+      },
+      "period_basis": "FLOW_CHANGE_QOQ",
+      "scope": "Samsung Memory business / DRAM",
+      "status": "REPORTED_BAND",
+      "actual_or_guidance": "ACTUAL_REPORTED",
+      "known_at": null,
+      "known_at_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date.",
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "predictive_validity_established": false,
+      "reported_band": "mid 40%",
+      "reported_direction": "INCREASE",
+      "value_lower": null,
+      "value_upper": null,
+      "band_numerically_defined_by_source": false,
+      "baseline_period": {
+        "start": "2026-01-01",
+        "end": "2026-03-31"
+      },
+      "definition": "회사가 공개한 정성 구간을 원문 그대로 보존. 절대 출하 비트/단가, numeric bounds 또는 midpoint를 만들지 않는다.",
+      "product_mix_adjusted": null,
+      "visual_review": "PDF physical page 8 rendered and read.",
+      "guidance_exclusion": "The separate third-quarter bit-growth outlook on PDF page 9 is future guidance and is excluded from this Q2 actual observation."
+    },
+    {
+      "observation_id": "SAM26Q2-MC09-NAND-ASP-QOQ",
+      "metric_id": "MC09",
+      "label_ko": "NAND 실제 QoQ ASP 변화",
+      "source_ids": [
+        "SRC-MC-SAM26Q2-SCRIPT"
+      ],
+      "locators": [
+        {
+          "source_id": "SRC-MC-SAM26Q2-SCRIPT",
+          "pdf_physical_page": 8,
+          "printed_page": "8 / 38",
+          "section": "Memory Global Sales & Marketing prepared remarks, paragraph starting with second-quarter DRAM bit shipments; following NAND and ASP sentence"
+        }
+      ],
+      "value": null,
+      "raw_text": "high 60%",
+      "unit": "percent_change_QoQ_reported_band",
+      "currency": null,
+      "period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar_2026Q2",
+        "fiscal_period_alignment": "Samsung Electronics calendar-quarter 2Q26"
+      },
+      "period_basis": "FLOW_CHANGE_QOQ",
+      "scope": "Samsung Memory business / NAND",
+      "status": "REPORTED_BAND",
+      "actual_or_guidance": "ACTUAL_REPORTED",
+      "known_at": null,
+      "known_at_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date.",
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "predictive_validity_established": false,
+      "reported_band": "high 60%",
+      "reported_direction": "INCREASE",
+      "value_lower": null,
+      "value_upper": null,
+      "band_numerically_defined_by_source": false,
+      "baseline_period": {
+        "start": "2026-01-01",
+        "end": "2026-03-31"
+      },
+      "definition": "회사가 공개한 정성 구간을 원문 그대로 보존. 절대 출하 비트/단가, numeric bounds 또는 midpoint를 만들지 않는다.",
+      "product_mix_adjusted": null,
+      "visual_review": "PDF physical page 8 rendered and read.",
+      "guidance_exclusion": "The separate third-quarter bit-growth outlook on PDF page 9 is future guidance and is excluded from this Q2 actual observation."
+    },
+    {
+      "observation_id": "SAM26Q2-MC16-Q2-CASH-PPE",
+      "metric_id": "MC16",
+      "label_ko": "Q2 연결 유형자산 구입 현금지출 요약",
+      "source_ids": [
+        "SRC-MC-SAM26Q2-PRESENTATION"
+      ],
+      "locators": [
+        {
+          "source_id": "SRC-MC-SAM26Q2-PRESENTATION",
+          "pdf_physical_page": 15,
+          "section": "Appendix 4 Cash Flow (Summary) / Purchase of PP&E / 2Q26 column; unit KRW trillion"
+        }
+      ],
+      "value": 14.11,
+      "raw_text": "(14.11)",
+      "unit": "KRW_trillion",
+      "currency": "KRW",
+      "period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar_2026Q2",
+        "fiscal_period_alignment": "Samsung Electronics calendar-quarter 2Q26"
+      },
+      "period_basis": "CASH_FLOW_OUTFLOW",
+      "scope": "Samsung Electronics consolidated all-business PP&E acquisition cash expenditure",
+      "status": "OBSERVED_PUBLIC_COMPANY_DISCLOSURE",
+      "actual_or_guidance": "ACTUAL_REPORTED",
+      "known_at": null,
+      "known_at_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date.",
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "predictive_validity_established": false,
+      "signed_original_value": -14.11,
+      "display_precision": "0.01 KRW trillion",
+      "definition": "발표자료의 분기 현금흐름표 요약상 유형자산 구입 지출. 회사가 따로 보고한 설비투자 CAPEX 16.8조원과 동일 정의로 처리하지 않는다.",
+      "review_status": "Pre-external-review presentation summary; rounded.",
+      "reconciliation_to_reported_capex": "NOT_RECONCILED_BY_PUBLIC_SOURCE",
+      "source_reported_metric": "Purchase of PP&E",
+      "visual_review": "Text extracted; root independent table render review requested."
+    },
+    {
+      "observation_id": "SAM26Q2-MC16-YTD-CASH-PPE",
+      "metric_id": "MC16",
+      "label_ko": "상반기 연결 유형자산 취득 현금지출",
+      "source_ids": [
+        "SRC-MC-SAM26Q2-FINANCIALS"
+      ],
+      "locators": [
+        {
+          "source_id": "SRC-MC-SAM26Q2-FINANCIALS",
+          "pdf_physical_page": 14,
+          "printed_page": "12",
+          "section": "Interim consolidated statements of cash flows / Acquisition of property, plant and equipment / 2026 KRW column; six months ended June 30"
+        }
+      ],
+      "value": 31234818,
+      "raw_text": "(31,234,818)",
+      "unit": "KRW_million",
+      "currency": "KRW",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "label": "calendar_2026H1_YTD",
+        "fiscal_period_alignment": "Six-month period ended June 30, 2026; not standalone Q2"
+      },
+      "period_basis": "CASH_FLOW_OUTFLOW",
+      "scope": "Samsung Electronics consolidated all-business PP&E acquisition cash expenditure",
+      "status": "OBSERVED_PUBLIC_COMPANY_DISCLOSURE",
+      "actual_or_guidance": "ACTUAL_REPORTED",
+      "known_at": null,
+      "known_at_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date.",
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "predictive_validity_established": false,
+      "signed_original_value": -31234818,
+      "definition": "2026-01-01~06-30 누적 현금흐름이다. 분기 현금지출로 라벨링하거나 임의 Q1 차분을 하지 않는다.",
+      "review_status": "Independent reviewed interim consolidated financial statements.",
+      "reconciliation_to_reported_capex": "NOT_RECONCILED_BY_PUBLIC_SOURCE",
+      "visual_review": "PDF physical page 14 rendered and read; period heading and KRW/USD columns checked."
+    },
+    {
+      "observation_id": "SAM26Q2-MC16-Q2-REPORTED-CAPEX",
+      "metric_id": "MC16",
+      "label_ko": "Q2 회사 보고 설비투자 CAPEX",
+      "source_ids": [
+        "SRC-MC-SAM26Q2-SCRIPT"
+      ],
+      "locators": [
+        {
+          "source_id": "SRC-MC-SAM26Q2-SCRIPT",
+          "pdf_physical_page": 6,
+          "printed_page": "6 / 38",
+          "section": "Daniel Oh capital expenditure update, total capex and DS allocation sentences"
+        }
+      ],
+      "value": 16.8,
+      "raw_text": "16.8",
+      "unit": "KRW_trillion",
+      "currency": "KRW",
+      "period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar_2026Q2",
+        "fiscal_period_alignment": "Samsung Electronics calendar-quarter 2Q26"
+      },
+      "period_basis": "REPORTED_CAPEX_FLOW_DEFINITION_NOT_CASH_RECONCILED",
+      "scope": "Samsung Electronics company-wide reported capital expenditure",
+      "status": "OBSERVED_PUBLIC_COMPANY_DISCLOSURE",
+      "actual_or_guidance": "ACTUAL_REPORTED",
+      "known_at": null,
+      "known_at_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date.",
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "predictive_validity_established": false,
+      "definition": "회사의 분기 설비투자 보고값. 회계상 PP&E 취득 현금지출과 원문에서 reconciliation되지 않았으므로 현금 CAPEX로 치환하지 않는다.",
+      "allocation_to_memory": null,
+      "cash_non_cash_composition": "NOT_VERIFIED_IN_REVIEWED_SOURCE",
+      "reconciliation_to_cash_ppe": "NOT_RECONCILED_BY_PUBLIC_SOURCE"
+    },
+    {
+      "observation_id": "SAM26Q2-MC16-Q2-DS-REPORTED-CAPEX",
+      "metric_id": "MC16",
+      "label_ko": "Q2 DS 부문 보고 설비투자 CAPEX",
+      "source_ids": [
+        "SRC-MC-SAM26Q2-SCRIPT"
+      ],
+      "locators": [
+        {
+          "source_id": "SRC-MC-SAM26Q2-SCRIPT",
+          "pdf_physical_page": 6,
+          "printed_page": "6 / 38",
+          "section": "Daniel Oh capital expenditure update, total capex and DS allocation sentences"
+        }
+      ],
+      "value": 15.4,
+      "raw_text": "15.4",
+      "unit": "KRW_trillion",
+      "currency": "KRW",
+      "period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar_2026Q2",
+        "fiscal_period_alignment": "Samsung Electronics calendar-quarter 2Q26"
+      },
+      "period_basis": "REPORTED_CAPEX_FLOW_DEFINITION_NOT_CASH_RECONCILED",
+      "scope": "Samsung Device Solutions division; Memory plus System LSI and Foundry, not memory-only",
+      "status": "OBSERVED_PUBLIC_COMPANY_DISCLOSURE",
+      "actual_or_guidance": "ACTUAL_REPORTED",
+      "known_at": null,
+      "known_at_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date.",
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "predictive_validity_established": false,
+      "definition": "회사의 분기 설비투자 보고값. 회계상 PP&E 취득 현금지출과 원문에서 reconciliation되지 않았으므로 현금 CAPEX로 치환하지 않는다.",
+      "allocation_to_memory": null,
+      "cash_non_cash_composition": "NOT_VERIFIED_IN_REVIEWED_SOURCE",
+      "reconciliation_to_cash_ppe": "NOT_RECONCILED_BY_PUBLIC_SOURCE"
+    },
+    {
+      "observation_id": "SAM26Q2-MC16-Q2-MEMORY-CAPEX-QUALITATIVE",
+      "metric_id": "MC16",
+      "label_ko": "메모리 CAPEX QoQ 증가 설명; 별도 금액 미발견",
+      "source_ids": [
+        "SRC-MC-SAM26Q2-SCRIPT"
+      ],
+      "locators": [
+        {
+          "source_id": "SRC-MC-SAM26Q2-SCRIPT",
+          "pdf_physical_page": 6,
+          "printed_page": "6 / 38",
+          "section": "Capital expenditure update, Memory capex paragraph; separate Foundry paragraph follows"
+        }
+      ],
+      "value": null,
+      "raw_text": "increased quarter-on-quarter",
+      "unit": null,
+      "currency": null,
+      "period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar_2026Q2",
+        "fiscal_period_alignment": "Samsung Electronics calendar-quarter 2Q26"
+      },
+      "period_basis": "REPORTED_CAPEX_FLOW_QUALITATIVE_CHANGE",
+      "scope": "Samsung Memory business",
+      "status": "OBSERVED_QUALITATIVE_NUMERIC_AMOUNT_NOT_FOUND",
+      "actual_or_guidance": "ACTUAL_REPORTED",
+      "known_at": null,
+      "known_at_note": "First public availability of the exact captured version is not verified; retrieval timestamp is not the economic observation date.",
+      "intake_status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+      "human_evidence_approved": false,
+      "h1_admitted": false,
+      "governed_evidence": false,
+      "predictive_validity_established": false,
+      "reported_direction": "INCREASE",
+      "numeric_amount_status": "DISCLOSURE_NOT_FOUND_IN_REVIEWED_SOURCES",
+      "definition": "원문은 메모리 투자가 전분기 대비 증가했다고 설명하지만 검토한 3개 자료에서 Q2 메모리 전용 금액을 찾지 못했다. DS 15.4조원을 메모리 금액으로 대체하지 않는다.",
+      "numeric_zero_imputed": false
+    }
+  ],
+  "review_scope_history": [
+    {
+      "stage": "SLIDE_ONLY_INITIAL_REVIEW",
+      "scope": "2026Q2 conference presentation and reviewed financial statements, before audio script was reviewed",
+      "bit_asp_numeric_qoq_status": "DISCLOSURE_NOT_FOUND_IN_REVIEWED_SOURCES_AT_THIS_STAGE",
+      "superseded_interpretation": false,
+      "note": "이전 제한 범위의 미발견 상태는 전면 비공개 주장으로 사용하지 않았다."
+    },
+    {
+      "stage": "OFFICIAL_WEBCAST_SCRIPT_ADDED",
+      "scope": "Official IR-linked webcast player and exact audio script download reviewed",
+      "bit_asp_final_status": "Four Q2 reported bands found; Q3 guidance excluded",
+      "note": "직접 스크립트 자료를 추가하면서 검토 범위가 넓어져 상태가 변경됐다. 최초 미발견을 오류 없이 최종 결론으로 유지하지 않는다."
+    }
+  ],
+  "access_attempts": [
+    {
+      "tool": "web.open",
+      "requested_url": "https://irsvc.teletogether.com/sec/pdf/2026Q2_script_eng.pdf",
+      "outcome": "INTERNAL_ERROR",
+      "http_status": null,
+      "note": "Browser research tool open returned internal error; no HTTP failure status established. Subsequent bounded direct public requests succeeded."
+    },
+    {
+      "tool": "bounded_direct_http",
+      "requested_url": "https://irsvc.teletogether.com/sec/pdf/2026Q2_script_eng.pdf",
+      "outcome": "HTTP_200_QUERYLESS_BYTES_CAPTURED",
+      "sha256": "e5534ba776267a2bf8a199a0bf81421e9e50f22d8805a0faa52bc4481c8be4ef"
+    },
+    {
+      "tool": "bounded_direct_http",
+      "requested_url": "https://irsvc.teletogether.com/sec/pdf/2026Q2_script_eng.pdf?1",
+      "outcome": "HTTP_200_EXACT_OFFICIAL_LINK_BYTES_CAPTURED",
+      "sha256": "e5534ba776267a2bf8a199a0bf81421e9e50f22d8805a0faa52bc4481c8be4ef"
+    }
+  ],
+  "comparison_limitations": [
+    "연결 총삼성전자 재고는 메모리 전용 재고가 아니며 모바일·가전·디스플레이·Harman 등의 범위도 포함한다. 동일 기능/제품별 물량 재고 비교로 쓰지 않는다.",
+    "DS 부문은 메모리 외 System LSI·Foundry를 포함한다. DS CAPEX를 메모리 CAPEX로 배분하지 않는다.",
+    "low/mid/high 표현의 numeric bounds가 공개되지 않아 4개 변화 관측의 value/lower/upper는 null이다. 범위의 순서 비교도 동일 정의·제품 믹스 확인 없이 사업 성과 순위가 아니다.",
+    "분기 보고 CAPEX와 현금흐름표의 유형자산 구입액은 다른 정의다. 미공개 현금/비현금 구성이나 차이를 임의 설명하지 않는다.",
+    "상반기 누적 현금흐름은 Q2 단독 흐름과 다르다. 회계기간이 다른 회사의 fiscal quarter와 자동 비교하지 않는다.",
+    "매출·이익·총재고·투자로 고객 물량·제품별 가격·점유율·수율·CAPA를 역산하지 않는다."
+  ],
+  "commercial_learning_questions": [
+    "삼성이 설명한 메모리 제품 믹스와 실제 고객 플랫폼의 탑재·인증·주문 자료를 연결하면, DRAM/NAND ASP 변화 중 동일 제품 가격 조건과 고부가 제품 구성의 영향을 어디까지 구분할 수 있는가?",
+    "총삼성전자 재고 증가와 메모리 재고가 낮다는 회사 설명은 범위·금액/물량이 다르다. 영업 수요 판단에 필요한 고객/OEM·제품별 재고와 기명 구매 일정은 무엇이 추가로 공개돼야 하는가?"
+  ],
+  "governance": {
+    "human_evidence_approved": false,
+    "h1_admitted": false,
+    "governed_evidence": false,
+    "predictive_validity_established": false
+  },
+  "continuous_collection_implemented": false,
+  "historical_vintage_validated": false,
+  "lead_lag_or_prediction_calculated": false,
+  "public_originals_distribution": "Only bounded quotes, facts and receipts are distributed. Original PDFs and route HTML remain outside the public repository.",
+  "quote_policy": "Sum of verbatim English excerpts and textual reported-band/raw_text excerpts is <=25 words per primary source; numeric factual cells are kept separately."
+}

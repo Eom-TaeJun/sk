@@ -14,7 +14,9 @@ Build an SK hynix-centered customer, product and supply-chain knowledge base for
 - H1 full primary-source corpus and Gate 6 readiness package: prepared; human Gate 6 review/freeze remains pending
 - Supply-chain research intake (2026-10-03): candidate-only map, metric and free-access plans; not governed Evidence or an H1 dataset amendment
 - User purpose clarification (2026-10-03): SK hynix commercial-role learning is the primary use; HBM, server DRAM and eSSD customer/product relationships come first, with finance/power/materials as relevant context
-- Macro learning framework (2026-10-04): product/business-model/process/end-market/geography structure and memory-cycle measurement plans are documented; a current observations panel and empirical leadingness remain unbuilt
+- Macro learning framework (2026-10-04): product/business-model/process/end-market/geography structure and memory-cycle measurement plans are documented
+- First memory observations (2026-10-04): SK hynix/Samsung calendar 2026Q2 inventory, DRAM/NAND bit-shipment/ASP and investment disclosures are candidate-only; a recurring/historical panel and empirical leadingness remain unbuilt
+- Independent purpose review (2026-10-04): start/middle/handoff management checkpoints were performed; next learning case is server DDR5 with separate Intel Xeon 6 certification and Dell R770 exhibition examples
 - Bounded customer-commitment collection: purpose-first single-case capture/replay, with source provenance and separate failed attempts; not continuous monitoring or empirical validation
 - H1 metrics, lead/lag, realization rates, outcome analysis and verdict: not yet approved; require Gate 6 dataset freeze
 - H2: only after a credible H1 minimum pipeline
@@ -43,6 +45,7 @@ Do not treat deleted, historical, or interrupted H1 experiment artifacts as appr
 - Supply-chain research intake and legacy reference review: `docs/research/supply_chain/README.md`
 - Current user purpose, 2026 job-description evidence and product/customer learning structure: `docs/research/supply_chain/sk_hynix_commercial_role_context.md`
 - Macro industry structure and memory-cycle collection contracts: `docs/research/supply_chain/semiconductor_macro_structure.md`, `docs/research/supply_chain/memory_cycle_signal_plan.md`
+- Same-quarter observations and independent purpose review: `docs/research/supply_chain/memory_observation_panel_2026q2.md`, `docs/research/supply_chain/research_convergence_review.md`
 - First customer/product card, bounded source receipts and unresolved specification differences: `docs/research/supply_chain/customer_product_cards/hbm_nvidia_gb300.md`
 - Public candidate data and hashes: `data/research/semiconductor_supply_chain/2026-10-03/manifest.json`
 - Economic question and single-case boundaries: `docs/research/supply_chain/decision_purpose.md`
@@ -68,6 +71,17 @@ Do not load all Canonical Sources or copy the Master Instruction into task conte
 AI may discover, retrieve, extract, classify candidates, link entities, search for contradictions and propose hypotheses. Humans approve strong interpretation, causal validity, final H1/H2 verdicts and business recommendations.
 
 Use models for semantic judgment. Use deterministic code for filtering, deduplication, schema/date/unit checks, joins, lag construction, aggregation, state transitions, trace and replay.
+
+## Purpose and convergence review
+
+The user requested an independent management role for supply-chain learning tasks on 2026-10-04. Assign a purpose reviewer separately from the researchers and integrator; use the available Codex subagent capability or a verified compatible adapter when justified. A role assignment does not imply that Hermes, a new runtime or continuous monitoring has been installed.
+
+- Start: restate the SK hynix commercial-learning question, required evidence, comparison scope and completion criteria.
+- During research: expand only to resolve a material definition, alternative explanation, customer/product relationship or supply-timing gap. Record useful expansion and defer unrelated branches.
+- Before handoff: check whether observations converge on product/customer/adoption/supply questions, preserve unknowns and comparisons, and name exactly one next task.
+- Use `CONTINUE`, `REWORK` or `DEFER` with observed reasons and implemented corrections; do not manufacture progress percentages, predictive scores or Evidence approvals.
+
+The current record is `docs/research/supply_chain/research_convergence_review.md`. The reviewer audits purpose and scope; the Evidence Governance Harness and human approval boundaries remain unchanged.
 
 ## Stable validation commands
 

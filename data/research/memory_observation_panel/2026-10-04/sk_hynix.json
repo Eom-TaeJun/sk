@@ -1,0 +1,791 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-10-04",
+  "status": "RESEARCH_CANDIDATE_NOT_GOVERNED_EVIDENCE",
+  "human_approved": false,
+  "included_in_h1": false,
+  "company_id": "SK_HYNIX",
+  "target_measurement_period": {
+    "start": "2026-04-01",
+    "end": "2026-06-30",
+    "label": "calendar 2026 Q2",
+    "period_type": "QUARTER"
+  },
+  "scope": "MC07/08/09/16 first observations from the official Q2 2026 earnings presentation. Company balance/cash amounts and product-family percent changes have different grains.",
+  "sources": [
+    {
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "title": "SK hynix FY2026 Q2 Earnings Presentation (English)",
+      "source_role": "PRIMARY_ISSUER_EARNINGS_PRESENTATION",
+      "requested_url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/13571040283022005.pdf",
+      "retrieved_url": "https://mis-prod-koce-homepage-cdn-01-blob-ep.azureedge.net/web/attach/13571040283022005.pdf",
+      "http_status": 200,
+      "capture_representation": "ORIGINAL_HTTP_BYTES",
+      "size_bytes": 3024827,
+      "sha256": "332909850fc2c95989b5f4d7c4385fbf9f36bb6d1f60585430daa7edabc3eee5",
+      "publication_date": "2026-07-29",
+      "publication_date_precision": "DAY",
+      "retrieved_at_utc": "2026-10-04T12:23:07.286523+00:00",
+      "excerpts": [
+        {
+          "excerpt_id": "SKPDF-E01",
+          "page": 4,
+          "text": "High-Single%↑QoQ",
+          "locator": "PDF page 4, Revenue Analysis, DRAM B/G line"
+        },
+        {
+          "excerpt_id": "SKPDF-E02",
+          "page": 4,
+          "text": "Approx. 30%↑QoQ",
+          "locator": "PDF page 4, Revenue Analysis, DRAM ASP line"
+        },
+        {
+          "excerpt_id": "SKPDF-E03",
+          "page": 4,
+          "text": "Mid-Teen%↑QoQ",
+          "locator": "PDF page 4, Revenue Analysis, NAND B/G line"
+        },
+        {
+          "excerpt_id": "SKPDF-E04",
+          "page": 4,
+          "text": "Mid-50%↑QoQ",
+          "locator": "PDF page 4, Revenue Analysis, NAND ASP line"
+        },
+        {
+          "excerpt_id": "SKPDF-E05",
+          "page": 10,
+          "text": "Approx.10% increase QoQ",
+          "locator": "PDF page 10, Company Plan, DRAM Q3 sales B/G"
+        },
+        {
+          "excerpt_id": "SKPDF-E06",
+          "page": 10,
+          "text": "Low-single% increase QoQ",
+          "locator": "PDF page 10, Company Plan, NAND Q3 sales B/G; including Solidigm"
+        },
+        {
+          "excerpt_id": "SKPDF-E07",
+          "page": 12,
+          "text": "high 40T KRW range",
+          "locator": "PDF page 12, Financial Strategy, FY2026 CapEx target"
+        },
+        {
+          "excerpt_id": "SKPDF-E08",
+          "page": 15,
+          "text": "Acquisition of PP&E (10,671) (7,657)",
+          "locator": "PDF page 15, Statement of Cash Flows, PP&E acquisition row, 2026 Q2 and Q1 columns; unit KRW Billion"
+        },
+        {
+          "excerpt_id": "SKPDF-E09",
+          "page": 18,
+          "text": "Inventories 17,986 15,974 14,289",
+          "locator": "PDF page 18, Attachment1 Statement of Financial Position, Inventories row, Q2'26/Q1'26/Q4'25 columns; unit KRW Billion"
+        }
+      ],
+      "limitations": [
+        "PDF page 2 says consolidated K-IFRS, independent review not finalized, and figures may change.",
+        "Prior-quarter/year-end comparator values are as presented in this Q2 release; their original release/revisions were not reviewed."
+      ]
+    },
+    {
+      "source_id": "SRC-MEM-SK-IR-LIST26",
+      "title": "SK hynix official Earnings Release public listing, English",
+      "source_role": "PRIMARY_ISSUER_DISCOVERY_METADATA",
+      "requested_url": "https://homeapi.skhynix.com/board/list?bcode=105&lang=ENG&page=1&pageSize=200",
+      "retrieved_url": "https://homeapi.skhynix.com/board/list?bcode=105&lang=ENG&page=1&pageSize=200",
+      "http_status": 200,
+      "capture_representation": "ORIGINAL_HTTP_BYTES",
+      "size_bytes": 53757,
+      "sha256": "5b09bb7be1a8948e9c030890a3ea8be9a810659ca84dd479deaf3de6a4b54d54",
+      "publication_date": null,
+      "publication_date_precision": "NOT_APPLICABLE_DYNAMIC_LIST",
+      "retrieved_at_utc": "2026-10-04T12:22:02.083523+00:00",
+      "excerpts": [
+        {
+          "excerpt_id": "SKLIST-E01",
+          "text": "Jul 29, 2026/ 9:00 AM KST",
+          "locator": "JSON list[0], seq=6850, title=SK hynix FY2026 Q2 Earnings Results, eventDate"
+        }
+      ],
+      "limitations": [
+        "displayDate=2026.01.01 is the year grouping field, not the July 29 disclosure date.",
+        "Public unauthenticated JSON is a file discovery route actually accessed once, not proof of an issued external API account or durable supported API.",
+        "Only seq=6850 Q2 2026 metadata is used; other list entries not analyzed."
+      ]
+    },
+    {
+      "source_id": "SRC-MEM-SK-Q226-PERIOD6K",
+      "title": "SK hynix Form 6-K, July 2026, preliminary results period definitions",
+      "source_role": "PRIMARY_REGULATORY_FILING_PERIOD_DEFINITION_ONLY",
+      "requested_url": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526321989/d115239d6k.htm",
+      "retrieved_url": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526321989/d115239d6k.htm",
+      "publication_date": "2026-07-29",
+      "publication_date_precision": "DAY",
+      "accession_number": "0001193125-26-321989",
+      "capture_representation": "WEB_TOOL_NORMALIZED_TEXT_RESPONSE_NOT_ORIGINAL_BYTES",
+      "http_status": null,
+      "sha256": null,
+      "original_bytes_download_status": "ACCESS_FAILED_HTTP_403",
+      "retrieved_at_utc": "2026-10-04T12:33:12.560949+00:00",
+      "normalized_capture_size_bytes": 5755,
+      "normalized_capture_sha256": "77d7eccf9af5005313c6b84b9edbe07797812328a60dab1d62d883d78888786b",
+      "excerpts": [
+        {
+          "excerpt_id": "SK6K-E01",
+          "text": "April 1 to June 30",
+          "locator": "Filing footnote (1), web text line 170; nonbreaking spaces normalized"
+        },
+        {
+          "excerpt_id": "SK6K-E02",
+          "text": "January 1 to March 31",
+          "locator": "Filing footnote (2), web text line 171; nonbreaking spaces normalized"
+        }
+      ],
+      "limitations": [
+        "Direct original-byte acquisition returned 403; web-tool text reading succeeded. The normalized capture hash is not a SEC-original-byte hash.",
+        "Used only for explicit Q2/Q1 calendar period definitions and disclosure context, without extracting any new financial value."
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "SK26Q2-INVENTORY-END",
+      "metric_id": "MC07",
+      "company_id": "SK_HYNIX",
+      "company_name": "SK hynix Inc.",
+      "actor_role": "MEMORY_PRODUCER_SELLER",
+      "product_family": "COMPANY_TOTAL_NOT_SPLIT_BY_MEMORY_FAMILY",
+      "measurement_period": {
+        "start": null,
+        "end": "2026-06-30",
+        "label": "2026 Q2 ending balance",
+        "period_type": "INSTANT"
+      },
+      "comparison_period": null,
+      "known_at": "2026-07-29",
+      "known_at_precision": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED",
+      "retrieved_at_utc": "2026-10-04T12:23:07.286523+00:00",
+      "value": 17986,
+      "range_lower": null,
+      "range_upper": null,
+      "raw_text": "17,986",
+      "original_unit": "KRW Billion",
+      "value_form": "REPORTED_ROUNDED_AMOUNT",
+      "actual_guidance": "ACTUAL",
+      "observation_definition": "회사 연결 기말 재고 장부금액. DRAM/NAND/HBM 제품별 물량 재고가 아니다.",
+      "accounting_scope": "CONSOLIDATED_K_IFRS_INCLUDING_SOLIDIGM",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "excerpt_ref": "SKPDF-E09",
+      "locator": "PDF page 18, Attachment1 Statement of Financial Position, Inventories row, Q2'26/Q1'26/Q4'25 columns; unit KRW Billion",
+      "claim_kind": "COMPANY_REPORTED_PRELIMINARY_ACTUAL",
+      "quality_status": "OBSERVATION_SAVED_SOURCE_CHECKED_NOT_HISTORY_VALIDATED",
+      "human_approved": false,
+      "governed_evidence": false,
+      "included_in_h1": false,
+      "limitations": [
+        "PDF page 18 reports a company total only, without DRAM/NAND/HBM split or customer allocation.",
+        "2025 Q4 balance date is the fiscal-year-end interpretation of the reported column; annual financial statements were not additionally reviewed.",
+        "Inventory-days calculation not performed; inventory valuation components, revisions and product-specific COGS were not reviewed."
+      ],
+      "accounting_basis": "ENDING_INVENTORY_BOOK_VALUE"
+    },
+    {
+      "observation_id": "SK26Q1-INVENTORY-END",
+      "metric_id": "MC07",
+      "company_id": "SK_HYNIX",
+      "company_name": "SK hynix Inc.",
+      "actor_role": "MEMORY_PRODUCER_SELLER",
+      "product_family": "COMPANY_TOTAL_NOT_SPLIT_BY_MEMORY_FAMILY",
+      "measurement_period": {
+        "start": null,
+        "end": "2026-03-31",
+        "label": "2026 Q1 ending balance / Q2 beginning balance",
+        "period_type": "INSTANT"
+      },
+      "comparison_period": null,
+      "known_at": "2026-07-29",
+      "known_at_precision": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED",
+      "retrieved_at_utc": "2026-10-04T12:23:07.286523+00:00",
+      "value": 15974,
+      "range_lower": null,
+      "range_upper": null,
+      "raw_text": "15,974",
+      "original_unit": "KRW Billion",
+      "value_form": "REPORTED_ROUNDED_AMOUNT",
+      "actual_guidance": "ACTUAL",
+      "observation_definition": "회사 연결 기말 재고 장부금액. DRAM/NAND/HBM 제품별 물량 재고가 아니다.",
+      "accounting_scope": "CONSOLIDATED_K_IFRS_INCLUDING_SOLIDIGM",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "excerpt_ref": "SKPDF-E09",
+      "locator": "PDF page 18, Attachment1 Statement of Financial Position, Inventories row, Q2'26/Q1'26/Q4'25 columns; unit KRW Billion",
+      "claim_kind": "COMPANY_REPORTED_PRELIMINARY_ACTUAL",
+      "quality_status": "OBSERVATION_SAVED_SOURCE_CHECKED_NOT_HISTORY_VALIDATED",
+      "human_approved": false,
+      "governed_evidence": false,
+      "included_in_h1": false,
+      "limitations": [
+        "PDF page 18 reports a company total only, without DRAM/NAND/HBM split or customer allocation.",
+        "2025 Q4 balance date is the fiscal-year-end interpretation of the reported column; annual financial statements were not additionally reviewed.",
+        "Inventory-days calculation not performed; inventory valuation components, revisions and product-specific COGS were not reviewed."
+      ],
+      "accounting_basis": "ENDING_INVENTORY_BOOK_VALUE"
+    },
+    {
+      "observation_id": "SK25Q4-INVENTORY-END",
+      "metric_id": "MC07",
+      "company_id": "SK_HYNIX",
+      "company_name": "SK hynix Inc.",
+      "actor_role": "MEMORY_PRODUCER_SELLER",
+      "product_family": "COMPANY_TOTAL_NOT_SPLIT_BY_MEMORY_FAMILY",
+      "measurement_period": {
+        "start": null,
+        "end": "2025-12-31",
+        "label": "2025 Q4 ending balance / FY2026 beginning balance",
+        "period_type": "INSTANT"
+      },
+      "comparison_period": null,
+      "known_at": "2026-07-29",
+      "known_at_precision": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED",
+      "retrieved_at_utc": "2026-10-04T12:23:07.286523+00:00",
+      "value": 14289,
+      "range_lower": null,
+      "range_upper": null,
+      "raw_text": "14,289",
+      "original_unit": "KRW Billion",
+      "value_form": "REPORTED_ROUNDED_AMOUNT",
+      "actual_guidance": "ACTUAL",
+      "observation_definition": "회사 연결 기말 재고 장부금액. DRAM/NAND/HBM 제품별 물량 재고가 아니다.",
+      "accounting_scope": "CONSOLIDATED_K_IFRS_INCLUDING_SOLIDIGM",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "excerpt_ref": "SKPDF-E09",
+      "locator": "PDF page 18, Attachment1 Statement of Financial Position, Inventories row, Q2'26/Q1'26/Q4'25 columns; unit KRW Billion",
+      "claim_kind": "COMPANY_REPORTED_PRELIMINARY_ACTUAL",
+      "quality_status": "OBSERVATION_SAVED_SOURCE_CHECKED_NOT_HISTORY_VALIDATED",
+      "human_approved": false,
+      "governed_evidence": false,
+      "included_in_h1": false,
+      "limitations": [
+        "PDF page 18 reports a company total only, without DRAM/NAND/HBM split or customer allocation.",
+        "2025 Q4 balance date is the fiscal-year-end interpretation of the reported column; annual financial statements were not additionally reviewed.",
+        "Inventory-days calculation not performed; inventory valuation components, revisions and product-specific COGS were not reviewed."
+      ],
+      "accounting_basis": "ENDING_INVENTORY_BOOK_VALUE"
+    },
+    {
+      "observation_id": "SK26Q2-DRAM-BITS-QOQ",
+      "metric_id": "MC08",
+      "company_id": "SK_HYNIX",
+      "company_name": "SK hynix Inc.",
+      "actor_role": "MEMORY_PRODUCER_SELLER",
+      "product_family": "DRAM_TOTAL_HBM_NOT_SEPARATELY_REPORTED",
+      "measurement_period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar 2026 Q2",
+        "period_type": "QUARTER"
+      },
+      "comparison_period": {
+        "start": "2026-01-01",
+        "end": "2026-03-31",
+        "label": "calendar 2026 Q1",
+        "period_type": "QUARTER"
+      },
+      "known_at": "2026-07-29",
+      "known_at_precision": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED",
+      "retrieved_at_utc": "2026-10-04T12:23:07.286523+00:00",
+      "value": null,
+      "range_lower": null,
+      "range_upper": null,
+      "raw_text": "high single digit 증가",
+      "original_unit": "percent_change_QoQ",
+      "value_form": "TEXT_BAND",
+      "actual_guidance": "ACTUAL",
+      "observation_definition": "회사가 발표한 제품군별 판매 비트 QoQ 변화",
+      "accounting_scope": "CONSOLIDATED_K_IFRS_INCLUDING_SOLIDIGM",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "excerpt_ref": "SKPDF-E01",
+      "locator": "PDF page 4, Revenue Analysis, DRAM B/G line",
+      "claim_kind": "COMPANY_REPORTED_PRELIMINARY_ACTUAL",
+      "quality_status": "OBSERVATION_SAVED_SOURCE_CHECKED_NOT_HISTORY_VALIDATED",
+      "human_approved": false,
+      "governed_evidence": false,
+      "included_in_h1": false,
+      "limitations": [
+        "Text bands have no numeric lower/upper range because the issuer did not define bounds.",
+        "Product-family aggregate: HBM/server/mobile or eSSD mix and particular customer demand cannot be identified.",
+        "Reported changes are preliminary actuals, not an empirically validated leading signal."
+      ],
+      "change_direction": "INCREASE"
+    },
+    {
+      "observation_id": "SK26Q2-NAND-BITS-QOQ",
+      "metric_id": "MC08",
+      "company_id": "SK_HYNIX",
+      "company_name": "SK hynix Inc.",
+      "actor_role": "MEMORY_PRODUCER_SELLER",
+      "product_family": "NAND_INCLUDING_SOLIDIGM",
+      "measurement_period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar 2026 Q2",
+        "period_type": "QUARTER"
+      },
+      "comparison_period": {
+        "start": "2026-01-01",
+        "end": "2026-03-31",
+        "label": "calendar 2026 Q1",
+        "period_type": "QUARTER"
+      },
+      "known_at": "2026-07-29",
+      "known_at_precision": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED",
+      "retrieved_at_utc": "2026-10-04T12:23:07.286523+00:00",
+      "value": null,
+      "range_lower": null,
+      "range_upper": null,
+      "raw_text": "mid teen 증가",
+      "original_unit": "percent_change_QoQ",
+      "value_form": "TEXT_BAND",
+      "actual_guidance": "ACTUAL",
+      "observation_definition": "회사가 발표한 제품군별 판매 비트 QoQ 변화",
+      "accounting_scope": "CONSOLIDATED_K_IFRS_INCLUDING_SOLIDIGM",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "excerpt_ref": "SKPDF-E03",
+      "locator": "PDF page 4, Revenue Analysis, NAND B/G line",
+      "claim_kind": "COMPANY_REPORTED_PRELIMINARY_ACTUAL",
+      "quality_status": "OBSERVATION_SAVED_SOURCE_CHECKED_NOT_HISTORY_VALIDATED",
+      "human_approved": false,
+      "governed_evidence": false,
+      "included_in_h1": false,
+      "limitations": [
+        "Text bands have no numeric lower/upper range because the issuer did not define bounds.",
+        "Product-family aggregate: HBM/server/mobile or eSSD mix and particular customer demand cannot be identified.",
+        "Reported changes are preliminary actuals, not an empirically validated leading signal."
+      ],
+      "change_direction": "INCREASE"
+    },
+    {
+      "observation_id": "SK26Q2-DRAM-ASP-QOQ",
+      "metric_id": "MC09",
+      "company_id": "SK_HYNIX",
+      "company_name": "SK hynix Inc.",
+      "actor_role": "MEMORY_PRODUCER_SELLER",
+      "product_family": "DRAM_TOTAL_HBM_NOT_SEPARATELY_REPORTED",
+      "measurement_period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar 2026 Q2",
+        "period_type": "QUARTER"
+      },
+      "comparison_period": {
+        "start": "2026-01-01",
+        "end": "2026-03-31",
+        "label": "calendar 2026 Q1",
+        "period_type": "QUARTER"
+      },
+      "known_at": "2026-07-29",
+      "known_at_precision": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED",
+      "retrieved_at_utc": "2026-10-04T12:23:07.286523+00:00",
+      "value": 30,
+      "range_lower": null,
+      "range_upper": null,
+      "raw_text": "약 30% 증가",
+      "original_unit": "percent_change_QoQ",
+      "value_form": "APPROXIMATE_REPORTED_PERCENT",
+      "actual_guidance": "ACTUAL",
+      "observation_definition": "회사가 발표한 제품군별 ASP QoQ 변화. 동일 SKU 현물/계약 가격과 구분한다.",
+      "accounting_scope": "CONSOLIDATED_K_IFRS_INCLUDING_SOLIDIGM",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "excerpt_ref": "SKPDF-E02",
+      "locator": "PDF page 4, Revenue Analysis, DRAM ASP line",
+      "claim_kind": "COMPANY_REPORTED_PRELIMINARY_ACTUAL",
+      "quality_status": "OBSERVATION_SAVED_SOURCE_CHECKED_NOT_HISTORY_VALIDATED",
+      "human_approved": false,
+      "governed_evidence": false,
+      "included_in_h1": false,
+      "limitations": [
+        "Text bands have no numeric lower/upper range because the issuer did not define bounds.",
+        "Product-family aggregate: HBM/server/mobile or eSSD mix and particular customer demand cannot be identified.",
+        "Reported changes are preliminary actuals, not an empirically validated leading signal."
+      ],
+      "change_direction": "INCREASE"
+    },
+    {
+      "observation_id": "SK26Q2-NAND-ASP-QOQ",
+      "metric_id": "MC09",
+      "company_id": "SK_HYNIX",
+      "company_name": "SK hynix Inc.",
+      "actor_role": "MEMORY_PRODUCER_SELLER",
+      "product_family": "NAND_INCLUDING_SOLIDIGM",
+      "measurement_period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar 2026 Q2",
+        "period_type": "QUARTER"
+      },
+      "comparison_period": {
+        "start": "2026-01-01",
+        "end": "2026-03-31",
+        "label": "calendar 2026 Q1",
+        "period_type": "QUARTER"
+      },
+      "known_at": "2026-07-29",
+      "known_at_precision": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED",
+      "retrieved_at_utc": "2026-10-04T12:23:07.286523+00:00",
+      "value": null,
+      "range_lower": null,
+      "range_upper": null,
+      "raw_text": "mid 50 percent 증가",
+      "original_unit": "percent_change_QoQ",
+      "value_form": "TEXT_BAND",
+      "actual_guidance": "ACTUAL",
+      "observation_definition": "회사가 발표한 제품군별 ASP QoQ 변화. 동일 SKU 현물/계약 가격과 구분한다.",
+      "accounting_scope": "CONSOLIDATED_K_IFRS_INCLUDING_SOLIDIGM",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "excerpt_ref": "SKPDF-E04",
+      "locator": "PDF page 4, Revenue Analysis, NAND ASP line",
+      "claim_kind": "COMPANY_REPORTED_PRELIMINARY_ACTUAL",
+      "quality_status": "OBSERVATION_SAVED_SOURCE_CHECKED_NOT_HISTORY_VALIDATED",
+      "human_approved": false,
+      "governed_evidence": false,
+      "included_in_h1": false,
+      "limitations": [
+        "Text bands have no numeric lower/upper range because the issuer did not define bounds.",
+        "Product-family aggregate: HBM/server/mobile or eSSD mix and particular customer demand cannot be identified.",
+        "Reported changes are preliminary actuals, not an empirically validated leading signal."
+      ],
+      "change_direction": "INCREASE"
+    },
+    {
+      "observation_id": "SK26Q3-DRAM-BITS-GUIDANCE",
+      "metric_id": "MC08",
+      "company_id": "SK_HYNIX",
+      "company_name": "SK hynix Inc.",
+      "actor_role": "MEMORY_PRODUCER_SELLER",
+      "product_family": "DRAM_TOTAL_HBM_NOT_SEPARATELY_REPORTED",
+      "measurement_period": {
+        "start": "2026-07-01",
+        "end": "2026-09-30",
+        "label": "calendar 2026 Q3",
+        "period_type": "GUIDANCE_TARGET_QUARTER"
+      },
+      "comparison_period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar 2026 Q2",
+        "period_type": "QUARTER"
+      },
+      "known_at": "2026-07-29",
+      "known_at_precision": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED",
+      "retrieved_at_utc": "2026-10-04T12:23:07.286523+00:00",
+      "value": 10,
+      "range_lower": null,
+      "range_upper": null,
+      "raw_text": "약 10% 증가 전망",
+      "original_unit": "percent_change_QoQ",
+      "value_form": "APPROXIMATE_REPORTED_PERCENT",
+      "actual_guidance": "GUIDANCE",
+      "observation_definition": "2026 Q2 실적 공개 당시 제시한 Q3 판매 비트 성장 전망. Q3 결과가 아니다.",
+      "accounting_scope": "CONSOLIDATED_K_IFRS_INCLUDING_SOLIDIGM",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "excerpt_ref": "SKPDF-E05",
+      "locator": "PDF page 10, Company Plan, DRAM Q3 sales B/G",
+      "claim_kind": "COMPANY_FORWARD_LOOKING_GUIDANCE",
+      "quality_status": "OBSERVATION_SAVED_SOURCE_CHECKED_NOT_HISTORY_VALIDATED",
+      "human_approved": false,
+      "governed_evidence": false,
+      "included_in_h1": false,
+      "limitations": [
+        "Guidance known on July 29 is stored separately from the future target quarter.",
+        "No Q3 outcome, guidance hit rate or lead/lag calculation collected.",
+        "No exact text-band bounds or customer/product subfamily allocation disclosed in this reviewed slide."
+      ],
+      "change_direction": "INCREASE"
+    },
+    {
+      "observation_id": "SK26Q3-NAND-BITS-GUIDANCE",
+      "metric_id": "MC08",
+      "company_id": "SK_HYNIX",
+      "company_name": "SK hynix Inc.",
+      "actor_role": "MEMORY_PRODUCER_SELLER",
+      "product_family": "NAND_INCLUDING_SOLIDIGM",
+      "measurement_period": {
+        "start": "2026-07-01",
+        "end": "2026-09-30",
+        "label": "calendar 2026 Q3",
+        "period_type": "GUIDANCE_TARGET_QUARTER"
+      },
+      "comparison_period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar 2026 Q2",
+        "period_type": "QUARTER"
+      },
+      "known_at": "2026-07-29",
+      "known_at_precision": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED",
+      "retrieved_at_utc": "2026-10-04T12:23:07.286523+00:00",
+      "value": null,
+      "range_lower": null,
+      "range_upper": null,
+      "raw_text": "low single digit 증가 전망",
+      "original_unit": "percent_change_QoQ",
+      "value_form": "TEXT_BAND",
+      "actual_guidance": "GUIDANCE",
+      "observation_definition": "2026 Q2 실적 공개 당시 제시한 Q3 판매 비트 성장 전망. Q3 결과가 아니다.",
+      "accounting_scope": "CONSOLIDATED_K_IFRS_INCLUDING_SOLIDIGM",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "excerpt_ref": "SKPDF-E06",
+      "locator": "PDF page 10, Company Plan, NAND Q3 sales B/G; including Solidigm",
+      "claim_kind": "COMPANY_FORWARD_LOOKING_GUIDANCE",
+      "quality_status": "OBSERVATION_SAVED_SOURCE_CHECKED_NOT_HISTORY_VALIDATED",
+      "human_approved": false,
+      "governed_evidence": false,
+      "included_in_h1": false,
+      "limitations": [
+        "Guidance known on July 29 is stored separately from the future target quarter.",
+        "No Q3 outcome, guidance hit rate or lead/lag calculation collected.",
+        "No exact text-band bounds or customer/product subfamily allocation disclosed in this reviewed slide."
+      ],
+      "change_direction": "INCREASE"
+    },
+    {
+      "observation_id": "SK26Q2-PPE-CASH-OUTFLOW",
+      "metric_id": "MC16",
+      "company_id": "SK_HYNIX",
+      "company_name": "SK hynix Inc.",
+      "actor_role": "MEMORY_PRODUCER_SELLER",
+      "product_family": "COMPANY_TOTAL_NOT_SPLIT_BY_MEMORY_FAMILY",
+      "measurement_period": {
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "label": "calendar 2026 Q2",
+        "period_type": "QUARTER"
+      },
+      "comparison_period": null,
+      "known_at": "2026-07-29",
+      "known_at_precision": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED",
+      "retrieved_at_utc": "2026-10-04T12:23:07.286523+00:00",
+      "value": -10671,
+      "range_lower": null,
+      "range_upper": null,
+      "raw_text": "(10,671)",
+      "original_unit": "KRW Billion",
+      "value_form": "REPORTED_ROUNDED_SIGNED_AMOUNT",
+      "actual_guidance": "ACTUAL",
+      "observation_definition": "분기 실적 발표의 현금흐름표에 표시한 유형자산 취득 현금유출. 연간 CapEx 계획과 별개다.",
+      "accounting_scope": "CONSOLIDATED_K_IFRS_INCLUDING_SOLIDIGM",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "excerpt_ref": "SKPDF-E08",
+      "locator": "PDF page 15, Statement of Cash Flows, PP&E acquisition row, 2026 Q2 and Q1 columns; unit KRW Billion",
+      "claim_kind": "COMPANY_REPORTED_PRELIMINARY_ACTUAL",
+      "quality_status": "OBSERVATION_SAVED_SOURCE_CHECKED_NOT_HISTORY_VALIDATED",
+      "human_approved": false,
+      "governed_evidence": false,
+      "included_in_h1": false,
+      "limitations": [
+        "Parentheses preserved as a negative cash-flow amount; positive spending amount is separately labelled.",
+        "Not total investing cash flow, intangible acquisitions or lease repayment; does not include unreviewed noncash PP&E additions.",
+        "The IR cash-flow presentation changes cash balance scope to include short-term financial instruments; full statutory cash-flow reconciliation was not performed.",
+        "No DRAM/NAND/HBM, fab/site, new-capacity versus maintenance allocation; no CAPA conversion."
+      ],
+      "accounting_basis": "ACQUISITION_OF_PPE_CASH_FLOW_PRESENTATION",
+      "cash_outflow_positive_amount": 10671
+    },
+    {
+      "observation_id": "SK26Q1-PPE-CASH-OUTFLOW",
+      "metric_id": "MC16",
+      "company_id": "SK_HYNIX",
+      "company_name": "SK hynix Inc.",
+      "actor_role": "MEMORY_PRODUCER_SELLER",
+      "product_family": "COMPANY_TOTAL_NOT_SPLIT_BY_MEMORY_FAMILY",
+      "measurement_period": {
+        "start": "2026-01-01",
+        "end": "2026-03-31",
+        "label": "calendar 2026 Q1",
+        "period_type": "QUARTER"
+      },
+      "comparison_period": null,
+      "known_at": "2026-07-29",
+      "known_at_precision": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED",
+      "retrieved_at_utc": "2026-10-04T12:23:07.286523+00:00",
+      "value": -7657,
+      "range_lower": null,
+      "range_upper": null,
+      "raw_text": "(7,657)",
+      "original_unit": "KRW Billion",
+      "value_form": "REPORTED_ROUNDED_SIGNED_AMOUNT",
+      "actual_guidance": "ACTUAL",
+      "observation_definition": "분기 실적 발표의 현금흐름표에 표시한 유형자산 취득 현금유출. 연간 CapEx 계획과 별개다.",
+      "accounting_scope": "CONSOLIDATED_K_IFRS_INCLUDING_SOLIDIGM",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "excerpt_ref": "SKPDF-E08",
+      "locator": "PDF page 15, Statement of Cash Flows, PP&E acquisition row, 2026 Q2 and Q1 columns; unit KRW Billion",
+      "claim_kind": "COMPANY_REPORTED_PRELIMINARY_ACTUAL",
+      "quality_status": "OBSERVATION_SAVED_SOURCE_CHECKED_NOT_HISTORY_VALIDATED",
+      "human_approved": false,
+      "governed_evidence": false,
+      "included_in_h1": false,
+      "limitations": [
+        "Parentheses preserved as a negative cash-flow amount; positive spending amount is separately labelled.",
+        "Not total investing cash flow, intangible acquisitions or lease repayment; does not include unreviewed noncash PP&E additions.",
+        "The IR cash-flow presentation changes cash balance scope to include short-term financial instruments; full statutory cash-flow reconciliation was not performed.",
+        "No DRAM/NAND/HBM, fab/site, new-capacity versus maintenance allocation; no CAPA conversion."
+      ],
+      "accounting_basis": "ACQUISITION_OF_PPE_CASH_FLOW_PRESENTATION",
+      "cash_outflow_positive_amount": 7657
+    },
+    {
+      "observation_id": "SK26FY-CAPEX-GUIDANCE",
+      "metric_id": "MC16",
+      "company_id": "SK_HYNIX",
+      "company_name": "SK hynix Inc.",
+      "actor_role": "MEMORY_PRODUCER_SELLER",
+      "product_family": "COMPANY_TOTAL_NOT_SPLIT_BY_MEMORY_FAMILY",
+      "measurement_period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31",
+        "label": "calendar FY2026",
+        "period_type": "GUIDANCE_TARGET_YEAR"
+      },
+      "comparison_period": null,
+      "known_at": "2026-07-29",
+      "known_at_precision": "DAY_DOCUMENT_DATE_PUBLICATION_TIME_UNVERIFIED",
+      "retrieved_at_utc": "2026-10-04T12:23:07.286523+00:00",
+      "value": null,
+      "range_lower": null,
+      "range_upper": null,
+      "raw_text": "40조원대 후반 전망",
+      "original_unit": "KRW Trillion",
+      "value_form": "TEXT_BAND",
+      "actual_guidance": "GUIDANCE",
+      "observation_definition": "회사의 FY2026 CapEx 전망에 대한 금액 밴드. 정의가 Q2 유형자산 취득 현금흐름 항목과 같다고 전제하지 않는다.",
+      "accounting_scope": "CONSOLIDATED_K_IFRS_INCLUDING_SOLIDIGM",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "excerpt_ref": "SKPDF-E07",
+      "locator": "PDF page 12, Financial Strategy, FY2026 CapEx target",
+      "claim_kind": "COMPANY_FORWARD_LOOKING_GUIDANCE",
+      "quality_status": "OBSERVATION_SAVED_SOURCE_CHECKED_NOT_HISTORY_VALIDATED",
+      "human_approved": false,
+      "governed_evidence": false,
+      "included_in_h1": false,
+      "limitations": [
+        "High 40T range has no issuer-defined numerical bounds in this slide; no point estimate assigned.",
+        "Annual plan is not actual Q2 spending or current installed/usable capacity.",
+        "No reconciliation to the cash-flow PP&E line or product/site allocation performed."
+      ],
+      "accounting_basis": "ISSUER_CAPEX_GUIDANCE_DEFINITION_NOT_RECONCILED_TO_CASH_PPE"
+    }
+  ],
+  "known_unknowns": [
+    {
+      "field": "DRAM_NAND_HBM_inventory_amount_or_bits",
+      "value": null,
+      "status": "DISCLOSURE_NOT_FOUND_IN_REVIEWED_SOURCES",
+      "reviewed_scope": "PDF pages 1-19; company-total inventory only at page 18"
+    },
+    {
+      "field": "DRAM_NAND_absolute_bit_shipments",
+      "value": null,
+      "status": "DISCLOSURE_NOT_FOUND_IN_REVIEWED_SOURCES",
+      "reviewed_scope": "PDF page 4 actual and page 10 guidance express growth only"
+    },
+    {
+      "field": "DRAM_NAND_HBM_or_fab_site_cash_capex_allocation",
+      "value": null,
+      "status": "DISCLOSURE_NOT_FOUND_IN_REVIEWED_SOURCES",
+      "reviewed_scope": "PDF page 12 plan and page 15 cash acquisition total; no product/site amount allocation"
+    },
+    {
+      "field": "inventory_days",
+      "value": null,
+      "status": "NOT_CALCULATED",
+      "reviewed_scope": "Company balances and COGS appear but no inventory-days methodology or product attribution validation performed"
+    },
+    {
+      "field": "statutory_interim_statement_reconciliation_and_revision_history",
+      "value": null,
+      "status": "NOT_REVIEWED",
+      "reviewed_scope": "No DART account, key, filing API or full interim financial statements used"
+    },
+    {
+      "field": "customer_orders_qualified_demand_customer_quantity_allocation",
+      "value": null,
+      "status": "NOT_IDENTIFIED_BY_THESE_METRICS",
+      "reviewed_scope": "Company aggregate financial/growth values do not establish a particular buyer, product order or allocation"
+    }
+  ],
+  "commercial_learning_questions": [
+    {
+      "metric_ids": [
+        "MC08",
+        "MC09"
+      ],
+      "product_family": "DRAM",
+      "question": "판매 비트가 high-single 성장한 분기에 ASP가 약 30% 늘었다면 HBM·서버·모바일 제품 믹스, 계약 조건, 물량 인식 시점 중 무엇을 더 확인해야 상품별 영업 질문이 되는가?",
+      "alternative_explanation": "제품군 평균 ASP는 동일 SKU 가격과 같지 않고, 판매 비트는 최종 고객의 소비량과 같지 않다.",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "locators": [
+        "page 4 actual growth",
+        "page 16 application/product revenue chart, contextual only; detailed shares not extracted"
+      ]
+    },
+    {
+      "metric_ids": [
+        "MC08",
+        "MC09"
+      ],
+      "product_family": "NAND",
+      "question": "비트 mid-teen 성장과 ASP mid-50 상승을 읽을 때 eSSD·일반 NAND의 믹스와 Solidigm 포함 범위를 먼저 확인해야 고객별 제품·용량 제안을 좁힐 수 있다.",
+      "alternative_explanation": "NAND 전체 가격·판매 변화만으로 eSSD의 기명 고객 주문 증가나 SSD 대수를 알 수 없다.",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "locators": [
+        "page 4 NAND actual and Solidigm footnote",
+        "page 10 NAND plan including Solidigm"
+      ]
+    },
+    {
+      "metric_ids": [
+        "MC07",
+        "MC16"
+      ],
+      "product_family": "COMPANY_TOTAL",
+      "question": "회사 재고 장부금액 증가와 현금 유형자산 취득을 제품별 공급 일정 질문으로 바꾸려면 공정 전환·후공정·재고 평가·제품별 배정을 추가로 확인해야 한다.",
+      "alternative_explanation": "금액 재고는 비트 재고가 아니며 투자 집행은 당기 판매 가능한 생산능력이나 고객 인증 완료와 같지 않다.",
+      "source_id": "SRC-MEM-SK-Q226-PRESENTATION",
+      "locators": [
+        "page 15 PP&E cash acquisition",
+        "page 18 inventories"
+      ]
+    }
+  ],
+  "acquisition_attempts": [
+    {
+      "requested_url": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526321989/d115239d6k.htm",
+      "outcome": "ACCESS_FAILED_HTTP_403",
+      "retrieved_at_utc": "2026-10-04T12:26:32.882904+00:00",
+      "credentials_used": null,
+      "limitation": "Preserved separately from web-tool reading success; not original-byte verification."
+    }
+  ],
+  "checks": {
+    "pdf_original_bytes_hash_verified": true,
+    "discovery_response_hash_verified": true,
+    "pdf_all_pages_text_reviewed": 19,
+    "pdf_pages_visually_reviewed": [
+      4,
+      10,
+      12,
+      15,
+      18
+    ],
+    "quote_budget_words_by_source": {
+      "SRC-MEM-SK-Q226-PRESENTATION": 24,
+      "SRC-MEM-SK-IR-LIST26": 6,
+      "SRC-MEM-SK-Q226-PERIOD6K": 10
+    },
+    "company_product_grains_separated": true,
+    "actual_guidance_separated": true,
+    "text_bands_numerically_imputed": false,
+    "history_validated": false,
+    "leadingness_validated": false
+  }
+}
