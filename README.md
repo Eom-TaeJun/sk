@@ -8,6 +8,8 @@ SK하이닉스의 영업·마케팅·상품기획·신제품사업화 직무를 
 
 첫 구체 사례: [HBM3E × NVIDIA GB300 고객·상품 카드](docs/research/supply_chain/customer_product_cards/hbm_nvidia_gb300.md) — 고객 문제, 직무별 질문, 채택 사건과 무료 관측 후보 8개.
 
+기술 변화와 상품 요구: [AI 업무·병목·메모리·채택·공급 연결표](docs/research/supply_chain/ai_technology_memory_links.md) — HBM·호스트 DRAM·SSD의 역할, 소프트웨어 조건과 대표 채택 사건을 구분한다.
+
 ```text
 Real decision problem
 → economic / industry model
@@ -32,6 +34,7 @@ Real decision problem
 - 현재 우선순위: [2026 하반기 직무·상품·고객 구조](docs/research/supply_chain/sk_hynix_commercial_role_context.md) — HBM·서버 DRAM·eSSD의 고객 문제와 채택 단계 학습
 - 거시 학습 구조 정리(2026-10-04): 산업 분류·기업 역할·메모리 사이클·18개 지표 후보와 원문 영수증
 - [첫 분기 관측표](docs/research/supply_chain/memory_observation_panel_2026q2.md)(2026-10-04): 하이닉스·삼성의 2026Q2 재고·DRAM/NAND 출하·ASP·설비 지출. 제품·사업·기간 범위를 보존한 후보 기록이며 반복·역사 패널과 선행성 검증은 미구축
+- [AI 기술과 상품 요구 연결](docs/research/supply_chain/ai_technology_memory_links.md)(2026-10-04): 연결 일곱 가지, 구현·시험 조건과 채택·주문·공급 공백. 업계 총수요나 고객별 물량을 계산한 결과가 아님
 - [독립 목적 관리](docs/research/supply_chain/research_convergence_review.md): 실제 초기·중간·최종 검토와 수정 내역. 다음은 서버 DDR5의 Intel 인증 사례와 Dell 전시 탑재 사례를 고객·상품 카드로 구체화
 - 첫 수집 실험: [경제적 목적](docs/research/supply_chain/decision_purpose.md)과 [OpenAI–CoreWeave 사례 검토](docs/research/supply_chain/first_case_review.md) — 고객 약정과 실제 집행의 공개 연결 범위를 구분
 - 후속: H1 최소 검증 후 H2 Bottleneck Migration
