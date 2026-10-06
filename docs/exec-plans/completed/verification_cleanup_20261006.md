@@ -21,7 +21,9 @@
 
 작성 역할은 수집기, 캐시/테스트 격리, 연구 검증기로 나눴다. 다른 담당자가 캐시/격리와 연구 검증기를 검토했고 root는 수집기 diff와 전체 동작을 확인했다. 독립 검토에서는 새 검증기의 두 요약 문서를 함께 99로 바꾸고 hash chain을 갱신하면 실제 성공 응답 11개와 달라도 PASS였다는 반례를 재현했다. 배열·원 family 참조·receipt 획득방식에서 요약을 재계산하고, 양쪽 요약·hash chain 동시 변조와 실패 분류 변조 회귀 3개를 추가해 보완했다. 관련 최신 검증기 회귀 15개와 실제 자료 검증은 PASS다. 역할을 나눈 동일 모델 검토이며 blind review·다른 모델 교차검증·Claude 플러그인 실행의 효과를 측정한 결과로 부르지 않는다.
 
-최종 관련 회귀·clean clone 확인과 목적 판정은 아래 후속 검증 기록에 남긴다. Git 커밋·push·main 통합은 기존 사용자 승인 범위이며 실제 SHA/PR은 Git 이력에서 확인한다.
+최종 root 검증은 구현 커밋 `9570b195dbfe2db6766846f893bccef85f0b526b`의 깨끗한 로컬 Git clone에서 수행했다. Git에 포함된 파일만으로 **143 tests, OK**, 두 research validator PASS, 실제 issuer capture 한 건의 읽기 전용 재검사 PASS였다. Clone 자체의 입력 169개 파일은 실행 전후 bytes가 같고 Git 작업 트리도 깨끗했다. 복제 시 일반 CSV 6개에서만 Git 텍스트 줄바꿈 변환이 있었으며 원문·연구 자료처럼 `-text`로 고정한 바이트 대상은 원 checkout과 같았다. 원 checkout 입력 169개도 계속 보존했다.
+
+캐시/격리의 독립 검토는 PASS다. 연구 검증기의 별도 최종 검토도 15개 회귀와 기존 수동 요약 변조 반례를 재실행해 PASS를 확인했다. purpose reviewer는 실제 변경·완료 기록을 읽고 **CONTINUE**로 판단했으며, 새로운 runtime·상시 수집·H1 승인 확대는 **DEFER**했다. Git 커밋·push·main 통합은 기존 사용자 승인 범위이며 실제 SHA/PR은 Git 이력에서 확인한다.
 
 ## 재현 명령
 
