@@ -1,0 +1,35 @@
+[
+  {
+    "probe": "invalid timestamps",
+    "accepted_at_source": "2025-99-99 99:99:99",
+    "retrieved_at_utc": "not-an-ISO-date",
+    "verify": {
+      "status": "PASS",
+      "capture_count": 1,
+      "evidence_approved": false,
+      "predictive_validity_established": false
+    }
+  },
+  {
+    "probe": "interrupted capture publication",
+    "action": "verify",
+    "actual": {
+      "exception": "CaptureError",
+      "message": "current record view differs from its immutable capture"
+    }
+  },
+  {
+    "probe": "interrupted capture publication",
+    "action": "retry",
+    "actual": {
+      "exception": "CaptureError",
+      "message": "current record view differs from its immutable capture"
+    }
+  },
+  {
+    "probe": "cache after source change",
+    "returns_prior_result": true,
+    "review_status": "HUMAN_APPROVED",
+    "trace_hash": "13D670096B88141CA43E399678A1F855B1E1D2190B0F38DA902C1A298050D9A5"
+  }
+]
