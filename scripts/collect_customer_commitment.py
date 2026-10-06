@@ -134,6 +134,27 @@ def calendar_date(value: str) -> str:
         raise CaptureError("source drift: unsupported calendar date") from None
 
 
+def validate_source_datetime(value: str) -> None:
+    """Check the SEC source clock without assigning an unobserved timezone."""
+    try:
+        datetime.strptime(value, "%Y-%m-%d %H:%M:%S")
+    except (TypeError, ValueError):
+        raise CaptureError("source drift: invalid SEC acceptance calendar or time") from None
+
+
+def validate_utc_timestamp(value: str) -> str:
+    """Require an actual ISO calendar/time and an explicit UTC offset."""
+    if not isinstance(value, str) or not re.fullmatch(
+        r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?(?:Z|\+00:00)", value
+    ):
+        raise CaptureError("retrieval timestamp must be an ISO datetime with an explicit UTC offset")
+    try:
+        datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        raise CaptureError("retrieval timestamp has an invalid calendar or time") from None
+    return value
+
+
 def parse_case(document: bytes, index: bytes, *, allow_synthetic=False) -> dict:
     """Extract values from visible anchors; expected values are not supplied."""
     index_html = visible_html(index)
@@ -206,6 +227,8 @@ def parse_issuer_case(document: bytes, feed: bytes, *, allow_synthetic=False) ->
 
 def extract_document(document: bytes, *, publication_date: str, report_period: str | None, accepted_at_source: str | None, allow_synthetic=False) -> dict:
     """Shared visible 8-K extraction with route-specific publication metadata."""
+    if accepted_at_source is not None:
+        validate_source_datetime(accepted_at_source)
     doc = visible_html(document).text
     synthetic = b"SYNTHETIC TEST FIXTURE" in document
     if synthetic and not allow_synthetic:
@@ -345,9 +368,13 @@ def write_immutable(path: Path, raw: bytes):
 
 def write_current(path: Path, raw: bytes):
     safe_directory(path)
-    temporary = path.with_name(path.name + ".tmp")
-    write_immutable(temporary, raw)
-    temporary.replace(path)
+    temporary = path.with_name(f"{path.name}.{uuid.uuid4().hex}.tmp")
+    try:
+        write_immutable(temporary, raw)
+        temporary.replace(path)
+    finally:
+        if temporary.exists():
+            temporary.unlink()
 
 
 def capture(output_dir: Path, documents: dict[str, bytes], *, mode: str, source_route="sec", allow_synthetic=False, timestamp=None) -> dict:
@@ -358,19 +385,33 @@ def capture(output_dir: Path, documents: dict[str, bytes], *, mode: str, source_
     if not source_urls or set(documents) != set(source_urls):
         raise CaptureError("capture source roles disagree with the chosen route")
     record = parse_case(documents["document"], documents["index"], allow_synthetic=allow_synthetic) if source_route == "sec" else parse_issuer_case(documents["document"], documents["feed"], allow_synthetic=allow_synthetic)
-    now = timestamp or datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+    now = validate_utc_timestamp(timestamp if timestamp is not None else datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"))
     hashes = {name: sha256(raw) for name, raw in documents.items()}
     capture_id = sha256((PARSER_VERSION + "\n" + source_route + "\n" + "\n".join(hashes[name] for name in source_urls)).encode("ascii"))
-    ledger_path = output / "acquisition.json"
-    if (output / "record.json").exists() and not ledger_path.exists():
+    ledger_path = safe_directory(output / "acquisition.json")
+    current_path = safe_directory(output / "record.json")
+    if current_path.exists() and not ledger_path.exists():
         raise CaptureError("existing record has no capture ledger; refusing to overwrite")
     ledger = json.loads(ledger_path.read_text(encoding="utf-8")) if ledger_path.exists() else {"schema_version": "1.0", "case_id": record["case_id"], "status": STATUS, "captures": [], "current_capture_id": None}
     if ledger.get("case_id") != record["case_id"] or ledger.get("status") != STATUS:
         raise CaptureError("output directory belongs to a different or approved dataset")
     if ledger_path.exists():
-        verify_capture(output)
+        current_raw = verified_record_view(output, ledger)
+        if not current_path.exists() or current_path.read_bytes() != current_raw:
+            write_current(current_path, current_raw)
     if any(entry["capture_id"] == capture_id for entry in ledger["captures"]):
         return {"status": "ALREADY_CAPTURED", "capture_id": capture_id, "capture_count": len(ledger["captures"])}
+    relative_record = f"captures/{capture_id}/record.json"
+    prepared_path = bounded_file(output, relative_record)
+    if prepared_path.exists():
+        # A completed record may precede a failed receipt/ledger publication.
+        # Keep its first acquisition metadata; the canonical comparison below
+        # verifies it against this attempt's parsed source and bounded route.
+        prepared = json.loads(prepared_path.read_text(encoding="utf-8"))
+        now = validate_utc_timestamp(prepared["retrieved_at_utc"])
+        mode = prepared["retrieval_method"]
+        if mode not in {"network", "offline_import"}:
+            raise CaptureError("prepared capture has an unsupported acquisition mode")
     source_records = []
     for name in source_urls:
         relative = f"sources/{hashes[name]}.{'json' if name == 'feed' else 'html'}"
@@ -381,15 +422,16 @@ def capture(output_dir: Path, documents: dict[str, bytes], *, mode: str, source_
     if record["source_is_synthetic"]:
         record["remote_availability_verified_in_this_run"] = False
     record_raw = json_bytes(record)
-    relative_record = f"captures/{capture_id}/record.json"
     acquisition = {"schema_version": "1.0", "capture_id": capture_id, "parser_version": PARSER_VERSION, "status": STATUS, "source_route": source_route, "retrieval_method": mode, "retrieved_at_utc": now, "source_is_synthetic": record["source_is_synthetic"], "sources": source_records, "record_file": relative_record, "record_sha256": sha256(record_raw)}
     write_immutable(output / relative_record, record_raw)
     write_immutable(output / f"captures/{capture_id}/acquisition.json", json_bytes(acquisition))
     ledger["captures"].append({"capture_id": capture_id, "record_file": relative_record, "acquisition_file": f"captures/{capture_id}/acquisition.json", "record_sha256": sha256(record_raw), "acquisition_sha256": sha256(json_bytes(acquisition)), "retrieved_at_utc": now})
     ledger["current_capture_id"] = capture_id
     output.mkdir(parents=True, exist_ok=True)
-    write_current(output / "record.json", record_raw)
+    # The ledger commits the immutable revision. The root record is a derived
+    # view, recoverable only after every ledger entry and source verifies.
     write_current(ledger_path, json_bytes(ledger))
+    write_current(output / "record.json", record_raw)
     verify_capture(output)
     return {"status": "CAPTURED", "capture_id": capture_id, "capture_count": len(ledger["captures"])}
 
@@ -404,9 +446,8 @@ def bounded_file(root: Path, relative: str) -> Path:
     return target
 
 
-def verify_capture(output_dir: Path) -> dict:
-    output = safe_directory(output_dir)
-    ledger = json.loads((output / "acquisition.json").read_text(encoding="utf-8"))
+def verified_record_view(output: Path, ledger: dict) -> bytes:
+    """Verify authoritative history before deriving, never trusting, its view."""
     if ledger.get("status") != STATUS or not ledger.get("captures"):
         raise CaptureError("capture ledger is empty or not candidate research")
     ids = [entry["capture_id"] for entry in ledger["captures"]]
@@ -422,6 +463,16 @@ def verify_capture(output_dir: Path) -> dict:
             raise CaptureError("capture identity or candidate status changed")
         if acquisition["sources"] != record["sources"] or acquisition["record_sha256"] != sha256(record_raw) or acquisition["record_file"] != entry["record_file"] or len(record["sources"]) != 2:
             raise CaptureError("capture acquisition receipt disagrees with its record")
+        now = validate_utc_timestamp(record["retrieved_at_utc"])
+        mode = record["retrieval_method"]
+        if mode not in {"network", "offline_import"} or acquisition["retrieval_method"] != mode:
+            raise CaptureError("capture acquisition mode changed")
+        if validate_utc_timestamp(acquisition["retrieved_at_utc"]) != now or validate_utc_timestamp(entry["retrieved_at_utc"]) != now:
+            raise CaptureError("capture retrieval timestamps disagree")
+        if acquisition["parser_version"] != record["parser_version"] or acquisition["source_is_synthetic"] != record["source_is_synthetic"]:
+            raise CaptureError("capture parser or synthetic-source metadata changed")
+        if record["remote_availability_verified_in_this_run"] != (mode == "network" and not record["source_is_synthetic"]):
+            raise CaptureError("capture remote-availability metadata disagrees with its acquisition")
         route = record["source_route"]
         source_urls = SOURCE_URLS if route == "sec" else ISSUER_SOURCE_URLS if route == "issuer" else {}
         if not source_urls or acquisition["source_route"] != route:
@@ -431,6 +482,8 @@ def verify_capture(output_dir: Path) -> dict:
             validate_source_url(source["source_url"], route)
             if source["source_url"] != source_urls[name] or source["source_host"] != urlsplit(source_urls[name]).hostname:
                 raise CaptureError("source roles disagree with bounded source URLs")
+            if validate_utc_timestamp(source["retrieved_at_utc"]) != now or source["retrieval_method"] != mode or source["remote_retrieved_at_utc"] != (now if mode == "network" else None):
+                raise CaptureError("source retrieval metadata disagrees with its capture")
             raw = bounded_file(output, source["raw_file"]).read_bytes()
             if sha256(raw) != source["sha256"] or len(raw) != source["bytes"]:
                 raise CaptureError("raw source content hash mismatch")
@@ -442,8 +495,19 @@ def verify_capture(output_dir: Path) -> dict:
         for key, value in parsed.items():
             if record.get(key) != value:
                 raise CaptureError("record disagrees with deterministic source extraction")
-        if entry["capture_id"] == ledger["current_capture_id"] and (output / "record.json").read_bytes() != record_raw:
-            raise CaptureError("current record view differs from its immutable capture")
+        if entry["capture_id"] == ledger["current_capture_id"]:
+            current_raw = record_raw
+    return current_raw
+
+
+def verify_capture(output_dir: Path) -> dict:
+    output = safe_directory(output_dir)
+    ledger = json.loads(safe_directory(output / "acquisition.json").read_text(encoding="utf-8"))
+    current_raw = verified_record_view(output, ledger)
+    current_path = safe_directory(output / "record.json")
+    if not current_path.exists() or current_path.read_bytes() != current_raw:
+        raise CaptureError("current record view differs from its immutable capture")
+    ids = [entry["capture_id"] for entry in ledger["captures"]]
     return {"status": "PASS", "capture_count": len(ids), "evidence_approved": False, "predictive_validity_established": False}
 
 

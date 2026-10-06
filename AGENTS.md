@@ -21,6 +21,7 @@ Build an SK hynix-centered customer, product and supply-chain knowledge base for
 - Independent purpose review (2026-10-05): start/middle/handoff management checkpoints distinguish chip design, manufacturing and separate data-center versus mission operation; earlier card recommendations remain dated history
 - Current user priority (2026-10-05): defer server DDR5 customer/product convergence; verify free API observability, exact datasets/fields, access outcomes, units, dates, joins and reuse conditions first. API feasibility is candidate research, not a recurring collector or leadingness result
 - Latest user steering (2026-10-05): define why each indicator is collected and what question/relationship/change it checks before further collection. `docs/research/supply_chain/indicator_collection_purpose.md` owns the current purpose and review; API-call pilot and DDR5 convergence remain deferred. Importance, access readiness and empirical leadingness are separate
+- Code quality follow-up (2026-10-06): repaired the reproduced timestamp, capture-publication, cached-source and test-isolation failures; added offline checks for the fixed 2026-10-05 API/purpose packages while preserving original data and approval states. The dated review is `docs/reviews/2026-10-06/ai_code_review.md`; implementation and verification belong to `docs/exec-plans/completed/verification_cleanup_20261006.md`. The next economic task remains the KOSIS measurement contract
 - Bounded customer-commitment collection: purpose-first single-case capture/replay, with source provenance and separate failed attempts; not continuous monitoring or empirical validation
 - H1 metrics, lead/lag, realization rates, outcome analysis and verdict: not yet approved; require Gate 6 dataset freeze
 - H2: only after a credible H1 minimum pipeline
@@ -99,9 +100,12 @@ python -m unittest -v
 python -m src.pipeline --workspace . --scenario data/raw/scenarios/hbm4_vertical_slice.json
 python -m src.pipeline --workspace . --scenario data/raw/scenarios/hbm4_temporal_update_2026.json
 python scripts/validate_supply_chain_research.py
+python scripts/validate_current_research.py
 ```
 
 No Agent Evaluation runner is implemented yet. Do not fabricate eval results or document a command that does not exist.
+
+The first research validator checks the 2026-10-03 intake. `validate_current_research.py` checks the fixed 2026-10-05 API and purpose packages offline; neither command verifies current remote access, economic truth, predictive validity or human approval. Corpus/Gate 6 tests build in copied temporary workspaces. In a restricted Windows sandbox whose default Temp is unavailable, point Python `tempfile.tempdir` at a writable scratch directory before discovery; do not build into the source checkout as a workaround.
 
 H1 remains confined to primary-source corpus collection/review across the frozen 24-Track registry until a human Gate 6 dataset freeze. Do not calculate H1 metrics, lead/lag, realization rate or verdict before that freeze. Without explicit approval, do not start H2/H3, add a Decision Engine, Agent Execution Harness/runtime, dashboards or databases.
 

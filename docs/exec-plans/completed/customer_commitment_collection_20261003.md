@@ -32,4 +32,4 @@ Software validation does not establish predictive validity, actual contract real
 
 ## Handoff
 
-Exactly one next task: examine one subsequent public filing directly referring to the same order form for service commencement or actual cash receipt, preserving an unknown result when no direct disclosure exists.
+Historical recommendation on 2026-10-03: examine one subsequent public filing directly referring to the same order form for service commencement or actual cash receipt, preserving an unknown result when no direct disclosure exists. Current collection priorities and the next economic investigation are owned by [indicator collection purpose](../../research/supply_chain/indicator_collection_purpose.md).

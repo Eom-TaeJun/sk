@@ -2,6 +2,8 @@
 
 기준일: **2026-10-06**. 검토 대상: `c3ae9996bd51452cedfb4b7ac3186c61dbb31b39`.
 
+**후속 수정:** 이 문서와 재현 출력은 위 기준 커밋의 발견을 보존한다. 이후 코드 수정·회귀 검증과 현재 상태는 [검증 정비 완료 기록](../../exec-plans/completed/verification_cleanup_20261006.md)을 따른다. 아래 재현 스크립트의 과거 출력은 수정된 코드의 기대 결과가 아니다.
+
 **연구 방향은 유지하고 검증 절차는 보완해야 한다.** 하이닉스의 상품·고객·구매·공급 관계를 먼저 정의하고 공개 자료의 한계를 보존하는 방향은 목적에 맞는다. 그러나 기존 115개 테스트가 통과해도 날짜 오류, 중간 저장 실패, 캐시의 원문 재검사 누락과 테스트의 실제 자료 재작성은 남아 있다. 새로운 수집기나 관리 runtime을 늘리기 전에 이 경계를 정비하는 편이 낫다.
 
 이번 변경은 검토 결과와 [오프라인 재현 파일](reproduce_findings.py)을 보존한다. 운영 코드·기존 연구 데이터·H1 승인 상태는 수정하지 않는다. 원문 해시 검증, 코드 동작 검증, 자료의 경제적 의미, 사람 승인과 예측 성능은 각각 별도 판단이다.
@@ -31,7 +33,7 @@
 
 ### 중간 저장 실패 후 자동 재시도가 막힘
 
-위치: [수집기 391행](../../../scripts/collect_customer_commitment.py#L391).
+위치: [수집기 391행](https://github.com/Eom-TaeJun/sk/blob/c3ae9996bd51452cedfb4b7ac3186c61dbb31b39/scripts/collect_customer_commitment.py#L391).
 
 `capture`는 최신 `record.json`을 먼저 바꾸고 `acquisition.json` ledger를 나중에 바꾼다. 두 번째 capture에서 ledger 쓰기만 실패시키면 최신뷰는 새 revision을, ledger는 이전 revision을 가리킨다. 이후 검증과 같은 입력 재시도는 모두 `current record view differs from its immutable capture`로 실패한다.
 
@@ -39,7 +41,7 @@
 
 ### 불가능한 시각도 검증에 통과함
 
-위치: [SEC 시각 추출 150행](../../../scripts/collect_customer_commitment.py#L150), [수집 시각 입력 361행](../../../scripts/collect_customer_commitment.py#L361).
+위치: [SEC 시각 추출 150행](https://github.com/Eom-TaeJun/sk/blob/c3ae9996bd51452cedfb4b7ac3186c61dbb31b39/scripts/collect_customer_commitment.py#L150), [수집 시각 입력 361행](https://github.com/Eom-TaeJun/sk/blob/c3ae9996bd51452cedfb4b7ac3186c61dbb31b39/scripts/collect_customer_commitment.py#L361).
 
 SEC acceptance 추출은 문자열의 모양만 확인한다. 합성 자료의 acceptance를 `2025-99-99 99:99:99`, 내부 함수의 `timestamp`를 `not-an-ISO-date`로 바꾸면 저장되고 `verify_capture`가 PASS를 반환한다. 원문 재추출·해시 일치는 달력과 UTC 시각의 유효성을 보장하지 않는다.
 
@@ -47,7 +49,7 @@ SEC acceptance 추출은 문자열의 모양만 확인한다. 합성 자료의 a
 
 ### 캐시 반환 전에 현재 원문 해시를 확인하지 않음
 
-위치: [파이프라인 284행](../../../src/pipeline.py#L284).
+위치: [파이프라인 284행](https://github.com/Eom-TaeJun/sk/blob/c3ae9996bd51452cedfb4b7ac3186c61dbb31b39/src/pipeline.py#L284).
 
 기존 `run_result.json`이 있고 scenario fingerprint가 같으면 archive 해시 검사보다 먼저 반환한다. 임시 workspace에서 정상 실행 뒤 원문만 바꾸고 같은 scenario를 재실행하면 이전 결과와 `HUMAN_APPROVED` 상태가 그대로 반환된다.
 
@@ -55,7 +57,7 @@ SEC acceptance 추출은 문자열의 모양만 확인한다. 합성 자료의 a
 
 ### 전체 테스트가 실제 연구 아카이브를 재작성함
 
-위치: [테스트 setup 38행](../../../tests/test_h1_full_corpus.py#L38), [아카이브 쓰기 540행](../../../src/measurement/corpus.py#L540).
+위치: [테스트 setup 38행](https://github.com/Eom-TaeJun/sk/blob/c3ae9996bd51452cedfb4b7ac3186c61dbb31b39/tests/test_h1_full_corpus.py#L38), [아카이브 쓰기 540행](https://github.com/Eom-TaeJun/sk/blob/c3ae9996bd51452cedfb4b7ac3186c61dbb31b39/src/measurement/corpus.py#L540).
 
 `CorpusBuilder(ROOT)`가 실제 repository를 build workspace로 사용한다. 전체 테스트는 115개 모두 통과했지만 Windows에서 아카이브 36개가 LF에서 CRLF로 바뀌었다. `.gitattributes`의 해당 원문은 `-text`이므로 이는 무시할 텍스트 표시 차이가 아닌 실제 바이트 변경이다. 최초 재작성 뒤의 bytes를 비교하는 replay 테스트로는 실행 전 checkout 변화를 잡지 못한다.
 
@@ -71,9 +73,9 @@ SEC acceptance 추출은 문자열의 모양만 확인한다. 합성 자료의 a
 | 과거 다음 작업 안내 | 현재 목적 문서는 KOSIS 측정 계약을 다음으로 정한다. 과거 고객 약정 문서는 주문서 후속 공시 또는 상품·고객 연결을 아직 다음으로 표시한다. **REWORK**. | 과거 판단을 삭제하지 않고 당시 권고라고 표시하며 현재 목적 문서로 연결한다. |
 | 새 관리 runtime·대시보드·상시 수집 | 지금 확인한 문제 해결의 필수 요소가 아니다. **DEFER**. | 현재 코드와 검증 계약을 먼저 정비한다. |
 
-최신 자료 검증 공백의 근거는 [목적 검토 완료 계획 33행](../../exec-plans/completed/indicator_purpose_review_20261005.md#L33)과 [기존 검증기 11행](../../../scripts/validate_supply_chain_research.py#L11)이다. 기존 검증기는 2026-10-03 bundle의 `artifacts` 계약용이며 최신 `files/byte_size` manifest를 검증하는 명령이 아니다. 이는 당시 로컬 검증이 거짓이었다는 판단이 아니라 **그 절차가 clone에 포함되지 않은 재현성 공백**이다.
+최신 자료 검증 공백의 근거는 [목적 검토 완료 계획 33행](https://github.com/Eom-TaeJun/sk/blob/c3ae9996bd51452cedfb4b7ac3186c61dbb31b39/docs/exec-plans/completed/indicator_purpose_review_20261005.md#L33)과 [기존 검증기 11행](https://github.com/Eom-TaeJun/sk/blob/c3ae9996bd51452cedfb4b7ac3186c61dbb31b39/scripts/validate_supply_chain_research.py#L11)이다. 기존 검증기는 2026-10-03 bundle의 `artifacts` 계약용이며 최신 `files/byte_size` manifest를 검증하는 명령이 아니다. 이는 당시 로컬 검증이 거짓이었다는 판단이 아니라 **그 절차가 clone에 포함되지 않은 재현성 공백**이다.
 
-안내 충돌은 [첫 사례 마지막 권고](../../research/supply_chain/first_case_review.md#L43), [당시 수집 완료 계획](../../exec-plans/completed/customer_commitment_collection_20261003.md#L35), [경제적 목적 첫 갱신](../../research/supply_chain/decision_purpose.md#L5)과 [현재 목적](../../research/supply_chain/indicator_collection_purpose.md#L163)을 비교했다. 전체 세계지도·반복 수집·선행성 검증은 여전히 완료되지 않았다.
+안내 충돌은 [첫 사례 마지막 권고](https://github.com/Eom-TaeJun/sk/blob/c3ae9996bd51452cedfb4b7ac3186c61dbb31b39/docs/research/supply_chain/first_case_review.md#L43), [당시 수집 완료 계획](https://github.com/Eom-TaeJun/sk/blob/c3ae9996bd51452cedfb4b7ac3186c61dbb31b39/docs/exec-plans/completed/customer_commitment_collection_20261003.md#L35), [경제적 목적 첫 갱신](https://github.com/Eom-TaeJun/sk/blob/c3ae9996bd51452cedfb4b7ac3186c61dbb31b39/docs/research/supply_chain/decision_purpose.md#L5)과 [현재 목적](https://github.com/Eom-TaeJun/sk/blob/c3ae9996bd51452cedfb4b7ac3186c61dbb31b39/docs/research/supply_chain/indicator_collection_purpose.md#L163)을 비교했다. 전체 세계지도·반복 수집·선행성 검증은 여전히 완료되지 않았다.
 
 ## 반복해서 사용할 검토 절차
 
