@@ -44,6 +44,7 @@ Real decision problem
 - [지표 수집 목적과 적합성](docs/research/supply_chain/indicator_collection_purpose.md): 7개 경제적 질문과 기존 34개 번호 지표·6개 가족 계약의 수집 역할/한계. 기존 접근 성공을 수집 중요도·선행성으로 승격하지 않음
 - [독립 목적 관리](docs/research/supply_chain/research_convergence_review.md): 실제 초기·중간·최종 검토와 수정 내역. 현재는 수집 목적을 고정한 뒤 후보 적합성을 검토하며 호출 파일럿·DDR5 제안은 보류
 - 첫 수집 실험: [경제적 목적](docs/research/supply_chain/decision_purpose.md)과 [OpenAI–CoreWeave 사례 검토](docs/research/supply_chain/first_case_review.md) — 고객 약정과 실제 집행의 공개 연결 범위를 구분
+- 검증 정비(2026-10-06): [AI 코드 검토](docs/reviews/2026-10-06/ai_code_review.md)에서 재현한 오류의 수정·회귀 검증은 [완료 기록](docs/exec-plans/completed/verification_cleanup_20261006.md)에 둔다. 연구 원문과 H1 승인 상태를 보존하며, 다음 경제적 조사는 기존 KOSIS 측정 계약을 따른다
 - 후속: H1 최소 검증 후 H2 Bottleneck Migration
 - 보류: H3 Product-Mix Opportunity Cost는 공개정보가 충분할 때까지 `KNOWN_UNKNOWN` 중심 framework로 유지
 
@@ -84,6 +85,7 @@ python -m unittest -v
 python -m src.pipeline --workspace . --scenario data/raw/scenarios/hbm4_vertical_slice.json
 python -m src.pipeline --workspace . --scenario data/raw/scenarios/hbm4_temporal_update_2026.json
 python scripts/validate_supply_chain_research.py
+python scripts/validate_current_research.py
 ```
 
 승인 전에 실행된 H1 실험 코드·데이터·출력은 현재 baseline에서 제거했다. 해당 시도는 `docs/exec-plans/completed/interrupted_h1_experiment.md`와 Git 이력에만 보존되며 H1 finding으로 인용할 수 없다. 현재 active plan은 `docs/exec-plans/active/h1_empirical_validation_design.md`다.

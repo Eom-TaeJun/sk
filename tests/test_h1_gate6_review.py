@@ -7,10 +7,7 @@ from pathlib import Path
 
 from src.measurement.corpus import FORBIDDEN_EMPIRICAL_KEYS
 from src.measurement.gate6_review import Gate6ReviewBuilder
-
-
-ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "data/h1/gate6_review"
+from tests.workspace_helpers import isolated_h1_workspace
 
 
 def load_json(path: Path) -> dict:
@@ -30,19 +27,21 @@ def walk_keys(value):
 class H1Gate6ReviewTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.builder = Gate6ReviewBuilder(ROOT)
+        cls.workspace = isolated_h1_workspace(cls)
+        cls.output = cls.workspace / "data/h1/gate6_review"
+        cls.builder = Gate6ReviewBuilder(cls.workspace)
         cls.manifest = cls.builder.build()
-        cls.events = load_json(OUTPUT / "event_review_matrix.json")
-        cls.holds = load_json(OUTPUT / "hold_resolution_sheet.json")
-        cls.tracks = load_json(OUTPUT / "track_readiness_matrix.json")
-        cls.product = load_json(OUTPUT / "h1_p_observability_matrix.json")
-        cls.platform = load_json(OUTPUT / "h1_c_observability_matrix.json")
-        cls.negative = load_json(OUTPUT / "negative_evidence_sufficiency.json")
-        cls.censoring = load_json(OUTPUT / "censoring_readiness_matrix.json")
-        cls.capex = load_json(OUTPUT / "capex_independence_reuse_audit.json")
-        cls.o1 = load_json(OUTPUT / "o1_timing_policy_options.json")
-        cls.authorization = load_json(OUTPUT / "analysis_authorization_proposal.json")
-        cls.checklist = load_json(OUTPUT / "human_decision_checklist.json")
+        cls.events = load_json(cls.output / "event_review_matrix.json")
+        cls.holds = load_json(cls.output / "hold_resolution_sheet.json")
+        cls.tracks = load_json(cls.output / "track_readiness_matrix.json")
+        cls.product = load_json(cls.output / "h1_p_observability_matrix.json")
+        cls.platform = load_json(cls.output / "h1_c_observability_matrix.json")
+        cls.negative = load_json(cls.output / "negative_evidence_sufficiency.json")
+        cls.censoring = load_json(cls.output / "censoring_readiness_matrix.json")
+        cls.capex = load_json(cls.output / "capex_independence_reuse_audit.json")
+        cls.o1 = load_json(cls.output / "o1_timing_policy_options.json")
+        cls.authorization = load_json(cls.output / "analysis_authorization_proposal.json")
+        cls.checklist = load_json(cls.output / "human_decision_checklist.json")
 
     def test_all_75_events_have_complete_human_review_rows_and_source_trace(self) -> None:
         required = {
@@ -77,7 +76,7 @@ class H1Gate6ReviewTests(unittest.TestCase):
         self.assertEqual(len(self.events["records"]), 75)
         source_map = {
             row["source_id"]: row
-            for row in load_json(ROOT / "data/h1/corpus/source_registry.json")["sources"]
+            for row in load_json(self.workspace / "data/h1/corpus/source_registry.json")["sources"]
         }
         for row in self.events["records"]:
             self.assertTrue(required <= set(row))
@@ -98,7 +97,7 @@ class H1Gate6ReviewTests(unittest.TestCase):
         )
 
     def test_raw_review_status_is_preserved(self) -> None:
-        corpus = load_json(ROOT / "data/h1/corpus/events.json")
+        corpus = load_json(self.workspace / "data/h1/corpus/events.json")
         raw_status = {
             record["event"]["event_id"]: record["event"]["review_status"]
             for record in corpus["records"]
@@ -205,7 +204,7 @@ class H1Gate6ReviewTests(unittest.TestCase):
         self.assertIsNone(self.checklist["gate6"]["human_decision"])
 
     def test_package_has_no_empirical_h1_output_fields(self) -> None:
-        for path in OUTPUT.glob("*.json"):
+        for path in self.output.glob("*.json"):
             forbidden = set(walk_keys(load_json(path))) & FORBIDDEN_EMPIRICAL_KEYS
             self.assertFalse(forbidden, f"forbidden fields in {path}: {forbidden}")
         self.assertFalse(self.manifest["gate6_frozen"])
@@ -214,13 +213,13 @@ class H1Gate6ReviewTests(unittest.TestCase):
 
     def test_same_input_review_replay_is_byte_and_hash_stable(self) -> None:
         before = {
-            path: (ROOT / path).read_bytes()
+            path: (self.workspace / path).read_bytes()
             for path in self.manifest["file_hashes"]
         }
         replay = self.builder.build()
         self.assertEqual(replay, self.manifest)
         for path, content in before.items():
-            self.assertEqual((ROOT / path).read_bytes(), content)
+            self.assertEqual((self.workspace / path).read_bytes(), content)
 
 
 if __name__ == "__main__":

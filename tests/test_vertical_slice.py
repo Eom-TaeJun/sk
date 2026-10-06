@@ -23,7 +23,7 @@ from src.core.models import (
     SourceRecord,
 )
 from src.memo.builder import validate_fact_trace
-from src.pipeline import run_vertical_slice
+from src.pipeline import SourceHashMismatch, run_vertical_slice
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -111,6 +111,39 @@ class VerticalSliceTest(unittest.TestCase):
             encoding="utf-8"
         ).strip().splitlines()
         self.assertEqual(4, len(evidence_lines))
+
+    def test_cached_replay_rejects_changed_source_and_preserves_approval(self) -> None:
+        first = self.run_baseline()
+        self.assertEqual(first["memo"]["review_status"], "HUMAN_APPROVED")
+        result_path = self.workspace / "data/runs" / first["run_id"] / "run_result.json"
+        evidence_path = self.workspace / "data/evidence/atomic_evidence.jsonl"
+        before_result = result_path.read_bytes()
+        before_evidence = evidence_path.read_bytes()
+        scenario = json.loads(self.baseline_path.read_text(encoding="utf-8"))
+        archive = self.workspace / scenario["source"]["local_archive_path"]
+        original = archive.read_bytes()
+        archive.write_bytes(original + b"\nSynthetic changed source for replay test.\n")
+
+        with self.assertRaises(SourceHashMismatch):
+            self.run_baseline()
+
+        self.assertEqual(result_path.read_bytes(), before_result)
+        self.assertEqual(evidence_path.read_bytes(), before_evidence)
+        archive.write_bytes(original)
+        self.assertEqual(self.run_baseline(), first)
+
+    def test_cached_temporal_replay_checks_prior_source_dependency(self) -> None:
+        _, update = self.run_sequence()
+        scenario = json.loads(self.baseline_path.read_text(encoding="utf-8"))
+        archive = self.workspace / scenario["source"]["local_archive_path"]
+        archive.write_bytes(archive.read_bytes() + b"\nSynthetic changed prior source.\n")
+        result_path = self.workspace / "data/runs" / update["run_id"] / "run_result.json"
+        before_result = result_path.read_bytes()
+
+        with self.assertRaises(SourceHashMismatch):
+            run_vertical_slice(self.workspace, self.update_path)
+
+        self.assertEqual(result_path.read_bytes(), before_result)
 
     def test_retrieval_source_trace(self) -> None:
         result = self.run_baseline()

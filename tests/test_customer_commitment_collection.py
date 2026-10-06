@@ -160,6 +160,170 @@ class CustomerCommitmentCollectionTests(unittest.TestCase):
         self.assertEqual(current["supersedes_capture_id"], first["capture_id"])
         self.assertEqual(verify_capture(self.output)["capture_count"], 2)
 
+    def test_ledger_publication_failure_keeps_valid_history_and_retry_uses_first_attempt_time(self):
+        first = self.collect()
+        first_path = self.output / "captures" / first["capture_id"] / "record.json"
+        first_bytes = first_path.read_bytes()
+        changed = dict(self.documents, document=SYNTHETIC_DOCUMENT + b"\n<!-- revision -->\n")
+        from scripts import collect_customer_commitment as collector
+        original = collector.write_current
+
+        def fail_ledger(path, raw):
+            if path.name == "acquisition.json":
+                raise OSError("simulated ledger publication failure")
+            return original(path, raw)
+
+        with patch.object(collector, "write_current", side_effect=fail_ledger), self.assertRaises(OSError):
+            self.collect(changed, timestamp="2026-10-04T01:00:00Z")
+        self.assertEqual(verify_capture(self.output)["capture_count"], 1)
+        self.assertEqual((self.output / "record.json").read_bytes(), first_bytes)
+        prepared_paths = [path for path in (self.output / "captures").glob("*/record.json") if path != first_path]
+        self.assertEqual(len(prepared_paths), 1)
+        # Also recover the legacy publication order: the view was replaced,
+        # but the authoritative ledger still commits only the first revision.
+        (self.output / "record.json").write_bytes(prepared_paths[0].read_bytes())
+        with self.assertRaisesRegex(CaptureError, "current record view"):
+            verify_capture(self.output)
+        retried = self.collect(changed, timestamp="2026-10-05T01:00:00Z")
+        current = json.loads((self.output / "record.json").read_text())
+        self.assertEqual(retried["capture_count"], 2)
+        self.assertEqual(current["retrieved_at_utc"], "2026-10-04T01:00:00Z")
+        self.assertEqual(first_path.read_bytes(), first_bytes)
+        self.assertEqual(current["supersedes_capture_id"], first["capture_id"])
+        self.assertEqual(verify_capture(self.output)["capture_count"], 2)
+
+    def test_first_capture_ledger_failure_can_retry_without_changing_prepared_metadata(self):
+        with patch("scripts.collect_customer_commitment.write_current", side_effect=OSError("publication failure")), self.assertRaises(OSError):
+            self.collect()
+        self.assertFalse((self.output / "acquisition.json").exists())
+        self.assertFalse((self.output / "record.json").exists())
+        retried = capture(self.output, self.documents, mode="network", allow_synthetic=True, timestamp="2026-10-04T01:00:00Z")
+        record = json.loads((self.output / "record.json").read_text())
+        self.assertEqual(retried["capture_count"], 1)
+        self.assertEqual(record["retrieved_at_utc"], "2026-10-03T01:00:00Z")
+        self.assertEqual(record["retrieval_method"], "offline_import")
+        self.assertFalse(record["remote_availability_verified_in_this_run"])
+        self.assertTrue(all(source["remote_retrieved_at_utc"] is None for source in record["sources"]))
+        self.assertEqual(verify_capture(self.output)["status"], "PASS")
+
+    def test_prepared_record_survives_receipt_write_failure_and_retries(self):
+        from scripts import collect_customer_commitment as collector
+        original = collector.write_immutable
+
+        def fail_receipt(path, raw):
+            if path.name == "acquisition.json" and path.parent.parent.name == "captures":
+                raise OSError("receipt write failure")
+            return original(path, raw)
+
+        with patch.object(collector, "write_immutable", side_effect=fail_receipt), self.assertRaises(OSError):
+            self.collect()
+        self.assertFalse((self.output / "record.json").exists())
+        self.assertEqual(self.collect(timestamp="2026-10-04T01:00:00Z")["capture_count"], 1)
+        record = json.loads((self.output / "record.json").read_text())
+        self.assertEqual(record["retrieved_at_utc"], "2026-10-03T01:00:00Z")
+        self.assertEqual(verify_capture(self.output)["status"], "PASS")
+
+    def test_view_publication_failure_is_readonly_verify_error_and_capture_retry_repairs_it(self):
+        first = self.collect()
+        first_path = self.output / "captures" / first["capture_id"] / "record.json"
+        first_bytes = first_path.read_bytes()
+        changed = dict(self.documents, document=SYNTHETIC_DOCUMENT + b"\n<!-- new view -->\n")
+        from scripts import collect_customer_commitment as collector
+        original = collector.write_current
+
+        def fail_view(path, raw):
+            if path.name == "record.json":
+                raise OSError("view publication failure")
+            return original(path, raw)
+
+        with patch.object(collector, "write_current", side_effect=fail_view), self.assertRaises(OSError):
+            self.collect(changed, timestamp="2026-10-04T01:00:00Z")
+        stale = (self.output / "record.json").read_bytes()
+        with self.assertRaisesRegex(CaptureError, "current record view"):
+            verify_capture(self.output)
+        self.assertEqual((self.output / "record.json").read_bytes(), stale)
+        retried = self.collect(changed, timestamp="2026-10-05T01:00:00Z")
+        self.assertEqual(retried["status"], "ALREADY_CAPTURED")
+        self.assertEqual(retried["capture_count"], 2)
+        self.assertEqual(first_path.read_bytes(), first_bytes)
+        self.assertEqual(json.loads((self.output / "record.json").read_text())["retrieved_at_utc"], "2026-10-04T01:00:00Z")
+        self.assertEqual(verify_capture(self.output)["capture_count"], 2)
+
+    def test_replace_failure_leaves_no_fixed_temp_conflict_for_a_later_retry(self):
+        self.collect()
+        changed = dict(self.documents, document=SYNTHETIC_DOCUMENT + b"\n<!-- replace failure -->\n")
+        original_replace = Path.replace
+
+        def fail_ledger_replace(path, target):
+            if Path(target).name == "acquisition.json":
+                raise OSError("ledger replace failure")
+            return original_replace(path, target)
+
+        with patch.object(Path, "replace", fail_ledger_replace), self.assertRaises(OSError):
+            self.collect(changed, timestamp="2026-10-04T01:00:00Z")
+        self.assertEqual(list(self.output.glob("*.tmp")), [])
+        self.assertEqual(verify_capture(self.output)["capture_count"], 1)
+        self.assertEqual(self.collect(changed, timestamp="2026-10-05T01:00:00Z")["capture_count"], 2)
+        self.assertEqual(verify_capture(self.output)["status"], "PASS")
+
+    def test_capture_repairs_only_a_derived_view_and_refuses_corrupted_sources(self):
+        self.collect()
+        record = json.loads((self.output / "record.json").read_text())
+        (self.output / "record.json").write_bytes(b"corrupted derived view")
+        with self.assertRaisesRegex(CaptureError, "current record view"):
+            verify_capture(self.output)
+        self.assertEqual((self.output / "record.json").read_bytes(), b"corrupted derived view")
+        self.assertEqual(self.collect()["status"], "ALREADY_CAPTURED")
+        self.assertEqual(verify_capture(self.output)["status"], "PASS")
+        (self.output / "record.json").write_bytes(b"another corrupted view")
+        (self.output / record["sources"][0]["raw_file"]).write_bytes(b"corrupted source")
+        with self.assertRaisesRegex(CaptureError, "raw source content hash"):
+            self.collect()
+        self.assertEqual((self.output / "record.json").read_bytes(), b"another corrupted view")
+        self.assertEqual((self.output / record["sources"][0]["raw_file"]).read_bytes(), b"corrupted source")
+
+    def test_missing_current_view_is_not_repaired_by_verify_only(self):
+        self.collect()
+        (self.output / "record.json").unlink()
+        with self.assertRaisesRegex(CaptureError, "current record view"):
+            verify_capture(self.output)
+        self.assertFalse((self.output / "record.json").exists())
+        self.assertEqual(self.collect()["status"], "ALREADY_CAPTURED")
+        self.assertEqual(verify_capture(self.output)["status"], "PASS")
+
+    def test_sec_acceptance_calendar_and_time_are_checked_without_inventing_a_timezone(self):
+        for timestamp in (b"2025-99-99 99:99:99", b"2025-02-29 09:00:25", b"2025-09-25 24:00:25"):
+            with self.subTest(timestamp=timestamp), self.assertRaisesRegex(CaptureError, "acceptance calendar"):
+                self.parse(index=SYNTHETIC_INDEX.replace(b"2025-09-25 09:00:25", timestamp))
+        record = self.parse()
+        self.assertEqual(record["accepted_at_source"], "2025-09-25 09:00:25")
+        self.assertIsNone(record["accepted_at_source_timezone"])
+
+    def test_invalid_retrieval_timestamp_is_rejected_before_capture_writes(self):
+        for timestamp in ("", "not-an-ISO-date", "2026-02-30T01:00:00Z", "2026-10-03T24:00:00Z", "2026-10-03T01:00:00", "2026-10-03T01:00:00+09:00", 123):
+            with self.subTest(timestamp=timestamp), self.assertRaises(CaptureError):
+                self.collect(timestamp=timestamp)
+            self.assertFalse(self.output.exists())
+
+    def test_explicit_utc_offset_is_preserved_and_generated_default_clock_is_valid(self):
+        self.collect(timestamp="2026-10-03T01:00:00+00:00")
+        record = json.loads((self.output / "record.json").read_text())
+        self.assertEqual(record["retrieved_at_utc"], "2026-10-03T01:00:00+00:00")
+        self.assertEqual(verify_capture(self.output)["status"], "PASS")
+        output = Path(self.temp.name) / "default-clock"
+        capture(output, self.documents, mode="offline_import", allow_synthetic=True)
+        self.assertTrue(json.loads((output / "record.json").read_text())["retrieved_at_utc"].endswith("Z"))
+        self.assertEqual(verify_capture(output)["status"], "PASS")
+
+    def test_verify_rejects_invalid_ledger_retrieval_time_even_when_content_hashes_match(self):
+        self.collect()
+        path = self.output / "acquisition.json"
+        ledger = json.loads(path.read_text())
+        ledger["captures"][0]["retrieved_at_utc"] = "2026-02-30T01:00:00Z"
+        path.write_text(json.dumps(ledger))
+        with self.assertRaisesRegex(CaptureError, "invalid calendar"):
+            verify_capture(self.output)
+
     def test_tampered_raw_source_is_rejected(self):
         self.collect()
         record = json.loads((self.output / "record.json").read_text())

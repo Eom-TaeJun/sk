@@ -13,9 +13,7 @@ from src.measurement.corpus import (
 )
 from src.measurement.pilot import PilotDataset, PilotSourceRegistry
 from src.measurement.registry import CandidateTrackRegistry, RegistryFreezeManifest
-
-
-ROOT = Path(__file__).resolve().parents[1]
+from tests.workspace_helpers import isolated_h1_workspace
 
 
 def load_json(path: Path) -> dict:
@@ -35,31 +33,32 @@ def walk_keys(value):
 class H1FullCorpusTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.builder = CorpusBuilder(ROOT)
-        cls.input_path = ROOT / "data/h1/corpus/collection_input.json"
+        cls.workspace = isolated_h1_workspace(cls)
+        cls.builder = CorpusBuilder(cls.workspace)
+        cls.input_path = cls.workspace / "data/h1/corpus/collection_input.json"
         cls.manifest = cls.builder.build(cls.input_path)
         cls.registry = CandidateTrackRegistry.from_dict(
-            load_json(ROOT / "data/h1/registry/candidate_tracks.json")
+            load_json(cls.workspace / "data/h1/registry/candidate_tracks.json")
         )
         cls.freeze = RegistryFreezeManifest(
-            **load_json(ROOT / "data/h1/registry/registry_freeze.json")
+            **load_json(cls.workspace / "data/h1/registry/registry_freeze.json")
         )
         cls.pilot_sources = PilotSourceRegistry.from_dict(
-            load_json(ROOT / "data/h1/pilot/source_registry.json")
+            load_json(cls.workspace / "data/h1/pilot/source_registry.json")
         )
         cls.pilot = PilotDataset.from_dict(
-            load_json(ROOT / "data/h1/pilot/pilot_events.json")
+            load_json(cls.workspace / "data/h1/pilot/pilot_events.json")
         )
         cls.sources = PilotSourceRegistry.from_dict(
-            load_json(ROOT / "data/h1/corpus/source_registry.json")
+            load_json(cls.workspace / "data/h1/corpus/source_registry.json")
         )
         cls.collection = CollectionStatusManifest.from_dict(
-            load_json(ROOT / "data/h1/corpus/track_collection_status.json")
+            load_json(cls.workspace / "data/h1/corpus/track_collection_status.json")
         )
         cls.dataset = CorpusDataset.from_dict(
-            load_json(ROOT / "data/h1/corpus/events.json")
+            load_json(cls.workspace / "data/h1/corpus/events.json")
         )
-        cls.results = load_json(ROOT / "data/h1/corpus/validation_results.json")[
+        cls.results = load_json(cls.workspace / "data/h1/corpus/validation_results.json")[
             "results"
         ]
 
@@ -85,7 +84,7 @@ class H1FullCorpusTests(unittest.TestCase):
             self.assertEqual(corpus_events[record.event.event_id], record.to_dict())
 
     def test_all_sources_are_primary_and_archived_with_trace(self) -> None:
-        self.sources.verify_archives(ROOT)
+        self.sources.verify_archives(self.workspace)
         self.assertEqual(len(self.sources.sources), 51)
         for source in self.sources.sources:
             self.assertTrue(source.primary_source)
@@ -107,7 +106,7 @@ class H1FullCorpusTests(unittest.TestCase):
 
     def test_adversarial_verifier_is_independent_and_covers_every_hold(self) -> None:
         verification = load_json(
-            ROOT / "data/h1/corpus/adversarial_verification.json"
+            self.workspace / "data/h1/corpus/adversarial_verification.json"
         )
         self.assertNotEqual(
             verification["collector_actor"], verification["verifier_actor"]
@@ -183,7 +182,7 @@ class H1FullCorpusTests(unittest.TestCase):
             self.assertEqual(event.origin_group, source.origin_group)
 
     def test_coverage_contract_separates_product_and_platform_fields(self) -> None:
-        coverage = load_json(ROOT / "data/h1/corpus/coverage_report.json")
+        coverage = load_json(self.workspace / "data/h1/corpus/coverage_report.json")
         self.assertEqual(len(coverage["tracks"]), 24)
         for row in coverage["tracks"]:
             fields = set(row["coverage"])
@@ -198,12 +197,12 @@ class H1FullCorpusTests(unittest.TestCase):
 
     def test_no_empirical_h1_output_exists_before_gate6(self) -> None:
         paths = [
-            ROOT / "data/h1/corpus/collection_input.json",
-            ROOT / "data/h1/corpus/events.json",
-            ROOT / "data/h1/corpus/coverage_report.json",
-            ROOT / "data/h1/corpus/build_manifest.json",
-            ROOT / "data/h1/corpus/adversarial_verification.json",
-            ROOT / "application_evidence/capability_evidence_ledger.json",
+            self.workspace / "data/h1/corpus/collection_input.json",
+            self.workspace / "data/h1/corpus/events.json",
+            self.workspace / "data/h1/corpus/coverage_report.json",
+            self.workspace / "data/h1/corpus/build_manifest.json",
+            self.workspace / "data/h1/corpus/adversarial_verification.json",
+            self.workspace / "application_evidence/capability_evidence_ledger.json",
         ]
         for path in paths:
             found = set(walk_keys(load_json(path))) & FORBIDDEN_EMPIRICAL_KEYS
@@ -212,7 +211,7 @@ class H1FullCorpusTests(unittest.TestCase):
         self.assertFalse(self.manifest["empirical_h1_calculated"])
 
     def test_capability_ledger_contains_only_traceable_performed_facts(self) -> None:
-        ledger = load_json(ROOT / "application_evidence/capability_evidence_ledger.json")
+        ledger = load_json(self.workspace / "application_evidence/capability_evidence_ledger.json")
         self.assertEqual(len(ledger["records"]), 8)
         allowed = {
             "VERIFIED_PERFORMED_FACT",
@@ -223,18 +222,18 @@ class H1FullCorpusTests(unittest.TestCase):
             self.assertIn(record["claim_status"], allowed)
             self.assertTrue(record["artifact_references"])
             for artifact in record["artifact_references"]:
-                self.assertTrue((ROOT / artifact).exists(), artifact)
+                self.assertTrue((self.workspace / artifact).exists(), artifact)
             self.assertTrue(record["overclaim_boundary"])
 
     def test_same_input_replay_is_byte_and_hash_stable(self) -> None:
         before = {
-            path: (ROOT / path).read_bytes()
+            path: (self.workspace / path).read_bytes()
             for path in self.manifest["file_hashes"]
         }
         replay = self.builder.build(self.input_path)
         self.assertEqual(replay, self.manifest)
         for path, content in before.items():
-            self.assertEqual((ROOT / path).read_bytes(), content)
+            self.assertEqual((self.workspace / path).read_bytes(), content)
 
 
 if __name__ == "__main__":

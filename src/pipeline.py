@@ -46,6 +46,16 @@ def file_sha256(path: Path) -> str:
     return digest.hexdigest().upper()
 
 
+def _verify_source_archive(root: Path, archive_path: str | None, expected_hash: str) -> None:
+    if not archive_path:
+        return
+    actual_hash = file_sha256(root / archive_path)
+    if actual_hash != expected_hash.upper():
+        raise SourceHashMismatch(
+            f"source content hash mismatch: expected {expected_hash}, got {actual_hash}"
+        )
+
+
 def _contradiction_counts(audit: dict[str, Any]) -> dict[str, int]:
     counts: dict[str, int] = {}
     for item in audit["contradictions"]:
@@ -281,20 +291,18 @@ def run_vertical_slice(workspace: Path, scenario_path: Path) -> dict[str, Any]:
         {"core_implementation_version": CORE_IMPLEMENTATION_VERSION, "payload": payload}
     )
     existing_result_path = run_dir / "run_result.json"
+    existing = None
     if existing_result_path.exists():
         existing = load_json(existing_result_path, {})
         if existing.get("scenario_fingerprint") != scenario_fingerprint:
             raise ValueError(f"run_id {run_id} already exists for a different scenario")
-        return existing
 
     source = SourceRecord.from_dict(payload["source"])
-    archive_path = root / source.local_archive_path if source.local_archive_path else None
-    if archive_path is not None:
-        actual_hash = file_sha256(archive_path)
-        if actual_hash != source.content_hash.upper():
-            raise SourceHashMismatch(
-                f"source content hash mismatch: expected {source.content_hash}, got {actual_hash}"
-            )
+    _verify_source_archive(root, source.local_archive_path, source.content_hash)
+    if existing is not None:
+        for item in existing["source_trace"]:
+            _verify_source_archive(root, item["local_archive_path"], item["content_hash"])
+        return existing
 
     source_registry = SourceRegistry(root / "data" / "sources" / "source_registry.jsonl")
     evidence_registry = EvidenceRegistry(root / "data" / "evidence" / "atomic_evidence.jsonl")

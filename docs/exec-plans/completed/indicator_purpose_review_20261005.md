@@ -36,4 +36,6 @@ SK hynix 중심 산업·상품·고객 관계 학습과 무료 관측 설계다.
 
 ## 다음 작업 하나
 
+후속 재현 보완(2026-10-06): 당시 로컬 검증의 저장소 내 진입점은 `python scripts/validate_current_research.py`다. [검증 정비 완료 기록](verification_cleanup_20261006.md)을 함께 확인한다. 기존 날짜별 JSON·manifest와 아래 경제적 조사 순서는 유지한다.
+
 한국 반도체 산업의 KOSIS 생산/출하/재고 exact 표·항목·분류·단위를 먼저 확인해 관세청/Comtrade 교역과 비교 가능한 범위·불가능한 연결을 고정한다. 무료 metadata/문서 검토부터 시작하며 KSIC·HS를 같은 상품·회사·거래로 가정하지 않는다. 본 수집은 그 계약 확정 뒤의 별도 작업이다.
