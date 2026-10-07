@@ -4,6 +4,8 @@
 
 이 문서의 First Vertical Slice 범위는 구현·검증 완료되었으며 아래 계약은 historical implementation record로 보존한다.
 
+2026-10-07 [구조 검토](reviews/2026-10-07/structure_cleanup.md)에서 사용하지 않는 Sensor Protocol과 단일 수동 adapter 계층을 제거했다. 현재 pipeline은 입력 경계에서 전역 승인 키를 직접 거절한다. 아래 adapter 설명·구조 트리·workflow는 당시 구현의 기록이며 현재 필수 구조가 아니다.
+
 - Previous decision: Hermes를 eventual mandatory orchestrator로 두고 동일 adapter contract를 먼저 검증했다.
 - Why it was reasonable then: Agent가 rule을 소유하지 못하게 하고 deterministic core를 먼저 완성하는 데 효과적이었다.
 - Updated decision: adapter/core 분리는 유지하되 Hermes 의무화는 해제한다. Orchestration은 runtime-agnostic capability이며 특정 runtime은 측정 가능한 incremental value가 있을 때만 선택한다.
@@ -31,7 +33,7 @@ Optional runtime / orchestration capability
 ## Repository layout
 
 ```text
-00_MASTER/                 # immutable source-package instructions
+00_MASTER/                 # source-package principles and maintained task guidance
 01_CANONICAL_SOURCES/      # immutable canonical context
 02_SCHEMAS/                # original schema baseline
 03_TEMPLATES/              # original application templates

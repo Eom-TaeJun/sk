@@ -112,6 +112,22 @@ class VerticalSliceTest(unittest.TestCase):
         ).strip().splitlines()
         self.assertEqual(4, len(evidence_lines))
 
+    def test_global_approval_flag_rejected_before_cached_replay(self) -> None:
+        result = self.run_baseline()
+        result_path = self.workspace / "data/runs" / result["run_id"] / "run_result.json"
+        evidence_path = self.workspace / "data/evidence/atomic_evidence.jsonl"
+        before_result = result_path.read_bytes()
+        before_evidence = evidence_path.read_bytes()
+        scenario = json.loads(self.baseline_path.read_text(encoding="utf-8"))
+        for value in (True, False):
+            with self.subTest(human_approved=value):
+                scenario["human_approved"] = value
+                self.baseline_path.write_text(json.dumps(scenario), encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "global human_approved is prohibited"):
+                    self.run_baseline()
+                self.assertEqual(before_result, result_path.read_bytes())
+                self.assertEqual(before_evidence, evidence_path.read_bytes())
+
     def test_cached_replay_rejects_changed_source_and_preserves_approval(self) -> None:
         first = self.run_baseline()
         self.assertEqual(first["memo"]["review_status"], "HUMAN_APPROVED")

@@ -11,7 +11,7 @@
 | H1 자료 준비 | 24-Track·4-Track pilot와 full corpus/Gate 6 검토 패키지 준비. [corpus 수집 기록](exec-plans/completed/h1_full_corpus_collection.md), [Gate 6 readiness](reviews/h1_gate6_corpus_readiness.md), [수집 runbook](runbooks/h1_primary_source_collection.md) |
 | H1 대기 경계 | 사람 Gate 6 동결 대기. 지표·lead/lag·실현율·결과 분석·verdict는 미승인·미계산. 제품 상용화와 고객/플랫폼 실현 층은 pooling하지 않음 |
 | 중단 실험 | 현재 baseline에서 제거되어 [완료 기록](exec-plans/completed/interrupted_h1_experiment.md)과 Git 이력에만 보존. H1 finding으로 사용하지 않음 |
-| 수집·검증 정비 | [고객 약정 단일 실험](exec-plans/completed/customer_commitment_collection_20261003.md), [AI 코드 검토](reviews/2026-10-06/ai_code_review.md), [오류 수정·검증](exec-plans/completed/verification_cleanup_20261006.md) |
+| 수집·검증 정비 | [고객 약정 단일 실험](exec-plans/completed/customer_commitment_collection_20261003.md), [AI 코드 검토](reviews/2026-10-06/ai_code_review.md), [오류 수정·검증](exec-plans/completed/verification_cleanup_20261006.md), [구조 필요성 검토](reviews/2026-10-07/structure_cleanup.md) |
 
 ## 경제적 계약과 미래 설계
 
