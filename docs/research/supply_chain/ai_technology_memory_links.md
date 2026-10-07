@@ -85,4 +85,6 @@ HBM은 GPU 등에 가까운 DRAM 계층, 호스트 DRAM은 CPU 시스템 메모�
 
 [독립 관리 기록](research_convergence_review.md)은 기술 설명과 고객 채택의 사이가 근거에 맞게 연결되는지 점검한다. 관측·파일 검사와 관리 판정은 사람의 정식 Evidence 승인·H1/Gate 6 동결·선행성·경제적 인과를 검증한 결과가 아니다. 반복·역사 패널·실제 고객 사용량·제품별 유효 공급은 계속 남은 공백이다.
 
-**다음 작업 하나:** 서버 DDR5–Intel Xeon 6–Dell R770 고객·상품 카드에서 요구 사양, 각각의 인증·전시 탑재와 주문 단계, 동일 SKU 여부 및 실제 구매자의 공개 공백을 구분한다.
+**2026-10-08 후속 사례:** [CMX와 투자 대상의 대조](cmx_memory_investment_signals.md)에 G1–G4 계층, Solidigm의 TLC/QLC 선택지, 계획·모사 시험·제공 단계, 실제 Dynamo release 응답과 BAI의 10-01 보유 역할을 연결했다. 현재 실행 범위와 다음 작업은 [지표 수집 목적](indicator_collection_purpose.md)을 따른다.
+
+**2026-10-04 당시 다음 작업:** 서버 DDR5–Intel Xeon 6–Dell R770 고객·상품 카드의 요구 사양·인증/전시/주문 단계·동일 SKU·구매자 공백 확인이었다. 이후 사용자 범위 갱신에 따라 현재는 보류한다.

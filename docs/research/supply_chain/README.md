@@ -20,6 +20,7 @@
 | 제품·사업모델·공정·시장·지역과 실제 기업 역할 | [반도체 거시 구조](semiconductor_macro_structure.md) |
 | 메모리 수요·공급·재고를 어떻게 관측할 것인가 | [메모리 사이클 측정 계획](memory_cycle_signal_plan.md), [2026Q2 관측 사례](memory_observation_panel_2026q2.md) |
 | AI 업무·소프트웨어 조건이 HBM·호스트 DRAM·SSD에 주는 요구 | [AI 기술과 메모리 상품](ai_technology_memory_links.md) |
+| 공유 KV 캐시의 요구·상업 단계와 실제 ETF 보유가 어디서 일치하거나 다른가 | [CMX와 투자 대상의 대조](cmx_memory_investment_signals.md), 2026-10-08 |
 | 제품·제조 기능에서 전력·정책·통신·항공우주로 전파되는 조건 | [산업 전파 경로](semiconductor_industry_transmission_routes.md) |
 | 기명 플랫폼의 사양·채택 단계를 어떻게 구분하는가 | [HBM3E × NVIDIA GB300 사례](customer_product_cards/hbm_nvidia_gb300.md) |
 | 고객 약정과 실제 자금·시설 집행은 어디까지 연결되는가 | [단일 사건의 측정 설계](decision_purpose.md), [OpenAI–CoreWeave 사례](first_case_review.md) |
