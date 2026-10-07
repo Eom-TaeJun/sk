@@ -1,5 +1,7 @@
 # Agent Architecture — Capability-First, Runtime-Agnostic
 
+**Reference scope updated 2026-10-07:** This document preserves design choices and future interfaces. Current learning/data-definition work follows [indicator_collection_purpose.md](research/supply_chain/indicator_collection_purpose.md). An architecture role is not a requirement to install a runtime or implement an execution/evaluation system; see [implementation status](reference_index.md).
+
 ## 1. Purpose
 
 The AI architecture exists to support a real analytical problem: public semiconductor signals are heterogeneous in meaning, scope and timing, so the project must determine where each signal sits in the demand/supply transmission chain, what it can and cannot establish, and whether later evidence changes a business decision.

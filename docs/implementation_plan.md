@@ -1,4 +1,4 @@
-# Implementation Plan — Implemented Vertical Slice and Next Gate
+# Vertical Slice 구현 기록
 
 ## Status and decision history
 
@@ -7,7 +7,7 @@
 - Previous decision: Hermes를 eventual mandatory orchestrator로 두고 동일 adapter contract를 먼저 검증했다.
 - Why it was reasonable then: Agent가 rule을 소유하지 못하게 하고 deterministic core를 먼저 완성하는 데 효과적이었다.
 - Updated decision: adapter/core 분리는 유지하되 Hermes 의무화는 해제한다. Orchestration은 runtime-agnostic capability이며 특정 runtime은 측정 가능한 incremental value가 있을 때만 선택한다.
-- Current gate: 구현 확장이 아니라 H1 empirical validation design 승인.
+- 당시 다음 단계: H1 empirical validation design 승인. 이후 승인·자료 준비 상태는 [참조 안내](reference_index.md), 현재 작업은 [지표 수집 목적](research/supply_chain/indicator_collection_purpose.md)을 따른다.
 - Baseline cleanup: 승인 전에 생성된 H1 engine/data/run/schema/log는 제거했다. H1 finding은 없으며 역사 note는 `docs/exec-plans/completed/interrupted_h1_experiment.md`에 있다.
 
 ## Architecture
@@ -100,7 +100,7 @@ Memo에는 확률로 표현하지 않고 `LOW`, `MEDIUM`, `HIGH`와 요인 설�
 
 필수 테스트는 missing provenance, invalid transition, duplicate idempotency, retrieval trace, graph edge trace, contradiction preservation, unsupported inference, Strong Inference human gate, Memo fact trace, deterministic replay다.
 
-첫 scenario와 Temporal Update 실행, 테스트, graph diff, contradiction, Memo는 완료되었다. 다음 단계는 H1을 곧바로 실행하는 것이 아니라 empirical question, matched case, Source hierarchy, cutoff, outcome과 기각 조건을 먼저 설계·승인하는 것이다.
+첫 scenario와 Temporal Update 실행, 테스트, graph diff, contradiction, Memo는 완료되었다. 당시 다음 단계는 empirical question, matched case, Source hierarchy, cutoff, outcome과 기각 조건을 설계·승인하는 것이었다. 이 문서는 그 시점의 구현 이력이다.
 
 ## Application evidence
 
@@ -108,6 +108,6 @@ Memo에는 확률로 표현하지 않고 `LOW`, `MEDIUM`, `HIGH`와 요인 설�
 
 ## Next implementation gate
 
-현재 승인된 단일 next task는 `docs/exec-plans/active/h1_empirical_validation_design.md`가 가리키는 **H1 empirical validation design**이다.
+이 구현 당시에는 **H1 empirical validation design**이 다음 작업이었고 승인 전 수집·dataset·실행을 금지했다. 이후 Gates 1–5 승인과 corpus/Gate 6 검토 패키지 준비는 [참조 안내](reference_index.md)에 정리한다. 사람 Gate 6 동결은 여전히 대기 중이다.
 
-Design 승인 전에는 H1 Source 수집·dataset·실행을 시작하지 않는다. H2/H3, Hermes/native multi-agent experiment, Agent Execution Harness implementation, dashboard와 DB도 구현하지 않는다. Agent evaluation은 `docs/agent_architecture.md`에 future interface만 정의하며 결과를 주장하지 않는다.
+현재 작업과 구현 제한은 [AGENTS.md](../AGENTS.md)를 따른다. 이 역사 계획의 next-task 문구로 H1 분석이나 미래 runtime·dashboard·DB를 활성화하지 않는다.
