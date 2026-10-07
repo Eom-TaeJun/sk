@@ -7,10 +7,11 @@
 | 문서 | 담당하는 내용 |
 | --- | --- |
 | [직무와 상품·고객 관점](sk_hynix_commercial_role_context.md) | 학습 목적, 공식 직무 근거와 상품별 질문 |
+| [수요 근거·투자 경로·위험 시나리오](structural_market_scenarios.md) | 공개 기술/상업 성과·기관 타겟·돈/ETF·조건부 위협과 준비 |
 | [지표 수집 목적](indicator_collection_purpose.md) | 질문·관계·후속 행동, 수집 실행 범위와 다음 작업 |
 | [무료 API 접근 결과](api_signal_feasibility.md) | dataset·필드·단위·접근 결과·권리와 측정 공백 |
 
-현재 수집 판단과 다음 경제적 작업은 **지표 수집 목적**을 따른다. 날짜별 API JSON·옛 로드맵의 후속 제안은 당시 기록이다. DDR5 카드와 이전 Comtrade/Eurostat 호출 파일럿은 보류한다.
+현재 수집 판단과 다음 연구 작업은 **지표 수집 목적**을 따른다. 내부 자료 전용 항목은 ACTIVE에서 제외하고 공개 근거로 구조·가정·준비 선택지를 설명한다. 날짜별 API JSON·옛 로드맵의 후속 제안은 당시 기록이다. DDR5 카드와 이전 Comtrade/Eurostat 호출 파일럿은 보류하며 KOSIS도 구체 비교 질문이 있을 때 수행한다.
 
 ## 질문에 따라 읽을 자료
 
