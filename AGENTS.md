@@ -62,6 +62,8 @@ Role counts and agreement are not quality scores or Evidence approvals. Scope cl
 
 For structural cleanup, trace the requested output through entry points to actual consumers before adding or removing code, configuration, schemas or dependencies. A passing test proves tested behavior, not that an abstraction is necessary. Review correctness and necessity separately; prefer a small removal with output comparison over a new cleanup framework. Dated methods and findings belong to [structure_cleanup.md](docs/reviews/2026-10-07/structure_cleanup.md); recheck applicable sources when the environment or task changes.
 
+Concise reporting must not shorten authorized investigation or hand back steps the agent can perform. Match completion claims to fresh checks appropriate to the changed surface; a rejection test must fail for the intended violation, not an unrelated command or import error.
+
 ## Stable validation commands
 
 Run from the repository root and select checks appropriate to the changed surface:

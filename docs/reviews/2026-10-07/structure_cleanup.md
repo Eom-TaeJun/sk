@@ -72,7 +72,7 @@ Dory의 [저자 동반 글](https://doryzidon.com/blog/reviewing-ai-prs-at-scale
 
 두 scenario의 변경 전후 cold replay workspace 31개 파일의 구성과 bytes가 같았다. 원자료·연구 후보·지원 수행 기록·schema 182개 파일의 구성과 bytes도 같았다. Python 파일은 38개에서 36개로 줄었고 외부 의존성은 추가되지 않았다.
 
-Root가 현재 변경본에서 임시 workspace를 사용해 전체 **144개 테스트 PASS**와 두 research validator PASS를 확인했다. 기존 143개에 승인 거절 경계 사례 하나를 추가한 결과다. 자료 검증기는 고정된 날짜 묶음에 대한 검사다. 별도 기술·목적 검토자는 실제 변경을 읽고 **CONTINUE**로 판정했고, 영상 담당자는 날짜·자막·구간과 해석을 재확인했다. 리뷰어들이 root의 실행 명령을 모두 재실행한 것은 아니다.
+Root가 PR #13의 어댑터 제거 변경본에서 임시 workspace를 사용해 전체 **144개 테스트 PASS**와 두 research validator PASS를 확인했다. 기존 143개에 승인 거절 경계 사례 하나를 추가한 결과다. 자료 검증기는 고정된 날짜 묶음에 대한 검사다. 별도 기술·목적 검토자는 실제 변경을 읽고 **CONTINUE**로 판정했고, 영상 담당자는 날짜·자막·구간과 해석을 재확인했다. 리뷰어들이 root의 실행 명령을 모두 재실행한 것은 아니다.
 
 이번 완료 범위는 영어 방법 비교, 파일/소비처 수준 구조 조사, 확인된 adapter 제거와 충돌 지침 수정이다. 모든 schema 필드의 중복·계약 일치나 모든 함수의 의미까지 검증해 불필요한 구조가 0개라고 보증하는 감사는 아니다. H1 Gate 6·정식 Evidence·선행성·사람 승인 상태는 그대로다.
 
@@ -81,3 +81,32 @@ Root가 현재 변경본에서 임시 workspace를 사용해 전체 **144개 테
 자료의 게시/commit 날짜와 열람일은 별개다. 모델·coding 도구·플러그인·Python·의존성·API 또는 사용자 목적이 바뀌면 관련 원문과 현재 소비처를 다시 확인한다. 특히 구형 모델 보완 구조, tool 지원 버전, 최근 diff에만 적용되는 리뷰 범위와 자동 수정의 실패 사례를 다시 본다. 최신이라는 이유만으로 새 설정이나 플러그인을 추가하지 않는다.
 
 정기 감시나 자동 업데이트는 이번 요청의 산출물이 아니다. 다음 경제적 작업은 기존 KOSIS 측정 계약이며, 그때도 실행 framework보다 정확한 표·필드·단위·시점을 먼저 정한다.
+
+## 개발자가 유지하는 최신 방법 확인
+
+2026-10-07 추가 확인. 사용자가 제시한 [노마드 코더 영상](https://www.youtube.com/watch?v=3JCgiVYlLFo&t=97s)은 2026-10-04 게시됐다. 공개 메타데이터·실제 영어 자동 자막과 설명란의 네 저장소 링크를 확인했다. 01:37은 작은 요구에도 파일·추상화를 늘리는 문제, 02:00·03:05·04:05·08:42는 아래 네 도구다. 개발자의 소개·시연이며 독립 효과 검증은 아니다. 협찬 구간의 생산성 수치는 채택 근거로 사용하지 않는다.
+
+단순 추천 목록보다 실제 규칙 파일·commit·release·최근 실패 보고를 조사 단위로 삼는다. 아래 commit 날짜는 UTC이며 저장소 활동일·조회일과 구분한다. 새로운 PR·개발 브랜치가 있다는 사실은 현재 안정 배포에 반영됐다는 뜻이 아니다.
+
+| 자료와 확인한 코드 | 역할과 최신성 | 이 저장소에 가져올 부분 |
+| --- | --- | --- |
+| [Attention Span](https://github.com/alexgreensh/attention-span/blob/2714c965e6be1fa2597510e66651e63bc67cb448/output-styles/attention-kind.md) | main 2026-09-06, release 0.8도 09-06. 응답 가독성을 위한 output style이며 코드 정리 검출기가 아니다. | 답변은 짧게 하되 조사·검증을 축소하지 않는다. 자체 벤치마크는 우리 설계 품질의 검증이 아니다. |
+| [Karpathy Skills](https://github.com/multica-ai/andrej-karpathy-skills/blob/2c606141936f1eeef17fa3043a72095b4765b9c2/skills/karpathy-guidelines/SKILL.md) | main 2026-04-20, SKILL 마지막 수정 01-28. Karpathy의 관찰에서 만든 Multica/forrestchang의 제3자 지침이며 공식 배포물이 아니다. releases 목록 없음. | 가정을 밝히고 현재 요구에 필요한 최소 구현과 직접 연결되는 변경·완료 조건을 정한다. |
+| [Anti Slop](https://github.com/dmmulroy/anti-slop/blob/c44ef22ca116d0ba62a3ff663a0bd13a3f3fa40b/README.md) | main/README 2026-09-10, releases 목록 없음. JS·TS용 Oxlint 규칙이며 저자의 팀 취향을 담는다. | 실제 증거 없는 패턴을 구체적으로 검사하는 접근을 참고한다. Python에 TS 규칙·Node 설정을 설치하지 않는다. |
+| [Verification Before Completion](https://github.com/obra/superpowers/blob/3be5aad3dd2400ef23b15680969f4bcd3b6d7b8b/skills/verification-before-completion/SKILL.md) | SKILL 마지막 main 수정 2026-07-24. Superpowers 안정 main/release v6.4.2는 09-25이며 파일 내용은 동일하다. | 주장에 맞는 명령을 현재 변경에서 실행하고 출력·종료코드·실패 수를 확인한다. 테스트 통과·버그 수정·요구 충족은 서로 다른 주장이다. |
+
+실제 사용 중 나온 변경·실패가 적용 조건을 알려 준다. 아래 경험·수치는 작성자 보고이며 우리 환경에서 재현한 결과가 아니다.
+
+- **간결함 때문에 일을 일찍 끝냄:** Attention Span [PR #7](https://github.com/alexgreensh/attention-span/pull/7)은 데이터 파이프라인 조사에서 실측·프로파일링 전에 그럴듯한 설명으로 종료하던 사례를 다뤘다. 2026-09-06 병합됐고, 보고의 간결함과 작업 완료를 구분하도록 수정했다. [Issue #10](https://github.com/alexgreensh/attention-span/issues/10)의 단답용 형식 축소는 열린 제안이다.
+- **환경 변경으로 설정이 중복됨:** Karpathy Skills [PR #136](https://github.com/multica-ai/andrej-karpathy-skills/pull/136)은 Claude Code의 skill 발견 방식 변경 뒤 plugin 설정이 중복 등록을 만든다는 보고다. 09-13 갱신됐지만 open·unmerged다. 작성자의 token 감소 수치를 검증 결과로 가져오지 않는다. 10-04의 [PR #206](https://github.com/multica-ai/andrej-karpathy-skills/pull/206)도 열린 설명 형식 제안이며 새 release가 아니다.
+- **이름만 보고 오탐:** Anti Slop [Issue #50](https://github.com/dmmulroy/anti-slop/issues/50)은 배열이라는 증거 없이 custom `reduce`를 경고한 사례다. 10-06 [PR #51](https://github.com/dmmulroy/anti-slop/pull/51)은 아직 미병합이다. 기존 테스트 통과 상태의 edge case 보고 [#47](https://github.com/dmmulroy/anti-slop/issues/47)와 대응 [#52](https://github.com/dmmulroy/anti-slop/pull/52)·[#53](https://github.com/dmmulroy/anti-slop/pull/53)도 구분해 읽었다.
+- **계획과 승인 절차가 목적을 밀어냄:** 안정 v6.4.2에 포함된 [Superpowers PR #2333](https://github.com/obra/superpowers/pull/2333)은 계획의 코드 중복과 불필요한 reviewer prompt를 줄였다. 더 최신인 [PR #2463](https://github.com/obra/superpowers/pull/2463)은 목적을 파악한 뒤 작업 규모에 맞춰 절차를 정하도록 재작성했으며, 10-06 23:57:53 UTC에 [dev](https://github.com/obra/superpowers/blob/9e639188a1a8029926bda6e5d7edbf66ef3ac333/skills/brainstorming/SKILL.md)에 병합됐다. 안정 v6.4.2에는 미포함이다. 전체 승인 흐름을 우리 작업에 수입하지 않는다.
+- **검증 실패 원인을 잘못 인정함:** Superpowers [Issue #2452](https://github.com/obra/superpowers/issues/2452)는 모듈 누락·명령 오류로 빨간 테스트를 유효한 회귀 증거로 착각한 사례다. [#2451](https://github.com/obra/superpowers/issues/2451)은 실제 diff 대신 계획을 따라 완료 보고가 작성된 사례다. 두 보고는 10-03 게시됐다. 우리에게는 요청별 실제 변경을 확인하고, 거절 시험이 예상 위반 진단 때문에 실패했는지 확인하는 기준으로 적용한다.
+
+Attention Span이 연결한 [Token Optimizer](https://github.com/alexgreensh/token-optimizer/blob/247edced8f8baca0dab996eb8228816b821a8e11/README.md)는 별도의 context/config 감사 도구다. main과 v5.13.35 release는 2026-10-05다. [CHANGELOG](https://github.com/alexgreensh/token-optimizer/blob/247edced8f8baca0dab996eb8228816b821a8e11/CHANGELOG.md)의 누적 사용량·현재 context 점유 혼동과 Windows launcher 교정은 환경별 점검의 실제 사례다. 중복 지침·참조 파일·도구 구성 감사 아이디어를 참고하되, [SKILL](https://github.com/alexgreensh/token-optimizer/blob/247edced8f8baca0dab996eb8228816b821a8e11/skills/token-optimizer/SKILL.md)의 자기 도구 정리 면제는 채택하지 않는다. 모든 도구의 현재 사용처를 같은 기준으로 확인한다.
+
+Python을 지원하는 [Desloppify](https://github.com/peteromallet/desloppify/blob/3a7735d531a96b6a226bfbdc9fd662b14195f857/README.md)도 보조 비교했다. 확인한 최신 main과 release v1.0은 2026-05-13이다. 기계적 검출과 의미 검토를 나누는 방식은 유용하지만, 점수·지속 상태·실행 harness 전체를 현재 목적에 추가할 근거는 부족하다. 최근 10월 개선과 같은 최신성으로 소개하지 않는다.
+
+이번 추가 작업은 최신 방법의 확인과 기존 작업 규칙 보완이다. 새로운 구조 제거·전체 코드 재감사·외부 도구 효과 검증은 수행한 것으로 보고하지 않는다. 기존 AGENTS에 보고 간결화와 작업 완료의 구분, 작업에 맞는 현재 검증·예상 진단 확인을 보완한다. plugin·skill·hook·lint 설정·상시 감시를 추가하지 않는다.
+
+이번 문서 보완에서는 root가 두 research validator, 로컬 링크 35개와 변경 문서 3개 범위 검사를 다시 실행해 PASS를 확인했다. 원자료·코드·테스트·schema 등 219개 파일의 구성과 bytes를 보존했다. 위 144개 전체 테스트는 PR #13 당시 결과이며 이번 문서 변경에서 재실행한 것으로 표현하지 않는다.
