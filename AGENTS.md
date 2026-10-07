@@ -60,6 +60,8 @@ Assign an independent purpose reviewer separately from research and integration,
 
 Role counts and agreement are not quality scores or Evidence approvals. Scope cleanup must reduce duplicate instructions and execution work, not erase source history or requested industries.
 
+For structural cleanup, trace the requested output through entry points to actual consumers before adding or removing code, configuration, schemas or dependencies. A passing test proves tested behavior, not that an abstraction is necessary. Review correctness and necessity separately; prefer a small removal with output comparison over a new cleanup framework. Dated methods and findings belong to [structure_cleanup.md](docs/reviews/2026-10-07/structure_cleanup.md); recheck applicable sources when the environment or task changes.
+
 ## Stable validation commands
 
 Run from the repository root and select checks appropriate to the changed surface:

@@ -6,7 +6,6 @@ import json
 from pathlib import Path
 from typing import Any
 
-from src.adapters.contracts import ManualScenarioAdapter
 from src.audit.auditor import DeterministicAuditor
 from src.audit.scoring import score_evidence, summarize_scores
 from src.core.harness import DeterministicHarness
@@ -284,7 +283,10 @@ def run_vertical_slice(workspace: Path, scenario_path: Path) -> dict[str, Any]:
     payload = load_json(scenario_path, None)
     if payload is None:
         raise FileNotFoundError(scenario_path)
-    payload = ManualScenarioAdapter(payload).normalized_payload()
+    if "human_approved" in payload:
+        raise ValueError(
+            "global human_approved is prohibited; use an Evidence-level review manifest"
+        )
     run_id = payload["run_id"]
     run_dir = root / "data" / "runs" / run_id
     scenario_fingerprint = content_digest(

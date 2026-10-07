@@ -1,52 +1,12 @@
-이 프로젝트는 SK하이닉스 영업/마케팅·상품기획·신제품사업화 지원용
-Memory Market Decision Intelligence Harness 구현 프로젝트다.
+현재 작업을 시작할 때 AGENTS.md를 먼저 읽고 사용자 요청에 필요한 진입 문서만 선택한다.
 
-먼저 코드를 작성하지 말고 다음 순서로 진행해라.
+전체 Canonical Sources·schema·template을 일괄 로드하거나 이미 작성된 문서를 다시 생성하지 않는다.
+현재 수집 질문과 실행 범위의 소유자는 docs/research/supply_chain/indicator_collection_purpose.md다.
+보존된 구현·사람 승인·미래 설계는 docs/reference_index.md에서 필요한 부분만 확인한다.
 
-1. 반드시 아래를 먼저 읽어라.
-- 00_MASTER/00_CODEX_MASTER_INSTRUCTION.md
-- 00_MASTER/01_RECRUITER_AND_JOB_SIGNAL.md
-- 00_MASTER/02_ARCHITECTURE_DECISIONS.md
-- 01_CANONICAL_SOURCES 전체
-- 02_SCHEMAS 전체
-- 03_TEMPLATES 전체
+새 코드·설정·추상화를 추가하기 전에 요청한 결과에 필요한 실제 소비처와 기존 코드로 해결되지 않는 이유를 설명한다.
+구현 담당과 별도 검토자는 동작의 정확성과 구조의 필요성을 구분해 검토한다.
+실제 사용처가 없는 미래 runtime·adapter·eval 디렉터리를 미리 만들지 않는다.
 
-2. 읽은 뒤 다음 3개 문서를 먼저 작성해라.
-- docs/source_understanding.md
-- docs/research_validation_gaps.md
-- docs/implementation_plan.md
-
-3. implementation_plan.md에는 아래를 포함해라.
-- MVP repository tree
-- H1/H2/H3별 필요한 최소 데이터
-- RAG / Graph / Hermes / Harness / Auditor 각각의 최소 구현 범위
-- 사용하지 않을 기술과 이유
-- 첫 End-to-End scenario
-- 테스트 계획
-- 지원서용 evidence를 어떻게 자동 기록할지
-
-4. 코딩은 내가 implementation_plan.md를 확인한 뒤 시작한다.
-내 승인 전 대규모 구현을 하지 마라.
-
-5. 프로젝트의 성공 기준은 UI나 코드량이 아니다.
-New Evidence
-→ Verify
-→ Classify
-→ RAG Trace
-→ Graph Update
-→ Contradiction Check
-→ Signal/Confidence Update
-→ Decision Variable Impact
-→ Decision Memo
-→ Source Trace
-가 재현 가능하게 돌아가는 것이다.
-
-6. 전용 LLM/Fine-tuning/Vector DB/Graph DB/대규모 DB 구축은 금지한다.
-경량 파일/JSON/CSV 기반으로 시작한다.
-
-7. Hermes Agent orchestration, RAG, Graph Engineering, Graph-aware Retrieval,
-Harness/State Machine, Auditor/Human Review는 유지한다.
-다만 Hermes API/기능은 실제 설치 버전 공식 문서로 검증한 후 사용한다.
-
-8. 모든 구현 판단은 recruiter/job signal과 연결되어야 한다.
-기능이 왜 필요한지 설명하지 못하면 구현하지 마라.
+2026-10-07 정리: 초기 전체 문맥 로드·문서 재생성·Hermes 의무화 지시는 현재 실행 규칙에서 제외했다.
+당시 내용은 Git 이력에 보존한다. 승인된 계약과 원자료의 해시·사람 검토 경계는 AGENTS.md를 따른다.
