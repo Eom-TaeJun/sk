@@ -1,65 +1,29 @@
 # Repository Agent Map
 
-## Objective
+## Objective and current task
 
-Build an SK hynix-centered customer, product and supply-chain knowledge base for learning the sales, marketing, product-planning and new-product-commercialization decisions described in the 2026 second-half recruitment materials. Start with who needs which memory product, why, through which adoption/purchase process and on what timetable. Preserve the traceable research workflow for testing public demand/supply signals. Application claims must describe actual work and validation; learning notes do not establish predictive skill or business results.
+Build an SK hynix-centered supply-chain and market knowledge base for learning the sales, marketing, product-planning and new-product-commercialization roles described in the 2026 second-half recruitment materials. Explain who needs which memory product, why, through which specification/adoption/purchase process and on what timetable. Application claims must describe actual work and validation.
 
-## Current phase
+The current priority is purpose-first free-data observability: define the question, relationship, dataset/fields, units, dates, joins and reuse conditions before collection. Keep the requested links across AI, power, data centers, materials, finance, policy and aerospace. Activate collection only for a specific relationship or comparison question; do not force customer-card convergence now.
 
-- Vertical Slice and 2025→2026 Temporal Update: implemented and preserved
-- Architecture: whole-project decision domains frozen; runtime-agnostic and capability-first
-- H1 Gates 1–5: human-approved and frozen as separate product-commercialization (H1-P) and customer/platform-realization (H1-C) strata
-- H1 measurement contract, deterministic validation, 24-Track registry and 4-Track real-data pilot: implemented and preserved
-- H1-P now distinguishes customer/commercial acceptance from supply readiness; production stage is context only
-- H1 full primary-source corpus and Gate 6 readiness package: prepared; human Gate 6 review/freeze remains pending
-- Supply-chain research intake (2026-10-03): candidate-only map, metric and free-access plans; not governed Evidence or an H1 dataset amendment
-- User purpose clarification (2026-10-03): SK hynix commercial-role learning is the primary use; HBM, server DRAM and eSSD customer/product relationships come first, with finance/power/materials as relevant context
-- Macro learning framework (2026-10-04): product/business-model/process/end-market/geography structure and memory-cycle measurement plans are documented
-- First memory observations (2026-10-04): SK hynix/Samsung calendar 2026Q2 inventory, DRAM/NAND bit-shipment/ASP and investment disclosures are candidate-only; a recurring/historical panel and empirical leadingness remain unbuilt
-- AI technology-to-product framework (2026-10-04): seven workload/bottleneck/product links reuse GB300, DDR5 and SSD examples; software conditions, backend/version differences and adoption gaps remain explicit, without customer demand quantification
-- Industry-route review (2026-10-05): product and manufacturing-function axes link AI/data centers, power, RF/space applications and policy/cooperation cases; propagation remains conditional and exact customer/site/order joins stay explicit
-- Independent purpose review (2026-10-05): start/middle/handoff management checkpoints distinguish chip design, manufacturing and separate data-center versus mission operation; earlier card recommendations remain dated history
-- Current user priority (2026-10-05): defer server DDR5 customer/product convergence; verify free API observability, exact datasets/fields, access outcomes, units, dates, joins and reuse conditions first. API feasibility is candidate research, not a recurring collector or leadingness result
-- Latest user steering (2026-10-05): define why each indicator is collected and what question/relationship/change it checks before further collection. `docs/research/supply_chain/indicator_collection_purpose.md` owns the current purpose and review; API-call pilot and DDR5 convergence remain deferred. Importance, access readiness and empirical leadingness are separate
-- Code quality follow-up (2026-10-06): repaired the reproduced timestamp, capture-publication, cached-source and test-isolation failures; added offline checks for the fixed 2026-10-05 API/purpose packages while preserving original data and approval states. The dated review is `docs/reviews/2026-10-06/ai_code_review.md`; implementation and verification belong to `docs/exec-plans/completed/verification_cleanup_20261006.md`. The next economic task remains the KOSIS measurement contract
-- Bounded customer-commitment collection: purpose-first single-case capture/replay, with source provenance and separate failed attempts; not continuous monitoring or empirical validation
-- H1 metrics, lead/lag, realization rates, outcome analysis and verdict: not yet approved; require Gate 6 dataset freeze
-- H2: only after a credible H1 minimum pipeline
-- H3: conceptual/`KNOWN_UNKNOWN` until public evidence is sufficient
-- Interrupted H1 implementation: removed from the current baseline and preserved only in Git history and its completed execution-plan note
-
-Do not treat deleted, historical, or interrupted H1 experiment artifacts as approved findings.
+- Current collection scope and exactly one next economic task are owned by [indicator_collection_purpose.md](docs/research/supply_chain/indicator_collection_purpose.md). The next task is the KOSIS production/shipment/inventory measurement contract, not bulk API collection.
+- Current access receipts belong to [api_signal_feasibility.md](docs/research/supply_chain/api_signal_feasibility.md). Dated JSON next-task recommendations are historical, not new execution instructions.
+- DDR5 customer-card convergence, the earlier Comtrade/Eurostat call pilot and recurring collectors remain deferred.
+- Preserved H1 contracts, implemented code, historical research and future architecture are routed through [reference_index.md](docs/reference_index.md). Their existence does not make them the current task.
 
 ## Read only what the task needs
 
-- Project/economic contract: `00_MASTER/00_CODEX_MASTER_INSTRUCTION.md`
-- Architecture decisions and supersessions: `00_MASTER/02_ARCHITECTURE_DECISIONS.md`
-- Model/program/runtime allocation: `00_MASTER/03_WHERE_TO_USE_WHAT.md`
-- Detailed agent architecture and future eval interface: `docs/agent_architecture.md`
-- Whole-project decision domains, admission gate and module activation: `docs/decision_architecture.md`
-- Implemented Vertical Slice plan: `docs/implementation_plan.md`
-- Active/completed task records: `docs/exec-plans/`
-- Source limitations: `docs/research_validation_gaps.md`
-- Evidence interpretation: `docs/source_understanding.md`
-- Schemas: `02_SCHEMAS/`
-- Core code: `src/core/`, `src/pipeline.py`
-- Retrieval/Graph/Audit/Memo: `src/retrieval/`, `src/graph/`, `src/audit/`, `src/memo/`
-- Runtime boundary: `src/adapters/`
-- Software tests: `tests/`
-- Historical project facts: `application_evidence/`
-- Supply-chain research intake and legacy reference review: `docs/research/supply_chain/README.md`
-- Current user purpose, 2026 job-description evidence and product/customer learning structure: `docs/research/supply_chain/sk_hynix_commercial_role_context.md`
-- Macro industry structure and memory-cycle collection contracts: `docs/research/supply_chain/semiconductor_macro_structure.md`, `docs/research/supply_chain/memory_cycle_signal_plan.md`
-- Same-quarter observations and independent purpose review: `docs/research/supply_chain/memory_observation_panel_2026q2.md`, `docs/research/supply_chain/research_convergence_review.md`
-- AI workload, memory requirement, adoption and supply relationships: `docs/research/supply_chain/ai_technology_memory_links.md`
-- Product/function routes across industries, power regulation and cross-border cooperation: `docs/research/supply_chain/semiconductor_industry_transmission_routes.md`
-- Current API access and measurement contracts: `docs/research/supply_chain/api_signal_feasibility.md`, `data/research/api_signal_feasibility/2026-10-05/collection_index.json`
-- First customer/product card, bounded source receipts and unresolved specification differences: `docs/research/supply_chain/customer_product_cards/hbm_nvidia_gb300.md`
-- Public candidate data and hashes: `data/research/semiconductor_supply_chain/2026-10-03/manifest.json`
-- Economic question and single-case boundaries: `docs/research/supply_chain/decision_purpose.md`
-- Customer-commitment collector and case review: `scripts/collect_customer_commitment.py`, `docs/research/supply_chain/first_case_review.md`
+| Task | Entry point |
+| --- | --- |
+| Purpose, job roles, product/customer questions | `docs/research/supply_chain/sk_hynix_commercial_role_context.md` |
+| Indicator purpose and collection scope | `docs/research/supply_chain/indicator_collection_purpose.md` |
+| Exact API access and measurement contracts | `docs/research/supply_chain/api_signal_feasibility.md`, `data/research/api_signal_feasibility/2026-10-05/collection_index.json` |
+| Industry, product, AI and policy routes | `docs/research/supply_chain/README.md` |
+| Evidence governance, architecture, preserved H1 and historical approvals | `docs/reference_index.md` |
+| Core code or regression repair | relevant modules in `src/`, `scripts/`, `tests/`, and schemas in `02_SCHEMAS/` |
+| Actual project/application facts | `application_evidence/` |
 
-Do not load all Canonical Sources or copy the Master Instruction into task context by default. Select the smallest sufficient files for the current question.
+Do not load all Canonical Sources or copy the Master Instruction into context by default. Select the smallest sufficient files. Keep current instructions in their owner document; link to history instead of repeating it in every entry point.
 
 ## Invariants
 
@@ -74,26 +38,31 @@ Do not load all Canonical Sources or copy the Master Instruction into task conte
 9. Do not imply causality from graph structure or temporal ordering alone.
 10. A specific runtime, multi-agent topology, LLM, Vector DB or Graph DB is never mandatory without demonstrated value.
 
-## Responsibility boundary
+AI may discover, retrieve, extract, classify candidates, link entities, search for contradictions and propose hypotheses. Humans approve strong interpretation, causal validity, final H1/H2 verdicts and business recommendations. Use models for semantic judgment and deterministic code for checks, joins, aggregation, state transitions, trace and replay.
 
-AI may discover, retrieve, extract, classify candidates, link entities, search for contradictions and propose hypotheses. Humans approve strong interpretation, causal validity, final H1/H2 verdicts and business recommendations.
+## Preserved approvals and collection boundaries
 
-Use models for semantic judgment. Use deterministic code for filtering, deduplication, schema/date/unit checks, joins, lag construction, aggregation, state transitions, trace and replay.
+H1 Gates 1–5 remain human-approved and frozen as separate H1-P commercialization and H1-C platform-realization strata. The measurement contract, 24-Track registry, 4-Track pilot, full primary-source corpus and Gate 6 readiness package are prepared and preserved. Human Gate 6 review/freeze remains pending. Do not calculate H1 metrics, lead/lag, realization rates, outcome analysis or verdict before that freeze. Until then, H1 work is confined to source/corpus review under its frozen contract when assigned; it is not the current collection task.
+
+Without explicit approval, do not start H2/H3 or implement a Decision Engine, Agent Execution Harness/runtime, dashboards or databases. Deleted/interrupted H1 artifacts are historical and cannot be used as findings. H3 remains conceptual/`KNOWN_UNKNOWN` until evidence is sufficient.
+
+Supply-chain research is candidate-only and does not amend H1 or constitute governed Evidence. Preserve stage_raw, unknowns, dates, source roles and hashes. Do not import candidates into H1 automatically or copy private legacy code, personal materials, credentials or local operational paths into public data. A main merge is repository integration, not human Evidence approval.
+
+The bounded customer-commitment collector is a single-case capture/replay. SEC failures and issuer mirrors are different acquisition outcomes; retain actual URLs/source roles and never label a mirror as verified SEC-original bytes. Single-case replay does not establish leadingness or customer equipment/power allocation.
 
 ## Purpose and convergence review
 
-The user requested an independent management role for supply-chain learning tasks on 2026-10-04. Assign a purpose reviewer separately from the researchers and integrator; use the available Codex subagent capability or a verified compatible adapter when justified. A role assignment does not imply that Hermes, a new runtime or continuous monitoring has been installed.
+Assign an independent purpose reviewer separately from research and integration, using available subagents when useful. This does not imply that Hermes or continuous monitoring is installed. Record reviews in `docs/research/supply_chain/research_convergence_review.md`.
 
-- Start: restate the SK hynix commercial-learning question, required evidence, comparison scope and completion criteria.
-- During research: expand only to resolve a material definition, alternative explanation, customer/product relationship or supply-timing gap. Record useful expansion and defer unrelated branches.
-- Before handoff: check whether observations converge on product/customer/adoption/supply questions, preserve unknowns and comparisons, and name exactly one next task.
-- Use `CONTINUE`, `REWORK` or `DEFER` with observed reasons and implemented corrections; do not manufacture progress percentages, predictive scores or Evidence approvals.
+- Start: state the question, scope, required evidence and completion criteria.
+- During work: expand only to resolve a relevant definition, alternative explanation, relationship or timing gap; defer unrelated branches.
+- Before handoff: check purpose and scope, preserve unknowns, name exactly one next task and use `CONTINUE`, `REWORK` or `DEFER` with observed reasons.
 
-The current record is `docs/research/supply_chain/research_convergence_review.md`. The reviewer audits purpose and scope; the Evidence Governance Harness and human approval boundaries remain unchanged.
+Role counts and agreement are not quality scores or Evidence approvals. Scope cleanup must reduce duplicate instructions and execution work, not erase source history or requested industries.
 
 ## Stable validation commands
 
-Run from the repository root:
+Run from the repository root and select checks appropriate to the changed surface:
 
 ```powershell
 python -m unittest -v
@@ -103,24 +72,15 @@ python scripts/validate_supply_chain_research.py
 python scripts/validate_current_research.py
 ```
 
-No Agent Evaluation runner is implemented yet. Do not fabricate eval results or document a command that does not exist.
+The first research validator checks the 2026-10-03 intake; the second checks the fixed 2026-10-05 API/purpose packages offline. Neither verifies current remote access, economic truth, predictive validity or human approval. No Agent Evaluation runner exists; do not fabricate eval results or commands.
 
-The first research validator checks the 2026-10-03 intake. `validate_current_research.py` checks the fixed 2026-10-05 API and purpose packages offline; neither command verifies current remote access, economic truth, predictive validity or human approval. Corpus/Gate 6 tests build in copied temporary workspaces. In a restricted Windows sandbox whose default Temp is unavailable, point Python `tempfile.tempdir` at a writable scratch directory before discovery; do not build into the source checkout as a workaround.
+Corpus/Gate 6 tests build in copied temporary workspaces. If restricted Windows Temp is unavailable, point Python `tempfile.tempdir` to writable scratch space before discovery; do not build into the source checkout.
 
-H1 remains confined to primary-source corpus collection/review across the frozen 24-Track registry until a human Gate 6 dataset freeze. Do not calculate H1 metrics, lead/lag, realization rate or verdict before that freeze. Without explicit approval, do not start H2/H3, add a Decision Engine, Agent Execution Harness/runtime, dashboards or databases.
+## Definition of done
 
-The supply-chain research intake is an authorized documentation/data integration, not approval of an empirical module. Preserve raw stage descriptions, review flags, dated source history and unknowns. Source review is not human Evidence approval. Do not import these records into H1 automatically or copy private legacy source code, personal materials, credentials or local operational paths into public data. Its standalone validator checks package integrity, not source truth or predictive validity.
-
-The bounded customer-commitment collector preserves source bytes, locators, publication/event dates and candidate-only records separately from H1. SEC access failures and issuer-hosted mirrors are different acquisition outcomes. Preserve actual retrieval URLs and source roles; never label an issuer mirror as verified SEC-original bytes. Single-case retrieval and replay do not establish leadingness, realization rates or customer-specific equipment/power allocation.
-
-## Definition of done for a Codex task
-
-- The requested decision problem and scope are explicit.
-- Relevant detailed docs were read; unrelated context was not duplicated.
-- Changes preserve the invariants and prior evidence/history.
-- Source-backed claims have complete trace; limitations use `KNOWN_UNKNOWN` or `TO_VERIFY`.
-- Software tests appropriate to the changed surface pass.
-- Failures are captured as minimal future regression cases instead of silently patched.
-- AI actions and human approvals remain distinguishable.
-- Only requested artifacts are changed; prohibited expansion is not performed.
-- The handoff states what changed, what remains unresolved and exactly one next task.
+- The requested problem, scope and current document owners are explicit.
+- Only relevant files were read or changed; duplicated instructions were replaced with references.
+- Source trace, original data, approved contracts and history remain intact.
+- Unknowns remain `KNOWN_UNKNOWN`/`TO_VERIFY`; AI review and human approval are distinct.
+- Appropriate validation passes; real failures become minimal regression cases.
+- The handoff states the actual change, limitations and exactly one next task.

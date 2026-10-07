@@ -1,5 +1,7 @@
 # Whole-Project Decision Architecture
 
+**Reference scope updated 2026-10-07:** This is the preserved analytical architecture. The current learning and free-data measurement task is owned by [indicator_collection_purpose.md](research/supply_chain/indicator_collection_purpose.md); these domains are not a simultaneous implementation or collection checklist. See [preserved status and future boundaries](reference_index.md).
+
 ## 1. Status and purpose
 
 **Status:** `WHOLE_PROJECT_ARCHITECTURE_FROZEN — H1_FIRST_EMPIRICAL_MODULE`

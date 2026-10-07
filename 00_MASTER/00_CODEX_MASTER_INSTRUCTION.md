@@ -440,7 +440,7 @@ H1 Gates 1–5는 `docs/exec-plans/active/h1_empirical_validation_design.md`에�
 
 승인된 계약은 temporal ordering, `event_at`/`published_at`/`available_at`/`accessed_at` 분리, future-information leakage, origin-group independence, explicit negative evidence, lead/lag, left truncation과 right censoring을 보존한다. Gates 6–7의 dataset freeze와 최종 H1-P/H1-C verdict는 사람이 별도 승인한다.
 
-삭제되었거나 interrupted 상태인 H1 실행물은 finding으로 사용하지 않는다. 다음 승인 범위는 synthetic 또는 tiny hand-authored fixture를 이용한 measurement contract와 deterministic validation layer뿐이다.
+삭제되었거나 interrupted 상태인 H1 실행물은 finding으로 사용하지 않는다. 당시 다음 승인 범위는 synthetic 또는 tiny hand-authored fixture를 이용한 measurement contract와 deterministic validation layer였다. 이후 구현·승인 상태는 `docs/reference_index.md`를 참조한다.
 
 ---
 
@@ -593,16 +593,6 @@ Decision Memo → 현업 판단 번역
 
 ## 19. Current task routing
 
-첫 Vertical Slice와 Temporal Update는 완료되어 보존한다. 새 작업은 루트 `AGENTS.md`를 먼저 읽고 필요한 상세 문서만 추가로 로드한다.
+현재 작업은 루트 [AGENTS.md](../AGENTS.md)에서 시작하고 [지표 수집 목적](../docs/research/supply_chain/indicator_collection_purpose.md)의 실행 범위와 다음 작업을 따른다. 상품·산업 학습, API 관측 계약과 역사 H1 검증은 목적·상태를 구분한다.
 
-H1 empirical design의 Gates 1–5, measurement contract, deterministic validation layer,
-24-Track pre-registration과 4-Track real-data pilot은 구현·보존되었다. H1-P는
-customer/commercial acceptance와 supply readiness를 분리하고, H1-C는 broad investment
-context와 operational deployment를 분리한다. Production-stage record는 CONTEXT이며
-customer order, qualification, O1 또는 demand volume을 증명하지 않는다.
-
-다음 승인 작업은 **revised economic and business interpretation contract 아래 24개
-pre-registered Track의 full frozen H1 primary-source corpus를 수집하는 것**이다. 이
-수집 작업은 outcome-neutral Gate 6 dataset freeze를 만들기 위한 것이며 H1 metric,
-lead/lag, realization rate 또는 verdict 계산을 포함하지 않는다. H2/H3, Decision Engine,
-orchestration runtime, dashboard와 database 확장은 아직 승인되지 않았다.
+보존된 Vertical Slice·H1 승인 계약·corpus 준비·Gate 6 대기와 미래 구현 경계는 [참조 안내](../docs/reference_index.md)에 둔다. 이 문서의 과거 milestone·next-task 서술로 새 수집·H1 분석·runtime 구현을 활성화하지 않는다.

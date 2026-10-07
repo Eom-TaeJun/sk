@@ -1,5 +1,7 @@
 # H1 Public-Data Feasibility Manifest
 
+**Record scope updated 2026-10-07:** This is the pre-approval feasibility review dated below. Its unapproved proposal labels describe that review stage. Later Gates 1–5 approval is recorded in the [frozen empirical contract](h1_empirical_validation_design.md); human Gate 6 freeze remains pending. Current work is routed through [the reference index](../../reference_index.md).
+
 ## 0. Status and scope
 
 **Review date:** 2026-08-28  

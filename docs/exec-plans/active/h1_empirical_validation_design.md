@@ -1,8 +1,10 @@
-# Active Execution Plan — H1 Two-Strata Demand Signal Quality Empirical Design
+# H1 Two-Strata Demand Signal Quality Empirical Contract
+
+**Current routing 2026-10-07:** Preserved human-approved contract. Gates 1–5 are frozen; full primary corpus and the Gate 6 readiness package are prepared, with human Gate 6 freeze pending. The collection authorization below records its earlier revision, not an instruction to restart collection. Current work follows [indicator purpose](../../research/supply_chain/indicator_collection_purpose.md); preserved implementation/status is indexed [here](../../reference_index.md).
 
 ## 0. Document status and boundary
 
-**Status:** `GATES_1_TO_5_APPROVED_AND_FROZEN — MEASUREMENT_CONTRACT_AND_REAL_DATA_PILOT_COMPLETE — FULL_PRIMARY_CORPUS_COLLECTION_APPROVED_NEXT`
+**Status at corpus-collection authorization:** `GATES_1_TO_5_APPROVED_AND_FROZEN — MEASUREMENT_CONTRACT_AND_REAL_DATA_PILOT_COMPLETE — FULL_PRIMARY_CORPUS_COLLECTION_APPROVED_NEXT`
 
 **Human freeze note (2026-08-28):** The limited public-data review in [`h1_feasibility_manifest.md`](./h1_feasibility_manifest.md) found a finite product universe and a finite platform universe but no provenance-complete CAPEX → platform → named HBM supplier → supplier-side realization bridge. Human review therefore froze H1 as two separate primary strata. Gates 1–5 are approved and frozen; Gates 6–7 remain pending. The deterministic measurement contract and a limited real-data ingestion pilot are now implemented. This revision clarifies the economic interpretation of those frozen strata and authorizes only the next task named in Section 20: full primary-source corpus collection across the 24 pre-registered tracks. It does not authorize outcome analysis, H1 metrics, or a verdict before Gate 6.
 
@@ -766,5 +768,7 @@ A reviewer should be able to answer from this document:
 - the design may legitimately end with one or both strata `INCONCLUSIVE` and no cross-strata superiority verdict.
 
 ## 20. Exactly one approved next task
+
+**Historical collection authorization:** The task below produced the preserved corpus/readiness package. It remains the collection contract if specifically assigned for review; it is not the current repository next task or Gate 6 approval.
 
 Collect **the full frozen H1 primary-source corpus across the 24 pre-registered tracks under the revised economic and business interpretation contract**. Preserve immutable source revisions, atomic evidence, origin groups, historical availability, HOLD/exclusion reasons, the H1-P acceptance-versus-supply-readiness boundary, and the H1-C investment-versus-operational boundary. Do not calculate H1 metrics or lead-time summaries, inspect results to revise Gates 1–5, assign a stratum verdict, or begin H2/H3 before the completed corpus and its immutable hash receive Gate 6 human approval.
