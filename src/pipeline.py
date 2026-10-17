@@ -88,20 +88,24 @@ def _write_run_log(root: Path, run_id: str, evidence_records: list[dict[str, Any
     path = root / "logs" / f"{run_id}.jsonl"
     if path.exists():
         path.unlink()
-    for evidence in sorted(evidence_records, key=lambda item: item["evidence_id"]):
+    # Evidence IDs and transition ordinals already make log IDs unique.
+    log_records: list[dict[str, Any]] = []
+    for evidence in evidence_records:
         for ordinal, transition in enumerate(evidence["transitions"]):
             if transition["run_id"] != run_id:
                 continue
-            put_jsonl(
-                path,
+            log_records.append(
                 {
                     "log_id": f"{evidence['evidence_id']}::{ordinal}::{transition['to_status']}",
                     "evidence_id": evidence["evidence_id"],
                     **transition,
-                },
-                "log_id",
-                immutable=True,
+                }
             )
+    if log_records:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("w", encoding="utf-8") as handle:
+            for record in sorted(log_records, key=lambda item: item["log_id"]):
+                handle.write(canonical_json(record) + "\n")
 
 
 IMMUTABLE_EVIDENCE_FIELDS = (
