@@ -23,7 +23,7 @@ from src.core.models import (
     SourceRecord,
 )
 from src.memo.builder import validate_fact_trace
-from src.pipeline import SourceHashMismatch, run_vertical_slice
+from src.pipeline import ReviewManifestError, SourceHashMismatch, run_vertical_slice
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -160,6 +160,131 @@ class VerticalSliceTest(unittest.TestCase):
             run_vertical_slice(self.workspace, self.update_path)
 
         self.assertEqual(result_path.read_bytes(), before_result)
+
+    def workspace_bytes(self) -> dict[str, bytes]:
+        return {
+            path.relative_to(self.workspace).as_posix(): path.read_bytes()
+            for path in self.workspace.rglob("*")
+            if path.is_file()
+        }
+
+    def test_changed_cached_approval_rejects_without_overwriting_history(self) -> None:
+        first = self.run_baseline()
+        scenario = json.loads(self.baseline_path.read_text(encoding="utf-8"))
+        manifest = self.workspace / scenario["review_manifest_path"]
+        reviews = [json.loads(line) for line in manifest.read_text(encoding="utf-8").splitlines()]
+        for review in reviews:
+            if review["run_id"] == first["run_id"]:
+                review["decision"] = "REJECT"
+        manifest.write_text("\n".join(json.dumps(item) for item in reviews) + "\n", encoding="utf-8")
+        before = self.workspace_bytes()
+
+        with self.assertRaisesRegex(ReviewManifestError, "review manifest changed.*new run_id"):
+            self.run_baseline()
+
+        self.assertEqual(before, self.workspace_bytes())
+
+    def test_approval_added_to_pending_cached_run_requires_a_new_run(self) -> None:
+        scenario = json.loads(self.baseline_path.read_text(encoding="utf-8"))
+        manifest = self.workspace / scenario["review_manifest_path"]
+        original = manifest.read_bytes()
+        reviews = [json.loads(line) for line in original.decode("utf-8").splitlines()]
+        unrelated = [item for item in reviews if item["run_id"] != scenario["run_id"]]
+        manifest.write_text("\n".join(json.dumps(item) for item in unrelated) + "\n", encoding="utf-8")
+        pending = self.run_baseline()
+        self.assertEqual(pending["memo"]["review_status"], "PENDING_HUMAN_REVIEW")
+        manifest.write_bytes(original)
+        before = self.workspace_bytes()
+
+        with self.assertRaisesRegex(ReviewManifestError, "review manifest changed.*new run_id"):
+            self.run_baseline()
+
+        self.assertEqual(before, self.workspace_bytes())
+        # A separate run may apply the new approval, preserving the pending run.
+        scenario["run_id"] += "-REVIEWED"
+        for review in reviews:
+            if review["run_id"] == pending["run_id"]:
+                review["run_id"] = scenario["run_id"]
+                review["review_id"] += "-REVIEWED"
+        manifest.write_text("\n".join(json.dumps(item) for item in reviews) + "\n", encoding="utf-8")
+        reviewed_path = self.workspace / "reviewed_scenario.json"
+        reviewed_path.write_text(json.dumps(scenario), encoding="utf-8")
+        reviewed = run_vertical_slice(self.workspace, reviewed_path)
+        self.assertEqual(reviewed["memo"]["review_status"], "HUMAN_APPROVED")
+        historical = self.workspace / "data/runs" / pending["run_id"] / "run_result.json"
+        self.assertEqual(json.loads(historical.read_text(encoding="utf-8")), pending)
+
+    def test_cached_run_rejects_missing_review_manifest(self) -> None:
+        self.run_baseline()
+        scenario = json.loads(self.baseline_path.read_text(encoding="utf-8"))
+        (self.workspace / scenario["review_manifest_path"]).unlink()
+        before = self.workspace_bytes()
+
+        with self.assertRaisesRegex(ReviewManifestError, "review manifest changed"):
+            self.run_baseline()
+
+        self.assertEqual(before, self.workspace_bytes())
+
+    def test_legacy_cached_run_is_preserved_without_inventing_review_identity(self) -> None:
+        first = self.run_baseline()
+        result_path = self.workspace / "data/runs" / first["run_id"] / "run_result.json"
+        legacy = dict(first)
+        legacy.pop("review_fingerprint", None)
+        result_path.write_text(json.dumps(legacy), encoding="utf-8")
+        before = self.workspace_bytes()
+
+        with self.assertRaisesRegex(ReviewManifestError, "legacy run.*new run_id"):
+            self.run_baseline()
+
+        self.assertEqual(before, self.workspace_bytes())
+
+    def test_review_reordering_and_unrelated_reviews_do_not_invalidate_cache(self) -> None:
+        first = self.run_baseline()
+        scenario = json.loads(self.baseline_path.read_text(encoding="utf-8"))
+        manifest = self.workspace / scenario["review_manifest_path"]
+        reviews = [json.loads(line) for line in manifest.read_text(encoding="utf-8").splitlines()]
+        for review in reviews:
+            if review["run_id"] != first["run_id"]:
+                review["reason"] = "Unrelated run review changed"
+        manifest.write_text("\n".join(json.dumps(item) for item in reversed(reviews)) + "\n", encoding="utf-8")
+        self.assertEqual(self.run_baseline(), first)
+
+    def test_fresh_temporal_run_rejects_prior_archive_damage_before_any_writes(self) -> None:
+        self.run_baseline()
+        scenario = json.loads(self.baseline_path.read_text(encoding="utf-8"))
+        archive = self.workspace / scenario["source"]["local_archive_path"]
+        original = archive.read_bytes()
+        for damage in ("tampered", "missing"):
+            with self.subTest(damage=damage):
+                if damage == "tampered":
+                    archive.write_bytes(original + b"\nSynthetic prior-source corruption.\n")
+                    error = SourceHashMismatch
+                else:
+                    archive.unlink()
+                    error = FileNotFoundError
+                before = self.workspace_bytes()
+
+                with self.assertRaises(error):
+                    run_vertical_slice(self.workspace, self.update_path)
+
+                self.assertEqual(before, self.workspace_bytes())
+                archive.write_bytes(original)
+        # Failed preflights leave no orphan source registration or partial run.
+        update = json.loads(self.update_path.read_text(encoding="utf-8"))
+        self.assertEqual(run_vertical_slice(self.workspace, self.update_path)["run_id"], update["run_id"])
+
+    def test_unused_orphan_source_does_not_block_a_fresh_temporal_run(self) -> None:
+        self.run_baseline()
+        scenario = json.loads(self.baseline_path.read_text(encoding="utf-8"))
+        orphan = dict(scenario["source"])
+        orphan["source_id"] = "SRC-UNUSED-ORPHAN"
+        orphan["local_archive_path"] = "data/raw/sources/unused-missing.md"
+        registry = self.workspace / "data/sources/source_registry.jsonl"
+        with registry.open("a", encoding="utf-8") as handle:
+            handle.write(json.dumps(orphan) + "\n")
+
+        update = json.loads(self.update_path.read_text(encoding="utf-8"))
+        self.assertEqual(run_vertical_slice(self.workspace, self.update_path)["run_id"], update["run_id"])
 
     def test_retrieval_source_trace(self) -> None:
         result = self.run_baseline()

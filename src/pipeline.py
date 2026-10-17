@@ -34,7 +34,7 @@ class ReviewManifestError(ValueError):
     pass
 
 
-CORE_IMPLEMENTATION_VERSION = "1.1.0-evidence-review-temporal"
+CORE_IMPLEMENTATION_VERSION = "1.2.0-source-review-integrity"
 
 
 def file_sha256(path: Path) -> str:
@@ -88,20 +88,24 @@ def _write_run_log(root: Path, run_id: str, evidence_records: list[dict[str, Any
     path = root / "logs" / f"{run_id}.jsonl"
     if path.exists():
         path.unlink()
-    for evidence in sorted(evidence_records, key=lambda item: item["evidence_id"]):
+    # Evidence IDs and transition ordinals already make log IDs unique.
+    log_records: list[dict[str, Any]] = []
+    for evidence in evidence_records:
         for ordinal, transition in enumerate(evidence["transitions"]):
             if transition["run_id"] != run_id:
                 continue
-            put_jsonl(
-                path,
+            log_records.append(
                 {
                     "log_id": f"{evidence['evidence_id']}::{ordinal}::{transition['to_status']}",
                     "evidence_id": evidence["evidence_id"],
                     **transition,
-                },
-                "log_id",
-                immutable=True,
+                }
             )
+    if log_records:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("w", encoding="utf-8") as handle:
+            for record in sorted(log_records, key=lambda item: item["log_id"]):
+                handle.write(canonical_json(record) + "\n")
 
 
 IMMUTABLE_EVIDENCE_FIELDS = (
@@ -289,6 +293,12 @@ def run_vertical_slice(workspace: Path, scenario_path: Path) -> dict[str, Any]:
         )
     run_id = payload["run_id"]
     run_dir = root / "data" / "runs" / run_id
+    reviews = _load_reviews(
+        root, payload, {spec["evidence_id"] for spec in payload["evidence"]}
+    )
+    review_fingerprint = content_digest(
+        [reviews[evidence_id].to_dict() for evidence_id in sorted(reviews)]
+    )
     scenario_fingerprint = content_digest(
         {"core_implementation_version": CORE_IMPLEMENTATION_VERSION, "payload": payload}
     )
@@ -296,6 +306,16 @@ def run_vertical_slice(workspace: Path, scenario_path: Path) -> dict[str, Any]:
     existing = None
     if existing_result_path.exists():
         existing = load_json(existing_result_path, {})
+        if "review_fingerprint" not in existing:
+            raise ReviewManifestError(
+                f"legacy run {run_id} has no review fingerprint; preserve its artifacts "
+                "and use a new run_id to validate current reviews"
+            )
+        if existing["review_fingerprint"] != review_fingerprint:
+            raise ReviewManifestError(
+                f"review manifest changed for run {run_id}; preserve its artifacts "
+                "and use a new run_id for the changed review records"
+            )
         if existing.get("scenario_fingerprint") != scenario_fingerprint:
             raise ValueError(f"run_id {run_id} already exists for a different scenario")
 
@@ -308,8 +328,16 @@ def run_vertical_slice(workspace: Path, scenario_path: Path) -> dict[str, Any]:
 
     source_registry = SourceRegistry(root / "data" / "sources" / "source_registry.jsonl")
     evidence_registry = EvidenceRegistry(root / "data" / "evidence" / "atomic_evidence.jsonl")
-    source_registry.register(source.to_dict())
     existing_evidence = evidence_registry.as_map()
+    source_map = source_registry.as_map()
+    # Every existing Evidence record participates in audit/scoring below, even
+    # when it is not cited in this memo. Verify its source before any writes.
+    # Orphan registry sources do not participate and need not block this run.
+    for source_id in sorted({item["source_id"] for item in existing_evidence.values()}):
+        prior_source = SourceRecord.from_dict(source_map[source_id])
+        _verify_source_archive(
+            root, prior_source.local_archive_path, prior_source.content_hash
+        )
 
     harness = DeterministicHarness()
     current_objects: list[EvidenceRecord] = []
@@ -334,8 +362,7 @@ def run_vertical_slice(workspace: Path, scenario_path: Path) -> dict[str, Any]:
             )
         current_objects.append(evidence)
 
-    current_ids = {item.evidence_id for item in current_objects}
-    reviews = _load_reviews(root, payload, current_ids)
+    source_registry.register(source.to_dict())
     object_map = {
         evidence_id: EvidenceRecord.from_dict(record)
         for evidence_id, record in existing_evidence.items()
@@ -522,6 +549,7 @@ def run_vertical_slice(workspace: Path, scenario_path: Path) -> dict[str, Any]:
         "scenario_id": payload["scenario_id"],
         "core_implementation_version": CORE_IMPLEMENTATION_VERSION,
         "scenario_fingerprint": scenario_fingerprint,
+        "review_fingerprint": review_fingerprint,
         **trace_basis,
         "trace_hash": content_digest(trace_basis),
         "retrieval": {"initial": initial_retrieval, "graph_aware": graph_rag},
